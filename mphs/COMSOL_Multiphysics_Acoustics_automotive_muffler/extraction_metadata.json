@@ -1,0 +1,14 @@
+{
+  "source_file": "COMSOL_Multiphysics/Acoustics/automotive_muffler.mph",
+  "source_size": 1100992,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310268.957",
+  "total_files_in_archive": 29
+}

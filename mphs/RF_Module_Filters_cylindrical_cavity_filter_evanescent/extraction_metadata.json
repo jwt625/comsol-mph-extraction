@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Filters/cylindrical_cavity_filter_evanescent.mph",
+  "source_size": 26956,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 6
+}

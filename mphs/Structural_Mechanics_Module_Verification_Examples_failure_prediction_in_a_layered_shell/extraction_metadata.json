@@ -1,0 +1,14 @@
+{
+  "source_file": "Structural_Mechanics_Module/Verification_Examples/failure_prediction_in_a_layered_shell.mph",
+  "source_size": 1219988,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310447.805",
+  "total_files_in_archive": 19
+}

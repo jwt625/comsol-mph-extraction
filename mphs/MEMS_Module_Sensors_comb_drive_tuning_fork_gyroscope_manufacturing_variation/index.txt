@@ -1,0 +1,861 @@
+manufacturing
+variation
+effects
+micromachined
+comb-drive
+tuning
+fork
+rate
+gyroscope
+tutorial
+example
+kindly
+provided
+dr
+james
+ransley
+veryst
+engineering
+llc
+model
+continues
+base
+demonstrates
+accurately
+compute
+variations
+mems
+devices
+without
+need
+fine
+mesh
+highly
+efficient
+modeling
+approach
+based
+unique
+deformed
+geometry
+functionality
+comsol
+multiphysics
+implements
+device
+shape
+change
+due
+fabrication
+imperfections
+using
+same
+eliminating
+error
+introduced
+different
+meshes
+used
+geometries
+comb_drive_tuning_fork_gyroscope_manufacturing_variation
+mph
+param
+parameters
+l_mass
+mass
+length
+y_spring_w
+spring
+width
+n_etch_y
+number
+etch
+holes
+y&#xa0;direction
+tether_x
+tether
+beam
+x-coordinate
+tether_l
+rotor_stator_overlap
+rotor/stator
+overlap
+n_combs
+combs
+rotor_spacing
+spacing
+rotor
+delta
+small
+distance
+selections
+vcomb
+potential
+difference
+comb
+rotors
+stators
+omega
+angular
+rotation
+total
+constant
+in-plane
+bending
+area
+moment
+inertia
+out-of-plane
+shear
+modulus
+k_tot
+n_overlaps
+drive
+electrode
+overlaps
+u_ac
+estimated
+mode
+ac
+amplitude
+u_ac0_from_fd
+computed
+frequency
+k_from_fs
+sense
+theta
+sidewall
+tilt
+oe
+over-etch
+default
+amp
+par
+physics
+estimate
+result
+study
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_att_disp
+solid_att_rot
+solid_rig_disp
+solid_rig_rot
+solid_rd_disp
+solid_rd_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+dmp
+@tag:dmp
+damping
+@type:damping
+@label:damping
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+boundary
+load
+electrodes
+@label:boundary load 1 - sense electrodes
+el
+@tag:el
+edgeload
+@type:edgeload
+edge
+drives
+@label:edge load 1 - comb drives
+rotf
+@tag:rotf
+rotatingframe
+@type:rotatingframe
+rotating
+frame
+@label:rotating frame
+geom
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane 1 - mass
+uni
+work_plane
+sequence2d
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle 1 - mass: +x
+sketchobject
+footprint
+@label:rectangle 2 - footprint of sense electrode
+pt
+@tag:pt
+point
+@type:point
+copy
+@label:point 1 - for mesh copy
+@label:rectangle
+arr
+@tag:arr
+array
+@type:array
+@label:array
+dif
+@tag:dif
+@type:difference
+@label:difference
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+csel
+dom
+bnd
+pnt
+subtract
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude 1 - mass
+anchors
+@label:work plane 2 - anchors
+anchor
+@label:rectangle 1 - spring anchor
+stator
+@label:rectangle 2 - stator anchor
+@label:rectangle 3 - stator anchor
+@label:extrude 2 - anchors
+springs
+@label:work plane 3 - springs
+@label:rectangle 1 - y spring: +y
+@label:rectangle 2 - x spring: +x +y
+@label:rectangle 3 - tether: +x +y
+xy
+@label:extrude 3 - springs
+@label:work plane 4 - rotors
+1st
+@label:rectangle 1 - 1st comb
+@label:extrude 4 - rotors
+@label:work plane 5 - stators
+@label:rectangle 2 - stator base
+@label:rectangle 3 - stator base
+@label:extrude 5 - stators
+@label:work plane 6 - sense electrodes
+@label:rectangle 1 - sense electrode
+symmetry
+@label:work plane 7 - symmetry plane
+cro
+@tag:cro
+crosssection
+@type:crosssection
+cross
+section
+@label:cross section
+cross_section
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+wp1_csel
+edg
+wp2_csel
+wp3_csel
+wp4_csel
+wp5_csel
+wp6_csel
+wp7_csel
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+variables
+capacitor
+dpp_x
+vector
+lower
+dpp_sq
+square
+parallel
+plate
+sign
+capacitance
+dcmb_x
+dcmb
+c_l
+per
+unit
+force
+voltage
+function
+global
+coordinates
+dy_sw
+dz_t
+thickness
+genext
+@tag:genext
+generalextrusion
+@type:generalextrusion
+general
+extrusion
+walls
+@label:general extrusion 1 - stator walls
+@label:general extrusion 2 - sense electrodes
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration 1 - lower electrodes
+edges
+@label:integration 2 - comb edges
+aveop
+@tag:aveop
+average
+@type:average
+@label:average 1 - lower electrodes
+spatial
+geom1_ext1_pnt
+@tag:geom1_ext1_pnt
+fromsequence
+@type:fromsequence
+geom1_ext1_edg
+@tag:geom1_ext1_edg
+geom1_ext1_bnd
+@tag:geom1_ext1_bnd
+geom1_ext1_dom
+@tag:geom1_ext1_dom
+geom1_ext2_pnt
+@tag:geom1_ext2_pnt
+geom1_ext2_edg
+@tag:geom1_ext2_edg
+geom1_ext2_bnd
+@tag:geom1_ext2_bnd
+geom1_ext2_dom
+@tag:geom1_ext2_dom
+geom1_ext3_pnt
+@tag:geom1_ext3_pnt
+geom1_ext3_edg
+@tag:geom1_ext3_edg
+geom1_ext3_bnd
+@tag:geom1_ext3_bnd
+geom1_ext3_dom
+@tag:geom1_ext3_dom
+geom1_ext4_pnt
+@tag:geom1_ext4_pnt
+geom1_ext4_edg
+@tag:geom1_ext4_edg
+geom1_ext4_bnd
+@tag:geom1_ext4_bnd
+geom1_ext4_dom
+@tag:geom1_ext4_dom
+geom1_ext5_pnt
+@tag:geom1_ext5_pnt
+geom1_ext5_edg
+@tag:geom1_ext5_edg
+geom1_ext5_bnd
+@tag:geom1_ext5_bnd
+geom1_ext5_dom
+@tag:geom1_ext5_dom
+geom1_wp6_bnd
+@tag:geom1_wp6_bnd
+box
+@tag:box
+@type:box
+bottom
+@label:box 1 - bottom of beam
+entire
+layer
+@label:box 2 - entire beam layer
+@label:box 3 - anchor base
+int
+@tag:int
+intersection
+@type:intersection
+@label:intersection 1 - lower electrode
+vertical
+@label:box 4 - comb vertical walls
+@label:box 5 - comb vertical walls
+@label:box 6 - comb vertical walls
+@label:box 7 - comb vertical walls
+@tag:uni
+@type:union
+@label:union 1 - comb vertical walls
+@label:intersection 2 - stator vertical walls
+tip
+@label:box 8 - rotor tip edge
+@label:box 9 - rotor tip edge
+@label:box 10 - rotor tip edge
+@label:box 11 - rotor tip edge
+dc
+@label:union 2 - rotor tip edges +x dc
+@label:union 3 - rotor tip edges -x dc
+@label:union 4 - rotor tip edges +x ac
+@label:union 5 - rotor tip edges -x ac
+@label:union 6 - rotor tip edges
+gt
+@label:box 13 - x &gt; 0 beam base
+lt
+@label:box 14 - x &lt; 0 beam base
+@label:box 15 - x &gt; 0 spring anchor
+@label:box 16 - x &lt; 0 spring anchor
+quad
+@label:intersection 3 - quad mesh - springs construction
+@label:intersection 4 - quad mesh - springs construction copy
+mapped
+@label:intersection 5 - mapped mesh - anchors
+@label:intersection 6 - mapped mesh - anchors copy
+triangular
+@label:intersection 7 - triangular mesh - mass
+@label:intersection 8 - triangular mesh - mass copy
+@label:difference 1 - quad mesh - springs
+@label:difference 2 - quad mesh - springs copy
+@label:difference 3 - quad mesh -stator &amp; comb
+@label:difference 4 - quad mesh -stator &amp; comb copy
+@label:box 17 - x &gt; 0 anchor base
+@label:box 18 - x &lt; 0 anchor base
+@label:intersection 9 - triangular mesh - sense electrode
+@label:intersection 10 - triangular mesh - sense electrode copy
+effective
+region
+@label:box 19 - x &gt; 0 lower electrode effective region
+@label:box 20 - x &lt; 0 lower electrode effective region
+@label:union 7 - lower electrode effective region
+surfaces
+@label:box 21 - vertical surfaces
+top
+@label:box 22 - top surfaces
+adj
+@tag:adj
+adjacent
+@type:adjacent
+exterior
+@label:adjacent 1 - exterior surfaces of beam layer
+@label:intersection 11 - vertical walls
+faces
+@label:intersection 12 - anchor faces
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mpf
+@tag:mpf
+participationfactors
+@type:participationfactors
+participation
+factors
+@label:participation factors
+deformingdomaindeformedgeometry
+@type:deformingdomaindeformedgeometry
+deforming
+domain
+@label:deforming domain 1 - beam layer
+pnmd
+@tag:pnmd
+prescribednormalmeshdisplacementdeformedgeometry
+@type:prescribednormalmeshdisplacementdeformedgeometry
+prescribed
+normal
+@label:prescribed normal mesh displacement 1 - vertical walls
+@label:prescribed normal mesh displacement 2 - top surfaces
+@label:prescribed normal mesh displacement 3 - base plane
+disp
+@tag:disp
+prescribedmeshdisplacementdeformedgeometry
+@type:prescribedmeshdisplacementdeformedgeometry
+@label:prescribed mesh displacement 1 - anchor faces
+mat
+@tag:mat
+common
+@type:common
+si
+polycrystalline
+silicon
+@label:si - polycrystalline silicon
+enu
+young's
+poisson's
+ratio
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+@label:mapped
+@type:size
+cpf
+@tag:cpf
+copyface
+@type:copyface
+face
+@label:copy face
+fq
+@tag:fq
+freequad
+@type:freequad
+@label:free quad
+ftri
+@tag:ftri
+freetri
+@type:freetri
+@label:free triangular
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+stationary
+stat
+@tag:stat
+@type:stationary
+@label:stationary
+prestressed
+eigenfrequency
+eig
+@tag:eig
+@type:eigenfrequency
+@label:eigenfrequency
+frlin
+@tag:frlin
+frequencylinearized
+@type:frequencylinearized
+perturbation
+@label:frequency domain perturbation
+with
+@tag:param
+visualize
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:e
+eigenvalue
+@type:eigenvalue
+@label:eigenvalue solver
+ddef
+@tag:ddef
+@label:direct
+@label:parametric
+comp1_material_disp
+@tag:comp1_material_disp
+@label:material mesh displacement
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:material frame variables
+solutions
+dt
+@label:oe0=0, dt0=0, theta
+@label:oe0=0, dt0=100, theta
+@label:oe0=50, dt0=0, theta
+results
+dset
+@tag:dset
+@type:solution
+std2evgfrq
+@tag:std2evgfrq
+evaluationgroup
+@type:evaluationgroup
+eigenfrequencies
+@label:eigenfrequencies (study 2 - prestressed eigenfrequency
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+evaluation
+@label:global evaluation
+std2mpf
+@tag:std2mpf
+@label:participation factors (study 2 - prestressed eigenfrequency
+eg
+@tag:eg
+group
+@label:evaluation group 1 - study 1 - stationary
+@label:evaluation group 2 - study 3 - prestressed frequency domain
+std4evgfrq
+@tag:std4evgfrq
+@label:eigenfrequencies (study 4 - prestressed eigenfrequency with manufacturing variations
+std4mpf
+@tag:std4mpf
+@label:participation factors (study 4 - prestressed eigenfrequency with manufacturing variations
+shifts
+@label:evaluation group 3 - study 4 - frequency shifts due to manufacturing variations
+@label:evaluation group 4 - study 5 - prestressed frequency domain with manufacturing variations
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+stress
+@label:stress
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+@label:mode shape - drive mode without sidewall
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+imag
+@label:imag x displacement - drive mode amplitude
+real
+no
+@label:real z displacement - no rotation, without sidewall
+@label:real z displacement - rotation
+net
+signal
+@label:real z displacement - net sense signal
+@label:mode shape - drive mode with sidewall
+@label:deformed geometry
+@tag:mesh
+@type:mesh
+@label:mesh
+sel
+@tag:sel
+meshselection
+@type:meshselection
+selection
+@label:selection
+@label:real z displacement - no rotation, with sidewall
+@label:visualize shape change
+line
+@tag:line
+@type:line
+@label:line
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:solid
+@geom:geom
+@param:group
+@param:par
+@geom:wp
+@geom:sequence2D
+@geom:r
+@geom:selection
+@geom:csel
+@geom:pt
+@geom:arr
+@geom:input
+@geom:dif
+@geom:mir
+@geom:ext
+@geom:cro
+@selection
+@selection:box
+@view:view
+@selection:int
+@selection:uni
+@selection:dif
+@cpl
+@cpl:genext
+@cpl:selection
+@cpl:intop
+@expr:var
+@expr:selection
+@material:mat
+@material:materialmodel
+@material:Enu
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:size
+@mesh:cpf
+@mesh:source
+@mesh:destination
+@mesh:fq
+@mesh:ftri
+@mesh:swe
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@result:pg
+@result:vol
+@study:eig
+@sol:e
+@dataset:dset
+@result:surf
+@evaluationgroup:std2EvgFrq
+@evaluationgroup:gev
+@evaluationgroup:std2mpf
+@study:frlin
+@sol:p
+@cpl:aveop
+@evaluationgroup:eg
+@common:free
+@common:selection
+@selection:adj
+@common:pnmd
+@common:disp
+@study:param
+@mesh:statistics
+@sol:comp1_material_disp
+@sol:se
+@sol:ss
+@batch:p
+@batch:so
+@evaluationgroup:std4EvgFrq
+@evaluationgroup:std4mpf
+@result:mesh
+@result:sel
+@result:selection
+@result:line
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+soldata

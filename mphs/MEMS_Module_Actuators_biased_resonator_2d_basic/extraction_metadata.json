@@ -1,0 +1,14 @@
+{
+  "source_file": "MEMS_Module/Actuators/biased_resonator_2d_basic.mph",
+  "source_size": 3552904,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.167",
+  "total_files_in_archive": 27
+}

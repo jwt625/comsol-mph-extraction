@@ -1,0 +1,399 @@
+atmospheric
+corrosion
+with
+mass
+transport
+example
+simulates
+galvanic
+couple
+comprising
+aluminum
+alloy
+steel
+contact
+electrolyte
+film
+50 micrometer
+thickness
+model
+presented
+accounts
+charge
+involving
+10 species
+6 homogeneous
+reactions
+computes
+transient
+spatial
+distribution
+species
+including
+products
+atmospheric_corrosion_mass_transport
+mph
+param
+parameters
+d_film
+dh
+diffusivity
+daloh
+aloh
+dalcl
+alcl
+c0cl
+initial
+concentration
+cl
+c0al
+al
+c0aloh
+zna
+number
+na
+zoh
+oh
+zaloh
+zalohcl
+alohcl
+kfaloh
+forward
+rate
+constant
+kraloh
+reverse
+kfalcl
+kralohcl
+default
+chem
+@tag:chem
+chemistry
+@type:chemistry
+@label:chemistry
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+h2o
+lt;=&gt
+@label:1: h2o &lt;=&gt; h + oh
+@tag:h2o
+specieschem
+@type:specieschem
+@label:species: h2o
+@tag:h
+@label:species: h
+@tag:oh
+@label:species: oh
+@label:2: al + oh &lt;=&gt; aloh
+@tag:al
+@label:species: al
+@tag:aloh
+@label:species: aloh
+@label:3: aloh + oh &lt;=&gt; aloh
+@label:4: aloh2 + oh &lt;=&gt; aloh
+@label:5: al + cl &lt;=&gt; alcl
+@tag:cl
+@label:species: cl
+@tag:alcl
+@label:species: alcl
+@label:6: aloh + cl &lt;=&gt; alohcl
+@tag:alohcl
+@label:species: alohcl
+tcd
+@tag:tcd
+tertiarycurrentdistributionnernstplanck
+@type:tertiarycurrentdistributionnernstplanck
+tertiary
+current
+nernst-planck
+@label:tertiary current distribution, nernst-planck
+electricpotentialionicphase
+electricpotential
+dt2invdiscretization_disc
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+charges
+@label:species charges
+ice
+@tag:ice
+@type:electrolyte
+@label:electrolyte
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+hcpce
+@tag:hcpce
+highlyconductiveporouselectrode
+@type:highlyconductiveporouselectrode
+highly
+conductive
+porous
+electrode
+@label:highly conductive porous electrode
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+@label:porous electrode reaction
+reac
+@tag:reac
+@type:reactions
+@label:reactions
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+aisi
+6m
+nacl
+ph
+@label:aisi 4340 steel in 0.6m nacl at ph
+localcurrentdensity
+local
+density
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+electrodepotential
+equilibrium
+potential
+aa5083-h
+@label:aa5083-h131 in 0.6 m nacl
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_cal
+@tag:comp1_cal
+field
+@type:field
+cal
+@label:concentration
+comp1_calcl
+@tag:comp1_calcl
+calcl
+comp1_caloh
+@tag:comp1_caloh
+caloh
+comp1_calohcl
+@tag:comp1_calohcl
+calohcl
+comp1_ccl
+@tag:comp1_ccl
+ccl
+comp1_ch
+@tag:comp1_ch
+ch
+comp1_coh
+@tag:comp1_coh
+coh
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+concentrations
+@label:concentrations, all species
+@label:species na
+@label:species cl
+@label:species h
+@label:species oh
+@label:species al
+@label:species aloh
+@label:species alcl
+@label:species alohcl
+@label:concentration, na
+@label:concentration, cl
+@label:concentration, h
+@label:concentration, oh
+@label:concentration, al
+@label:concentration, aloh
+@label:concentration, alcl
+@label:concentration, alohcl
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:chem
+@physics:tcd
+@study:time
+@geom:geom
+@geom:i
+@material:mat
+@material:materialmodel
+@material:LocalCurrentDensity
+@material:func
+@material:int
+@material:ElectrodePotential
+@material:selection
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:t
+@result:pg
+@result:lngr
+@result:selection
+res
+soldata

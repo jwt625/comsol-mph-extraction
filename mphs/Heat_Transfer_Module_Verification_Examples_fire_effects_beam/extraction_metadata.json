@@ -1,0 +1,11 @@
+{
+  "source_file": "Heat_Transfer_Module/Verification_Examples/fire_effects_beam.mph",
+  "source_size": 23535,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.592",
+  "total_files_in_archive": 6
+}

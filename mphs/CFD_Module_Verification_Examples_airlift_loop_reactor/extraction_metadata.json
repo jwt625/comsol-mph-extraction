@@ -1,0 +1,14 @@
+{
+  "source_file": "CFD_Module/Verification_Examples/airlift_loop_reactor.mph",
+  "source_size": 1249722,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.468",
+  "total_files_in_archive": 24
+}

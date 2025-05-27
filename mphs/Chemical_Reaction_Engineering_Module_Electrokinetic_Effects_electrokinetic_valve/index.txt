@@ -1,0 +1,549 @@
+transport
+electrokinetic
+valve
+example
+pressure-driven
+flow
+electrophoresis
+microchannel
+system
+focusing
+obtained
+sample
+buffer
+solution
+confines
+channel
+steady
+state
+pressure
+driven
+turned
+electric
+field
+applied
+drives
+dissociated
+ions
+injection
+model
+electrokinetic_valve
+mph
+param
+parameters
+v_appub
+voltage
+upper
+inlet
+w_a
+average
+velocity
+inlets
+c_in
+ion
+concentration
+default
+ec
+@tag:ec
+conductivemedia
+@type:conductivemedia
+currents
+@label:electric currents
+electricpotential
+cucn
+@tag:cucn
+currentconservation
+@type:currentconservation
+current
+conservation
+@label:current conservation
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:electric insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+pot
+@tag:pot
+@type:electricpotential
+potential
+stage
+mode
+@label:electric potential - focusing stage and injection stage mode b
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground - focusing stage and injection stage mode b
+@label:electric potential - injection stage
+@label:ground - injection stage
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+diluted
+species
+@label:transport of diluted species
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+charges
+@label:species charges
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties - focusing stage
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+@label:transport properties - injection stage
+conc
+@tag:conc
+@type:concentration
+@label:concentration at sample inlet
+@label:concentration at buffer inlets
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+fl
+@tag:fl
+fluxboundary
+@type:fluxboundary
+migration
+outlets
+@label:migration at inlets and outlets - injection stage
+spf
+@tag:spf
+creepingflow
+@type:creepingflow
+creeping
+@label:creeping flow
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet, sample
+@label:inlet, upper buffer
+lower
+@label:inlet, lower buffer
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+geom
+geometry
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+fil
+work_plane
+sequence2d
+sq
+@tag:sq
+square
+@type:square
+@label:square
+sketchobject
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+uni
+@tag:c
+circle
+@type:circle
+@label:circle
+int
+@tag:int
+intersection
+@type:intersection
+@label:intersection
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+@tag:uni
+union
+@type:union
+@label:union
+rev
+@tag:rev
+revolve
+@type:revolve
+@label:revolve
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+cmf
+@tag:cmf
+compositefaces
+@type:compositefaces
+composite
+faces
+@label:form composite faces
+form_composite_faces
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+@label:sample inlet
+@label:upper buffer inlet
+@label:lower buffer inlet
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:buffer inlets
+@label:fluid inlets
+exterior
+walls
+@label:exterior walls
+wp1_sq
+wp2_sq
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+mesh
+geom1_boxsel
+@tag:geom1_boxsel
+fromsequence
+@type:fromsequence
+geom1_unisel
+@tag:geom1_unisel
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+electrolyte
+@label:electrolyte fluid
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary - focusing stage
+@label:stationary 2 - focusing stage
+@label:stationary 3 - focusing stage
+@label:stationary - injection stage
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent - injection stage
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_c
+@tag:comp1_c
+@type:field
+@label:concentration
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_v
+@tag:comp1_v
+@label:electric potential
+comp1_spf_inl1_pinlfdf
+@tag:comp1_spf_inl1_pinlfdf
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+comp1_spf_inl2_pinlfdf
+@tag:comp1_spf_inl2_pinlfdf
+comp1_spf_inl3_pinlfdf
+@tag:comp1_spf_inl3_pinlfdf
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+coupled
+@label:fully coupled
+@tag:i
+iterative
+@type:iterative
+amg
+@label:amg, fluid flow variables
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+cs
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@label:iterative
+sodef
+@tag:sodef
+sor
+@type:sor
+@label:sor
+ddef
+@tag:ddef
+concentrations
+@label:amg, concentrations
+sl
+@tag:sl
+sorline
+@type:sorline
+line
+@label:sor line
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+surface
+@type:surface
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+cut
+3d
+@label:cut line 3d
+dataset
+@type:dataset
+@label:dataset
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:concentration - mode a
+@label:surface
+plotgroup1d
+@type:plotgroup1d
+plot
+@label:concentration line plot - mode a
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:concentration - mode b
+@label:concentration line plot - mode b
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:ec
+@physics:tds
+@physics:spf
+@geom:geom
+@view:view
+@view:camera
+@material:mat
+@material:materialmodel
+@mesh:mesh
+@mesh:size
+@study:time
+@mesh:statistics
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:d
+@sol:sl
+@sol:t
+@result:pg
+@result:vol
+@result:mslc
+@result:strmsl
+@result:col
+@result:filt
+@result:str
+@result:surf
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@dataset:cln
+@result:lngr
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+res
+soldata

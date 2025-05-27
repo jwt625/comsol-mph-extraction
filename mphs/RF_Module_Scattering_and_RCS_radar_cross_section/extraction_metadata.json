@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/Scattering_and_RCS/radar_cross_section.mph",
+  "source_size": 706243,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 19
+}

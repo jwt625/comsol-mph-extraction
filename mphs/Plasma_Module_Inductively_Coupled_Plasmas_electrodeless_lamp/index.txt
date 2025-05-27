@@ -1,0 +1,728 @@
+electrodeless
+lamp
+example
+investigates
+emission
+spectrum
+mechanism
+conversion
+electrical
+energy
+light
+model
+essentially
+transformer
+with
+plasma
+acting
+secondary
+contains
+96 reactions
+12 species
+electrodeless_lamp
+mph
+param
+parameters
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+e+hg=&gt;e+hg
+@label:6: e+hg=&gt;e+hg
+@label:7: e+hg=&gt;e+hg
+e+hg1=&gt;e+hg
+@label:8: e+hg1=&gt;e+hg
+@label:9: e+hg=&gt;e+hg
+e+hg2=&gt;e+hg
+@label:10: e+hg2=&gt;e+hg
+@label:11: e+hg=&gt;e+hg
+e+hg3=&gt;e+hg
+@label:12: e+hg3=&gt;e+hg
+@label:13: e+hg=&gt;e+hg
+e+hg4=&gt;e+hg
+@label:14: e+hg4=&gt;e+hg
+@label:15: e+hg=&gt;e+hg
+e+hg5=&gt;e+hg
+@label:16: e+hg5=&gt;e+hg
+@label:17: e+hg=&gt;e+hg
+e+hg6=&gt;e+hg
+@label:18: e+hg6=&gt;e+hg
+e+hg=&gt;e+e+hg
+@label:19: e+hg=&gt;e+e+hg
+@label:20: e+hg1=&gt;e+hg
+@label:21: e+hg1=&gt;e+hg
+@label:22: e+hg2=&gt;e+hg
+@label:23: e+hg1=&gt;e+hg
+@label:24: e+hg3=&gt;e+hg
+@label:25: e+hg1=&gt;e+hg
+@label:26: e+hg4=&gt;e+hg
+@label:27: e+hg1=&gt;e+hg
+@label:28: e+hg5=&gt;e+hg
+@label:29: e+hg1=&gt;e+hg
+@label:30: e+hg6=&gt;e+hg
+e+hg1=&gt;e+e+hg
+@label:31: e+hg1=&gt;e+e+hg
+@label:32: e+hg2=&gt;e+hg
+@label:33: e+hg2=&gt;e+hg
+@label:34: e+hg3=&gt;e+hg
+@label:35: e+hg2=&gt;e+hg
+@label:36: e+hg4=&gt;e+hg
+@label:37: e+hg2=&gt;e+hg
+@label:38: e+hg5=&gt;e+hg
+@label:39: e+hg2=&gt;e+hg
+@label:40: e+hg6=&gt;e+hg
+e+hg2=&gt;e+e+hg
+@label:41: e+hg2=&gt;e+e+hg
+@label:42: e+hg3=&gt;e+hg
+@label:43: e+hg3=&gt;e+hg
+@label:44: e+hg4=&gt;e+hg
+@label:45: e+hg3=&gt;e+hg
+@label:46: e+hg5=&gt;e+hg
+@label:47: e+hg3=&gt;e+hg
+@label:48: e+hg6=&gt;e+hg
+e+hg3=&gt;e+e+hg
+@label:49: e+hg3=&gt;e+e+hg
+@label:50: e+hg4=&gt;e+hg
+e+hg4=&gt;e+e+hg
+@label:51: e+hg4=&gt;e+e+hg
+@label:52: e+hg5=&gt;e+hg
+e+hg5=&gt;e+e+hg
+@label:53: e+hg5=&gt;e+e+hg
+@label:54: e+hg6=&gt;e+hg
+e+hg6=&gt;e+e+hg
+@label:55: e+hg6=&gt;e+e+hg
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;ar++ar+e
+@label:56: ars+ars=&gt;ar++ar+e
+ars+hg=&gt;hg++ar+e
+@label:57: ars+hg=&gt;hg++ar+e
+ars+hg1=&gt;hg++ar+e
+@label:58: ars+hg1=&gt;hg++ar+e
+ars+hg2=&gt;hg++ar+e
+@label:59: ars+hg2=&gt;hg++ar+e
+ars+hg3=&gt;hg++ar+e
+@label:60: ars+hg3=&gt;hg++ar+e
+ars+hg4=&gt;hg++ar+e
+@label:61: ars+hg4=&gt;hg++ar+e
+ars+hg5=&gt;hg++ar+e
+@label:62: ars+hg5=&gt;hg++ar+e
+ars+hg6=&gt;hg++ar+e
+@label:63: ars+hg6=&gt;hg++ar+e
+hg3+hg3=&gt;hg++hg+e
+@label:64: hg3+hg3=&gt;hg++hg+e
+hg3+hg4=&gt;hg++hg+e
+@label:65: hg3+hg4=&gt;hg++hg+e
+hg3+hg5=&gt;hg++hg+e
+@label:66: hg3+hg5=&gt;hg++hg+e
+hg3+hg6=&gt;hg++hg+e
+@label:67: hg3+hg6=&gt;hg++hg+e
+hg4+hg1=&gt;hg++hg+e
+@label:68: hg4+hg1=&gt;hg++hg+e
+hg4+hg2=&gt;hg++hg+e
+@label:69: hg4+hg2=&gt;hg++hg+e
+hg4+hg3=&gt;hg++hg+e
+@label:70: hg4+hg3=&gt;hg++hg+e
+hg4+hg4=&gt;hg++hg+e
+@label:71: hg4+hg4=&gt;hg++hg+e
+hg4+hg5=&gt;hg++hg+e
+@label:72: hg4+hg5=&gt;hg++hg+e
+hg4+hg6=&gt;hg++hg+e
+@label:73: hg4+hg6=&gt;hg++hg+e
+hg5+hg1=&gt;hg++hg+e
+@label:74: hg5+hg1=&gt;hg++hg+e
+hg5+hg2=&gt;hg++hg+e
+@label:75: hg5+hg2=&gt;hg++hg+e
+hg5+hg3=&gt;hg++hg+e
+@label:76: hg5+hg3=&gt;hg++hg+e
+hg5+hg4=&gt;hg++hg+e
+@label:77: hg5+hg4=&gt;hg++hg+e
+hg5+hg5=&gt;hg++hg+e
+@label:78: hg5+hg5=&gt;hg++hg+e
+hg5+hg6=&gt;hg++hg+e
+@label:79: hg5+hg6=&gt;hg++hg+e
+hg6+hg1=&gt;hg++hg+e
+@label:80: hg6+hg1=&gt;hg++hg+e
+hg6+hg2=&gt;hg++hg+e
+@label:81: hg6+hg2=&gt;hg++hg+e
+hg6+hg3=&gt;hg++hg+e
+@label:82: hg6+hg3=&gt;hg++hg+e
+hg6+hg4=&gt;hg++hg+e
+@label:83: hg6+hg4=&gt;hg++hg+e
+hg6+hg5=&gt;hg++hg+e
+@label:84: hg6+hg5=&gt;hg++hg+e
+hg6+hg6=&gt;hg++hg+e
+@label:85: hg6+hg6=&gt;hg++hg+e
+ar++hg=&gt;hg++ar
+@label:86: ar++hg=&gt;hg++ar
+ar++ar=&gt;ar++ar
+@label:87: ar++ar=&gt;ar++ar
+hg++hg=&gt;hg+hg
+@label:88: hg++hg=&gt;hg+hg
+hg2=&gt;hg
+@label:89: hg2=&gt;hg
+hg4=&gt;hg
+@label:90: hg4=&gt;hg
+hg5=&gt;hg
+@label:91: hg5=&gt;hg
+@label:92: hg5=&gt;hg
+@label:93: hg5=&gt;hg
+hg6=&gt;hg
+@label:94: hg6=&gt;hg
+@label:95: hg6=&gt;hg
+@label:96: hg6=&gt;hg
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+hg
+@tag:hg
+@label:species: hg
+hg_1p
+@tag:hg_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ars=&gt;ar
+@label:1: ars=&gt;ar
+ar+=&gt;ar
+@label:2: ar+=&gt;ar
+hg1=&gt;hg
+@label:3: hg1=&gt;hg
+@label:4: hg2=&gt;hg
+hg3=&gt;hg
+@label:5: hg3=&gt;hg
+@label:6: hg4=&gt;hg
+@label:7: hg5=&gt;hg
+@label:8: hg6=&gt;hg
+hg+=&gt;hg
+@label:9: hg+=&gt;hg
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+@type:init
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+fluids
+@label:amp&#xe8;re's law in fluids
+coil
+@tag:coil
+@type:coil
+@label:coil
+geom
+geometry
+geomnative
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+cb
+@tag:cb
+cubicbezier
+@type:cubicbezier
+cubic
+b&#xe9;zier
+@label:cubic b&#xe9;zier
+cubic_bezier
+sketchobject
+qb
+@tag:qb
+quadraticbezier
+@type:quadraticbezier
+quadratic
+@label:quadratic b&#xe9;zier
+quadratic_bezier
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+cha
+@tag:cha
+chamfer
+@type:chamfer
+@label:chamfer
+sq
+@tag:sq
+square
+@type:square
+@label:square
+arr
+@tag:arr
+array
+@type:array
+@label:array
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+tinit
+gas
+temperature
+tf
+trapping
+factor
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+boundaries
+@label:coil boundaries
+domains
+@label:coil domains
+boundary
+layers
+@label:boundary layers
+image
+@tag:image
+selection
+@type:selection
+@label:selection
+discharge
+@label:discharge
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pcc
+@tag:pcc
+plasmaconductivitymultiphysicscoupling
+@type:plasmaconductivitymultiphysicscoupling
+conductivity
+coupling
+@label:plasma conductivity coupling
+ehs
+@tag:ehs
+electronheatsourcemultiphysicscoupling
+@type:electronheatsourcemultiphysicscoupling
+electron
+heat
+source
+@label:electron heat source
+mat
+@tag:mat
+common
+@type:common
+coils
+@label:coils
+@type:material
+@label:material
+ferrite
+@label:ferrite
+air
+@label:air
+dielectric
+@label:dielectric
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+optsequence
+std
+study
+ftrans
+@tag:ftrans
+frequencytransient
+@type:frequencytransient
+frequency-transient
+@label:frequency-transient
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+variable
+en
+@label:electron energy solution variable
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+flux
+psiora
+@label:magnetic flux
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_plas_hg1_w
+@tag:comp1_plas_hg1_w
+comp1_plas_hg2_w
+@tag:comp1_plas_hg2_w
+comp1_plas_hg3_w
+@tag:comp1_plas_hg3_w
+comp1_plas_hg4_w
+@tag:comp1_plas_hg4_w
+comp1_plas_hg5_w
+@tag:comp1_plas_hg5_w
+comp1_plas_hg6_w
+@tag:comp1_plas_hg6_w
+comp1_plas_hg_1p_w
+@tag:comp1_plas_hg_1p_w
+comp1_plas_hg_w
+@tag:comp1_plas_hg_w
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_mf_coil1_icoil
+@tag:comp1_mf_coil1_icoil
+state
+@type:state
+current
+icoil
+@label:coil current
+comp1_mf_coil1_pcoil_ode
+@tag:comp1_mf_coil1_pcoil_ode
+power
+pcoil_ode
+@label:coil power
+comp1_mf_coil1_vcoil
+@tag:comp1_mf_coil1_vcoil
+vcoil
+@label:comp1.mf.coil1.vcoil
+@tag:t
+time
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+density
+@label:electron density
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:electron temperature
+norm
+@label:magnetic flux density norm
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+revolved
+@label:magnetic flux density norm, revolved geometry
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+deposition
+@label:power deposition
+mercury
+mole
+@label:ground state mercury mole fraction
+ion
+number
+@label:mercury ion number density
+excited
+@label:mole fraction of excited mercury
+geommanagernative
+hist
+@geom:geom
+@physics:mf
+@multiphysics
+@multiphysics:pcc
+@multiphysics:ehs
+@study:std
+@study:ftrans
+@physics:plas
+@geom:ls
+@geom:cb
+@geom:qb
+@geom:csol
+@geom:input
+@geom:selection
+@geom:r
+@geom:cha
+@geom:point
+@geom:sq
+@geom:arr
+@expr:var
+@selection
+@selection:sel
+@material:mat
+@material:selection
+@material:materialmodel
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:map
+@mesh:size
+@mesh:bl
+@mesh:blp
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@dataset:rev
+@result:vol
+@result:sel
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

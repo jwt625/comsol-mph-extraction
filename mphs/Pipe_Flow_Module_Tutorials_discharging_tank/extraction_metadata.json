@@ -1,0 +1,14 @@
+{
+  "source_file": "Pipe_Flow_Module/Tutorials/discharging_tank.mph",
+  "source_size": 1107409,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310389.099",
+  "total_files_in_archive": 22
+}

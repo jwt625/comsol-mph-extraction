@@ -1,0 +1,385 @@
+dielectric
+barrier
+discharge
+example
+simulates
+electrical
+breakdown
+atmospheric
+pressure
+gas
+complicated
+process
+1d
+model
+considered
+highlight
+physics
+uses
+simple
+argon
+chemistry
+keeps
+number
+species
+reactions
+minimum
+argon_dbd_1d
+mph
+param
+parameters
+rf
+frequency
+plate
+area
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+plasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:6: ars+ars=&gt;e+ar+ar
+ars+ar=&gt;ar+ar
+@label:7: ars+ar=&gt;ar+ar
+@tag:e
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+@label:2: ar+=&gt;ar
+ars=&gt;ar
+@label:3: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ccn
+@tag:ccn
+chargeconservation
+@type:chargeconservation
+conservation
+@label:charge conservation
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+sca
+@tag:sca
+surfacechargeaccumulation
+@type:surfacechargeaccumulation
+surface
+accumulation
+@label:surface charge accumulation
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+term
+@tag:term
+terminal
+@type:terminal
+@label:terminal
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+var
+variables
+vrf
+applied
+voltage
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:dielectric
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+electron
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_plas_sigs
+@tag:comp1_plas_sigs
+density
+sigs
+@label:surface charge density
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+par
+@tag:par
+parametric1d
+@type:parametric1d
+parametric
+extrusion
+@label:parametric extrusion 1d
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:electron density
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+temperature
+@label:electron temperature
+plotgroup2d
+@type:plotgroup2d
+excited
+@label:excited argon mass fraction
+surf
+@tag:surf
+@type:surface
+@label:surface
+@label:electric field
+mean
+@label:mean electron energy
+current
+@label:electron current density
+ion
+@label:argon ion current density
+total
+conduction
+@label:total conduction current density
+@label:terminal current
+glob
+@tag:glob
+@type:global
+@label:global
+power
+deposition
+@label:total power deposition
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:plas
+@geom:geom
+@geom:i
+@expr:var
+@material:mat
+@material:selection
+@material:materialmodel
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:lngr
+@result:selection
+@dataset:par
+@result:surf
+@result:glob
+@numerical
+@numerical:gev
+@table:tbl
+res
+soldata

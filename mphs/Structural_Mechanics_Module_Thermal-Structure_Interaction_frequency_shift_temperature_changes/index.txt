@@ -1,0 +1,460 @@
+eigenfrequency
+shifts
+caused
+temperature
+changes
+example
+explores
+shift
+natural
+frequencies
+changing
+study
+investigates
+doubly
+clamped
+beam
+ends
+fixed
+second
+looks
+cantilever
+end
+effects
+related
+stress
+stiffening
+change
+size
+constraint
+expansion
+temperature-dependent
+material
+properties
+investigated
+results
+show
+dominated
+softening
+constrained
+causes
+compressive
+stresses
+hand
+shows
+good
+fit
+analytical
+values
+based
+small
+geometry
+thermal
+dependence
+young's
+modulus
+shown
+important
+factor
+latter
+case
+model
+frequency_shift_temperature_changes
+mph
+param
+parameters
+reference
+length
+alpha_x
+cte
+x-direction
+dt
+default
+geometrical
+par
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+@label:linear elastic material
+te
+@tag:te
+thermalexpansion
+@type:thermalexpansion
+@label:thermal expansion
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+@label:initial values
+fix
+@tag:fix
+@type:fixed
+left
+@label:fixed constraint, left end
+tefix
+@tag:tefix
+thermalexpansionfix
+@type:thermalexpansionfix
+right
+@label:fixed constraint, right end
+geom
+geomnative
+blk
+@tag:blk
+block
+@type:block
+@label:block
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+eps_x
+strain
+direction
+fbz_fb0z
+estimate
+frequency
+bending
+ft_ft
+torsional
+spatial
+mesh
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+beams
+@label:view 2, 4 beams
+buckling
+@label:view 3: buckling
+@label:view 4: 2 beams
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mpf
+@tag:mpf
+participationfactors
+@type:participationfactors
+participation
+factors
+@label:participation factors
+mat
+@tag:mat
+common
+@type:common
+@label:material
+enu
+poisson's
+ratio
+comp
+component
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+base
+solution
+eig
+@tag:eig
+@type:eigenfrequency
+@label:eigenfrequency
+@tag:param
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+@tag:buckling
+linearbuckling
+@type:linearbuckling
+@label:linear buckling
+with
+expanding
+dependent
+modified
+density
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:s
+@label:stationary solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+suggested
+@label:suggested direct solver
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+solutions
+@label:dt
+beta=-1e
+@label:beta=-1e-4, dt
+rho
+@label:l0=13, a0=1.6, b0=0.95, rho
+result
+dset
+@tag:dset
+@type:solution
+std1evgfrq
+@tag:std1evgfrq
+evaluationgroup
+@type:evaluationgroup
+eigenfrequencies
+@label:eigenfrequencies (study 1, clamped, base solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+std1mpf
+@tag:std1mpf
+@label:participation factors (study 1, clamped, base solution
+eg
+@tag:eg
+@label:frequency shift with temperature, clamped
+first
+@label:first bending
+twisting
+@label:first twisting
+axial
+@label:first axial
+@label:eigenfrequencies (study 2, cantilever, base solution
+@label:participation factors (study 2, cantilever, base solution
+@label:frequency shift with temperature, cantilever
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+mode
+shape
+@label:mode shape, clamped, base solution
+surf
+@tag:surf
+surface
+@type:surface
+@label:first bending, z direction
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:first bending, y direction
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface, first bending, z direction
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:arrow surface, first bending, y direction
+@label:arrow surface, first twisting
+@label:arrow surface, first axial
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+@type:global
+@label:first bending mode, z direction
+@label:first bending mode, y direction
+@label:first twisting mode
+@label:first axial mode
+@label:mode shape, buckling
+@label:surface
+@label:mode shape, cantilever, base solution
+clamp
+@label:stress at clamp
+vol
+@tag:vol
+volume
+@type:volume
+no
+boundaries
+@label:no expanding boundaries
+@label:expanding boundaries
+@label:frequency shift with temperature, cantilever, expanding constraint
+vs
+@label:thermal expansion vs. modified geometry
+@label:modified geometry
+line
+@tag:line
+@type:line
+undeformed
+@label:thermal expansion, undeformed
+@label:frequency shift with temperature, cantilever, temperature dependent e
+geommanagernative
+hist
+@study:std
+@study:eig
+@physics:solid
+@geom:geom
+@geom:blk
+@param:group
+@param:par
+@material:mat
+@material:materialmodel
+@material:Enu
+@mesh:mesh
+@mesh:size
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@sol:aDef
+@result:pg
+@result:surf
+@evaluationgroup:std1EvgFrq
+@evaluationgroup:gev
+@evaluationgroup:std1mpf
+@result:arws
+@result:tlan
+@view:view
+@nodeGroup:grp
+@study:stat
+@study:param
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@batch:p
+@batch:so
+@result:glob
+@evaluationgroup:eg
+@study:buckling
+@dataset:dset
+@expr:var
+@result:vol
+@result:line
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:clamped
+@label:cantilever
+soldata

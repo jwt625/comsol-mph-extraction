@@ -1,0 +1,14 @@
+{
+  "source_file": "MEMS_Module/Piezoelectric_Devices/aln_lamb_wave_resonator_3d.mph",
+  "source_size": 1141903,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.168",
+  "total_files_in_archive": 32
+}

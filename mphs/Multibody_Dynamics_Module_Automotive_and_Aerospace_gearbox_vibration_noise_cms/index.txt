@@ -1,0 +1,873 @@
+modeling
+vibration
+noise
+gearbox
+cms
+version
+example
+illustrates
+5-speed
+synchromesh
+manual
+transmission
+vehicle
+essentially
+same
+with
+elastic
+components
+reduced
+computationally
+efficient
+lower-order
+models
+using
+component
+mode
+synthesis
+technique
+model
+gearbox_vibration_noise_cms
+mph
+param
+parameters
+n1i
+number
+teeth
+first
+gear
+counter
+shaft
+n4i
+fourth
+n2o
+second
+main
+n5o
+fifth
+gear_ratio
+ratio
+third
+cd
+center
+distance
+d2i
+pitch
+diameter
+d3o
+d5i
+beta
+helix
+angle
+t_ext
+output
+torque
+engaged
+c_max_rfc1_mbd
+constraint
+modes
+default
+par_rfc
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+multibody
+dynamics
+@label:multibody dynamics
+displacement
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+hlg
+@tag:hlg
+helicalgear
+@type:helicalgear
+helical
+@label:helical gear: fourth (counter shaft
+@label:helical gear: first (counter shaft
+@label:helical gear: second (counter shaft
+@label:helical gear: third (counter shaft
+@label:helical gear: fifth (counter shaft
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+rigid
+@label:rigid material: counter shaft
+fxj
+@tag:fxj
+fixedjoint
+@type:fixedjoint
+fixed
+joint
+@label:fixed joint
+@label:helical gear: fourth (main shaft
+@label:helical gear: first (main shaft
+@label:helical gear: second (main shaft
+@label:helical gear: third (main shaft
+@label:helical gear: fifth (main shaft
+input
+@label:rigid material: main input shaft
+@label:rigid material: main output shaft
+hgj
+@tag:hgj
+hingejoint
+@type:hingejoint
+hinge
+@label:hinge joint
+pm
+@tag:pm
+prescribedmotion
+@type:prescribedmotion
+prescribed
+motion
+@label:prescribed motion
+cjp
+@tag:cjp
+centerofjointpoint
+@type:centerofjointpoint
+point
+@label:center of joint: point
+grp
+@tag:grp
+gearpair
+@type:gearpair
+pair
+@label:gear pair: fourth
+gel
+@tag:gel
+gearelasticity
+@type:gearelasticity
+elasticity
+@label:gear elasticity
+@label:gear pair: first
+@label:gear pair: second
+@label:gear pair: third
+@label:gear pair: fifth
+att
+@tag:att
+attachment
+@type:attachment
+bearing
+@label:attachment: bearing 1 (counter shaft
+@label:attachment: bearing 1 (main shaft
+@label:attachment: bearing 2 (counter shaft
+@label:attachment: bearing 2 (main shaft
+afm
+@tag:afm
+appliedforceandmoment
+@type:appliedforceandmoment
+applied
+force
+moment
+@label:applied force and moment
+fix
+@tag:fix
+@type:fixed
+@label:fixed constraint
+rfc
+@tag:rfc
+reducedflexiblecomponents
+@type:reducedflexiblecomponents
+flexible
+@label:reduced flexible components
+comp
+@tag:comp
+@type:component
+definition
+@label:component definition
+acpr
+@tag:acpr
+pressureacoustics
+@type:pressureacoustics
+pressure
+acoustics
+frequency
+domain
+@label:pressure acoustics, frequency domain
+fpam
+@tag:fpam
+frequencypressureacousticsmodel
+@type:frequencypressureacousticsmodel
+@label:pressure acoustics
+shb
+@tag:shb
+soundhard
+@type:soundhard
+sound
+hard
+boundary
+wall
+@label:sound hard boundary
+swr
+@tag:swr
+sphericalwaveradiation
+@type:sphericalwaveradiation
+spherical
+wave
+radiation
+@label:spherical wave radiation
+efc
+@tag:efc
+exteriorfieldcalculation
+@type:exteriorfieldcalculation
+exterior
+field
+calculation
+@label:exterior field calculation
+nacc
+@tag:nacc
+normalacceleration
+@type:normalacceleration
+normal
+acceleration
+@label:normal acceleration
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+sph
+@tag:sph
+sphere
+@type:sphere
+@label:sphere
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+union
+@label:form union
+step
+@tag:step
+@type:step
+@label:step
+var
+variables
+genext
+@tag:genext
+generalextrusion
+@type:generalextrusion
+general
+extrusion
+@label:general extrusion
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:explicit
+sel_rfc1_mbd
+@tag:sel_rfc1_mbd
+rfc1_mbd
+@label:cms component
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+hide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+structural
+steel
+@label:structural steel
+enu
+young's
+modulus
+poisson's
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+murnaghan
+elastoplasticmodel
+elastoplastic
+ludwik
+johnsoncook
+johnson-cook
+swift
+voce
+hockettsherby
+hockett-sherby
+armstrongfrederick
+armstrong-frederick
+norton
+garofalo
+hyperbolic
+sine
+chabocheviscoplasticity
+chaboche
+viscoplasticity
+air
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+meshnative
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+analysis
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+tffft
+@tag:tffft
+timetofreqfft
+@type:timetofreqfft
+fft
+@label:time to frequency fft
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+ftfft
+@tag:ftfft
+freqtotimefft
+@type:freqtotimefft
+@label:frequency to time fft
+std_rfc1_mbd
+param_rfc1_mbd
+@tag:param_rfc1_mbd
+stat_rfc1_mbd
+@tag:stat_rfc1_mbd
+stationary
+@type:stationary
+@label:stationary
+eig_rfc1_mbd
+@tag:eig_rfc1_mbd
+eigenfrequency
+@type:eigenfrequency
+@label:eigenfrequency
+mr_rfc1_mbd
+@tag:mr_rfc1_mbd
+modelreduction
+@type:modelreduction
+reduction
+@label:model reduction
+time_rfc1_mbd
+@tag:time_rfc1_mbd
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+@type:field
+@label:displacement field
+comp2_p
+@tag:comp2_p
+acoustic
+@label:acoustic pressure
+comp1_mbd_gr_disp
+@tag:comp1_mbd_gr_disp
+state
+@type:state
+@label:comp1.mbd_gr_disp
+comp1_mbd_gr_rot
+@tag:comp1_mbd_gr_rot
+@label:comp1.mbd_gr_rot
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+@label:comp1.mbd_jnt_rot
+comp1_mbd_hgj7_pm1_thp
+@tag:comp1_mbd_hgj7_pm1_thp
+angular
+velocity
+integration
+variable
+thp
+@label:angular velocity integration variable
+rom1_n_rfc1_mbd_1_state
+@tag:rom1_n_rfc1_mbd_1_state
+reduced-model
+rom1_n_rfc1_mbd
+@label:reduced-model state
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:fft
+@type:fft
+@label:fft solver
+@tag:s
+@label:stationary solver
+@label:parametric
+@tag:d
+suggested
+@label:suggested direct solver
+comp1_mbd_att_disp
+@tag:comp1_mbd_att_disp
+@label:comp1.mbd_att_disp
+comp1_mbd_att_rot
+@tag:comp1_mbd_att_rot
+@label:comp1.mbd_att_rot
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:e
+eigenvalue
+@type:eigenvalue
+@label:eigenvalue solver
+mor
+@tag:mor
+modalreduction
+@type:modalreduction
+modal
+@label:modal reduction
+solutions
+n_rfc1_mbd
+@label:n_rfc1_mbd
+romd
+reduced-order
+1a
+result
+results
+dset
+@tag:dset
+@type:solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+microphone
+@label:global evaluation: microphone
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+stress
+@label:velocity - stress
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:velocity - normal acceleration
+plotgroup1d
+@type:plotgroup1d
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+graph
+@label:point graph
+@label:normal acceleration: frequency
+spl
+near
+@label:spl near field
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+casing
+@label:spl casing surface
+polargroup
+@type:polargroup
+polar
+xy-plane
+@label:polar spl xy-plane
+rp
+@tag:rp
+radiationpattern
+@type:radiationpattern
+pattern
+@label:radiation pattern
+xz-plane
+@label:polar spl xz-plane
+yz-plane
+@label:polar spl yz-plane
+@label:microphone pressure
+glob
+@tag:glob
+@type:global
+@label:global
+@label:pressure near field: time
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+thumbnail
+@label:thumbnail
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:isosurface
+xm
+location
+coord
+dm
+radial
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:mbd
+@geom:geom
+@geom:imp
+@geom:fin
+@view:view
+@view:hideObjects
+@view:hide
+@expr:var
+@func
+@func:step
+@selection
+@selection:sel
+@cpl
+@cpl:genext
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:func
+@material:ElastoplasticModel
+@material:Ludwik
+@material:Voce
+@material:HockettSherby
+@material:ArmstrongFrederick
+@material:int
+@material:Murnaghan
+@material:JohnsonCook
+@material:Swift
+@material:Norton
+@material:Garofalo
+@material:ChabocheViscoplasticity
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_rd_disp
+@sol:comp1_mbd_gr_rot
+@sol:comp1_mbd_att_rot
+@sol:comp1_mbd_gr_disp
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_mbd_rd_rot
+@sol:comp1_mbd_att_disp
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:fc
+@dataset:dset
+@dataset:selection
+@result:pg
+@result:surf
+@result:ptgr
+@result:selection
+@geom:csol
+@geom:input
+@geom:selection
+@geom:sph
+@geom:dif
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@physics:acpr
+@mesh:mesh
+@mesh:size
+@mesh:bl
+@mesh:selection
+@mesh:blp
+@study:tffft
+@study:freq
+@sol:fft
+@sol:s
+@sol:p
+@sol:d
+@sol:i
+@sol:mg
+@sol:dd
+@sol:ds
+@sol:comp2_p
+@result:slc
+@result:rp
+@numerical
+@numerical:gev
+@table:tbl
+@result:glob
+@study:ftfft
+@result:filt
+@export
+@export:anim
+@applicationNodeList:appMainWindow
+@applicationNodeList:Microphone
+@methodCall:methodcall
+@result:iso
+@batch:p
+@batch:so
+@sol:rom1_n_rfc1_mbd_1_state
+@sol:romd
+@tag:rom1_n_rfc1_mbd
+modaltransient
+@type:modaltransient
+@label:reduced component
+@tag:microphone
+codeeditor
+@type:codeeditor
+@label:microphone
+mainwindow
+@tag:mainwindow
+singlewindow
+@type:singlewindow
+window
+@label:main window
+menu
+@tag:menu
+mainmenu
+@type:mainmenu
+bar
+@label:menu bar
+toolbar
+@tag:toolbar
+maintoolbar
+@type:maintoolbar
+@label:toolbar
+filemenu
+@tag:filemenu
+@type:filemenu
+file
+@label:file menu
+mainform
+@tag:mainform
+@type:mainform
+@label:main form
+images
+@tag:images
+imagelibrary
+@type:imagelibrary
+@label:images
+sounds
+@tag:sounds
+soundlibrary
+@type:soundlibrary
+@label:sounds
+files
+@tag:files
+filelibrary
+@type:filelibrary
+@label:files
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+methodcall
+@tag:methodcall
+@type:methodcall
+res
+libres
+soldata
+globaldeclarations
+@tag:globaldeclarations
+globaldeclarationsfeature
+@type:globaldeclarationsfeature
+@label:globaldeclarationsfeature

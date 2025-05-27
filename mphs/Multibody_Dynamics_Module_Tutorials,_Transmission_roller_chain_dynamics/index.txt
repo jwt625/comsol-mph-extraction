@@ -1,0 +1,797 @@
+dynamics
+roller
+chain
+sprocket
+assembly
+example
+simulates
+system
+consists
+wrapped
+around
+two
+sprockets
+2d
+constructed
+assembling
+rigid
+plates
+pin
+way
+relative
+rotation
+links
+unrestricted
+used
+transmit
+rotational
+motion
+located
+distance
+angular
+velocity
+prescribed
+driver
+load
+torque
+applied
+driven
+using
+transient
+study
+analyzed
+cases
+shaft
+loaded
+unloaded
+results
+show
+comparison
+link
+contact
+forces
+parameters
+model
+roller_chain_dynamics
+mph
+param
+omega
+drive
+kb
+spring
+constant
+bushing
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+multibody
+@label:multibody dynamics
+displacement
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+cdr
+@tag:cdr
+chaindrive
+@type:chaindrive
+@label:chain drive
+je
+@tag:je
+jointelasticity
+@type:jointelasticity
+joint
+elasticity
+@label:joint elasticity
+cdr1rd
+@tag:cdr1rd
+rigiddomain
+@type:rigiddomain
+domain
+@label:rigid domain: link
+cdr1att
+@tag:cdr1att
+attachment
+@type:attachment
+@label:attachment: roller
+@label:attachment: pin
+cdr1hgj
+@tag:cdr1hgj
+hingejoint
+@type:hingejoint
+hinge
+@label:hinge joint: roller 1 - pin
+@label:hinge joint: roller 2 - pin
+@label:hinge joint: roller 3 - pin
+@label:hinge joint: roller 4 - pin
+@label:hinge joint: roller 5 - pin
+@label:hinge joint: roller 6 - pin
+@label:hinge joint: roller 7 - pin
+@label:hinge joint: roller 8 - pin
+@label:hinge joint: roller 9 - pin
+@label:hinge joint: roller 10 - pin
+@label:hinge joint: roller 11 - pin
+@label:hinge joint: roller 12 - pin
+@label:hinge joint: roller 13 - pin
+@label:hinge joint: roller 14 - pin
+@label:hinge joint: roller 15 - pin
+@label:hinge joint: roller 16 - pin
+@label:hinge joint: roller 17 - pin
+@label:hinge joint: roller 18 - pin
+@label:hinge joint: roller 19 - pin
+@label:hinge joint: roller 20 - pin
+@label:hinge joint: roller 21 - pin
+@label:hinge joint: roller 22 - pin
+@label:hinge joint: roller 23 - pin
+@label:hinge joint: roller 24 - pin
+@label:hinge joint: roller 25 - pin
+@label:hinge joint: roller 26 - pin
+@label:hinge joint: roller 27 - pin
+@label:hinge joint: roller 28 - pin
+@label:hinge joint: roller 29 - pin
+@label:hinge joint: roller 30 - pin
+@label:hinge joint: roller 31 - pin
+@label:hinge joint: roller 32 - pin
+@label:hinge joint: roller 33 - pin
+@label:hinge joint: roller 34 - pin
+@label:hinge joint: roller 35 - pin
+@label:hinge joint: roller 36 - pin
+@label:hinge joint: roller 37 - pin
+@label:hinge joint: roller 38 - pin
+@label:hinge joint: roller 39 - pin
+@label:hinge joint: roller 40 - pin
+@label:hinge joint: roller 41 - pin
+@label:hinge joint: roller 42 - pin
+@label:hinge joint: roller 43 - pin
+@label:hinge joint: roller 44 - pin
+@label:hinge joint: roller 45 - pin
+@label:hinge joint: roller 46 - pin
+@label:hinge joint: roller 47 - pin
+@label:hinge joint: roller 48 - pin
+rd
+@tag:rd
+@label:rigid domain: sprocket
+mmi
+@tag:mmi
+massinertia
+@type:massinertia
+mass
+moment
+inertia
+@label:mass and moment of inertia
+att
+@tag:att
+@label:attachment: sprocket
+hgj
+@tag:hgj
+@label:hinge joint: sprocket
+pm
+@tag:pm
+prescribedmotion
+@type:prescribedmotion
+@label:prescribed motion
+afm
+@tag:afm
+appliedforceandmoment
+@type:appliedforceandmoment
+force
+@label:applied force and moment
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:roller chain sprocket
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+dsp&lt;(r1+r2+2*rs
+@label:parameter check: dsp&lt;(r1+r2+2*rs
+n2&gt;n
+@label:parameter check: n2&gt;n
+ccorr!=0&amp;&amp;ccorr
+@label:parameter check: ccorr!=0&amp;&amp;ccorr
+cdelta&lt;0||cdelta&gt
+@label:parameter check: cdelta&lt;0||cdelta&gt
+ns1&lt
+ns2&lt
+nt1&lt;2||nt2&lt
+@label:parameter check: (ns1&lt;1 || ns2&lt;2 || nt1&lt;2||nt2&lt
+@label:roller chain
+dimensions
+negative
+zero
+@label:parameter check: dimensions negative or zero
+dr&gt
+@label:parameter check : dr&gt
+dp&gt;=dr
+@label:parameter check : dp&gt;=dr
+db&gt;=dr
+@label:parameter check : db&gt;=dr
+db&lt;=dp
+@label:parameter check : db&lt;=dp
+wl&lt
+2||wl&gt
+@label:parameter check : wl&lt;0.2||wl&gt
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+mov
+@tag:mov
+move
+@type:move
+@label:move
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+@tag:if
+@type:if
+db&gt
+@label:if db&gt
+endif
+@tag:endif
+@type:endif
+end
+@label:end if db&gt
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+present
+@label:if bushing present
+@label:end if bushing present
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+boundary
+@label:roller all boundary
+interior
+@label:roller interior boundary
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+outer
+@label:roller pin outer boundary
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+inner
+@label:roller inner boundary
+@label:pin all boundary
+@label:pin interior boundary
+@label:pin outer boundary
+@label:pin inner boundary
+arr
+@tag:arr
+array
+@type:array
+@label:array
+csel
+dom
+bnd
+pnt
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input
+dr
+db
+bushing_diameter_to_pitch_ratio
+localparam
+local
+rr
+radius
+rl
+curvature
+plate
+baseunitsystem
+meter
+radian
+degree
+@label:sprocket
+non-integer
+@label:parameter check: n non-integer
+n&lt
+@label:parameter check: n&lt
+@label:parameter check: dr&gt
+dbr*r&gt;=r-rs
+@label:parameter check: dbr*r&gt;=r-rs
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+spl
+@tag:spl
+split
+@type:split
+@label:split
+tan
+@tag:tan
+tangent
+@type:tangent
+@label:tangent
+large
+@label:if n is large
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+@label:end if n is large
+small
+@label:if n is small
+@label:end if n is small
+dbr&gt
+@label:if dbr&gt
+@label:end if dbr&gt
+rs
+seating
+curve
+ac
+intermediate
+variable
+constructing
+cpy
+csy
+ns
+even
+@label:if ns1 even
+@label:end if ns1 even
+@tag:copy
+@type:copy
+@label:copy
+odd
+@label:if ns2 odd
+@label:end if ns2 odd
+@label:if ns2 even
+@label:end if ns2 even
+nt1&gt
+@label:if nt1&gt
+nt
+@label:if nt1 odd
+@label:end if nt1 odd
+@label:if nt1 even
+extra
+@label:if 3 extra links
+@label:end if 3 extra links
+@label:end if nt1 even
+@label:end if nt1&gt
+@label:if nt
+@label:end if nt
+pi1_sel
+object
+pi1_adjsel
+pi1_unisel
+boundaries
+pi1_csel
+bushings
+pi2_sel
+pi2_adjsel
+pi2_disksel
+pi3_sel
+pi3_adjsel
+pi3_disksel
+cdy
+dp
+wl
+dbr
+bore_diameter_to_pitch_diameter_ratio
+second_sprocket
+theta
+angle
+teeth
+first
+mspi
+slope
+center
+nceven
+number
+cdxcorr
+corrected
+coordinate
+msp
+mt
+second
+axis
+fully
+seated
+xt
+intersection
+component
+yt
+lt
+length
+xt1f
+location
+ys1l
+last
+yt2f
+nt2e
+boolean
+yt2l
+xs2l
+ys2l
+xs2f
+xt1l
+dist
+fitting
+full
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form assembly
+form_union/assembly
+part
+ipart
+noninteger
+@label:parameter check: n noninteger
+step
+@tag:step
+@type:step
+@label:step
+var
+variables
+flj
+fixed
+spatial
+mesh
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+fromsequence
+@type:fromsequence
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+structural
+steel
+@label:structural steel
+enu
+young's
+modulus
+poisson's
+ratio
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+murnaghan
+elastoplasticmodel
+elastoplastic
+ludwik
+johnsoncook
+johnson-cook
+swift
+voce
+hockettsherby
+hockett-sherby
+armstrongfrederick
+armstrong-frederick
+norton
+garofalo
+hyperbolic
+sine
+chabocheviscoplasticity
+chaboche
+viscoplasticity
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+optsequence
+std
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+state
+@type:state
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+@label:comp1.mbd_jnt_rot
+comp1_mbd_jnt_disp
+@tag:comp1_mbd_jnt_disp
+@label:comp1.mbd_jnt_disp
+comp1_mbd_hgj1_pm1_thp
+@tag:comp1_mbd_hgj1_pm1_thp
+integration
+thp
+@label:angular velocity integration variable
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+tp
+@tag:tp
+timeparametric
+@type:timeparametric
+parametric
+@label:time parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+coupled
+@label:fully coupled
+result
+dset
+@tag:dset
+@type:solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:displacement
+@label:link motion
+@label:contact forces
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:velocity
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+@label:arrow line
+@label:surface: all
+@label:surface: roller plates
+selection
+@type:selection
+@label:selection
+@label:surface: link
+@tag:line
+@type:line
+@label:line
+plotgroup1d
+@type:plotgroup1d
+@label:link joint rotation
+glob
+@tag:glob
+global
+@type:global
+@label:global
+magnitude
+@label:link joint force, magnitude
+@label:sprocket rotation
+@label:sprocket angular velocity
+acceleration
+@label:sprocket angular acceleration
+frequency
+hist
+@study:std
+@study:time
+@physics:mbd
+@func
+@func:step
+@geom:geom
+@geom:pi
+@geom:fin
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:func
+@material:ElastoplasticModel
+@material:Ludwik
+@material:Voce
+@material:HockettSherby
+@material:ArmstrongFrederick
+@material:int
+@material:Murnaghan
+@material:JohnsonCook
+@material:Swift
+@material:Norton
+@material:Garofalo
+@material:ChabocheViscoplasticity
+@expr:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_rd_disp
+@sol:comp1_mbd_jnt_disp
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_mbd_rd_rot
+@sol:comp1_u
+@sol:t
+@sol:tp
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:arwl
+@view:view
+@result:sel
+@result:selection
+@result:line
+@result:glob
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+mbdcdr1rgrp
+@tag:mbdcdr1rgrp
+physics
+@type:physics
+domains
+@label:cdr1: link (rigid domains
+mbdcdr1agrp
+@tag:mbdcdr1agrp
+attachments
+@label:cdr1: link
+mbdcdr1jgrp
+@tag:mbdcdr1jgrp
+joints
+@label:cdr1: link (hinge joints
+mbdcdr1sgrp
+@tag:mbdcdr1sgrp
+@label:cdr1: sprocket
+res
+soldata

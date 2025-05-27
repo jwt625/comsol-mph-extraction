@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/EMI_EMC_Applications/antenna_ebg.mph",
+  "source_size": 32579,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 6
+}

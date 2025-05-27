@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/Microwave_Heating/rf_heating.mph",
+  "source_size": 1888521,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 20
+}

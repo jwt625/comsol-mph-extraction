@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Devices,_Resistive/geoelectrics.mph",
+  "source_size": 909281,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.737",
+  "total_files_in_archive": 20
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Introductory_Electrostatics/capacitor_dc.mph",
+  "source_size": 635701,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.738",
+  "total_files_in_archive": 21
+}

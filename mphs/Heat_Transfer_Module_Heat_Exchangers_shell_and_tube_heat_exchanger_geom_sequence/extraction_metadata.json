@@ -1,0 +1,13 @@
+{
+  "source_file": "Heat_Transfer_Module/Heat_Exchangers/shell_and_tube_heat_exchanger_geom_sequence.mph",
+  "source_size": 5504168,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310326.591",
+  "total_files_in_archive": 53
+}

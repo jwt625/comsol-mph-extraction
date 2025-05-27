@@ -1,0 +1,487 @@
+slider
+crank
+mechanism
+with
+joint
+clearance
+model
+simulates
+dynamic
+behavior
+components
+assumed
+rigid
+two
+hinge
+joints
+used
+connect
+support
+connecting
+rod
+different
+cases
+considered
+first
+case
+assumes
+rod–slider
+perfect
+without
+second
+allows
+connected
+move
+within
+provided
+distance
+transient
+analysis
+performed
+analyze
+effect
+velocity
+acceleration
+moment
+slider_crank_mechanism_with_clearance
+mph
+param
+parameters
+mass
+inertia
+omega
+angular
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+multibody
+dynamics
+@label:multibody dynamics
+displacement
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+@label:rigid material: support
+mmi
+@tag:mmi
+massinertia
+@type:massinertia
+@label:mass and moment of inertia
+fix
+@tag:fix
+fixedconstraint
+@type:fixedconstraint
+fixed
+constraint
+@label:fixed constraint
+@label:rigid material: crank
+@label:rigid material: connecting rod
+@label:rigid material: slider
+pdr
+@tag:pdr
+prescribeddisprot
+@type:prescribeddisprot
+prescribed
+displacement/rotation
+@label:prescribed displacement/rotation
+hgj
+@tag:hgj
+hingejoint
+@type:hingejoint
+@label:hinge joint
+pm
+@tag:pm
+prescribedmotion
+@type:prescribedmotion
+motion
+@label:prescribed motion
+crj
+@tag:crj
+clearancejoint
+@type:clearancejoint
+@label:clearance joint
+spb
+@tag:spb
+sourcepointbnd
+@type:sourcepointbnd
+source
+point
+boundary
+@label:source point: boundary
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:support
+@label:crank
+@label:connecting rod
+@label:slider
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:support and crank
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+boundaries
+@label:connecting rod boundaries
+journal
+@label:journal boundaries
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+@label:connecting rod without journal
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+geom1_fin_pc2_src
+geom1_fin_pc2_dst
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+step
+@tag:step
+@type:step
+@label:step
+spatial
+mesh
+geom1_sel
+@tag:geom1_sel
+fromsequence
+@type:fromsequence
+geom1_unisel
+@tag:geom1_unisel
+geom1_adjsel
+@tag:geom1_adjsel
+geom1_difsel
+@tag:geom1_difsel
+ap
+identity
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+state
+@type:state
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+@label:comp1.mbd_jnt_rot
+comp1_mbd_hgj1_pm1_thp
+@tag:comp1_mbd_hgj1_pm1_thp
+integration
+variable
+thp
+@label:angular velocity integration variable
+comp1_mbd_hgj1_pm1_rm
+@tag:comp1_mbd_hgj1_pm1_rm
+reaction
+rm
+@label:reaction moment
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+pc
+@tag:pc
+parcurve3d
+@type:parcurve3d
+parameterized
+curve
+@label:parameterized curve 3d
+anim
+@tag:anim
+animation
+@type:animation
+@label:displacement: hinge joint
+@label:displacement: clearance joint
+relative
+@label:relative displacement: hinge joint
+@label:relative displacement: clearance joint
+trajectory
+@label:journal trajectory: clearance joint
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:velocity: hinge joint
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+line
+@label:arrow line
+selection
+@type:selection
+@label:selection
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:velocity: clearance joint
+plotgroup1d
+@type:plotgroup1d
+@label:slider velocity
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:slider acceleration
+pttraj
+@tag:pttraj
+pointtrajectories
+@type:pointtrajectories
+trajectories
+@label:point trajectories
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@tag:line
+@type:line
+@label:line
+force
+@label:joint force: clearance joint
+polargroup
+@type:polargroup
+gap
+@label:gap distance: clearance joint
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:mbd
+@geom:geom
+@geom:imp
+@geom:fin
+@geom:sel
+@geom:selection
+@geom:unisel
+@geom:adjsel
+@geom:difsel
+@pair:p
+@pair:source
+@pair:destination
+@func
+@func:step
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_rd_disp
+@sol:comp1_mbd_hgj1_pm1_RM
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_mbd_rd_rot
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:vol
+@result:arwl
+@view:view
+@result:sel
+@result:selection
+@result:con
+@result:tran
+@view:camera
+@result:glob
+@result:pttraj
+@result:col
+@dataset:pc
+@result:line
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+physics
+@type:physics
+domains
+@label:rigid domains
+@label:hinge joints
+soldata

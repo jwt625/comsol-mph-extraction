@@ -1,0 +1,453 @@
+buckling
+composite
+cylinder
+example
+shows
+perform
+analysis
+compute
+critical
+load
+factors
+compressive
+loading
+fixed-end
+conditions
+made
+up
+eight
+layers
+carbon
+fiber
+reinforced
+polymer
+cfrp
+having
+different
+orientations
+equivalent
+single
+layer
+esl
+theory
+based
+approach
+used
+effect
+stacking
+sequence
+mode
+shape
+factor
+analyzed
+types
+balanced
+laminates
+symmetric
+angle-ply
+laminate
+antisymmetric
+model
+composite_cylinder_buckling
+mph
+param
+parameters
+radius
+default
+shell
+@tag:shell
+@type:shell
+@label:shell
+displacement
+dimensionless_displacement
+shell_rd_disp
+shell_rd_rot
+shell_rig_disp
+shell_rig_rot
+shell_att_disp
+shell_att_rot
+emm
+@tag:emm
+elastic
+@type:elastic
+linear
+material
+@label:linear elastic material
+shls
+@tag:shls
+shelllocalsystem
+@type:shelllocalsystem
+local
+system
+@label:shell local system
+@tag:to
+thicknessoffset
+@type:thicknessoffset
+thickness
+offset
+@label:thickness and offset
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+llem
+@tag:llem
+layeredelastic
+@type:layeredelastic
+layered
+@label:linear elastic material, layered
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+disp
+@tag:disp
+@type:displacement1
+prescribed
+displacement/rotation
+@label:prescribed displacement/rotation
+el
+@tag:el
+edgeload
+@type:edgeload
+edge
+@label:edge load
+geom
+geometry
+geomnative
+cyl
+@tag:cyl
+@type:cylinder
+@label:cylinder
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+llmat1_xdim
+extra
+dimension
+link
+@tag:i
+interval
+@type:interval
+@label:interval
+var
+variables
+fc
+spatial
+mesh
+llmat1_xdim_pa
+@tag:llmat1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+llmat1_xdim_ad
+@tag:llmat1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+carbon-epoxy
+@label:material: carbon-epoxy
+transverseisotropic
+transversely
+isotropic
+sw
+@tag:sw
+switch
+@type:switch
+@label:material switch
+lmat
+@tag:lmat
+layeredmaterial
+@type:layeredmaterial
+0/0/45/-45]_s
+@label:layered material: [0/0/45/-45]_s
+90/90/45/-45]_s
+@label:layered material: [90/90/45/-45]_s
+90/0/90/0]_s
+@label:layered material: [90/0/90/0]_s
+45/45/45/45]_as
+@label:layered material: [45/45/45/45]_as
+llmat
+@tag:llmat
+layeredmateriallink
+@type:layeredmateriallink
+@label:layered material link
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+ls_edg
+@tag:ls_edg
+@type:edge
+@label:edge
+ls_dis
+@tag:ls_dis
+distribution
+@type:distribution
+@label:distribution
+pm
+@tag:pm
+materialsweep
+@type:materialsweep
+sweep
+@label:material sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+matsw
+@tag:matsw
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+@tag:buckling
+linearbuckling
+@type:linearbuckling
+@label:linear buckling
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_ar
+@tag:comp1_ar
+field
+@type:field
+normals
+ar
+@label:displacement of shell normals
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:e
+eigenvalue
+@type:eigenvalue
+@label:eigenvalue solver
+parametric
+solutions
+1=layered
+@label:material switch 1=layered material: [0/0/45/-45]_s
+@label:material switch 1=layered material: [90/90/45/-45]_s
+@label:material switch 1=layered material: [90/0/90/0]_s
+@label:material switch 1=layered material: [45/45/45/45]_as
+result
+results
+dset
+@tag:dset
+@type:solution
+dset3shelllshl
+@tag:dset3shelllshl
+@label:layered material
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+@label:critical buckling load
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:mode shape: [0/0/45/-45]_s
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:mode shape: [90/90/45/-45]_s
+@label:mode shape: [90/0/90/0]_s
+@label:mode shape: [45/45/45/45]_as
+orientation
+@label:thickness and orientation
+@label:thickness
+syss
+@tag:syss
+coordsyssurface
+@type:coordsyssurface
+stress
+@label:stress: [45/45/45/45]_as
+lss
+@tag:lss
+layeredmaterialslice
+@type:layeredmaterialslice
+slice
+@label:layered material slice
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+comparison
+@label:mode shape: comparison
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:shell
+@study:buckling
+@geom:geom
+@expr:var
+@geom:cyl
+@view:view
+@material:mat
+@material:materialmodel
+@material:TransverseIsotropic
+@material:lmat
+@material:sw
+@mesh:mesh
+@study:matsw
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_ar
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:e
+@batch:pm
+@batch:so
+@dataset:dset
+@dataset:dset3shelllshl
+@result:pg
+@result:surf
+@view:camera
+@result:syss
+@result:lss
+@result:tlan
+@evaluationgroup:eg
+@evaluationgroup:gev
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+shellsys
+@tag:shellsys
+vectorbase
+@type:vectorbase
+soldata

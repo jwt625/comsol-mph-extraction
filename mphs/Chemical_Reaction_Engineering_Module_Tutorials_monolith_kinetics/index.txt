@@ -1,0 +1,254 @@
+analysis
+nox
+reaction
+kinetics
+example
+investigates
+no
+reduction
+exhaust
+system
+car
+reactions
+take
+place
+flue
+gases
+pass
+channels
+monolithic
+reactor
+study
+focused
+temperature
+compositions
+affect
+selectivity
+model
+set
+up
+using
+plug
+flow
+engineering
+interface
+monolith_kinetics
+mph
+param
+parameters
+t_in
+inlet
+channel
+length
+vrate
+volumetric
+rate
+f_nh3_in
+molar
+nh
+f_n2_in
+frequency
+factor
+activation
+energy
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+initial
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+gt
+h2o
+@label:1: 4 no + 4 nh3 + o2 =&gt; 4 n2 + 6 h2o
+@tag:no
+specieschem
+@type:specieschem
+species
+@label:species: no
+@tag:nh
+@label:species: nh
+@tag:o
+@label:species: o
+@tag:n
+@label:species: n
+@tag:h2o
+@label:species: h2o
+@label:2: 4 nh3 + 3 o2 =&gt; 2 n2 + 6 h2o
+var
+variables
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+pp
+@tag:pp
+builtinpropertypackage
+@type:builtinpropertypackage
+gas
+@label:gas system
+const1_re
+@tag:const1_re
+compoundconstant
+@type:compoundconstant
+mass
+@label:molar mass
+const2_re
+@tag:const2_re
+const3_re
+@tag:const3_re
+const4_re
+@tag:const4_re
+const5_re
+@tag:const5_re
+one1_re
+@tag:one1_re
+onephaseproperty
+@type:onephaseproperty
+enthalpy
+formation
+@label:enthalpy of formation
+one2_re
+@tag:one2_re
+entropy
+@label:entropy of formation
+one3_re
+@tag:one3_re
+heat
+capacity
+cp
+@label:heat capacity
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+@tag:param
+spf
+@tag:spf
+stationaryplugflow
+@type:stationaryplugflow
+stationary
+@label:stationary plug flow
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:molar flow rate
+@label:comp1.ode
+pf
+@tag:pf
+plugflow
+@type:plugflow
+solver
+@label:plug flow solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:x
+nonisothermal
+result
+results
+dset
+@tag:dset
+@type:solution
+mrkvl
+@tag:mrkvl
+table
+@type:table
+maximum
+minimum
+@label:maximum and minimum values
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:reaction rate
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:selectivity
+@label:molar flow rate nh3, nonisothermal
+@label:selectivity, nonisothermal
+@label:temperature, nonisothermal
+gmrk
+@tag:gmrk
+graphmarker
+@type:graphmarker
+graph
+marker
+@label:graph marker
+geommanagernative
+hist
+@study:std
+@study:spf
+@physics:re
+@expr:var
+@tdp:pp
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:pf
+@sol:fc
+@batch:p
+@batch:so
+@result:pg
+@result:glob
+@result:gmrk
+soldata
+xmesh
+savepoint

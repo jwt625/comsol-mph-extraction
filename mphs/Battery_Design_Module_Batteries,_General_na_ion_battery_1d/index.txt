@@ -1,0 +1,443 @@
+1d
+isothermal
+sodium-ion
+battery
+example
+demonstrates
+lithium-ion
+interface
+modeling
+geometry
+dimension
+model
+chemistry
+similarities
+often
+described
+same
+equations
+charge
+mass
+transport
+electrode
+kinetics
+particle
+intercalation
+na_ion_battery_1d
+mph
+param
+parameters
+l_n
+negative
+thickness
+r_n
+radius
+cell
+temperature
+cs_0_n
+initial
+concentration
+alpha
+transfer
+coefficient
+sigmaeff_p
+positive
+conductivity
+epsl_sep
+electrolyte
+volume
+fraction
+separator
+rct_n
+contact
+resistance
+cl_ref
+reference
+napf
+expressions
+q_p
+remaining
+host
+capacity
+conditions
+default
+liion
+@tag:liion
+lithiumionbatterymph
+@type:lithiumionbatterymph
+@label:sodium-ion battery
+electricpotentialionicphase
+electricpotential
+fastassemblydiscretization_disc
+sep
+@tag:sep
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode
+pin
+@tag:pin
+particleintercalation
+@type:particleintercalation
+@label:particle intercalation
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+@label:porous electrode reaction
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+ec
+@tag:ec
+electrodecurrent
+@type:electrodecurrent
+current
+@label:electrode current
+geom
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+liion_pce1_pin1_xdim
+extra
+int
+@tag:int
+liion_pce2_pin1_xdim
+interpolation
+@type:interpolation
+eeq_nvpf
+@label:interpolation - eeq_nvpf (positive electrode
+eeq_hc
+@label:interpolation - eeq_hc (negative electrode
+ds_p
+@label:interpolation - ds_p
+ds_n
+@label:interpolation - ds_n
+k_p
+@label:interpolation - k_p
+k_n
+@label:interpolation - k_n
+dl
+@label:interpolation - dl
+sigmal
+@label:interpolation - sigmal
+var
+variables
+e_cell
+voltage
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+liion_pce1_pin1_xdim_pa
+@tag:liion_pce1_pin1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+liion_pce1_pin1_xdim_ad
+@tag:liion_pce1_pin1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+liion_pce2_pin1_xdim_pa
+@tag:liion_pce2_pin1_xdim_pa
+liion_pce2_pin1_xdim_ad
+@tag:liion_pce2_pin1_xdim_ad
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_cl
+@tag:comp1_cl
+field
+@type:field
+salt
+cl
+@label:electrolyte salt concentration
+comp1_liion_pce1_cs
+@tag:comp1_liion_pce1_cs
+solid
+phase
+cs
+@label:solid phase concentration
+comp1_liion_pce2_cs
+@tag:comp1_liion_pce2_cs
+comp1_phil
+@tag:comp1_phil
+potential
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp1_liion_ec1_phis
+@tag:comp1_liion_ec1_phis
+state
+@type:state
+boundary
+@label:electric potential on boundary
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+stopcondition
+@type:stopcondition
+stop
+condition
+@label:stop condition
+solutions
+i_app
+@label:i_app
+result
+results
+dset
+@tag:dset
+@type:solution
+int1_ds
+@tag:int1_ds
+grid1d
+@type:grid1d
+grid
+@label:grid 1d
+ptds
+@tag:ptds
+cutpoint1d
+@type:cutpoint1d
+cut
+point
+@label:cut point 1d
+int2_ds
+@tag:int2_ds
+1a
+@label:grid 1d 1a
+int3_ds
+@tag:int3_ds
+1b
+@label:grid 1d 1b
+int4_ds
+@tag:int4_ds
+1c
+@label:grid 1d 1c
+int5_ds
+@tag:int5_ds
+@label:grid 1d 1d
+int6_ds
+@tag:int6_ds
+1e
+@label:grid 1d 1e
+int7_ds
+@tag:int7_ds
+1f
+@label:grid 1d 1f
+int8_ds
+@tag:int8_ds
+1g
+@label:grid 1d 1g
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+with
+respect
+@label:boundary electrode potential with respect to ground
+glob
+@tag:glob
+global
+@type:global
+@label:global
+average
+@label:average electrode state of charge
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:electrode potential with respect to ground
+vs
+@label:cell voltage vs. cell capacity
+@label:positive electrode potential vs. cell capacity
+@label:negative electrode potential vs. cell capacity
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:liion
+@study:time
+@geom:geom
+@geom:i
+@func
+@func:int
+@cpl
+@cpl:intop
+@cpl:selection
+@expr:var
+@common:cminpt
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_liion_ec1_phis
+@sol:comp1_phis
+@sol:comp1_cl
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:comp1_liion_pce2_cs
+@sol:comp1_liion_pce1_cs
+@sol:t
+@sol:aDef
+@batch:p
+@batch:so
+@result:pg
+@result:glob
+@result:lngr
+@result:selection
+res
+soldata

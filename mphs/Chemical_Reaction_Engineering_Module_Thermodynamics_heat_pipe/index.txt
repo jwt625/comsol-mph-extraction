@@ -1,0 +1,751 @@
+heat
+pipe
+with
+accurate
+liquid
+gas
+properties
+pipes
+transfer
+efficiently
+vaporization
+mass
+condensation
+working
+fluid
+found
+wide
+variety
+applications
+thermal
+control
+importance
+cooling
+electronics
+prominent
+example
+model
+demonstrates
+laminar
+flow
+vapor
+chamber
+coupled
+porous
+wick
+thermodynamic
+water
+obtained
+thermodynamics
+node
+temperature
+difference
+hot
+cold
+side
+together
+dependence
+pressure
+induces
+across
+acts
+sink
+vapor/wick
+interface
+site
+conversely
+source
+transport
+compared
+conductive
+wall
+former
+overshadows
+latter
+several
+orders
+magnitude
+heat_pipe
+mph
+param
+parameters
+r_outer
+outer
+diameter
+length
+wick_porosity
+volumetric
+void
+fraction
+h_conv
+convection
+coefficient
+heatsink
+w_contact
+contact
+surface
+thickness
+mesh_factor
+decrease
+obtain
+finer
+mesh
+default
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+@label:laminar flow
+velocity
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+wallbc
+@tag:wallbc
+@type:wallbc
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+inlet
+@label:inlet
+br
+@tag:br
+porousmediaflowbrinkman
+@type:porousmediaflowbrinkman
+brinkman
+equations
+@label:brinkman equations
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+prpc
+@tag:prpc
+pressurepointconstraint
+@type:pressurepointconstraint
+point
+constraint
+@label:pressure point constraint
+ht
+@tag:ht
+porousmediaheattransfer
+@type:porousmediaheattransfer
+media
+@label:heat transfer in porous media
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+flux
+@label:heat flux
+bhs
+@tag:bhs
+boundaryheatsource
+@type:boundaryheatsource
+boundary
+@label:boundary heat source
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+mce
+@tag:mce
+meshcontroledges
+@type:meshcontroledges
+edges
+@label:mesh control edges
+mesh_control_edges
+ige
+@tag:ige
+ignoreedges
+@type:ignoreedges
+ignore
+@label:ignore edges
+ignore_edges
+igv
+@tag:igv
+ignorevertices
+@type:ignorevertices
+vertices
+@label:ignore vertices
+ignore_vertices
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+cavity
+@label:vapor cavity
+copper
+@label:porous copper wick
+tube
+casing
+@label:solid copper tube casing
+@label:heat sink
+@label:heat source
+cross
+section
+@label:cross section of cavity
+@label:cross section of wick
+@label:cross section of casing
+inner
+@label:inner wick boundary
+boundaries
+@label:all wick boundaries
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+sections
+@label:all cross sections
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+pmat1_fluid1_xdim
+extra
+dimension
+@tag:i
+@type:point
+@label:point
+pmat1_solid1_xdim
+@tag:an
+analytic
+@type:analytic
+@label:vapor pressure of water
+material
+fixed
+spatial
+geom1_sel
+@tag:geom1_sel
+fromsequence
+@type:fromsequence
+geom1_unisel
+@tag:geom1_unisel
+pmat1_fluid1_xdim_pa
+@tag:pmat1_fluid1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+pmat1_fluid1_xdim_ad
+@tag:pmat1_fluid1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+pmat1_solid1_xdim_pa
+@tag:pmat1_solid1_xdim_pa
+pmat1_solid1_xdim_ad
+@tag:pmat1_solid1_xdim_ad
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+hide
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+mat
+@tag:mat
+common
+@type:common
+@label:copper
+enu
+young's
+modulus
+poisson's
+ratio
+linzres
+linearized
+resistivity
+pp1mat
+@tag:pp1mat
+@label:gas: water
+pp2mat
+@tag:pp2mat
+@label:liquid: water
+sw
+@tag:sw
+switch
+@type:switch
+@label:fluid in wick
+pmat
+@tag:pmat
+porousmedia
+@type:porousmedia
+@label:porous material
+poro
+@type:fluid
+@type:solid
+matlnk
+@tag:matlnk
+link
+@type:link
+@label:water vapor
+metal
+@label:copper metal
+comp
+component
+tdp
+pp
+@tag:pp
+builtinpropertypackage
+@type:builtinpropertypackage
+system
+@label:gas system
+mat_singlephase
+@tag:mat_singlephase
+onephaseproperty
+@type:onephaseproperty
+density
+@label:density
+capacity
+cp
+@label:heat capacity
+cp/cv
+@label:heat capacity ratio (cp/cv
+conductivity
+@label:thermal conductivity
+viscosity
+@label:viscosity
+vapor-liquid
+@label:vapor-liquid system
+tdep
+@tag:tdep
+temperaturedependentproperty
+@type:temperaturedependentproperty
+@label:heat of vaporization
+ln
+@label:ln vapor pressure
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+vtx
+@tag:vtx
+vertex
+@type:vertex
+@label:vertex
+materialsweep
+@type:materialsweep
+sweep
+@label:material sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+dry
+matsw
+@tag:matsw
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+saturated
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+field
+@type:field
+average
+uave
+@label:velocity magnitude, average
+comp1_nitf2_uave
+@tag:comp1_nitf2_uave
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct, heat transfer variables
+parametric
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+wick=gas
+@label:fluid in wick=gas: water
+store
+@label:solution store
+@label:direct, fluid flow variables
+wick=liquid
+@label:fluid in wick=liquid: water
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+energy
+balance
+@label:energy balance
+int
+@tag:int
+intline
+@type:intline
+@label:casing
+@label:wick
+@label:cavity
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:temperature - dry wick
+surf
+@tag:surf
+@type:surface
+@label:surface
+@label:velocity
+lg(|u
+@label:surface 1 - fluid velocity, lg(|u
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface 1 - vapor flow
+@label:surface 2 - temperature
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:arrow surface 2 - liquid flow
+line
+@tag:line
+@type:line
+@label:line 1 - material boundaries
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+@label:velocity, 3d
+plotgroup1d
+@type:plotgroup1d
+latent
+phase
+change
+@label:latent heat flux from phase change
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:temperature, 3d
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:isosurface
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+selection
+@type:selection
+@label:selection
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:stat
+@physics:spf
+@physics:br
+@physics:ht
+@geom:c
+@geom:r
+@geom:mir
+@geom:input
+@geom:selection
+@geom:mce
+@geom:ige
+@geom:igv
+@geom:sel
+@geom:unisel
+@view:view
+@view:hideObjects
+@view:hide
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:size
+@mesh:bl
+@mesh:blp
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:linzRes
+@tdp:pp
+@tdp:singlephase
+@tdp:mat_singlephase
+@tdp:tdep
+@func
+@func:an
+@material:sw
+@material:pmat
+@material:selection
+@material:fluid
+@material:solid
+@material:matlnk
+@multiphysics
+@multiphysics:nitf
+@study:matsw
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@batch:pm
+@batch:so
+@result:pg
+@result:surf
+@result:sel
+@result:selection
+@result:arws
+@result:col
+@result:filt
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:ll
+@sol:sc
+@dataset:dset
+@result:con
+@dataset:rev
+@result:line
+@evaluationgroup:eg
+@evaluationgroup:int
+@evaluationgroup:selection
+@result:lngr
+@result:iso
+@result:vol
+@result:mtrl
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+res
+soldata

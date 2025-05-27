@@ -1,0 +1,667 @@
+free
+surface
+mixer
+example
+turbulent
+flow
+partially
+baffled
+shows
+set
+up
+rotating
+machinery
+interfaces
+module
+with
+stationary
+features
+frozen
+rotor
+time-dependent
+simulations
+performed
+compared
+note
+model
+includes
+frozen-rotor
+study
+take
+day
+solve
+however
+takes
+few
+hours
+free_surface_mixer
+mph
+param
+parameters
+agitator
+clearance
+viscfact
+viscosity
+factor
+default
+spf
+@tag:spf
+turbulentflowkeps
+@type:turbulentflowkeps
+k-&#x3b
+@label:turbulent flow, k-&#x3b
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+properties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+grav
+@tag:grav
+gravity
+@type:gravity
+@label:gravity
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:flow continuity
+sfs
+@tag:sfs
+stationaryfreesurface
+@type:stationaryfreesurface
+@label:stationary free surface
+cnta
+@tag:cnta
+contactangle
+@type:contactangle
+contact
+angle
+@label:contact angle
+fs
+@tag:fs
+freesurface
+@type:freesurface
+@label:free surface
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+sca
+@tag:sca
+scale
+@type:scale
+@label:scale
+cone
+@tag:cone
+@type:cone
+@label:cone
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+spl
+@tag:spl
+split
+@type:split
+@label:split
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+sequence2d
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+clf
+@tag:clf
+collapsefaces
+@type:collapsefaces
+collapse
+faces
+@label:collapse faces
+collapse_faces
+ige
+@tag:ige
+ignoreedges
+@type:ignoreedges
+ignore
+edges
+@label:ignore edges
+ignore_edges
+cmf
+@tag:cmf
+compositefaces
+@type:compositefaces
+composite
+@label:form composite faces
+form_composite_faces
+mcf
+@tag:mcf
+meshcontrolfaces
+@type:meshcontrolfaces
+mesh
+control
+@label:mesh control faces
+mesh_control_faces
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+step
+@tag:step
+@type:step
+@label:step
+material
+fixed
+spatial
+ap
+identity
+boundary
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rot
+@tag:rot
+rotatingdomain
+@type:rotatingdomain
+domain
+@label:rotating domain
+@tag:free
+deformingdomain
+@type:deformingdomain
+deforming
+@label:deforming domain
+mat
+@tag:mat
+common
+@type:common
+water
+liquid
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+interpolation
+@type:interpolation
+@label:interpolation
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+id
+@tag:id
+identicalmesh
+@type:identicalmesh
+identical
+@label:identical mesh
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+corner
+refinement
+@label:corner refinement
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+image
+@tag:image
+@type:mesh
+@label:mesh
+optsequence
+std
+frrot
+@tag:frrot
+frozenrotor
+@type:frozenrotor
+@label:frozen rotor
+mgl
+@tag:mgl
+multigridlevel
+@type:multigridlevel
+multigrid
+level
+@label:multigrid level
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_ep
+@tag:comp1_ep
+field
+@type:field
+dissipation
+rate
+ep
+@label:turbulent dissipation rate
+comp1_k
+@tag:comp1_k
+kinetic
+energy
+@label:turbulent kinetic energy
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_spf_etafs
+@tag:comp1_spf_etafs
+length
+etafs
+@label:length
+comp1_u
+@tag:comp1_u
+frame
+@label:spatial frame
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+rotation
+ode
+@label:rotation angle
+@tag:s
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+turbulence
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:i
+iterative
+@type:iterative
+amg
+@label:amg, fluid flow variables
+mg
+@tag:mg
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+@label:amg, turbulence variables
+sl
+@tag:sl
+sorline
+@type:sorline
+sor
+line
+@label:sor line
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp1_spatial_disp
+@tag:comp1_spatial_disp
+displacement
+disp
+@label:spatial mesh displacement
+comp1_spatial_lm
+@tag:comp1_spatial_lm
+lagrange
+multiplier
+lm
+@label:lagrange multiplier
+comp1_spatial_lm_nv
+@tag:comp1_spatial_lm_nv
+lm_nv
+@tag:t
+@type:time
+@label:time-dependent solver
+angular
+@label:angular displacement
+@label:direct, angular displacement
+@label:direct, spatial mesh displacement
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+@type:surface
+exterior
+walls
+@label:exterior walls, frozen rotor
+@label:free surface, frozen rotor
+@label:exterior walls, time dependent
+@label:free surface, time dependent
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+xy-plane
+@label:xy-plane, time dependent
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:velocity, frozen rotor
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+arrow
+volume
+@label:arrow volume
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:pressure, frozen rotor
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+resolution
+@label:wall resolution, frozen rotor
+@label:wall resolution
+@label:turbulent viscosity, frozen rotor
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+xz
+@label:velocity xz, frozen rotor
+@label:velocity, time dependent
+@label:pressure, time dependent
+@label:wall resolution, time dependent
+moving
+@label:moving mesh, time dependent
+@tag:mesh
+sel
+@tag:sel
+meshselection
+@type:meshselection
+selection
+@label:selection
+@label:turbulent viscosity, time dependent
+plotgroup2d
+@type:plotgroup2d
+xy
+@label:velocity xy, time dependent
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+@label:arrow surface
+geommanagernative
+hist
+@common:rot
+@common:selection
+@study:std
+@study:frrot
+@physics:spf
+@study:sfs
+@geom:geom
+@view:view
+@view:camera
+@func
+@func:step
+@common:free
+@material:mat
+@material:materialmodel
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@mesh:mesh
+@mesh:size
+@mesh:ftet
+@mesh:selection
+@mesh:swe
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@mesh:rf
+@mesh:sca
+@study:mglevel
+@study:mgl
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:d
+@sol:sl
+@sol:ll
+@sol:fc
+@dataset:dset
+@result:pg
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:surf
+@result:arwv
+@result:col
+@study:time
+@sol:comp1_ode
+@sol:comp1_spatial_disp
+@sol:t
+@result:mesh
+@result:sel
+@result:selection
+@dataset:cpl
+@result:arws
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

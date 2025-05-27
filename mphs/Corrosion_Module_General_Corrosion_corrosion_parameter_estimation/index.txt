@@ -1,0 +1,202 @@
+estimation
+corrosion
+kinetics
+parameters
+tutorial
+shows
+parameter
+study
+step
+determine
+electrode
+based
+polarization
+data
+zero-dimensional
+model
+constructed
+using
+separate
+expressions
+metal
+dissolution
+oxygen
+reduction
+reactions
+run
+need
+optimization
+module
+corrosion_parameter_estimation
+mph
+param
+e_ref
+reference
+vs
+she
+eeq_me
+equilibrium
+potential
+a_me
+anodic
+tafel
+slope
+i_o2_lim
+limiting
+current
+density
+eta_me
+overpotential
+eeq_o
+i_o
+default
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+conpar
+log10_i0_me
+a_o
+log10_i0_o
+tdp
+thermodynamics
+optsequence
+std
+cu-ni
+lsqo
+@tag:lsqo
+lsqoptimization
+@type:lsqoptimization
+@label:parameter estimation
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+ni-al
+bronze
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+@tag:conpar
+controlstate
+@type:controlstate
+log
+exchange
+@label:log10 of exchange current density for metal dissolution
+cathodic
+@label:cathodic tafel slope for oxygen reduction
+@label:anodic tafel slope for metal dissolution
+@label:limiting current density for oxygen reduction
+@label:log10 of exchange current density for oxygen reduction
+@tag:o
+@type:optimization
+solver
+@label:optimization solver
+@tag:s
+stationaryattrib
+@type:stationaryattrib
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+var
+@tag:var
+globalvariable
+@type:globalvariable
+global
+variable
+probe
+@label:global variable probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+objective
+@label:objective probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+linear
+scale
+@label:polarization plot 70-30 cu-ni (linear scale
+glob
+@tag:glob
+@type:global
+@label:global
+@label:polarization plot 70-30 cu-ni (log scale
+@label:polarization plot 90-10 cu-ni (linear scale
+@label:polarization plot 90-10 cu-ni (log scale
+@label:polarization plot ni-al (linear scale
+@label:polarization plot ni-al (log scale
+geommanagernative
+hist
+@func
+@func:int
+@study:std
+@study:lsqo
+@probe
+@probe:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:o
+@sol:s
+@sol:p
+@result:pg
+@result:glob
+res
+soldata

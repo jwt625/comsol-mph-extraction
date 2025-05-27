@@ -1,0 +1,366 @@
+dry
+air
+boltzmann
+analysis
+model
+solves
+equation
+two-term
+approximation
+mixture
+nitrogen
+oxygen
+representing
+background
+gas
+electron
+transport
+coefficients
+source
+terms
+computed
+suitable
+integration
+energy
+distribution
+function
+impact
+cross
+sections
+it
+shown
+prepare
+export
+used
+plasma
+interface
+boltzmann_dry_air
+mph
+param
+parameters
+xn
+default
+@tag:be
+boltzmannequation
+@type:boltzmannequation
+@label:boltzmann equation, two-term approximation
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+n2=&gt;e+n
+@label:1: e+n2=&gt;e+n
+@label:2: e+n2=&gt;e+n
+@label:3: e+n2=&gt;e+n
+@label:4: e+n2=&gt;e+n
+@label:5: e+n2=&gt;e+n
+@label:6: e+n2=&gt;e+n
+@label:7: e+n2=&gt;e+n
+@label:8: e+n2=&gt;e+n
+@label:9: e+n2=&gt;e+n
+@label:10: e+n2=&gt;e+n
+@label:11: e+n2=&gt;e+n
+@label:12: e+n2=&gt;e+n
+@label:13: e+n2=&gt;e+n
+@label:14: e+n2=&gt;e+n
+@label:15: e+n2=&gt;e+n
+@label:16: e+n2=&gt;e+n
+@label:17: e+n2=&gt;e+n
+@label:18: e+n2=&gt;e+n
+@label:19: e+n2=&gt;e+n
+@label:20: e+n2=&gt;e+n
+@label:21: e+n2=&gt;e+n
+@label:22: e+n2=&gt;e+n
+@label:23: e+n2=&gt;e+n
+@label:24: e+n2=&gt;e+n
+e+n2=&gt;2e+n
+@label:25: e+n2=&gt;2e+n
+@label:26: e+n2=&gt;2e+n
+e+o2=&gt;o+o
+@label:27: e+o2=&gt;o+o
+@label:28: e+o2=&gt;o+o
+e+o2=&gt;e+o
+@label:29: e+o2=&gt;e+o
+@label:30: e+o2=&gt;e+o
+@label:31: e+o2=&gt;e+o
+@label:32: e+o2=&gt;e+o
+@label:33: e+o2=&gt;e+o
+@label:34: e+o2=&gt;e+o
+@label:35: e+o2=&gt;e+o
+@label:36: e+o2=&gt;e+o
+@label:37: e+o2=&gt;e+o
+@label:38: e+o2=&gt;e+o
+e+o2=&gt;e+o2(e
+@label:39: e+o2=&gt;e+o
+@label:40: e+o2=&gt;e+o
+e+o2=&gt;e
+o2(e
+@label:41: e+o2=&gt;e+ o
+@label:42: e+o2=&gt;e+o
+e+o2=&gt;2e+o
+@label:43: e+o2=&gt;2e+o
+bmdl
+@tag:bmdl
+boltzmannmodel
+@type:boltzmannmodel
+@label:boltzmann model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+be_eedf_xdim
+geometry
+extra
+dimension
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+var
+variables
+ngas
+material
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+mesh
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+ebar
+@tag:ebar
+meanenergies
+@type:meanenergies
+mean
+energies
+@label:mean energies
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_be_f
+@tag:comp1_be_f
+field
+@type:field
+log
+eedf
+@label:log of eedf
+comp1_be_lam
+@tag:comp1_be_lam
+state
+@type:state
+reduced
+net
+ionization
+frequency
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+comp1_be_td
+@tag:comp1_be_td
+electric
+td
+@label:reduced electric field
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+result
+results
+dset
+@tag:dset
+@type:solution
+par
+@tag:par
+parametric1d
+@type:parametric1d
+extrusion
+1d
+@label:parametric extrusion 1d
+tran
+@tag:tran
+transformation2d
+@type:transformation2d
+transformation
+@label:transformation 2d
+data
+@tag:data
+@type:data
+@label:data
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:eedf
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:mean electron energy
+glob
+@tag:glob
+global
+@type:global
+@label:global
+properties
+@label:transport properties
+townsend
+@label:townsend coefficients
+rate
+@label:n2 rate coefficients
+@label:o2 rate coefficients
+plotgroup2d
+@type:plotgroup2d
+@label:eedf 2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+geommanagernative
+hist
+@study:std
+@study:ebar
+@physics:be
+@expr:var
+@nodeGroup:grp
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:fc
+@sol:d
+@result:pg
+@result:lngr
+@result:selection
+@result:glob
+@dataset:tran
+@result:surf
+@export
+@export:data
+grp
+@tag:grp
+physics
+@type:physics
+reactions
+@label:electron impact reactions
+res
+soldata

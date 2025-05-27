@@ -1,0 +1,14 @@
+{
+  "source_file": "Fuel_Cell_and_Electrolyzer_Module/Thermal_Management/nonisothermal_pem_fuel_cell.mph",
+  "source_size": 4918378,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310318.872",
+  "total_files_in_archive": 39
+}

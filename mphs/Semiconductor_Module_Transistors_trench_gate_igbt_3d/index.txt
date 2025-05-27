@@ -1,0 +1,667 @@
+trench-gate
+igbt
+3d
+second
+half
+two-part
+example
+model
+built
+extruding
+2d
+first
+unlike
+it
+possible
+arrange
+alternating
+emitters
+along
+direction
+extrusion
+real
+device
+realistic
+arrangement
+leads
+better
+quantitative
+agreement
+with
+experimental
+data
+computed
+collector
+current
+density
+function
+voltage
+agrees
+reasonably
+published
+result
+trench_gate_igbt_3d
+mph
+param
+parameters
+width
+wt
+trench
+dn
+emitter
+depth
+ln
+length
+ndb
+n-base
+doping
+nae
+tnbf
+n-buffer
+thickness
+out-of-plan
+lattice
+temperature
+nc
+conduction
+band
+dos
+comsol
+nv
+valence
+shigyo
+vc
+default
+par
+semi
+@tag:semi
+semiconductor
+@type:semiconductor
+@label:semiconductor
+electricpotential
+numberdensity_n
+numberdensity_p
+electricpotential_efn
+electricpotential_efp
+electricpotential_phi_n
+electricpotential_phi_p
+smm
+@tag:smm
+semiconductormaterialmodel
+@type:semiconductormaterialmodel
+material
+@label:semiconductor material model
+mmkl
+@tag:mmkl
+klaassenunifiedmobilitymodel
+@type:klaassenunifiedmobilitymodel
+klaassen
+unified
+mobility
+lic
+@label:klaassen unified mobility model
+mmct
+@tag:mmct
+caugheythomasmobilitymodel
+@type:caugheythomasmobilitymodel
+caughey-thomas
+@label:caughey-thomas mobility model
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ii
+@tag:ii
+insulatorinterface
+@type:insulatorinterface
+insulator
+interface
+@label:insulator interface
+cont
+@tag:cont
+continuity
+@type:continuity
+continuity/heterojunction
+@label:continuity/heterojunction
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+adm
+@tag:adm
+analyticdopingmodel
+@type:analyticdopingmodel
+analytic
+@label:analytic doping model - n-base
+@label:analytic doping model - n-buffer
+@label:analytic doping model - p+ collector
+gdm
+@tag:gdm
+geometricdopingmodel
+@type:geometricdopingmodel
+geometric
+p-base
+@label:geometric doping model - p-base
+gdmbs
+@tag:gdmbs
+boundaryselectionfordopingprofile
+@type:boundaryselectionfordopingprofile
+boundary
+selection
+profile
+@label:boundary selection for doping profile
+@label:geometric doping model - p+ emitter
+@label:geometric doping model - n+ emitter
+tar
+@tag:tar
+trapassistedrecombination
+@type:trapassistedrecombination
+trap-assisted
+recombination
+@label:trap-assisted recombination
+mc
+@tag:mc
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact - emitter
+@label:metal contact - collector
+gc
+@tag:gc
+gatecontact
+@type:gatecontact
+thin
+gate
+@label:thin insulator gate
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+outline
+cell
+@label:rectangle 1 - device outline (half cell
+@label:rectangle 2 - trench
+sketchobject
+@tag:c
+circle
+@type:circle
+@label:circle 1 - trench
+dif
+@tag:dif
+difference
+@type:difference
+minus
+@label:difference 1 - device outline minus trench
+pt
+@tag:pt
+point
+@type:point
+amp
+@label:point 1 - emitter contact &amp; doping boundary
+mesh
+help
+lines
+@label:rectangle 3 - mesh help lines
+@label:rectangle 4 - mesh help lines
+@label:rectangle 5- mesh help lines
+curves
+@label:circle 2 - mesh help curves
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment 1 - mesh help line
+line_segment
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+mce
+@tag:mce
+meshcontroledges
+@type:meshcontroledges
+control
+edges
+@label:mesh control edges
+mesh_control_edges
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+uni
+work_plane
+sequence2d
+@label:point 1 - emitter contact
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+mcf
+@tag:mcf
+meshcontrolfaces
+@type:meshcontrolfaces
+faces
+@label:mesh control faces
+mesh_control_faces
+fixed
+spatial
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview3d
+@type:modelview3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+si
+silicon
+@label:si - silicon
+aroramobilitymodel
+arora
+powerlawmobilitymodel
+power
+law
+auger
+direct
+srh
+shockley&#x2013;read&#x2013;hall
+fletchermobilitymodel
+fletcher
+caughey&#x2013;thomas
+semicondmaterial
+lombardisurfacemobilitymodel
+lombardi
+surface
+impactionization
+impact
+ionization
+slotboommodel
+slotboom
+jainroulstonmodel
+jain&#x2013;roulston
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge 1 - metal contact
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+@label:edge 2 - emitter surface
+@label:edge 3 - emitter surface
+cpe
+@tag:cpe
+copyedge
+@type:copyedge
+copy
+@label:copy edge
+map
+@tag:map
+@type:map
+mapped
+@label:mapped 1 - emitter depth
+image
+@tag:image
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+@label:mapped 2 - gate depth
+left
+@label:distribution 1 - left depth
+right
+@label:distribution 2 - right depth
+@label:distribution 3 - left surface
+@label:distribution 4 - right surface
+bottom
+@label:distribution 5 - bottom surface
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+@label:mapped
+@label:distribution 1 - n-base
+@label:distribution 2 - n-buffer
+@label:distribution 3 - p+ collector
+meshnative
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+optsequence
+std
+study
+semie
+@tag:semie
+semiconductorequilibrium
+@type:semiconductorequilibrium
+equilibrium
+@label:semiconductor equilibrium
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_ne
+@tag:comp1_ne
+field
+@type:field
+electron
+variable
+ne
+@label:electron solution variable
+comp1_ph
+@tag:comp1_ph
+hole
+ph
+@label:hole solution variable
+comp1_semi_smm1_mmct1_epn
+@tag:comp1_semi_smm1_mmct1_epn
+electric
+parallel
+epn
+@label:electric field parallel to electron current density
+comp1_semi_smm1_mmct1_epp
+@tag:comp1_semi_smm1_mmct1_epp
+epp
+@label:electric field parallel to hole current density
+comp1_semi_v_dae
+@tag:comp1_semi_v_dae
+drop
+across
+v_dae
+@label:voltage drop across contact
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+step
+@label:segregated step
+@tag:d
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+comp1_semi_n_bnd
+@tag:comp1_semi_n_bnd
+concentration
+n_bnd
+@label:boundary electron concentration
+comp1_semi_p_bnd
+@tag:comp1_semi_p_bnd
+p_bnd
+@label:boundary hole concentration
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+comp2_ne
+@tag:comp2_ne
+comp2_ph
+@tag:comp2_ph
+comp2_semi2_smm1_mmct1_epn
+@tag:comp2_semi2_smm1_mmct1_epn
+comp2_semi2_smm1_mmct1_epp
+@tag:comp2_semi2_smm1_mmct1_epp
+comp2_semi2_v_dae
+@tag:comp2_semi2_v_dae
+comp2_v
+@tag:comp2_v
+comp2_semi2_n_bnd
+@tag:comp2_semi2_n_bnd
+comp2_semi2_p_bnd
+@tag:comp2_semi2_p_bnd
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+streamlines
+@label:electron concentration &amp; current streamlines
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline 1 - electron current
+@label:streamline 2 - hole current
+@label:hole concentration
+net
+dopant
+@label:net dopant concentration
+p-type
+@label:p-type
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+n-type
+@label:n-type
+plotgroup1d
+@type:plotgroup1d
+j-v
+log
+fig
+@label:j-v
+glob
+@tag:glob
+global
+@type:global
+@label:global 1 - 2d
+@label:global 1 - 3d
+scaled
+@label:global 1 - 2d scaled
+linear
+plotgroup3d
+@type:plotgroup3d
+@label:electron concentration &amp; current streamlines 3d
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+geommanagernative
+hist
+@study:std
+@study:semie
+@physics:semi
+@geom:geom
+@param:group
+@param:default
+@param:par
+@geom:r
+@geom:c
+@geom:dif
+@geom:input
+@geom:selection
+@geom:pt
+@geom:del
+@geom:ls
+@geom:mce
+@material:mat
+@material:materialmodel
+@material:AroraMobilityModel
+@material:PowerLawMobilityModel
+@material:Auger
+@material:Direct
+@material:SRH
+@material:FletcherMobilityModel
+@material:CaugheyThomasMobilityModel
+@material:SemicondMaterial
+@material:LombardiSurfaceMobilityModel
+@material:ImpactIonization
+@material:SlotboomModel
+@material:JainRoulstonModel
+@material:KlaassenUnifiedMobilityModel
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:size
+@mesh:cpe
+@mesh:source
+@mesh:destination
+@mesh:map
+@mesh:ftri
+@study:stat
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:p
+@result:pg
+@result:surf
+@result:filt
+@sol:comp1_semi_V_dae
+@result:glob
+@view:view
+@view:axis
+@result:str
+@result:selection
+@geom:wp
+@geom:sequence2D
+@geom:ext
+@geom:mcf
+@mesh:swe
+@result:vol
+@sol:comp2_semi2_V_dae
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

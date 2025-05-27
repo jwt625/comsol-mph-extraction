@@ -1,0 +1,13 @@
+{
+  "source_file": "Fuel_Cell_and_Electrolyzer_Module/Electrolyzers/aec_shunt_currents_geom_sequence.mph",
+  "source_size": 9104437,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310318.871",
+  "total_files_in_archive": 184
+}

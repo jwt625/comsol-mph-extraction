@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Filters/pcb_microwave_filter_with_stress_ecad.mph",
+  "source_size": 37410,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 6
+}

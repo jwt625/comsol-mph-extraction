@@ -1,0 +1,827 @@
+electronic
+chip
+cooling
+tutorial
+model
+uses
+heat
+sink
+geometry
+part
+library
+shows
+different
+approaches
+transfer
+modeling
+studying
+first
+solid
+parts
+modeled
+convective
+airflow
+using
+flux
+boundary
+conditions
+second
+extended
+include
+fluid
+domain
+flow
+channel
+compute
+coupled
+temperature
+velocity
+assuming
+nonisothermal
+behavior
+last
+surface-to-surface
+radiation
+considered
+see
+significantly
+it
+contributes
+results
+chip_cooling
+mph
+param
+parameters
+n_fins
+number
+pins
+direction
+total
+power
+dissipated
+d_channel
+depth
+default
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+solids
+fluids
+@label:heat transfer in solids and fluids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+@label:heat source
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+@label:heat flux
+tc
+@tag:tc
+thermalcontact
+@type:thermalcontact
+contact
+@label:thermal contact
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+inlet
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+rad
+@tag:rad
+surfacetosurfaceradiation
+@type:surfacetosurfaceradiation
+@label:surface-to-surface radiation
+fluencerate_disc
+dsurf
+@tag:dsurf
+diffusesurface
+@type:diffusesurface
+diffuse
+surface
+@label:diffuse surface
+opac
+@tag:opac
+opacity
+@type:opacity
+@label:opacity
+geom
+geomnative
+blk
+@tag:blk
+block
+@type:block
+@label:block
+pi
+@tag:pi
+partinstance
+@type:partinstance
+straight
+fins
+@label:heat sink - straight fins
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+@label:parameter check
+@tag:if
+@type:if
+fin_type
+@label:if fin_type
+else
+@tag:else
+@type:else
+@label:else fin_type
+endif
+@tag:endif
+@type:endif
+end
+@label:end if fin_type
+chamfer
+@label:if chamfer
+@label:end if chamfer
+notch
+@label:if notch
+@label:end if notch
+shell
+2d
+fillet_bottom
+active
+@label:shell
+step
+@label:if step
+@label:end if step
+hex
+@tag:hex
+hexahedron
+@type:hexahedron
+@label:hexahedron
+arr
+@tag:arr
+array
+@type:array
+@label:array
+uni
+@tag:uni
+union
+@type:union
+@label:union
+fillet_top
+@label:if fillet_top
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+sequence2d
+cro
+@tag:cro
+crosssection
+@type:crosssection
+cross
+section
+@label:cross section
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+box
+selection
+@label:box selection
+fil
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+baseunitsystem
+millimeter
+radian
+degree
+mov
+@tag:mov
+move
+@type:move
+@label:move
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+@label:end if fillet_top
+elseif
+@tag:elseif
+@type:elseif
+@label:else if fin_type
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+@label:end if fillet
+@tag:b
+bezierpolygon
+@type:bezierpolygon
+b&#xe9;zier
+polygon
+@label:b&#xe9;zier polygon
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:union selection
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+complement
+@label:complement selection
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+@tag:copy
+@type:copy
+@label:copy
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+cylinder
+@label:cylinder selection
+pard
+@tag:pard
+partitiondomains
+@type:partitiondomains
+domains
+@label:partition domains
+@label:if fillet_bottom
+@label:end if
+csel
+@label:end if fillet_bottom
+@label:if shell
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+adjacent
+@label:adjacent selection
+bottom_boundary
+@label:bottom_boundary
+all_objects
+@label:all_objects
+exterior
+@label:exterior
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+exterior_boundaries_without_heat_sink_base
+@label:exterior_boundaries_without_heat_sink_base
+work_plane_for_heat_sink_base
+@label:work_plane_for_heat_sink_base
+heat_sink_base
+edg
+step_domain
+array_of_fins
+cumulative
+wp1_boxsel
+wp2_boxsel
+wp3_boxsel
+wp7_unisel
+wp7_boxsel
+wp7_comsel
+wp8_csel
+wp8_boxsel
+geommanagernative
+localparam
+local
+fin_type_1-pin_fins
+2-dissimilar_border_pins
+3-straight_fins
+y_fins_top
+fin_dimension_in_x-direction
+top#y
+d_fins_x
+al_x
+inputparam
+input
+x_base
+base_dimension_in_x-direction#x
+n_fins_x
+amount_of_fins_in_x-direction#x
+z_fins
+fin_height
+fillet_on_top_1-enabled
+0-disabled
+notch_width
+step_height
+chamfer_width
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+pi1_csel
+base
+pi1_boxsel
+bottom
+pi1_adjsel
+pi1_difsel
+boundaries
+without
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+mesh
+geom1_pi1_csel9_dom
+@tag:geom1_pi1_csel9_dom
+fromsequence
+@type:fromsequence
+@label:all (heat sink - straight fins
+geom1_pi1_difsel
+@tag:geom1_pi1_difsel
+@label:exterior boundaries without heat sink base (heat sink - straight fins
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:chip
+chip/heat
+interface
+@label:chip/heat sink interface
+air
+@label:air
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+hide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+ampr
+@tag:ampr
+ambientproperties
+@type:ambientproperties
+ambient
+@label:ambient properties
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+@label:nonisothermal flow
+htrad
+@tag:htrad
+heattransferwithsurfacetosurfaceradiation
+@type:heattransferwithsurfacetosurfaceradiation
+with
+@label:heat transfer with surface-to-surface radiation
+mat
+@tag:mat
+common
+@type:common
+aluminum
+@label:aluminum
+enu
+young's
+modulus
+poisson's
+ratio
+murnaghan
+silica
+glass
+@label:silica glass
+refractiveindex
+refractive
+index
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+grease
+@label:thermal grease
+walls
+@label:heat sink walls
+@label:channel walls
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+corner
+refinement
+@label:corner refinement
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+field
+@type:field
+magnitude
+average
+uave
+@label:velocity magnitude, average
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_spf_inl1_pinlfdf
+@tag:comp1_spf_inl1_pinlfdf
+state
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:d
+direct
+@type:direct
+@label:direct, fluid flow variables
+@label:direct, heat transfer variables
+comp1_rad_dsurf1_jd_band
+@tag:comp1_rad_dsurf1_jd_band
+radiosity
+downside
+jd_band
+@label:surface radiosity, downside
+comp1_rad_dsurf1_ju_band
+@tag:comp1_rad_dsurf1_ju_band
+upside
+ju_band
+@label:surface radiosity, upside
+@label:radiosity
+@label:direct, radiation variables
+result
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+@type:surface
+@label:exterior walls
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+@type:selection
+@label:selection
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:temperature and fluid flow
+@label:wall temperature
+@label:solid temperature
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+@label:fluid flow
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:temperature of the channel walls and heat sink
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:velocity
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+@label:surface
+@label:surface radiosity
+slit
+@tag:slit
+surfaceslit
+@type:surfaceslit
+@label:surface slit
+@label:temperature of the channel walls and heat sink, with radiation
+@label:contact temperature
+hist
+@study:std
+@study:stat
+@physics:ht
+@geom:geom
+@geom:blk
+@geom:pi
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:Murnaghan
+@material:RefractiveIndex
+@view:view
+@material:selection
+@selection
+@selection:sel
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@result:pg
+@result:vol
+@result:sel
+@result:selection
+@result:filt
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:NonlinearModel
+@physics:spf
+@multiphysics
+@multiphysics:nitf
+@mesh:mesh
+@mesh:statistics
+@mesh:selection
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:ll
+@sol:sc
+@result:surf
+@result:arwv
+@result:col
+@view:hideObjects
+@view:hide
+@physics:rad
+@multiphysics:htrad
+@multiphysics:selection
+@sol:comp1_rad_dsurf1_Jd_band
+@sol:comp1_rad_dsurf1_Ju_band
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:slit
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+save
+point
+res
+soldata
+xmesh
+savepoint

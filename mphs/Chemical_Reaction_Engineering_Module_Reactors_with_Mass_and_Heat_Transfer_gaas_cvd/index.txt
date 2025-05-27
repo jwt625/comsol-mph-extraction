@@ -1,0 +1,648 @@
+chemical
+vapor
+deposition
+gaas
+example
+illustrates
+modeling
+reactor
+cvd
+important
+process
+electronics
+industry
+thin
+film
+grown
+substrate
+allowing
+molecules
+molecular
+fragments
+adsorb
+react
+surface
+combining
+detailed
+reaction
+kinetics
+with
+transport
+models
+allows
+realistic
+simulations
+turn
+minimize
+large
+number
+expensive
+time-consuming
+trial
+runs
+typically
+required
+design
+chemistry
+interface
+collects
+calculates
+thermal
+parameters
+seamlessly
+coupled
+interfaces
+model
+utilize
+reversible
+group
+feature
+chemkin
+import
+reactions
+organization
+complex
+system
+bulk
+involved
+gaas_cvd
+mph
+param
+u_in
+inlet
+velocity
+outlet
+pressure
+c_h2_init
+initial
+concentration
+solvent
+c_gasurf
+ga
+c_c2h5surf
+c2h
+c_hsurf_ga
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+engineering
+gas
+phase
+full
+set
+@label:reaction engineering - gas phase reactions, full set
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+values
+@label:initial values
+rgr
+@tag:rgr
+reversiblereactiongroup
+@type:reversiblereactiongroup
+@label:reversible reaction group
+sg_rgr
+@tag:sg_rgr
+speciesgroup
+@type:speciesgroup
+species
+@label:species group
+reactionchem
+@type:reactionchem
+gt
+@label:1: 2 h + h2 =&gt; 2 h
+@tag:h
+specieschem
+@type:specieschem
+@label:species: h
+reduced
+@label:reaction engineering - gas phase reactions, reduced set
+chem
+@tag:chem
+@type:chemistry
+@label:chemistry
+sthm
+@tag:sthm
+speciesthermodynamics
+@type:speciesthermodynamics
+thermodynamics
+@label:species thermodynamics
+gac6h
+gac2h
+@label:2: surface: gac6h15 =&gt; gac2h
+@tag:gac6h
+@label:species: gac6h
+gac2h5_1_surf
+@tag:gac2h5_1_surf
+@label:surface species: gac2h
+@tag:c2h
+@label:species: c2h
+@label:3: surface: gac2h6 =&gt; gac2h
+@tag:gac2h
+@label:species: gac2h
+gac2h6_1_surf
+@tag:gac2h6_1_surf
+@label:4: surface: gac2h
+gah
+@label:5: surface: gah2 =&gt; ga
+@tag:gah
+@label:species: gah
+ga_1_surf
+@tag:ga_1_surf
+@label:surface species: ga
+@label:6: surface: gac2h
+ash
+as_ga
+@label:7: surface: ash3 =&gt; as_ga
+@tag:ash
+@label:species: ash
+as_ga_1_surf
+@tag:as_ga_1_surf
+@label:surface species: as_ga
+@label:8: surface: c2h5 =&gt; c2h
+c2h5_1_surf
+@tag:c2h5_1_surf
+@label:surface species: c2h
+@label:9: surface: c2h
+c2h5_ga
+@label:10: surface: c2h5 =&gt; c2h5_ga
+c2h5_ga_1_surf
+@tag:c2h5_ga_1_surf
+@label:surface species: c2h5_ga
+@label:11: surface: c2h5_ga
+@label:12: surface: c2h
+h_1_surf
+@tag:h_1_surf
+@label:surface species: h
+h_ga
+@label:13: surface: c2h5_ga
+h_ga_1_surf
+@tag:h_ga_1_surf
+@label:surface species: h_ga
+@label:14: surface: h
+@label:15: surface: h_ga
+@label:16: surface: gac2h
+@tag:gaas
+@label:species: gaas
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+diluted
+@label:transport of diluted species
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+init
+@tag:init
+@type:init
+reac
+@tag:reac
+@type:reactions
+@label:reactions
+srf
+@tag:srf
+surfacereactionsflux
+@type:surfacereactionsflux
+@label:surface reactions
+@tag:in
+inflow
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+ht
+@tag:ht
+heattransferinfluids
+@type:heattransferinfluids
+heat
+transfer
+fluids
+@label:heat transfer in fluids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+fluid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+@label:heat source
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+flow
+@label:laminar flow
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+outletboundary
+@type:outletboundary
+@label:outlet
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+rfd
+@tag:rfd
+reactingflowds
+@type:reactingflowds
+reacting
+@label:reacting flow, diluted species
+comp
+component
+tdp
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+corner
+refinement
+@label:corner refinement
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+2d
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+comp2_cash
+@tag:comp2_cash
+field
+@type:field
+cash
+comp2_cc2h
+@tag:comp2_cc2h
+cc2h
+comp2_cgac2h
+@tag:comp2_cgac2h
+cgac2h
+comp2_cgac4h
+@tag:comp2_cgac4h
+cgac4h
+comp2_cgac6h
+@tag:comp2_cgac6h
+cgac6h
+comp2_cgah
+@tag:comp2_cgah
+cgah
+comp2_ch
+@tag:comp2_ch
+ch
+comp2_nitf1_uave
+@tag:comp2_nitf1_uave
+magnitude
+average
+uave
+@label:velocity magnitude, average
+comp2_p
+@tag:comp2_p
+@label:pressure
+comp2_t
+@tag:comp2_t
+comp2_u
+@tag:comp2_u
+@label:velocity field
+comp2_spf_inl1_pinlfdf
+@tag:comp2_spf_inl1_pinlfdf
+help
+variable
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+@tag:s
+@label:stationary solver
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+concentrations
+@label:concentrations
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:d
+@label:direct, fluid flow variables
+@label:direct, heat transfer variables
+@label:direct, concentrations
+result
+results
+dset
+@tag:dset
+@type:solution
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+line
+@label:cut line 2d
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:gas phase concentrations, full set
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:gas phase concentrations, reduced set
+plotgroup2d
+@type:plotgroup2d
+gac4h
+@label:concentration, gac4h
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:concentration, c2h
+@label:concentration, h
+@label:concentration, ash
+@label:concentration, gah
+@label:concentration, gac2h
+@label:concentration, gac6h
+@label:velocity
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+profiles
+@label:concentration profiles gac6h15 and gah
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:gac6h
+@label:gah
+profile
+change
+@label:concentration profile ash3 change
+graph
+@label:line graph
+diffusivities
+vs
+@label:diffusivities vs. temperature
+@label:ash
+conductivity
+@label:thermal conductivity h
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+@geom:geom
+@geom:r
+@geom:dif
+@geom:input
+@geom:selection
+@physics:chem
+@physics:tds
+@physics:ht
+@physics:spf
+@mesh:mesh
+@study:stat
+@multiphysics
+@multiphysics:nitf
+@multiphysics:rfd
+@mesh:statistics
+@mesh:selection
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:ll
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:so
+@sol:sl
+@result:surf
+@result:str
+@dataset:dset
+@result:con
+@result:sel
+@result:selection
+@result:arws
+@result:col
+@result:filt
+@dataset:cln
+@result:lngr
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+soldata
+res

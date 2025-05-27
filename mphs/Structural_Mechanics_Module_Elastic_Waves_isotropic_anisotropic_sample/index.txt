@@ -1,0 +1,376 @@
+isotropic-anisotropic
+sample
+elastic
+wave
+propagation
+2d
+tutorial
+test
+consists
+side
+isotropic
+material
+heterogeneous
+anisotropic
+transverse
+zinc
+crystal
+waves
+excited
+point-like
+force
+model
+solved
+with
+time
+explicit
+physics
+interface
+isotropic_anisotropic_sample
+mph
+param
+parameters
+length
+half
+source
+location
+x-coordinate
+cs_an
+shear
+speed
+default
+elte
+@tag:elte
+elasticwavestimeexplicit
+@type:elasticwavestimeexplicit
+@label:elastic waves, time explicit
+velocity
+strain
+eltem
+@tag:eltem
+elasticwavestimeexplicitmodel
+@type:elasticwavestimeexplicitmodel
+@label:elastic waves, time explicit model
+cdisp
+@tag:cdisp
+computedisplacement
+@type:computedisplacement
+compute
+displacement
+@label:compute displacement
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+bl
+@tag:bl
+bodyload
+@type:bodyload
+body
+load
+@label:body load
+lrb
+@tag:lrb
+lowreflectingboundary
+@type:lowreflectingboundary
+low-reflecting
+boundary
+@label:low-reflecting boundary
+mde
+@tag:mde
+materialdiscontinuityelem
+@type:materialdiscontinuityelem
+discontinuity
+@label:material discontinuity
+geom
+geometry
+geomnative
+sq
+@tag:sq
+square
+@type:square
+@label:square
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+pt
+@tag:pt
+point
+@type:point
+@label:point
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+fixed
+spatial
+mesh
+sel
+@tag:sel
+@type:explicit
+probe
+points
+@label:probe points
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:material isotropic
+anisotropicvogrp
+voigt
+notation
+@label:material anisotropic
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+meshnative
+optsequence
+std
+study
+store
+full
+solution
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_e
+@tag:comp1_e
+field
+@type:field
+tensor
+@label:strain tensor, voigt notation
+comp1_elte_eltem1_cdisp1_u
+@tag:comp1_elte_eltem1_cdisp1_u
+@label:displacement
+comp1_elte_mde1_eigd
+@tag:comp1_elte_mde1_eigd
+eigenvalues
+downside
+eigd
+@label:eigenvalues, downside
+comp1_elte_mde1_eigu
+@tag:comp1_elte_mde1_eigu
+upside
+eigu
+@label:eigenvalues, upside
+comp1_elte_mde1_veigd
+@tag:comp1_elte_mde1_veigd
+eigenvectors
+veigd
+@label:eigenvectors, downside
+comp1_elte_mde1_veigu
+@tag:comp1_elte_mde1_veigu
+veigu
+@label:eigenvectors, upside
+comp1_v
+@tag:comp1_v
+structural
+@label:structural velocity
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:point
+@label:point probe
+result
+results
+an2_ds
+@tag:an2_ds
+grid1d
+@type:grid1d
+grid
+1d
+@label:grid 1d
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+avh
+@tag:avh
+average
+@type:average
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+impulse
+frequency
+content
+@label:impulse frequency content
+plot
+@tag:plot
+function
+@type:function
+@label:function
+cm
+@label:displacement in (x,y) = (-10.5 cm, -8 cm
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+magnitude
+@label:velocity magnitude
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+pressure
+@label:pressure
+@label:displacement in (x,y) = (-3.5 cm, -8 cm
+@label:displacement in (x,y) = (-1 cm, -8 cm
+@label:displacement in (x,y) = (10.5 cm, -8 cm
+apparent
+@label:apparent shear wave speed
+@label:apparent pressure wave speed
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:elte
+@func
+@func:an
+@result:pg
+@result:plot
+@geom:geom
+@geom:sq
+@geom:ls
+@geom:pt
+@selection
+@selection:sel
+@coordsys:ab
+@coordsys:selection
+@material:mat
+@material:selection
+@material:materialmodel
+@material:AnisotropicVoGrp
+@probe
+@probe:point
+@probe:selection
+@nodeGroup:grp
+@mesh:mesh
+@mesh:size
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:surf
+@dataset:dset
+@dataset:selection
+@result:tblp
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+ab
+@tag:ab
+absorbinglayer
+@type:absorbinglayer
+absorbing
+layer
+@label:absorbing layer
+grp
+@tag:grp
+definitions
+@type:definitions
+group
+@label:group
+res
+soldata

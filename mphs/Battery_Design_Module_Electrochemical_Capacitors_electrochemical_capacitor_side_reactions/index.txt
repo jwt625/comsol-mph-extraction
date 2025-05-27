@@ -1,0 +1,443 @@
+parasitic
+reactions
+electrochemical
+capacitor
+model
+illustrates
+effect
+oxygen
+hydrogen
+formation
+recombination
+performance
+self-discharge
+with
+aqueous
+electrolyte
+load
+cycle
+consisting
+mixed
+constant
+current
+pulses
+rest
+periods
+open
+circuit
+studied
+electrochemical_capacitor_side_reactions
+mph
+param
+parameters
+l_sep
+length
+separator
+sigma_s
+electrical
+conductivity
+c_bulk
+bulk
+concentration
+diffusion
+coefficient
+i_app
+applied
+t_rest
+time
+ch2_init
+initial
+pressure
+i0_ref_o
+exchange
+density
+reference
+conditions
+d_o
+diffusivity
+default
+cell
+par
+profile
+electrode
+tcd
+@tag:tcd
+tertiarycurrentdistributionnernstplanck
+@type:tertiarycurrentdistributionnernstplanck
+tertiary
+distribution
+nernst-planck
+@label:tertiary current distribution, nernst-planck
+electricpotentialionicphase
+electricpotential
+dt2invdiscretization_disc
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+species
+charges
+@label:species charges
+ice
+@tag:ice
+@type:electrolyte
+@label:electrolyte
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+side
+@label:initial values - h2 side
+@label:initial values - o2 side
+@label:initial values - separator
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode - h2 side
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+her
+@label:porous electrode reaction - her
+pdl
+@tag:pdl
+porousmatrixdoublelayercapacitance
+@type:porousmatrixdoublelayercapacitance
+matrix
+double
+layer
+capacitance
+@label:porous matrix double layer capacitance
+@label:porous electrode - o2 side
+oer
+@label:porous electrode reaction - oer
+bei
+@tag:bei
+internalelectrodesurface
+@type:internalelectrodesurface
+internal
+surface
+orr
+@label:internal electrode surface -orr
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+@label:electrode reaction
+hor
+@label:internal electrode surface -hor
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+cdc
+@tag:cdc
+chargedischargecycling
+@type:chargedischargecycling
+charge-discharge
+cycling
+@label:charge-discharge cycling
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+maxop
+@tag:maxop
+maximum
+@type:maximum
+@label:maximum
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+optsequence
+std
+study
+cc
+charge
+period
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_can
+@tag:comp1_can
+field
+@type:field
+@label:concentration
+comp1_ccat
+@tag:comp1_ccat
+ccat
+comp1_ch
+@tag:comp1_ch
+ch
+comp1_co
+@tag:comp1_co
+co
+comp1_phil
+@tag:comp1_phil
+potential
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp1_tcd_bei1_er1_iloc_lm
+@tag:comp1_tcd_bei1_er1_iloc_lm
+local
+iloc_lm
+@label:local current density
+comp1_tcd_bei2_er1_iloc_lm
+@tag:comp1_tcd_bei2_er1_iloc_lm
+comp1_tcd_phis_lm
+@tag:comp1_tcd_phis_lm
+lagrange
+multiplier
+phis_lm
+@label:lagrange multiplier for electric potential
+comp1_tcd_cdc1_cc_ch
+@tag:comp1_tcd_cdc1_cc_ch
+state
+@type:state
+discrete
+variable
+cc_ch
+@label:discrete state variable
+comp1_tcd_cdc1_cc_dch
+@tag:comp1_tcd_cdc1_cc_dch
+cc_dch
+comp1_tcd_cdc1_cycle_counter
+@tag:comp1_tcd_cdc1_cycle_counter
+number
+cycles
+cycle_counter
+@label:number of cycles
+comp1_tcd_cdc1_phis
+@tag:comp1_tcd_cdc1_phis
+@label:cell potential
+comp1_tcd_cdc1_end_cc_dch
+@tag:comp1_tcd_cdc1_end_cc_dch
+indicator
+end_cc_dch
+@label:indicator state variable
+comp1_tcd_cdc1_end_cc_ch
+@tag:comp1_tcd_cdc1_end_cc_ch
+end_cc_ch
+comp1_tcd_cdc1_t_dch_start
+@tag:comp1_tcd_cdc1_t_dch_start
+discharge
+start
+t_dch_start
+@label:time discharge start
+comp1_tcd_cdc1_t_ch_start
+@tag:comp1_tcd_cdc1_t_ch_start
+t_ch_start
+@label:time charge start
+comp1_tcd_cdc1_oc_ch
+@tag:comp1_tcd_cdc1_oc_ch
+oc_ch
+comp1_tcd_cdc1_end_oc_ch
+@tag:comp1_tcd_cdc1_end_oc_ch
+end_oc_ch
+comp1_tcd_cdc1_t_rest_start
+@tag:comp1_tcd_cdc1_t_rest_start
+t_rest_start
+@label:rest time start
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+dom
+@tag:dom
+domain
+@type:domain
+probe
+@label:domain probe
+var
+@tag:var
+globalvariable
+@type:globalvariable
+global
+@label:global variable probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+max
+@tag:max
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+voltage
+@label:current voltage profile
+glob
+@tag:glob
+@type:global
+@label:cell current
+activities
+@label:maximum activities
+activity
+@label:activity of o
+@label:activity of h
+concentrations
+end
+@label:hydrogen and oxygen concentrations - end of charge
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:oxygen concentration
+@label:hydrogen concentration
+geommanagernative
+hist
+@physics:tcd
+@study:std
+@study:time
+@param:group
+@param:par
+@geom:geom
+@geom:i
+@probe
+@probe:dom
+@probe:var
+@cpl
+@cpl:maxop
+@cpl:selection
+@common:cminpt
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_phis
+@sol:comp1_tcd_cdc1_phis
+@sol:t
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:va
+@sol:po
+@sol:cs
+@result:pg
+@result:tblp
+@result:glob
+@result:lngr
+@result:selection
+soldata

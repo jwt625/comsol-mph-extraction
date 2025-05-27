@@ -1,0 +1,874 @@
+porous
+catalytic
+reactor
+with
+injection
+needle
+modeling
+heterogeneous
+reactors
+substantially
+simplified
+transport
+diluted
+species
+catalysts
+multiphysics
+interface
+defines
+diffusion
+convection
+migration
+bulk
+reaction
+media
+flow
+heterogenous
+reactions
+adsorption
+desorption
+gas-solid
+surface
+catalyst
+chemical
+automatically
+combines
+couplings
+physics
+interfaces
+required
+catalysis
+together
+dilute
+widely
+used
+engineering
+industry
+type
+gas
+phase
+catalyzed
+solid
+widespread
+applications
+areas
+oxidation
+selective
+reduction
+etc
+example
+illustrates
+system
+hydrogen
+oxidized
+noble
+metal
+rh
+model
+investigates
+kinetics
+concentration
+distribution
+absorbed
+velocity
+field
+pore
+volume
+porous_reactor
+mph
+param
+parameters
+kf
+forward
+rate
+constant
+kr
+backward
+t_iso
+temperature
+c0o2_inflow
+molar
+inflow
+c0h2o_surf
+initial
+c0rh_surf
+wt_needle
+wall
+thickness
+klh2_ads
+langmuir
+klo2_ads
+klh2o_ads
+ch2_ads_scale
+ch_surf_scale
+crh_surf_scale
+default
+par
+re
+@tag:re
+reactioneng
+@type:reactioneng
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+lt;=&gt
+@label:1: surface: h2 + 2 rh
+@tag:h
+specieschem
+@type:specieschem
+@label:species: h
+rh_surf
+@tag:rh_surf
+@label:surface species: rh
+h_surf
+@tag:h_surf
+@label:surface species: h
+@label:2: surface: o2 + 2 rh
+@tag:o
+@label:species: o
+o_surf
+@tag:o_surf
+@label:surface species: o
+h2o
+@label:3: surface: h2o + rh
+@tag:h2o
+@label:species: h2o
+h2o_surf
+@tag:h2o_surf
+@label:surface species: h2o
+oh
+@label:4: surface: o
+oh_surf
+@tag:oh_surf
+@label:surface species: oh
+@label:5: surface: oh
+@label:6: surface: 2 oh
+@tag:n
+@label:species: n
+sync
+@tag:sync
+reactiontomph
+@type:reactiontomph
+generate
+space-dependent
+@label:generate space-dependent model
+chem
+@tag:chem
+chemistry
+@type:chemistry
+@label:chemistry
+tds
+@tag:tds
+dilutedspeciesinporouscatalysts
+@type:dilutedspeciesinporouscatalysts
+@label:transport of diluted species in porous catalysts
+cat
+@tag:cat
+porouscatalyst
+@type:porouscatalyst
+@label:porous catalyst
+fluid
+@tag:fluid
+fluidporouscatalyst
+@type:fluidporouscatalyst
+@label:fluid
+pm
+@tag:pm
+porousmatrixcatalyst
+@type:porousmatrixcatalyst
+matrix
+@label:porous matrix
+adsc
+@tag:adsc
+adsorptions
+@type:adsorptions
+@label:adsorption
+srcc
+@tag:srcc
+surfacereactioncatalyst
+@type:surfacereactioncatalyst
+@label:surface reaction
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+init
+@tag:init
+@type:init
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+sym
+@tag:sym
+symmetry
+@type:symmetry
+@label:symmetry
+@tag:in
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+br
+@tag:br
+porousmediaflowbrinkman
+@type:porousmediaflowbrinkman
+brinkman
+equations
+@label:brinkman equations
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+fluidporousmedium
+@type:fluidporousmedium
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+wallbc
+@tag:wallbc
+@type:wallbc
+@label:wall
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+@label:fluid properties
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+inlet
+@label:inlet
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+geom
+geometry
+geomnative
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:cylinder
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+uni
+@tag:uni
+union
+@type:union
+@label:union
+blk
+@tag:blk
+block
+@type:block
+@label:block
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+mcf
+@tag:mcf
+meshcontrolfaces
+@type:meshcontrolfaces
+mesh
+control
+faces
+@label:mesh control faces
+mesh_control_faces
+igf
+@tag:igf
+ignorefaces
+@type:ignorefaces
+ignore
+@label:ignore faces
+ignore_faces
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+pmat1_fluid1_xdim
+extra
+dimension
+@tag:i
+point
+@type:point
+@label:point
+pmat1_solid1_xdim
+var
+variables
+defined
+cs_rh
+cs_o
+cads_ch
+cads_ch2o
+material
+fixed
+spatial
+sel
+@tag:sel
+explicit
+@type:explicit
+bed
+@label:catalyst bed
+plane
+@label:symmetry plane
+@label:inlet species o
+@label:inlet species h
+first
+free-porous
+@label:first free-porous interface
+free
+domains
+@label:free flow domains
+@label:free and porous media domains
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:solid domains
+bnds
+@label:solid bnds
+@label:porous bed bnds
+outer
+@label:outer bnds
+@label:bed bnds
+pmat1_fluid1_xdim_pa
+@tag:pmat1_fluid1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+pmat1_fluid1_xdim_ad
+@tag:pmat1_fluid1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+pmat1_solid1_xdim_pa
+@tag:pmat1_solid1_xdim_pa
+pmat1_solid1_xdim_ad
+@tag:pmat1_solid1_xdim_ad
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rfd
+@tag:rfd
+reactingflowds
+@type:reactingflowds
+reacting
+@label:reacting flow, diluted species
+mat
+@tag:mat
+common
+@type:common
+nitrogen
+@label:nitrogen
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+idealgas
+ideal
+pmat
+@tag:pmat
+porousmedia
+@type:porousmedia
+@label:porous material
+poro
+@type:fluid
+@tag:solid
+@type:solid
+@label:solid
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+corner
+refinement
+@label:corner refinement
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+vtx
+@tag:vtx
+vertex
+@type:vertex
+@label:vertex
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@label:surface concentration
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp2_ch
+@tag:comp2_ch
+@type:field
+ch
+comp2_ch2o
+@tag:comp2_ch2o
+ch2o
+comp2_co
+@tag:comp2_co
+co
+comp2_p
+@tag:comp2_p
+@label:pressure
+comp2_tds_cads_ch
+@tag:comp2_tds_cads_ch
+adsorbed
+@label:adsorbed concentration
+comp2_tds_cads_ch2o
+@tag:comp2_tds_cads_ch2o
+comp2_tds_cads_co
+@tag:comp2_tds_cads_co
+cads_co
+comp2_tds_csurf_h
+@tag:comp2_tds_csurf_h
+csurf_h
+comp2_tds_csurf_o
+@tag:comp2_tds_csurf_o
+csurf_o
+comp2_tds_csurf_oh
+@tag:comp2_tds_csurf_oh
+csurf_oh
+comp2_tds_csurf_rh
+@tag:comp2_tds_csurf_rh
+csurf_rh
+comp2_u
+@tag:comp2_u
+@label:velocity field
+comp2_br_inl1_pinlfdf
+@tag:comp2_br_inl1_pinlfdf
+help
+variable
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+comp2_br_inl2_pinlfdf
+@tag:comp2_br_inl2_pinlfdf
+@tag:s
+@label:stationary solver
+iterative
+@type:iterative
+amg
+@label:amg, fluid flow variables
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+cs
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+concentrations
+@label:direct, concentrations
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:concentrations
+@label:surface concentrations
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+@type:surface
+exterior
+walls
+@label:exterior walls
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+line
+3d
+@label:cut line 3d
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+global
+@type:global
+@label:global
+plotgroup3d
+@type:plotgroup3d
+@label:concentration, h2, surface
+pipe
+@label:surface: pipe
+selection
+@type:selection
+@label:selection
+@label:surface: catalyst
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:concentration, ch2, isosurface
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:concentration, h2o, surface
+@label:surface
+@label:concentration, o2, surface
+@label:concentration, co2, isosurface
+@label:velocity, surface
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+domain
+@label:porous domain: bulk species
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:porous domain: surface species
+@label:porous domain: adsorbed species
+@label:porous domain: all species
+@label:bulk: ch
+@label:bulk: co
+@label:bulk: ch2o
+@label:surface: cs_rh
+cs_h
+@label:surface: cs_h
+@label:surface: cs_o
+cs_oh
+@label:surface: cs_oh
+@label:adsorbed: cads_ch
+@label:adsorbed: cads_co
+@label:adsorbed: cads_ch2o
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+@geom:geom
+@physics:chem
+@physics:tds
+@param:group
+@param:par
+@geom:cyl
+@geom:dif
+@geom:input
+@geom:selection
+@geom:uni
+@geom:blk
+@geom:mcf
+@geom:igf
+@selection
+@selection:sel
+@selection:cyl
+@selection:uni
+@selection:adj
+@selection:dif
+@physics:br
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:pmat
+@material:selection
+@material:fluid
+@material:solid
+@expr:var
+@expr:selection
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@mesh:ftri
+@mesh:swe
+@mesh:dis
+@mesh:cr
+@mesh:boundary
+@mesh:ftet
+@mesh:bl
+@mesh:blp
+@study:stat
+@mesh:statistics
+@sol:s
+@sol:aDef
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:d
+@sol:sl
+@sol:comp2_cH
+@sol:comp2_cH2O
+@sol:comp2_cO
+@sol:comp2_tds_cads_cH
+@sol:comp2_tds_cads_cH2O
+@sol:comp2_tds_cads_cO
+@sol:comp2_tds_csurf_H
+@sol:comp2_tds_csurf_O
+@sol:comp2_tds_csurf_OH
+@sol:comp2_tds_csurf_Rh
+@sol:se
+@sol:ss
+@sol:ll
+@result:str
+@result:col
+@result:surf
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@dataset:cpl
+@dataset:cln
+@result:sel
+@result:selection
+@result:tran
+@result:arws
+@result:mtrl
+@result:iso
+@result:lngr
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+soldata
+res

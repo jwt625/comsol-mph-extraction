@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/EMI_EMC_Applications/high_speed_interconnect_tdr.mph",
+  "source_size": 17902,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 6
+}

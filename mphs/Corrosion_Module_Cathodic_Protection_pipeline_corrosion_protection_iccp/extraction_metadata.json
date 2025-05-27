@@ -1,0 +1,14 @@
+{
+  "source_file": "Corrosion_Module/Cathodic_Protection/pipeline_corrosion_protection_iccp.mph",
+  "source_size": 1474386,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310303.939",
+  "total_files_in_archive": 39
+}

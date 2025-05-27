@@ -1,0 +1,13 @@
+{
+  "source_file": "COMSOL_Multiphysics/Equation_Based/shell_diffusion_geom_sequence.mph",
+  "source_size": 365179,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310268.958",
+  "total_files_in_archive": 18
+}

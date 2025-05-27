@@ -1,0 +1,14 @@
+{
+  "source_file": "MEMS_Module/Actuators/residual_stress_resonator_2d.mph",
+  "source_size": 1297485,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.167",
+  "total_files_in_archive": 46
+}

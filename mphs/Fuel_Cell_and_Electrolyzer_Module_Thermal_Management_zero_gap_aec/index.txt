@@ -1,0 +1,866 @@
+two-phase
+nonisothermal
+zero-gap
+alkaline
+water
+electrolyzer
+model
+defines
+oxygen
+hydrogen
+gas
+evolved
+porous
+diffusion
+nickel
+felt
+electrodes
+placed
+adjacent
+separator
+diaphragm
+geometry
+unit
+cell
+stack
+turn
+comprising
+two
+full
+cells
+extending
+cm
+along
+channel
+direction
+separated
+corrugated
+bipolar
+steel
+plate
+solves
+fully
+intercoupled
+current
+distribution
+flow
+gases
+electrolyte
+heat
+transfer
+zero_gap_aec
+mph
+param
+parameters
+h_gde
+electrode
+height
+w_ch
+maximum
+width
+h_cell
+w_dev
+help
+parameter
+e_cell
+voltage
+perm_gde
+gde
+permeability
+epsl_sep
+porosity
+s_g_in
+inlet
+volume
+fraction
+i0_ref_oer
+reference
+exchange
+density
+evolution
+reaction
+kappa_sep
+thermal
+conductivity
+rho_ni
+e_cell_lower
+lower
+polarization
+plot
+default
+par
+physics
+we
+@tag:we
+waterelectrolyzer
+@type:waterelectrolyzer
+@label:water electrolyzer
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+phase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+eip
+@tag:eip
+electrolytepotential
+@type:electrolytepotential
+potential
+@label:electrolyte potential
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+@label:h2 gas phase
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+cc
+@tag:cc
+currentcollector
+@type:currentcollector
+collector
+@label:current collector
+h2gec
+@tag:h2gec
+h2gaselectrolytecompartment
+@type:h2gaselectrolytecompartment
+gas-electrolyte
+compartment
+@label:h2 gas-electrolyte compartment
+h2gde
+@tag:h2gde
+h2gasdiffusionelectrode
+@type:h2gasdiffusionelectrode
+@label:h2 gas diffusion electrode
+h2gder
+@tag:h2gder
+h2gasdiffusionelectrodereaction
+@type:h2gasdiffusionelectrodereaction
+@label:h2 gas diffusion electrode reaction
+sep
+@tag:sep
+@type:separator
+@label:separator
+o2gde
+@tag:o2gde
+o2gasdiffusionelectrode
+@type:o2gasdiffusionelectrode
+@label:o2 gas diffusion electrode
+o2gder
+@tag:o2gder
+o2gasdiffusionelectrodereaction
+@type:o2gasdiffusionelectrodereaction
+@label:o2 gas diffusion electrode reaction
+o2gec
+@tag:o2gec
+o2gaselectrolytecompartment
+@type:o2gaselectrolytecompartment
+@label:o2 gas-electrolyte compartment
+constr
+@tag:constr
+pointwiseconstraint
+@type:pointwiseconstraint
+pointwise
+constraint
+ground
+@label:pointwise constraint - electrode potential ground
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+properties
+@label:fluid properties
+@type:init
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+sym
+@tag:sym
+symmetry
+@type:symmetry
+@label:symmetry
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+nf
+@tag:nf
+noflow
+@type:noflow
+no
+@label:no flow
+phtr
+@tag:phtr
+phasetransportfreeporousmedia
+@type:phasetransportfreeporousmedia
+transport
+free
+media
+@label:phase transport in free and porous media flow
+volumefraction
+ptp
+@tag:ptp
+phaseandtransportproperties
+@type:phaseandtransportproperties
+@label:phase and transport properties
+tm
+@tag:tm
+turbulentmixing
+@type:turbulentmixing
+turbulent
+mixing
+@label:turbulent mixing
+pptp
+@tag:pptp
+phaseandporousmediatransportproperties
+@type:phaseandporousmediatransportproperties
+@label:phase and porous media transport properties
+fpi
+@tag:fpi
+freeporousinterface
+@type:freeporousinterface
+free-porous
+interface
+@label:free-porous interface
+noflux
+@type:noflux
+flux
+@label:no flux
+sa
+@tag:sa
+@type:volumefraction
+@label:volume fraction
+@tag:of
+outflow
+@type:outflow
+@label:outflow
+ms
+@tag:ms
+masssource
+@type:masssource
+mass
+source
+@label:mass source
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+solids
+fluids
+@label:heat transfer in solids and fluids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+thermalinsulation
+@type:thermalinsulation
+@label:thermal insulation
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+separators
+@label:porous medium - separators
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+gdes
+@label:porous medium - gdes
+pc
+@tag:pc
+periodicheat
+@type:periodicheat
+periodic
+condition
+@label:periodic condition
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+geom
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+uni
+work_plane
+sequence2d
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+sketchobject
+mov
+@tag:mov
+move
+@type:move
+@label:move
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:separators
+channels
+@label:oxygen channels
+@label:oxygen gdes
+@label:hydrogen channels
+@label:hydrogen gdes
+plates
+@label:bipolar plates
+inlets
+@label:hydrogen inlets
+@label:oxygen inlets
+outlets
+@label:hydrogen outlets
+@label:oxygen outlets
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:channels
+@label:gdes
+@label:channels and gdes
+@label:inlets
+@label:outlets
+domains
+@label:electrolyte domains
+triangular
+mesh
+boundaries
+@label:triangular mesh boundaries
+mapped
+@label:mapped mesh boundaries
+mcf
+@tag:mcf
+meshcontrolfaces
+@type:meshcontrolfaces
+control
+faces
+@label:mesh control faces
+mesh_control_faces
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+variables
+epsl
+rho_mix
+mixture
+ngasy
+y-component
+cp_two_phase_mix
+capacity
+constant
+r_o2_oer
+molar
+rate
+r_h2_her
+linext
+@tag:linext
+linearextrusion
+@type:linearextrusion
+linear
+extrusion
+@label:linear extrusion
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+geom1_sel
+@tag:geom1_sel
+fromsequence
+@type:fromsequence
+geom1_unisel
+@tag:geom1_unisel
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mfpm
+@tag:mfpm
+multiphaseflowinporousmedia
+@type:multiphaseflowinporousmedia
+multiphase
+@label:multiphase flow in porous media
+nsd
+@tag:nsd
+navierstokesdarcycoupling
+@type:navierstokesdarcycoupling
+coupling
+@label:free and porous media flow coupling
+mfmm
+@tag:mfmm
+multiphaseflowmixturemodel
+@type:multiphaseflowmixturemodel
+@label:mixture model
+ech
+@tag:ech
+electrochemicalheating
+@type:electrochemicalheating
+electrochemical
+heating
+@label:electrochemical heating
+mat
+@tag:mat
+common
+@type:common
+aisi
+@label:steel aisi
+enu
+young's
+modulus
+poisson's
+ratio
+potassium
+hydroxide
+koh
+@label:potassium hydroxide, koh
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+electrolyteconductivity
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+@label:mapped
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftri
+@tag:ftri
+freetri
+@type:freetri
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary - flow initialization
+@label:stationary 2- all physics
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_dl_pb_lm
+@tag:comp1_dl_pb_lm
+field
+@type:field
+lagrange
+multiplier
+pb_lm
+@label:pressure lagrange multiplier
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_phtr_s_lm_s_g
+@tag:comp1_phtr_s_lm_s_g
+saturation
+s_lm_s_g
+@label:saturation lagrange multiplier
+comp1_s_g
+@tag:comp1_s_g
+s_g
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_we_phil
+@tag:comp1_we_phil
+phil
+comp1_we_phis
+@tag:comp1_we_phis
+electric
+phis
+@label:electric potential
+comp1_spf_inl1_pinlfdf_sel
+@tag:comp1_spf_inl1_pinlfdf_sel
+state
+@type:state
+ode
+variable
+developed
+pinlfdf_sel
+@label:help ode variable for fully developed flow
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+merged
+@label:direct, fluid flow variables
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:polarization plot
+glob
+@tag:glob
+global
+@type:global
+@label:global
+plotgroup3d
+@type:plotgroup3d
+@label:electrode phase potential
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:electrolyte phase potential
+@label:gas volume fraction in channels
+vol
+@tag:vol
+@type:volume
+@label:volume
+selection
+@type:selection
+@label:selection
+@label:gas volume fraction in gdes
+fractions
+streamlines
+@label:gas volume fractions and streamlines
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+geommanagernative
+hist
+@physics:we
+@physics:spf
+@multiphysics
+@multiphysics:mfpm
+@multiphysics:selection
+@multiphysics:nsd
+@multiphysics:mfmm
+@study:std
+@study:cdi
+@physics:dl
+@physics:phtr
+@physics:ht
+@study:stat
+@geom:geom
+@param:group
+@param:par
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:selection
+@material:func
+@material:int
+@material:ElectrolyteConductivity
+@expr:var
+@expr:selection
+@cpl
+@cpl:linext
+@cpl:selection
+@cpl:srcvertex
+@cpl:dstvertex
+@common:cminpt
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:size
+@mesh:ftri
+@view:view
+@mesh:bl
+@mesh:blp
+@mesh:swe
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_we_phil
+@sol:comp1_we_phis
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:aDef
+@sol:va
+@sol:comp1_s_g
+@sol:p
+@sol:se
+@sol:ss
+@sol:ll
+@sol:so
+@sol:sl
+@cpl:aveop
+@result:pg
+@result:glob
+@result:surf
+@result:vol
+@result:sel
+@result:selection
+@result:str
+@result:col
+@result:mtrl
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

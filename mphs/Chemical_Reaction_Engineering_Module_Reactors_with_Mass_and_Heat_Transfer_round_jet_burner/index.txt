@@ -1,0 +1,827 @@
+syngas
+combustion
+round-jet
+burner
+non-premixed
+turbulent
+synthesis
+gas
+takes
+place
+mixture
+primarily
+composed
+hydrogen
+carbon
+monoxide
+dioxide
+name
+relates
+creating
+synthetic
+natural
+model
+fed
+pipe
+open
+region
+with
+slow
+co-flow
+air
+upon
+exiting
+mixes
+reacts
+surrounding
+manner
+resulting
+flame
+attached
+outlet
+solved
+combining
+reacting
+flow
+heat
+transfer
+fluids
+interfaces
+jet
+modeled
+using
+k-omega
+turbulence
+reactions
+eddy
+dissipation
+velocity
+temperature
+species
+mass
+fractions
+compared
+experimental
+values
+round_jet_burner
+mph
+param
+parameters
+di
+inner
+diameter
+geomw
+simulated
+geometry
+width
+ucf
+coflow
+x0_o
+inlet
+volume
+fraction
+x0_h2o
+h2o
+mu_mix
+dynamic
+viscosity
+default
+chem
+@tag:chem
+chemistry
+@type:chemistry
+@label:chemistry
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+co
+gt
+@label:1: 2 co + o2 =&gt; 2 co
+@tag:co
+specieschem
+@type:specieschem
+@label:species: co
+@tag:o
+@label:species: o
+@label:2: 2 h2 + o2 =&gt; 2 h2o
+@tag:h
+@label:species: h
+@tag:h2o
+@label:species: h2o
+@tag:n
+@label:species: n
+tcs
+@tag:tcs
+concentratedspecies
+@type:concentratedspecies
+transport
+concentrated
+@label:transport of concentrated species
+massfraction
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+molar
+masses
+@label:species molar masses
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+init
+@tag:init
+@type:init
+initial
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+treac
+@tag:treac
+reactionwithturbulencemodel
+@type:reactionwithturbulencemodel
+reaction
+@label:reaction
+@tag:in
+inflow
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+spf
+@tag:spf
+turbulentflowkomega
+@type:turbulentflowkomega
+k-&#x3c
+@label:turbulent flow, k-&#x3c
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+outletboundary
+@type:outletboundary
+@label:outlet
+ht
+@tag:ht
+heattransferinfluids
+@type:heattransferinfluids
+@label:heat transfer in fluids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+ifl
+@tag:ifl
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+geom
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+cha
+@tag:cha
+chamfer
+@type:chamfer
+@label:chamfer
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+uni
+@tag:uni
+union
+@type:union
+@label:union
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+mce
+@tag:mce
+meshcontroledges
+@type:meshcontroledges
+mesh
+control
+edges
+@label:mesh control edges
+mesh_control_edges
+cme
+@tag:cme
+compositeedges
+@type:compositeedges
+composite
+@label:form composite edges
+form_composite_edges
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+material
+fixed
+spatial
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nirf
+@tag:nirf
+nonisothermalreactingflow
+@type:nonisothermalreactingflow
+@label:reacting flow
+comp
+component
+tdp
+thermodynamics
+pp
+@tag:pp
+builtinpropertypackage
+@type:builtinpropertypackage
+system
+@label:gas system
+singlephase
+@tag:singlephase
+onephaseproperty
+@type:onephaseproperty
+capacity
+cp
+@label:heat capacity
+enthalpy
+formation
+@label:enthalpy of formation
+const1_chem
+@tag:const1_chem
+compoundconstant
+@type:compoundconstant
+@label:molar mass
+const2_chem
+@tag:const2_chem
+lennard-jones
+potential
+characteristic
+length
+@label:lennard-jones diameter (potential characteristic length
+const3_chem
+@tag:const3_chem
+energy
+minimum
+@label:lennard-jones energy (potential energy minimum
+const4_chem
+@tag:const4_chem
+dipole
+moment
+@label:dipole moment
+const5_chem
+@tag:const5_chem
+const6_chem
+@tag:const6_chem
+const7_chem
+@tag:const7_chem
+const8_chem
+@tag:const8_chem
+const9_chem
+@tag:const9_chem
+const10_chem
+@tag:const10_chem
+const11_chem
+@tag:const11_chem
+const12_chem
+@tag:const12_chem
+const13_chem
+@tag:const13_chem
+const14_chem
+@tag:const14_chem
+const15_chem
+@tag:const15_chem
+const16_chem
+@tag:const16_chem
+const17_chem
+@tag:const17_chem
+const18_chem
+@tag:const18_chem
+const19_chem
+@tag:const19_chem
+const20_chem
+@tag:const20_chem
+const21_chem
+@tag:const21_chem
+const22_chem
+@tag:const22_chem
+const23_chem
+@tag:const23_chem
+const24_chem
+@tag:const24_chem
+one1_chem
+@tag:one1_chem
+density
+@label:density
+one2_chem
+@tag:one2_chem
+one3_chem
+@tag:one3_chem
+@label:enthalpy
+one4_chem
+@tag:one4_chem
+entropy
+@label:entropy of formation
+one5_chem
+@tag:one5_chem
+one6_chem
+@tag:one6_chem
+ratio
+cp/cv
+@label:heat capacity ratio (cp/cv
+one7_chem
+@tag:one7_chem
+maxwell
+stefan
+diffusivity
+@label:maxwell stefan diffusivity
+one8_chem
+@tag:one8_chem
+one9_chem
+@tag:one9_chem
+one10_chem
+@tag:one10_chem
+one11_chem
+@tag:one11_chem
+one12_chem
+@tag:one12_chem
+one13_chem
+@tag:one13_chem
+one14_chem
+@tag:one14_chem
+one15_chem
+@tag:one15_chem
+one16_chem
+@tag:one16_chem
+one17_chem
+@tag:one17_chem
+one18_chem
+@tag:one18_chem
+one19_chem
+@tag:one19_chem
+one20_chem
+@tag:one20_chem
+one21_chem
+@tag:one21_chem
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_k
+@tag:comp1_k
+field
+@type:field
+kinetic
+@label:turbulent kinetic energy
+comp1_nirf1_twall_d
+@tag:comp1_nirf1_twall_d
+downside
+twall_d
+@label:wall temperature, downside
+comp1_nirf1_twall_u
+@tag:comp1_nirf1_twall_u
+upside
+twall_u
+@label:wall temperature, upside
+comp1_nirf1_wwall_d_wco
+@tag:comp1_nirf1_wwall_d_wco
+wwall_d_wco
+@label:wall mass fraction, downside
+comp1_nirf1_wwall_d_wh
+@tag:comp1_nirf1_wwall_d_wh
+wwall_d_wh
+comp1_nirf1_wwall_d_wh2o
+@tag:comp1_nirf1_wwall_d_wh2o
+wwall_d_wh2o
+comp1_nirf1_wwall_d_wo
+@tag:comp1_nirf1_wwall_d_wo
+wwall_d_wo
+comp1_nirf1_wwall_u_wco
+@tag:comp1_nirf1_wwall_u_wco
+wwall_u_wco
+@label:wall mass fraction, upside
+comp1_nirf1_wwall_u_wh
+@tag:comp1_nirf1_wwall_u_wh
+wwall_u_wh
+comp1_nirf1_wwall_u_wh2o
+@tag:comp1_nirf1_wwall_u_wh2o
+wwall_u_wh2o
+comp1_nirf1_wwall_u_wo
+@tag:comp1_nirf1_wwall_u_wo
+wwall_u_wo
+comp1_om
+@tag:comp1_om
+specific
+rate
+om
+@label:specific dissipation rate
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_wco
+@tag:comp1_wco
+wco
+@label:mass fraction
+comp1_wh
+@tag:comp1_wh
+wh
+comp1_wh2o
+@tag:comp1_wh2o
+wh2o
+comp1_wo
+@tag:comp1_wo
+wo
+comp1_spf_inl1_pinlfdf
+@tag:comp1_spf_inl1_pinlfdf
+state
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+@label:mass fractions
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:d
+direct
+@type:direct
+@label:direct, fluid flow variables
+@label:direct, mass fractions
+@label:direct, heat transfer variables
+@label:direct, turbulence variables
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+@label:revolution 2d
+edg
+@tag:edg
+edge2d
+@type:edge2d
+exterior
+walls
+@label:exterior walls
+singlephase2_ds
+@tag:singlephase2_ds
+grid1d
+@type:grid1d
+grid
+1d
+@label:grid 1d
+mir
+@tag:mir
+mirror2d
+@type:mirror2d
+mirror
+@label:mirror 2d
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+@label:cut line 2d
+tbl
+@tag:tbl
+table
+@type:table
+centerline
+data
+@label:centerline data
+z/di
+radial
+@label:z/di = 20, radial data
+@label:z/di = 50, radial data
+@label:z/di = 20, radial velocity data
+@label:z/di = 50, radial velocity data
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+evaluation
+group
+@label:evaluation group
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:enthalpy of formation, 298 k
+@label:heat capacity, 300 k
+@label:heat capacity, 2000 k
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+@tag:plot
+function
+@type:function
+@label:function
+plotgroup2d
+@type:plotgroup2d
+concentration
+@label:concentration, co
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+plotgroup3d
+@type:plotgroup3d
+@label:concentration, co, 3d
+@label:concentration, o
+@label:concentration, o2, 3d
+@label:concentration, co2, 3d
+@label:concentration, h
+@label:concentration, h2, 3d
+@label:concentration, h2o
+@label:concentration, h2o, 3d
+@label:concentration, n
+@label:concentration, n2, 3d
+@label:velocity
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:velocity, 3d
+resolution
+@label:wall resolution
+@tag:line
+@type:line
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+@label:mass fraction, co
+@label:t @ centerline
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+tblp
+@tag:tblp
+@label:table graph
+@label:t @ z/di
+uz
+@label:uz @ z/di
+@label:co, n2 @ centerline
+@label:h2, h2o @ centerline
+@label:o2, co2 @ centerline
+geommanagernative
+hist
+@geom:geom
+@physics:chem
+@physics:tcs
+@physics:spf
+@physics:ht
+@multiphysics
+@multiphysics:nirf
+@study:std
+@study:stat
+@geom:r
+@geom:cha
+@geom:pointinsketch
+@geom:selection
+@geom:pol
+@geom:uni
+@geom:input
+@geom:dif
+@geom:ls
+@geom:mce
+@geom:cme
+@tdp:pp
+@tdp:singlephase
+@mesh:mesh
+@mesh:map
+@mesh:dis
+@mesh:selection
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:ll
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:sl
+@sol:so
+@result:pg
+@result:plot
+@evaluationgroup:eg
+@evaluationgroup:gev
+@result:surf
+@result:str
+@dataset:rev
+@dataset:dset
+@result:con
+@dataset:edg
+@dataset:selection
+@result:line
+@result:hght
+@dataset:cln
+@table:tbl
+@result:lngr
+@result:selection
+@result:tblp
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+res
+soldata

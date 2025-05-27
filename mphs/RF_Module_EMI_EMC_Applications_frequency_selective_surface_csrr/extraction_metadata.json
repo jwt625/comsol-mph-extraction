@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/EMI_EMC_Applications/frequency_selective_surface_csrr.mph",
+  "source_size": 1402305,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 25
+}

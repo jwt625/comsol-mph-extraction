@@ -1,0 +1,14 @@
+{
+  "source_file": "Nonlinear_Structural_Materials_Module/Plasticity/compressed_elastoplastic_pipe.mph",
+  "source_size": 702714,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310378.599",
+  "total_files_in_archive": 20
+}

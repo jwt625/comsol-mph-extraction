@@ -1,0 +1,2045 @@
+homogenized
+material
+properties
+periodic
+microstructures
+frequently
+found
+composite
+materials
+metallic
+foams
+sandwich
+structures
+represented
+unit
+cell
+repeated
+along
+three
+cartesian
+directions
+app
+computes
+various
+makes
+available
+mph
+xml-file
+subsequently
+imported
+comsol
+multiphysics
+session
+ten
+different
+cells
+dimensions
+constituent
+modifiable
+user
+calculates
+density
+elasticity
+matrix
+coefficient
+thermal
+expansion
+heat
+capacity
+conductivity
+thereafter
+used
+macroscopic
+model
+homogenization_of_periodic_microstructures
+param
+parameters
+pa
+absolute
+pressure
+useunifibhexpac
+unidirectional
+fiber
+hexagonal
+packing
+activation
+boolean
+usebiplainweavefib
+bidirectional
+plain
+weave
+usefacecubicpart
+particulate
+face
+centered
+cubic
+df
+diameter
+hm
+height
+sf
+ratio
+corner
+center
+wm
+width
+wfx
+strand
+direction
+hfy
+afy
+first
+semiaxis
+nfy
+number
+fibers
+strands
+dm
+depth
+internal_voids
+set
+create
+internal
+voids
+dp
+particle
+lo
+length
+oblique
+wall
+honeycomb
+cross
+section
+default
+general
+par
+square
+noncrimp
+primitive
+body-centered
+face-centered
+cc
+@tag:cc
+curvilinearcoordinates
+@type:curvilinearcoordinates
+curvilinear
+coordinates
+@label:curvilinear coordinates
+css
+@tag:css
+coordinatesystemsettings
+@type:coordinatesystemsettings
+coordinate
+system
+settings
+@label:coordinate system settings
+diff
+@tag:diff
+diffusionmethod
+@type:diffusionmethod
+diffusion
+method
+@label:diffusion method
+@tag:wall
+walldefault
+@type:walldefault
+@label:wall
+inl
+@tag:inl
+inlet
+@type:inlet
+@label:inlet
+@tag:out
+outlet
+@type:outlet
+@label:outlet
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+@label:linear elastic material
+te
+@tag:te
+thermalexpansion
+@type:thermalexpansion
+@label:thermal expansion
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+rigid
+@label:rigid material
+fix
+@tag:fix
+fixedconstraint
+@type:fixedconstraint
+fixed
+constraint
+@label:fixed constraint
+cp
+@tag:cp
+cellperiodicity
+@type:cellperiodicity
+periodicity
+@label:cell periodicity: elasticity matrix
+bp
+@tag:bp
+boundarypair
+@type:boundarypair
+boundary
+pair
+@label:boundary pair
+@label:cell periodicity: coefficient of thermal expansion
+ht
+@tag:ht
+heattransfer
+@type:heattransfer
+transfer
+solids
+@label:heat transfer in solids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+constr
+@tag:constr
+pointwiseconstraint
+@type:pointwiseconstraint
+pointwise
+@label:pointwise constraint
+pc
+@tag:pc
+periodicheat
+@type:periodicheat
+condition
+@label:periodic condition
+geom
+geometry
+geomnative
+@tag:if
+@type:if
+@label:if
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:unidirectional fiber composite, square packing
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+@label:parameter check
+blk
+@tag:blk
+block
+@type:block
+@label:block
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:fiber
+dif
+@tag:dif
+difference
+@type:difference
+@label:matrix
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+pair_x_source
+@label:pair_x_source
+pair_x_destination
+@label:pair_x_destination
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+pair_x
+@label:pair_x
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+interior
+@label:interior
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+wp
+@tag:wp
+workplane
+@type:workplane
+back_plane
+@label:back_plane
+sequence2d
+plane
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+front_plane
+@label:front_plane
+right_plane
+@label:right_plane
+left_plane
+@label:left_plane
+bottom_plane
+@label:bottom_plane
+top_plane
+@label:top_plane
+pnt
+edg
+bnd
+dom
+geommanagernative
+inputparam
+input
+fiber_diameter
+cell_height
+localparam
+local
+volume
+baseunitsystem
+meter
+radian
+degree
+@label:unidirectional fiber composite, hexagonal packing
+work
+@label:work plane
+work_plane
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:fibers
+fiber_diameter_center
+cell_depth
+diagm
+diagonal
+@label:bidirectional fiber composite
+@label:cylinder
+@label:extrude
+non-crimp
+@label:bidirectional non-crimp fiber composite
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+fiber_strands
+@label:fiber_strands
+width_of_fiber_strand_in_x_direction#x
+height_of_fiber_strand_in_x_direction#y
+posyy
+position
+weft
+@label:bidirectional plain weave fiber composite
+@tag:e
+ellipse
+@type:ellipse
+@label:ellipse
+cb
+@tag:cb
+cubicbezier
+@type:cubicbezier
+b&#xe9;zier
+@label:cubic b&#xe9;zier
+cubic_bezier
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+arr
+@tag:arr
+array
+@type:array
+@label:array
+swe
+@tag:swe
+sweep
+@type:sweep
+@label:sweep
+selection
+@label:union selection
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+grp
+@tag:grp
+@type:geometry
+group
+@label:group
+afx
+first_semiaxis_of_fiber_strand_in_x_direction#x
+bfy
+second_semiaxis_of_fiber_strand_in_x_direction#y
+gap
+gap_between_crossing_fiber_strands
+posxz
+warp
+@label:particulate composite, primitive cubic
+sph
+@tag:sph
+sphere
+@type:sphere
+@label:particle
+particle_diameter
+@label:particulate composite, body-centered cubic
+@label:sphere
+@tag:copy
+@type:copy
+@label:copy
+pard
+@tag:pard
+partitiondomains
+@type:partitiondomains
+domains
+@label:partition domains
+partition_domains
+delete_entities
+particles
+@label:particles
+@label:particulate composite, face-centered cubic
+@label:honeycomb, hexagonal cross section
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+sca
+@tag:sca
+scale
+@type:scale
+@label:scale
+@label:difference
+reinforcement
+@label:reinforcement
+lh
+length_of_horizontal_wall_of_cross_section
+th
+wall_thickness
+thl
+angle
+inner
+centerline
+dim
+dimension
+@label:sandwich
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+@label:matrix union
+pi1_sel
+source
+destination
+pi1_unisel
+pi1_adjsel
+pi1_cyl
+pi1_dif
+pi1_boxsel
+pi2_sel
+pi2_unisel
+pi2_adjsel
+pi2_dif
+pi2_boxsel
+pi2_ext
+pi3_sel
+pi3_unisel
+pi3_adjsel
+pi3_dif
+pi3_boxsel
+pi3_uni
+pi4_sel
+pi4_unisel
+pi4_adjsel
+pi4_dif
+pi4_boxsel
+pi4_uni
+pi5_sel
+pi5_unisel
+pi5_adjsel
+pi5_difsel
+pi5_boxsel
+pi5_uni
+pi6_sel
+pi6_unisel
+pi6_adjsel
+pi6_dif
+pi6_boxsel
+pi6_sph
+pi7_sel
+pi7_unisel
+pi7_adjsel
+pi7_dif
+pi7_boxsel
+pi7_uni
+pi8_sel
+pi8_unisel
+pi8_adjsel
+pi8_dif
+pi8_boxsel
+pi8_uni
+pi9_sel
+pi9_unisel
+pi9_adjsel
+pi9_dif
+pi9_boxsel
+pi9_ext
+pi10_boxsel
+pi10_unisel
+pi10_adjsel
+pi10_uni
+part
+nm
+number_of_layers
+layer
+thickness
+var
+variables
+dtx
+offset
+component
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration over reinforcement
+@label:integration over matrix
+@label:integration over all
+@label:integration over pair
+spatial
+mesh
+geom1_pi1_sel
+@tag:geom1_pi1_sel
+fromsequence
+@type:fromsequence
+@label:pair 1, source (unidirectional fiber composite, square packing
+@label:pair 1, destination (unidirectional fiber composite, square packing
+@label:pair 2, source (unidirectional fiber composite, square packing
+@label:pair 2, destination (unidirectional fiber composite, square packing
+@label:pair 3, source (unidirectional fiber composite, square packing
+@label:pair 3, destination (unidirectional fiber composite, square packing
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:pair 1 (unidirectional fiber composite, square packing
+@label:pair 2 (unidirectional fiber composite, square packing
+@label:pair 3 (unidirectional fiber composite, square packing
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+@label:exterior (unidirectional fiber composite, square packing
+@label:interior (unidirectional fiber composite, square packing
+geom1_pi1_cyl1_dom
+@tag:geom1_pi1_cyl1_dom
+@label:fiber (unidirectional fiber composite, square packing
+geom1_pi1_dif1_dom
+@tag:geom1_pi1_dif1_dom
+@label:matrix (unidirectional fiber composite, square packing
+geom1_pi1_boxsel
+@tag:geom1_pi1_boxsel
+@label:all (unidirectional fiber composite, square packing
+geom1_pi2_sel
+@tag:geom1_pi2_sel
+@label:pair 1, source (unidirectional fiber composite, hexagonal packing
+@label:pair 1, destination (unidirectional fiber composite, hexagonal packing
+@label:pair 2, source (unidirectional fiber composite, hexagonal packing
+@label:pair 2, destination (unidirectional fiber composite, hexagonal packing
+@label:pair 3, source (unidirectional fiber composite, hexagonal packing
+@label:pair 3, destination (unidirectional fiber composite, hexagonal packing
+geom1_pi2_unisel
+@tag:geom1_pi2_unisel
+@label:pair 1 (unidirectional fiber composite, hexagonal packing
+@label:pair 2 (unidirectional fiber composite, hexagonal packing
+@label:pair 3 (unidirectional fiber composite, hexagonal packing
+geom1_pi2_adjsel
+@tag:geom1_pi2_adjsel
+@label:exterior (unidirectional fiber composite, hexagonal packing
+@label:interior (unidirectional fiber composite, hexagonal packing
+geom1_pi2_dif1_dom
+@tag:geom1_pi2_dif1_dom
+@label:matrix (unidirectional fiber composite, hexagonal packing
+geom1_pi2_boxsel
+@tag:geom1_pi2_boxsel
+@label:all (unidirectional fiber composite, hexagonal packing
+geom1_pi2_ext1_dom
+@tag:geom1_pi2_ext1_dom
+@label:fibers (unidirectional fiber composite, hexagonal packing
+geom1_pi3_sel
+@tag:geom1_pi3_sel
+@label:pair 1, source (bidirectional fiber composite
+@label:pair 1, destination (bidirectional fiber composite
+@label:pair 2, source (bidirectional fiber composite
+@label:pair 2, destination (bidirectional fiber composite
+@label:pair 3, source (bidirectional fiber composite
+@label:pair 3, destination (bidirectional fiber composite
+geom1_pi3_unisel
+@tag:geom1_pi3_unisel
+@label:pair 1 (bidirectional fiber composite
+@label:pair 2 (bidirectional fiber composite
+@label:pair 3 (bidirectional fiber composite
+geom1_pi3_adjsel
+@tag:geom1_pi3_adjsel
+@label:exterior (bidirectional fiber composite
+@label:interior (bidirectional fiber composite
+geom1_pi3_dif1_dom
+@tag:geom1_pi3_dif1_dom
+@label:matrix (bidirectional fiber composite
+geom1_pi3_boxsel
+@tag:geom1_pi3_boxsel
+@label:all (bidirectional fiber composite
+geom1_pi3_uni1_dom
+@tag:geom1_pi3_uni1_dom
+@label:fibers (bidirectional fiber composite
+geom1_pi4_sel
+@tag:geom1_pi4_sel
+@label:pair 1, source (bidirectional non-crimp fiber composite
+@label:pair 1, destination (bidirectional non-crimp fiber composite
+@label:pair 2, source (bidirectional non-crimp fiber composite
+@label:pair 2, destination (bidirectional non-crimp fiber composite
+@label:pair 3, source (bidirectional non-crimp fiber composite
+@label:pair 3, destination (bidirectional non-crimp fiber composite
+geom1_pi4_unisel
+@tag:geom1_pi4_unisel
+@label:pair 1 (bidirectional non-crimp fiber composite
+@label:pair 2 (bidirectional non-crimp fiber composite
+@label:pair 3 (bidirectional non-crimp fiber composite
+geom1_pi4_adjsel
+@tag:geom1_pi4_adjsel
+@label:exterior (bidirectional non-crimp fiber composite
+@label:interior (bidirectional non-crimp fiber composite
+geom1_pi4_dif1_dom
+@tag:geom1_pi4_dif1_dom
+@label:matrix (bidirectional non-crimp fiber composite
+geom1_pi4_boxsel
+@tag:geom1_pi4_boxsel
+@label:all (bidirectional non-crimp fiber composite
+geom1_pi4_uni1_dom
+@tag:geom1_pi4_uni1_dom
+@label:fiber strands (bidirectional non-crimp fiber composite
+geom1_pi5_sel
+@tag:geom1_pi5_sel
+@label:pair 1, source (bidirectional plain weave fiber composite
+@label:pair 1, destination (bidirectional plain weave fiber composite
+@label:pair 2, source (bidirectional plain weave fiber composite
+@label:pair 2, destination (bidirectional plain weave fiber composite
+@label:pair 3, source (bidirectional plain weave fiber composite
+@label:pair 3, destination (bidirectional plain weave fiber composite
+geom1_pi5_unisel
+@tag:geom1_pi5_unisel
+@label:pair 1 (bidirectional plain weave fiber composite
+@label:pair 2 (bidirectional plain weave fiber composite
+@label:pair 3 (bidirectional plain weave fiber composite
+geom1_pi5_adjsel
+@tag:geom1_pi5_adjsel
+@label:exterior (bidirectional plain weave fiber composite
+@label:interior (bidirectional plain weave fiber composite
+geom1_pi5_difsel
+@tag:geom1_pi5_difsel
+@label:matrix (bidirectional plain weave fiber composite
+geom1_pi5_boxsel
+@tag:geom1_pi5_boxsel
+@label:all (bidirectional plain weave fiber composite
+geom1_pi5_uni1_dom
+@tag:geom1_pi5_uni1_dom
+@label:fiber strands (bidirectional plain weave fiber composite
+geom1_pi6_sel
+@tag:geom1_pi6_sel
+@label:pair 1, source (particulate composite, primitive cubic
+@label:pair 1, destination (particulate composite, primitive cubic
+@label:pair 2, source (particulate composite, primitive cubic
+@label:pair 2, destination (particulate composite, primitive cubic
+@label:pair 3, source (particulate composite, primitive cubic
+@label:pair 3, destination (particulate composite, primitive cubic
+geom1_pi6_unisel
+@tag:geom1_pi6_unisel
+@label:pair 1 (particulate composite, primitive cubic
+@label:pair 2 (particulate composite, primitive cubic
+@label:pair 3 (particulate composite, primitive cubic
+geom1_pi6_adjsel
+@tag:geom1_pi6_adjsel
+@label:exterior (particulate composite, primitive cubic
+@label:interior (particulate composite, primitive cubic
+geom1_pi6_dif1_dom
+@tag:geom1_pi6_dif1_dom
+@label:matrix (particulate composite, primitive cubic
+geom1_pi6_boxsel
+@tag:geom1_pi6_boxsel
+@label:all (particulate composite, primitive cubic
+geom1_pi6_sph1_dom
+@tag:geom1_pi6_sph1_dom
+@label:particle (particulate composite, primitive cubic
+geom1_pi7_sel
+@tag:geom1_pi7_sel
+@label:pair 1, source (particulate composite, body-centered cubic
+@label:pair 1, destination (particulate composite, body-centered cubic
+@label:pair 2, source (particulate composite, body-centered cubic
+@label:pair 2, destination (particulate composite, body-centered cubic
+@label:pair 3, source (particulate composite, body-centered cubic
+@label:pair 3, destination (particulate composite, body-centered cubic
+geom1_pi7_unisel
+@tag:geom1_pi7_unisel
+@label:pair 1 (particulate composite, body-centered cubic
+@label:pair 2 (particulate composite, body-centered cubic
+@label:pair 3 (particulate composite, body-centered cubic
+geom1_pi7_adjsel
+@tag:geom1_pi7_adjsel
+@label:exterior (particulate composite, body-centered cubic
+@label:interior (particulate composite, body-centered cubic
+geom1_pi7_dif1_dom
+@tag:geom1_pi7_dif1_dom
+@label:matrix (particulate composite, body-centered cubic
+geom1_pi7_boxsel
+@tag:geom1_pi7_boxsel
+@label:all (particulate composite, body-centered cubic
+geom1_pi7_uni1_dom
+@tag:geom1_pi7_uni1_dom
+@label:particles (particulate composite, body-centered cubic
+geom1_pi8_sel
+@tag:geom1_pi8_sel
+@label:pair 1, source (particulate composite, face-centered cubic
+@label:pair 1, destination (particulate composite, face-centered cubic
+@label:pair 2, source (particulate composite, face-centered cubic
+@label:pair 2, destination (particulate composite, face-centered cubic
+@label:pair 3, source (particulate composite, face-centered cubic
+@label:pair 3, destination (particulate composite, face-centered cubic
+geom1_pi8_unisel
+@tag:geom1_pi8_unisel
+@label:pair 1 (particulate composite, face-centered cubic
+@label:pair 2 (particulate composite, face-centered cubic
+@label:pair 3 (particulate composite, face-centered cubic
+geom1_pi8_adjsel
+@tag:geom1_pi8_adjsel
+@label:exterior (particulate composite, face-centered cubic
+@label:interior (particulate composite, face-centered cubic
+geom1_pi8_dif1_dom
+@tag:geom1_pi8_dif1_dom
+@label:matrix (particulate composite, face-centered cubic
+geom1_pi8_boxsel
+@tag:geom1_pi8_boxsel
+@label:all (particulate composite, face-centered cubic
+geom1_pi8_uni1_dom
+@tag:geom1_pi8_uni1_dom
+@label:particles (particulate composite, face-centered cubic
+geom1_pi9_sel
+@tag:geom1_pi9_sel
+@label:pair 1, source (honeycomb, hexagonal cross section
+@label:pair 1, destination (honeycomb, hexagonal cross section
+@label:pair 2, source (honeycomb, hexagonal cross section
+@label:pair 2, destination (honeycomb, hexagonal cross section
+@label:pair 3, source (honeycomb, hexagonal cross section
+@label:pair 3, destination (honeycomb, hexagonal cross section
+geom1_pi9_unisel
+@tag:geom1_pi9_unisel
+@label:pair 1 (honeycomb, hexagonal cross section
+@label:pair 2 (honeycomb, hexagonal cross section
+@label:pair 3 (honeycomb, hexagonal cross section
+geom1_pi9_adjsel
+@tag:geom1_pi9_adjsel
+@label:exterior (honeycomb, hexagonal cross section
+@label:interior (honeycomb, hexagonal cross section
+geom1_pi9_dif1_dom
+@tag:geom1_pi9_dif1_dom
+@label:matrix (honeycomb, hexagonal cross section
+geom1_pi9_boxsel
+@tag:geom1_pi9_boxsel
+@label:all (honeycomb, hexagonal cross section
+geom1_pi9_ext1_dom
+@tag:geom1_pi9_ext1_dom
+@label:reinforcement (honeycomb, hexagonal cross section
+geom1_pi10_boxsel
+@tag:geom1_pi10_boxsel
+@label:pair 1, source (sandwich
+@label:pair 1, destination (sandwich
+@label:pair 2, source (sandwich
+@label:pair 2, destination (sandwich
+@label:pair 3, source (sandwich
+@label:pair 3, destination (sandwich
+geom1_pi10_unisel
+@tag:geom1_pi10_unisel
+@label:pair 1 (sandwich
+@label:pair 2 (sandwich
+@label:pair 3 (sandwich
+geom1_pi10_adjsel
+@tag:geom1_pi10_adjsel
+@label:exterior (sandwich
+@label:interior (sandwich
+geom1_pi10_uni1_dom
+@tag:geom1_pi10_uni1_dom
+@label:matrix (sandwich
+@label:all (sandwich
+geom1_unisel
+@tag:geom1_unisel
+explicit
+@type:explicit
+domain
+@label:selection: domain material
+@label:selection: all domains
+@label:selection: reinforcement
+@label:selection: matrix
+@label:selection: all
+@label:selection: pair
+@label:selection: pair 1, source
+@label:selection: pair 1, destination
+@label:selection: pair 2, source
+@label:selection: pair 2, destination
+@label:selection: pair 3, source
+@label:selection: pair 3, destination
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+@type:matrix
+common
+@type:common
+air
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+acrylic
+plastic
+@label:acrylic plastic
+enu
+young's
+modulus
+poisson's
+aluminum
+@label:aluminum
+murnaghan
+brick
+@label:brick
+cast
+iron
+@label:cast iron
+concrete
+@label:concrete
+copper
+@label:copper
+linzres
+linearized
+resistivity
+@label:iron
+rubber
+@label:rubber
+lame
+lam&#xe
+mooneyrivlin
+mooney-rivlin
+yeoh
+varga
+arrudaboyce
+arruda-boyce
+silica
+glass
+@label:silica glass
+structural
+steel
+@label:structural steel
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+elastoplasticmodel
+elastoplastic
+ludwik
+johnsoncook
+johnson-cook
+swift
+voce
+hockettsherby
+hockett-sherby
+armstrongfrederick
+armstrong-frederick
+norton
+garofalo
+hyperbolic
+sine
+chabocheviscoplasticity
+chaboche
+viscoplasticity
+water
+liquid
+@label:water, liquid
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+id
+@tag:id
+identicalmesh
+@type:identicalmesh
+identical
+@label:identical mesh
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+solidcp1std
+solidcp1stat
+@tag:solidcp1stat
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_cc_diff1_u
+@tag:comp1_cc_diff1_u
+field
+@type:field
+potential
+@label:potential
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp1_solid_rd_disp
+@tag:comp1_solid_rd_disp
+state
+@type:state
+@label:comp1.solid_rd_disp
+comp1_solid_rd_rot
+@tag:comp1_solid_rd_rot
+@label:comp1.solid_rd_rot
+@tag:d
+suggested
+@label:suggested direct solver
+solidcp1sol
+comp1_u_lm
+@tag:comp1_u_lm
+lagrange
+multiplier
+frames
+u_lm
+@label:material and geometry frames
+comp1_solid_cp1_savg
+@tag:comp1_solid_cp1_savg
+average
+stress
+savg
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+comp1_solid_cp2_eavg
+@tag:comp1_solid_cp2_eavg
+strain
+eavg
+@label:direct, heat transfer variables
+result
+results
+dset
+@tag:dset
+@type:solution
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+@label:homogenized density
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+solidcp1stdeg
+@tag:solidcp1stdeg
+@label:homogenized elasticity matrix
+gmevcp
+@tag:gmevcp
+evalglobalmatrix
+@type:evalglobalmatrix
+@label:global matrix evaluation
+std3eg
+@tag:std3eg
+@label:homogenized coefficient of thermal expansion
+@label:homogenized heat capacity
+@label:homogenized thermal conductivity
+gpev
+@tag:gpev
+evalpointmatrix
+@type:evalpointmatrix
+point
+@label:point matrix evaluation
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+vector
+@label:vector field
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:coordinate system
+sys
+@tag:sys
+coordsysvolume
+@type:coordsysvolume
+@label:coordinate system volume
+@label:stress
+vol
+@tag:vol
+@type:volume
+@label:volume
+rpt
+@tag:rpt
+report
+@type:report
+@label:report
+tp
+@tag:tp
+titlepage
+@type:titlepage
+homogenization
+@label:homogenization of periodic microstructures
+toc
+@tag:toc
+tableofcontents
+@type:tableofcontents
+table
+contents
+@label:table of contents
+sec
+@tag:sec
+@type:section
+software
+information
+@label:software information
+root
+@tag:root
+@type:model
+@label:about the software
+application
+@label:application parameters
+@label:parameters
+@tag:param
+@type:parameter
+@label:general parameters
+@label:parameters: unidirectional fiber composite, square packing
+@label:geometry
+@tag:geom
+@label:constituent materials
+@label:results
+hist
+@study:std
+@study:stat
+@physics:cc
+@physics:solid
+@physics:ht
+@param:group
+@param:par
+@geom:geom
+@geom:if
+@geom:pi
+@geom:unisel
+@selection
+@selection:sel
+@selection:uni
+@cpl
+@cpl:intop
+@cpl:selection
+@coordsys:sys
+@view:view
+@view:hideObjects
+@view:hide
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:selection
+@material:Enu
+@material:Murnaghan
+@material:linzRes
+@material:Lame
+@material:MooneyRivlin
+@material:Yeoh
+@material:Varga
+@material:ArrudaBoyce
+@material:ElastoplasticModel
+@material:Ludwik
+@material:Voce
+@material:HockettSherby
+@material:ArmstrongFrederick
+@material:int
+@material:JohnsonCook
+@material:Swift
+@material:Norton
+@material:Garofalo
+@material:ChabocheViscoplasticity
+@mesh:mesh
+@mesh:size
+@mesh:ftri
+@mesh:selection
+@mesh:id
+@mesh:group
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@result:pg
+@result:str
+@result:sys
+@sol:comp1_solid_rd_rot
+@sol:comp1_solid_rd_disp
+@sol:aDef
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@evaluationgroup:eg
+@evaluationgroup:gev
+@study:solidcp1std
+@study:solidcp1stat
+@sol:solidcp1sol
+@sol:p
+@sol:va
+@result:vol
+@evaluationgroup:solidcp1stdEg
+@evaluationgroup:gmevcp
+@evaluationgroup:std3Eg
+@expr:var
+@common:mat
+@evaluationgroup:gpev
+@evaluationgroup:selection
+@applicationNodeList:appMainWindow
+@applicationNodeList:appDeclaration
+@applicationNodeList:choiceMaterialSymmetry
+@applicationNodeList:choiceMaterials
+@applicationNodeList:choiceSelection
+@applicationNodeList:choiceSelection_Sandwich
+@applicationNodeList:appForm
+@applicationNodeList:geometryParameters
+@applicationNodeList:geomParamCell
+@applicationNodeList:description
+@applicationNodeList:sketches
+@applicationNodeList:sketch_Cell
+@applicationNodeList:materialsSelection
+@applicationNodeList:materialSelectionWidget
+@applicationNodeList:matSelectionChoice
+@applicationNodeList:assignMaterial
+@applicationNodeList:materialPropertiesToCreate
+@applicationNodeList:buttonform
+@applicationNodeList:materialPropertiesToChange
+@applicationNodeList:isotropicProperties
+@applicationNodeList:density
+@applicationNodeList:elasticityMatrix
+@applicationNodeList:thermalCoefficient
+@applicationNodeList:heatCapacity
+@applicationNodeList:thermalConductivity
+@applicationNodeList:transverselyIsotropicProperties
+@applicationNodeList:orthotropicProperties
+@applicationNodeList:resultsElasticityMatrix
+@applicationNodeList:resultsThermalCoefficient
+@applicationNodeList:resultsThermalConductivity
+@applicationNodeList:appFormObject
+@applicationNodeList:line
+@applicationNodeList:inputfield
+@applicationNodeList:textlabel
+@applicationNodeList:equation
+@applicationNodeList:buildGeometry
+@applicationNodeList:image
+@applicationNodeList:graphics
+@SelectionList:sel
+@applicationNodeList:appFormItem
+@applicationNodeList:showOrHideMatrix
+@applicationNodeList:materials
+@applicationNodeList:imageIcon
+@applicationNodeList:textlabelTitle
+@applicationNodeList:materialsOverview
+@applicationNodeList:tableMaterialsSelection
+@applicationNodeList:selectioninputMaterial
+@AppBuilderFeatureList:graphics
+@AppBuilderFeatureList:AppBuilderFeatureList
+@applicationNodeList:button
+@applicationNodeList:toolbar
+@applicationNodeList:addItem
+@applicationNodeList:editItem
+@applicationNodeList:thermodynamicCondition
+@applicationNodeList:textlabelPressure
+@applicationNodeList:inputfieldPressure
+@applicationNodeList:textlabelTemperature
+@applicationNodeList:inputfieldTemperature
+@applicationNodeList:materialPropertiesCommon
+@applicationNodeList:createButton
+@applicationNodeList:cancleButton
+@applicationNodeList:updateButton
+@applicationNodeList:homogenizedMaterialProperties
+@applicationNodeList:checkbox
+@applicationNodeList:resultsDensity
+@applicationNodeList:textlabelDensity
+@applicationNodeList:datadisplayDensity
+@applicationNodeList:resultsHeatCapacity
+@applicationNodeList:textlabelHeatCapacity
+@applicationNodeList:datadisplayD
+@applicationNodeList:datadisplayKD
+@applicationNodeList:datadisplayalpha
+@applicationNodeList:datadisplayk
+@applicationNodeList:titleMechanical
+@applicationNodeList:titleThermal
+@applicationNodeList:simulationInformation
+@applicationNodeList:textlabelTime
+@applicationNodeList:textlabelMemory
+@applicationNodeList:textlabelMemoryValue
+@applicationNodeList:infocard
+@applicationNodeList:geometryUpdated
+@applicationNodeList:geometryNotUpdated
+@applicationNodeList:meshUpdated
+@applicationNodeList:meshNotUpdated
+@applicationNodeList:materialUpdated
+@applicationNodeList:materialNotUpdated
+@applicationNodeList:appFileMenu
+@applicationNodeList:save
+@applicationNodeList:save_as
+@applicationNodeList:appRibbon
+@applicationNodeList:homeTab
+@applicationNodeList:appItem
+@applicationNodeList:inputSection
+@applicationNodeList:reset
+@applicationNodeList:resetGeometry
+@applicationNodeList:resetMaterials
+@applicationNodeList:resetAll
+@applicationNodeList:simulationSection
+@applicationNodeList:mesh
+@applicationNodeList:normalButton
+@applicationNodeList:fineButton
+@applicationNodeList:finerButton
+@applicationNodeList:compute
+@applicationNodeList:results
+@applicationNodeList:exportMaterial
+@applicationNodeList:exportToMph
+@applicationNodeList:exportToXml
+@applicationNodeList:layoutSection
+@applicationNodeList:resetLayout
+@applicationNodeList:documentationSection
+@applicationNodeList:report
+@applicationNodeList:help
+@applicationNodeList:cellsTab
+@applicationNodeList:cell
+@applicationNodeList:Cell
+@report:rpt
+@report:tp
+@report:toc
+@report:sec
+@report:root
+@report:std
+@report:param
+@report:mat
+@report:evgr
+mainwindow
+@tag:mainwindow
+singlewindow
+@type:singlewindow
+main
+window
+@label:main window
+menu
+@tag:menu
+mainmenu
+@type:mainmenu
+bar
+@label:menu bar
+toolbar
+@tag:toolbar
+maintoolbar
+@type:maintoolbar
+@label:toolbar
+filemenu
+@tag:filemenu
+@type:filemenu
+file
+@label:file menu
+save
+@tag:save
+menuitem
+@type:menuitem
+@label:save
+save_as
+@tag:save_as
+@label:save as
+mainform
+@tag:mainform
+@type:mainform
+@label:main form
+windowpart
+@tag:windowpart
+@type:windowpart
+subwindow
+@label:subwindow
+hometab
+@tag:hometab
+ribbontab
+@type:ribbontab
+home
+@label:home
+inputsection
+@tag:inputsection
+ribbonsection
+@type:ribbonsection
+@label:input
+reset
+@tag:reset
+@type:menu
+@label:reset
+resetgeometry
+@tag:resetgeometry
+@label:reset geometry
+resetmaterials
+@tag:resetmaterials
+@label:reset materials
+resetall
+@tag:resetall
+@label:reset all
+simulationsection
+@tag:simulationsection
+simulation
+@label:simulation
+@tag:mesh
+@label:mesh
+normalbutton
+@tag:normalbutton
+normal
+@label:normal
+finebutton
+@tag:finebutton
+fine
+@label:fine
+finerbutton
+@tag:finerbutton
+finer
+@label:finer
+compute
+@tag:compute
+@label:compute
+@tag:results
+exportmaterial
+@tag:exportmaterial
+export
+@label:export material
+exporttomph
+@tag:exporttomph
+@label:export to mph file
+exporttoxml
+@tag:exporttoxml
+xml
+@label:export to xml file
+layoutsection
+@tag:layoutsection
+layout
+@label:layout
+resetlayout
+@tag:resetlayout
+@label:reset window layout
+documentationsection
+@tag:documentationsection
+documentation
+@label:documentation
+@tag:report
+help
+@tag:help
+@label:help
+cellstab
+@tag:cellstab
+@label:unit cells
+@tag:cell
+@label:cells
+@label:unidirectional fiber i
+ii
+@label:unidirectional fiber ii
+@label:bidirectional fiber
+@label:bidirectional non-crimp fiber
+@label:bidirectional plain weave fiber
+@label:particulate primitive cubic
+@label:particulate body-centered cubic
+@label:particulate face-centered cubic
+@label:honeycomb
+images
+@tag:images
+imagelibrary
+@type:imagelibrary
+@label:images
+sounds
+@tag:sounds
+soundlibrary
+@type:soundlibrary
+@label:sounds
+files
+@tag:files
+filelibrary
+@type:filelibrary
+@label:files
+@tag:field
+stringdatafield
+@type:stringdatafield
+string
+@label:string
+doublematrixdatafield
+@type:doublematrixdatafield
+2d
+double
+@label:array 2d double
+booleandatafield
+@type:booleandatafield
+@label:boolean
+choicematerialsymmetry
+@tag:choicematerialsymmetry
+validvalues
+@type:validvalues
+choice
+list
+symmetry
+@label:choice list: material symmetry
+choicematerials
+@tag:choicematerials
+@label:choice list: materials
+choiceselection
+@tag:choiceselection
+non-sandwich
+@label:choice list: selection for non-sandwich cell
+choiceselection_sandwich
+@tag:choiceselection_sandwich
+@label:choice list: selection for sandwich cell
+stringmatrixdatafield
+@type:stringmatrixdatafield
+@label:array 2d string
+integerarraydatafield
+@type:integerarraydatafield
+1d
+integer
+@label:array 1d integer
+doubledatafield
+@type:doubledatafield
+@label:double
+doublearraydatafield
+@type:doublearraydatafield
+@label:array 1d double
+integerdatafield
+@type:integerdatafield
+@label:integer
+initializeapplication
+@tag:initializeapplication
+codeeditor
+@type:codeeditor
+@label:initializeapplication
+geometrystatus
+@tag:geometrystatus
+@label:geometrystatus
+solutionstatus
+@tag:solutionstatus
+@label:solutionstatus
+infostateinputchanged
+@tag:infostateinputchanged
+@label:infostateinputchanged
+@label:resetgeometry
+@label:resetmaterials
+resetresults
+@tag:resetresults
+@label:resetresults
+changecells
+@tag:changecells
+@label:changecells
+rebuildgeometry
+@tag:rebuildgeometry
+@label:rebuildgeometry
+createmesh
+@tag:createmesh
+@label:createmesh
+selectalldomains
+@tag:selectalldomains
+@label:selectalldomains
+selectremainingdomains
+@tag:selectremainingdomains
+@label:selectremainingdomains
+checkmaterials
+@tag:checkmaterials
+@label:checkmaterials
+assignmaterial
+@tag:assignmaterial
+@label:assignmaterial
+matdomainsummary
+@tag:matdomainsummary
+@label:matdomainsummary
+errormissingmaterials
+@tag:errormissingmaterials
+@label:errormissingmaterials
+materialchoice
+@tag:materialchoice
+@label:materialchoice
+computestudy
+@tag:computestudy
+@label:computestudy
+setpropertiesandcomputationtime
+@tag:setpropertiesandcomputationtime
+@label:setpropertiesandcomputationtime
+setmaterialselection
+@tag:setmaterialselection
+@label:setmaterialselection
+createreport
+@tag:createreport
+@label:createreport
+@label:exportmaterial
+showorhidematrix
+@tag:showorhidematrix
+@label:showorhidematrix
+discard
+@tag:discard
+@label:discard
+createuserdefinedmaterial
+@tag:createuserdefinedmaterial
+@label:createuserdefinedmaterial
+updateuserdefinedmaterial
+@tag:updateuserdefinedmaterial
+@label:updateuserdefinedmaterial
+initializematerialproperties
+@tag:initializematerialproperties
+@label:initializematerialproperties
+getmaterialpropertiesifitexists
+@tag:getmaterialpropertiesifitexists
+@label:getmaterialpropertiesifitexists
+geometryparameters
+@tag:geometryparameters
+@type:form
+geomparamcell
+@tag:geomparamcell
+localform
+@type:localform
+@label:geometry parameters, cell
+subform
+@tag:subform
+formreference
+@type:formreference
+@label:form
+inputfield
+@tag:inputfield
+textfieldwidget
+@type:textfieldwidget
+@label:input field
+line
+@tag:line
+divider
+@type:divider
+@label:line
+@tag:unit
+unitlabel
+@type:unitlabel
+@label:unit
+description
+@tag:description
+symbol
+@label:description and symbol
+textlabel
+@tag:textlabel
+label
+@type:label
+text
+@label:text label
+equation
+@tag:equation
+equationlabel
+@type:equationlabel
+@label:equation
+buildgeometry
+@tag:buildgeometry
+button
+@type:button
+@label:button
+cardstack
+@tag:cardstack
+@type:cardstack
+card
+stack
+@label:card stack
+form]subform
+@tag:form]subform
+cardreference
+@type:cardreference
+sketches
+@tag:sketches
+sketch
+@label:sketch
+sketch_cell
+@tag:sketch_cell
+@label:sketch, cell
+image
+@tag:image
+@type:image
+@label:image
+graphics
+@tag:graphics
+@label:graphics
+@type:graphics
+toolbaritem
+@type:toolbaritem
+@tag:materials
+@label:materials
+imageicon
+@tag:imageicon
+textlabeltitle
+@tag:textlabeltitle
+subformoverview
+@tag:subformoverview
+1a
+@label:image 1a
+@label:text label 1a
+@label:form 1a
+materialsoverview
+@tag:materialsoverview
+overview
+@label:materials overview
+tablematerialsselection
+@tag:tablematerialsselection
+@type:table
+@label:table
+materialsselection
+@tag:materialsselection
+@label:material selection
+materialselectionwidget
+@tag:materialselectionwidget
+widget
+@label:material selection widget
+selectioninputmaterial
+@tag:selectioninputmaterial
+selectionform
+@type:selectionform
+@label:selection input
+matselectionchoice
+@tag:matselectionchoice
+@label:material selection form
+combobox
+@tag:combobox
+comboboxwidget
+@type:comboboxwidget
+combo
+box
+@label:combo box
+assign
+@label:assign material
+@tag:button
+comboboxmaterial
+@tag:comboboxmaterial
+@type:toolbar
+additem
+@tag:additem
+edititem
+@tag:edititem
+thermodynamiccondition
+@tag:thermodynamiccondition
+thermodynamic
+conditions
+@label:thermodynamic conditions
+textlabelpressure
+@tag:textlabelpressure
+inputfieldpressure
+@tag:inputfieldpressure
+textlabeltemperature
+@tag:textlabeltemperature
+inputfieldtemperature
+@tag:inputfieldtemperature
+@label:input field 1a
+unitpressure
+@tag:unitpressure
+unittemperature
+@tag:unittemperature
+@label:unit 1a
+materialpropertiescommon
+@tag:materialpropertiescommon
+spacer
+@tag:spacer
+filler
+@type:filler
+@label:spacer
+materialpropertiescontent
+@tag:materialpropertiescontent
+materialpropertiestocreate
+@tag:materialpropertiestocreate
+@label:create material
+buttonform
+@tag:buttonform
+buttons
+@label:buttons
+createbutton
+@tag:createbutton
+canclebutton
+@tag:canclebutton
+@label:button 1a
+materialpropertiestochange
+@tag:materialpropertiestochange
+edit
+@label:edit material
+updatebutton
+@tag:updatebutton
+isotropicproperties
+@tag:isotropicproperties
+isotropic
+@label:isotropic properties
+@tag:density
+@label:density
+arrayinput
+@tag:arrayinput
+vectorinput
+@type:vectorinput
+@label:array input
+elasticitymatrix
+@tag:elasticitymatrix
+@label:elasticity matrix
+thermalcoefficient
+@tag:thermalcoefficient
+@label:thermal expansion coefficient
+heatcapacity
+@tag:heatcapacity
+@label:heat capacity
+thermalconductivity
+@tag:thermalconductivity
+@label:thermal conductivity
+transverselyisotropicproperties
+@tag:transverselyisotropicproperties
+transversely
+@label:transversely isotropic properties
+orthotropicproperties
+@tag:orthotropicproperties
+orthotropic
+@label:orthotropic properties
+homogenizedmaterialproperties
+@tag:homogenizedmaterialproperties
+@label:compute homogenized material properties
+checkbox
+@tag:checkbox
+checkboxwidget
+@type:checkboxwidget
+@label:check box
+resultsdensity
+@tag:resultsdensity
+@label:result, density
+textlabeldensity
+@tag:textlabeldensity
+datadisplaydensity
+@tag:datadisplaydensity
+datadisplaywidget
+@type:datadisplaywidget
+data
+display
+@label:data display
+resultsheatcapacity
+@tag:resultsheatcapacity
+@label:result, heat capacity
+textlabelheatcapacity
+@tag:textlabelheatcapacity
+resultselasticitymatrix
+@tag:resultselasticitymatrix
+@label:result, elasticity matrix
+datadisplayd
+@tag:datadisplayd
+@label:data display 1a
+1b
+@label:data display 1b
+1c
+@label:data display 1c
+@label:data display 1d
+datadisplaykd
+@tag:datadisplaykd
+1e
+@label:data display 1e
+1f
+@label:data display 1f
+1g
+@label:data display 1g
+1h
+@label:data display 1h
+1i
+@label:data display 1i
+1j
+@label:data display 1j
+1k
+@label:data display 1k
+1l
+@label:data display 1l
+1m
+@label:data display 1m
+1n
+@label:data display 1n
+1o
+@label:data display 1o
+1p
+@label:data display 1p
+1q
+@label:data display 1q
+1r
+@label:data display 1r
+1s
+@label:data display 1s
+1t
+@label:data display 1t
+1u
+@label:data display 1u
+1v
+@label:data display 1v
+1w
+@label:data display 1w
+1x
+@label:data display 1x
+resultsthermalcoefficient
+@tag:resultsthermalcoefficient
+@label:result, thermal expansion coefficient
+datadisplayalpha
+@tag:datadisplayalpha
+resultsthermalconductivity
+@tag:resultsthermalconductivity
+@label:result, thermal conductivity
+datadisplayk
+@tag:datadisplayk
+titlemechanical
+@tag:titlemechanical
+mechanical
+@label:mechanical properties
+titlethermal
+@tag:titlethermal
+@label:thermal properties
+simulationinformation
+@tag:simulationinformation
+@label:information
+textlabeltime
+@tag:textlabeltime
+datadisplaytime
+@tag:datadisplaytime
+textlabelmemory
+@tag:textlabelmemory
+textlabelmemoryvalue
+@tag:textlabelmemoryvalue
+@label:text label 1b
+infocard
+@tag:infocard
+informationcards
+@type:informationcards
+@label:information card stack
+geometryupdated
+@tag:geometryupdated
+@label:geometry information
+geometrynotupdated
+@tag:geometrynotupdated
+meshupdated
+@tag:meshupdated
+@label:mesh information
+meshnotupdated
+@tag:meshnotupdated
+materialupdated
+@tag:materialupdated
+@label:material information
+materialnotupdated
+@tag:materialnotupdated
+shortcuts
+@tag:shortcuts
+shortcutdatafield
+@type:shortcutdatafield
+@label:shortcuts
+@type:boundary
+@label:boundary system
+vectorbase
+@type:vectorbase
+base
+@label:base vector system
+cc_cs
+@tag:cc_cs
+@label:curvilinear system
+load
+cpgrp
+@tag:cpgrp
+globaldefinitions
+@type:globaldefinitions
+groups
+@label:load groups for cell periodicity
+res
+libres
+soldata
+applicationform
+@type:applicationform
+@label:simulation information

@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/Verification_Examples/coaxial_cable_transient.mph",
+  "source_size": 4006771,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.142",
+  "total_files_in_archive": 18
+}

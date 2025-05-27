@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/Filters/waveguide_filter_optimization_polynomial.mph",
+  "source_size": 1662116,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 26
+}

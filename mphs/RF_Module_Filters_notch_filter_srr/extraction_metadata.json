@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Filters/notch_filter_srr.mph",
+  "source_size": 42141,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 6
+}

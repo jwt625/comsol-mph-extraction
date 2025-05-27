@@ -1,0 +1,400 @@
+piezoceramic
+tube
+model
+performs
+static
+2d
+axisymmetric
+analysis
+piezoelectric
+actuator
+radially
+polarized
+simulated
+with
+two
+sets
+boundary
+conditions
+first
+case
+illustrates
+inverse
+effect
+second
+shows
+direct
+based
+paper
+peelamedu
+others
+piezoceramic_tube
+mph
+param
+parameters
+default
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+axi
+@tag:axi
+axialsymmetrysolid
+@type:axialsymmetrysolid
+axial
+symmetry
+@label:axial symmetry
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+pzm
+@tag:pzm
+piezoelectricmaterialmodel
+@type:piezoelectricmaterialmodel
+@label:piezoelectric material
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+load
+@label:boundary load
+roll
+@tag:roll
+roller
+@type:roller
+@label:roller
+es
+@tag:es
+electrostatics
+@type:electrostatics
+@label:electrostatics
+electricpotential
+ccn
+@tag:ccn
+chargeconservation
+@type:chargeconservation
+charge
+conservation
+@label:charge conservation
+axialsymmetry
+@type:axialsymmetry
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+@label:zero charge
+ccnp
+@tag:ccnp
+chargeconservationpiezo
+@type:chargeconservationpiezo
+@label:charge conservation, piezoelectric
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+pot
+@tag:pot
+@type:electricpotential
+electric
+potential
+@label:electric potential
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pze
+@tag:pze
+piezoelectriceffect
+@type:piezoelectriceffect
+piezoelectricity
+@label:piezoelectricity
+mat
+@tag:mat
+common
+@type:common
+lead
+zirconate
+titanate
+pzt-5h
+@label:lead zirconate titanate (pzt-5h
+straincharge
+strain-charge
+stresscharge
+stress-charge
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_v
+@tag:comp1_v
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+dset1solidrev
+@tag:dset1solidrev
+revolve2d
+@type:revolve2d
+revolution
+@label:revolution 2d
+rev
+@tag:rev
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+line
+@label:cut line 2d
+dset2solidrev
+@tag:dset2solidrev
+2a
+@label:revolution 2d 2a
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+radial
+@label:radial displacement (direct effect
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+plotgroup3d
+@type:plotgroup3d
+stress
+@label:stress, 3d (direct effect
+@label:electric potential (direct effect
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:electric potential, 3d (direct effect
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+norm
+@label:electric field norm
+plotgroup1d
+@type:plotgroup1d
+@label:radial displacement, cut (direct effect
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+voltage
+@label:voltage, cut (direct effect
+@label:radial displacement (inverse effect
+@label:stress, 3d (inverse effect
+@label:electric potential (inverse effect
+@label:electric potential, 3d (inverse effect
+@label:radial displacement, cut (inverse effect
+@label:voltage, cut (inverse effect
+geommanagernative
+hist
+@geom:geom
+@physics:solid
+@physics:es
+@multiphysics
+@multiphysics:pze
+@study:std
+@study:stat
+@geom:r
+@material:mat
+@material:materialmodel
+@material:StrainCharge
+@material:StressCharge
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@dataset:dset1solidrev
+@result:str
+@result:selection
+@result:col
+@result:filt
+@dataset:rev
+@result:vol
+@dataset:cln
+@result:lngr
+@dataset:dset2solidrev
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+comp1_zx_sys
+@tag:comp1_zx_sys
+vectorbase
+@type:vectorbase
+zx-plane
+@label:material zx-plane system
+comp1_xz_sys
+@tag:comp1_xz_sys
+xz-plane
+@label:material xz-plane system
+soldata

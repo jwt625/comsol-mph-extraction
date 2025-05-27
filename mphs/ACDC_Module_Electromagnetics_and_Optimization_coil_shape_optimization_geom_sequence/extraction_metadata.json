@@ -1,0 +1,13 @@
+{
+  "source_file": "ACDC_Module/Electromagnetics_and_Optimization/coil_shape_optimization_geom_sequence.mph",
+  "source_size": 385730,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310209.737",
+  "total_files_in_archive": 27
+}

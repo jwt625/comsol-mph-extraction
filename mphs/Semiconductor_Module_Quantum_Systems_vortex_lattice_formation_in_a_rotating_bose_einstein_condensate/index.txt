@@ -1,0 +1,535 @@
+vortex
+lattice
+formation
+rotating
+bose–einstein
+condensate
+tutorial
+model
+solves
+gross–pitaevskii
+equation
+bound
+harmonic
+trap
+essentially
+nonlinear
+single-particle
+schrödinger
+with
+interparticle
+interaction
+represented
+potential-energy
+contribution
+proportional
+local
+particle
+density
+time
+evolution
+frame
+phenomenological
+damping
+configured
+built-in
+features
+physics
+interface
+nucleation
+vortices
+seen
+starting
+periphery
+subsequently
+system
+period
+spectacular
+dynamical
+instability
+settling
+down
+low-energy
+state
+optimization
+module
+used
+parameter
+estimation
+numerical
+results
+scales
+initial
+oscillation
+eventual
+collapse
+ellipticity
+agree
+simulation
+experimental
+data
+published
+madison
+others
+vortex_lattice_formation_in_a_rotating_bose_einstein_condensate
+mph
+param
+parameters
+scattering
+length
+tau
+ramp
+duration
+epst
+wz
+longitudinal
+frequency
+wx
+transverse
+squared
+omega
+stirring
+rztf
+size
+t-f
+kt
+thermal
+energy
+t_damp
+scale
+rxfit
+first
+major/minor
+axis
+fit
+rho0fit
+peak
+default
+par
+schr
+@tag:schr
+schrodingerequation
+@type:schrodingerequation
+schr&#xf6;dinger
+@label:schr&#xf6;dinger equation
+dimensionless
+meff
+@tag:meff
+effectivemass
+@type:effectivemass
+atomic
+mass
+@label:atomic mass
+ve
+@tag:ve
+electronpotentialenergy
+@type:electronpotentialenergy
+potential
+@label:trap potential energy
+zflx
+@tag:zflx
+zeroflux
+@type:zeroflux
+zero
+flux
+@label:zero flux
+init
+@tag:init
+@type:init
+values
+@label:initial values
+optical
+@label:optical potential energy
+@label:interaction energy
+ge
+@tag:ge
+globalequations
+@type:globalequations
+global
+equations
+normalization
+stationary
+study
+@label:global equations - normalization for stationary study
+rotf
+@tag:rotf
+rotatingframeschrod
+@type:rotatingframeschrod
+@label:rotating frame
+diss
+@tag:diss
+dissipationschrod
+@type:dissipationschrod
+dissipation
+@label:dissipation
+chemical
+@label:chemical potential
+@label:global equations
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+step
+@tag:step
+@type:step
+@label:step
+var
+variables
+fit_fn
+function
+based
+profile
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+conpar
+ryfit
+thetafit
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+se
+@tag:se
+sizeexpression
+@type:sizeexpression
+expression
+@label:size expression
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+eigenvalue
+condition
+eigv
+@tag:eigv
+@type:eigenvalue
+@label:eigenvalue
+stat
+@tag:stat
+@type:stationary
+@label:stationary
+transient
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+@tag:param
+opt
+@tag:opt
+@type:optimization
+@label:optimization
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_psi
+@tag:comp1_psi
+field
+@type:field
+wave
+psi
+@label:wave function
+@tag:e
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+comp1_ode
+@tag:comp1_ode
+@type:state
+ode
+@tag:s
+@label:stationary solver
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:conpar
+controlstate
+@type:controlstate
+@label:first major/minor axis to fit
+second
+@label:second major/minor axis to fit
+tilt
+angle
+@label:tilt angle to fit
+@label:peak density to fit
+@tag:o
+@label:optimization solver
+stationaryattrib
+@type:stationaryattrib
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+index
+@label:index
+@tag:var
+globalvariable
+@type:globalvariable
+variable
+probe
+lz
+@label:global variable probe 1 - lz
+result
+dset
+@tag:dset
+@type:solution
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+line
+@label:cut line 2d
+@label:probe solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+objective
+@label:objective probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+compare
+approx
+@label:stationary profile - compare with t-f approx
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:numerical solution
+@label:t-f approx
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+real
+part
+@label:real part
+imaginary
+@label:imaginary part
+hght
+@tag:hght
+height
+@type:height
+@label:height expression
+probability
+@label:probability density
+@label:surface
+@label:potential energy
+effective
+@label:effective mass
+angular
+momentum
+@label:ellipticity parameter and angular momentum
+glob
+@tag:glob
+@type:global
+@label:global
+vs
+@label:probability density vs. time
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+check
+@label:check the fit
+con
+@tag:con
+contour
+@type:contour
+@label:contour 1 - data
+@label:contour 2 - fit
+geommanagernative
+hist
+@study:std
+@study:eigv
+@physics:schr
+@geom:geom
+@func
+@func:step
+@geom:c
+@mesh:mesh
+@mesh:se
+@mesh:ftri
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@nodeGroup:grp
+@study:stat
+@sol:s
+@sol:p
+@sol:fc
+@dataset:cln
+@result:pg
+@result:lngr
+@study:time
+@sol:t
+@probe
+@probe:var
+@result:surf
+@result:hght
+@export
+@export:anim
+@param:group
+@param:par
+@cpl
+@cpl:aveop
+@cpl:selection
+@expr:var
+@study:param
+@study:opt
+@sol:o
+@batch:p
+@batch:so
+@result:glob
+@result:ann
+@result:con
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+grp
+@tag:grp
+@type:physics
+@label:stationary study
+@label:transient study
+res
+soldata

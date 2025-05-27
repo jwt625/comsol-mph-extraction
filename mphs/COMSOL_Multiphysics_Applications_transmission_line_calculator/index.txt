@@ -1,0 +1,1048 @@
+transmission
+line
+parameter
+calculator
+app
+demonstrates
+following
+creating
+apps
+small
+screens
+smartphones
+user-interface
+navigation
+with
+top
+menu
+typically
+used
+websites
+dynamically
+hiding
+forms
+using
+card
+stacks
+minimize
+space
+required
+changing
+appearance
+different
+background
+colors
+theory
+cornerstone
+teaching
+rf
+microwave
+engineering
+lines
+guide
+waves
+electromagnetic
+fields
+radio
+frequencies
+exist
+variety
+adapted
+easy
+fabrication
+employment
+printed
+circuit
+board
+pcb
+designs
+often
+carry
+information
+minimal
+loss
+distortion
+within
+device
+devices
+propagate
+along
+transverse
+tem
+computes
+resistance
+inductance
+conductance
+capacitance
+characteristic
+impedance
+propagation
+constant
+common
+types
+coaxial
+twin
+lead
+microstrip
+coplanar
+waveguide
+cpw
+model
+transmission_line_calculator
+mph
+param
+parameters
+frq_coax
+frequency
+d_s_coax
+screen
+thickness
+sigma_d_coax
+conductivity
+dielectric
+w_coax
+angular
+lambda_coax
+wavelength
+r1_twin
+wire
+radius
+t_ribbon_twin
+ribbon
+sigma_c_twin
+conductors
+d_c_twin
+conductor
+distance
+frq_ms
+h_ms
+height
+sigma_d_ms
+delta_ms
+skin
+depth
+d_c_ms
+bad_aspect_ratio_ms
+aspect
+ratio
+evaluation
+g_cpw
+gap
+ground
+width
+t_bp_cpw
+metallic
+back
+plane
+sigma_c_cpw
+cpw_width
+domain
+epsilonr_bp_cpw
+relative
+permittivity
+d_c_cpw
+bad_aspect_ratio_cpw
+fr_ms
+validity
+reasonable
+range
+default
+ec
+@tag:ec
+conductivemedia
+@type:conductivemedia
+electric
+currents
+@label:electric currents
+electricpotential
+cucn
+@tag:cucn
+currentconservation
+@type:currentconservation
+current
+conservation
+@label:current conservation
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:electric insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+gnd
+@tag:gnd
+@type:ground
+@label:ground
+pot
+@tag:pot
+@type:electricpotential
+potential
+@label:electric potential
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+als
+@tag:als
+ampereslawsolid
+@type:ampereslawsolid
+amp&#xe8;re's
+law
+solids
+@label:amp&#xe8;re's law in solids
+ecd
+@tag:ecd
+externalcurrentdensity
+@type:externalcurrentdensity
+external
+density
+@label:external current density
+pmc
+@tag:pmc
+perfectmagneticconductor
+@type:perfectmagneticconductor
+perfect
+@label:perfect magnetic conductor
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+uni
+@tag:uni
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+explicit
+selection
+@label:explicit selection
+air
+@label:air
+track
+@label:track
+left
+gp
+@label:left gp
+right
+@label:right gp
+@label:dielectric
+backplane/bottom
+@label:backplane/bottom domain
+var
+variables
+r_coax
+distributed
+g_coax
+shunt
+r_twin
+g_twin
+r_ms
+g_ms
+r_cpw
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+geom1_c1_dom
+@tag:geom1_c1_dom
+fromsequence
+@type:fromsequence
+geom1_c4_dom
+@tag:geom1_c4_dom
+geom2_c3_dom
+@tag:geom2_c3_dom
+geom2_c4_dom
+@tag:geom2_c4_dom
+geom2_sel
+@tag:geom2_sel
+geom3_r3_dom
+@tag:geom3_r3_dom
+geom3_r4_dom
+@tag:geom3_r4_dom
+geom3_sel
+@tag:geom3_sel
+geom4_r2_dom
+@tag:geom4_r2_dom
+geom4_r3_dom
+@tag:geom4_r3_dom
+geom4_r4_dom
+@tag:geom4_r4_dom
+geom4_r6_dom
+@tag:geom4_r6_dom
+geom4_sel
+@tag:geom4_sel
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+hide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+@type:size
+info
+@tag:info
+meshinformation
+@type:meshinformation
+@label:information
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+field
+@type:field
+vector
+@label:magnetic vector potential
+comp1_v
+@tag:comp1_v
+comp2_a
+@tag:comp2_a
+comp2_v
+@tag:comp2_v
+comp3_a
+@tag:comp3_a
+comp3_v
+@tag:comp3_v
+comp4_a
+@tag:comp4_a
+comp4_v
+@tag:comp4_v
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+result
+results
+dset
+@tag:dset
+@type:solution
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+2d
+@label:cut line 2d
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:coaxial resistance
+@label:coaxial inductance
+@label:coaxial conductance
+@label:coaxial capacitance
+@label:coaxial characteristic impedance
+@label:coaxial propagation constant
+@label:twin lead resistance
+@label:twin lead inductance
+@label:twin lead conductance
+@label:twin lead capacitance
+@label:twin lead characteristic impedance
+@label:twin lead propagation constant
+@label:microstrip resistance
+@label:microstrip inductance
+@label:microstrip conductance
+@label:microstrip capacitance
+@label:microstrip characteristic impedance
+@label:microstrip propagation constant
+@label:coplanar waveguide resistance
+@label:coplanar waveguide inductance
+@label:coplanar waveguide conductance
+@label:coplanar waveguide capacitance
+@label:coplanar waveguide characteristic impedance
+@label:coplanar waveguide propagation constant
+tbl
+@tag:tbl
+table
+@type:table
+@label:coaxial
+@label:twin lead
+@label:microstrip
+@label:coplanar waveguide
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@type:selection
+@label:selection
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+rpt
+@tag:rpt
+report
+@type:report
+tp
+@tag:tp
+titlepage
+@type:titlepage
+@label:coaxial line
+toc
+@tag:toc
+tableofcontents
+@type:tableofcontents
+contents
+@label:table of contents
+sec
+@tag:sec
+section
+@type:section
+software
+@label:software information
+root
+@tag:root
+@type:model
+@label:root
+@tag:std
+@type:study
+@label:study
+global
+definitions
+@label:global definitions
+@tag:param
+@type:parameter
+@label:parameters
+@label:results
+tables
+@label:tables
+mtbl
+@tag:mtbl
+zc
+gamma
+@label:r, l, g, c, zc, gamma
+plots
+@label:plots
+plotgroup
+@type:plotgroup
+plot
+group
+@label:plot group
+@tag:mesh
+@type:mesh
+@label:mesh
+geommanagernative
+hist
+@geom:geom
+@expr:var
+@geom:c
+@geom:dif
+@geom:input
+@geom:selection
+@cpl
+@cpl:intop
+@cpl:selection
+@physics:ec
+@physics:mf
+@mesh:mesh
+@mesh:size
+@mesh:bl
+@mesh:selection
+@mesh:blp
+@geom:r
+@geom:uni
+@geom:sel
+@view:view
+@view:hideObjects
+@view:hide
+@study:std
+@study:stat
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@dataset:dset
+@dataset:cln
+@numerical
+@numerical:gev
+@table:tbl
+@result:pg
+@result:con
+@result:sel
+@result:selection
+@result:str
+@result:surf
+@view:axis
+@report:rpt
+@report:tp
+@report:sec
+@report:std
+@report:param
+@report:mtbl
+@report:mesh
+@report:pg
+@applicationNodeList:appMainWindow
+@applicationNodeList:appForm
+@applicationNodeList:frontPage
+@applicationNodeList:frontPageButtons
+@applicationNodeList:computedParameters
+@applicationNodeList:coaxial
+@applicationNodeList:twinlead
+@applicationNodeList:microstrip
+@applicationNodeList:coplanar
+@applicationNodeList:appFormObject
+@applicationNodeList:coaxialButton
+@applicationNodeList:twinLeadButton
+@applicationNodeList:microstripButton
+@applicationNodeList:coplanarButton
+@applicationNodeList:textlabel
+@applicationNodeList:topMenu
+@applicationNodeList:subMenu
+@applicationNodeList:geometry
+@applicationNodeList:physics
+@applicationNodeList:simulation
+@applicationNodeList:results
+@applicationNodeList:geometryLine
+@applicationNodeList:actionMenuGeometry
+@applicationNodeList:update
+@applicationNodeList:notations
+@applicationNodeList:reset
+@applicationNodeList:actionMenuPhysics
+@applicationNodeList:actionMenuSimulation
+@applicationNodeList:compute
+@applicationNodeList:actionMenuResults
+@applicationNodeList:report
+@applicationNodeList:email
+@applicationNodeList:saveAs
+@applicationNodeList:help
+@applicationNodeList:inputGeometryCoaxial
+@applicationNodeList:inputfield
+@applicationNodeList:inputGeometryTwinlead
+@applicationNodeList:inputGeometryMicrostrip
+@applicationNodeList:inputGeometryCoplanar
+@applicationNodeList:checkbox
+@applicationNodeList:inputPhysicsCoaxial
+@applicationNodeList:inputPhysicsTwinlead
+@applicationNodeList:inputPhysicsMicrostrip
+@applicationNodeList:inputPhysicsCoplanar
+@applicationNodeList:notationCoaxial
+@applicationNodeList:image
+@applicationNodeList:notationTwinlead
+@applicationNodeList:notationMicrostrip
+@applicationNodeList:notationCoplanar
+@applicationNodeList:simulationInfo
+@applicationNodeList:simulationInfoCoaxial
+@applicationNodeList:infocard
+@applicationNodeList:simulationInfoTwinlead
+@applicationNodeList:simulationInfoMicrostrip
+@applicationNodeList:simulationInfoCoplanar
+@applicationNodeList:visualizationGraphics
+@applicationNodeList:graphicsGeometrySolution
+@GeomList:geom
+@applicationNodeList:emailDialog
+@applicationNodeList:attachmentText
+@applicationNodeList:text
+@applicationNodeList:cancel
+@applicationNodeList:send
+@applicationNodeList:emailErrorDialog
+@applicationNodeList:close
+mainwindow
+@tag:mainwindow
+singlewindow
+@type:singlewindow
+main
+window
+@label:main window
+@tag:menu
+mainmenu
+@type:mainmenu
+bar
+@label:menu bar
+toolbar
+@tag:toolbar
+maintoolbar
+@type:maintoolbar
+@label:toolbar
+filemenu
+@tag:filemenu
+@type:filemenu
+file
+@label:file menu
+mainform
+@tag:mainform
+@type:mainform
+@label:main form
+images
+@tag:images
+imagelibrary
+@type:imagelibrary
+@label:images
+sounds
+@tag:sounds
+soundlibrary
+@type:soundlibrary
+@label:sounds
+files
+@tag:files
+filelibrary
+@type:filelibrary
+@label:files
+@tag:field
+booleandatafield
+@type:booleandatafield
+boolean
+@label:boolean
+stringdatafield
+@type:stringdatafield
+string
+@label:string
+highlighttopmenuitem
+@tag:highlighttopmenuitem
+codeeditor
+@type:codeeditor
+@label:highlighttopmenuitem
+highlightsubmenuitem
+@tag:highlightsubmenuitem
+@label:highlightsubmenuitem
+showinputoutputitem
+@tag:showinputoutputitem
+@label:showinputoutputitem
+buildgeometry
+@tag:buildgeometry
+@label:buildgeometry
+checkbadaspectratio
+@tag:checkbadaspectratio
+@label:checkbadaspectratio
+checkquasistaticapproximation
+@tag:checkquasistaticapproximation
+@label:checkquasistaticapproximation
+checkfrequencyrange
+@tag:checkfrequencyrange
+@label:checkfrequencyrange
+updatecpwbackplane
+@tag:updatecpwbackplane
+@label:updatecpwbackplane
+setinputchanged
+@tag:setinputchanged
+@label:setinputchanged
+shownotations
+@tag:shownotations
+@label:shownotations
+resetparameters
+@tag:resetparameters
+@label:resetparameters
+computesolution
+@tag:computesolution
+@label:computesolution
+plotsolution
+@tag:plotsolution
+@label:plotsolution
+createreport
+@tag:createreport
+@label:createreport
+savereport
+@tag:savereport
+@label:savereport
+checksolutionstate
+@tag:checksolutionstate
+@label:checksolutionstate
+openemaildialog
+@tag:openemaildialog
+@label:openemaildialog
+sendemail
+@tag:sendemail
+@label:sendemail
+frontpage
+@tag:frontpage
+@type:form
+front
+page
+@label:front page
+frontpagebuttons
+@tag:frontpagebuttons
+localform
+@type:localform
+1b
+@label:form 1b
+coaxialbutton
+@tag:coaxialbutton
+button
+@type:button
+@label:button
+twinleadbutton
+@tag:twinleadbutton
+1a
+@label:button 1a
+microstripbutton
+@tag:microstripbutton
+@label:button 1b
+coplanarbutton
+@tag:coplanarbutton
+1c
+@label:button 1c
+textlabel
+@tag:textlabel
+label
+@type:label
+text
+@label:text label
+subform
+@tag:subform
+formreference
+@type:formreference
+@label:form
+@tag:main
+actionmenu
+@tag:actionmenu
+cardstack
+@type:cardstack
+stack
+@label:card stack
+form]subform
+@tag:form]subform
+cardreference
+@type:cardreference
+@tag:line
+divider
+@type:divider
+@label:line
+inputoutput
+@tag:inputoutput
+@label:card stack 1a
+visualization
+@tag:visualization
+@label:card stack 1b
+topmenu
+@tag:topmenu
+@label:top menu
+@tag:coaxial
+twinlead
+@tag:twinlead
+@tag:microstrip
+@tag:coplanar
+submenu
+@tag:submenu
+sub
+@label:sub menu
+@tag:geometry
+physics
+@tag:physics
+simulation
+@tag:simulation
+@tag:results
+geometryline
+@tag:geometryline
+physicsline
+@tag:physicsline
+@label:line 1a
+simulationline
+@tag:simulationline
+@label:line 1b
+resultsline
+@tag:resultsline
+@label:line 1c
+actionmenugeometry
+@tag:actionmenugeometry
+action
+@label:action menu for geometry
+update
+@tag:update
+notations
+@tag:notations
+reset
+@tag:reset
+actionmenuphysics
+@tag:actionmenuphysics
+@label:action menu for physics
+actionmenusimulation
+@tag:actionmenusimulation
+@label:action menu for simulation
+compute
+@tag:compute
+actionmenuresults
+@tag:actionmenuresults
+@label:action menu for results
+@tag:report
+email
+@tag:email
+saveas
+@tag:saveas
+help
+@tag:help
+inputgeometrycoaxial
+@tag:inputgeometrycoaxial
+input
+@label:geometry input for coaxial line
+inputfield
+@tag:inputfield
+textfieldwidget
+@type:textfieldwidget
+@label:input field
+unit
+@tag:unit
+unitlabel
+@type:unitlabel
+@label:unit
+inputgeometrytwinlead
+@tag:inputgeometrytwinlead
+twin-lead
+@label:geometry input for twin-lead
+inputgeometrymicrostrip
+@tag:inputgeometrymicrostrip
+@label:geometry input for microstrip
+inputgeometrycoplanar
+@tag:inputgeometrycoplanar
+@label:geometry input for coplanar waveguide
+checkbox
+@tag:checkbox
+checkboxwidget
+@type:checkboxwidget
+check
+box
+@label:check box
+inputphysicscoaxial
+@tag:inputphysicscoaxial
+@label:physics input for coaxial line
+inputphysicstwinlead
+@tag:inputphysicstwinlead
+@label:physics input for twin-lead
+inputphysicsmicrostrip
+@tag:inputphysicsmicrostrip
+@label:physics input for microstrip
+inputphysicscoplanar
+@tag:inputphysicscoplanar
+@label:physics input for coplanar waveguide
+notationcoaxial
+@tag:notationcoaxial
+notation
+@label:notation coaxial line
+image
+@tag:image
+@type:image
+@label:image
+notationtwinlead
+@tag:notationtwinlead
+@label:notation twin-lead
+notationmicrostrip
+@tag:notationmicrostrip
+@label:notation microstrip
+notationcoplanar
+@tag:notationcoplanar
+@label:notation coplanar
+simulationinfo
+@tag:simulationinfo
+@label:simulation information
+datadisplay
+@tag:datadisplay
+datadisplaywidget
+@type:datadisplaywidget
+data
+display
+@label:data display
+solutioninformation
+@tag:solutioninformation
+simulationinfocoaxial
+@tag:simulationinfocoaxial
+@label:simulation information coaxial line
+infocard
+@tag:infocard
+informationcards
+@type:informationcards
+@label:information card stack
+simulationinfotwinlead
+@tag:simulationinfotwinlead
+@label:simulation information twin-lead
+simulationinfomicrostrip
+@tag:simulationinfomicrostrip
+@label:simulation information microstrip
+simulationinfocoplanar
+@tag:simulationinfocoplanar
+@label:simulation information coplanar waveguide
+visualizationgraphics
+@tag:visualizationgraphics
+graphics
+@label:geometry and solution graphics
+graphicsgeometrysolution
+@tag:graphicsgeometrysolution
+@type:graphics
+@label:graphics
+computedparameters
+@tag:computedparameters
+computed
+@label:computed parameters
+@label:coaxial results
+@label:twin-lead results
+@label:microstrip results
+@label:coplanar results
+resultscardstack
+@tag:resultscardstack
+emaildialog
+@tag:emaildialog
+send
+@label:send email
+attachmenttext
+@tag:attachmenttext
+4a
+@label:text label 4a
+@tag:text
+textarea
+@type:textarea
+@label:text
+cancel
+@tag:cancel
+@tag:send
+emailerrordialog
+@tag:emailerrordialog
+error
+@label:email error
+close
+@tag:close
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+soldata
+res
+libres
+grp
+@tag:grp
+applicationform
+@type:applicationform
+@label:action menu
+@label:geometry input
+@label:physics input
+@label:notations

@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Nonlinear_Acoustics/nonlinear_cylindrical_wave.mph",
+  "source_size": 413665,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.43",
+  "total_files_in_archive": 20
+}

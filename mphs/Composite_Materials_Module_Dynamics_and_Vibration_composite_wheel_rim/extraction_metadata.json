@@ -1,0 +1,14 @@
+{
+  "source_file": "Composite_Materials_Module/Dynamics_and_Vibration/composite_wheel_rim.mph",
+  "source_size": 8861085,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310300.739",
+  "total_files_in_archive": 32
+}

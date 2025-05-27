@@ -1,0 +1,13 @@
+{
+  "source_file": "Acoustics_Module/Building_and_Room_Acoustics/small_concert_hall_geom_sequence.mph",
+  "source_size": 724643,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310230.428",
+  "total_files_in_archive": 16
+}

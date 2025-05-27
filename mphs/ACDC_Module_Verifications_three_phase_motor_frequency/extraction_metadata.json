@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Verifications/three_phase_motor_frequency.mph",
+  "source_size": 1013483,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.739",
+  "total_files_in_archive": 31
+}

@@ -1,0 +1,779 @@
+reciprocating
+engine
+with
+hydrodynamic
+bearings
+single
+cylinder
+supported
+studied
+starting
+torque
+applied
+bring
+required
+rpm
+loading
+switched
+once
+picks
+up
+speed
+start-up
+operates
+own
+driven
+pressure
+assembly
+modeled
+using
+multibody
+dynamics
+interface
+module
+bearing
+rotordynamics
+solid–bearing
+coupling
+multiphysics
+used
+combine
+two
+interfaces
+results
+include
+stress
+crankshaft
+foundation
+variation
+generated
+power
+brake
+horse
+orbit
+shaft
+model
+single_cylinder_reciprocating_engine
+mph
+param
+parameters
+clearance
+stiffness
+reduction
+end
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+@label:multibody dynamics
+displacement
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+rigid
+@label:rigid material: cylinder
+fix
+@tag:fix
+fixedconstraint
+@type:fixedconstraint
+fixed
+constraint
+@label:fixed constraint
+piston
+@label:rigid material: piston
+connecting
+rod
+@label:rigid material: connecting rod
+att
+@tag:att
+attachment
+@type:attachment
+journal
+@label:attachment: journal
+@label:attachment: foundation
+hgj
+@tag:hgj
+hingejoint
+@type:hingejoint
+hinge
+joint
+@label:hinge joint
+je
+@tag:je
+jointelasticity
+@type:jointelasticity
+elasticity
+@label:joint elasticity
+crankpin
+@label:attachment: crankpin
+prj
+@tag:prj
+prismaticjoint
+@type:prismaticjoint
+prismatic
+@label:prismatic joint
+@type:fixed
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+boundary
+load
+@label:boundary load
+rig
+@tag:rig
+rigidconnector
+@type:rigidconnector
+connector
+@label:rigid connector
+rm
+@tag:rm
+rigidbodymoment
+@type:rigidbodymoment
+moment
+@label:applied moment
+hdb
+@tag:hdb
+hydrodynamicbearing
+@type:hydrodynamicbearing
+@label:hydrodynamic bearing
+hjb
+@tag:hjb
+hydrodynamicjournalbearing
+@type:hydrodynamicjournalbearing
+@label:hydrodynamic journal bearing
+mfd
+@tag:mfd
+movingfoundation
+@type:movingfoundation
+moving
+@label:moving foundation
+bax
+@tag:bax
+bearingorientation
+@type:bearingorientation
+orientation
+@label:bearing orientation
+bdr
+@tag:bdr
+border
+@type:border
+@label:border
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form assembly
+form_union/assembly
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+geom1_fin_pc2_src
+geom1_fin_pc2_dst
+geom1_fin_pc3_src
+geom1_fin_pc3_dst
+geom1_fin_pc4_src
+geom1_fin_pc4_dst
+geom1_fin_pc5_src
+geom1_fin_pc5_dst
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+step
+@tag:step
+@type:step
+start
+@label:step: loading torque start
+cutoff
+@label:step: starting torque cutoff
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation: pressure
+var
+variables
+theta
+rotation
+output
+bhp
+intop
+@tag:intop
+integration
+@type:integration
+top
+@label:integration over piston top
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:journal
+@label:foundation
+cyl
+@tag:cyl
+@type:cylinder
+@label:piston top
+uni
+@tag:uni
+union
+@type:union
+journals
+@label:journals
+foundations
+@label:foundations
+system
+@label:bearing system
+@label:fixed
+exterior
+edges
+@label:bearing exterior edges
+@label:foundation exterior edges
+@label:bearing system exterior edges
+ap
+identity
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+hide
+physics
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+sbco
+@tag:sbco
+solidbearingcoupling
+@type:solidbearingcoupling
+solid&#x2013;bearing
+@label:solid&#x2013;bearing coupling
+mat
+@tag:mat
+common
+@type:common
+structural
+steel
+@label:structural steel
+enu
+young's
+modulus
+poisson's
+ratio
+@label:interpolation
+murnaghan
+elastoplasticmodel
+elastoplastic
+ludwik
+johnsoncook
+johnson-cook
+swift
+voce
+hockettsherby
+hockett-sherby
+armstrongfrederick
+armstrong-frederick
+norton
+garofalo
+hyperbolic
+sine
+chabocheviscoplasticity
+chaboche
+viscoplasticity
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+@type:size
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_pfilm
+@tag:comp1_pfilm
+field
+@type:field
+pfilm
+@label:pressure
+comp1_u
+@tag:comp1_u
+@label:displacement field
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+state
+@type:state
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+@label:comp1.mbd_jnt_rot
+comp1_mbd_jnt_disp
+@tag:comp1_mbd_jnt_disp
+@label:comp1.mbd_jnt_disp
+comp1_mbd_rig_disp
+@tag:comp1_mbd_rig_disp
+@label:comp1.mbd_rig_disp
+comp1_mbd_rig_rot
+@tag:comp1_mbd_rig_rot
+@label:comp1.mbd_rig_rot
+comp1_sbco1_urc
+@tag:comp1_sbco1_urc
+rotor
+center
+frames
+urc
+@label:material and geometry frames
+comp1_sbco1_thr
+@tag:comp1_sbco1_thr
+axial
+thr
+@label:axial rotation of rotor
+comp1_sbco1_alphar
+@tag:comp1_sbco1_alphar
+tilt
+local
+direction
+alphar
+@label:tilt of rotor about local y direction
+comp1_sbco1_betar
+@tag:comp1_sbco1_betar
+betar
+@label:tilt of rotor about local z direction
+comp1_sbco1_kappayr
+@tag:comp1_sbco1_kappayr
+curvature
+kappayr
+@label:curvature of rotor about local y direction
+comp1_sbco1_kappazr
+@tag:comp1_sbco1_kappazr
+kappazr
+@label:curvature of rotor about local z direction
+comp1_sbco1_ubc
+@tag:comp1_sbco1_ubc
+ubc
+comp1_sbco1_thb
+@tag:comp1_sbco1_thb
+thb
+@label:axial rotation of foundation
+comp1_sbco1_alphab
+@tag:comp1_sbco1_alphab
+alphab
+@label:tilt of foundation about local y direction
+comp1_sbco1_betab
+@tag:comp1_sbco1_betab
+betab
+@label:tilt of foundation about local z direction
+comp1_sbco1_kappayb
+@tag:comp1_sbco1_kappayb
+kappayb
+@label:curvature of foundation about local y direction
+comp1_sbco1_kappazb
+@tag:comp1_sbco1_kappazb
+kappazb
+@label:curvature of foundation about local z direction
+comp1_sbco2_urc
+@tag:comp1_sbco2_urc
+comp1_sbco2_thr
+@tag:comp1_sbco2_thr
+comp1_sbco2_alphar
+@tag:comp1_sbco2_alphar
+comp1_sbco2_betar
+@tag:comp1_sbco2_betar
+comp1_sbco2_kappayr
+@tag:comp1_sbco2_kappayr
+comp1_sbco2_kappazr
+@tag:comp1_sbco2_kappazr
+comp1_sbco2_ubc
+@tag:comp1_sbco2_ubc
+comp1_sbco2_thb
+@tag:comp1_sbco2_thb
+comp1_sbco2_alphab
+@tag:comp1_sbco2_alphab
+comp1_sbco2_betab
+@tag:comp1_sbco2_betab
+comp1_sbco2_kappayb
+@tag:comp1_sbco2_kappayb
+comp1_sbco2_kappazb
+@tag:comp1_sbco2_kappazb
+comp1_mbd_att_disp
+@tag:comp1_mbd_att_disp
+@label:comp1.mbd_att_disp
+comp1_mbd_att_rot
+@tag:comp1_mbd_att_rot
+@label:comp1.mbd_att_rot
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+dset
+@tag:dset
+@type:solution
+1/solution
+@label:study 1/solution 1: cylinder
+without
+@label:study 1/solution 1: engine without cylinder
+@label:study 1/solution 1: bearing
+@label:study 1/solution 1: crankshaft
+@label:study 1/solution 1: foundation
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation: displacement
+fluid
+@label:animation: fluid pressure
+@label:animation: foundation stress
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:displacement
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+velocity
+@label:velocity
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+line
+@label:arrow line
+@label:fluid pressure
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:arrow surface
+loads
+@label:boundary loads
+gray
+surfaces
+@label:gray surfaces
+selection
+@type:selection
+@label:selection
+global
+moments
+@label:global moments
+pttraj
+@tag:pttraj
+pointtrajectories
+@type:pointtrajectories
+@label:applied moment 1 (rigid connector
+@label:applied moment 2 (rigid connector
+@label:crankshaft stress
+@label:foundation stress
+plotgroup1d
+@type:plotgroup1d
+@label:engine speed
+glob
+@tag:glob
+@type:global
+@label:global
+reactions
+@label:bearing reactions and piston load
+@label:crankshaft torque
+@label:power generated
+@label:bhp
+@label:journal 1 orbit
+eccentricity
+@label:journal eccentricity
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:mbd
+@physics:hdb
+@geom:geom
+@geom:imp
+@geom:fin
+@nodeGroup:grp
+@pair:ap
+@selection
+@selection:sel
+@selection:cyl
+@view:view
+@view:hideEntities
+@view:hide
+@selection:uni
+@cpl
+@cpl:intop
+@cpl:selection
+@func
+@func:step
+@func:int
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:func
+@material:ElastoplasticModel
+@material:Ludwik
+@material:Voce
+@material:HockettSherby
+@material:ArmstrongFrederick
+@material:int
+@material:Murnaghan
+@material:JohnsonCook
+@material:Swift
+@material:Norton
+@material:Garofalo
+@material:ChabocheViscoplasticity
+@expr:var
+@multiphysics
+@multiphysics:sbco
+@multiphysics:selection
+@multiphysics:Foundation
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:swe
+@mesh:ftet
+@mesh:size
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_sbco2_thr
+@sol:comp1_sbco1_betar
+@sol:comp1_sbco1_thb
+@sol:comp1_sbco1_kappazr
+@sol:comp1_sbco2_ubc
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_sbco2_kappazb
+@sol:comp1_mbd_att_disp
+@sol:comp1_sbco2_betab
+@sol:comp1_sbco1_urc
+@sol:comp1_sbco2_thb
+@sol:comp1_pfilm
+@sol:comp1_sbco1_betab
+@sol:comp1_mbd_rd_disp
+@sol:comp1_mbd_rig_rot
+@sol:comp1_sbco1_thr
+@sol:comp1_mbd_att_rot
+@sol:comp1_sbco1_kappazb
+@sol:comp1_sbco1_kappayr
+@sol:comp1_sbco2_urc
+@sol:comp1_sbco2_betar
+@sol:comp1_sbco2_kappayr
+@sol:comp1_sbco1_ubc
+@sol:comp1_sbco1_alphar
+@sol:comp1_sbco1_kappayb
+@sol:comp1_sbco2_alphar
+@sol:comp1_sbco2_kappayb
+@sol:comp1_u
+@sol:comp1_sbco1_alphab
+@sol:comp1_mbd_jnt_disp
+@sol:comp1_sbco2_alphab
+@sol:comp1_sbco2_kappazr
+@sol:comp1_mbd_rd_rot
+@sol:comp1_mbd_rig_disp
+@sol:t
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:vol
+@result:arwl
+@result:con
+@dataset:dset
+@dataset:selection
+@result:mtrl
+@result:sel
+@result:selection
+@result:tran
+@result:arws
+@result:col
+@nodeGroup:dset1mbdlgrp
+@result:pttraj
+@result:glob
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+grp
+@tag:grp
+definitions
+@type:definitions
+pairs
+@label:hinge joint pairs
+@type:physics
+joints
+@label:hinge joints
+@label:prismatic joints
+dset1mbdlgrp
+@tag:dset1mbdlgrp
+@type:results
+@label:applied loads
+res
+soldata

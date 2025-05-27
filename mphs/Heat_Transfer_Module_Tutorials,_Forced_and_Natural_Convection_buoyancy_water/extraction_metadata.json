@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Tutorials,_Forced_and_Natural_Convection/buoyancy_water.mph",
+  "source_size": 1678181,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.592",
+  "total_files_in_archive": 27
+}

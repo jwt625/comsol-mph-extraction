@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Antennas/conical_horn_lens_antenna.mph",
+  "source_size": 22658,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 6
+}

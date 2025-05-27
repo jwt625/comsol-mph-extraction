@@ -1,0 +1,11 @@
+{
+  "source_file": "COMSOL_Multiphysics/Multiphysics/busbar_assembly.mph",
+  "source_size": 39420,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310268.959",
+  "total_files_in_archive": 6
+}

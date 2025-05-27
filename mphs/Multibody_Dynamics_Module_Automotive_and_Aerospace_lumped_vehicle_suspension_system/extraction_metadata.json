@@ -1,0 +1,14 @@
+{
+  "source_file": "Multibody_Dynamics_Module/Automotive_and_Aerospace/lumped_vehicle_suspension_system.mph",
+  "source_size": 4138647,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310372.651",
+  "total_files_in_archive": 18
+}

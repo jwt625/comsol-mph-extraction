@@ -1,0 +1,566 @@
+hydrogen
+global
+model
+coupled
+with
+two-term
+boltzmann
+equation
+example
+plasma
+reactor
+moderate
+pressure
+studied
+using
+heavy
+species
+heat
+included
+first
+part
+study
+maxwellian
+electron
+energy
+distribution
+function
+used
+second
+solved
+self-consistently
+approximation
+hydrogen_global_model
+mph
+param
+parameters
+width
+hg
+height
+qs
+mass
+flow
+excitation
+frequency
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+h2=&gt;e+h
+@label:1: e+h2=&gt;e+h
+@label:2: e+h2=&gt;e+h
+@label:3: e+h2=&gt;e+h
+@label:4: e+h2=&gt;e+h
+e+h2=&gt;e+h+h
+@label:5: e+h2=&gt;e+h+h
+@label:6: e+h2=&gt;e+h+h
+@label:7: e+h2=&gt;e+h+h
+@label:8: e+h2=&gt;e+h+h
+@label:9: e+h2=&gt;e+h
+@label:10: e+h2=&gt;e+h
+@label:11: e+h2=&gt;e+h
+@label:12: e+h2=&gt;e+h
+@label:13: e+h2=&gt;e+h
+@label:14: e+h2=&gt;e+h
+@label:15: e+h2=&gt;e+h
+e+h2=&gt;e+h+hn
+@label:16: e+h2=&gt;e+h+hn
+@label:17: e+h2=&gt;e+h+hn
+@label:18: e+h2=&gt;e+h+hn
+@label:19: e+h2=&gt;e+h+h
+@label:20: e+h2=&gt;e+h+h
+e+h2=&gt;2e+h
+@label:21: e+h2=&gt;2e+h
+e+h2=&gt;2e+h+h
+@label:22: e+h2=&gt;2e+h+h
+e+h=&gt;e+h
+@label:23: e+h=&gt;e+h
+e+h=&gt;e+hn
+@label:24: e+h=&gt;e+hn
+@label:25: e+h=&gt;e+hn
+@label:26: e+h=&gt;e+hn
+@label:27: e+h=&gt;e+h
+@label:28: e+h=&gt;e+h
+e+h=&gt;2e+h
+@label:29: e+h=&gt;2e+h
+e+h3+=&gt;3h
+@label:30: e+h3+=&gt;3h
+e+h3+=&gt;h2+hn
+@label:31: e+h3+=&gt;h2+hn
+e+h2+=&gt;h+hn
+@label:32: e+h2+=&gt;h+hn
+@label:33: e+h2+=&gt;h+hn
+e+h+=&gt;hn
+@label:34: e+h+=&gt;hn
+@label:35: e+h+=&gt;hn
+rg
+@tag:rg
+reactiongroup
+@type:reactiongroup
+reaction
+group
+@label:reaction group
+@tag:e
+@type:species
+@label:species: e
+@tag:h
+@label:species: h
+hn
+@tag:hn
+@label:species: hn
+h2_1p
+@tag:h2_1p
+h_1p
+@tag:h_1p
+h3_1p
+@tag:h3_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+h=&gt
+5h
+@label:1: h=&gt;0.5h
+hn2=&gt;h
+@label:2: hn2=&gt;h
+hn3=&gt;h
+@label:3: hn3=&gt;h
+h+=&gt;h
+@label:4: h+=&gt;h
+h2+=&gt;h
+@label:5: h2+=&gt;h
+h3+=&gt;h2+h
+@label:6: h3+=&gt;h2+h
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+plas_eedf_xdim
+extra
+dimension
+@tag:i
+interval
+@type:interval
+@label:interval
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+var
+variables
+lamb_diff
+diffusion
+length
+material
+fixed
+spatial
+mesh
+plas_eedf_xdim_pa
+@tag:plas_eedf_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+plas_eedf_xdim_ad
+@tag:plas_eedf_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+optsequence
+std
+eedf
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+initialization
+edfi
+@tag:edfi
+eedfinitialization
+@type:eedfinitialization
+@label:eedf initialization
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_plas_h_w
+@tag:comp1_plas_h_w
+state
+@type:state
+fraction
+@label:mass fraction
+comp1_plas_hn2_w
+@tag:comp1_plas_hn2_w
+comp1_plas_hn3_w
+@tag:comp1_plas_hn3_w
+comp1_plas_h2_1p_w
+@tag:comp1_plas_h2_1p_w
+comp1_plas_h_1p_w
+@tag:comp1_plas_h_1p_w
+comp1_plas_h3_1p_w
+@tag:comp1_plas_h3_1p_w
+comp1_en
+@tag:comp1_en
+variable
+en
+@label:electron energy solution variable
+comp1_plas_t
+@tag:comp1_plas_t
+temperature
+@label:temperature
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+comp1_plas_f
+@tag:comp1_plas_f
+field
+@type:field
+log
+@label:log of eedf
+comp1_plas_lam
+@tag:comp1_plas_lam
+reduced
+net
+ionization
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+comp1_plas_td
+@tag:comp1_plas_td
+electric
+td
+@label:reduced electric field
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+gas
+mole
+@label:gas temperature and h mole fraction
+glob
+@tag:glob
+@type:global
+@label:global
+ions
+density
+@label:ions density
+@label:electron temperature
+neutrals
+@label:neutrals density
+relative
+rates
+@label:relative ionization rates
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:two-term boltzmann
+@label:maxwellian
+druyvesteyn
+@label:druyvesteyn
+generalized
+@label:generalized (g
+@label:eedf boltzmann
+line
+graph
+@label:line graph
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:stat
+@physics:plas
+@expr:var
+@func
+@func:int
+@geom:r
+@hymer:build
+@hymer:main
+@hymer:daily
+@hymer:test
+@hymer:tapplications
+@hymer:Plasma_Module
+@hymer:Global_Modeling
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:glob
+@study:edfi
+@sol:comp1_plas_Td
+@sol:comp1_plas_lam
+@sol:comp1_plas_F
+@dataset:dset
+@result:lngr
+@result:selection
+addinimport
+@tag:addinimport
+@type:addinimport
+chemistry
+@label:plasma chemistry
+formdefinition
+@tag:formdefinition
+addinform
+@type:addinform
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+settingsform
+@tag:settingsform
+addinforminstance
+@type:addinforminstance
+appfeature
+@tag:appfeature
+addinapplicationmodelinstance
+@type:addinapplicationmodelinstance
+appfeaturedata
+@label:appfeaturedata
+@tag:field
+integerdatafield
+@type:integerdatafield
+integer
+@label:integer
+reactionsfile
+@tag:reactionsfile
+file
+@type:file
+reactions
+@label:reactions file
+main
+@tag:main
+@type:form
+initialized
+@tag:initialized
+codeeditor
+@type:codeeditor
+@label:initialized
+mainmethod
+@tag:mainmethod
+@label:mainmethod
+plasmachemistry
+@tag:plasmachemistry
+@label:plasmachemistry
+speciesdata
+@tag:speciesdata
+@label:speciesdata
+updatecomponents
+@tag:updatecomponents
+@label:updatecomponents
+componentdim
+@tag:componentdim
+@label:componentdim
+repalceplasmakeywords
+@tag:repalceplasmakeywords
+@label:repalceplasmakeywords
+updateinterface
+@tag:updateinterface
+@label:updateinterface
+isdefinedbymesh
+@tag:isdefinedbymesh
+@label:isdefinedbymesh
+componentandinterfaceselection
+@tag:componentandinterfaceselection
+localform
+@type:localform
+addinlabel_plasma/target
+@label:addinlabel_plasma/target
+textlabel
+@tag:textlabel
+label
+@type:label
+text
+@label:text label
+componentcombobox
+@tag:componentcombobox
+comboboxwidget
+@type:comboboxwidget
+combo
+box
+@label:combo box
+interfaceccombobox
+@tag:interfaceccombobox
+1a
+@label:combo box 1a
+importplasmachemistry
+@tag:importplasmachemistry
+addinlabel_plasma/plasma_chemistry_import
+@label:addinlabel_plasma/plasma_chemistry_import
+fileimport
+@tag:fileimport
+filebrowser
+@type:filebrowser
+@label:file import
+button
+@tag:button
+@type:button
+@label:button
+stringdatafield
+@type:stringdatafield
+string
+@label:string
+componentchoicelist
+@tag:componentchoicelist
+validvalues
+@type:validvalues
+choice
+list
+@label:component choice list
+interfacechoicelist
+@tag:interfacechoicelist
+interface
+@label:interface choice list
+collection
+@tag:collection
+tabbedpane
+@type:tabbedpane
+@label:form collection
+res
+addin
+soldata

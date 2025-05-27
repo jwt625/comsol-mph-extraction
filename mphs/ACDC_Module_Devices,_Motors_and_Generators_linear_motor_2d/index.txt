@@ -1,0 +1,632 @@
+linear
+motor
+2d
+motors
+used
+applications
+need
+translational
+motion
+typical
+characteristics
+designs
+high
+precision
+quick
+acceleration
+model
+synchronous
+with
+three
+phase
+winding
+stationary
+part
+permanent
+magnets
+moving
+investigated
+mesh
+periodic
+conditions
+utilized
+order
+complete
+it
+explained
+representation
+axial
+flux
+rotational
+linear_motor_2d
+mph
+param
+parameters
+np
+nr
+poles
+part/rotor
+i_ph
+current
+rms
+s_rot
+speed
+l_mag
+length
+plane
+radial
+extent
+magnetic
+materials
+th_air
+air
+thickness
+outside
+th_airgap
+airgap
+th_sbyoke
+stator
+back-yoke
+arc_pp
+pole
+pitch
+arc
+arc_slot
+slot
+default
+main
+par
+geometry
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+pp
+@tag:pp
+periodicpair
+@type:periodicpair
+pair
+@label:periodic pair
+pc
+@tag:pc
+periodiccondition
+@type:periodiccondition
+condition
+@label:periodic condition - stator
+rotor
+@label:periodic condition - moving part/ rotor
+als
+@tag:als
+ampereslawsolid
+@type:ampereslawsolid
+steel
+@label:magnetic steel
+coil
+@tag:coil
+@type:coil
+@label:a phase winding
+rcd
+@tag:rcd
+reversecoilgroupdomain
+@type:reversecoilgroupdomain
+reversed
+direction
+@label:reversed current direction
+@label:b phase winding
+@label:c phase winding
+mag
+@tag:mag
+magnet
+@type:magnet
+@label:magnet
+north
+@tag:north
+@type:north
+@label:north
+south
+@tag:south
+@type:south
+@label:south
+geom
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+mov
+@tag:mov
+move
+@type:move
+@label:move
+arr
+@tag:arr
+array
+@type:array
+up
+@label:magnets up
+down
+@label:magnets down
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:all magnets
+back
+yoke
+@label:rotor back yoke
+@label:rotor air
+aux
+torque
+calc
+domain
+@label:aux torque calc domain
+selection
+@label:rotor selection
+uni
+@tag:uni
+union
+@type:union
+@label:rotor
+tooth
+@label:stator tooth
+teeth
+@label:stator teeth
+@label:stator back yoke
+@label:stator yoke selection
+@label:stator yoke
+leg
+@label:coil leg
+legs
+left
+@label:coil legs left
+right
+@label:coil legs right
+domains
+@label:coil domains
+@label:stator air
+@label:stator selection
+@label:stator
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+pnt
+bnd
+dom
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+ia
+f_phi
+shear
+stress
+density
+intop
+@tag:intop
+integration
+@type:integration
+@label:airgap integration
+material
+fixed
+spatial
+geom1_unisel
+@tag:geom1_unisel
+fromsequence
+@type:fromsequence
+geom1_r2_dom
+@tag:geom1_r2_dom
+geom1_r3_dom
+@tag:geom1_r3_dom
+geom1_r4_dom
+@tag:geom1_r4_dom
+geom1_unisel2_pnt
+@tag:geom1_unisel2_pnt
+geom1_unisel2_bnd
+@tag:geom1_unisel2_bnd
+geom1_unisel2_dom
+@tag:geom1_unisel2_dom
+geom1_unisel3_pnt
+@tag:geom1_unisel3_pnt
+geom1_unisel3_bnd
+@tag:geom1_unisel3_bnd
+geom1_unisel3_dom
+@tag:geom1_unisel3_dom
+geom1_unisel4_dom
+@tag:geom1_unisel4_dom
+geom1_unisel5_pnt
+@tag:geom1_unisel5_pnt
+geom1_unisel5_bnd
+@tag:geom1_unisel5_bnd
+geom1_unisel5_dom
+@tag:geom1_unisel5_dom
+@label:magnetic steel domains
+ap
+identity
+boundary
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pres
+@tag:pres
+prescribeddeformation
+@type:prescribeddeformation
+@label:moving part/ rotor
+mat
+@tag:mat
+common
+@type:common
+soft
+iron
+without
+losses
+@label:soft iron (without losses
+bhcurve
+b-h
+curve
+bh
+@tag:bh
+interpolation
+@type:interpolation
+@label:interpolation
+effectivebhcurve
+effective
+bheff
+@tag:bheff
+n40m
+sintered
+ndfeb
+@label:n40m (sintered ndfeb
+remanentfluxdensity
+remanent
+copper
+@label:copper
+enu
+young's
+modulus
+poisson's
+ratio
+linzres
+linearized
+resistivity
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+id
+@tag:id
+identicalmesh
+@type:identicalmesh
+identical
+@label:identical mesh
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+boundaries
+@label:size 1 - periodic boundaries
+@label:size 2 - magnetic steel
+@label:size 3 - airgap
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+meshnative
+optsequence
+std
+study
+angle
+sweep
+stat
+@tag:stat
+@type:stationary
+@label:stationary
+transient
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+field
+@type:field
+vector
+potential
+frame
+@label:spatial frame
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+comp1_mf_mag1_v_d
+@tag:comp1_mf_mag1_v_d
+state
+@type:state
+v_d
+@label:comp1.mf.mag1.v_d
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:var
+globalvariable
+@type:globalvariable
+@label:torque
+force
+@label:shear force
+result
+results
+dset
+@tag:dset
+@type:solution
+probe
+@label:probe solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+summary
+@label:results summary
+av
+@tag:av
+avsurface
+@type:avsurface
+surface
+average
+@label:surface average - airgap
+global
+evaluation
+windings
+@label:global evaluation - windings
+int
+@tag:int
+intsurface
+@type:intsurface
+@label:surface integration - magnets
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+norm
+@label:magnetic flux density norm
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:moving mesh
+@tag:mesh
+@type:mesh
+@label:mesh
+sel
+@tag:sel
+meshselection
+@type:meshselection
+@label:selection
+trn
+@tag:trn
+translation
+@type:translation
+@label:translation
+@label:linear force
+glob
+@tag:glob
+@type:global
+@label:global
+harmonics
+@label:torque harmonics
+@label:table graph
+@label:magnetic flux on periodic pair
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+line
+@label:arrow line
+@type:selection
+geommanagernative
+hist
+@geom:geom
+@param:group
+@param:par
+@expr:var
+@geom:r
+@geom:mov
+@geom:input
+@geom:selection
+@geom:arr
+@geom:unisel
+@geom:uni
+@geom:fin
+@selection
+@selection:uni
+@cpl
+@cpl:intop
+@cpl:selection
+@probe
+@probe:var
+@material:mat
+@material:materialmodel
+@material:BHCurve
+@material:func
+@material:EffectiveBHCurve
+@material:BH
+@material:BHeff
+@material:RemanentFluxDensity
+@material:Enu
+@material:linzRes
+@material:selection
+@view:view
+@common:pres
+@common:selection
+@physics:mf
+@mesh:mesh
+@mesh:ftri
+@mesh:size
+@mesh:selection
+@study:std
+@study:stat
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:fc
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@result:mesh
+@result:sel
+@study:time
+@sol:t
+@sol:aDef
+@result:trn
+@evaluationgroup:eg
+@evaluationgroup:av
+@evaluationgroup:selection
+@evaluationgroup:gev
+@evaluationgroup:int
+@result:glob
+@result:tblp
+@result:arwl
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

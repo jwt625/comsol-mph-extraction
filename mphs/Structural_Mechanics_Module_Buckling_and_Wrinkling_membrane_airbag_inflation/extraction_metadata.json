@@ -1,0 +1,14 @@
+{
+  "source_file": "Structural_Mechanics_Module/Buckling_and_Wrinkling/membrane_airbag_inflation.mph",
+  "source_size": 822815,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310447.802",
+  "total_files_in_archive": 19
+}

@@ -1,0 +1,11 @@
+{
+  "source_file": "CFD_Module/Verification_Examples/cylinder_flow_3d_periodic.mph",
+  "source_size": 34267,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.468",
+  "total_files_in_archive": 6
+}

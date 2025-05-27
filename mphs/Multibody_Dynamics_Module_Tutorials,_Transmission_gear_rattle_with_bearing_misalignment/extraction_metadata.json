@@ -1,0 +1,14 @@
+{
+  "source_file": "Multibody_Dynamics_Module/Tutorials,_Transmission/gear_rattle_with_bearing_misalignment.mph",
+  "source_size": 4201100,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310372.652",
+  "total_files_in_archive": 47
+}

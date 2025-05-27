@@ -1,0 +1,11 @@
+{
+  "source_file": "MEMS_Module/Dynamics_and_Vibration/motherboard_random_vibration.mph",
+  "source_size": 59060,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.168",
+  "total_files_in_archive": 6
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Nonlinear_Acoustics/thermoacoustic_engine_heat_pump.mph",
+  "source_size": 1828725,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.43",
+  "total_files_in_archive": 44
+}

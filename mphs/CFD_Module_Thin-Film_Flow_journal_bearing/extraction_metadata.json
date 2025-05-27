@@ -1,0 +1,14 @@
+{
+  "source_file": "CFD_Module/Thin-Film_Flow/journal_bearing.mph",
+  "source_size": 1565436,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.468",
+  "total_files_in_archive": 22
+}

@@ -1,0 +1,936 @@
+thermal
+stresses
+monolithic
+reactor
+no
+reduction
+occurs
+flue
+gases
+pass
+channels
+exhaust
+system
+car
+exothermic
+reactions
+give
+rise
+temperature
+gradients
+example
+investigates
+deformation
+due
+model
+monolith_thermal_stress
+mph
+param
+parameters
+t_in
+inlet
+channel
+length
+vrate
+volumetric
+flow
+rate
+f_nh3_in
+molar
+nh
+f_n2_in
+frequency
+factor
+reaction
+activation
+energy
+d_n2_in
+density
+nitrogen
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+engineering
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+initial
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+4no+4nh3+o2=&gt;4n2+6h2o
+@label:1: 4no+4nh3+o2=&gt;4n2+6h2o
+@tag:no
+specieschem
+@type:specieschem
+species
+@label:species: no
+@tag:nh
+@label:species: nh
+@tag:o
+@label:species: o
+@tag:n
+@label:species: n
+h2o
+@tag:h2o
+@label:species: h2o
+4nh3+3o2=&gt;2n2+6h2o
+@label:2: 4nh3+3o2=&gt;2n2+6h2o
+sync
+@tag:sync
+reactiontomph
+@type:reactiontomph
+generate
+space-dependent
+@label:generate space-dependent model
+chem
+@tag:chem
+chemistry
+@type:chemistry
+@label:chemistry
+tds
+@tag:tds
+dilutedspeciesinporousmedia
+@type:dilutedspeciesinporousmedia
+transport
+diluted
+porous
+media
+@label:transport of diluted species in porous media
+concentration
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+fluid
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+nflx
+@tag:nflx
+noflux
+@type:noflux
+flux
+@label:no flux
+init
+@tag:init
+@type:init
+reac
+@tag:reac
+@type:reactions
+@label:reactions
+@tag:in
+inflow
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+ht
+@tag:ht
+porousmediaheattransfer
+@type:porousmediaheattransfer
+heat
+transfer
+@label:heat transfer in porous media
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+@label:heat source
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+@label:heat flux
+sym
+@tag:sym
+symmetry
+@type:symmetry
+@label:symmetry
+ifl
+@tag:ifl
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law
+pressure
+nf
+@tag:nf
+noflow
+@type:noflow
+@label:no flow
+inl
+@tag:inl
+@type:inlet
+@label:inlet
+outlet
+@type:outlet
+@label:outlet
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+te
+@tag:te
+thermalexpansion
+@type:thermalexpansion
+expansion
+@label:thermal expansion
+free
+@tag:free
+@type:free
+@label:free
+roll
+@tag:roll
+roller
+@type:roller
+@label:roller
+symmetrysolid
+@type:symmetrysolid
+geom
+geometry
+geomnative
+blk
+@tag:blk
+block
+@type:block
+@label:block
+arr
+@tag:arr
+array
+@type:array
+@label:array
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+work_plane
+sequence2d
+@tag:c
+circle
+@type:circle
+@label:circle
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+cmd
+@tag:cmd
+compositedomains
+@type:compositedomains
+composite
+domains
+@label:form composite domains
+form_composite_domains
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+supporting
+walls
+@label:supporting walls
+blocks
+@label:channel blocks
+@label:inlet walls
+@label:outlet walls
+surface
+@label:reactor surface
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+end
+@label:inlet end
+pnt
+edg
+bnd
+dom
+pmat1_fluid1_xdim
+extra
+dimension
+@tag:i
+point
+@type:point
+@label:point
+pmat1_solid1_xdim
+var
+variables
+selectivity
+fixed
+spatial
+mesh
+geom1_blk1_dom
+@tag:geom1_blk1_dom
+fromsequence
+@type:fromsequence
+geom1_arr1_dom
+@tag:geom1_arr1_dom
+geom1_sel
+@tag:geom1_sel
+geom1_unisel
+@tag:geom1_unisel
+pmat1_fluid1_xdim_pa
+@tag:pmat1_fluid1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+pmat1_fluid1_xdim_ad
+@tag:pmat1_fluid1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+pmat1_solid1_xdim_pa
+@tag:pmat1_solid1_xdim_pa
+pmat1_solid1_xdim_ad
+@tag:pmat1_solid1_xdim_ad
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pp1mat
+@tag:pp1mat
+common
+@type:common
+gas
+@label:gas: nitrogen
+mat1_densitypp
+@tag:mat1_densitypp
+interpolation
+@type:interpolation
+@label:mat1_densitypp1( t[273, 673, 20], p
+mat1_heatcapacitycppp
+@tag:mat1_heatcapacitycppp
+@label:mat1_heatcapacitycppp1( t[273, 673, 20], p
+mat1_heatcapacityratiocpcvpp
+@tag:mat1_heatcapacityratiocpcvpp
+@label:mat1_heatcapacityratiocpcvpp1( t[273, 673, 20], p
+mat1_thermalconductivitypp
+@tag:mat1_thermalconductivitypp
+@label:mat1_thermalconductivitypp1( t[273, 673, 20], p
+mat1_viscositypp
+@tag:mat1_viscositypp
+@label:mat1_viscositypp1( t[273, 673, 20], p
+mat1_thermalexpansioncoefficient
+@tag:mat1_thermalexpansioncoefficient
+@label:mat1_thermalexpansioncoefficient( t[273, 673, 20], p
+mat1_compressibility
+@tag:mat1_compressibility
+@label:mat1_compressibility( t[273, 673, 20], p
+mat1_soundspeed
+@tag:mat1_soundspeed
+@label:mat1_soundspeed( t[273, 673, 20], p
+df
+diffusion
+coefficient
+ammonia
+solvent
+mat1_diffusioncoefficient_ammonia_nitrogen_pp
+@tag:mat1_diffusioncoefficient_ammonia_nitrogen_pp
+@label:mat1_diffusioncoefficient_ammonia_nitrogen_pp1( t[273, 673, 20], p
+oxide
+mat1_diffusioncoefficient_nitrogen_oxide_nitrogen_pp
+@tag:mat1_diffusioncoefficient_nitrogen_oxide_nitrogen_pp
+@label:mat1_diffusioncoefficient_nitrogen_oxide_nitrogen_pp1( t[273, 673, 20], p
+oxygen
+mat1_diffusioncoefficient_oxygen_nitrogen_pp
+@tag:mat1_diffusioncoefficient_oxygen_nitrogen_pp
+@label:mat1_diffusioncoefficient_oxygen_nitrogen_pp1( t[273, 673, 20], p
+water
+mat1_diffusioncoefficient_water_nitrogen_pp
+@tag:mat1_diffusioncoefficient_water_nitrogen_pp
+@label:mat1_diffusioncoefficient_water_nitrogen_pp1( t[273, 673, 20], p
+mat
+@tag:mat
+monolith
+@label:solid: monolith material
+pmat
+@tag:pmat
+porousmedia
+@type:porousmedia
+@label:porous material
+poro
+@type:fluid
+@type:solid
+matlnk
+@tag:matlnk
+link
+@type:link
+@label:walls
+comp
+component
+tdp
+thermodynamics
+pp
+@tag:pp
+builtinpropertypackage
+@type:builtinpropertypackage
+@label:gas system
+mat_singlephase
+@tag:mat_singlephase
+onephaseproperty
+@type:onephaseproperty
+@label:density
+capacity
+cp
+@label:heat capacity
+ratio
+cp/cv
+@label:heat capacity ratio (cp/cv
+conductivity
+@label:thermal conductivity
+viscosity
+@label:viscosity
+infinite
+dilution
+@label:diffusion coefficient at infinite dilution
+const1_chem
+@tag:const1_chem
+compoundconstant
+@type:compoundconstant
+mass
+@label:molar mass
+const2_chem
+@tag:const2_chem
+lennard-jones
+diameter
+potential
+characteristic
+@label:lennard-jones diameter (potential characteristic length
+const3_chem
+@tag:const3_chem
+minimum
+@label:lennard-jones energy (potential energy minimum
+const4_chem
+@tag:const4_chem
+dipole
+moment
+@label:dipole moment
+const5_chem
+@tag:const5_chem
+const6_chem
+@tag:const6_chem
+const7_chem
+@tag:const7_chem
+const8_chem
+@tag:const8_chem
+const9_chem
+@tag:const9_chem
+const10_chem
+@tag:const10_chem
+const11_chem
+@tag:const11_chem
+const12_chem
+@tag:const12_chem
+const13_chem
+@tag:const13_chem
+const14_chem
+@tag:const14_chem
+const15_chem
+@tag:const15_chem
+const16_chem
+@tag:const16_chem
+const17_chem
+@tag:const17_chem
+const18_chem
+@tag:const18_chem
+const19_chem
+@tag:const19_chem
+const20_chem
+@tag:const20_chem
+one1_chem
+@tag:one1_chem
+one2_chem
+@tag:one2_chem
+enthalpy
+formation
+@label:enthalpy of formation
+one3_chem
+@tag:one3_chem
+@label:enthalpy
+one4_chem
+@tag:one4_chem
+entropy
+@label:entropy of formation
+one5_chem
+@tag:one5_chem
+one6_chem
+@tag:one6_chem
+one7_chem
+@tag:one7_chem
+one8_chem
+@tag:one8_chem
+one9_chem
+@tag:one9_chem
+one10_chem
+@tag:one10_chem
+one11_chem
+@tag:one11_chem
+one12_chem
+@tag:one12_chem
+const1_re
+@tag:const1_re
+const2_re
+@tag:const2_re
+const3_re
+@tag:const3_re
+const4_re
+@tag:const4_re
+const5_re
+@tag:const5_re
+one1_re
+@tag:one1_re
+one2_re
+@tag:one2_re
+one3_re
+@tag:one3_re
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+vtx
+@tag:vtx
+vertex
+@type:vertex
+@label:vertex
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+spf
+@tag:spf
+stationaryplugflow
+@type:stationaryplugflow
+stationary
+plug
+@label:stationary plug flow
+stat
+@tag:stat
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:molar flow rate
+comp2_ch2o
+@tag:comp2_ch2o
+field
+@type:field
+ch2o
+@label:concentration
+comp2_cnh
+@tag:comp2_cnh
+cnh
+comp2_cno
+@tag:comp2_cno
+cno
+comp2_co
+@tag:comp2_co
+co
+comp2_p
+@tag:comp2_p
+@label:pressure
+comp2_t
+@tag:comp2_t
+@label:comp1.ode
+pf
+@tag:pf
+plugflow
+@type:plugflow
+solver
+@label:plug flow solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:x
+kinetics
+nonisothermal
+comp2_dl_inl1_p
+@tag:comp2_dl_inl1_p
+@tag:s
+@label:stationary solver
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:pressure p
+concentrations
+@label:concentrations
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:d
+@label:direct, pressure
+@label:direct, heat transfer variables
+@label:direct, concentrations
+comp2_u
+@tag:comp2_u
+@label:displacement field
+suggested
+@label:suggested direct solver
+result
+results
+dset
+@tag:dset
+@type:solution
+sec
+@tag:sec
+sector3d
+@type:sector3d
+@label:monolith
+sector
+@label:temperature sector
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+mir
+@tag:mir
+mirror3d
+@type:mirror3d
+mirror
+@label:mirror 3d
+av
+@tag:av
+avsurface
+@type:avsurface
+average
+@label:surface average
+max
+@tag:max
+maxvolume
+@type:maxvolume
+volume
+maximum
+@label:volume maximum
+mrkvl
+@tag:mrkvl
+table
+@type:table
+@label:maximum and minimum values
+tbl
+@tag:tbl
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:reaction rate
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:selectivity
+@label:molar flow rate nh3, nonisothermal
+@label:selectivity, nonisothermal
+@label:temperature, nonisothermal
+gmrk
+@tag:gmrk
+graphmarker
+@type:graphmarker
+graph
+marker
+@label:graph marker
+plotgroup3d
+@type:plotgroup3d
+conversion
+@label:conversion 3d model
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:isosurface
+@label:temperature 3d model
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+@label:monolith view
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+stress
+@label:thermal stress
+geommanagernative
+hist
+@study:std
+@study:spf
+@physics:re
+@expr:var
+@tdp:pp
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:pf
+@sol:fc
+@batch:p
+@batch:so
+@result:pg
+@result:glob
+@result:gmrk
+@geom:geom
+@physics:chem
+@physics:tds
+@physics:ht
+@physics:dl
+@study:stat
+@tdp:singlephase
+@tdp:mat_singlephase
+@material:pp1mat
+@material:mat
+@material:materialmodel
+@material:pmat
+@material:selection
+@material:solid
+@material:matlnk
+@mesh:mesh
+@mesh:ftri
+@mesh:selection
+@mesh:size
+@mesh:swe
+@mesh:dis
+@mesh:statistics
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:ll
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sl
+@sol:po
+@sol:cs
+@sol:so
+@result:iso
+@result:slc
+@dataset:sec
+@result:filt
+@dataset:cpl
+@result:arws
+@numerical
+@numerical:av
+@numerical:selection
+@table:tbl
+@numerical:max
+@physics:solid
+@dataset:mir
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+res
+soldata

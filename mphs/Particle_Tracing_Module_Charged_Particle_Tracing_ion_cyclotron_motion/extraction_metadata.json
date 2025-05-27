@@ -1,0 +1,14 @@
+{
+  "source_file": "Particle_Tracing_Module/Charged_Particle_Tracing/ion_cyclotron_motion.mph",
+  "source_size": 1134570,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310385.776",
+  "total_files_in_archive": 25
+}

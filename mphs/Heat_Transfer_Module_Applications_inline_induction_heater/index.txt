@@ -1,0 +1,1599 @@
+inline
+induction
+heater
+app
+demonstrates
+following
+model
+using
+symmetry
+results
+visualized
+full
+3d
+provides
+info
+above
+below
+certain
+critical
+values
+selecting
+predefined
+user-defined
+materials
+error
+control
+geometry
+parameters
+methods
+presentation
+possible
+errors
+card
+stacks
+sliders
+buttons
+position
+slice
+visualizing
+with
+plot
+computes
+efficiency
+magnetic
+apparatus
+heating
+liquid
+food
+flowing
+set
+ferritic
+stainless
+steel
+pipes
+steels
+become
+used
+processing
+due
+relatively
+low
+stable
+price
+properties
+allow
+new
+techniques
+circular
+electromagnetic
+coil
+wound
+around
+fluid
+flows
+alternating
+current
+passing
+generates
+field
+penetrates
+eddy
+currents
+inside
+heats
+up
+heat
+transferred
+essentially
+conduction
+various
+configurations
+available
+number
+length
+thickness
+material
+turns
+wire
+radius
+density
+excitation
+frequency
+optimize
+exchange
+ensuring
+homogeneous
+temperatures
+within
+it
+given
+flow
+rate
+inline_induction_heater
+mph
+param
+t_pipe
+pipe
+r_i_pipe
+external
+y_i_pipe
+in-plane
+y-coordinate
+major
+tube
+center
+r_coil
+multiturn
+n_coil
+f_coil
+j_coil
+intensity
+u_in
+inlet
+average
+velocity
+sigma_410s
+electrical
+conductivity
+410s
+mur
+relative
+permeability
+sigma
+generic
+stol
+solver
+tolerance
+default
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+transfer
+solids
+fluids
+@label:heat transfer in solids and fluids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+init
+@tag:init
+@type:init
+initial
+@label:initial values
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+flux
+@label:heat flux
+sym
+@tag:sym
+@type:symmetry
+@label:symmetry
+spf
+@tag:spf
+turbulentflowalgebraicyplus
+@type:turbulentflowalgebraicyplus
+turbulent
+algebraic
+yplus
+@label:turbulent flow, algebraic yplus
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+rad
+@tag:rad
+surfacetosurfaceradiation
+@type:surfacetosurfaceradiation
+surface-to-surface
+radiation
+@label:surface-to-surface radiation
+fluencerate_disc
+dsurf
+@tag:dsurf
+diffusesurface
+@type:diffusesurface
+diffuse
+surface
+@label:diffuse surface
+rsym
+@tag:rsym
+symmetryforsurfacetosurfaceradiation
+@type:symmetryforsurfacetosurfaceradiation
+@label:symmetry for surface-to-surface radiation
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+@label:amp&#xe8;re's law in fluids
+@tag:coil
+@type:coil
+@label:coil
+cre
+@tag:cre
+coilreferenceedge
+@type:coilreferenceedge
+@label:coil geometry
+geom
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+plane
+@label:inlet plane
+dif
+work_plane
+pol
+sequence2d
+@tag:c
+circle
+@type:circle
+outer
+cylinder
+@label:pipes outer cylinder
+sketchobject
+inner
+@label:pipes inner cylinder
+@tag:dif
+difference
+@type:difference
+@label:difference
+@label:coil outer cylinder
+@label:coil inner cylinder
+air
+@label:air cylinder
+@tag:pol
+polygon
+@type:polygon
+reflection
+@label:reflection plane
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+tubes
+@label:extrude tubes
+@label:extrude fluid
+@label:extrude coil outer cylinder
+@label:extrude coil inner cylinder
+@label:extrude air cylinder
+@label:extrude reflection plane
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+@label:coil inlet plane
+@label:coil outlet plane
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+csel
+dom
+bnd
+edg
+pnt
+exterior
+interior
+fixed
+spatial
+mesh
+geom1_csel1_pnt
+@tag:geom1_csel1_pnt
+fromsequence
+@type:fromsequence
+@label:tube
+geom1_csel1_edg
+@tag:geom1_csel1_edg
+geom1_csel1_bnd
+@tag:geom1_csel1_bnd
+geom1_csel1_dom
+@tag:geom1_csel1_dom
+geom1_csel2_pnt
+@tag:geom1_csel2_pnt
+geom1_csel2_edg
+@tag:geom1_csel2_edg
+geom1_csel2_bnd
+@tag:geom1_csel2_bnd
+geom1_csel2_dom
+@tag:geom1_csel2_dom
+geom1_csel3_pnt
+@tag:geom1_csel3_pnt
+@label:coil exterior
+geom1_csel3_edg
+@tag:geom1_csel3_edg
+geom1_csel3_bnd
+@tag:geom1_csel3_bnd
+geom1_csel3_dom
+@tag:geom1_csel3_dom
+geom1_csel4_pnt
+@tag:geom1_csel4_pnt
+@label:coil interior
+geom1_csel4_edg
+@tag:geom1_csel4_edg
+geom1_csel4_bnd
+@tag:geom1_csel4_bnd
+geom1_csel4_dom
+@tag:geom1_csel4_dom
+geom1_csel5_pnt
+@tag:geom1_csel5_pnt
+geom1_csel5_edg
+@tag:geom1_csel5_edg
+geom1_csel5_bnd
+@tag:geom1_csel5_bnd
+geom1_csel5_dom
+@tag:geom1_csel5_dom
+@label:pipes
+adj
+@tag:adj
+adjacent
+@type:adjacent
+boundaries
+@label:fluid boundaries
+@label:tube boundaries
+cyl
+@tag:cyl
+@type:cylinder
+@label:inlet cylinder
+@label:outlet cylinder
+int
+@tag:int
+intersection
+@type:intersection
+@label:fluid inlet
+@label:fluid outlet
+lateral
+walls
+@label:tube lateral walls
+minus
+@label:tube lateral walls minus reflection plane
+@label:tube inlet
+@label:tube outlet
+@label:coil (full length
+box
+@tag:box
+@type:box
+@label:box for coil
+@label:cylinder
+start
+edges
+@label:coil start edges
+domain
+@label:domain inlet
+@label:domain before coil
+@label:domain around coil
+@label:domain after coil
+reduced
+com
+@tag:com
+complement
+@type:complement
+@label:domain - fluid
+@label:pipes inlet
+@label:pipes outlet
+@label:pipes inlet interior edges
+@label:fluid inlet edges
+@label:reflection plane edges
+@label:fluid inlet edges minus reflection plane
+@label:domain - pipes) inlet
+@label:fluid lateral walls
+@label:fluid lateral walls minus reflection plane
+@label:intersection of pipes inlet and reflection plane edges
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+htrad
+@tag:htrad
+heattransferwithsurfacetosurfaceradiation
+@type:heattransferwithsurfacetosurfaceradiation
+@label:heat transfer with surface-to-surface radiation
+emh
+@tag:emh
+electromagneticheating
+@type:electromagneticheating
+@label:electromagnetic heating
+mat
+@tag:mat
+common
+@type:common
+milk
+@label:milk
+water
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+interpolation
+@type:interpolation
+@label:interpolation
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+tomato
+soup
+@label:tomato soup
+@label:stainless steel 410s
+@label:stainless steel
+user
+defined
+@label:stainless steel user defined
+@label:air
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+matlnk
+@tag:matlnk
+link
+@type:link
+@label:material link fluid
+@label:material link pipes
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+optsequence
+std
+study
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+wdi
+@tag:wdi
+walldistanceinitialization
+@type:walldistanceinitialization
+distance
+initialization
+@label:wall distance initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+@type:field
+vector
+potential
+@label:magnetic vector potential
+comp1_g
+@tag:comp1_g
+reciprocal
+@label:reciprocal wall distance
+comp1_mf_coil1_vf
+@tag:comp1_mf_coil1_vf
+filtering
+variable
+vf
+@label:filtering variable
+comp1_nitf1_twall_d
+@tag:comp1_nitf1_twall_d
+downside
+twall_d
+@label:wall temperature, downside
+comp1_nitf1_twall_u
+@tag:comp1_nitf1_twall_u
+upside
+twall_u
+@label:wall temperature, upside
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+magnitude
+uave
+@label:velocity magnitude, average
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_rad_dsurf1_jd_band
+@tag:comp1_rad_dsurf1_jd_band
+radiosity
+jd_band
+@label:surface radiosity, downside
+comp1_rad_dsurf1_ju_band
+@tag:comp1_rad_dsurf1_ju_band
+ju_band
+@label:surface radiosity, upside
+comp1_t
+@tag:comp1_t
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_yplus
+@tag:comp1_yplus
+viscous
+units
+@label:wall distance in viscous units
+@tag:s
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:i
+iterative
+@type:iterative
+@label:iterative
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sv
+@tag:sv
+sorvector
+@type:sorvector
+sor
+@label:sor vector
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:d
+@label:direct, wall distance
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:radiosity
+@label:velocity u, pressure p
+turbulence
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@label:direct, radiation variables
+@label:direct, fluid flow variables
+@label:direct, heat transfer variables
+@label:direct, turbulence variables
+result
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+@type:surface
+@label:exterior walls
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+central
+line
+along
+@label:central line along the tubes
+@label:interior wall line along the tubes
+mir
+@tag:mir
+mirror3d
+@type:mirror3d
+mirror
+@label:mirror of domain
+sec
+@tag:sec
+sector3d
+@type:sector3d
+revolution
+@label:revolution of domain
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:x cut plane
+sector2d
+@type:sector2d
+@label:revolution of x cut plane
+1/solution
+@label:study 1/solution 1 in tubes
+@label:tubes, x cut plane
+@label:study 1/solution 1 in coil
+@label:revolution of coil
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation: thermal efficiency
+max
+@tag:max
+maxvolume
+@type:maxvolume
+@label:max temperature in fluid
+av
+@tag:av
+avsurface
+@type:avsurface
+elevation
+@label:average temperature elevation at pipes outlet
+min
+@tag:min
+minsurface
+@type:minsurface
+@label:min temperature at pipes outlet
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+@label:velocity
+slc
+@tag:slc
+@type:slice
+@label:slice
+@label:surface
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+resolution
+@label:wall resolution
+@label:surface radiosity
+slit
+@tag:slit
+surfaceslit
+@type:surfaceslit
+@label:surface slit
+norm
+@label:magnetic flux density norm
+mslc
+@tag:mslc
+multislice
+@type:multislice
+@label:multislice
+strmsl
+@tag:strmsl
+streamlinemultislice
+@type:streamlinemultislice
+streamline
+@label:streamline multislice
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:temperature and fluid flow
+@label:wall temperature
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+@label:solid temperature
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+@label:fluid flow
+plotgroup1d
+@type:plotgroup1d
+@label:temperature over x
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+plotgroup2d
+@type:plotgroup2d
+@label:temperature at x cut plane
+@label:fluid flow at x cut plane
+@label:magnetic flux at x cut plane
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:full solution
+str
+@tag:str
+@type:streamline
+@label:streamline
+@label:full geometry
+rpt
+@tag:rpt
+report
+@type:report
+@label:report
+tp
+@tag:tp
+titlepage
+@type:titlepage
+@label:inline induction heater
+toc
+@tag:toc
+tableofcontents
+@type:tableofcontents
+contents
+@label:table of contents
+section
+@type:section
+software
+information
+@label:software information
+@tag:comp
+modelnode
+@type:modelnode
+@label:software properties
+@tag:std
+@type:study
+@label:study
+input
+data
+@label:input data
+@label:pipes and coil geometry
+@tag:param
+parameter
+@type:parameter
+@label:parameters
+@label:pipes material
+@type:material
+@label:material
+activation
+@label:coil activation
+conditions
+@label:flow conditions
+target
+@label:target temperatures
+computation
+@label:computation
+@label:component
+@tag:geom
+@type:geometry
+@label:geometry
+@tag:mesh
+@type:mesh
+@label:mesh
+@label:results
+plotgroup
+@type:plotgroup
+configuration
+@label:pipes configuration
+@label:magnetic flux, temperature
+@label:magnetic flux at cut plane
+@label:temperature along the pipes
+@label:temperature at cut plane
+@label:fluid velocity at cut plane
+mtbl
+@tag:mtbl
+@label:table: max temperature in fluid
+@label:table: min temperature at outlet
+@label:table: average temperature elevation at outlet
+@label:table: thermal efficiency
+geommanagernative
+hist
+@physics:ht
+@physics:spf
+@multiphysics
+@multiphysics:nitf
+@geom:geom
+@physics:mf
+@geom:wp
+@geom:sequence2D
+@geom:c
+@geom:dif
+@geom:input
+@geom:selection
+@geom:pol
+@geom:ext
+@geom:csel
+@geom:del
+@geom:par
+@selection
+@selection:dif
+@selection:adj
+@selection:cyl
+@selection:int
+@selection:box
+@selection:com
+@physics:rad
+@multiphysics:htrad
+@multiphysics:selection
+@multiphysics:emh
+@material:mat
+@material:materialmodel
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:idealGas
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:matlnk
+@material:selection
+@mesh:mesh
+@mesh:size
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:ftri
+@mesh:bl
+@mesh:blp
+@mesh:swe
+@study:std
+@study:freq
+@study:wdi
+@study:stat
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sv
+@sol:po
+@sol:fc
+@sol:aDef
+@sol:d
+@sol:sl
+@sol:cs
+@sol:comp1_rad_dsurf1_Jd_band
+@sol:comp1_rad_dsurf1_Ju_band
+@sol:se
+@sol:ss
+@sol:ll
+@sol:so
+@sol:sc
+@result:pg
+@result:vol
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:surf
+@result:slit
+@result:mslc
+@result:strmsl
+@result:col
+@result:filt
+@result:sel
+@result:selection
+@result:arwv
+@dataset:cln
+@dataset:mir
+@dataset:sec
+@dataset:cpl
+@numerical
+@numerical:gev
+@table:tbl
+@numerical:max
+@numerical:selection
+@numerical:av
+@numerical:min
+@result:lngr
+@result:con
+@result:str
+@view:view
+@applicationNodeList:appMainWindow
+@applicationNodeList:appDeclaration
+@applicationNodeList:fluidMaterialList
+@applicationNodeList:pipeMaterialList
+@applicationNodeList:numberPipeList
+@applicationNodeList:appForm
+@applicationNodeList:geometrySettings
+@applicationNodeList:appFormObject
+@applicationNodeList:textlabel
+@applicationNodeList:N_pipe
+@applicationNodeList:L_pipe
+@applicationNodeList:inputfield
+@applicationNodeList:tau_pipe
+@applicationNodeList:x_coil
+@applicationNodeList:N_coil
+@applicationNodeList:R_wire
+@applicationNodeList:geometryDetails
+@applicationNodeList:line
+@applicationNodeList:equation
+@applicationNodeList:datadisplay
+@applicationNodeList:geometryCheck
+@applicationNodeList:infocard
+@applicationNodeList:geometryNotations
+@applicationNodeList:cardstack
+@applicationNodeList:geom_1_pipe
+@applicationNodeList:image
+@applicationNodeList:geom_2_pipes
+@applicationNodeList:geom_3_pipes
+@applicationNodeList:geom_4_pipes
+@applicationNodeList:geom_5_pipes
+@applicationNodeList:geom_6_pipes
+@applicationNodeList:geom_7_pipes
+@applicationNodeList:geom_8_pipes
+@applicationNodeList:geom_9_pipes
+@applicationNodeList:pipeMaterials
+@applicationNodeList:pipeMaterialsPipes
+@applicationNodeList:pipeMaterial410s
+@applicationNodeList:pipeMaterial
+@applicationNodeList:pipeMaterialUserDefined
+@applicationNodeList:coilActivation
+@applicationNodeList:coilActivationCommon
+@applicationNodeList:operatingConditions
+@applicationNodeList:flowConditions
+@applicationNodeList:targetTemperatures
+@applicationNodeList:computation
+@applicationNodeList:computationInformation
+@applicationNodeList:graphics
+@GeomList:geom
+@applicationNodeList:crossSectionOptions
+@applicationNodeList:button
+@applicationNodeList:slider
+@applicationNodeList:results
+@applicationNodeList:maxTemperaturePipe
+@applicationNodeList:minTemperatureOutlet
+@applicationNodeList:averageTemperatureOutlet
+@applicationNodeList:thermalEfficiency
+@applicationNodeList:appFileMenu
+@applicationNodeList:save
+@applicationNodeList:save_as
+@applicationNodeList:appRibbon
+@applicationNodeList:simulation_tab
+@applicationNodeList:appItem
+@applicationNodeList:inputSection
+@applicationNodeList:reset
+@applicationNodeList:geometrySection
+@applicationNodeList:update
+@applicationNodeList:simulationSection
+@applicationNodeList:compute
+@applicationNodeList:visualizationSection
+@applicationNodeList:item
+@applicationNodeList:documentationSection
+@applicationNodeList:report
+@applicationNodeList:help
+@report:rpt
+@report:tp
+@report:toc
+@report:sec
+@report:comp
+@report:std
+@report:param
+@report:mat
+@report:geom
+@report:mesh
+@report:pg
+@report:mtbl
+mainwindow
+@tag:mainwindow
+singlewindow
+@type:singlewindow
+main
+window
+@label:main window
+menu
+@tag:menu
+mainmenu
+@type:mainmenu
+bar
+@label:menu bar
+toolbar
+@tag:toolbar
+maintoolbar
+@type:maintoolbar
+@label:toolbar
+filemenu
+@tag:filemenu
+@type:filemenu
+file
+@label:file menu
+save
+@tag:save
+menuitem
+@type:menuitem
+@label:save
+save_as
+@tag:save_as
+@label:save as
+mainform
+@tag:mainform
+@type:mainform
+@label:main form
+windowpart
+@tag:windowpart
+@type:windowpart
+subwindow
+@label:subwindow
+simulation_tab
+@tag:simulation_tab
+ribbontab
+@type:ribbontab
+home
+@label:home
+inputsection
+@tag:inputsection
+ribbonsection
+@type:ribbonsection
+@label:input
+reset
+@tag:reset
+@label:reset
+geometrysection
+@tag:geometrysection
+update
+@tag:update
+@label:update
+simulationsection
+@tag:simulationsection
+simulation
+@label:simulation
+compute
+@tag:compute
+@label:compute
+visualizationsection
+@tag:visualizationsection
+visualization
+@label:visualization
+item
+@tag:item
+@label:temperature and magnetic flux density
+cross
+@label:magnetic flux density cross section
+@label:fluid temperature cross section
+@label:fluid velocity cross section
+separator
+@tag:separator
+menudivider
+@type:menudivider
+@label:separator
+@label:fluid temperature along the pipes
+documentationsection
+@tag:documentationsection
+documentation
+@label:documentation
+@tag:report
+help
+@tag:help
+@label:help
+images
+@tag:images
+imagelibrary
+@type:imagelibrary
+@label:images
+sounds
+@tag:sounds
+soundlibrary
+@type:soundlibrary
+@label:sounds
+files
+@tag:files
+filelibrary
+@type:filelibrary
+@label:files
+fluidmateriallist
+@tag:fluidmateriallist
+validvalues
+@type:validvalues
+@label:fluidmateriallist
+shortcuts
+@tag:shortcuts
+shortcutdatafield
+@type:shortcutdatafield
+@label:shortcuts
+pipemateriallist
+@tag:pipemateriallist
+@label:pipemateriallist
+@tag:field
+stringdatafield
+@type:stringdatafield
+string
+@label:string
+doubledatafield
+@type:doubledatafield
+double
+@label:double
+integerdatafield
+@type:integerdatafield
+integer
+@label:integer
+booleandatafield
+@type:booleandatafield
+boolean
+@label:boolean
+numberpipelist
+@tag:numberpipelist
+@label:numberpipelist
+initializeapplication
+@tag:initializeapplication
+codeeditor
+@type:codeeditor
+@label:initializeapplication
+enabledisableslider
+@tag:enabledisableslider
+@label:enabledisableslider
+resettodefault
+@tag:resettodefault
+@label:resettodefault
+updategeometry
+@tag:updategeometry
+@label:updategeometry
+inputchanged
+@tag:inputchanged
+@label:inputchanged
+materialchanged
+@tag:materialchanged
+@label:materialchanged
+fluidchanged
+@tag:fluidchanged
+@label:fluidchanged
+evaluatederivedvalues
+@tag:evaluatederivedvalues
+@label:evaluatederivedvalues
+createreport
+@tag:createreport
+@label:createreport
+@tag:geometry
+@type:form
+subform
+@tag:subform
+formreference
+@type:formreference
+@label:form
+geometrysettings
+@tag:geometrysettings
+textlabel
+@tag:textlabel
+label
+@type:label
+text
+@label:text label
+n_pipe
+@tag:n_pipe
+equationlabel
+@type:equationlabel
+equation
+@label:equation
+combobox
+@tag:combobox
+comboboxwidget
+@type:comboboxwidget
+combo
+@label:combo box
+l_pipe
+@tag:l_pipe
+1a
+@label:equation 1a
+inputfield
+@tag:inputfield
+textfieldwidget
+@type:textfieldwidget
+@label:input field
+tau_pipe
+@tag:tau_pipe
+1b
+@label:equation 1b
+x_coil
+@tag:x_coil
+1c
+@label:equation 1c
+@tag:n_coil
+1d
+@label:equation 1d
+r_wire
+@tag:r_wire
+1e
+@label:equation 1e
+unit
+@tag:unit
+unitlabel
+@type:unitlabel
+@label:unit
+geometrydetails
+@tag:geometrydetails
+details
+@label:geometry details
+@tag:line
+divider
+@type:divider
+@label:line
+@tag:equation
+datadisplay
+@tag:datadisplay
+datadisplaywidget
+@type:datadisplaywidget
+display
+@label:data display
+geometrycheck
+@tag:geometrycheck
+check
+@label:geometry check
+infocard
+@tag:infocard
+informationcards
+@type:informationcards
+stack
+@label:information card stack
+geometrynotations
+@tag:geometrynotations
+notations
+@label:notations
+cardstack
+@tag:cardstack
+@type:cardstack
+@label:card stack
+geom_1_pipe
+@tag:geom_1_pipe
+@type:card
+@label:card
+image
+@tag:image
+@type:image
+@label:image
+geom_2_pipes
+@tag:geom_2_pipes
+geom_3_pipes
+@tag:geom_3_pipes
+geom_4_pipes
+@tag:geom_4_pipes
+geom_5_pipes
+@tag:geom_5_pipes
+geom_6_pipes
+@tag:geom_6_pipes
+geom_7_pipes
+@tag:geom_7_pipes
+geom_8_pipes
+@tag:geom_8_pipes
+geom_9_pipes
+@tag:geom_9_pipes
+physics
+@tag:physics
+operating
+@label:materials and operating conditions
+pipematerials
+@tag:pipematerials
+@label:pipe material
+form]subform
+@tag:form]subform
+cardreference
+@type:cardreference
+pipematerialspipes
+@tag:pipematerialspipes
+@label:material properties
+pipematerial410s
+@tag:pipematerial410s
+pipematerial
+@tag:pipematerial
+pipematerialuserdefined
+@tag:pipematerialuserdefined
+coilactivation
+@tag:coilactivation
+coilactivationcommon
+@tag:coilactivationcommon
+operatingconditions
+@tag:operatingconditions
+@label:operating conditions
+flowconditions
+@tag:flowconditions
+targettemperatures
+@tag:targettemperatures
+@tag:computation
+computationinformation
+@tag:computationinformation
+@label:information
+spacer
+@tag:spacer
+filler
+@type:filler
+@label:spacer
+graphicsandresults
+@tag:graphicsandresults
+graphics
+@label:graphics and results
+@tag:graphics
+@label:graphics
+@type:graphics
+crosssectionoptions
+@tag:crosssectionoptions
+options
+@label:cross section options
+changecrosssectionlocation
+@tag:changecrosssectionlocation
+@label:changecrosssectionlocation
+changecrosssectionlocationusingbuttons
+@tag:changecrosssectionlocationusingbuttons
+@label:changecrosssectionlocationusingbuttons
+button
+@tag:button
+@type:button
+@label:button
+slider
+@tag:slider
+@type:slider
+@label:slider
+@tag:results
+numerical
+@label:numerical results
+maxtemperaturepipe
+@tag:maxtemperaturepipe
+mintemperatureoutlet
+@tag:mintemperatureoutlet
+averagetemperatureoutlet
+@tag:averagetemperatureoutlet
+thermalefficiency
+@tag:thermalefficiency
+@label:thermal efficiency
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+libres
+soldata
+grp
+@tag:grp
+applicationform
+@type:applicationform
+tab
+@label:geometry tab
+@label:materials and operating conditions tab

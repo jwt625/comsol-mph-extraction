@@ -1,0 +1,14 @@
+{
+  "source_file": "Composite_Materials_Module/Verification_Examples/simply_supported_composite_laminate.mph",
+  "source_size": 7005365,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310300.74",
+  "total_files_in_archive": 26
+}

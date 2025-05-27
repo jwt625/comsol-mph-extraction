@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Aeroacoustics_and_Noise/flow_duct.mph",
+  "source_size": 1920951,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.427",
+  "total_files_in_archive": 45
+}

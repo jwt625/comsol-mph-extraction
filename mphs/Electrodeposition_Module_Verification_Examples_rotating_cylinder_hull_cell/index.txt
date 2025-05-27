@@ -1,0 +1,417 @@
+rotating
+cylinder
+hull
+cell
+2d
+axisymmetric
+example
+models
+compares
+primary
+secondary
+tertiary
+current
+distributions
+model
+rotating_cylinder_hull_cell
+mph
+param
+parameters
+sigma
+electrolyte
+conductivity
+exchange
+density
+diffusion
+coefficient
+cupric
+ions
+default
+cd
+@tag:cd
+primarycurrentdistribution
+@type:primarycurrentdistribution
+distribution
+@label:secondary current distribution
+electricpotentialionicphase
+electricpotential
+ice
+@tag:ice
+@type:electrolyte
+@label:electrolyte
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+eip
+@tag:eip
+electrolytepotential
+@type:electrolytepotential
+potential
+@label:electrolyte potential
+es
+@tag:es
+electrodesurface
+@type:electrodesurface
+electrode
+surface
+@label:electrode surface
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+reaction
+@label:electrode reaction
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+transport
+diluted
+species
+@label:transport of diluted species
+concentration
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+conc
+@tag:conc
+@type:concentration
+@label:concentration
+eeic
+@tag:eeic
+electrodeelectrolyteinterfacecoupling
+@type:electrodeelectrolyteinterfacecoupling
+coupling
+@label:electrode surface coupling
+rc
+@tag:rc
+boundaryreactioncoefficients
+@type:boundaryreactioncoefficients
+coefficients
+@label:reaction coefficients
+geom
+geometry
+geomnative
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+sketchobject
+@tag:r
+rectangle
+@type:rectangle
+boundary
+layer
+@label:boundary layer
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+variables
+i_analytical
+normalized
+analytical
+expression
+material
+fixed
+spatial
+mesh
+geom1_r1_dom
+@tag:geom1_r1_dom
+fromsequence
+@type:fromsequence
+sel
+@tag:sel
+explicit
+@type:explicit
+working
+@label:working electrode
+counter
+@label:counter electrode
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_c
+@tag:comp1_c
+field
+@type:field
+comp1_phil
+@tag:comp1_phil
+phil
+comp1_cd_es1_phisext
+@tag:comp1_cd_es1_phisext
+state
+@type:state
+external
+electric
+phisext
+@label:external electric potential
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+@label:revolution 2d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+plotgroup3d
+@type:plotgroup3d
+@label:electrolyte potential, 3d
+mslc
+@tag:mslc
+multislice
+@type:multislice
+@label:multislice
+@label:electrolyte current density
+col
+@tag:col
+color
+@type:color
+@label:color expression
+line
+@tag:line
+@type:line
+@label:line
+@label:electrolyte current density, 3d
+with
+respect
+ground
+@label:electrode potential with respect to ground
+@label:electrode potential with respect to ground, 3d
+vs
+adjacent
+reference
+@label:electrode potential vs. adjacent reference
+@label:electrode potential vs. adjacent reference, 3d
+plotgroup1d
+@type:plotgroup1d
+@label:normalized current density, primary
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+overpotential
+@label:overpotential, secondary
+@label:normalized current density, secondary
+@label:overpotential, tertiary
+local
+@label:local current density, tertiary
+@label:normalized concentration, tertiary
+comparison
+@label:current density comparison
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:stat
+@physics:cd
+@geom:pol
+@geom:r
+@expr:var
+@selection
+@selection:sel
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_cd_es1_phisext
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@dataset:rev
+@result:pg
+@result:surf
+@result:str
+@result:mslc
+@result:col
+@result:line
+@result:lngr
+@result:selection
+@sol:p
+@physics:tds
+@mesh:statistics
+@sol:aDef
+@sol:sl
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+save
+point
+soldata
+xmesh
+savepoint

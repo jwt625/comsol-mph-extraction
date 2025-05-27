@@ -1,0 +1,388 @@
+benchmark
+model
+capacitively
+coupled
+plasma
+example
+reproduces
+published
+results
+one-dimensional
+driven
+constant
+current
+rather
+voltage
+ion
+power
+deposition
+electron
+density
+flux
+compared
+data
+ccp_benchmark
+mph
+param
+parameters
+pressure
+default
+ptp
+@tag:ptp
+coldplasmatimeperiodic
+@type:coldplasmatimeperiodic
+time
+periodic
+@label:plasma, time periodic
+logelectrondensity_per
+logelectrondensity
+logelectronenergydensity_per
+logelectronenergydensity
+electricpotential_per
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+he=&gt;e+he
+@label:1: e+he=&gt;e+he
+e+he=&gt;e+hes
+@label:2: e+he=&gt;e+hes
+e+he=&gt;2e+he
+@label:3: e+he=&gt;2e+he
+@tag:e
+species
+@type:species
+@label:species: e
+he
+@tag:he
+@label:species: he
+hes
+@tag:hes
+@label:species: hes
+he_1p
+@tag:he_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+he+=&gt;he
+@label:1: he+=&gt;he
+hes=&gt;he
+@label:2: hes=&gt;he
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+ptp_xdim
+extra
+dimension
+var
+variables
+pin
+input
+material
+fixed
+spatial
+mesh
+ptp_xdim_pa
+@tag:ptp_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+ptp_xdim_ad
+@tag:ptp_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+tper
+@tag:tper
+timeperiodic
+@type:timeperiodic
+@label:time periodic
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_en_per
+@tag:comp1_en_per
+en_per
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_ne_per
+@tag:comp1_ne_per
+ne_per
+comp1_ptp_he_1p_w
+@tag:comp1_ptp_he_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_ptp_he_1p_w_per
+@tag:comp1_ptp_he_1p_w_per
+w_per
+comp1_ptp_hes_w
+@tag:comp1_ptp_hes_w
+comp1_ptp_hes_w_per
+@tag:comp1_ptp_hes_w_per
+comp1_ptp_mct1_jdep
+@tag:comp1_ptp_mct1_jdep
+total
+jdep
+@label:total current density
+comp1_ptp_mct1_jdep_per
+@tag:comp1_ptp_mct1_jdep_per
+jdep_per
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_v_per
+@tag:comp1_v_per
+v_per
+comp1_ptp_mct1_va_per
+@tag:comp1_ptp_mct1_va_per
+state
+@type:state
+amplitude
+va_per
+@label:voltage amplitude
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+result
+dset
+@tag:dset
+@type:solution
+cpt
+@tag:cpt
+cutpoint1d
+@type:cutpoint1d
+cut
+point
+1d
+@label:cut point 1d
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+evaluation
+@label:point evaluation
+av
+@tag:av
+avline
+@type:avline
+line
+average
+@label:line average
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+averaged
+@label:time averaged ion current density
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+ionization
+rate
+@label:time averaged ionization rate
+excitation
+@label:time averaged excitation rate
+@label:time averaged electron power deposition
+@label:time averaged electron density
+@label:time averaged ion density
+geommanagernative
+hist
+@study:std
+@study:tper
+@physics:ptp
+@geom:geom
+@geom:i
+@expr:var
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_Ne_per
+@sol:comp1_V_per
+@sol:comp1_ptp_Hes_W_per
+@sol:comp1_ptp_mct1_Jdep_per
+@sol:comp1_En_per
+@sol:comp1_ptp_He_1p_W_per
+@sol:comp1_ptp_mct1_Va_per
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:dd
+@sol:ds
+@result:pg
+@result:lngr
+@result:selection
+@dataset:dset
+@dataset:cpt
+@numerical
+@numerical:pev
+@table:tbl
+@numerical:av
+@numerical:selection
+save
+res
+soldata
+xmesh

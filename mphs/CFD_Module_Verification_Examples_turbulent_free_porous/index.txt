@@ -1,0 +1,625 @@
+turbulent
+parallel
+flow
+channel
+with
+adjacent
+fluid
+porous
+regions
+setup
+demonstrates
+characteristics
+modified
+presence
+region
+asymmetric
+velocity
+profiles
+higher
+turbulence
+levels
+friction
+coefficients
+solid
+wall
+fluid-porous
+interface
+observed
+simulations
+high-permeability
+cases
+reveal
+excellent
+agreement
+dns
+experimental
+results
+without
+need
+specifically
+calibrated
+empirical
+functions
+model
+turbulent_free_porous
+mph
+param
+parameters
+clear
+height
+da_i
+darcy
+number
+rho_i
+density
+ub
+bulk
+length
+cuu
+interpolation
+coefficient
+upper
+estimate
+w^2=cuu*u^2+cvv*v
+clv
+lower
+w^2=clu*u^2+clv*v
+default
+spf
+@tag:spf
+turbulentflowlowrekeps
+@type:turbulentflowlowrekeps
+low
+re
+k-&#x3b
+@label:turbulent flow, low re k-&#x3b
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+wallbc
+@tag:wallbc
+@type:wallbc
+@label:wall
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+pfc
+@tag:pfc
+periodicflowcondition
+@type:periodicflowcondition
+periodic
+condition
+@label:periodic flow condition
+prpc
+@tag:prpc
+pressurepointconstraint
+@type:pressurepointconstraint
+point
+constraint
+@label:pressure point constraint
+ge
+@tag:ge
+globalequations
+@type:globalequations
+global
+equations
+@label:global equations
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+pt
+@tag:pt
+@type:point
+@label:point
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+int
+@tag:int
+@type:interpolation
+u_rms
+@label:u_rms
+v_rms
+@label:v_rms
+var
+variables
+shear_stress
+shear
+stress
+utau_s
+rek
+permeability
+reynolds
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+air
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+wdi
+@tag:wdi
+walldistanceinitialization
+@type:walldistanceinitialization
+distance
+initialization
+@label:wall distance initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_ep
+@tag:comp1_ep
+field
+@type:field
+dissipation
+rate
+ep
+@label:turbulent dissipation rate
+comp1_g
+@tag:comp1_g
+reciprocal
+@label:reciprocal wall distance
+comp1_k
+@tag:comp1_k
+kinetic
+energy
+@label:turbulent kinetic energy
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct, wall distance
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+limit
+@label:lower limit
+@label:direct, fluid flow variables
+@label:direct, turbulence variables
+free-porous
+reh
+epsilon_p_i
+cf_i
+9e
+@label:reh=5500, h=0.03, epsilon_p_i=0.95, cf_i=0.14, da_i=1.9e
+04e
+@label:reh=5400, h=0.029, epsilon_p_i=0.8, cf_i=0.095, da_i=1.04e
+@label:reh=9500, h=0.029, epsilon_p_i=0.8, cf_i=0.095, da_i=1.04e
+@label:reh=5500, h
+@label:reh=5400, h
+@label:reh=9500, h
+pdom
+@tag:pdom
+domainpoint
+@type:domainpoint
+domain
+probe
+@label:domain point probe
+ppb
+@tag:ppb
+pointexpr
+@type:pointexpr
+@label:friction at the solid wall
+@label:friction at the porous interface
+result
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+cpt
+@tag:cpt
+cutpoint2d
+@type:cutpoint2d
+edg
+@tag:edg
+edge2d
+@type:edge2d
+exterior
+walls
+@label:exterior walls
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cl
+@label:cl clear
+@label:cl adjacent free-porous flow
+grid
+@tag:grid
+grid1d
+@type:grid1d
+exp
+@label:grid exp
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:clear channel
+@label:adjacent
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+u_e
+@label:u_e
+k_e
+@label:k_e
+uv_e
+@label:uv_e
+@label:u
+uv
+@label:uv
+u-rms
+v-rms
+@label:u-rms and v-rms
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+@label:velocity
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+resolution
+@label:wall resolution
+line
+@tag:line
+@type:line
+hght
+@tag:hght
+@type:height
+expression
+@label:height expression
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:clear
+@label:dns
+u_#06_re
+@label:u_#06_re
+@label:exp
+k_#06_re
+@label:k_#06_re
+@label:exp upper estimate
+@label:exp lower estimate
+bottom
+@label:exp bottom limit
+uv_#06_re
+@label:uv_#06_re
+@label:solid wall friction coefficient
+glob
+@tag:glob
+@type:global
+@label:dns e
+@label:exp #06 re
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+@label:porous interface friction coefficient
+@label:porous friction reynolds number
+ratio
+velocities
+@label:ratio of friction velocities
+arrow
+surfaces
+@label:arrow surfaces e
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+col
+@tag:col
+color
+@type:color
+@label:color expression
+@label:turbulence kinetic energy
+@label:shear stress
+geommanagernative
+hist
+@study:std
+@study:wdi
+@physics:spf
+@study:stat
+@view:view
+@geom:geom
+@geom:r
+@geom:pt
+@cpl
+@cpl:aveop
+@cpl:selection
+@probe
+@probe:pdom
+@probe:ppb
+@expr:var
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@study:param
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sl
+@sol:po
+@sol:cs
+@sol:se
+@sol:ss
+@sol:ll
+@sol:sc
+@batch:p
+@batch:so
+@dataset:dset
+@result:pg
+@result:surf
+@result:con
+@dataset:edg
+@dataset:selection
+@result:line
+@result:hght
+@dataset:cln
+@sol:su
+@table:tbl
+@func
+@func:int
+@dataset:grid
+@result:lngr
+@result:tblp
+@result:glob
+@result:ann
+@result:arws
+@result:col
+@numerical
+@numerical:gev
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+save
+res
+soldata
+xmesh
+savepoint

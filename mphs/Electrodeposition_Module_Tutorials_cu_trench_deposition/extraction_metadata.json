@@ -1,0 +1,14 @@
+{
+  "source_file": "Electrodeposition_Module/Tutorials/cu_trench_deposition.mph",
+  "source_size": 1124388,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310311.94",
+  "total_files_in_archive": 32
+}

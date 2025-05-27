@@ -1,0 +1,759 @@
+coil
+optimization
+icp
+reactor
+model
+shows
+shape
+used
+design
+coils
+obtain
+plasma
+uniformity
+study
+planar
+with
+distributed
+along
+radial
+direction
+step
+find
+best
+placement
+gradient
+electron
+density
+center
+minimized
+target
+imposed
+varying
+power
+icp_coil_optimization
+mph
+param
+parameters
+psp
+input
+gas
+pressure
+ws
+substrate
+width
+hd
+dielectric
+block
+height
+dplasma
+distance
+window
+zcoil
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:6: ars+ars=&gt;e+ar+ar
+ars+ar=&gt;ar+ar
+@label:7: ars+ar=&gt;ar+ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ars=&gt;ar
+@label:1: ars=&gt;ar
+ar+=&gt;ar
+@label:2: ar+=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+@type:init
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+fluids
+@label:amp&#xe8;re's law in fluids
+@tag:coil
+@type:coil
+@label:coil
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+@label:coils
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+arr
+@tag:arr
+array
+@type:array
+@label:array
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+axis
+@label:axis
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+adjacent
+selection
+@label:adjacent selection
+walls
+@label:walls
+domains
+@label:adjacent domains to coils
+boundaries
+@label:coil boundaries
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+intsel
+@tag:intsel
+intersectionselection
+@type:intersectionselection
+top
+@label:top dielectric
+roller
+@label:roller
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+deform
+deformed
+configuration
+frommesh
+@tag:frommesh
+@type:frommesh
+@label:deformed configuration
+deformed_configuration
+var
+variables
+ne
+material
+fixed
+spatial
+mesh
+geom1_r2_dom
+@tag:geom1_r2_dom
+fromsequence
+@type:fromsequence
+geom1_r3_dom
+@tag:geom1_r3_dom
+geom1_r4_dom
+@tag:geom1_r4_dom
+geom1_r5_dom
+@tag:geom1_r5_dom
+geom1_r6_dom
+@tag:geom1_r6_dom
+geom1_r7_dom
+@tag:geom1_r7_dom
+geom1_difsel
+@tag:geom1_difsel
+geom1_boxsel
+@tag:geom1_boxsel
+geom1_adjsel
+@tag:geom1_adjsel
+geom1_unisel
+@tag:geom1_unisel
+geom1_intsel
+@tag:geom1_intsel
+dsel_dfxb
+@tag:dsel_dfxb
+explicitderived
+@type:explicitderived
+boundary
+@label:fixed boundary
+dsel_fsd
+@tag:dsel_fsd
+domain
+@label:free shape domain
+dsel_tsf
+@tag:dsel_tsf
+transformation
+@label:transformation
+dsel_fsr
+@tag:dsel_fsr
+symmetry/roller
+@label:symmetry/roller
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+@tag:axis
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+dfxb
+@tag:dfxb
+fixedshapeboundary
+@type:fixedshapeboundary
+fsd
+@tag:fsd
+freeshapedomain
+@type:freeshapedomain
+tsf
+@tag:tsf
+@type:transformation
+fsr
+@tag:fsr
+freeshapesymmetry
+@type:freeshapesymmetry
+pcc
+@tag:pcc
+plasmaconductivitymultiphysicscoupling
+@type:plasmaconductivitymultiphysicscoupling
+conductivity
+coupling
+@label:plasma conductivity coupling
+ehs
+@tag:ehs
+electronheatsourcemultiphysicscoupling
+@type:electronheatsourcemultiphysicscoupling
+heat
+source
+@label:electron heat source
+mat
+@tag:mat
+common
+@type:common
+@label:material
+comp
+component
+conpar
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+ref
+@tag:ref
+reference
+@type:reference
+@label:reference
+optsequence
+constr
+@tag:constr
+gconstr
+@type:gconstr
+@label:constr
+std
+fstat
+@tag:fstat
+frequencystationary
+@type:frequencystationary
+frequency-stationary
+@label:frequency-stationary
+opt
+@tag:opt
+@type:optimization
+@label:optimization
+verification
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+flux
+psiora
+@label:magnetic flux
+comp1_ne
+@tag:comp1_ne
+@label:electron solution variable
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_mf_coil1_icoil
+@tag:comp1_mf_coil1_icoil
+state
+@type:state
+current
+icoil
+@label:coil current
+comp1_mf_coil1_pcoil_ode
+@tag:comp1_mf_coil1_pcoil_ode
+pcoil_ode
+@label:coil power
+comp1_mf_coil1_vcoil
+@tag:comp1_mf_coil1_vcoil
+vcoil
+@label:comp1.mf.coil1.vcoil
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+merged
+@label:suggested direct solver
+comp1_material_disp
+@tag:comp1_material_disp
+displacement
+disp
+@label:material mesh displacement
+frames
+@label:spatial and material frames
+@tag:conpar
+controlstate
+@type:controlstate
+@label:power input
+comp1_tsf1_move
+@tag:comp1_tsf1_move
+translation
+frame
+move
+@label:geometry frame
+@tag:o
+@label:optimization solver
+stationaryattrib
+@type:stationaryattrib
+@label:stationary
+@label:direct
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+comp1_rgzg
+@tag:comp1_rgzg
+rgzg
+@label:comp1.rgzg
+@tag:bnd
+@type:boundary
+minimization
+@label:gradient minimization
+point
+@tag:point
+@type:point
+constraint
+@label:constraint for electron density at the center
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+probe
+@label:probe solution
+int
+@tag:int
+integral
+@type:integral
+avh
+@tag:avh
+average
+@type:average
+dset2g
+@tag:dset2g
+optimization/solution
+@label:optimization/solution
+dset4g
+@tag:dset4g
+verification/solution
+@label:verification/solution
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+objective
+@label:objective probe table
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:electron density
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+temperature
+@label:electron temperature
+norm
+@label:magnetic flux density norm
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+revolved
+@label:magnetic flux density norm, revolved geometry
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+@label:shape optimization
+@tag:line
+@type:line
+@label:line
+arwp
+@tag:arwp
+arrowpoint
+@type:arrowpoint
+@label:translation (transformation
+def
+@tag:def
+@type:deform
+deformation
+@label:deformation
+scaling
+@label:scaling (transformation
+rotation
+@label:rotation (transformation
+vs
+@label:electron density: initial design vs. optimization vs. verification
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:line graph
+ion
+@label:ion flux: initial design vs. optimization vs. verification
+@label:electron density: initial design vs. optimization
+absorbed
+@label:absorbed power density: initial design vs. optimization
+sel
+@tag:sel
+@type:selection
+@label:selection
+geommanagernative
+hist
+@geom:geom
+@physics:mf
+@multiphysics
+@multiphysics:pcc
+@multiphysics:ehs
+@study:std
+@study:fstat
+@physics:plas
+@geom:r
+@geom:ls
+@geom:arr
+@geom:input
+@geom:selection
+@geom:difsel
+@geom:boxsel
+@geom:adjsel
+@geom:unisel
+@geom:intsel
+@material:mat
+@material:selection
+@material:materialmodel
+@mesh:mesh
+@mesh:size
+@mesh:ftri
+@mesh:selection
+@mesh:edg
+@mesh:bl
+@mesh:blp
+@mesh:map
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@dataset:rev
+@result:vol
+@nodeGroup:grp
+@probe
+@probe:bnd
+@probe:selection
+@probe:point
+@common:fsd
+@common:selection
+@common:tsf
+@common:fsr
+@expr:var
+@study:opt
+@mesh:statistics
+@sol:comp1_material_disp
+@sol:o
+@dataset:dset2g
+@result:line
+@result:arwp
+@dataset:dset
+@dataset:dset4g
+@result:lngr
+@result:sel
+sys
+@tag:sys
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:initial design
+@label:verification
+res
+soldata

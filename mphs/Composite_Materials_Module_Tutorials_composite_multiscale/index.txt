@@ -1,0 +1,860 @@
+micromechanics
+failure
+multiscale
+analysis
+composite
+structure
+example
+structural
+integrity
+cylinder
+made
+fiber
+assessed
+macroscale
+microscale
+level
+composites
+ranges
+transportation
+energy
+sectors
+consumer
+industry
+compared
+traditional
+monolithic
+materials
+offer
+various
+properties
+suitable
+tailormade
+applications
+along
+with
+analyses
+need
+stress
+identify
+critical
+constituents
+laminate
+structures
+analyzed
+either
+macro
+micro
+scales
+benefits
+limitations
+so-called
+in-depth
+insight
+constituent's
+response
+help
+study
+based
+global
+scale
+loading
+model
+composite_multiscale
+mph
+param
+parameters
+para
+parameter
+v_f
+volume
+fraction
+th_i
+thickness
+interface
+v_m
+matrix
+hc
+height
+e2_f
+young's
+modulus
+material
+direction
+nu23_f
+poisson's
+ratio
+nu_m
+nu_i
+sigmats1_f
+tensile
+strength
+sigmacs_m
+compressive
+sigmats
+ply
+sigmacs
+sigmass
+shear
+epsilonts
+ultimate
+strain
+point
+coordinate
+default
+geometric
+par
+elastic
+location
+case
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+tl
+@tag:tl
+thinlayer
+@type:thinlayer
+thin
+layer
+@label:thin layer
+cp
+@tag:cp
+cellperiodicity
+@type:cellperiodicity
+cell
+periodicity
+@label:cell periodicity
+bp
+@tag:bp
+boundarypair
+@type:boundarypair
+boundary
+pair
+@label:boundary pair
+lshell
+@tag:lshell
+layeredshell
+@type:layeredshell
+layered
+shell
+@label:layered shell
+dispextra_disc
+lshell_rd_disp
+lshell_rd_rot
+lshell_rig_disp
+lshell_rig_rot
+lshell_att_disp
+lshell_att_rot
+sf
+@tag:sf
+safety
+@type:safety
+@label:safety
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+load
+@label:boundary load
+criterion
+@label:fiber failure criterion
+@label:matrix failure criterion
+@label:interface failure criterion
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+unidirectional
+square
+packing
+@label:unidirectional fiber composite, square packing
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+check
+@label:parameter check
+blk
+@tag:blk
+block
+@type:block
+@label:block
+cyl
+@tag:cyl
+@type:cylinder
+@label:fiber
+dif
+@tag:dif
+difference
+@type:difference
+@label:matrix
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+pair_x_source
+@label:pair_x_source
+pair_x_destination
+@label:pair_x_destination
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+pair_x
+@label:pair_x
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+interior
+@label:interior
+@tag:if
+@type:if
+@label:if
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+wp
+@tag:wp
+workplane
+@type:workplane
+back_plane
+@label:back_plane
+sequence2d
+plane
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+front_plane
+@label:front_plane
+right_plane
+@label:right_plane
+left_plane
+@label:left_plane
+bottom_plane
+@label:bottom_plane
+top_plane
+@label:top_plane
+pnt
+edg
+bnd
+dom
+geommanagernative
+inputparam
+input
+df
+fiber_diameter
+hm
+cell_height
+localparam
+local
+baseunitsystem
+meter
+radian
+degree
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+selection
+@label:interface selection
+pi1_sel
+source
+destination
+pi1_unisel
+pi1_adjsel
+pi1_cyl
+pi1_dif
+pi1_boxsel
+part
+@label:cylinder
+image
+@tag:image
+@type:geometry
+@label:geometry
+llmat1_xdim
+extra
+dimension
+link
+@tag:i
+interval
+@type:interval
+@label:interval
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+var
+variables
+g_f
+coefficient
+quadratic
+equation
+first
+root
+tax
+traction
+x-component
+ta
+tangential
+component
+g_i
+spatial
+mesh
+geom1_pi1_sel
+@tag:geom1_pi1_sel
+fromsequence
+@type:fromsequence
+@label:pair 1, source (unidirectional fiber composite, square packing
+@label:pair 1, destination (unidirectional fiber composite, square packing
+@label:pair 2, source (unidirectional fiber composite, square packing
+@label:pair 2, destination (unidirectional fiber composite, square packing
+@label:pair 3, source (unidirectional fiber composite, square packing
+@label:pair 3, destination (unidirectional fiber composite, square packing
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:pair 1 (unidirectional fiber composite, square packing
+@label:pair 2 (unidirectional fiber composite, square packing
+@label:pair 3 (unidirectional fiber composite, square packing
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+@label:exterior (unidirectional fiber composite, square packing
+@label:interior (unidirectional fiber composite, square packing
+geom1_pi1_cyl1_dom
+@tag:geom1_pi1_cyl1_dom
+@label:fiber (unidirectional fiber composite, square packing
+geom1_pi1_dif1_dom
+@tag:geom1_pi1_dif1_dom
+@label:matrix (unidirectional fiber composite, square packing
+geom1_pi1_boxsel
+@tag:geom1_pi1_boxsel
+@label:all (unidirectional fiber composite, square packing
+geom1_sel
+@tag:geom1_sel
+geom3_pi1_sel
+@tag:geom3_pi1_sel
+geom3_pi1_unisel
+@tag:geom3_pi1_unisel
+geom3_pi1_adjsel
+@tag:geom3_pi1_adjsel
+geom3_pi1_cyl1_dom
+@tag:geom3_pi1_cyl1_dom
+geom3_pi1_dif1_dom
+@tag:geom3_pi1_dif1_dom
+geom3_pi1_boxsel
+@tag:geom3_pi1_boxsel
+geom3_sel
+@tag:geom3_sel
+llmat1_xdim_pa
+@tag:llmat1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+llmat1_xdim_ad
+@tag:llmat1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+matlnk
+@tag:matlnk
+@type:link
+@label:material link 1: matrix
+mat
+@tag:mat
+common
+@type:common
+@label:material 1: matrix
+enu
+@label:material link 2: fiber
+@label:material 2: fiber
+transverseisotropic
+transversely
+isotropic
+@label:material link 3: interface
+@label:material 3: interface
+solidcp1mat
+@tag:solidcp1mat
+homogeneous
+@label:homogeneous material
+anisotropic
+orthotropicstrengthparameters
+orthotropic
+voigt
+notation
+lmat
+@tag:lmat
+layeredmaterial
+@type:layeredmaterial
+@label:layered material
+llmat
+@tag:llmat
+layeredmateriallink
+@type:layeredmateriallink
+@label:layered material link
+comp
+macromechanics
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+cpf
+@tag:cpf
+copyface
+@type:copyface
+face
+@label:copy face
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ls_edg
+@tag:ls_edg
+edge
+@type:edge
+@label:edge
+ls_dis
+@tag:ls_dis
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+jo
+@tag:jo
+jobseq
+@type:jobseq
+optsequence
+solidcp1std
+solidcp1stat
+@tag:solidcp1stat
+stationary
+@type:stationary
+@label:stationary
+std
+stat
+@tag:stat
+@tag:param
+solidcp1sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_solid_uext
+@tag:comp1_solid_uext
+field
+@type:field
+frames
+uext
+@label:material and geometry frames
+comp1_u
+@tag:comp1_u
+@label:displacement field
+comp1_solid_cp1_savg
+@tag:comp1_solid_cp1_savg
+state
+@type:state
+average
+savg
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+sol
+comp2_u
+@tag:comp2_u
+ddef
+@tag:ddef
+@label:direct
+comp3_solid2_uext
+@tag:comp3_solid2_uext
+comp3_u
+@tag:comp3_u
+comp3_solid2_cp1_eavg
+@tag:comp3_solid2_cp1_eavg
+eavg
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+xd
+@label:xd=0, x0=0, y0=0, z
+@label:xd=0, x0=0.25, y0=0, z
+@label:xd=0, x0=0.5, y0=0, z
+@label:xd=4, x0=0, y0=0, z
+@label:xd=4, x0=0.25, y0=0, z
+@label:xd=4, x0=0.5, y0=0, z
+result
+results
+dset
+@tag:dset
+@type:solution
+dset3lshelllshl
+@tag:dset3lshelllshl
+cpt
+@tag:cpt
+cutpoint3d
+@type:cutpoint3d
+cut
+@label:cut point 3d
+dset3lshelllshlsf
+@tag:dset3lshelllshlsf
+max
+@tag:max
+maxsurface
+@type:maxsurface
+surface
+maximum
+@label:surface maximum
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+mrkvl
+@tag:mrkvl
+minimum
+@label:maximum and minimum values
+solidcp1stdeg
+@tag:solidcp1stdeg
+evaluationgroup
+@type:evaluationgroup
+@label:material properties (study: micromechanics (material properties
+gmevcp
+@tag:gmevcp
+evalglobalmatrix
+@type:evalglobalmatrix
+evaluation
+@label:global matrix evaluation
+eg
+@tag:eg
+hashin
+indexes
+@label:hashin failure indexes (study: macromechanics (global response
+maxvolume
+@type:maxvolume
+@label:volume maximum
+puck
+@label:puck failure indexes (study: macromechanics (global response
+user
+defined
+inner
+@label:user defined failure indexes at first material point in inner layer (study: micromechanics (local response
+outer
+@label:user defined failure indexes at first material point in outer layer (study: micromechanics (local response
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+unit
+@label:stress, unit cell
+vol
+@tag:vol
+@type:volume
+@label:volume
+@type:selection
+@label:selection
+surf
+@tag:surf
+@type:surface
+@label:surface
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+annotation
+@label:table annotation
+@label:stress
+von
+mises
+slice
+@label:von mises stress, slice
+lss
+@tag:lss
+layeredmaterialslice
+@type:layeredmaterialslice
+@label:layered material slice
+plotgroup1d
+@type:plotgroup1d
+@label:von mises stress, through thickness
+thr
+@tag:thr
+throughthickness
+@type:throughthickness
+@label:through thickness
+index
+@label:hashin failure index
+mrkr
+@tag:mrkr
+marker
+@type:marker
+@label:marker
+@label:puck failure index
+@label:stress, unit cell (at first material point in inner layer
+multiple
+@label:stress, unit cell (at multiple material points
+trn
+@tag:trn
+translation
+@type:translation
+@label:translation
+line
+@tag:line
+@type:line
+@label:line
+@label:user defined failure indexes (at first material point in inner layer
+@label:user defined failure indexes (at first material point in outer layer
+hist
+@param:group
+@param:par
+@geom:geom
+@geom:pi
+@geom:sel
+@geom:selection
+@physics:solid
+@material:matlnk
+@material:selection
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:TransverseIsotropic
+@mesh:mesh
+@mesh:ftri
+@mesh:selection
+@mesh:cpf
+@mesh:source
+@mesh:destination
+@study:solidcp1std
+@sol:solidcp1sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@result:pg
+@result:vol
+@result:surf
+@result:sel
+@result:selection
+@evaluationgroup:solidcp1stdEg
+@evaluationgroup:gmevcp
+@result:tlan
+@view:view
+@nodeGroup:grp
+@geom:cyl
+@coordsys:sys
+@study:solidcp1stat
+@physics:lshell
+@material:lmat
+@material:llmat
+@material:solidcp1mat
+@material:OrthotropicStrengthParameters
+@mesh:map
+@mesh:dis
+@study:std
+@study:stat
+@sol:sol
+@dataset:dset3lshelllshl
+@result:lss
+@view:camera
+@numerical
+@numerical:max
+@numerical:selection
+@table:tbl
+@dataset:cpt
+@result:thr
+@dataset:dset3lshelllshlsf
+@result:mrkr
+@evaluationgroup:eg
+@evaluationgroup:max
+@param:paramCase
+@param:case
+@geom:rot
+@geom:input
+@expr:var
+@study:param
+@batch:p
+@batch:so
+@batch:jo
+@result:trn
+@result:line
+@evaluationgroup:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+rotated
+@type:rotated
+@label:rotated system
+group
+cpgrp
+@tag:cpgrp
+globaldefinitions
+@type:globaldefinitions
+groups
+@label:load groups for cell periodicity
+grp
+@tag:grp
+@type:results
+@label:micromechanics (material properties
+@label:macromechanics (global response
+@label:micromechanics (local response
+soldata

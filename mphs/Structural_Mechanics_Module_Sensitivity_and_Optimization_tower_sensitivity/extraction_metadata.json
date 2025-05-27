@@ -1,0 +1,14 @@
+{
+  "source_file": "Structural_Mechanics_Module/Sensitivity_and_Optimization/tower_sensitivity.mph",
+  "source_size": 1206275,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310447.804",
+  "total_files_in_archive": 20
+}

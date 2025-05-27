@@ -1,0 +1,14 @@
+{
+  "source_file": "Polymer_Flow_Module/Tutorials/rtm_wind_turbine_blade.mph",
+  "source_size": 2108250,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310399.133",
+  "total_files_in_archive": 57
+}

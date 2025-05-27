@@ -1,0 +1,13 @@
+{
+  "source_file": "MEMS_Module/Sensors/capacitive_pressure_sensor_geom_sequence.mph",
+  "source_size": 380509,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310355.168",
+  "total_files_in_archive": 17
+}

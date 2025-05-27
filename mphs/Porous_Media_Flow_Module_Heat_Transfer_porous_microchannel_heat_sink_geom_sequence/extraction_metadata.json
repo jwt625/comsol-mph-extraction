@@ -1,0 +1,13 @@
+{
+  "source_file": "Porous_Media_Flow_Module/Heat_Transfer/porous_microchannel_heat_sink_geom_sequence.mph",
+  "source_size": 333206,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310402.3",
+  "total_files_in_archive": 18
+}

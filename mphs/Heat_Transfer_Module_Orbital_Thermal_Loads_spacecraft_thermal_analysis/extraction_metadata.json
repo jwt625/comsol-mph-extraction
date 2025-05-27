@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Orbital_Thermal_Loads/spacecraft_thermal_analysis.mph",
+  "source_size": 1935095,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.591",
+  "total_files_in_archive": 33
+}

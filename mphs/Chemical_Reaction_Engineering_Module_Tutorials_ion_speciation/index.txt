@@ -1,0 +1,253 @@
+acid-base
+equilibria
+copper
+speciation
+ammonia
+solution
+cupric
+ions
+show
+strong
+affinity
+aqueous
+solutions
+forming
+strongly
+colored
+deep
+blue
+complexes
+relative
+amounts
+different
+amine
+ligand
+with
+varying
+coordination
+numbers
+governed
+stability
+constants
+compounds
+entering
+series
+equilibrium
+reactions
+external
+source
+time
+dependent
+solver
+used
+produce
+diagram
+shows
+concentration
+vary
+total
+added
+model
+ion_speciation
+mph
+param
+parameters
+init_conc_h2o
+density
+molar
+mass
+src_rate_nh
+rate
+nh
+addition
+tend
+final
+output
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+reaction
+engineering
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+initial
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+h2o
+oh
+@label:1: h2o = h+ + oh
+@tag:h2o
+specieschem
+@type:specieschem
+species
+@label:species: h2o
+h_1p
+@tag:h_1p
+@label:species: h
+oh_1m
+@tag:oh_1m
+@label:species: oh
+@label:2: nh4+ = h+ + nh
+nh4_1p
+@tag:nh4_1p
+@label:species: nh
+@tag:nh
+cunh
+cu
+@label:3: cunh3++ = nh3 + cu
+cunh3_2p
+@tag:cunh3_2p
+@label:species: cunh
+cu_2p
+@tag:cu_2p
+@label:species: cu
+@label:4: cu
+cunh32_2p
+@tag:cunh32_2p
+@label:5: cu
+cunh33_2p
+@tag:cunh33_2p
+@label:6: cu
+cunh34_2p
+@tag:cunh34_2p
+@label:7: cu
+cunh35_2p
+@tag:cunh35_2p
+@label:8: 2 cu++ + oh- + h2o = cu
+cu2oh2_2p
+@tag:cu2oh2_2p
+add
+@tag:add
+additionalsourcefeature
+@type:additionalsourcefeature
+additional
+@label:additional source
+var
+variables
+c_sum_ammines
+ammine
+c_sum_nh3_tot
+conc
+c_sum_oh1m_tot
+hydroxide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+optsequence
+std
+study
+@tag:time
+transient
+@type:transient
+@label:time dependent
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+evaluation
+group
+@label:evaluation group
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+conservation
+errors
+@label:relative conservation errors
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+global
+@type:global
+@label:total conc. ammonia
+concentrations
+@label:species concentrations
+@label:mass conservation
+tblp
+@tag:tblp
+table
+@type:table
+graph
+@label:table graph
+complex
+predominance
+@label:complex predominance
+classes
+@label:complex classes
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@expr:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+@evaluationgroup:eg
+@evaluationgroup:gev
+@result:tblp
+soldata
+xmesh

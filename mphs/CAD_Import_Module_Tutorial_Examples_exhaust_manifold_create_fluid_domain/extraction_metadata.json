@@ -1,0 +1,14 @@
+{
+  "source_file": "CAD_Import_Module/Tutorial_Examples/exhaust_manifold_create_fluid_domain.mph",
+  "source_size": 3815496,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310251.144",
+  "total_files_in_archive": 22
+}

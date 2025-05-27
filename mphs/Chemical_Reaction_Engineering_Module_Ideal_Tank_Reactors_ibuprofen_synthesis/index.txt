@@ -1,0 +1,189 @@
+ibuprofen
+synthesis
+important
+anti-inflammatory
+drug
+synthesized
+palladium
+catalysis
+example
+illustrates
+kinetic
+analysis
+complex
+reaction
+mechanism
+perfectly
+stirred
+batch
+reactor
+model
+ibuprofen_synthesis
+mph
+param
+parameters
+cb
+initial
+concentration
+chion
+croh
+roh
+kreac
+constant
+krreac
+reversible
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+engineering
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+gt
+ren
+h2o
+@label:1: roh + h+ =&gt; ren + h2o + h
+@tag:roh
+specieschem
+@type:specieschem
+species
+@label:species: roh
+h_1p
+@tag:h_1p
+@label:species: h
+@tag:ren
+@label:species: ren
+@tag:h2o
+@label:species: h2o
+cl
+rhcl
+@label:2: ren + h+ + cl- =&gt; rhcl
+cl_1m
+@tag:cl_1m
+@label:species: cl
+@tag:rhcl
+@label:species: rhcl
+@label:3: rhcl + b =&gt; ren + h+ + cl- + b
+@tag:b
+@label:species: b
+pd
+co
+@label:4: pd1 + co + h2o =&gt; pd2 + cl- + 2 h+ + co
+@tag:pd
+@label:species: pd
+@tag:co
+@label:species: co
+@label:5: pd2 + rhcl =&gt; pd
+@label:6: pd3 + co =&gt; pd4 + cl
+ibu
+@label:7: pd4 + h2o =&gt; pd2 + h+ + ibu
+@tag:ibu
+@label:species: ibu
+lt;=&gt
+ester
+@label:8: ibu + roh + h+ &lt;=&gt; ester + h2o + h
+@tag:ester
+@label:species: ester
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+optsequence
+std
+case
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+concentrations
+@label:case 1 - concentrations
+glob
+@tag:glob
+global
+@type:global
+@label:global
+product
+intermediates
+@label:case 1 - concentrations, product and intermediates
+@label:case 2 - concentrations
+@label:case 2 - concentrations, product and intermediates
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+soldata
+xmesh
+savepoint

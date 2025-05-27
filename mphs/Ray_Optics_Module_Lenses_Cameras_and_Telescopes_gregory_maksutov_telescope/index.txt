@@ -1,0 +1,707 @@
+gregory–maksutov
+telescope
+simple
+catadioptric
+comprising
+spherical
+corrector
+lens
+primary
+mirror
+example
+formed
+using
+3d
+parts
+respectively
+ray
+optics
+module
+part
+library
+model
+gregory_maksutov_telescope
+mph
+param
+parameters
+lam
+wavelength
+lam_mean
+mean
+theta_x
+field
+angle
+x-component
+theta_y
+y-component
+f_nom
+nominal
+focal
+ratio
+r_airy
+airy
+disc
+radius
+vy
+direction
+vector
+vx
+dx
+launch
+x-coordinate
+dy
+y-coordinate
+nix
+global
+optical
+axis
+r1_corr
+curvature
+surface
+d0_corr
+outer
+diameter
+d1c_corr
+clear
+aperture
+central
+obstruction
+tc_prim
+center
+thickness
+dc_prim
+d0_img
+image
+plane
+default
+prescription
+par
+general
+gop
+@tag:gop
+geometricaloptics
+@type:geometricaloptics
+geometrical
+@label:geometrical optics
+position
+wavenumber
+mp
+@tag:mp
+mediumproperties
+@type:mediumproperties
+medium
+properties
+@label:medium properties
+matd
+@tag:matd
+materialdiscontinuity
+@type:materialdiscontinuity
+material
+discontinuity
+@label:material discontinuity
+op
+@tag:op
+rayproperties
+@type:rayproperties
+@label:ray properties
+mir
+@tag:mir
+@type:mirror
+mirrors
+@label:mirrors
+wall
+@tag:wall
+@type:wall
+obstructions
+@label:obstructions
+@label:image
+relg
+@tag:relg
+releasegrid
+@type:releasegrid
+release
+grid
+@label:release from grid
+geom
+gregory-maksutov
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:corrector
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+@label:parameter check
+wp
+@tag:wp
+workplane
+@type:workplane
+work_plane
+sequence2d
+geometry
+@tag:if
+@type:if
+r1c
+lt
+@label:if r1c &lt; r
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+n_extra_r
+@label:if n_extra_r
+pt
+@tag:pt
+point
+@type:point
+@label:point
+elseif
+@tag:elseif
+@type:elseif
+else
+gt
+@label:else if n_extra_r &gt
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+cpt
+@tag:cpt
+converttopoint
+@type:converttopoint
+convert
+@label:convert to point
+n_extra_a
+@label:if n_extra_a &gt
+csel
+cumulative
+selection
+dom
+bnd
+pnt
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+baseunitsystem
+meter
+radian
+degree
+obj
+r2c
+@label:if r2c &lt; r
+uni
+amp;&amp
+@label:if r1 &lt;= 0 &amp;&amp; r1c &lt; r
+@label:if r2 &gt;= 0 &amp;&amp; r2c &lt; r
+minimum/maximum
+@label:surface 1, minimum/maximum
+phi
+1e
+@label:if phi1 &lt; 1e
+imp
+@tag:imp
+import
+@type:import
+@label:import
+@label:else if phi1 &gt;= 1e-3 &amp;&amp; phi1 &lt
+@label:else if phi1 &gt;= 0.01 &amp;&amp; phi1 &lt
+@label:else if phi1 &gt;= 0.1 &amp;&amp; phi1 &lt
+@label:else if phi1 &gt;= 0.2 &amp;&amp; phi1 &lt
+@label:else if phi1 &gt;= 0.5 &amp;&amp; phi1 &lt
+@label:else if phi1 &gt;= 1.0 &amp;&amp; phi1 &lt
+sca
+@tag:sca
+scale
+@type:scale
+@label:scale
+mov
+@tag:mov
+move
+@type:move
+@label:move
+@label:if r1 &gt
+@label:mirror
+@label:if phi2 &lt; 1e
+@label:else if phi2 &gt;= 1e-3 &amp;&amp; phi2 &lt
+@label:else if phi2 &gt;= 0.01 &amp;&amp; phi2 &lt
+@label:else if phi2 &gt;= 0.1 &amp;&amp; phi2 &lt
+@label:else if phi2 &gt;= 0.2 &amp;&amp; phi2 &lt
+@label:else if phi2 &gt;= 0.5 &amp;&amp; phi2 &lt
+@label:else if phi2 &gt;= 1.0 &amp;&amp; phi2 &lt
+@label:if r2 &gt
+abs
+@label:if abs
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+@tag:end
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+@tag:uni
+union
+@type:union
+@label:union
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+box
+@label:box selection
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+complement
+@label:complement selection
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+ballsel
+@tag:ballsel
+ballselection
+@type:ballselection
+ball
+@label:ball selection
+d1_clear/d
+@label:if d1_clear/d1 &lt
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+adjacent
+@label:adjacent selection
+d2_clear/d
+@label:if d2_clear/d2 &lt
+sel
+@tag:sel
+unionselection
+@type:unionselection
+@label:all
+exterior
+@label:exterior
+surface_x
+@label:surface_x
+edg
+wp1_csel
+wp2_csel
+wp5_csel
+geommanagernative
+inputparam
+input
+radius_of_curvature
+surface_x_(+convex/-concave
+lens_full_diameter
+d1_clear
+clear_aperture_diameter
+niy
+local_optical_axis_x_component#y
+number_of_extra_azimuthal_points
+localparam
+local
+n_extra
+total
+number
+extra
+points
+r_max
+maximum
+patch
+edge
+zmax
+extent
+n1y
+incident
+normalized
+ry
+reference
+r1y
+t1y
+first
+tangent
+t11y
+t2y
+second
+ury
+rotation
+@label:primary mirror
+mirror_vertex_intersection
+@label:mirror_vertex_intersection
+rc
+@label:if rc &lt;= r
+rh
+@label:if rh &gt
+mirror_rear
+@label:mirror_rear
+dif
+d_hole
+@label:if d_hole &gt
+@tag:dif
+difference
+@type:difference
+@label:difference
+mirror_front_edge
+@label:mirror_front_edge
+@label:if r &lt
+@label:if phi &lt; 1e
+@label:else if phi &gt;= 1e-3 &amp;&amp; phi &lt
+@label:else if phi &gt;= 0.01 &amp;&amp; phi &lt
+@label:else if phi &gt;= 0.1 &amp;&amp; phi &lt
+@label:else if phi &gt;= 0.2 &amp;&amp; phi &lt
+@label:else if phi &gt;= 0.5 &amp;&amp; phi &lt
+@label:else if phi &gt;= 1.0 &amp;&amp; phi &lt
+@label:if r &gt
+standard
+@label:if rc &lt;= r1 || n_extra_r &gt; 0 || n_extra_a &gt
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+cylinder
+@label:cylinder selection
+mirror_surface
+@label:mirror_surface
+@label:if rc &lt; r1 &amp;&amp; rc &lt; r
+mirror_obstruction
+@label:mirror_obstruction
+mirror_rear_surface
+@label:mirror_rear_surface
+mirror_edges
+@label:mirror_edges
+@label:if n_extra_r &gt; 0 &amp;&amp; rh
+mirror_vertex
+@label:mirror_vertex
+radius_of_curvature_(+convex/-concave
+mirror_surface_diameter
+local_optical_axis_x_component#x
+number_of_extra_radial_points
+zmin
+minimum
+rt
+revolution
+rmin
+radial
+n1x
+rx
+r1x
+t1x
+t11x
+t2x
+urx
+theta_rot
+@label:image plane
+circular
+planar
+annulus
+@label:surface
+@label:if
+explicitselection
+@type:explicitselection
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+apertures
+pi1_sel
+vertex
+edges
+pi2_sel
+pi2_cylsel
+rear
+pi2_comsel
+pi3_sel
+@tag:image
+@type:geometry
+@label:geometry
+pgeom_gop
+fixed
+spatial
+mesh
+geom1_csel1_bnd
+@tag:geom1_csel1_bnd
+fromsequence
+@type:fromsequence
+geom1_csel2_bnd
+@tag:geom1_csel2_bnd
+geom1_csel3_bnd
+@tag:geom1_csel3_bnd
+@label:clear apertures
+geom1_pi1_sel
+@tag:geom1_pi1_sel
+geom1_pi2_comsel
+@tag:geom1_pi2_comsel
+@label:mirror edges (primary mirror
+geom1_pi3_sel
+@tag:geom1_pi3_sel
+@label:all (image plane
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+schott
+n-bk
+glass
+@label:schott n-bk7 glass
+dispersionmodelsellmeierstandard
+sellmeier
+thermoopticdispersionmodelschott
+thermo-optic
+enu
+young's
+modulus
+poisson's
+internaltransmittance
+internal
+transmittance
+10&#xa0;mm
+sample
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+25&#xa0;mm
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+@type:mesh
+@label:mesh
+optsequence
+std
+study
+rtrac
+@tag:rtrac
+raytracing
+@type:raytracing
+tracing
+@label:ray tracing
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_gop_lambda
+@tag:comp1_gop_lambda
+@type:field
+vacuum
+lambda
+@label:vacuum wavelength
+comp1_kgop
+@tag:comp1_kgop
+wave
+kgop
+@label:wave vector
+comp1_qgop
+@tag:comp1_qgop
+qgop
+@label:ray position
+@tag:t
+time
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:i
+iterative
+@type:iterative
+@label:iterative
+ja
+@tag:ja
+jacobi
+@type:jacobi
+@label:jacobi
+result
+results
+dset
+@tag:dset
+@type:solution
+@tag:ray
+@type:ray
+@label:ray
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+diagram
+@label:ray diagram
+rtrj
+@tag:rtrj
+raytrajectories
+@type:raytrajectories
+trajectories
+@label:ray trajectories
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+raytrajectoriesfilter
+@type:raytrajectoriesfilter
+filter
+@label:filter
+surf
+@tag:surf
+@type:surface
+@type:selection
+@label:selection
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+plotgroup2d
+@type:plotgroup2d
+spot
+@label:spot diagram
+@tag:spot
+spotdiagram
+@type:spotdiagram
+hist
+@study:std
+@study:rtrac
+@physics:gop
+@param:group
+@param:par
+@geom:geom
+@view:view
+@view:camera
+@material:mat
+@material:materialmodel
+@material:InternalTransmittance
+@material:func
+@material:DispersionModelSellmeierStandard
+@material:ThermoOpticDispersionModelSchott
+@material:Enu
+@material:int
+@material:selection
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@sol:i
+@dataset:ray
+@result:pg
+@result:rtrj
+@result:col
+@result:filt
+@result:surf
+@result:sel
+@result:selection
+@result:spot
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+res
+soldata

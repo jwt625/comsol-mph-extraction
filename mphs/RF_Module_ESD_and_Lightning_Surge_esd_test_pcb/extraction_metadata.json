@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/ESD_and_Lightning_Surge/esd_test_pcb.mph",
+  "source_size": 1988480,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 34
+}

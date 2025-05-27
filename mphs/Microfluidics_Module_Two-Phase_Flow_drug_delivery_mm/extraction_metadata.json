@@ -1,0 +1,14 @@
+{
+  "source_file": "Microfluidics_Module/Two-Phase_Flow/drug_delivery_mm.mph",
+  "source_size": 923809,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310361.596",
+  "total_files_in_archive": 36
+}

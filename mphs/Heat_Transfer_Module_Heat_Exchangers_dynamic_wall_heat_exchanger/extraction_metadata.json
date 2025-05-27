@@ -1,0 +1,11 @@
+{
+  "source_file": "Heat_Transfer_Module/Heat_Exchangers/dynamic_wall_heat_exchanger.mph",
+  "source_size": 39270,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.591",
+  "total_files_in_archive": 6
+}

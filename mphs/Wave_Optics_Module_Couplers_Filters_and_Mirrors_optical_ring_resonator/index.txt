@@ -1,0 +1,586 @@
+optical
+ring
+resonator
+notch
+filter
+example
+calculates
+spectral
+properties
+model
+demonstrates
+field
+continuity
+boundary
+condition
+boundaries
+jump
+predefined
+phase
+approximation
+optical_ring_resonator
+mph
+param
+parameters
+wl
+design
+wavelength
+radius
+curvature
+frequency
+default
+ewbe
+@tag:ewbe
+electromagneticwavesbeamenvelopes
+@type:electromagneticwavesbeamenvelopes
+electromagnetic
+waves
+beam
+envelopes
+@label:electromagnetic waves, beam envelopes
+electricfield
+webe
+@tag:webe
+waveequationbeamenvelopes
+@type:waveequationbeamenvelopes
+wave
+equation
+@label:wave equation, beam envelopes
+pec
+@tag:pec
+perfectelectricconductor
+@type:perfectelectricconductor
+perfect
+electric
+conductor
+@label:perfect electric conductor
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+port
+@tag:port
+@type:port
+@label:port
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+sctr
+@tag:sctr
+scattering
+@type:scattering
+@label:scattering boundary condition
+fcont
+@tag:fcont
+fieldcontinuity
+@type:fieldcontinuity
+@label:field continuity
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+slab
+waveguide
+straight-to-ring
+coupler
+@label:slab waveguide straight-to-ring coupler
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+cladding
+width
+real
+check
+@label:cladding width real check
+positiveness
+@label:cladding width positiveness check
+core
+@label:core width real check
+@label:core width positiveness check
+offset
+@label:core offset real check
+element
+length
+@label:element length real check
+@label:element length positiveness check
+separation
+@label:coupler core separation real check
+@label:coupler core separation positiveness check
+@label:ring radius real check
+@label:ring radius positiveness check
+radial
+@label:radial core offset real check
+revolution
+angle
+@label:revolution angle real check
+@label:revolution angle positiveness check
+upper
+limit
+@label:revolution angle upper limit check
+lower
+@label:ring radius lower limit check
+absolute
+value
+@label:radial core offset absolute value upper limit check
+@label:coupler core separation lower limit check
+@label:coupler core separation upper limit check
+@label:element length lower limit check
+@label:revolution angle lower limit check
+straight
+@label:slab waveguide straight
+@label:core width upper limit check
+@label:core offset absolute value upper limit check
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+port_x_core
+@label:port_x_core
+port_x_cladding
+@label:port_x_cladding
+port_x
+@label:port_x
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+transverse_perimeter
+@label:transverse_perimeter
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input
+core_width
+element_length
+localparam
+local
+baseunitsystem
+micrometer
+radian
+degree
+ca
+@tag:ca
+circulararc
+@type:circulararc
+circular
+arc
+@label:circular arc
+circular_arc
+sketchobject
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+@tag:c
+circle
+@type:circle
+@label:circle
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+domain
+@label:straight domain
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+mov
+@tag:mov
+move
+@type:move
+@label:move
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+@label:straight core
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+@label:ring core
+ring_domain_x
+@label:ring_domain_x
+@label:cladding
+@label:core
+bnd_port_1_aux
+@tag:bnd_port_1_aux
+auxiliary
+@label:port 1 auxiliary
+intersectionselection
+@type:intersectionselection
+intsel
+@tag:intsel
+bnd_port_2_aux
+@tag:bnd_port_2_aux
+@label:port 2 auxiliary
+@tag:if
+@type:if
+@label:if
+else
+@tag:else
+@type:else
+@label:else
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+edge_mesh
+@label:edge_mesh
+csel
+straight_domain
+dom
+bnd
+pnt
+pi1_adjsel
+pi1_sel
+pi1_unisel
+pi1_difsel
+transverse
+perimeter
+pi2_adjsel
+pi2_sel
+pi2_unisel
+pi2_difsel
+field_continuity
+radial_core_offset
+separator_position_1_x
+separator
+position
+coordinate
+minimum_element_length
+minimum
+minimum_revolution_angle
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+pi1_boxsel
+pi1_intsel
+edge
+mesh
+pi1_csel
+part
+ipart
+var
+phi
+material
+fixed
+spatial
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+fromsequence
+@type:fromsequence
+@label:core (slab waveguide straight-to-ring coupler
+geom1_pi1_difsel
+@tag:geom1_pi1_difsel
+@label:cladding (slab waveguide straight-to-ring coupler
+geom1_pi1_boxsel
+@tag:geom1_pi1_boxsel
+@label:ring domain 1 (slab waveguide straight-to-ring coupler
+@label:ring domain 2 (slab waveguide straight-to-ring coupler
+geom1_pi1_csel1_dom
+@tag:geom1_pi1_csel1_dom
+@label:straight domain (slab waveguide straight-to-ring coupler
+@label:port 1 (slab waveguide straight-to-ring coupler
+@label:port 2 (slab waveguide straight-to-ring coupler
+@label:transverse perimeter (slab waveguide straight-to-ring coupler
+geom1_pi1_sel
+@tag:geom1_pi1_sel
+@label:edge mesh (slab waveguide straight-to-ring coupler
+geom1_pi1_csel2_bnd
+@tag:geom1_pi1_csel2_bnd
+@label:field continuity (slab waveguide straight-to-ring coupler
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+refractiveindex
+refractive
+index
+@type:material
+@label:material
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+edg
+@tag:edg
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+bma
+@tag:bma
+boundarymodeanalysis
+@type:boundarymodeanalysis
+mode
+analysis
+@label:boundary mode analysis
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_e
+@tag:comp1_e
+@type:field
+envelope
+first
+@label:electric field envelope, first wave
+comp1_ewbe_ebm
+@tag:comp1_ewbe_ebm
+ebm
+@label:boundary mode electric field
+comp1_sparam
+@tag:comp1_sparam
+state
+@type:state
+s-parameter
+sparam
+@label:s-parameter
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:s
+stationary
+@type:stationary
+@label:stationary solver
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+lda
+@label:lda
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:electric field
+surf
+@tag:surf
+surface
+@type:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+plotgroup1d
+@type:plotgroup1d
+reflectance
+transmittance
+loss
+@label:reflectance, transmittance, and loss
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:electric mode field, port
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+hist
+@study:std
+@study:bma
+@physics:ewbe
+@study:freq
+@geom:geom
+@geom:pi
+@expr:var
+@expr:selection
+@material:mat
+@material:selection
+@material:materialmodel
+@material:RefractiveIndex
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:size
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@sol:aDef
+@sol:s
+@sol:p
+@sol:fc
+@batch:p
+@batch:so
+@result:pg
+@result:surf
+@result:glob
+@result:lngr
+@result:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

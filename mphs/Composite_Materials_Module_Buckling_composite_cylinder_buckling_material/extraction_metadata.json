@@ -1,0 +1,11 @@
+{
+  "source_file": "Composite_Materials_Module/Buckling/composite_cylinder_buckling_material.mph",
+  "source_size": 10660,
+  "extracted_files": [
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310300.739",
+  "total_files_in_archive": 10
+}

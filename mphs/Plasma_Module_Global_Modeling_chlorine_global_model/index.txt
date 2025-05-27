@@ -1,0 +1,461 @@
+chlorine
+discharge
+global
+model
+plasma
+discharges
+containing
+commonly
+used
+etch
+semiconductors
+metals
+microelectronics
+fabrication
+tutorial
+studies
+using
+volume-averaged
+diffusion
+models
+run
+simulations
+fraction
+time
+it
+take
+space-dependent
+makes
+good
+choice
+study
+large
+reaction
+sets
+extended
+parameter
+regions
+explores
+absorbed
+powers
+600 w
+working
+with
+pressures
+100 mtorr
+results
+several
+relevant
+quantities
+electron
+density
+temperature
+atomic
+agreement
+measurements
+performed
+inductively
+coupled
+reactors
+found
+literature
+chlorine_global_model
+mph
+param
+parameters
+rad
+pabs
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+cl2=&gt;cl+cl+e
+@label:1: e+cl2=&gt;cl+cl+e
+e+cl2=&gt;2e+cl
+@label:2: e+cl2=&gt;2e+cl
+e+cl2=&gt;2e+cl+cl
+@label:3: e+cl2=&gt;2e+cl+cl
+e+cl2=&gt;3e+2cl
+@label:4: e+cl2=&gt;3e+2cl
+e+cl2=&gt;cl+cl
+@label:5: e+cl2=&gt;cl+cl
+e+cl2v1=&gt;cl+cl
+@label:6: e+cl2v1=&gt;cl+cl
+e+cl2v2=&gt;cl+cl
+@label:7: e+cl2v2=&gt;cl+cl
+e+cl2v3=&gt;cl+cl
+@label:8: e+cl2v3=&gt;cl+cl
+e+cl2=&gt;cl++cl-+e
+@label:9: e+cl2=&gt;cl++cl-+e
+e+cl2=&gt;e+cl2v
+@label:10: e+cl2=&gt;e+cl2v
+@label:11: e+cl2=&gt;e+cl2v
+@label:12: e+cl2=&gt;e+cl2v
+e+cl2v1=&gt;e+cl2v
+@label:13: e+cl2v1=&gt;e+cl2v
+e+cl2v2=&gt;e+cl2v
+@label:14: e+cl2v2=&gt;e+cl2v
+@label:15: e+cl2v1=&gt;e+cl2v
+e+cl2+=&gt;2cl
+@label:16: e+cl2+=&gt;2cl
+e+cl=&gt;e+cl
+@label:17: e+cl=&gt;e+cl
+@label:18: e+cl=&gt;e+cl
+e+cl=&gt;cl++2e
+@label:19: e+cl=&gt;cl++2e
+e+cl12=&gt;cl++2e
+@label:20: e+cl12=&gt;cl++2e
+e+cl52=&gt;cl++2e
+@label:21: e+cl52=&gt;cl++2e
+e+cl-=&gt;cl+2e
+@label:22: e+cl-=&gt;cl+2e
+e+cl-=&gt;cl++3e
+@label:23: e+cl-=&gt;cl++3e
+e+cl2v1=&gt;e+cl
+@label:24: e+cl2v1=&gt;e+cl
+e+cl2v2=&gt;e+cl
+@label:25: e+cl2v2=&gt;e+cl
+e+cl2v3=&gt;e+cl
+@label:26: e+cl2v3=&gt;e+cl
+@label:27: e+cl2v2=&gt;e+cl2v
+e+cl2v3=&gt;e+cl2v
+@label:28: e+cl2v3=&gt;e+cl2v
+@label:29: e+cl2v3=&gt;e+cl2v
+e+cl12=&gt;e+cl
+@label:30: e+cl12=&gt;e+cl
+e+cl52=&gt;e+cl
+@label:31: e+cl52=&gt;e+cl
+e+cl2=&gt;e+cl
+@label:45: e+cl2=&gt;e+cl
+@label:46: e+cl=&gt;e+cl
+rxn
+@tag:rxn
+@type:reaction
+cl52=&gt;cl
+@label:32: cl52=&gt;cl
+cl2++cl-=&gt;3cl
+@label:33: cl2++cl-=&gt;3cl
+cl2++cl-=&gt;cl+cl
+@label:34: cl2++cl-=&gt;cl+cl
+cl++cl-=&gt;2cl
+@label:35: cl++cl-=&gt;2cl
+cl2+cl+=&gt;cl+cl
+@label:36: cl2+cl+=&gt;cl+cl
+cl2v1+cl+=&gt;cl+cl
+@label:37: cl2v1+cl+=&gt;cl+cl
+cl2v2+cl+=&gt;cl+cl
+@label:38: cl2v2+cl+=&gt;cl+cl
+cl2v3+cl+=&gt;cl+cl
+@label:39: cl2v3+cl+=&gt;cl+cl
+2cl+cl2=&gt;2cl
+@label:40: 2cl+cl2=&gt;2cl
+2cl+cl=&gt;cl2+cl
+@label:41: 2cl+cl=&gt;cl2+cl
+cl+cl2v3=&gt;cl+cl2v
+@label:42: cl+cl2v3=&gt;cl+cl2v
+cl+cl2v2=&gt;cl+cl2v
+@label:43: cl+cl2v2=&gt;cl+cl2v
+cl+cl2v1=&gt;cl+cl
+@label:44: cl+cl2v1=&gt;cl+cl
+@tag:e
+species
+@type:species
+@label:species: e
+cl
+@tag:cl
+@label:species: cl
+cl2_1p
+@tag:cl2_1p
+cl_1p
+@tag:cl_1p
+cl_1m
+@tag:cl_1m
+cl2v
+@tag:cl2v
+@label:species: cl2v
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+cl2+=&gt;cl
+@label:1: cl2+=&gt;cl
+cl=&gt
+5cl
+@label:2: cl=&gt;0.5cl
+cl+=&gt;cl
+@label:3: cl+=&gt;cl
+cl2v1=&gt;cl
+@label:4: cl2v1=&gt;cl
+cl2v2=&gt;cl
+@label:5: cl2v2=&gt;cl
+cl2v3=&gt;cl
+@label:6: cl2v3=&gt;cl
+cl12=&gt;cl
+@label:7: cl12=&gt;cl
+@label:8: cl52=&gt;cl
+@label:9: cl2+=&gt;cl
+@label:10: cl+=&gt;cl
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+ev
+energy
+1st
+vibrational
+level
+eioncl
+ionization
+ecl
+excitation
+sp
+auxiliary
+expression
+th
+alpha_s_b
+ratio
+sheath
+electronegativity
+bulk
+alpha
+data
+rho
+epsilon_s
+potential
+vi
+mean
+thermal
+velocity
+hl
+correction
+factors
+krec
+rate
+coefficient
+mutual
+neutralization
+hrcl
+radial
+factor
+hlcl
+longitudinal
+mcl
+mass
+me
+ub_avg
+bohm
+weighted
+average
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+corr
+power
+@tag:param
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+malyshev
+donnelly
+pressure
+efremov
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_plas_cl_w
+@tag:comp1_plas_cl_w
+state
+@type:state
+@label:mass fraction
+comp1_plas_cl2_1p_w
+@tag:comp1_plas_cl2_1p_w
+comp1_plas_cl_1p_w
+@tag:comp1_plas_cl_1p_w
+comp1_plas_cl_1m_w
+@tag:comp1_plas_cl_1m_w
+comp1_plas_cl2v1_w
+@tag:comp1_plas_cl2v1_w
+comp1_plas_cl2v2_w
+@tag:comp1_plas_cl2v2_w
+comp1_plas_cl2v3_w
+@tag:comp1_plas_cl2v3_w
+comp1_plas_cl12_w
+@tag:comp1_plas_cl12_w
+comp1_plas_cl52_w
+@tag:comp1_plas_cl52_w
+comp1_en
+@tag:comp1_en
+variable
+en
+@label:electron energy solution variable
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:pabs
+@label:p
+result
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:corr power sweep
+glob
+@tag:glob
+@type:global
+@label:global
+@label:malyshev and donnelly power sweep
+@label:corr and efremov pressure sweep
+@label:efremov pressure sweep
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:time
+@physics:plas
+@geom:r
+@expr:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@study:param
+@batch:p
+@batch:so
+@result:pg
+@result:glob
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+res
+soldata

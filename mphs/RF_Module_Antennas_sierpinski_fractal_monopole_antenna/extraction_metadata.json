@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Antennas/sierpinski_fractal_monopole_antenna.mph",
+  "source_size": 31903,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 6
+}

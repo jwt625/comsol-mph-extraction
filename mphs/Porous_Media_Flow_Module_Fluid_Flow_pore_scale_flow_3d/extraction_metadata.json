@@ -1,0 +1,14 @@
+{
+  "source_file": "Porous_Media_Flow_Module/Fluid_Flow/pore_scale_flow_3d.mph",
+  "source_size": 73900687,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310402.3",
+  "total_files_in_archive": 19
+}

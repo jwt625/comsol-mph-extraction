@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Buildings_and_Constructions/thermal_bridge_2d_composite_structure.mph",
+  "source_size": 445710,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.59",
+  "total_files_in_archive": 20
+}

@@ -1,0 +1,814 @@
+high
+temperature
+pem
+fuel
+cell
+with
+serpentine
+flow
+field
+example
+models
+mass
+transport
+channels
+gas
+diffusion
+layer
+gdl
+oxygen
+side
+polymer
+electrolyte
+cathode
+electrode
+reaction
+gde
+modeled
+internal
+boundary
+condition
+local
+current
+density
+depends
+overpotential
+concentration
+membrane
+anode
+voltage
+losses
+included
+model
+stream
+assumed
+hydrogen
+excluding
+need
+momentum
+ht_pem_flow_field
+mph
+param
+parameters
+w_rib
+rib
+width
+h_ch
+channel
+height
+w_ribch
+channel-to-channel
+distance
+u_in
+inlet
+velocity
+t_hum
+humidification
+gases
+i0_o2_ref
+reference
+exchange
+reduction
+alpha_a_h
+anodic
+transfer
+coefficient
+oxidation
+default
+geometry
+par
+physics
+fc
+@tag:fc
+hydrogenfuelcell
+@type:hydrogenfuelcell
+@label:hydrogen fuel cell
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+phase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+pot
+@tag:pot
+electricpotential
+@type:electricpotential
+potential
+@label:electric potential
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+@label:h2 gas phase
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+o2in
+@tag:o2in
+o2inlet
+@type:o2inlet
+@label:o2 inlet
+o2out
+@tag:o2out
+o2outlet
+@type:o2outlet
+outlet
+@label:o2 outlet
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:continuity
+mem
+@tag:mem
+@type:membrane
+@label:membrane
+h2gdl
+@tag:h2gdl
+h2gasdiffusionlayer
+@type:h2gasdiffusionlayer
+@label:h2 gas diffusion layer
+o2gdl
+@tag:o2gdl
+o2gasdiffusionlayer
+@type:o2gasdiffusionlayer
+@label:o2 gas diffusion layer
+th2gde
+@tag:th2gde
+thinh2gasdiffusionelectrode
+@type:thinh2gasdiffusionelectrode
+thin
+@label:thin h2 gas diffusion electrode
+th2gder
+@tag:th2gder
+thinh2gasdiffusionelectrodereaction
+@type:thinh2gasdiffusionelectrodereaction
+@label:thin h2 gas diffusion electrode reaction
+to2gde
+@tag:to2gde
+thino2gasdiffusionelectrode
+@type:thino2gasdiffusionelectrode
+@label:thin o2 gas diffusion electrode
+to2gder
+@tag:to2gder
+thino2gasdiffusionelectrodereaction
+@type:thino2gasdiffusionelectrodereaction
+@label:thin o2 gas diffusion electrode reaction
+o2fch
+@tag:o2fch
+o2flowchannel
+@type:o2flowchannel
+@label:o2 gas flow channel
+fp
+@tag:fp
+freeandporousmediaflow
+@type:freeandporousmediaflow
+free
+porous
+media
+brinkman
+@label:free and porous media flow, brinkman
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fluidproperties
+@type:fluidproperties
+fluid
+properties
+@label:fluid properties
+@type:init
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+@label:flow continuity
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+@label:outlet
+geom
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+fil
+work_plane
+sequence2d
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+arr
+@tag:arr
+array
+@type:array
+@label:array
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+sq
+@tag:sq
+square
+@type:square
+@label:square
+copy
+@tag:copy
+@type:copy
+@label:copy
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+uni
+@tag:uni
+union
+@type:union
+@label:union
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:channels
+pard
+@tag:pard
+partitiondomains
+@type:partitiondomains
+partition
+domains
+@label:partition domains
+partition_domains
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+sweep
+mesh
+@label:channel sweep mesh domains
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+tet
+@label:channel tet mesh domains
+blk
+@tag:blk
+block
+@type:block
+@label:gdl
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+@label:h2 side domains
+intsel
+@tag:intsel
+intersectionselection
+@type:intersectionselection
+@label:h2 flow channels
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+upper
+@label:upper gdl boundary
+collector
+@label:o2 current collector
+parf
+@tag:parf
+partitionfaces
+@type:partitionfaces
+faces
+@label:partition faces
+partition_faces
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+inlets
+@label:inlets, o2 side
+outlets
+@label:outlets, o2 side
+slip
+walls
+@label:slip walls
+@label:boundary layer walls
+@label:o2 side domains
+@label:gde, o2 side
+@label:gde, h2 side
+@label:o2 flow channel
+@label:h2 gdl
+@label:o2 gdl
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:o2 flow domains
+lower
+@label:lower gdl boundary
+@label:h2 current collector
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+boundaries
+@label:channel sweep mesh boundaries
+@label:channel tet mesh boundaries
+@label:channel mesh sweep faces
+area
+@label:gdl upper boundary mesh sweep area
+mapped
+@label:o2 current collector mapped mesh boundaries
+triangular
+@label:o2 current collector triangular mesh boundaries
+pnt
+edg
+bnd
+dom
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+geom1_ext1_pnt
+@tag:geom1_ext1_pnt
+fromsequence
+@type:fromsequence
+geom1_ext1_edg
+@tag:geom1_ext1_edg
+geom1_ext1_bnd
+@tag:geom1_ext1_bnd
+geom1_ext1_dom
+@tag:geom1_ext1_dom
+geom1_boxsel
+@tag:geom1_boxsel
+geom1_difsel
+@tag:geom1_difsel
+geom1_blk1_dom
+@tag:geom1_blk1_dom
+geom1_ext2_dom
+@tag:geom1_ext2_dom
+geom1_intsel
+@tag:geom1_intsel
+geom1_unisel
+@tag:geom1_unisel
+geom1_adjsel
+@tag:geom1_adjsel
+ap
+identity
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rfo
+@tag:rfo
+reactingflowo2gasphase
+@type:reactingflowo2gasphase
+reacting
+@label:reacting flow, o2 gas phase
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+swe
+@tag:swe
+@type:sweep
+swept
+@label:swept
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+@label:boundary layer properties
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+ftri
+@tag:ftri
+freetri
+@type:freetri
+@label:free triangular
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_fc_phil
+@tag:comp1_fc_phil
+@type:field
+phil
+@label:electrolyte potential
+comp1_fc_phis
+@tag:comp1_fc_phis
+phis
+comp1_fc_wh2o_o
+@tag:comp1_fc_wh2o_o
+fraction
+wh2o_o
+@label:mass fraction
+comp1_fc_wn2_o
+@tag:comp1_fc_wn2_o
+wn2_o
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_fp_inl1_pinlfdf
+@tag:comp1_fp_inl1_pinlfdf
+state
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fullycoupled
+@type:fullycoupled
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:i
+iterative
+@type:iterative
+amg
+@label:amg, fluid flow variables
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+cs
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:hydrogen fuel cell, potential variables
+mixture
+@label:hydrogen fuel cell, oxygen gas mixture
+@label:velocity u, pressure p
+algebraic
+@label:algebraic multigrid
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+surface
+@type:surface
+exterior
+@label:exterior walls
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+respect
+@label:electrode potential with respect to ground
+mslc
+@tag:mslc
+multislice
+@type:multislice
+@label:multislice
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+arrow
+volume
+@label:arrow volume
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+mole
+streamline
+@label:mole fraction, o2, streamline
+str
+@tag:str
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:mole fraction, o2, surface
+@label:surface
+h2o
+@label:mole fraction, h2o, streamline
+@label:mole fraction, h2o, surface
+@label:mole fraction, n2, streamline
+@label:mole fraction, n2, surface
+@label:channel velocity
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:gdl velocity
+@label:o2 gde current density
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+geommanagernative
+hist
+@physics:fc
+@study:std
+@study:cdi
+@physics:fp
+@study:stat
+@geom:geom
+@param:group
+@param:par
+@common:cminpt
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:swe
+@mesh:size
+@mesh:ftet
+@mesh:bl
+@mesh:blp
+@mesh:ftri
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_fc_phis
+@sol:comp1_fc_phil
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:aDef
+@sol:comp1_fc_wH2O_O
+@sol:comp1_fc_wN2_O
+@sol:p
+@sol:se
+@sol:ss
+@result:pg
+@result:mslc
+@result:arwv
+@result:filt
+@result:str
+@result:col
+@result:surf
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:sel
+@result:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

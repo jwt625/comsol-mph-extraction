@@ -1,0 +1,11 @@
+{
+  "source_file": "Mixer_Module/Benchmarks/wall_jet_4PB_mixer_flat.mph",
+  "source_size": 28222,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310365.254",
+  "total_files_in_archive": 6
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "Uncertainty_Quantification_Module/Tutorials/ishigami_function_direct_monte_carlo.mph",
+  "source_size": 3047539,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310468.886",
+  "total_files_in_archive": 19
+}

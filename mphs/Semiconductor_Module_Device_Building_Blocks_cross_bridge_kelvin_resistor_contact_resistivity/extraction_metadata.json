@@ -1,0 +1,14 @@
+{
+  "source_file": "Semiconductor_Module/Device_Building_Blocks/cross_bridge_kelvin_resistor_contact_resistivity.mph",
+  "source_size": 1537819,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310433.218",
+  "total_files_in_archive": 53
+}

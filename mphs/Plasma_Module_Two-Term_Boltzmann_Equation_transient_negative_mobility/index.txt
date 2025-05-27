@@ -1,0 +1,298 @@
+transient
+negative
+mobility
+differential
+conductivity
+effects
+xenon
+tutorial
+model
+presents
+study
+showing
+stationary
+time
+dependent
+boltzmann
+equation
+two-term
+approximation
+used
+compute
+electron
+energy
+distribution
+function
+functions
+mean
+drift
+velocity
+agrees
+with
+simulation
+results
+published
+donko
+dyatko
+transient_negative_mobility
+mph
+param
+parameters
+tgas
+gas
+temperature
+beta
+ionization
+degree
+default
+@tag:be
+boltzmannequation
+@type:boltzmannequation
+@label:boltzmann equation, two-term approximation
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+xe=&gt;e+xe
+@label:1: e+xe=&gt;e+xe
+e+xe=&gt;e+xes
+@label:2: e+xe=&gt;e+xes
+@label:3: e+xe=&gt;e+xes
+@label:4: e+xe=&gt;e+xes
+@label:5: e+xe=&gt;e+xes
+@label:6: e+xe=&gt;e+xes
+@label:7: e+xe=&gt;e+xes
+@label:8: e+xe=&gt;e+xes
+@label:9: e+xe=&gt;e+xes
+@label:10: e+xe=&gt;e+xes
+@label:11: e+xe=&gt;e+xes
+@label:12: e+xe=&gt;e+xes
+@label:13: e+xe=&gt;e+xes
+@label:14: e+xe=&gt;e+xes
+@label:15: e+xe=&gt;e+xes
+e+xe=&gt;2e+xe
+@label:16: e+xe=&gt;2e+xe
+bmdl
+@tag:bmdl
+boltzmannmodel
+@type:boltzmannmodel
+@label:boltzmann model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+be_eedf_xdim
+geometry
+extra
+dimension
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+rect
+@tag:rect
+rectangle
+@type:rectangle
+@label:rectangle
+material
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+mesh
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+@tag:param
+ref
+@tag:ref
+reducedelectricfields
+@type:reducedelectricfields
+reduced
+electric
+fields
+@label:reduced electric fields
+@tag:time
+@type:transient
+@label:time dependent
+beta=1e
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_be_f
+@tag:comp1_be_f
+field
+@type:field
+log
+eedf
+@label:log of eedf
+comp1_be_lam
+@tag:comp1_be_lam
+state
+@type:state
+net
+frequency
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+@tag:s
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:beta
+@label:beta=1e
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+result
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:eedf, beta
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:mean electron energy
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:eedf, beta=1e
+@label:drift velocity
+@label:eedf
+@label:eedf time dependent, beta
+@label:eedf time dependent, beta=1e
+@label:time dependent drift velocity
+geommanagernative
+hist
+@study:std
+@study:ref
+@physics:be
+@func
+@func:rect
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:fc
+@sol:d
+@batch:p
+@batch:so
+@result:pg
+@result:lngr
+@result:selection
+@result:glob
+@nodeGroup:grp
+@study:time
+@sol:comp1_be_lam
+@sol:comp1_be_F
+@sol:t
+@sol:aDef
+grp
+@tag:grp
+@type:results
+@label:stationary
+conditions
+@label:initial conditions
+res
+soldata

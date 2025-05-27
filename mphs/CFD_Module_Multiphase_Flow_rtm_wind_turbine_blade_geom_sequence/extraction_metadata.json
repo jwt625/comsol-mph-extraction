@@ -1,0 +1,10 @@
+{
+  "source_file": "CFD_Module/Multiphase_Flow/rtm_wind_turbine_blade_geom_sequence.mph",
+  "source_size": 1192752,
+  "extracted_files": [
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310258.467",
+  "total_files_in_archive": 49
+}

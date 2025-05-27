@@ -1,0 +1,458 @@
+corrosion
+protection
+oil
+platform
+using
+sacrificial
+anodes
+example
+models
+system
+aluminum
+infinite
+element
+domain
+used
+describe
+extension
+ocean
+model
+oil_platform
+mph
+param
+parameters
+i_oxygen
+limiting
+current
+oxygen
+reduction
+steel
+structure
+default
+cp
+@tag:cp
+cathodicprotection
+@type:cathodicprotection
+cathodic
+@label:cathodic protection
+electricpotentialionicphase
+electricpotential
+ice
+@tag:ice
+electrolyte
+@type:electrolyte
+@label:electrolyte
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+es
+@tag:es
+electrodesurface
+@type:electrodesurface
+electrode
+surface
+@label:electrode surface - anodes
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+reaction
+@label:electrode reaction
+protms
+@tag:protms
+protectedmetalsurface
+@type:protectedmetalsurface
+protected
+metal
+@label:protected metal surface - steel
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:cylinder
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+pnt
+edg
+bnd
+dom
+object
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+mesh
+geom1_imp1_bnd
+@tag:geom1_imp1_bnd
+fromsequence
+@type:fromsequence
+geom1_imp1_1_bnd
+@tag:geom1_imp1_1_bnd
+@label:object 1 (import
+geom1_imp1_2_bnd
+@tag:geom1_imp1_2_bnd
+@label:object 2 (import
+geom1_imp1_3_bnd
+@tag:geom1_imp1_3_bnd
+@label:object 3 (import
+geom1_imp1_4_bnd
+@tag:geom1_imp1_4_bnd
+@label:object 4 (import
+geom1_imp1_5_bnd
+@tag:geom1_imp1_5_bnd
+@label:object 5 (import
+geom1_imp1_6_bnd
+@tag:geom1_imp1_6_bnd
+@label:object 6 (import
+geom1_imp1_7_bnd
+@tag:geom1_imp1_7_bnd
+@label:object 7 (import
+geom1_imp1_8_bnd
+@tag:geom1_imp1_8_bnd
+@label:object 8 (import
+geom1_imp1_9_bnd
+@tag:geom1_imp1_9_bnd
+@label:object 9 (import
+geom1_imp1_10_bnd
+@tag:geom1_imp1_10_bnd
+@label:object 10 (import
+geom1_imp1_11_bnd
+@tag:geom1_imp1_11_bnd
+@label:object 11 (import
+geom1_imp1_12_bnd
+@tag:geom1_imp1_12_bnd
+@label:object 12 (import
+geom1_imp1_13_bnd
+@tag:geom1_imp1_13_bnd
+@label:object 13 (import
+geom1_imp1_14_bnd
+@tag:geom1_imp1_14_bnd
+@label:object 14 (import
+geom1_imp1_15_bnd
+@tag:geom1_imp1_15_bnd
+@label:object 15 (import
+geom1_imp1_16_bnd
+@tag:geom1_imp1_16_bnd
+@label:object 16 (import
+geom1_imp1_17_bnd
+@tag:geom1_imp1_17_bnd
+@label:object 17 (import
+geom1_imp1_18_bnd
+@tag:geom1_imp1_18_bnd
+@label:object 18 (import
+geom1_imp1_19_bnd
+@tag:geom1_imp1_19_bnd
+@label:object 19 (import
+geom1_imp1_20_bnd
+@tag:geom1_imp1_20_bnd
+@label:object 20 (import
+geom1_imp1_21_bnd
+@tag:geom1_imp1_21_bnd
+@label:object 21 (import
+geom1_imp1_22_bnd
+@tag:geom1_imp1_22_bnd
+@label:object 22 (import
+geom1_imp1_23_bnd
+@tag:geom1_imp1_23_bnd
+@label:object 23 (import
+geom1_imp1_24_bnd
+@tag:geom1_imp1_24_bnd
+@label:object 24 (import
+geom1_imp1_25_bnd
+@tag:geom1_imp1_25_bnd
+@label:object 25 (import
+geom1_imp1_26_bnd
+@tag:geom1_imp1_26_bnd
+@label:object 26 (import
+geom1_imp1_27_bnd
+@tag:geom1_imp1_27_bnd
+@label:object 27 (import
+geom1_imp1_28_bnd
+@tag:geom1_imp1_28_bnd
+@label:object 28 (import
+geom1_imp1_29_bnd
+@tag:geom1_imp1_29_bnd
+@label:object 29 (import
+geom1_imp1_30_bnd
+@tag:geom1_imp1_30_bnd
+@label:object 30 (import
+geom1_imp1_31_bnd
+@tag:geom1_imp1_31_bnd
+@label:object 31 (import
+geom1_imp1_32_bnd
+@tag:geom1_imp1_32_bnd
+@label:object 32 (import
+geom1_imp1_33_bnd
+@tag:geom1_imp1_33_bnd
+@label:object 33 (import
+geom1_imp1_34_bnd
+@tag:geom1_imp1_34_bnd
+@label:object 34 (import
+geom1_imp1_35_bnd
+@tag:geom1_imp1_35_bnd
+@label:object 35 (import
+geom1_imp1_36_bnd
+@tag:geom1_imp1_36_bnd
+@label:object 36 (import
+geom1_imp1_37_bnd
+@tag:geom1_imp1_37_bnd
+@label:object 37 (import
+geom1_imp1_38_bnd
+@tag:geom1_imp1_38_bnd
+@label:object 38 (import
+geom1_imp1_39_bnd
+@tag:geom1_imp1_39_bnd
+@label:object 39 (import
+geom1_imp1_40_bnd
+@tag:geom1_imp1_40_bnd
+@label:object 40 (import
+geom1_imp1_41_bnd
+@tag:geom1_imp1_41_bnd
+@label:object 41 (import
+@label:anodes
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+seawater
+@label:seawater
+electrolyteconductivity
+conductivity
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_cp_es1_er1_iloc_lm
+@tag:comp1_cp_es1_er1_iloc_lm
+field
+@type:field
+local
+density
+iloc_lm
+@label:local current density
+comp1_phil
+@tag:comp1_phil
+potential
+phil
+@label:electrolyte potential
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+mslc
+@tag:mslc
+multislice
+@type:multislice
+@label:multislice
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+anode
+densities
+@label:anode current densities
+surf
+@tag:surf
+@type:surface
+@label:surface
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+@label:steel potential
+close-up
+@label:steel potential, close-up
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:cp
+@geom:geom
+@geom:imp
+@geom:cyl
+@view:view
+@geom:dif
+@geom:input
+@geom:selection
+@coordsys:ie
+@coordsys:selection
+@selection
+@selection:dif
+@material:mat
+@material:materialmodel
+@material:ElectrolyteConductivity
+@material:func
+@material:int
+@mesh:mesh
+@mesh:size
+@mesh:ftri
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@result:pg
+@result:mslc
+@result:str
+@result:col
+@result:surf
+@result:sel
+@result:selection
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+ie
+@tag:ie
+infiniteelement
+@type:infiniteelement
+@label:infinite element domain
+res
+soldata

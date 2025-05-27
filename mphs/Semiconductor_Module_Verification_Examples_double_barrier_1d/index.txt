@@ -1,0 +1,356 @@
+double
+barrier
+1d
+structure
+interest
+application
+semiconductor
+devices
+resonant-tunneling
+diodes
+verification
+example
+demonstrates
+schrödinger
+equation
+interface
+set
+up
+simple
+gaas/algaas
+analyze
+quasibound
+states
+time
+evolution
+resonant
+tunneling
+phenomenon
+transmission
+function
+energy
+model
+results
+show
+good
+agreement
+with
+analytical
+computed
+eigenenergies
+condition
+coefficients
+double_barrier_1d
+mph
+param
+parameters
+lmbd
+eigenvalue
+scale
+mb
+effective
+mass
+regions
+lb
+length
+ree2anal
+quasi
+bound
+state
+real
+part
+ime1anal
+imaginary
+ime_anal
+sweeping
+parameter
+e1anal
+solution
+e_anal
+solutions
+default
+schr
+@tag:schr
+schrodingerequation
+@type:schrodingerequation
+schr&#xf6;dinger
+@label:schr&#xf6;dinger equation
+dimensionless
+meff
+@tag:meff
+effectivemass
+@type:effectivemass
+@label:effective mass
+ve
+@tag:ve
+electronpotentialenergy
+@type:electronpotentialenergy
+electron
+potential
+@label:electron potential energy
+zflx
+@tag:zflx
+zeroflux
+@type:zeroflux
+zero
+flux
+@label:zero flux
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+open
+@tag:open
+openboundary
+@type:openboundary
+boundary
+@label:open boundary
+dependent
+study
+@label:initial values 2 for time dependent study
+@label:open boundary 2 for resonant tunneling study
+vs
+@label:open boundary 3 for transmission vs. energy study
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+@tag:param
+eigv
+@tag:eigv
+@type:eigenvalue
+@label:eigenvalue
+3rd
+@tag:time
+transient
+@type:transient
+@label:time dependent
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_psi
+@tag:comp1_psi
+field
+@type:field
+wave
+psi
+@label:wave function
+@tag:e
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+su
+@tag:su
+storesolution
+@type:storesolution
+ree_anal
+9589e
+616e
+@label:ree_anal=4.9589e-21, ime_anal=1.616e
+9556e
+0654e
+@label:ree_anal=1.9556e-20, ime_anal=3.0654e
+1488e
+019e
+@label:ree_anal=4.1488e-20, ime_anal=5.019e
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@label:e_anal=4.9589e
+@label:e_anal=1.9556e
+152e
+@label:e_anal=4.152e
+@tag:s
+@label:stationary solver
+@label:parametric
+result
+dset
+@tag:dset
+@type:solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+@label:analytical transmission coefficients
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+normalized
+@label:normalized wave function
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:real part
+@label:imaginary part
+summary
+plot
+@label:quasi bound state summary plot
+@label:potential energy
+eigenenergy
+@label:eigenenergy
+probability
+density
+@label:probability density
+line
+graph
+@label:line graph
+compare
+decay
+total
+@label:compare decay of total probability
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:resonant tunneling summary plot
+@label:transmission summary plot
+@label:energy
+reflection
+amp
+@label:reflection &amp; transmission vs. energy
+tblp
+@tag:tblp
+@label:table graph
+geommanagernative
+hist
+@study:std
+@study:eigv
+@physics:schr
+@geom:geom
+@geom:i
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@study:param
+@batch:p
+@batch:so
+@numerical
+@numerical:gev
+@result:pg
+@result:lngr
+@result:selection
+@table:tbl
+@study:time
+@sol:t
+@sol:fc
+@export
+@export:anim
+@result:glob
+@study:stat
+@sol:s
+@sol:p
+@result:tblp
+save
+point
+res
+soldata
+xmesh
+savepoint

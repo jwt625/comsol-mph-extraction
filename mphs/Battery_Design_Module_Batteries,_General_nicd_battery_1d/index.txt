@@ -1,0 +1,538 @@
+1d
+isothermal
+nickel–cadmium
+battery
+example
+uses
+with
+binary
+electrolyte
+interface
+studying
+charge
+discharge
+geometry
+dimension
+plus
+cylindrically
+symmetric
+proton
+diffusion
+positive
+electrode
+model
+oxygen
+evolution/reduction
+mass
+transport
+cell
+negative
+additional
+processes
+included
+nicd_battery_1d
+mph
+param
+parameters
+temperature
+l_sep
+thickness
+separator
+y_positive_substrate
+substrate
+i1c
+1c
+current
+density
+c_o2_init
+initial
+concentration
+gamma
+tortuosity
+factor
+rho_cd
+cd
+a_cd
+specific
+active
+surface
+area
+epsilon0_n
+porosity
+a_ni
+ni
+rho_nio2h
+d_h
+diffusivity
+e_ref_oer
+reference
+potential
+orr/oer
+alpha_a
+anodic
+transfer
+coefficient
+niooh
+lt;=&gt
+reaction
+oer/orr
+i0_3_ref
+exchange
+c_h_init
+c_rate
+charge/discharge
+rate
+default
+general
+par
+reactions
+cases
+case
+c-rate
+batbe
+@tag:batbe
+batterybinaryelectrolyte
+@type:batterybinaryelectrolyte
+@label:battery with binary electrolyte
+electricpotentialionicphase
+electricpotential
+fastassemblydiscretization_disc
+sep
+@tag:sep
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode: ni
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+h2o
+oh
+@label:porous electrode reaction: niooh + h2o + e- &lt;=&gt; ni
+2e
+@label:porous electrode reaction: 1/2 o2 + h2o + 2e- &lt;=&gt; 2 oh
+weak
+@tag:weak
+weakcontribution
+@type:weakcontribution
+inside
+@label:h+ diffusion inside positive electrode
+aux
+@tag:aux
+auxiliaryfield
+@type:auxiliaryfield
+intraparticle
+@label:intraparticle h+ concentration
+boundary
+condition
+particle
+outer
+@label:boundary condition for concentration at particle outer surface
+@label:porous electrode: cd
+@label:porous electrode reaction: cd + 2 oh- &lt;=&gt; cd
+bei
+@tag:bei
+internalelectrodesurface
+@type:internalelectrodesurface
+recombination
+@label:oxygen recombination at cd electrode
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+@label:electrode reaction: 1/2 o2 + h2o + 2e- &lt;=&gt; 2 oh
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+ec
+@tag:ec
+electrodecurrent
+@type:electrodecurrent
+@label:electrode current
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+diluted
+species
+@label:transport of diluted species
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+nflx
+@tag:nflx
+pec
+@tag:pec
+porouselectrodecoupling
+@type:porouselectrodecoupling
+coupling
+@label:porous electrode coupling: positive electrode
+rc
+@tag:rc
+reactioncoefficients
+@type:reactioncoefficients
+coefficients
+@label:reaction coefficients
+conc
+@tag:conc
+@type:concentration
+geom
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+batbe_pce1_pin1_xdim
+extra
+intercalation
+int
+@tag:int
+batbe_pce2_pin1_xdim
+var
+theta_n
+soc
+theta_p
+ch_surf
+intop
+@tag:intop
+integration
+@type:integration
+operator
+collector
+@label:integration operator for positive electrode current collector
+aveop
+@tag:aveop
+average
+@type:average
+@label:positive electrode average operator
+@label:negative electrode average operator
+material
+fixed
+spatial
+mesh
+pa
+@tag:pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+xdintop
+@tag:xdintop
+integral
+@label:extra dimension surface integral
+domain
+@label:extra dimension domain integral
+ad
+@tag:ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+batbe_pce1_pin1_xdim_pa
+@tag:batbe_pce1_pin1_xdim_pa
+batbe_pce1_pin1_xdim_ad
+@tag:batbe_pce1_pin1_xdim_ad
+batbe_pce2_pin1_xdim_pa
+@tag:batbe_pce2_pin1_xdim_pa
+batbe_pce2_pin1_xdim_ad
+@tag:batbe_pce2_pin1_xdim_ad
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+koh
+liquid
+@label:koh
+interpolation
+@type:interpolation
+@label:interpolation
+electrolyteconductivity
+conductivity
+speciesproperties
+comp
+component
+xdim
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+@tag:param
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+primary
+@label:current distribution initialization: primary
+secondary
+@label:current distribution initialization: secondary
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_batbe_pce2_c
+@tag:comp1_batbe_pce2_c
+field
+@type:field
+dissolving-depositing
+@label:dissolving-depositing species concentration
+comp1_c_o
+@tag:comp1_c_o
+c_o
+@label:concentration
+comp1_ch
+@tag:comp1_ch
+auxiliary
+variable
+ch
+@label:auxiliary dependent variable ch
+comp1_cl
+@tag:comp1_cl
+salt
+cl
+@label:electrolyte salt concentration
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp1_batbe_ec1_phis
+@tag:comp1_batbe_ec1_phis
+state
+@type:state
+@label:electric potential on boundary
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+merged
+stopcondition
+@type:stopcondition
+stop
+@label:stop condition
+solutions
+epsilon_3_init
+sign
+@label:c_h_init=104.2, epsilon_3_init=0.6365, sign=-1, c_rate
+@label:c_h_init=52098, epsilon_3_init=0.46587, sign=1, c_rate
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+respect
+@label:discharge: boundary electrode potential with respect to ground
+glob
+@tag:glob
+global
+@type:global
+@label:global
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:electrode potential with respect to ground
+@label:charge: boundary electrode potential with respect to ground
+hydration
+level
+@label:charge: average positive electrode hydration level
+volume
+fraction
+@label:charge: average negative electrode volume fraction
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:batbe
+@study:time
+@param:group
+@param:par
+@param:paramCase
+@param:case
+@geom:geom
+@extraDim:pa
+@geom:i
+@extraDim:xdintop
+@extraDim:selection
+@mesh:mesh
+@mesh:dis
+@mesh:selection
+@extraDim:ad
+@expr:var
+@expr:selection
+@cpl
+@cpl:intop
+@cpl:selection
+@cpl:aveop
+@material:mat
+@material:materialmodel
+@material:func
+@material:int
+@material:ElectrolyteConductivity
+@material:SpeciesProperties
+@nodeGroup:grp
+@physics:tds
+@study:param
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_phis
+@sol:comp1_batbe_ec1_phis
+@sol:comp1_cl
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:t
+@sol:aDef
+@sol:sl
+@batch:p
+@batch:so
+@sol:comp1_c_O
+@sol:comp1_cH
+@result:pg
+@result:glob
+@result:lngr
+@result:selection
+grp
+@tag:grp
+physics
+@type:physics
+@label:intraparticle diffusion of h
+res
+soldata

@@ -1,0 +1,1075 @@
+steam
+reformer
+example
+solves
+3d
+model
+serving
+stationary
+fuel-cell
+unit
+with
+hydrogen
+tightly
+coupled
+system
+mass
+energy
+momentum
+equations
+used
+describe
+readily
+set
+up
+using
+predefined
+physics
+interfaces
+chemical
+reaction
+engineering
+module
+steam_reformer
+mph
+param
+parameters
+u_in_tubes
+inlet
+velocity
+heating
+tubes
+p_ref
+reference
+pressure
+h_j
+heat
+transfer
+coefficient
+jacket
+w_co2_in
+weight
+fraction
+carbon
+dioxide
+cp_foam
+capacity
+insulating
+foam
+dens_pm
+density
+porous
+matrix
+ea
+arrhenius
+activation
+porosity
+void
+bed
+length
+tr
+tube
+radius
+default
+chem
+@tag:chem
+chemistry
+@type:chemistry
+@label:chemistry
+c3h
+@tag:c3h
+specieschem
+@type:specieschem
+species
+@label:species: c3h
+h2o
+@tag:h2o
+@label:species: h2o
+@tag:h
+@label:species: h
+co
+@tag:co
+@label:species: co
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+gt
+@label:1: c3h8 + 6 h2o =&gt; 10 h2 + 3 co
+lt;=&gt
+@label:2: co + h2o &lt;=&gt; co2 + h
+tcs
+@tag:tcs
+concentratedspecies
+@type:concentratedspecies
+transport
+concentrated
+@label:transport of concentrated species in bed
+massfraction
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+molar
+masses
+@label:species molar masses
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+fluid
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+@label:porous matrix
+reac
+@tag:reac
+reactionsources
+@type:reactionsources
+sources
+@label:reaction sources
+@tag:in
+inflow
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law in bed
+nf
+@tag:nf
+noflow
+@type:noflow
+flow
+@label:no flow
+inl
+@tag:inl
+@type:inlet
+@label:inlet
+outlet
+@type:outlet
+@label:outlet
+sym
+@tag:sym
+symmetry
+@type:symmetry
+@label:symmetry
+ht
+@tag:ht
+porousmediaheattransfer
+@type:porousmediaheattransfer
+media
+@label:heat transfer in porous media in bed
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+@label:heat flux
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+@label:heat source
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow in heating tubes
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inletboundary
+@type:inletboundary
+outletboundary
+@type:outletboundary
+countercurrent
+@label:outlet countercurrent
+co-current
+@label:outlet co-current
+heattransferinfluids
+@type:heattransferinfluids
+@label:heat transfer in heating tubes
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:temperature at inlet
+@label:outflow countercurrent
+@label:outflow co-current
+@label:heat flux to bed
+geom
+geometry
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+work_plane
+sequence2d
+@tag:c
+circle
+@type:circle
+@label:circle
+@label:tubes outlet
+sketchobject
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+uni
+@tag:uni
+union
+@type:union
+@label:union
+compose
+@type:compose
+@label:compose
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+@label:bed inlet
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:jacket
+catalytic
+@label:catalytic bed
+@label:heating tubes
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+intsel
+@tag:intsel
+intersectionselection
+@type:intersectionselection
+bed/jacket
+@label:bed/jacket
+tubes/bed
+@label:tubes/bed
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+cylinder
+selection
+@label:cylinder selection
+@label:jacket symmetry
+@label:tubes symmetry
+@label:bed symmetry
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+inlets
+outlets
+@label:inlets and outlets
+@label:tubes inlet
+@label:bed outlet
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+jacket/ambient
+@label:jacket/ambient
+wp1_c
+edg
+wp1_adjsel
+pmat1_solid1_xdim
+extra
+dimension
+@tag:i
+point
+@type:point
+@label:point
+var
+variables
+j_in_c3h
+rate
+j_in_co
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+geom1_wp1_c2_pnt
+@tag:geom1_wp1_c2_pnt
+fromsequence
+@type:fromsequence
+@label:tubes outlet (work plane
+geom1_wp1_c2_edg
+@tag:geom1_wp1_c2_edg
+geom1_wp1_c2_bnd
+@tag:geom1_wp1_c2_bnd
+geom1_wp1_adjsel
+@tag:geom1_wp1_adjsel
+@label:bed inlet (work plane
+geom1_ext1_pnt
+@tag:geom1_ext1_pnt
+geom1_ext1_edg
+@tag:geom1_ext1_edg
+geom1_ext1_bnd
+@tag:geom1_ext1_bnd
+geom1_ext1_dom
+@tag:geom1_ext1_dom
+geom1_ext2_pnt
+@tag:geom1_ext2_pnt
+geom1_ext2_edg
+@tag:geom1_ext2_edg
+geom1_ext2_bnd
+@tag:geom1_ext2_bnd
+geom1_ext2_dom
+@tag:geom1_ext2_dom
+geom1_ext3_pnt
+@tag:geom1_ext3_pnt
+geom1_ext3_edg
+@tag:geom1_ext3_edg
+geom1_ext3_bnd
+@tag:geom1_ext3_bnd
+geom1_ext3_dom
+@tag:geom1_ext3_dom
+geom1_intsel
+@tag:geom1_intsel
+geom1_difsel
+@tag:geom1_difsel
+geom1_sel
+@tag:geom1_sel
+pmat1_solid1_xdim_pa
+@tag:pmat1_solid1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+pmat1_solid1_xdim_ad
+@tag:pmat1_solid1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+mat
+@tag:mat
+common
+@type:common
+catalyst
+@label:catalyst
+@label:insulation
+air
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+pmat
+@tag:pmat
+porousmedia
+@type:porousmedia
+@label:porous material
+poro
+@type:solid
+comp
+component
+tdp
+thermodynamics
+pp
+@tag:pp
+builtinpropertypackage
+@type:builtinpropertypackage
+@label:gas system
+const1_chem
+@tag:const1_chem
+compoundconstant
+@type:compoundconstant
+@label:molar mass
+const2_chem
+@tag:const2_chem
+lennard-jones
+diameter
+potential
+characteristic
+@label:lennard-jones diameter (potential characteristic length
+const3_chem
+@tag:const3_chem
+minimum
+@label:lennard-jones energy (potential energy minimum
+const4_chem
+@tag:const4_chem
+dipole
+moment
+@label:dipole moment
+const5_chem
+@tag:const5_chem
+const6_chem
+@tag:const6_chem
+const7_chem
+@tag:const7_chem
+const8_chem
+@tag:const8_chem
+const9_chem
+@tag:const9_chem
+const10_chem
+@tag:const10_chem
+const11_chem
+@tag:const11_chem
+const12_chem
+@tag:const12_chem
+const13_chem
+@tag:const13_chem
+const14_chem
+@tag:const14_chem
+const15_chem
+@tag:const15_chem
+const16_chem
+@tag:const16_chem
+const17_chem
+@tag:const17_chem
+const18_chem
+@tag:const18_chem
+const19_chem
+@tag:const19_chem
+const20_chem
+@tag:const20_chem
+one1_chem
+@tag:one1_chem
+onephaseproperty
+@type:onephaseproperty
+@label:density
+one2_chem
+@tag:one2_chem
+enthalpy
+formation
+@label:enthalpy of formation
+one3_chem
+@tag:one3_chem
+@label:enthalpy
+one4_chem
+@tag:one4_chem
+entropy
+@label:entropy of formation
+one5_chem
+@tag:one5_chem
+@label:heat capacity
+one6_chem
+@tag:one6_chem
+ratio
+cp/cv
+@label:heat capacity ratio (cp/cv
+one7_chem
+@tag:one7_chem
+maxwell
+stefan
+diffusivity
+@label:maxwell stefan diffusivity
+one8_chem
+@tag:one8_chem
+one9_chem
+@tag:one9_chem
+one10_chem
+@tag:one10_chem
+one11_chem
+@tag:one11_chem
+one12_chem
+@tag:one12_chem
+one13_chem
+@tag:one13_chem
+one14_chem
+@tag:one14_chem
+one15_chem
+@tag:one15_chem
+one16_chem
+@tag:one16_chem
+one17_chem
+@tag:one17_chem
+gibbs
+free
+@label:gibbs free energy of formation
+one18_chem
+@tag:one18_chem
+one19_chem
+@tag:one19_chem
+one20_chem
+@tag:one20_chem
+one21_chem
+@tag:one21_chem
+one22_chem
+@tag:one22_chem
+conductivity
+@label:thermal conductivity
+one23_chem
+@tag:one23_chem
+viscosity
+@label:viscosity
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+fq
+@tag:fq
+freequad
+@type:freequad
+quad
+@label:free quad
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+vtx
+@tag:vtx
+vertex
+@type:vertex
+@label:vertex
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+t_in_tubes
+900k
+stat
+@tag:stat
+@type:stationary
+@label:stationary
+@tag:param
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+field
+@type:field
+magnitude
+average
+uave
+@label:velocity magnitude, average
+comp1_p_sr
+@tag:comp1_p_sr
+p_sr
+@label:pressure
+comp1_p_tubes
+@tag:comp1_p_tubes
+p_tubes
+comp1_t_sr
+@tag:comp1_t_sr
+t_sr
+comp1_t_tubes
+@tag:comp1_t_tubes
+t_tubes
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_w_c3h
+@tag:comp1_w_c3h
+w_c3h
+@label:mass fraction
+comp1_w_co
+@tag:comp1_w_co
+w_co
+comp1_w_h
+@tag:comp1_w_h
+w_h
+comp1_tcs_in1_wbnd_w_c3h
+@tag:comp1_tcs_in1_wbnd_w_c3h
+state
+@type:state
+wbnd_w_c3h
+@label:boundary mass fraction
+comp1_tcs_in1_wbnd_w_h
+@tag:comp1_tcs_in1_wbnd_w_h
+wbnd_w_h
+comp1_tcs_in1_wbnd_w_co
+@tag:comp1_tcs_in1_wbnd_w_co
+wbnd_w_co
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+iterative
+@type:iterative
+amg
+@label:amg, pressure
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sl
+@tag:sl
+sorline
+@type:sorline
+sor
+line
+@label:sor line
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+comp1_spf_inl1_pinlfdf_sel
+@tag:comp1_spf_inl1_pinlfdf_sel
+help
+ode
+variable
+developed
+pinlfdf_sel
+@label:help ode variable for fully developed flow
+@label:direct, fluid flow variables
+fractions
+@label:direct, mass fractions
+solutions
+@label:t_in_tubes
+result
+results
+dset
+@tag:dset
+@type:solution
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+mir
+@tag:mir
+mirror3d
+@type:mirror3d
+mirror
+@label:countercurrent mirror
+@label:co-current mirror
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:average temperature in bed outflow
+@label:average temperature in heat tube outflow
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:w_c3h8 and t at l
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup1d
+@type:plotgroup1d
+@label:countercurrent mass fractions
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:mass fraction, c3h8 countercurrent
+@type:selection
+@label:selection
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+concentration
+@label:concentration, h2 countercurrent
+@label:gas density, countercurrent 900 k
+@label:temperature countercurrent
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+@label:velocity countercurrent
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+@label:arrow volume
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:co-current mass fractions, 1000 k
+@label:mass fraction, c3h8 co-current 1000 k
+@label:concentration, h2 co-current 1000 k
+@label:gas density, co-current 1000 k
+@label:temperature, co-current 1000 k
+@label:velocity co-current, 1000 k
+along
+midline
+@label:w_c3h8 and w_co along bed midline
+@label:c3h8 countercurrent 900 k
+@label:c3h8 co-current 900 k
+@label:c3h8 co-current 1000 k
+@label:co countercurrent 900 k
+@label:co co-current 900 k
+@label:co co-current 1000 k
+profiles
+reactor
+@label:temperature profiles along reactor
+@label:t_sr countercurrent 900 k
+@label:t_sr co-current 900 k
+@label:t_sr co-current 1000 k
+@label:t_tubes countercurrent
+@label:t_tubes co-current 900 k
+@label:t_tubes co-current 1000 k
+geommanagernative
+hist
+@tdp:pp
+@geom:geom
+@physics:chem
+@cpl
+@cpl:intop
+@cpl:selection
+@material:mat
+@material:selection
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:pmat
+@physics:tcs
+@physics:dl
+@physics:ht
+@physics:spf
+@multiphysics
+@multiphysics:nitf
+@expr:var
+@material:solid
+@mesh:mesh
+@mesh:fq
+@mesh:selection
+@mesh:size
+@mesh:ftri
+@mesh:bl
+@mesh:blp
+@mesh:swe
+@mesh:dis
+@mesh:statistics
+@study:std
+@study:stat
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sl
+@sol:po
+@sol:cs
+@sol:d
+@sol:ll
+@sol:so
+@sol:sc
+@sol:fc
+@study:param
+@dataset:cpl
+@result:pg
+@result:surf
+@result:con
+@view:view
+@result:lngr
+@result:selection
+@dataset:mir
+@result:sel
+@result:mtrl
+@result:slc
+@result:tran
+@result:arws
+@result:vol
+@result:arwv
+@result:col
+@batch:p
+@batch:so
+@nodeGroup:grp
+@numerical
+@numerical:gev
+@table:tbl
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:countercurrent, 900 k
+@label:co-current, 1000 k
+res
+soldata

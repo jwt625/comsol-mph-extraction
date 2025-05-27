@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Electroacoustic_Transducers/mems_microphone_slip_wall.mph",
+  "source_size": 3643296,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.429",
+  "total_files_in_archive": 245
+}

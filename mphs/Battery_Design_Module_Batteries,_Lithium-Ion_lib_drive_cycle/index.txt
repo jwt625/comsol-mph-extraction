@@ -1,0 +1,469 @@
+1d
+lithium-ion
+battery
+drive-cycle
+monitoring
+example
+demonstrates
+interface
+computing
+several
+key
+properties
+during
+load
+cycle
+typical
+hybrid
+electric
+vehicle
+instance
+cell
+voltage
+open-circuit
+electrode
+potential
+state
+charge
+losses
+model
+lib_drive_cycle
+mph
+param
+parameters
+epss_neg
+active
+volume
+fraction
+negative
+epss_binder_pos
+binder
+positive
+epsl_pos
+electrolyte
+rp_neg
+particle
+radius
+cs_max_pos
+maximum
+concentration
+l_sep
+separator
+thickness
+l_ccs
+current
+collectors
+soc_init
+initial
+soc
+default
+liion
+@tag:liion
+lithiumionbatterymph
+@type:lithiumionbatterymph
+@label:lithium-ion battery
+electricpotentialionicphase
+electricpotential
+fastassemblydiscretization_disc
+socicd
+@tag:socicd
+socandinitialchargedistribution
+@type:socandinitialchargedistribution
+distribution
+@label:soc and initial charge distribution
+neges
+@tag:neges
+negelectrodeselection
+@type:negelectrodeselection
+selection
+@label:negative electrode selection
+poses
+@tag:poses
+poselectrodeselection
+@type:poselectrodeselection
+@label:positive electrode selection
+sep
+@tag:sep
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode - negative
+pin
+@tag:pin
+particleintercalation
+@type:particleintercalation
+intercalation
+@label:particle intercalation
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+@label:porous electrode reaction
+@label:porous electrode - positive
+egnd
+@tag:egnd
+electricground
+@type:electricground
+ground
+@label:electric ground
+ecd
+@tag:ecd
+electrodenormalcurrentdensity
+@type:electrodenormalcurrentdensity
+density
+@label:electrode current density
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+liion_pce1_pin1_xdim
+extra
+dimension
+int
+@tag:int
+liion_pce2_pin1_xdim
+interpolation
+@type:interpolation
+@label:interpolation
+var
+variables
+sol_neg
+degree
+lithiation
+e_ocp_neg
+e_pol_tot
+total
+polarization
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:negative electrode
+@label:positive electrode
+cc
+@label:negative cc
+@label:positive cc
+liion_pce1_pin1_xdim_pa
+@tag:liion_pce1_pin1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+liion_pce1_pin1_xdim_ad
+@tag:liion_pce1_pin1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+liion_pce2_pin1_xdim_pa
+@tag:liion_pce2_pin1_xdim_pa
+liion_pce2_pin1_xdim_ad
+@tag:liion_pce2_pin1_xdim_ad
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+lipf
+ec:emc
+liquid
+li-ion
+@label:lipf6 in 3:7 ec:emc (liquid, li-ion battery
+electrolyteconductivity
+conductivity
+speciesproperties
+species
+electrolytesaltconcentration
+salt
+graphite
+lixc
+mcmb
+@label:graphite, lixc6 mcmb (negative, li-ion battery
+electrodepotential
+equilibrium
+operationalsoc
+operational
+ic
+strain
+equilibriumconcentration
+nmc
+lini
+33mn
+33co
+33o
+@label:nmc 111, lini0.33mn0.33co0.33o2 (positive, li-ion battery
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_cl
+@tag:comp1_cl
+field
+@type:field
+cl
+@label:electrolyte salt concentration
+comp1_liion_pce1_csfast
+@tag:comp1_liion_pce1_csfast
+solid
+phase
+csfast
+@label:solid phase concentration
+comp1_liion_pce2_csfast
+@tag:comp1_liion_pce2_csfast
+comp1_liion_q_cell_init
+@tag:comp1_liion_q_cell_init
+capacity
+q_cell_init
+@label:initial battery cell capacity
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+point
+@tag:point
+@type:point
+probe
+@label:point probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+integral
+@type:integral
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+data
+@label:cell voltage probe data
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:cell voltage probe
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+boundary
+with
+respect
+@label:boundary electrode potential with respect to ground
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+@label:point graph
+average
+@label:cell and average electrode cell state of charge
+glob
+@tag:glob
+global
+@type:global
+@label:global
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+@label:line graph
+@label:electrode potential with respect to ground
+@label:cell voltage and load
+@label:total polarization and load
+levels
+@label:soc and lithiation levels
+potentials
+@label:positive electrode potentials
+@label:negative electrode potentials
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:liion
+@study:time
+@material:mat
+@material:materialmodel
+@material:func
+@material:ElectrolyteConductivity
+@material:SpeciesProperties
+@material:int
+@material:ElectrolyteSaltConcentration
+@geom:geom
+@material:ElectrodePotential
+@material:ic
+@material:OperationalSOC
+@material:EquilibriumConcentration
+@geom:i
+@material:selection
+@selection
+@selection:sel
+@common:cminpt
+@expr:var
+@probe
+@probe:point
+@probe:selection
+@table:tbl
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_phis
+@sol:comp1_cl
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:comp1_liion_pce2_cs
+@sol:comp1_liion_pce1_cs
+@sol:t
+@sol:aDef
+@result:pg
+@result:ptgr
+@result:selection
+@result:glob
+@result:lngr
+@func
+@func:int
+@sol:comp1_liion_pce1_csfast
+@sol:comp1_liion_pce2_csfast
+res
+soldata

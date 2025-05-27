@@ -1,0 +1,14 @@
+{
+  "source_file": "Uncertainty_Quantification_Module/Tutorials/bracket_uncertainty_quantification_fillet.mph",
+  "source_size": 18596179,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310468.886",
+  "total_files_in_archive": 54
+}

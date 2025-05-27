@@ -1,0 +1,530 @@
+analysis
+composite
+blade
+using
+multiple
+model
+method
+example
+demonstrates
+modeling
+sandwiched
+made
+up
+carbon–epoxy
+glass–vinylester
+pvc
+foam
+materials
+three
+different
+methods
+used
+sandwich
+structure
+layerwise
+theory
+equivalent
+single
+layer
+esl
+modal
+frequency-response
+analyses
+performed
+specified
+loading
+compared
+with
+traditional
+terms
+performance
+accuracy
+results
+including
+through-thickness
+stress
+distribution
+it
+shown
+accurate
+computationally
+expensive
+contrast
+less
+unable
+capture
+thickness
+overall
+seems
+best
+choice
+structures
+composite_blade_multiple_model_method
+mph
+param
+parameters
+th
+load
+magnitude
+default
+lshell
+@tag:lshell
+layeredshell
+@type:layeredshell
+layered
+shell
+@label:layered shell (multiple model method
+displacement
+dispextra_disc
+lshell_rd_disp
+lshell_rd_rot
+lshell_rig_disp
+lshell_rig_rot
+lshell_att_disp
+lshell_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+fl
+@tag:fl
+faceload
+@type:faceload
+face
+top
+@label:face load, top
+bottom
+@label:face load, bottom
+@tag:shell
+@type:shell
+@label:shell 1 (multiple model method
+dimensionless_displacement
+shell_rd_disp
+shell_rd_rot
+shell_rig_disp
+shell_rig_rot
+shell_att_disp
+shell_att_rot
+emm
+@tag:emm
+@type:elastic
+shls
+@tag:shls
+shelllocalsystem
+@type:shelllocalsystem
+local
+system
+@label:shell local system
+@tag:to
+thicknessoffset
+@type:thicknessoffset
+offset
+@label:thickness and offset
+llem
+@tag:llem
+layeredelastic
+@type:layeredelastic
+@label:linear elastic material, layered
+@label:shell 2 (multiple model method
+@label:layered shell (layerwise theory
+@label:shell (esl theory
+geom
+geometry
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+ls
+work_plane
+sequence2d
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+image
+@tag:image
+@type:geometry
+@label:geometry
+stlmat1_xdim
+extra
+dimension
+stack
+@tag:i
+interval
+@type:interval
+@label:interval
+spatial
+mesh
+stlmat1_xdim_pa
+@tag:stlmat1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+stlmat1_xdim_ad
+@tag:stlmat1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+lssh
+@tag:lssh
+layeredshellshellconnection
+@type:layeredshellshellconnection
+shell&#x2013;shell
+connection
+@label:layered shell&#x2013;shell connection
+mat
+@tag:mat
+common
+@type:common
+carbon&#x2013;epoxy
+@label:material: carbon&#x2013;epoxy
+transverseisotropic
+transversely
+isotropic
+lmat
+@tag:lmat
+layeredmaterial
+@type:layeredmaterial
+ce
+@label:layered material: ce
+glass&#x2013;vinylester
+@label:material: glass&#x2013;vinylester
+gv-[0/45/-45/90]_s
+@label:layered material: gv-[0/45/-45/90]_s
+@label:material: pvc foam
+pf
+@label:layered material: pf
+stlmat
+@tag:stlmat
+layeredmaterialstack
+@type:layeredmaterialstack
+@label:layered material stack
+stllmat
+@tag:stllmat
+layeredmaterialstacklink
+@type:layeredmaterialstacklink
+@label:carbon&#x2013;epoxy
+0/45/-45/90]_s
+@label:glass&#x2013;vinylester-1 [0/45/-45/90]_s
+@label:pvc foam
+@label:glass&#x2013;vinylester-2 [0/45/-45/90]_s
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+ls_edg
+@tag:ls_edg
+edge
+@type:edge
+@label:edge
+ls_dis
+@tag:ls_dis
+@type:distribution
+@label:distribution
+optsequence
+std
+study
+eigenfrequency
+eig
+@tag:eig
+@type:eigenfrequency
+@label:eigenfrequency
+frequency
+freq
+@tag:freq
+@type:frequency
+domain
+@label:frequency domain
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_ar
+@tag:comp1_ar
+field
+@type:field
+normals
+ar
+@label:displacement of shell normals
+comp1_u
+@tag:comp1_u
+frames
+@label:material and geometry frames
+@label:displacement field
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:s
+stationary
+@type:stationary
+@label:stationary solver
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+dset
+@tag:dset
+@type:solution
+lshl
+@tag:lshl
+@label:layered material
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+maximum
+mises
+peak
+comparison
+@label:maximum mises peak stress comparison
+max
+@tag:max
+maxvolume
+@type:maxvolume
+volume
+@label:volume maximum
+@label:maximum displacement comparison
+@label:eigenfrequency comparison
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+mode
+shape
+@label:mode shape (multiple model method
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:mode shape (layerwise theory
+@label:mode shape (esl theory
+@label:mises peak stress
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+slice
+@label:displacement, slice
+lss
+@tag:lss
+layeredmaterialslice
+@type:layeredmaterialslice
+@label:layered material slice
+plotgroup1d
+@type:plotgroup1d
+@label:mises peak stress, through thickness
+thr
+@tag:thr
+throughthickness
+@type:throughthickness
+@label:through thickness
+geommanagernative
+hist
+@study:std
+@study:eig
+@physics:lshell
+@physics:shell
+@material:mat
+@material:lmat
+@geom:geom
+@geom:wp
+@geom:sequence2D
+@geom:ls
+@geom:ext
+@view:view
+@coordsys:sys
+@material:stlmat
+@material:stllmat
+@material:materialmodel
+@material:TransverseIsotropic
+@multiphysics
+@multiphysics:lssh
+@mesh:mesh
+@mesh:ftri
+@mesh:selection
+@mesh:size
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_ar
+@sol:e
+@sol:aDef
+@result:pg
+@result:surf
+@study:freq
+@sol:s
+@sol:p
+@sol:fc
+@dataset:lshl
+@result:lss
+@result:tlan
+@result:thr
+@result:selection
+@evaluationgroup:eg
+@evaluationgroup:max
+@evaluationgroup:gev
+@view:camera
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+shellsys
+@tag:shellsys
+vectorbase
+@type:vectorbase
+shell2sys
+@tag:shell2sys
+shell3sys
+@tag:shell3sys
+soldata

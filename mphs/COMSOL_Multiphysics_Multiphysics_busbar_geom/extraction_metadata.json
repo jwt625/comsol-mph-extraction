@@ -1,0 +1,14 @@
+{
+  "source_file": "COMSOL_Multiphysics/Multiphysics/busbar_geom.mph",
+  "source_size": 588501,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310268.959",
+  "total_files_in_archive": 23
+}

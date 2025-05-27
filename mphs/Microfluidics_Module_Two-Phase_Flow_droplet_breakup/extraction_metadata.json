@@ -1,0 +1,11 @@
+{
+  "source_file": "Microfluidics_Module/Two-Phase_Flow/droplet_breakup.mph",
+  "source_size": 16958,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310361.596",
+  "total_files_in_archive": 6
+}

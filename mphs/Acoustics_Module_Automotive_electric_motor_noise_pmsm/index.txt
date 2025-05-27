@@ -1,0 +1,1019 @@
+electric
+motor
+noise
+permanent
+magnet
+synchronous
+model
+analyzes
+generated
+during
+operation
+different
+speeds
+rotation
+type
+analyzed
+pmsm
+uses
+magnets
+rotor
+variable
+frequency
+current
+traveling
+stator
+generate
+torque
+electromagnetic
+forces
+vibrations
+excitation
+higher
+frequencies
+harmonics
+transient
+analysis
+used
+determine
+time
+domain
+fourier
+transform
+contributions
+vibroacoustic
+response
+casing
+acoustic
+radiation
+computed
+campbell
+plot
+showing
+main
+contributing
+various
+electric_motor_noise_pmsm
+mph
+param
+parameters
+r_stator
+outer
+radius
+air_gap
+gap
+angle_coil
+angle
+coil
+h_coil_angle
+thickness
+inner
+part
+r_shaft
+shaft
+ltransv
+axial
+length
+rpm_idle
+idle
+rotational
+engine
+t_tot
+period
+repetition
+harmonic
+computation
+n_harmonics
+number
+included
+fmax
+maximum
+harm_exc
+excited
+eta_struct
+structural
+damping
+ratio
+default
+geometry
+par
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+als
+@tag:als
+ampereslawsolid
+@type:ampereslawsolid
+iron
+domains
+@label:iron domains
+@label:magnets a
+@label:magnets b
+@tag:coil
+@type:coil
+coils
+@label:coils a
+rcd
+@tag:rcd
+reversecoilgroupdomain
+@type:reversecoilgroupdomain
+reversed
+direction
+@label:reversed current direction
+@label:coils b
+@label:coils c
+cont
+@tag:cont
+continuity
+@type:continuity
+@label:continuity
+fcal
+@tag:fcal
+forcecalculation
+@type:forcecalculation
+force
+calculation
+@label:force calculation rotor
+@label:force calculation stator
+wb
+@tag:wb
+weakformboundarypde
+@type:weakformboundarypde
+weak
+form
+boundary
+pde
+@label:weak form boundary pde
+dimensionless
+wfeq
+@tag:wfeq
+weakformpde
+@type:weakformpde
+@label:weak form pde
+acpr
+@tag:acpr
+pressureacoustics
+@type:pressureacoustics
+pressure
+acoustics
+@label:pressure acoustics, frequency domain
+fpam
+@tag:fpam
+frequencypressureacousticsmodel
+@type:frequencypressureacousticsmodel
+@label:pressure acoustics
+shb
+@tag:shb
+soundhard
+@type:soundhard
+sound
+hard
+wall
+@label:sound hard boundary
+efc
+@tag:efc
+exteriorfieldcalculation
+@type:exteriorfieldcalculation
+exterior
+field
+@label:exterior field calculation
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+dmp
+@tag:dmp
+@type:damping
+@label:damping
+@tag:free
+@type:free
+@label:free
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+load
+@label:boundary load
+geom
+geomnative
+cro
+@tag:cro
+crosssection
+@type:crosssection
+cross
+section
+@label:cross section
+uni
+cross_section
+ext
+fin
+@tag:fin
+finalize
+@type:finalize
+assembly
+@label:form assembly
+form_union/assembly
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+imp
+@tag:imp
+import
+@type:import
+@label:import
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+fil
+work_plane
+sequence2d
+@tag:c
+circle
+@type:circle
+@label:circle
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+sketchobject
+@tag:uni
+union
+@type:union
+@label:union
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+obj
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:iron
+@label:coils
+aluminum
+@label:aluminum
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+structure
+@label:structure
+interior
+cavity
+@label:interior cavity
+pml
+@label:pml
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+air
+@label:air
+loaded
+boundaries
+@label:loaded boundaries
+@label:fixed boundaries
+meshed
+@label:meshed section
+sweep
+@label:sweep domain
+tetrahedral
+@label:tetrahedral domains
+@tag:an
+analytic
+@type:analytic
+curve
+@label:torque curve
+revolutions
+ramp
+@label:revolutions ramp
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+var
+variables
+rpm
+p_mic
+absolute
+microphone
+genext
+@tag:genext
+generalextrusion
+@type:generalextrusion
+general
+extrusion
+@label:general extrusion
+spatial
+mesh
+geom2_sel
+@tag:geom2_sel
+fromsequence
+@type:fromsequence
+geom2_unisel
+@tag:geom2_unisel
+geom2_comsel
+@tag:geom2_comsel
+explicit
+@type:explicit
+@label:shaft
+laminated
+@label:laminated rotor
+@label:magnets
+@label:inner air gap
+@label:rotor
+rotating
+parts
+@label:rotating parts
+com
+@tag:com
+complement
+@type:complement
+@label:fixed parts
+@label:outer air gap
+@label:exterior air
+@label:casing
+dif
+@tag:dif
+difference
+@type:difference
+@label:stator forces
+disk
+@tag:disk
+@type:disk
+external
+@label:external boundaries
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:adjacent to rotor forces
+@label:adjacent to stator forces
+@label:force calculation
+gaps
+@label:adjacent to air gaps and coils
+@label:force calculation domains
+@label:adjacent to air gap in the stator
+ap
+identity
+pair
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview3d
+@type:modelview3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rotatingdomain
+@type:rotatingdomain
+@label:rotating domain
+asb
+@tag:asb
+acousticstructureboundary
+@type:acousticstructureboundary
+acoustic&#x2013;structure
+@label:acoustic&#x2013;structure boundary
+mat
+@tag:mat
+common
+@type:common
+soft
+without
+losses
+@label:soft iron (without losses
+bhcurve
+b-h
+bh
+@tag:bh
+effectivebhcurve
+effective
+bheff
+@tag:bheff
+copper
+@label:copper
+enu
+young's
+modulus
+poisson's
+linzres
+linearized
+resistivity
+sintered
+ndfeb
+@label:n40 (sintered ndfeb
+remanentfluxdensity
+remanent
+flux
+density
+6063-t
+@label:aluminum 6063-t
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@label:analytic
+@tag:k
+cs
+@tag:cs
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+steel
+aisi
+@label:steel aisi
+@label:coil
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+meshnative
+@type:mesh
+@label:mesh
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+cpf
+@tag:cpf
+copyface
+@type:copyface
+copy
+face
+@label:copy face
+swe
+@tag:swe
+@type:sweep
+swept
+@label:swept
+ftet
+@tag:ftet
+freetet
+@type:freetet
+@label:free tetrahedral
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+fft
+tffft
+@tag:tffft
+timetofreqfft
+@type:timetofreqfft
+@label:time to frequency fft
+@tag:param
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+3rd
+hz
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+@type:field
+vector
+potential
+frame
+@label:spatial frame
+comp1_fx
+@tag:comp1_fx
+fx
+@label:dependent variable fx
+comp1_fy
+@tag:comp1_fy
+fy
+@label:dependent variable fy
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+@tag:fft
+@type:fft
+@label:fft solver
+comp2_p
+@tag:comp2_p
+@label:acoustic pressure
+comp2_u
+@tag:comp2_u
+@label:displacement field
+@label:parametric
+@tag:d
+suggested
+merged
+@label:suggested direct solver
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ssdef
+@tag:ssdef
+segregatedstep
+@type:segregatedstep
+step
+@label:segregated step
+ss
+@tag:ss
+solutions
+@label:harm_exc
+result
+results
+dset
+@tag:dset
+@type:solution
+grid
+@tag:grid
+grid1d
+@type:grid1d
+1d
+@label:grid 1d
+@tag:plot
+@type:plot
+left
+channel
+signal
+@label:left channel acoustic signal
+right
+@label:right channel acoustic signal
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+1st
+@label:pressure - revolutions - 1st harmonic
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+2nd
+@label:pressure - revolutions - 2nd harmonic
+@label:pressure - revolutions - 3rd harmonic
+4th
+@label:pressure - revolutions - 4th harmonic
+5th
+@label:pressure - revolutions - 5th harmonic
+6th
+@label:pressure - revolutions - 6th harmonic
+7th
+@label:pressure - revolutions - 7th harmonic
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+norm
+@label:magnetic flux density norm
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+@label:arrow line
+plotgroup1d
+@type:plotgroup1d
+selected
+points
+@label:electromagnetic forces in selected points, time domain
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+point
+graph
+@label:point graph
+@label:electromagnetic forces in selected points, fft
+normalized
+first
+@label:electromagnetic forces in selected points, fft , normalized to first harmonic
+@label:electromagnetic forces, fft
+@tag:line
+@type:line
+@label:line
+diagram
+@label:campbell diagram, first microphone
+glob
+@tag:glob
+@type:global
+@label:global
+second
+@label:campbell diagram, second microphone
+plotgroup3d
+@type:plotgroup3d
+exterior-field
+level
+@label:exterior-field sound pressure level
+rp
+@tag:rp
+radiationpattern
+@type:radiationpattern
+pattern
+@label:radiation pattern
+@label:acoustic signal
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:left channel
+@label:right channel
+@label:displacement and acoustic pressure
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:isosurface
+selection
+@type:selection
+@label:selection
+spl
+@label:spl and radiation pattern
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+loads
+@label:boundary loads
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+@label:arrow surface
+geommanagernative
+hist
+@physics:wb
+@study:std
+@study:stat
+@physics:mf
+@geom:geom
+@view:view
+@geom:fin
+@param:group
+@param:par
+@selection
+@selection:sel
+@selection:uni
+@selection:com
+@selection:dif
+@selection:disk
+@selection:adj
+@expr:var
+@cpl
+@cpl:genext
+@cpl:selection
+@common:rot
+@common:selection
+@material:mat
+@material:materialmodel
+@material:BHCurve
+@material:func
+@material:EffectiveBHCurve
+@material:BH
+@material:BHeff
+@material:selection
+@material:Enu
+@material:linzRes
+@material:RemanentFluxDensity
+@mesh:mesh
+@mesh:size
+@mesh:ftri
+@mesh:selection
+@mesh:bl
+@mesh:blp
+@study:time
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:t
+@sol:aDef
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@result:arwl
+@result:ptgr
+@study:tffft
+@sol:fft
+@result:line
+@nodeGroup:grp
+@physics:acpr
+@physics:solid
+@multiphysics
+@multiphysics:asb
+@multiphysics:selection
+@mesh:cpf
+@mesh:source
+@mesh:destination
+@mesh:swe
+@mesh:ftet
+@mesh:dis
+@func
+@func:an
+@coordsys:pml
+@coordsys:selection
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@study:freq
+@study:param
+@sol:p
+@sol:d
+@sol:i
+@sol:mg
+@sol:dp
+@batch:p
+@batch:so
+@sol:se
+@sol:ssDef
+@sol:ss
+@result:glob
+@result:rp
+@evaluationgroup:eg
+@evaluationgroup:gev
+@func:int
+@dataset:grid
+@result:lngr
+@export
+@export:plot
+@result:iso
+@result:sel
+@result:arws
+@view:camera
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+cylindrical
+@type:cylindrical
+@label:cylindrical system
+@tag:pml
+@type:pml
+perfectly
+matched
+@label:perfectly matched layer
+grp
+@tag:grp
+@type:results
+@label:electromagnetic results
+@label:vibroacoustic results - all harmonics and frequencies
+@label:vibroacoustic results - 3rd harmonic 2360 hz
+definitions
+@type:definitions
+res
+soldata

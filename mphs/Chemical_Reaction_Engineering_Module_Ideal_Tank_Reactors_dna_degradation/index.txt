@@ -1,0 +1,200 @@
+degradation
+dna
+plasma
+delivery
+plasmid
+target
+sites
+major
+challenge
+field
+gene
+therapy
+example
+uses
+parameter
+estimation
+find
+rate
+constants
+three
+consecutive
+reactions
+involved
+typical
+process
+model
+dna_degradation
+mph
+param
+parameters
+forward
+constant
+c_sc_init
+initial
+concentration
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+reaction
+engineering
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+sc
+gt
+oc
+@label:1: sc =&gt; oc
+@tag:sc
+specieschem
+@type:specieschem
+species
+@label:species: sc
+@tag:oc
+@label:species: oc
+@label:2: oc =&gt; l
+@tag:l
+@label:species: l
+@label:3: l =&gt; f
+@tag:f
+@label:species: f
+h2o
+@tag:h2o
+@label:species: h2o
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+glso
+@tag:glso
+globalleastsquaresobjective
+@type:globalleastsquaresobjective
+global
+least-squares
+objective
+@label:global least-squares objective
+comp
+component
+conpar
+tdp
+thermodynamics
+optsequence
+std
+study
+lsqo
+@tag:lsqo
+lsqoptimization
+@type:lsqoptimization
+@label:parameter estimation
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+@tag:conpar
+controlstate
+@type:controlstate
+@label:forward rate constant
+@label:initial concentration
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@tag:o
+optimization
+@type:optimization
+solver
+@label:optimization solver
+@tag:t
+timeattrib
+@type:timeattrib
+time-dependent
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+probe
+@label:objective probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+@type:global
+simulation
+data
+@label:simulation data
+tblp
+@tag:tblp
+experimental
+@label:experimental data
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@common:glso
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+@study:lsqo
+@table:tbl
+@result:tblp
+@sol:o
+res
+soldata
+xmesh

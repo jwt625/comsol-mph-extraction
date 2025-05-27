@@ -1,0 +1,547 @@
+threshold
+gain
+calculations
+vertical-cavity
+surface-emitting
+lasers
+vcsels
+eigenfrequency
+study
+used
+find
+resonance
+frequency
+oxide-confined
+gaas-based
+laser
+vcsel
+simulations
+performed
+two
+steps
+regular
+analysis
+first
+good
+initial
+values
+subsequent
+nonlinear
+frequencies
+calculated
+different
+device
+geometries
+compare
+paper
+collecting
+results
+computational
+methods
+benchmark
+problem
+model
+vertical_cavity_surface_emitting_laser
+mph
+param
+parameters
+t_gaas_dbr
+thickness
+gaas
+dbr
+layer
+t_qw
+quantum
+t_algaas_oxide_window_second_layer
+algaas
+oxide
+window
+second
+n_bottom_dbr
+number
+pairs
+bottom
+t_bottom_dbr
+pos_oxide
+position
+n_algaas
+refractive
+index
+n_air
+air
+n_qw
+default
+geometry
+par
+general
+material
+ewfd
+@tag:ewfd
+electromagneticwavesfrequencydomain
+@type:electromagneticwavesfrequencydomain
+electromagnetic
+waves
+domain
+@label:electromagnetic waves, frequency domain
+electricfield
+wee
+@tag:wee
+waveequationelectric
+@type:waveequationelectric
+wave
+equation
+electric
+@label:wave equation, electric
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+pec
+@tag:pec
+perfectelectricconductor
+@type:perfectelectricconductor
+perfect
+conductor
+@label:perfect electric conductor
+init
+@tag:init
+@type:init
+@label:initial values
+sctr
+@tag:sctr
+scattering
+@type:scattering
+boundary
+condition
+@label:scattering boundary condition
+imp
+@tag:imp
+impedance
+@type:impedance
+@label:impedance boundary condition
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+ge
+@tag:ge
+globalequations
+@type:globalequations
+@label:frequency
+@label:gain
+ffd
+@tag:ffd
+farfielddomain
+@type:farfielddomain
+far-field
+@label:far-field domain
+ffc
+@tag:ffc
+farfieldcalculation
+@type:farfieldcalculation
+calculation
+@label:far-field calculation
+geom
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+pair
+@label:dbr pair
+part_instance
+storedlocalsubsequence
+copy
+@tag:r
+rectangle
+@type:rectangle
+@label:bottom layer
+sketchobject
+top
+@label:top layer
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+localparam
+local
+inputparam
+input
+pos_x
+horizontal
+baseunitsystem
+meter
+radian
+degree
+arr
+@tag:arr
+array
+@type:array
+@label:bottom dbr
+@label:top layer in bottom dbr
+lambda
+cavity
+@label:bottom gaas layer in lambda cavity
+qw
+@label:qw gain domain in lambda cavity
+loss
+@label:qw loss domain in lambda cavity
+@label:top gaas layer in lambda cavity
+@tag:if
+@type:if
+finite
+@label:if bottom algaas layer in oxide window is finite
+@label:bottom algaas layer in oxide window
+endif
+@tag:endif
+@type:endif
+end
+@label:end if bottom algaas layer in oxide window is finite
+alas
+@label:alas domain in oxide window
+alox
+@label:alox domain in oxide window
+@label:if second algaas layer in oxide window is finite
+@label:second algaas layer in oxide window
+@label:end if second algaas layer in oxide window is finite
+@label:top gaas layer in oxide window
+@label:top dbr
+substrate
+@label:gaas substrate
+@tag:c
+circle
+@type:circle
+@label:circle
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+csel
+layers
+pi1_r
+pi2_r
+@type:geometry
+@label:geometry
+part
+var
+variables
+kappa_qw
+imaginary
+intop
+@tag:intop
+integration
+@type:integration
+point
+evaluation
+@label:point evaluation
+componentcoupling
+@type:componentcoupling
+nonlocal_coupling
+@label:nonlocal_coupling
+fixed
+spatial
+mesh
+geom1_csel1_dom
+@tag:geom1_csel1_dom
+fromsequence
+@type:fromsequence
+@label:algaas layers
+geom1_csel2_dom
+@tag:geom1_csel2_dom
+@label:gaas layers
+geom1_csel3_pnt
+@tag:geom1_csel3_pnt
+@label:qw gain domain
+geom1_csel3_bnd
+@tag:geom1_csel3_bnd
+geom1_csel3_dom
+@tag:geom1_csel3_dom
+geom1_csel4_pnt
+@tag:geom1_csel4_pnt
+@label:qw loss domain
+geom1_csel4_bnd
+@tag:geom1_csel4_bnd
+geom1_csel4_dom
+@tag:geom1_csel4_dom
+geom1_csel5_pnt
+@tag:geom1_csel5_pnt
+@label:alas domain
+geom1_csel5_bnd
+@tag:geom1_csel5_bnd
+geom1_csel5_dom
+@tag:geom1_csel5_dom
+geom1_csel6_pnt
+@tag:geom1_csel6_pnt
+@label:alox domain
+geom1_csel6_bnd
+@tag:geom1_csel6_bnd
+geom1_csel6_dom
+@tag:geom1_csel6_dom
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+superstrate
+@label:air superstrate
+refractiveindex
+@type:material
+@label:material
+@label:gaas
+@label:algaas
+@label:qw gain
+@label:qw loss
+@label:alas
+@label:alox
+@label:air domain
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+optsequence
+std
+eig
+@tag:eig
+@type:eigenfrequency
+@label:eigenfrequency
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_e
+@tag:comp1_e
+field
+@type:field
+@label:electric field
+comp1_ewfd_eoop
+@tag:comp1_ewfd_eoop
+plane
+eoop
+@label:electric field out of plane
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+comp1_ewfd2_eoop
+@tag:comp1_ewfd2_eoop
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@tag:s
+@label:stationary solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp1_ewfd3_eoop
+@tag:comp1_ewfd3_eoop
+comp1_ewfd4_eoop
+@tag:comp1_ewfd4_eoop
+ddef
+@tag:ddef
+@label:direct
+fcdef
+@tag:fcdef
+result
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+eigenfrequencies
+@label:eigenfrequencies
+@label:gain evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+rp
+@tag:rp
+directivity
+@label:directivity
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+polargroup
+@type:polargroup
+far
+@label:2d far field
+radiationpattern
+@type:radiationpattern
+radiation
+pattern
+@label:radiation pattern
+exp
+@tag:exp
+export
+@type:export
+expressions
+@label:export expressions
+plotgroup3d
+@type:plotgroup3d
+@label:3d far field
+hist
+@geom:geom
+@study:std
+@study:eig
+@physics:ewfd
+@param:group
+@param:par
+@material:mat
+@material:selection
+@material:materialmodel
+@material:RefractiveIndex
+@expr:var
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@sol:aDef
+@sol:d
+@result:pg
+@result:surf
+@dataset:rev
+@numerical
+@numerical:gev
+@cpl
+@cpl:intop
+@cpl:selection
+@study:stat
+@sol:s
+@sol:fc
+@table:tbl
+@result:sel
+@result:selection
+@view:view
+@geom:r
+@geom:c
+@result:rp
+@result:exp
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

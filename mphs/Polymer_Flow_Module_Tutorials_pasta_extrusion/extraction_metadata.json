@@ -1,0 +1,11 @@
+{
+  "source_file": "Polymer_Flow_Module/Tutorials/pasta_extrusion.mph",
+  "source_size": 27735,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310399.133",
+  "total_files_in_archive": 6
+}

@@ -1,0 +1,637 @@
+ion
+energy
+distribution
+function
+capacitively
+coupled
+plasma
+reactor
+model
+computes
+iedf
+commercial
+results
+show
+good
+agreement
+with
+experimental
+data
+ccp_ion_energy_distribution_function
+mph
+param
+parameters
+prf
+default
+ptp
+@tag:ptp
+coldplasmatimeperiodic
+@type:coldplasmatimeperiodic
+time
+periodic
+@label:plasma, time periodic
+logelectrondensity_per
+logelectrondensity
+logelectronenergydensity_per
+logelectronenergydensity
+electricpotential_per
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:6: ars+ars=&gt;e+ar+ar
+ars+ar=&gt;ar+ar
+@label:7: ars+ar=&gt;ar+ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+@label:2: ar+=&gt;ar
+ars=&gt;ar
+@label:3: ars=&gt;ar
+@label:4: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+dct
+@tag:dct
+dielectriccontact
+@type:dielectriccontact
+dielectric
+contact
+@label:dielectric contact
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+@label:metal contact
+cpt
+@tag:cpt
+chargedparticletracing
+@type:chargedparticletracing
+charged
+particle
+tracing
+@label:charged particle tracing
+position
+velocity
+@type:wall
+pp
+@tag:pp
+particleproperties
+@type:particleproperties
+properties
+@label:particle properties
+ef
+@tag:ef
+electricforce
+@type:electricforce
+electric
+force
+@label:electric force
+col
+@tag:col
+collisions
+@type:collisions
+@label:collisions
+cex
+@tag:cex
+resonantchargeexchange
+@type:resonantchargeexchange
+resonant
+exchange
+@label:resonant charge exchange
+ela
+@tag:ela
+elastic
+@type:elastic
+@label:elastic
+relg
+@tag:relg
+releasegrid
+@type:releasegrid
+release
+grid
+@label:release from grid
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+uni
+@tag:uni
+union
+@type:union
+@label:union
+cha
+@tag:cha
+chamfer
+@type:chamfer
+@label:chamfer
+fil
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+pt
+@tag:pt
+point
+@type:point
+@label:point
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+mce
+@tag:mce
+meshcontroledges
+@type:meshcontroledges
+mesh
+control
+edges
+@label:mesh control edges
+mesh_control_edges
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+ptp_xdim
+extra
+dimension
+@tag:i
+interval
+@type:interval
+@label:interval
+pgeom_cpt
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+var
+variables
+mion
+material
+fixed
+spatial
+ptp_xdim_pa
+@tag:ptp_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+ptp_xdim_ad
+@tag:ptp_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+@type:size
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+tper
+@tag:tper
+timeperiodic
+@type:timeperiodic
+@label:time periodic
+tptd
+@tag:tptd
+timeperiodictotimedependent
+@type:timeperiodictotimedependent
+dependent
+@label:time periodic to time dependent
+@tag:time
+transient
+@type:transient
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+electron
+variable
+en
+@label:electron energy solution variable
+comp1_en_per
+@tag:comp1_en_per
+en_per
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_ne_per
+@tag:comp1_ne_per
+ne_per
+comp1_ptp_ar_1p_w
+@tag:comp1_ptp_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_ptp_ar_1p_w_per
+@tag:comp1_ptp_ar_1p_w_per
+w_per
+comp1_ptp_ars_w
+@tag:comp1_ptp_ars_w
+comp1_ptp_ars_w_per
+@tag:comp1_ptp_ars_w_per
+comp1_ptp_dct1_sigs
+@tag:comp1_ptp_dct1_sigs
+surface
+density
+sigs
+@label:surface charge density
+comp1_ptp_dct1_sigs_per
+@tag:comp1_ptp_dct1_sigs_per
+sigs_per
+comp1_ptp_mct1_jdep
+@tag:comp1_ptp_mct1_jdep
+total
+current
+jdep
+@label:total current density
+comp1_ptp_mct1_jdep_per
+@tag:comp1_ptp_mct1_jdep_per
+jdep_per
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+comp1_v_per
+@tag:comp1_v_per
+v_per
+comp1_ptp_mct1_vdcb_per
+@tag:comp1_ptp_mct1_vdcb_per
+state
+@type:state
+dc
+bias
+voltage
+vdcb_per
+@label:dc bias voltage
+comp1_ptp_mct1_va_per
+@tag:comp1_ptp_mct1_va_per
+amplitude
+va_per
+@label:voltage amplitude
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+pdef
+@tag:pdef
+parametric
+@type:parametric
+@label:parametric
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+ddef
+@tag:ddef
+@label:direct
+comp1_qcpt
+@tag:comp1_qcpt
+qcpt
+@label:particle position
+iterative
+@type:iterative
+@label:iterative
+ja
+@tag:ja
+jacobi
+@type:jacobi
+@label:jacobi
+result
+dset
+@tag:dset
+@type:solution
+part
+@tag:part
+@type:particle
+@label:particle
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+period
+averaged
+@label:electron density, period averaged
+surf
+@tag:surf
+@type:surface
+@label:surface
+temperature
+@label:electron temperature, period averaged
+@label:electric potential, period averaged
+capacitive
+power
+deposition
+@label:capacitive power deposition, period averaged
+plotgroup1d
+@type:plotgroup1d
+@label:current and voltage, metal contact
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:electron density
+@label:electron temperature
+glob
+@tag:glob
+@type:global
+@label:global
+trajectories
+@label:particle trajectories
+traj
+@tag:traj
+particletrajectories
+@type:particletrajectories
+color
+@type:color
+expression
+@label:color expression
+@label:ion energy distribution function
+hist
+@tag:hist
+histogram
+@type:histogram
+@label:histogram
+angular
+iaedf
+@label:ion angular energy distribution function
+geommanagernative
+@geom:geom
+@study:std
+@study:tper
+@physics:ptp
+@geom:r
+@geom:uni
+@geom:input
+@geom:selection
+@geom:cha
+@geom:point
+@geom:fil
+@geom:pt
+@geom:ls
+@geom:vertex
+@geom:mce
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:map
+@mesh:ftri
+@mesh:size
+@mesh:bl
+@mesh:blp
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_Ne_per
+@sol:comp1_V_per
+@sol:comp1_ptp_dct1_sigs_per
+@sol:comp1_ptp_mct1_Vdcb_per
+@sol:comp1_ptp_Ars_W_per
+@sol:comp1_ptp_mct1_Jdep_per
+@sol:comp1_En_per
+@sol:comp1_ptp_mct1_Va_per
+@sol:comp1_ptp_Ar_1p_W_per
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:dd
+@sol:ds
+@result:pg
+@result:surf
+@dataset:dset
+@result:lngr
+@result:selection
+@sol:pDef
+@study:tptd
+@sol:t
+@result:glob
+@physics:cpt
+@func
+@func:an
+@expr:var
+@study:time
+@dataset:part
+@result:traj
+@result:col
+@result:hist
+@numerical
+@numerical:gev
+@table:tbl
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

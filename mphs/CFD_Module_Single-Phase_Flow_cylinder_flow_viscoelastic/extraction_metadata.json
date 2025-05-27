@@ -1,0 +1,11 @@
+{
+  "source_file": "CFD_Module/Single-Phase_Flow/cylinder_flow_viscoelastic.mph",
+  "source_size": 22058,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.468",
+  "total_files_in_archive": 6
+}

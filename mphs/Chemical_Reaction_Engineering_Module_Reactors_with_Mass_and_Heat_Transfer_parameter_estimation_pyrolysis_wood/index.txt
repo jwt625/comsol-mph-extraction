@@ -1,0 +1,775 @@
+parameter
+estimation
+pyrolysis
+wood
+centimeter-sized
+particle
+presents
+fully
+coupled
+multiphysics
+problem
+with
+mass
+transfer
+fluid
+flow
+heat
+example
+model
+consists
+two
+parts
+first
+part
+demonstrates
+set
+up
+describing
+porous
+anisotropic
+sphere
+reaction
+scheme
+consisting
+five
+pseudospecies
+reactions
+used
+optimize
+using
+experimental
+data
+parameters
+estimated
+arrhenius
+constant
+heats
+external
+coefficient
+parameter_estimation_pyrolysis_wood
+mph
+param
+r_sample
+radius
+wooden
+sample
+d_w
+pore
+size
+mw_g
+molar
+pseudo
+species
+gas
+e_w
+emissivity
+k_c_across
+effective
+thermal
+conductivity
+char
+across
+fiber
+direction
+k_w_along
+along
+kappa_w_across
+permeability
+kappa_c_along
+t_gas
+temperature
+reactor
+hconv_lower
+lower
+bound
+physical
+hconv_opt
+initial
+value
+dh_t
+gt
+tar
+dh_c
+a_t
+frequency
+factor
+e_is
+activation
+energy
+a_c
+is-&gt
+e_c
+a_is
+a_is_opt
+control
+optimized
+a_is_opt_upper
+upper
+dh_t_upper
+dh_t_opt_lower
+dh_t_opt
+dh_c_lower
+dh_c_opt
+default
+properties
+par
+conditions
+tcs
+@tag:tcs
+concentratedspeciesinporousmedia
+@type:concentratedspeciesinporousmedia
+transport
+concentrated
+media
+@label:transport of concentrated species in porous media
+massfraction
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+masses
+@label:species molar masses
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+init
+@tag:init
+@type:init
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+sym
+@tag:sym
+@type:symmetry
+@label:symmetry
+reac
+@tag:reac
+reactionsources
+@type:reactionsources
+sources
+phase
+@label:reaction sources with phase transfer
+@label:reaction sources gas to gas
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law
+pressure
+nf
+@tag:nf
+noflow
+@type:noflow
+@label:no flow
+ms
+@tag:ms
+masssource
+@type:masssource
+source
+@label:mass source
+pr
+@tag:pr
+@type:pressure
+@label:pressure
+ht
+@tag:ht
+porousmediaheattransfer
+@type:porousmediaheattransfer
+@label:heat transfer in porous media
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+@label:heat flux
+hs
+@tag:hs
+heatsource
+@type:heatsource
+@label:heat source
+dode
+@tag:dode
+domainode
+@type:domainode
+domain
+odes
+daes
+@label:domain odes and daes
+dimensionless
+distributedode
+@type:distributedode
+distributed
+ode
+@label:distributed ode
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+ca
+@tag:ca
+circulararc
+@type:circulararc
+circular
+arc
+@label:circular arc
+circular_arc
+pt
+@tag:pt
+point
+@type:point
+middle
+@label:middle along
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+mce
+@tag:mce
+meshcontroledges
+@type:meshcontroledges
+mesh
+edges
+@label:mesh control edges
+mesh_control_edges
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+solid
+variables
+rho_b
+dry
+bulk
+density
+kappa_eff_across
+k_eff_across
+cp_c
+specific
+capacity
+intermediate
+eta
+degree
+k_g
+rate
+q_c
+production
+k_f
+pores
+cp_g
+boundary
+e_s
+surface
+change
+function
+composition
+e_mix
+condition
+material
+fixed
+spatial
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+glso
+@tag:glso
+globalleastsquaresobjective
+@type:globalleastsquaresobjective
+t_surface
+@label:t_surface
+t_mid
+@label:t_mid
+t_center
+@label:t_center
+@label:y
+comp
+component
+conpar
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+@type:size
+meshnative
+@tag:o
+optimization
+@type:optimization
+@label:optimization
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+forward
+based
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+lsqo
+@tag:lsqo
+lsqoptimization
+@type:lsqoptimization
+@label:parameter estimation
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_p
+@tag:comp1_p
+field
+@type:field
+comp1_rho_c
+@tag:comp1_rho_c
+variable
+rho_c
+@label:dependent variable rho_c
+comp1_rho_is
+@tag:comp1_rho_is
+rho_is
+@label:dependent variable rho_is
+comp1_rho_w
+@tag:comp1_rho_w
+rho_w
+@label:dependent variable rho_w
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_w_g
+@tag:comp1_w_g
+fraction
+w_g
+@label:mass fraction
+comp1_w_t
+@tag:comp1_w_t
+w_t
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct, pressure
+@tag:conpar
+controlstate
+@type:controlstate
+@label:control parameter to be optimized
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:a_is_opt=-0.82353, dh_c_opt=0.39368, dh_t_opt=0.84872, hconv_opt
+@tag:point
+probe
+@label:point probe surface
+@label:point probe middle
+center
+@label:point probe center
+dom
+@tag:dom
+@type:domain
+@label:domain probe y
+@tag:var
+globalvariable
+@type:globalvariable
+global
+@label:global variable probe a_is
+@label:global variable probe dh_c
+@label:global variable probe dh_t
+hconv
+@label:global variable probe hconv
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+avh
+@tag:avh
+average
+@type:average
+@label:domain probe y forward problem
+mir
+@tag:mir
+mirror2d
+@type:mirror2d
+mirror
+2d
+@label:mirror 2d
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+half
+@label:half sphere
+wave
+@label:heat wave
+@label:sample
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:values for optimized physical parameters
+tbl
+@tag:tbl
+table
+@type:table
+@label:experimental data: y
+@label:experimental data: t_surface
+t_middle
+@label:experimental data: t_middle
+@label:experimental data: t_center
+probes
+@label:probes parameter estimation
+objective
+@label:objective table
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+conservation
+check
+@label:mass conservation check
+int
+@tag:int
+intsurface
+@type:intsurface
+inside
+@label:gas and tar inside sample
+intline
+@type:intline
+leaving
+@label:gas and tar leaving sample
+@label:intermediate + char
+@label:wood
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:experimental data
+tblp
+@tag:tblp
+normalized
+@label:normalized solid mass
+@label:surface temperature
+@label:middle temperature
+@label:center temperature
+@label:forward model and experimental data: y and t_center
+exp
+@label:normalized solid mass (forward model
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+@label:center temperature (forward model
+@label:forward model and experimental data: t_surface and t_middle
+@label:surface temperature (forward model
+@label:middle temperature (forward model
+@label:optimized, forward model, and experimental data: t_surface and t_middle
+@label:optimized, forward model, and experimental data: y and t_center
+plotgroup3d
+@type:plotgroup3d
+@label:solid species
+surf
+@tag:surf
+@type:surface
+150s
+@label:150s wood
+@label:150s intermediate solid
+@label:150s char
+270s
+@label:270s wood
+@label:270s intermediate solid
+@label:270s char
+@label:410 s wood
+@label:410 s intermediate solid
+@label:410 s char
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:intermediate solid
+@label:char
+@label:150 s
+@label:270 s
+@label:410 s
+plotgroup2d
+@type:plotgroup2d
+qmass
+@label:t, qmass and q at 150 s
+@label:t
+qm
+@label:dl.qm
+@label:q
+@label:t, qmass and q at 270 s
+@label:t, qmass and q at 433 s
+velocity
+porosity
+@label:pressure, velocity, porosity, and normalized solid mass at 270 s
+relative
+@label:relative pressure
+total
+darcy
+magnitude
+@label:total darcy velocity magnitude
+@label:porosity
+pa/dl
+pref
+@label:dl.pa/dl.pref
+@label:dl.u
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+epsilon
+@label:epsilon
+shell
+@label:wood shell
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+internal
+@label:internal surface
+arrow
+@label:arrow surface
+ctbl
+@tag:ctbl
+colortable
+@type:colortable
+@label:intermediate
+geommanagernative
+hist
+@geom:geom
+@physics:dode
+@study:std
+@study:time
+@physics:tcs
+@physics:dl
+@physics:ht
+@param:group
+@param:par
+@expr:var
+@geom:c
+@geom:ca
+@geom:pt
+@geom:mce
+@geom:input
+@geom:selection
+@mesh:mesh
+@mesh:size
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:ftri
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sl
+@sol:po
+@sol:cs
+@sol:so
+@sol:comp1_p
+@sol:comp1_rho_c
+@sol:comp1_rho_is
+@sol:comp1_rho_w
+@sol:comp1_T
+@sol:comp1_w_g
+@sol:comp1_w_t
+@nodeGroup:grp
+@table:tbl
+@result:pg
+@result:tblp
+@probe
+@probe:dom
+@result:ptgr
+@result:selection
+@evaluationgroup:eg
+@evaluationgroup:int
+@evaluationgroup:selection
+@common:glso
+@probe:point
+@probe:selection
+@study:lsqo
+@batch:o
+@batch:p
+@batch:so
+@probe:var
+@numerical
+@numerical:gev
+@dataset:mir
+@dataset:rev
+@result:surf
+@colortable:ctbl
+@result:ann
+@view:view
+@view:camera
+@result:arws
+@result:mtrl
+@result:sel
+@view:lgt
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+definitions
+@type:definitions
+@label:probes for parameter estimation
+save
+res
+soldata
+xmesh
+savepoint

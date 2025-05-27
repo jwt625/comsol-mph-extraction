@@ -1,0 +1,506 @@
+zinc–bromine
+redox
+flow
+battery
+electrochemical
+energy
+storage
+technology
+suitable
+stationary
+applications
+compared
+chemistries
+zn-br
+cell
+potentially
+features
+lower
+cost
+higher
+densities
+better
+efficiencies
+during
+charge
+zinc
+metal
+deposited
+negative
+electrode
+whereas
+bromine
+produced
+positive
+tutorial
+models
+voltage
+production-consumption
+charge-discharge
+cycle
+model
+znbr_flow_battery
+mph
+param
+parameters
+a_cell
+area
+w_cf
+carbon
+felt
+width
+velocity
+sigmas_cf
+electric
+conductivity
+c0_br
+initial
+concentration
+br
+estimation
+eeq_ref_zn
+reference
+equilibrium
+potential
+d_br
+complex
+diffusivity
+av_cf
+active
+surface
+v_res
+reservoir
+tank
+volume
+t_charge
+charging
+time
+default
+tcd
+@tag:tcd
+tertiarycurrentdistributionnernstplanck
+@type:tertiarycurrentdistributionnernstplanck
+tertiary
+current
+distribution
+nernst-planck
+@label:tertiary current distribution, nernst-planck
+electricpotentialionicphase
+electricpotential
+dt2invdiscretization_disc
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+species
+charges
+@label:species charges
+ice
+@tag:ice
+electrolyte
+@type:electrolyte
+@label:electrolyte
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+sep
+@tag:sep
+separator
+@type:separator
+@label:separator
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode - negative
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+@label:porous electrode reaction
+@label:porous electrode - positive
+egnd
+@tag:egnd
+electricground
+@type:electricground
+ground
+@label:electric ground
+ec
+@tag:ec
+electrodecurrent
+@type:electrodecurrent
+@label:electrode current
+bei
+@tag:bei
+internalelectrodesurface
+@type:internalelectrodesurface
+internal
+@label:internal electrode surface
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+@label:electrode reaction
+@tag:in
+inflow
+@type:inflow
+@label:inflow
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+ge
+@tag:ge
+globalequations
+@type:globalequations
+global
+odes
+daes
+@label:global odes and daes - tank model
+equations
+@label:global equations
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+step
+@tag:step
+@type:step
+@label:step
+intop
+@tag:intop
+integration
+@type:integration
+posolyte
+outlet
+@label:integration - posolyte outlet
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:negative carbon felt
+@label:positive carbon felt
+inlet
+@label:posolyte inlet
+@label:posolyte outlet
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_cbr
+@tag:comp1_cbr
+field
+@type:field
+cbr
+@label:concentration
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp1_tcd_bei1_er1_iloc_lm
+@tag:comp1_tcd_bei1_er1_iloc_lm
+local
+density
+iloc_lm
+@label:local current density
+comp1_tcd_pce1_c
+@tag:comp1_tcd_pce1_c
+dissolving-depositing
+@label:dissolving-depositing species concentration
+comp1_tcd_ec1_phis
+@tag:comp1_tcd_ec1_phis
+state
+@type:state
+boundary
+@label:electric potential on boundary
+comp1_ode
+@tag:comp1_ode
+ode
+@tag:s
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+merged
+stopcondition
+@type:stopcondition
+stop
+condition
+@label:stop condition
+solutions
+i_app
+@label:i_app
+var
+@tag:var
+globalvariable
+@type:globalvariable
+variable
+probe
+@label:global variable probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+evaluation
+@label:global evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+vs
+@label:cell voltage vs time
+glob
+@tag:glob
+@type:global
+@label:global
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+@type:surface
+@label:surface
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+@label:electrolyte current density
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+line
+@tag:line
+@type:line
+@label:line
+with
+respect
+@label:electrode potential with respect to ground
+@label:electrode current density
+adjacent
+@label:electrode potential vs. adjacent reference
+@label:bromine concentration
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:tank concentration
+fraction
+@label:deposited zinc volume fraction
+geommanagernative
+hist
+@physics:tcd
+@physics:ge
+@study:std
+@study:cdi
+@study:time
+@geom:geom
+@geom:r
+@selection
+@selection:sel
+@cpl
+@cpl:intop
+@cpl:selection
+@mesh:mesh
+@mesh:map
+@mesh:dis
+@mesh:selection
+@probe
+@probe:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_tcd_ec1_phis
+@sol:comp1_phis
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:t
+@sol:va
+@result:pg
+@result:glob
+@result:surf
+@result:arws
+@result:col
+@result:line
+@result:str
+@numerical
+@numerical:gev
+@func
+@func:step
+@study:param
+@batch:p
+@batch:so
+@result:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+soldata

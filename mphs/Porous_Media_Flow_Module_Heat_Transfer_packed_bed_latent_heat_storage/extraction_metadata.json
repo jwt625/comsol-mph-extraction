@@ -1,0 +1,14 @@
+{
+  "source_file": "Porous_Media_Flow_Module/Heat_Transfer/packed_bed_latent_heat_storage.mph",
+  "source_size": 1320224,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310402.3",
+  "total_files_in_archive": 25
+}

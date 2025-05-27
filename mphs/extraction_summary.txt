@@ -1,0 +1,17 @@
+=== COMSOL .mph File Extraction Summary ===
+
+Total files in list: 1908
+Successfully processed: 1908
+Failed to process: 0
+Total files extracted: 12523
+Total source size: 6.44 GB
+
+Target files extracted:
+  - modelimage.png
+  - modelimage_large.png
+  - smodel.json
+  - modelinfo.xml
+  - usedlicenses.txt
+  - index.txt
+
+Extracted data stored in: mphs

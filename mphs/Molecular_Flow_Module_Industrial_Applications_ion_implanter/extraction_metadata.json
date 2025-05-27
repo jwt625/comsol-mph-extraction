@@ -1,0 +1,14 @@
+{
+  "source_file": "Molecular_Flow_Module/Industrial_Applications/ion_implanter.mph",
+  "source_size": 1490964,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310366.767",
+  "total_files_in_archive": 35
+}

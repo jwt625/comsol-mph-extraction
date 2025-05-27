@@ -1,0 +1,583 @@
+model
+soec_co
+mph
+param
+parameters
+t_in
+operating
+temperature
+taug
+electrode
+tortuosity
+da
+anode
+thickness
+planar
+soec
+length
+e_app
+potential
+km
+electrolyte
+thermal
+conductivity
+x0_co
+initial
+mole
+fraction
+co
+w0_h2o
+mass
+h2o
+x0_n
+specific
+surface
+area
+i0_ref_oer
+reference
+exchange
+current
+density
+oxygen
+evolution
+reaction
+default
+we
+@tag:we
+waterelectrolyzer
+@type:waterelectrolyzer
+water
+electrolyzer
+@label:water electrolyzer
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+phase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+inito2dom
+@tag:inito2dom
+initialvalueso2domains
+@type:initialvalueso2domains
+domains
+@label:initial values, o2 domains
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+pot
+@tag:pot
+electricpotential
+@type:electricpotential
+@label:electric potential
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+gas
+@label:h2 gas phase
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+wgsr
+@tag:wgsr
+watergasshiftreaction
+@type:watergasshiftreaction
+shift
+@label:water gas shift reaction
+h2in
+@tag:h2in
+h2inlet
+@type:h2inlet
+inlet
+@label:h2 inlet
+h2out
+@tag:h2out
+h2outlet
+@type:h2outlet
+outlet
+@label:h2 outlet
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+o2in
+@tag:o2in
+o2inlet
+@type:o2inlet
+@label:o2 inlet
+o2out
+@tag:o2out
+o2outlet
+@type:o2outlet
+@label:o2 outlet
+mem
+@tag:mem
+membrane
+@type:membrane
+@label:membrane
+h2gde
+@tag:h2gde
+h2gasdiffusionelectrode
+@type:h2gasdiffusionelectrode
+diffusion
+@label:h2 gas diffusion electrode
+h2gder
+@tag:h2gder
+h2gasdiffusionelectrodereaction
+@type:h2gasdiffusionelectrodereaction
+electrolysis
+@label:h2 gas diffusion electrode reaction: water electrolysis
+@label:h2 gas diffusion electrode reaction: co2 electrolysis
+o2gde
+@tag:o2gde
+o2gasdiffusionelectrode
+@type:o2gasdiffusionelectrode
+@label:o2 gas diffusion electrode
+o2gder
+@tag:o2gder
+o2gasdiffusionelectrodereaction
+@type:o2gasdiffusionelectrodereaction
+@label:o2 gas diffusion electrode reaction
+h2fch
+@tag:h2fch
+h2flowchannel
+@type:h2flowchannel
+flow
+channel
+@label:h2 gas flow channel
+o2fch
+@tag:o2fch
+o2flowchannel
+@type:o2flowchannel
+@label:o2 gas flow channel
+cc
+@tag:cc
+currentcollector
+@type:currentcollector
+collector
+@label:current collector
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+heat
+transfer
+solids
+fluids
+@label:heat transfer in solids and fluids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+interconnects
+@label:solid: interconnects
+fluid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+channels
+@label:fluid: flow channels
+@type:init
+thermalinsulation
+@type:thermalinsulation
+@label:thermal insulation
+porous
+@tag:porous
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+medium
+cathode
+gde
+@label:porous medium: cathode gde
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+matrix
+@label:porous matrix
+@label:porous medium: anode gde
+@label:solid: membrane
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+pc
+@tag:pc
+periodicheat
+@type:periodicheat
+periodic
+condition
+@label:periodic condition
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+variables
+k_wgsr
+rate
+constant
+genproj
+@tag:genproj
+generalprojection
+@type:generalprojection
+general
+projection
+@label:general projection
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+ech
+@tag:ech
+electrochemicalheating
+@type:electrochemicalheating
+electrochemical
+heating
+@label:electrochemical heating
+mat
+@tag:mat
+common
+@type:common
+yttria-stabilized
+zirconia
+8ysz
+zro
+@label:yttria-stabilized zirconia, 8ysz
+electrolyteconductivity
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+steel
+aisi
+@label:steel aisi
+enu
+young's
+modulus
+poisson's
+ratio
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_t
+@tag:comp1_t
+field
+@type:field
+@label:temperature
+comp1_we_p_h
+@tag:comp1_we_p_h
+pressure
+p_h
+@label:pressure
+comp1_we_p_o
+@tag:comp1_we_p_o
+p_o
+comp1_we_phil
+@tag:comp1_we_phil
+phil
+@label:electrolyte potential
+comp1_we_phis
+@tag:comp1_we_phis
+phis
+comp1_we_wco2_h
+@tag:comp1_we_wco2_h
+wco2_h
+@label:mass fraction
+comp1_we_wco_h
+@tag:comp1_we_wco_h
+wco_h
+comp1_we_wh2o_h
+@tag:comp1_we_wh2o_h
+wh2o_h
+comp1_we_wn2_o
+@tag:comp1_we_wn2_o
+wn2_o
+comp1_we_h2gasph1_h2in1_wbndh2o
+@tag:comp1_we_h2gasph1_h2in1_wbndh2o
+state
+@type:state
+boundary
+wbndh2o
+@label:boundary mass fraction
+comp1_we_h2gasph1_h2in1_wbndco
+@tag:comp1_we_h2gasph1_h2in1_wbndco
+wbndco
+comp1_we_h2gasph1_h2in1_pbnd
+@tag:comp1_we_h2gasph1_h2in1_pbnd
+pbnd
+comp1_we_o2gasph1_o2in1_wbndn
+@tag:comp1_we_o2gasph1_o2in1_wbndn
+wbndn
+comp1_we_o2gasph1_o2in1_pbnd
+@tag:comp1_we_o2gasph1_o2in1_pbnd
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+merged
+@label:direct, heat transfer variables
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+with
+respect
+@label:electrode potential with respect to ground
+surf
+@tag:surf
+@type:surface
+@label:surface
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:mole fraction, h
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:mole fraction, o
+@label:mole fraction, h2o
+@label:mole fraction, n
+@label:mole fraction, co
+@label:water gas shift reaction rate
+plotgroup1d
+@type:plotgroup1d
+@label:current density distribution
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+geommanagernative
+hist
+@physics:we
+@study:std
+@study:cdi
+@physics:ht
+@study:stat
+@geom:geom
+@geom:r
+@expr:var
+@cpl
+@cpl:genproj
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:ElectrolyteConductivity
+@material:func
+@material:int
+@material:selection
+@material:Enu
+@mesh:mesh
+@mesh:dis
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_we_phil
+@sol:comp1_we_phis
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:comp1_we_wH2O_H
+@sol:comp1_we_wCO_H
+@sol:comp1_we_h2gasph1_h2in1_wbndH2O
+@sol:comp1_we_h2gasph1_h2in1_wbndCO
+@sol:comp1_we_wN2_O
+@sol:comp1_we_o2gasph1_o2in1_wbndN
+@sol:comp1_we_wCO2_H
+@sol:p
+@sol:so
+@result:pg
+@result:surf
+@result:arws
+@result:filt
+@result:str
+@result:lngr
+@result:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

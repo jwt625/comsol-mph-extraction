@@ -1,0 +1,572 @@
+edge
+effects
+spirally
+wound
+lithium-ion
+battery
+two-dimensional
+model
+investigates
+geometrical
+jelly
+roll
+lithium
+ion
+isothermal
+li_battery_spiral_2d
+mph
+param
+parameters
+rp_neg
+particle
+radius
+negative
+sigmas_neg
+electrical
+conductivity
+electrode
+epsl_pos
+electrolyte
+phase
+volume
+fraction
+positive
+epsl_neg
+i0ref_neg
+reference
+exchange
+current
+density
+ac_pos
+reaction
+rate
+coefficient
+spiral
+starting
+porous
+thickness
+collector
+d_tot
+total
+unit
+cell
+i_app_1c
+applied
+terminal
+1c
+default
+liion
+@tag:liion
+lithiumionbatterymph
+@type:lithiumionbatterymph
+@label:lithium-ion battery
+electricpotentialionicphase
+concentration
+electricpotential
+fastassemblydiscretization_disc
+sep
+@tag:sep
+separator
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+@label:porous electrode
+pin
+@tag:pin
+particleintercalation
+@type:particleintercalation
+intercalation
+@label:particle intercalation
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+@label:porous electrode reaction
+cc
+@tag:cc
+currentconductor
+@type:currentconductor
+conductor
+@label:current conductor
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+ecd
+@tag:ecd
+electrodenormalcurrentdensity
+@type:electrodenormalcurrentdensity
+discharge
+@label:electrode current density - 1c discharge
+10c
+@label:electrode current density - 10c discharge
+geom
+geometry
+geomnative
+pc
+@tag:pc
+parametriccurve
+@type:parametriccurve
+parametric
+curve
+@label:parametric curve
+parametric_curve
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+liion_pce1_pin1_xdim
+extra
+dimension
+int
+@tag:int
+interval
+@type:interval
+@label:interval
+liion_pce2_pin1_xdim
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:positive current collector
+@label:negative current collector
+@label:positive porous electrode
+@label:negative porous electrode
+@label:electrolyte
+@label:negative terminal
+@label:positive terminal
+outside
+@label:electrolyte outside
+uni
+@tag:uni
+@type:union
+@label:spiral battery
+@label:positive + electrolyte + negative
+liion_pce1_pin1_xdim_pa
+@tag:liion_pce1_pin1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+liion_pce1_pin1_xdim_ad
+@tag:liion_pce1_pin1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+liion_pce2_pin1_xdim_pa
+@tag:liion_pce2_pin1_xdim_pa
+liion_pce2_pin1_xdim_ad
+@tag:liion_pce2_pin1_xdim_ad
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+aluminum
+@label:aluminum
+enu
+young's
+modulus
+poisson's
+ratio
+murnaghan
+copper
+@label:copper
+linzres
+linearized
+resistivity
+lipf
+ec:dmc
+p(vdf-hfp
+polymer
+li-ion
+@label:lipf6 in 1:2 ec:dmc and p(vdf-hfp) (polymer, li-ion battery
+electrolyteconductivity
+interpolation
+@type:interpolation
+@label:interpolation
+speciesproperties
+species
+properties
+electrolytesaltconcentration
+salt
+graphite
+lixc
+mcmb
+@label:graphite, lixc6 mcmb (negative, li-ion battery
+electrodepotential
+equilibrium
+potential
+operationalsoc
+operational
+state
+charge
+ic
+strain
+equilibriumconcentration
+lmo
+limn2o
+spinel
+@label:lmo, limn2o4 spinel (positive, li-ion battery
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+relaxation
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_cl
+@tag:comp1_cl
+field
+@type:field
+cl
+@label:electrolyte salt concentration
+comp1_liion_pce1_cs
+@tag:comp1_liion_pce1_cs
+cs
+@label:solid phase concentration
+comp1_liion_pce2_cs
+@tag:comp1_liion_pce2_cs
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:battery current distribution
+insertion
+@label:insertion particle concentration variables
+bnd
+@tag:bnd
+boundary
+@type:boundary
+voltage
+probe
+@label:cell voltage probe - study
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+avh
+@tag:avh
+average
+@type:average
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:average electrode state of charge
+glob
+@tag:glob
+global
+@type:global
+@label:global
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+@label:electrolyte current density
+col
+@tag:col
+color
+@type:color
+@label:color expression
+with
+respect
+@label:electrode potential with respect to ground
+@label:electrode current density
+relative
+li
+particles
+@label:relative li concentration at surface of negative electrode particles
+@label:relative li concentration at surface of positive electrode particles
+@label:cell voltage - study
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:liion
+@study:time
+@func
+@func:an
+@geom:geom
+@geom:pc
+@geom:csol
+@geom:input
+@geom:selection
+@geom:c
+@selection
+@selection:sel
+@selection:uni
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:Murnaghan
+@material:linzRes
+@material:selection
+@material:ElectrolyteConductivity
+@material:func
+@material:int
+@material:SpeciesProperties
+@material:ElectrolyteSaltConcentration
+@material:ElectrodePotential
+@material:ic
+@material:OperationalSOC
+@material:EquilibriumConcentration
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:map
+@probe
+@probe:bnd
+@probe:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_phis
+@sol:comp1_cl
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:comp1_liion_pce2_cs
+@sol:comp1_liion_pce1_cs
+@sol:t
+@sol:aDef
+@sol:se
+@sol:ss
+@result:pg
+@result:glob
+@result:surf
+@result:arws
+@result:col
+@dataset:dset
+@dataset:selection
+sys
+@tag:sys
+system
+@label:boundary system
+res
+soldata

@@ -1,0 +1,11 @@
+{
+  "source_file": "Uncertainty_Quantification_Module/Tutorials/tensile_test_uncertainty_quantification.mph",
+  "source_size": 18811,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310468.886",
+  "total_files_in_archive": 6
+}

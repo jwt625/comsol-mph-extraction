@@ -1,0 +1,896 @@
+model
+argon/oxygen
+inductively
+coupled
+plasma
+reactor
+tutorial
+solves
+mixture
+computes
+fluid
+flow
+gas
+heating
+important
+aspects
+strategies
+modeling
+electronegative
+discharges
+discussed
+icp_argon_oxygen
+mph
+param
+parameters
+pw
+xo
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+o2=&gt;o+o
+@label:1: e+o2=&gt;o+o
+e+o2=&gt;e+o
+@label:2: e+o2=&gt;e+o
+@label:3: e+o2=&gt;e+o
+@label:4: e+o2=&gt;e+o
+@label:5: e+o2=&gt;e+o
+@label:6: e+o2=&gt;e+o
+@label:7: e+o2=&gt;e+o
+@label:8: e+o2=&gt;e+o
+@label:9: e+o2=&gt;e+o
+e+o2=&gt;e+o2a1dg
+@label:10: e+o2=&gt;e+o2a1dg
+@label:11: e+o2=&gt;e+o
+@label:12: e+o2=&gt;e+o
+e+o2=&gt;e+o+o
+@label:13: e+o2=&gt;e+o+o
+e+o2=&gt;e+o+o1d
+@label:14: e+o2=&gt;e+o+o1d
+@label:15: e+o2=&gt;e+o
+e+o2=&gt;2e+o
+@label:16: e+o2=&gt;2e+o
+e+o=&gt;e+o
+@label:17: e+o=&gt;e+o
+e+o=&gt;e+o1d
+@label:18: e+o=&gt;e+o1d
+@label:19: e+o=&gt;e+o
+e+o=&gt;2e+o
+@label:20: e+o=&gt;2e+o
+e+ar=&gt;e+ar
+@label:21: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:22: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:23: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:24: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:25: e+ars=&gt;2e+ar
+e+o-=&gt;o+e+e
+@label:26: e+o-=&gt;o+e+e
+rxn
+@tag:rxn
+reaction
+@type:reaction
+o++o2=&gt;o+o
+@label:27: o++o2=&gt;o+o
+o-+o+=&gt;o+o
+@label:28: o-+o+=&gt;o+o
+o-+o2+=&gt;o+o+o
+@label:29: o-+o2+=&gt;o+o+o
+o-+o2+=&gt;o+o
+@label:30: o-+o2+=&gt;o+o
+o-+o=&gt;o2+e
+@label:31: o-+o=&gt;o2+e
+o-+ar+=&gt;o+ar
+@label:32: o-+ar+=&gt;o+ar
+@tag:e
+species
+@type:species
+@label:species: e
+@tag:o
+@label:species: o
+inl
+@tag:inl
+inletheavyspecies
+@type:inletheavyspecies
+inlet
+@label:inlet
+@tag:out
+outflow
+@type:outflow
+@label:outflow
+o_1m
+@tag:o_1m
+o2a1dg
+@tag:o2a1dg
+@label:species: o2a1dg
+o1d
+@tag:o1d
+@label:species: o1d
+o2_1p
+@tag:o2_1p
+o_1p
+@tag:o_1p
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+ars=&gt;ar
+@label:2: ars=&gt;ar
+o=&gt
+5o
+@label:3: o=&gt;0.5o
+o2+=&gt;o
+@label:4: o2+=&gt;o
+o-=&gt;o
+@label:5: o-=&gt;o
+o2a1dg=&gt;o
+@label:6: o2a1dg=&gt;o
+o1d=&gt
+@label:7: o1d=&gt;0.5o
+o+=&gt;o
+@label:8: o+=&gt;o
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+@type:init
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+fluids
+@label:amp&#xe8;re's law in fluids
+coil
+@tag:coil
+@type:coil
+@label:coil
+ht
+@tag:ht
+heattransferinfluids
+@type:heattransferinfluids
+heat
+transfer
+@label:heat transfer in fluids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+thermalinsulation
+@type:thermalinsulation
+thermal
+@label:thermal insulation
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+@label:heat source
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+inletboundary
+@type:inletboundary
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+arr
+@tag:arr
+array
+@type:array
+@label:array
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+walls
+@label:walls
+coils
+@label:coils
+boundaries
+@label:coil boundaries
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pcc
+@tag:pcc
+plasmaconductivitymultiphysicscoupling
+@type:plasmaconductivitymultiphysicscoupling
+conductivity
+coupling
+@label:plasma conductivity coupling
+ehs
+@tag:ehs
+electronheatsourcemultiphysicscoupling
+@type:electronheatsourcemultiphysicscoupling
+electron
+@label:electron heat source
+mat
+@tag:mat
+common
+@type:common
+air
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+glass
+quartz
+@label:glass
+copper
+@label:copper
+enu
+young's
+modulus
+poisson's
+ratio
+linzres
+linearized
+resistivity
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+base
+case
+fstat
+@tag:fstat
+frequencystationary
+@type:frequencystationary
+frequency-stationary
+@label:frequency-stationary
+power
+sweep
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+flux
+psiora
+@label:magnetic flux
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_plas_o1d_w
+@tag:comp1_plas_o1d_w
+comp1_plas_o2_1p_w
+@tag:comp1_plas_o2_1p_w
+comp1_plas_o2_w
+@tag:comp1_plas_o2_w
+comp1_plas_o2a1dg_w
+@tag:comp1_plas_o2a1dg_w
+comp1_plas_o_1m_w
+@tag:comp1_plas_o_1m_w
+comp1_plas_o_1p_w
+@tag:comp1_plas_o_1p_w
+comp1_plas_o_w
+@tag:comp1_plas_o_w
+comp1_t
+@tag:comp1_t
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_spf_inl1_pmf
+@tag:comp1_spf_inl1_pmf
+state
+@type:state
+rate
+pmf
+@label:pressure from mass flow rate
+comp1_mf_coil1_icoil
+@tag:comp1_mf_coil1_icoil
+current
+icoil
+@label:coil current
+comp1_mf_coil1_pcoil_ode
+@tag:comp1_mf_coil1_pcoil_ode
+pcoil_ode
+@label:coil power
+comp1_mf_coil1_vcoil
+@tag:comp1_mf_coil1_vcoil
+vcoil
+@label:comp1.mf.coil1.vcoil
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct, heat transfer variables
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+density
+@label:electron density
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:electron temperature
+norm
+@label:magnetic flux density norm
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+revolved
+@label:magnetic flux density norm, revolved geometry
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+@label:velocity
+3d
+@label:velocity, 3d
+negative
+ion
+@label:negative ion density
+absorbed
+@label:absorbed power
+selection
+@type:selection
+@label:selection
+plotgroup1d
+@type:plotgroup1d
+charged
+along
+axis-of-symmetry
+@label:charged species along axis-of-symmetry
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+averaged
+vs
+@label:space averaged charged species vs. power
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:space averaged charged species vs. xo
+geommanagernative
+hist
+@geom:geom
+@geom:r
+@geom:arr
+@geom:input
+@geom:selection
+@geom:ls
+@selection
+@selection:sel
+@material:mat
+@material:selection
+@material:materialmodel
+@material:func
+@material:idealGas
+@cpl
+@cpl:aveop
+@cpl:selection
+@physics:plas
+@physics:mf
+@physics:ht
+@physics:spf
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@mesh:map
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@view:view
+@view:axis
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:Enu
+@material:linzRes
+@study:std
+@sol:sol
+@sol:s
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@dataset:rev
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@result:vol
+@result:sel
+@result:lngr
+@nodeGroup:grp
+@study:fstat
+@sol:st
+@sol:v
+@sol:dDef
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:ilDef
+@sol:soDef
+@sol:sc
+@sol:so
+@sol:p
+@result:glob
+addinimport
+@tag:addinimport
+@type:addinimport
+chemistry
+@label:plasma chemistry
+formdefinition
+@tag:formdefinition
+addinform
+@type:addinform
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+settingsform
+@tag:settingsform
+addinforminstance
+@type:addinforminstance
+appfeature
+@tag:appfeature
+addinapplicationmodelinstance
+@type:addinapplicationmodelinstance
+appfeaturedata
+@label:appfeaturedata
+@tag:field
+integerdatafield
+@type:integerdatafield
+integer
+@label:integer
+reactionsfile
+@tag:reactionsfile
+file
+@type:file
+reactions
+@label:reactions file
+main
+@tag:main
+@type:form
+initialized
+@tag:initialized
+codeeditor
+@type:codeeditor
+@label:initialized
+mainmethod
+@tag:mainmethod
+@label:mainmethod
+plasmachemistry
+@tag:plasmachemistry
+@label:plasmachemistry
+speciesdata
+@tag:speciesdata
+@label:speciesdata
+updatecomponents
+@tag:updatecomponents
+@label:updatecomponents
+componentdim
+@tag:componentdim
+@label:componentdim
+repalceplasmakeywords
+@tag:repalceplasmakeywords
+@label:repalceplasmakeywords
+updateinterface
+@tag:updateinterface
+@label:updateinterface
+isdefinedbymesh
+@tag:isdefinedbymesh
+@label:isdefinedbymesh
+componentandinterfaceselection
+@tag:componentandinterfaceselection
+localform
+@type:localform
+addinlabel_plasma/target
+@label:addinlabel_plasma/target
+textlabel
+@tag:textlabel
+label
+@type:label
+text
+@label:text label
+componentcombobox
+@tag:componentcombobox
+comboboxwidget
+@type:comboboxwidget
+combo
+box
+@label:combo box
+interfaceccombobox
+@tag:interfaceccombobox
+1a
+@label:combo box 1a
+importplasmachemistry
+@tag:importplasmachemistry
+addinlabel_plasma/plasma_chemistry_import
+@label:addinlabel_plasma/plasma_chemistry_import
+fileimport
+@tag:fileimport
+filebrowser
+@type:filebrowser
+@label:file import
+button
+@tag:button
+@type:button
+@label:button
+stringdatafield
+@type:stringdatafield
+string
+@label:string
+componentchoicelist
+@tag:componentchoicelist
+validvalues
+@type:validvalues
+choice
+list
+@label:component choice list
+interfacechoicelist
+@tag:interfacechoicelist
+interface
+@label:interface choice list
+collection
+@tag:collection
+tabbedpane
+@type:tabbedpane
+@label:form collection
+grp
+@tag:grp
+physics
+@type:physics
+impact
+sections
+@label:electron impact cross sections
+heavy
+@label:heavy species reactions
+@label:species
+@label:surface reactions
+@type:results
+@label:base case
+@label:power sweep
+@label:xo2 sweep
+addin
+res
+soldata

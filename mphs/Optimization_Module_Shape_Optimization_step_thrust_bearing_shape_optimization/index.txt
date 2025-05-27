@@ -1,0 +1,736 @@
+shape
+optimization
+step
+thrust
+bearing
+tutorial
+model
+optimized
+maximize
+capacity
+consists
+stepped
+surface
+end
+shaft
+rotates
+entire
+assembly
+submerged
+lubricant
+collar
+assumed
+spinning
+without
+axial
+motion
+resulting
+design
+shows
+optimal
+steps
+sweeps
+number
+identify
+step_thrust_bearing_shape_optimization
+mph
+param
+parameters
+pads
+gang
+groove
+angle
+deg
+angspeed
+angular
+speed
+rho_c
+density
+fluid
+default
+hdb
+@tag:hdb
+hydrodynamicbearing
+@type:hydrodynamicbearing
+hydrodynamic
+@label:hydrodynamic bearing
+pressure
+hjb
+@tag:hjb
+hydrodynamicjournalbearing
+@type:hydrodynamicjournalbearing
+journal
+@label:hydrodynamic journal bearing
+mfd
+@tag:mfd
+movingfoundation
+@type:movingfoundation
+moving
+foundation
+@label:moving foundation
+bax
+@tag:bax
+bearingorientation
+@type:bearingorientation
+orientation
+@label:bearing orientation
+bdr
+@tag:bdr
+border
+@type:border
+@label:border
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+htb
+@tag:htb
+hydrodynamicthrustbearing
+@type:hydrodynamicthrustbearing
+@label:hydrodynamic thrust bearing
+geom
+geometry
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+uni
+work_plane
+sequence2d
+@tag:c
+circle
+@type:circle
+@label:circle
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+domains
+delete
+@label:domains to delete
+del
+@tag:del
+@type:delete
+entities
+@label:delete entities
+delete_entities
+disk
+selection
+leading
+edge
+@label:disk selection: leading edge
+trailing
+@label:disk selection: trailing edge
+@label:disk selection: groove
+pad
+@label:disk selection: pad
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+edges
+@label:leading edges of the pads
+@label:trailing edges of the pads
+grooves
+@label:grooves
+@label:pads
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+@label:groove edges
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+inner
+@label:groove inner edges
+@label:pad edges
+control
+boundaries
+@label:control boundaries
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+sector
+symmetry
+@label:sector symmetry
+fixed
+@label:fixed edges
+@label:pad inner edges
+circular
+@label:circular boundaries
+amp
+@label:circular &amp; pad edges
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+wp1_disksel
+wp1_del
+mgeom
+mesh
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+imp1_mpart1_imp1_geom1_unisel
+imp1_mpart1_imp1_geom1_adjsel
+imp1_mpart1_imp1_geom1_cylsel
+imp1_mpart1_imp1_geom1_comsel
+imp1_mpart1_imp1_dsel_dfxb
+boundary
+imp1_mpart1_imp1_dsel_pls
+polynomial
+shell
+imp1_mpart1_imp1_dsel_sss
+imp1_mpart1_imp1_dsel_fse
+var
+variables
+hf
+material
+spatial
+geom1_unisel
+@tag:geom1_unisel
+fromsequence
+@type:fromsequence
+geom1_adjsel
+@tag:geom1_adjsel
+geom1_cylsel
+@tag:geom1_cylsel
+geom1_comsel
+@tag:geom1_comsel
+dsel_dfxb
+@tag:dsel_dfxb
+explicitderived
+@type:explicitderived
+@label:fixed boundary
+dsel_pls
+@tag:dsel_pls
+@label:polynomial shell
+dsel_sss
+@tag:dsel_sss
+dsel_fse
+@tag:dsel_fse
+@label:fixed edge
+mpart1_imp1_geom1_unisel
+@tag:mpart1_imp1_geom1_unisel
+mpart1_imp1_geom1_adjsel
+@tag:mpart1_imp1_geom1_adjsel
+mpart1_imp1_geom1_cylsel
+@tag:mpart1_imp1_geom1_cylsel
+mpart1_imp1_geom1_comsel
+@tag:mpart1_imp1_geom1_comsel
+mpart1_imp1_dsel_dfxb
+@tag:mpart1_imp1_dsel_dfxb
+mpart1_imp1_dsel_pls
+@tag:mpart1_imp1_dsel_pls
+mpart1_imp1_dsel_sss
+@tag:mpart1_imp1_dsel_sss
+mpart1_imp1_dsel_fse
+@tag:mpart1_imp1_dsel_fse
+geom2_imp1_mpart1_imp1_geom1_unisel
+@tag:geom2_imp1_mpart1_imp1_geom1_unisel
+@label:leading edges of the pads (import
+@label:trailing edges of the pads (import
+@label:grooves (import
+@label:pads (import
+geom2_imp1_mpart1_imp1_geom1_adjsel
+@tag:geom2_imp1_mpart1_imp1_geom1_adjsel
+@label:groove edges (import
+geom2_imp1_mpart1_imp1_geom1_cylsel
+@tag:geom2_imp1_mpart1_imp1_geom1_cylsel
+@label:groove inner edges (import
+@label:pad edges (import
+@label:pad inner edges (import
+@label:control boundaries (import
+geom2_imp1_mpart1_imp1_geom1_comsel
+@tag:geom2_imp1_mpart1_imp1_geom1_comsel
+@label:sector symmetry (import
+@label:fixed edges (import
+@label:circular boundaries (import
+@label:circular &amp; pad edges (import
+geom2_imp1_mpart1_imp1_dsel_dfxb
+@tag:geom2_imp1_mpart1_imp1_dsel_dfxb
+@label:fixed boundary 1 (import
+geom2_imp1_mpart1_imp1_dsel_pls
+@tag:geom2_imp1_mpart1_imp1_dsel_pls
+@label:polynomial shell 1 (import
+geom2_imp1_mpart1_imp1_dsel_sss
+@tag:geom2_imp1_mpart1_imp1_dsel_sss
+@label:sector symmetry 1 (import
+geom2_imp1_mpart1_imp1_dsel_fse
+@tag:geom2_imp1_mpart1_imp1_dsel_fse
+@label:fixed edge 1 (import
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+dfxb
+@tag:dfxb
+fixedshapeboundary
+@type:fixedshapeboundary
+pls
+@tag:pls
+polynomialshell
+@type:polynomialshell
+sss
+@tag:sss
+sectorshape
+@type:sectorshape
+fse
+@tag:fse
+fixedshapeedge
+@type:fixedshapeedge
+mat
+@tag:mat
+common
+@type:common
+@label:material
+comp
+component
+mcomp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+mpart
+@label:finalize
+importassoc
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sho
+@tag:sho
+shapeoptimization
+@type:shapeoptimization
+@label:shape optimization
+remesh
+verify
+@tag:param
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_pfilm
+@tag:comp1_pfilm
+field
+@type:field
+pfilm
+@label:pressure
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp1_pls1_s
+@tag:comp1_pls1_s
+parameter
+@label:surface parameter
+comp1_pls
+@tag:comp1_pls
+controlstate
+@type:controlstate
+@label:polynomial shell pls
+@tag:o
+@type:optimization
+@label:optimization solver
+stationaryattrib
+@type:stationaryattrib
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:optimization
+merged
+@label:merged variables
+@tag:i
+iterative
+@type:iterative
+suggested
+gmres
+with
+amg
+opt
+@label:gmres with amg
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sodef
+@tag:sodef
+sor
+@type:sor
+@label:sor
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+cs
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+comp2_pfilm
+@tag:comp2_pfilm
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:n
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+@type:surface
+@label:surface
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+cut
+line
+radial
+@label:cut line 3d: radial line
+pc
+@tag:pc
+parcurve3d
+@type:parcurve3d
+parameterized
+curve
+circumferential
+@label:parameterized curve 3d: circumferential line
+dset2g
+@tag:dset2g
+optimization/solution
+@label:study: shape optimization/solution
+@label:surface (shape optimization
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+tbl
+@tag:tbl
+table
+@type:table
+objective
+probe
+@label:objective probe table
+mrkvl
+@tag:mrkvl
+maximum
+minimum
+@label:maximum and minimum values
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:fluid pressure
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup2d
+@type:plotgroup2d
+height
+hght
+@tag:hght
+@type:height
+expression
+@label:height expression
+mass
+fraction
+@label:mass fraction
+profile
+@label:pad profile
+plotgroup1d
+@type:plotgroup1d
+film
+thickness
+@label:radial distribution of pressure (film thickness
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+@label:radial distribution of pressure (angular speed
+@label:circumferential distribution of pressure (film thickness
+@label:circumferential distribution of pressure (angular speed
+lift
+force
+@label:lift force
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:fluid pressure, shape optimization
+@label:pressure, shape optimization
+@label:mass fraction, shape optimization
+@label:pad profile, shape optimization
+@label:radial distribution of pressure (shape optimization
+@label:circumferential distribution of pressure (shape optimization
+@label:mesh
+@tag:mesh
+@type:mesh
+@tag:line
+@type:line
+@label:line
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+@label:arrow line
+col
+@tag:col
+color
+@type:color
+@label:color expression
+@label:shape optimization sweep
+verification
+@label:verification
+mrkr
+@tag:mrkr
+marker
+@type:marker
+@label:marker
+trn
+@tag:trn
+translation
+@type:translation
+@label:translation
+vs
+@label:objective vs number of pads
+thumbnail
+@label:thumbnail
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:hdb
+@geom:geom
+@geom:wp
+@geom:sequence2D
+@geom:c
+@geom:disksel
+@geom:del
+@geom:input
+@geom:selection
+@geom:rot
+@geom:unisel
+@geom:adjsel
+@geom:cylsel
+@geom:comsel
+@expr:var
+@expr:selection
+@material:mat
+@material:materialmodel
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_pfilm
+@sol:s
+@sol:p
+@sol:fc
+@result:pg
+@result:surf
+@result:con
+@dataset:surf
+@dataset:selection
+@result:hght
+@dataset:cln
+@result:lngr
+@dataset:pc
+@result:glob
+@common:fsd
+@common:selection
+@common:pls
+@common:sss
+@common:fse
+@study:sho
+@sol:comp1_pls1_s
+@sol:o
+@sol:se
+@sol:ss
+@sol:i
+@sol:mg
+@dataset:dset2g
+@result:line
+@result:arws
+@result:sel
+@result:selection
+@result:mesh
+@result:arwl
+@result:col
+@nodeGroup:grp
+@dataset:filt
+@mesh:mpart
+@mesh:imp
+@geom:imp
+@mesh:ftri
+@mesh:size
+@sol:comp2_pfilm
+@result:mrkr
+@result:trn
+@study:param
+@batch:p
+@batch:so
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:initial design
+soldata

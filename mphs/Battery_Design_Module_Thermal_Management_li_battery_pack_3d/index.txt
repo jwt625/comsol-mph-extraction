@@ -1,0 +1,878 @@
+liquid-cooled
+lithium-ion
+battery
+pack
+example
+simulates
+temperature
+profile
+fluid
+flow
+model
+3d
+whereas
+1d
+batteries
+used
+calculate
+heat
+source
+li_battery_pack_3d
+mph
+param
+parameters
+rp_neg
+particle
+radius
+negative
+electrode
+sigmas_pos
+electrical
+conductivity
+positive
+brugl_pos
+bruggeman
+coefficient
+tortuosity
+epsl_sep
+electrolyte
+phase
+volume
+fraction
+separator
+i0ref_pos
+reference
+exchange
+current
+density
+cl
+initial
+salt
+concentration
+i_load
+charge/discharge
+l_pos
+length
+h_batt
+height
+l_pos_cc
+collector
+thickness
+kt_neg
+thermal
+kt_sep
+rho_pos_cc
+cp_pos
+capacity
+cp_neg_cc
+kt_batt_tl
+through-layer
+cycle_time
+cycle
+time
+n_fins_model
+number
+cooling
+fins
+fin_flow
+per
+fin
+default
+liion
+@tag:liion
+lithiumionbatterymph
+@type:lithiumionbatterymph
+@label:lithium-ion battery
+electricpotentialionicphase
+electricpotential
+fastassemblydiscretization_disc
+sep
+@tag:sep
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode
+pin
+@tag:pin
+particleintercalation
+@type:particleintercalation
+intercalation
+@label:particle intercalation
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+reaction
+@label:porous electrode reaction
+pdl
+@tag:pdl
+porousmatrixdoublelayercapacitance
+@type:porousmatrixdoublelayercapacitance
+matrix
+double
+layer
+capacitance
+@label:porous matrix double layer capacitance
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+ecd
+@tag:ecd
+electrodenormalcurrentdensity
+@type:electrodenormalcurrentdensity
+@label:electrode current density
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+inlet
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+transfer
+solids
+fluids
+@label:heat transfer in solids and fluids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+thermalinsulation
+@type:thermalinsulation
+@label:thermal insulation
+bl
+@tag:bl
+batterylayers
+@type:batterylayers
+layers
+@label:battery layers
+hs
+@tag:hs
+heatsource
+@type:heatsource
+@label:heat source
+temp
+@tag:temp
+temperatureboundary
+@type:temperatureboundary
+@label:temperature
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+@label:heat flux
+sym
+@tag:sym
+symmetry
+@type:symmetry
+@label:symmetry
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+liion_pce1_pin1_xdim
+extra
+dimension
+int
+@tag:int
+liion_pce2_pin1_xdim
+blk
+@tag:blk
+block
+@type:block
+@label:block 1 - batteries
+arr
+@tag:arr
+array
+@type:array
+@label:array 1  - batteries
+@label:array 2  - batteries
+@label:block 2 - cooling fins
+@label:block
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+uni
+@tag:uni
+@type:union
+@label:union 1 - cooling fins
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+work_plane
+sequence2d
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+@tag:c
+circle
+@type:circle
+@label:circle
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+copy
+@tag:copy
+@type:copy
+@label:copy
+@label:union
+csel
+plate
+channels
+dom
+bnd
+pnt
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude 1 - flow plate channels
+@label:array 3 - cooling fins
+@label:array 4 - flow plate channels
+connector
+channel
+@label:block 4 - outlet flow connector channel
+@label:block 5 - inlet flow connector channel
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+@label:cooling fins
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+compartment
+@label:flow compartment
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+boundaries
+@label:flow compartment boundaries
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:inlet on outlet flow connector channel
+boundary
+toward
+@label:boundary toward battery pack
+@label:geometry
+external
+@label:all external boundaries
+@label:external heat flux boundaries
+@label:flow plate channels
+@label:flow plate channel boundaries
+@label:flow connector channel boundaries
+intsel
+@tag:intsel
+intersectionselection
+@type:intersectionselection
+inlet/outlet
+@label:flow plate channel inlet/outlet boundaries
+edges
+@label:flow plate channel inlet/outlet edges
+mesh
+@label:boundaries for boundary layer mesh
+edg
+wp1_csel
+image
+@tag:image
+@type:geometry
+wv
+@tag:wv
+wave
+@type:wave
+waveform
+@label:waveform
+step
+@tag:step
+@type:step
+@label:step
+var
+variables
+i_app
+applied
+vol
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+explicit
+@type:explicit
+@label:negative electrode
+@label:positive electrode
+geom2_arr1_dom
+@tag:geom2_arr1_dom
+fromsequence
+@type:fromsequence
+geom2_arr2_dom
+@tag:geom2_arr2_dom
+geom2_uni1_dom
+@tag:geom2_uni1_dom
+geom2_ext1_dom
+@tag:geom2_ext1_dom
+geom2_arr3_dom
+@tag:geom2_arr3_dom
+geom2_arr4_dom
+@tag:geom2_arr4_dom
+geom2_blk4_dom
+@tag:geom2_blk4_dom
+geom2_blk5_dom
+@tag:geom2_blk5_dom
+geom2_difsel
+@tag:geom2_difsel
+geom2_unisel
+@tag:geom2_unisel
+geom2_adjsel
+@tag:geom2_adjsel
+geom2_sel
+@tag:geom2_sel
+geom2_sel5_pnt
+@tag:geom2_sel5_pnt
+geom2_sel5_edg
+@tag:geom2_sel5_edg
+geom2_sel5_bnd
+@tag:geom2_sel5_bnd
+geom2_sel5_dom
+@tag:geom2_sel5_dom
+geom2_intsel
+@tag:geom2_intsel
+liion_pce1_pin1_xdim_pa
+@tag:liion_pce1_pin1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+liion_pce1_pin1_xdim_ad
+@tag:liion_pce1_pin1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+liion_pce2_pin1_xdim_pa
+@tag:liion_pce2_pin1_xdim_pa
+liion_pce2_pin1_xdim_ad
+@tag:liion_pce2_pin1_xdim_ad
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+modelview3d
+@type:modelview3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+minpt
+@tag:minpt
+commoninputdef
+@type:commoninputdef
+input
+@label:model input
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+mat
+@tag:mat
+common
+@type:common
+lipf
+ec:emc
+liquid
+li-ion
+@label:lipf6 in 3:7 ec:emc (liquid, li-ion battery
+interpolation
+@type:interpolation
+@label:interpolation
+electrolyteconductivity
+speciesproperties
+species
+electrolytesaltconcentration
+graphite
+lixc
+mcmb
+@label:graphite, lixc6 mcmb (negative, li-ion battery
+electrodepotential
+equilibrium
+potential
+operationalsoc
+operational
+state
+charge
+ic
+strain
+equilibriumconcentration
+lmo
+limn2o
+spinel
+@label:lmo, limn2o4 spinel (positive, li-ion battery
+water
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+aluminum
+@label:aluminum
+enu
+young's
+modulus
+poisson's
+ratio
+murnaghan
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+bndlayer
+@type:bndlayer
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+@label:boundary layer properties
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_cl
+@tag:comp1_cl
+field
+@type:field
+@label:electrolyte salt concentration
+comp1_liion_pce1_cs
+@tag:comp1_liion_pce1_cs
+@label:solid phase concentration
+comp1_liion_pce2_cs
+@tag:comp1_liion_pce2_cs
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp2_nitf1_uave
+@tag:comp2_nitf1_uave
+magnitude
+uave
+@label:velocity magnitude, average
+comp2_p
+@tag:comp2_p
+@label:pressure
+comp2_t
+@tag:comp2_t
+comp2_u
+@tag:comp2_u
+@label:velocity field
+comp2_spf_inl1_pinlfdf
+@tag:comp2_spf_inl1_pinlfdf
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+comp2_spf_inl2_pinlfdf
+@tag:comp2_spf_inl2_pinlfdf
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct, fluid flow variables
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@label:direct
+@label:direct, heat transfer variables
+pdom
+@tag:pdom
+domainpoint
+@type:domainpoint
+domain
+point
+probe
+@label:domain point probe
+ppb
+@tag:ppb
+pointexpr
+@type:pointexpr
+expression
+@label:point probe expression
+@tag:var
+globalvariable
+@type:globalvariable
+global
+@label:global variable probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+cpt
+@tag:cpt
+cutpoint1d
+@type:cutpoint1d
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup3d
+@type:plotgroup3d
+@label:fluid pressure
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:fluid temperature
+plotgroup2d
+@type:plotgroup2d
+@label:plate channel velocity
+@label:temperature in batteries
+@label:battery surface temperature
+hght
+@tag:hght
+@type:height
+@label:height expression
+geommanagernative
+hist
+@geom:geom
+@geom:i
+@selection
+@selection:sel
+@material:mat
+@material:materialmodel
+@material:func
+@material:ElectrolyteConductivity
+@material:SpeciesProperties
+@material:int
+@material:ElectrolyteSaltConcentration
+@material:ElectrodePotential
+@material:ic
+@material:OperationalSOC
+@material:EquilibriumConcentration
+@material:selection
+@physics:liion
+@common:minpt
+@common:selection
+@func
+@func:wv
+@expr:var
+@probe
+@probe:pdom
+@probe:ppb
+@probe:var
+@view:view
+@study:std
+@study:stat
+@physics:spf
+@physics:ht
+@cpl
+@cpl:aveop
+@cpl:selection
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:Enu
+@material:Murnaghan
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@mesh:ftet
+@mesh:bl
+@mesh:blp
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@study:time
+@multiphysics
+@multiphysics:nitf
+@sol:comp1_phil
+@sol:comp1_liion_pce2_cs
+@sol:comp1_liion_pce1_cs
+@sol:comp1_phis
+@sol:comp1_cl
+@sol:t
+@sol:so
+@dataset:dset
+@dataset:selection
+@result:pg
+@result:surf
+@dataset:cpl
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

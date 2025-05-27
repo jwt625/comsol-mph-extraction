@@ -1,0 +1,11 @@
+{
+  "source_file": "CFD_Module/Multiphase_Flow/droplet_population_model.mph",
+  "source_size": 33881,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.467",
+  "total_files_in_archive": 6
+}

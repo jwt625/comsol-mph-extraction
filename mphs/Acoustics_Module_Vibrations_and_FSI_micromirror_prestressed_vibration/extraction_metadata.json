@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Vibrations_and_FSI/micromirror_prestressed_vibration.mph",
+  "source_size": 2996429,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.432",
+  "total_files_in_archive": 49
+}

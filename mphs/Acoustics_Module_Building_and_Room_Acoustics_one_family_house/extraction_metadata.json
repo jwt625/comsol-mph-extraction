@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Building_and_Room_Acoustics/one_family_house.mph",
+  "source_size": 2940636,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.428",
+  "total_files_in_archive": 30
+}

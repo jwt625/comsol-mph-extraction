@@ -1,0 +1,11 @@
+{
+  "source_file": "COMSOL_Multiphysics/Multiphysics/free_convection.mph",
+  "source_size": 12160,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310268.959",
+  "total_files_in_archive": 6
+}

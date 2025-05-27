@@ -1,0 +1,378 @@
+pulsed
+capacitively
+coupled
+plasma
+discharge
+tutorial
+model
+shows
+set
+up
+capacitive
+pulse
+consists
+10 periods
+excitation
+56 mhz
+followed
+no
+100 periods
+i-v
+characteristics
+electron
+density
+temperature
+potential
+studied
+pulsed_ccp_discharge
+mph
+param
+parameters
+base
+frequency
+noff
+number
+periods
+nelon
+elements
+per
+period
+period_single
+total
+default
+ptp
+@tag:ptp
+coldplasmatimeperiodic
+@type:coldplasmatimeperiodic
+time
+periodic
+@label:plasma, time periodic
+logelectrondensity_per
+logelectrondensity
+logelectronenergydensity_per
+logelectronenergydensity
+electricpotential_per
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:6: ars+ars=&gt;e+ar+ar
+ar+ars=&gt;ar+ar
+@label:7: ar+ars=&gt;ar+ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+ars=&gt;ar
+@label:2: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+ptp_xdim
+extra
+dimension
+material
+fixed
+spatial
+mesh
+ptp_xdim_pa
+@tag:ptp_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+ptp_xdim_ad
+@tag:ptp_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+single
+tper
+@tag:tper
+timeperiodic
+@type:timeperiodic
+@label:time periodic
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_en_per
+@tag:comp1_en_per
+en_per
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_ne_per
+@tag:comp1_ne_per
+ne_per
+comp1_ptp_ar_1p_w
+@tag:comp1_ptp_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_ptp_ar_1p_w_per
+@tag:comp1_ptp_ar_1p_w_per
+w_per
+comp1_ptp_ars_w
+@tag:comp1_ptp_ars_w
+comp1_ptp_ars_w_per
+@tag:comp1_ptp_ars_w_per
+comp1_ptp_mct1_jdep
+@tag:comp1_ptp_mct1_jdep
+current
+jdep
+@label:total current density
+comp1_ptp_mct1_jdep_per
+@tag:comp1_ptp_mct1_jdep_per
+jdep_per
+comp1_v
+@tag:comp1_v
+electric
+@label:electric potential
+comp1_v_per
+@tag:comp1_v_per
+v_per
+comp1_ptp_mct1_va_per
+@tag:comp1_ptp_mct1_va_per
+state
+@type:state
+voltage
+amplitude
+va_per
+@label:voltage amplitude
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+averaged
+@label:electron density, period averaged
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:electron temperature, period averaged
+@label:electric potential, period averaged
+power
+deposition
+@label:capacitive power deposition, period averaged
+neutral
+@label:neutral species number density, period averaged
+charged
+@label:charged species number density, period averaged
+@label:current and voltage, metal contact
+vs
+@label:electron density vs. time
+@label:electron temperature vs. time
+@label:electric potential vs. time
+geommanagernative
+hist
+@study:std
+@study:tper
+@physics:ptp
+@geom:geom
+@geom:i
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_Ne_per
+@sol:comp1_V_per
+@sol:comp1_ptp_Ars_W_per
+@sol:comp1_ptp_mct1_Jdep_per
+@sol:comp1_En_per
+@sol:comp1_ptp_mct1_Va_per
+@sol:comp1_ptp_Ar_1p_W_per
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:dd
+@sol:ds
+@result:pg
+@result:lngr
+@result:selection
+@dataset:dset
+res
+soldata

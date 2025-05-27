@@ -1,0 +1,1013 @@
+fuel
+cell
+stack
+cooling
+tutorial
+models
+thermal
+management
+polymer
+electrolyte
+membrane
+pem
+operating
+with
+similar
+temperature
+profile
+cells
+important
+uneven
+distribution
+may
+otherwise
+result
+nonuniform
+water
+vapor
+condensation
+large
+cell-to-cell
+variation
+performance
+consists
+five
+interlayered
+bipolar
+plates
+carry
+liquid
+fluid
+model
+solves
+electrode
+phase
+potentials
+mass
+transport
+reacting
+species
+separate
+gas
+compartment
+pressures
+corresponding
+velocities
+flow
+compartments
+channels
+resolved
+explicitly
+geometry
+instead
+anisotropic
+permeabilities
+used
+define
+patterns
+inside
+stack_cooling
+mph
+param
+parameters
+l_plate
+active
+area
+length
+l_manifold
+manifold
+d_gdl
+diffusion
+layer
+thickness
+n_cells
+number
+kappa_bpp_eff
+effective
+conductivity
+plate
+perm_gas_bpp
+permeability
+a_cl
+specific
+catalytic
+layers
+alphaa_o
+anodic
+transfer
+coefficient
+oxygen
+reduction
+l_cl
+p_in_cath
+inlet
+pressure
+cathode
+side
+eps_gas_bpp
+volume
+fraction
+v_cool_in
+velocity
+default
+par
+physics
+fc
+@tag:fc
+hydrogenfuelcell
+@type:hydrogenfuelcell
+hydrogen
+@label:hydrogen fuel cell
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+pot
+@tag:pot
+electricpotential
+@type:electricpotential
+potential
+@label:electric potential
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+@label:h2 gas phase
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+h2in
+@tag:h2in
+h2inlet
+@type:h2inlet
+@label:h2 inlet
+h2out
+@tag:h2out
+h2outlet
+@type:h2outlet
+outlet
+@label:h2 outlet
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+o2in
+@tag:o2in
+o2inlet
+@type:o2inlet
+@label:o2 inlet
+o2out
+@tag:o2out
+o2outlet
+@type:o2outlet
+@label:o2 outlet
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:continuity
+mem
+@tag:mem
+@type:membrane
+@label:membrane
+wadh2side
+@tag:wadh2side
+waterabsorptiondesorptionh2side
+@type:waterabsorptiondesorptionh2side
+absorption-desorption
+@label:water absorption-desorption, h2 side
+wado2side
+@tag:wado2side
+waterabsorptiondesorptiono2side
+@type:waterabsorptiondesorptiono2side
+@label:water absorption-desorption, o2 side
+h2gdl
+@tag:h2gdl
+h2gasdiffusionlayer
+@type:h2gasdiffusionlayer
+@label:h2 gas diffusion layer
+o2gdl
+@tag:o2gdl
+o2gasdiffusionlayer
+@type:o2gasdiffusionlayer
+@label:o2 gas diffusion layer
+manifolds
+cc
+@tag:cc
+currentcollector
+@type:currentcollector
+current
+collector
+end
+blocks
+@label:current collector 1 (end blocks
+@label:current collector (with cooling flow
+th2gde
+@tag:th2gde
+thinh2gasdiffusionelectrode
+@type:thinh2gasdiffusionelectrode
+thin
+@label:thin h2 gas diffusion electrode
+th2gder
+@tag:th2gder
+thinh2gasdiffusionelectrodereaction
+@type:thinh2gasdiffusionelectrodereaction
+reaction
+@label:thin h2 gas diffusion electrode reaction
+to2gde
+@tag:to2gde
+thino2gasdiffusionelectrode
+@type:thino2gasdiffusionelectrode
+@label:thin o2 gas diffusion electrode
+to2gder
+@tag:to2gder
+thino2gasdiffusionelectrodereaction
+@type:thino2gasdiffusionelectrodereaction
+@label:thin o2 gas diffusion electrode reaction
+x-directed
+@label:h2 gas diffusion layer 3 (x-directed channels
+y-directed
+@label:h2 gas diffusion layer 4 (y-directed channels
+@label:o2 gas diffusion layer 3 (x-directed channels
+@label:o2 gas diffusion layer 4 (y-directed channels
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law
+porous
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+nf
+@tag:nf
+noflow
+@type:noflow
+@label:no flow
+@type:init
+inl
+@tag:inl
+@type:inlet
+@label:inlet
+@tag:out
+@type:outlet
+@label:outlet
+ht
+@tag:ht
+porousmediaheattransfer
+@type:porousmediaheattransfer
+heat
+media
+@label:heat transfer in porous media
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+porousmediumheattransfermodel
+@type:porousmediumheattransfermodel
+fluidporousmediumheattransfermodel
+@type:fluidporousmediumheattransfermodel
+porousmatrixporousmediumheattransfermodel
+@type:porousmatrixporousmediumheattransfermodel
+thermalinsulation
+@type:thermalinsulation
+@label:thermal insulation
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+membranes
+@label:solid 1 - membranes
+gdls
+@label:solid 2 - gdls
+@label:solid 3 - end blocks
+@label:solid 4 - gas manifolds
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+geom
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+uni
+work_plane
+sequence2d
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+pt
+@tag:pt
+point
+@type:point
+@label:point
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+feeder
+@label:current feeder plate
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+negative
+@label:end cooling plate, negative side
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+domains
+@label:negative end domains
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+@label:hydrogen gas manifolds
+@label:cooling manifolds, hydrogen side
+@label:hydrogen gas channels, x-directed
+@label:hydrogen gas channels, y-directed
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+@label:hydrogen gdls
+@label:membrane, hydrogen side
+repetitive
+unit
+@label:repetitive unit, hydrogen side
+@label:oxygen gas manifolds
+@label:cooling manifolds, oxygen side
+@label:oxygen gas channels, x-directed
+@label:oxygen gas channels, y-directed
+@label:oxygen gdls
+@label:membrane, oxygen side
+@label:repetitive unit, oxygen side
+arr
+@tag:arr
+array
+@type:array
+@label:array
+@label:current collector
+positive
+@label:end cooling plate, positive side
+@label:positive end domains
+@label:hydrogen side domains
+@label:oxygen side domains
+@tag:uni
+union
+@type:union
+@label:union
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+@label:membranes
+@label:hydrogen gas channels and manifolds
+@label:oxygen gas channels and manifolds
+@label:cooling channels and manifolds
+@label:current collector and feeder plates
+@label:end cooling plates
+interior
+@label:interior cooling manifolds
+non-gas
+@label:non-gas cooling channels and manifolds
+@label:gdls
+@label:gas manifolds
+intsel
+@tag:intsel
+intersectionselection
+@type:intersectionselection
+electrodes
+@label:hydrogen gas diffusion electrodes
+@label:oxygen gas diffusion electrodes
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+inlets
+@label:cooling inlets
+outlets
+@label:cooling outlets
+@label:hydrogen inlets
+@label:hydrogen outlets
+@label:oxygen inlets
+@label:oxygen outlets
+tab
+@label:current feeder tab
+@label:current collector tab
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+boundaries
+@label:membrane boundaries
+pnt
+edg
+bnd
+dom
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+image
+@tag:image
+@type:geometry
+@label:geometry
+material
+fixed
+spatial
+mesh
+geom1_ext1_dom
+@tag:geom1_ext1_dom
+fromsequence
+@type:fromsequence
+geom1_ext2_dom
+@tag:geom1_ext2_dom
+geom1_unisel1_pnt
+@tag:geom1_unisel1_pnt
+geom1_unisel1_edg
+@tag:geom1_unisel1_edg
+geom1_unisel1_bnd
+@tag:geom1_unisel1_bnd
+geom1_unisel1_dom
+@tag:geom1_unisel1_dom
+geom1_ext3_dom
+@tag:geom1_ext3_dom
+geom1_ext4_dom
+@tag:geom1_ext4_dom
+geom1_ext5_dom
+@tag:geom1_ext5_dom
+geom1_ext6_dom
+@tag:geom1_ext6_dom
+geom1_ext7_dom
+@tag:geom1_ext7_dom
+geom1_ext8_dom
+@tag:geom1_ext8_dom
+geom1_unisel2_pnt
+@tag:geom1_unisel2_pnt
+geom1_unisel2_edg
+@tag:geom1_unisel2_edg
+geom1_unisel2_bnd
+@tag:geom1_unisel2_bnd
+geom1_unisel2_dom
+@tag:geom1_unisel2_dom
+geom1_ext9_dom
+@tag:geom1_ext9_dom
+geom1_ext10_dom
+@tag:geom1_ext10_dom
+geom1_ext11_dom
+@tag:geom1_ext11_dom
+geom1_ext12_dom
+@tag:geom1_ext12_dom
+geom1_ext13_dom
+@tag:geom1_ext13_dom
+geom1_ext14_dom
+@tag:geom1_ext14_dom
+geom1_unisel3_pnt
+@tag:geom1_unisel3_pnt
+geom1_unisel3_edg
+@tag:geom1_unisel3_edg
+geom1_unisel3_bnd
+@tag:geom1_unisel3_bnd
+geom1_unisel3_dom
+@tag:geom1_unisel3_dom
+geom1_ext15_dom
+@tag:geom1_ext15_dom
+geom1_ext16_dom
+@tag:geom1_ext16_dom
+geom1_unisel4_pnt
+@tag:geom1_unisel4_pnt
+geom1_unisel4_edg
+@tag:geom1_unisel4_edg
+geom1_unisel4_bnd
+@tag:geom1_unisel4_bnd
+geom1_unisel4_dom
+@tag:geom1_unisel4_dom
+geom1_unisel5_pnt
+@tag:geom1_unisel5_pnt
+geom1_unisel5_edg
+@tag:geom1_unisel5_edg
+geom1_unisel5_bnd
+@tag:geom1_unisel5_bnd
+geom1_unisel5_dom
+@tag:geom1_unisel5_dom
+geom1_unisel6_pnt
+@tag:geom1_unisel6_pnt
+geom1_unisel6_edg
+@tag:geom1_unisel6_edg
+geom1_unisel6_bnd
+@tag:geom1_unisel6_bnd
+geom1_unisel6_dom
+@tag:geom1_unisel6_dom
+geom1_unisel
+@tag:geom1_unisel
+geom1_intsel
+@tag:geom1_intsel
+geom1_boxsel
+@tag:geom1_boxsel
+geom1_adjsel
+@tag:geom1_adjsel
+ap
+identity
+boundary
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+hide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+ech
+@tag:ech
+electrochemicalheating
+@type:electrochemicalheating
+electrochemical
+heating
+@label:electrochemical heating
+mat
+@tag:mat
+common
+@type:common
+steel
+aisi
+@label:steel aisi
+enu
+young's
+modulus
+poisson's
+ratio
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+interpolation
+@type:interpolation
+@label:interpolation
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+nafion
+ew
+equilibrated
+protonated
+@label:nafion, ew 1100, vapor equilibrated, protonated
+electrolyteconductivity
+int
+@tag:int
+membranecrossover
+crossover
+polymerelectrolytewatertransport
+polymerelectrolytewaterabsorptiondesorption
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_fc_mu
+@tag:comp1_fc_mu
+field
+@type:field
+chemical
+mu
+@label:chemical potential
+comp1_fc_p_h
+@tag:comp1_fc_p_h
+p_h
+@label:pressure
+comp1_fc_p_o
+@tag:comp1_fc_p_o
+p_o
+comp1_fc_phil
+@tag:comp1_fc_phil
+phil
+@label:electrolyte potential
+comp1_fc_phis
+@tag:comp1_fc_phis
+phis
+comp1_fc_wh2o_h
+@tag:comp1_fc_wh2o_h
+wh2o_h
+@label:mass fraction
+comp1_fc_wh2o_o
+@tag:comp1_fc_wh2o_o
+wh2o_o
+comp1_fc_wn2_o
+@tag:comp1_fc_wn2_o
+wn2_o
+comp1_p
+@tag:comp1_p
+comp1_t
+@tag:comp1_t
+@label:temperature
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:i
+iterative
+@type:iterative
+algebraic
+multigrid
+@label:algebraic multigrid
+mg
+@tag:mg
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+amg
+@label:amg, pressure
+sl
+@tag:sl
+sorline
+@type:sorline
+sor
+@label:sor line
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@label:amg, heat transfer variables
+@tag:so
+@type:sor
+@label:sor
+results
+dset
+@tag:dset
+@type:solution
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+cut
+3d
+@label:cut line 3d
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+respect
+@label:electrode potential with respect to ground
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+mole
+streamline
+@label:mole fraction, h2, streamline
+strmsl
+@tag:strmsl
+streamlinemultislice
+@type:streamlinemultislice
+multislice
+@label:streamline multislice
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:mole fraction, h2, surface
+@label:mole fraction, o2, streamline
+@label:mole fraction, o2, surface
+h2o
+@label:mole fraction, h2o, surface
+@label:mole fraction, n2, surface
+activity
+gdes
+@label:water activity in oxygen gdes
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+vol
+@tag:vol
+@type:volume
+@label:volume
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+meas
+@label:temperature in meas
+@label:temperature in cooling channels
+plotgroup1d
+@type:plotgroup1d
+mid-stack
+toward
+@label:mid-stack temperature toward cooling outlets
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+geommanagernative
+hist
+@physics:fc
+@study:std
+@study:cdi
+@physics:dl
+@physics:ht
+@study:stat
+@geom:geom
+@param:group
+@param:par
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:ElectrolyteConductivity
+@material:PolymerElectrolyteWaterTransport
+@material:int
+@material:MembraneCrossover
+@material:PolymerElectrolyteWaterAbsorptionDesorption
+@material:selection
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@mesh:swe
+@mesh:sourceface
+@mesh:targetface
+@mesh:dis
+@view:view
+@view:camera
+@view:hideEntities
+@view:hide
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_fc_phis
+@sol:comp1_fc_phil
+@sol:comp1_fc_mu
+@sol:s
+@sol:fc
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:d
+@sol:comp1_fc_wH2O_O
+@sol:comp1_fc_wN2_O
+@sol:comp1_fc_wH2O_H
+@sol:aDef
+@sol:sl
+@sol:p
+@sol:se
+@sol:ss
+@sol:so
+@sol:ll
+@result:pg
+@result:mslc
+@result:arwv
+@result:filt
+@result:str
+@result:col
+@result:surf
+@result:selection
+@result:vol
+@result:strmsl
+@result:sel
+@dataset:cln
+@result:lngr
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

@@ -1,0 +1,953 @@
+ow
+microspeaker
+simulation
+correlation
+with
+measurements
+model
+analyzes
+electromagnetic
+mechanical
+acoustical
+characteristics
+ows-1943t-8cp
+discontinued
+speaker
+beside
+certain
+details
+geometry
+material
+properties
+copyright
+ole
+wolff
+starting
+axisymmetric
+used
+characterize
+frequency-dependent
+response
+voice
+coil
+circuit
+included
+3d
+vibroacoustic
+analyzed
+compared
+recognized
+worldwide
+high-quality
+transducers
+unique
+design
+capabilities
+supplied
+broad
+range
+first-tier
+companies
+within
+consumer
+electronics
+industry
+ow_microspeaker
+mph
+param
+parameters
+driving
+frequency
+sigma_wire
+wire
+conductivity
+dvisc
+thickness
+thermoviscous
+layer
+lam
+min
+wavelength
+th_gap
+magnetic
+gap
+back_slits_w
+width
+back
+slits
+voice_coil_gap
+height
+outer
+default
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+fluids
+@label:amp&#xe8;re's law in fluids
+@tag:coil
+@type:coil
+@label:coil
+als
+@tag:als
+ampereslawsolid
+@type:ampereslawsolid
+first
+magnet
+@label:amp&#xe8;re's law first magnet
+second
+@label:amp&#xe8;re's law second magnet
+soft
+iron
+@label:amp&#xe8;re's law soft iron
+tg
+@tag:tg
+thinlowpermeabilitygap
+@type:thinlowpermeabilitygap
+thin
+low
+permeability
+@label:thin low permeability gap
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+acpr
+@tag:acpr
+pressureacoustics
+@type:pressureacoustics
+pressure
+acoustics
+domain
+@label:pressure acoustics, frequency domain
+fpam
+@tag:fpam
+frequencypressureacousticsmodel
+@type:frequencypressureacousticsmodel
+@label:pressure acoustics
+shb
+@tag:shb
+soundhard
+@type:soundhard
+sound
+hard
+boundary
+wall
+@label:sound hard boundary
+efc
+@tag:efc
+exteriorfieldcalculation
+@type:exteriorfieldcalculation
+exterior
+field
+calculation
+@label:exterior field calculation
+nra
+@tag:nra
+narrowregionacousticsmodel
+@type:narrowregionacousticsmodel
+narrow
+region
+@label:narrow region acoustics
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+@label:linear elastic material
+@tag:free
+@type:free
+@label:free
+bl
+@tag:bl
+bodyload
+@type:bodyload
+body
+load
+@label:body load - from circuit
+applied
+force
+@label:body load - applied force
+shell
+@tag:shell
+@type:shell
+@label:shell
+dimensionless_displacement
+shell_rd_disp
+shell_rd_rot
+shell_rig_disp
+shell_rig_rot
+shell_att_disp
+shell_att_rot
+emm
+@tag:emm
+@type:elastic
+shls
+@tag:shls
+shelllocalsystem
+@type:shelllocalsystem
+local
+system
+@label:shell local system
+dmp
+@tag:dmp
+damping
+@type:damping
+@label:damping
+@tag:to
+thicknessoffset
+@type:thicknessoffset
+offset
+@label:thickness and offset
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+cir
+@tag:cir
+@type:circuit
+electrical
+@label:electrical circuit
+voltages
+currents
+current_time
+gnd
+@tag:gnd
+groundnode
+@type:groundnode
+ground
+node
+@label:ground node
+@tag:v
+voltagesource
+@type:voltagesource
+voltage
+source
+@label:voltage source
+@tag:r
+resistor
+@type:resistor
+@label:resistor
+geom
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+int
+@tag:int
+interpolation
+@type:interpolation
+measured
+spl
+mm
+@label:measured spl at 39 mm
+curve
+@label:measured bl curve
+@label:measured z curve
+cms
+@label:measured cms curve
+inductance
+@label:coil inductance from axisymmetric model
+comsol
+@label:force displacement from comsol
+var
+variables
+coil_location_r
+bl_integrand
+rho_coil
+effective
+density
+m_diaphragm
+mass
+diaphragm
+intop
+@tag:intop
+integration
+@type:integration
+area
+integrate
+@label:area to integrate bl
+aveop
+@tag:aveop
+average
+@type:average
+@label:coil average
+pml
+top
+integral
+@label:pml top integral
+componentcoupling
+@type:componentcoupling
+nonlocal_coupling
+@label:nonlocal_coupling
+bottom
+@label:pml bottom integral
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+triangular
+@label:diaphragm triangular mesh
+selection
+@type:selection
+@label:selection
+mapped
+@label:diaphragm mapped mesh
+uni
+@tag:uni
+@type:union
+@label:diaphragm
+air
+@label:air
+@label:pml top
+@label:pml bottom
+@label:exterior field
+dif
+@tag:dif
+difference
+@type:difference
+without
+@label:air without pml
+inner
+@label:inner gap
+@label:outer gap
+channels
+@label:outer channels
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview3d
+@type:modelview3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+sshc
+@tag:sshc
+solidshellconnection
+@type:solidshellconnection
+solid&#x2013;thin
+structure
+connection
+@label:solid&#x2013;thin structure connection
+asb
+@tag:asb
+acousticstructureboundary
+@type:acousticstructureboundary
+acoustic-structure
+@label:acoustic-structure boundary - solid
+@label:acoustic-structure boundary - shell
+mat
+@tag:mat
+common
+@type:common
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+losses
+@label:soft iron (with losses
+bhcurve
+b-h
+bh
+@tag:bh
+@label:interpolation
+effectivebhcurve
+bheff
+@tag:bheff
+@label:magnet
+remanentfluxdensity
+remanent
+flux
+pen
+um
+@label:pen 38 um
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+@label:mapped
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+@label:free triangular
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+@label:boundary layer properties
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+meshnative
+@type:mesh
+@label:mesh
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+optsequence
+std
+study
+analysis
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+frlin
+@tag:frlin
+frequencylinearized
+@type:frequencylinearized
+frequency-domain
+perturbation
+@label:frequency-domain perturbation
+extraction
+acoustic
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@type:variables
+dependent
+@label:dependent variables
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+@type:field
+psiora
+@label:magnetic flux
+comp1_mf_coil1_icoil_ode
+@tag:comp1_mf_coil1_icoil_ode
+state
+@type:state
+current
+icoil_ode
+@label:coil current
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+comp2_ar
+@tag:comp2_ar
+normals
+ar
+@label:displacement of shell normals
+comp2_p
+@tag:comp2_p
+@label:acoustic pressure
+comp2_u
+@tag:comp2_u
+@label:displacement field
+comp2_currents
+@tag:comp2_currents
+device
+@label:current through device r
+@tag:i
+iterative
+@type:iterative
+suggested
+gmres
+directprecond
+asb1_sshc1_asb
+@label:gmres with directprecond
+dp
+@tag:dp
+directpreconditioner
+@type:directpreconditioner
+preconditioner
+@label:direct preconditioner
+@tag:mass
+massproperties
+@type:massproperties
+@label:coil mass
+@label:diaphragm mass
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+@label:coil displacement
+dset4shellshl
+@tag:dset4shellshl
+grid
+@tag:grid
+grid1d
+@type:grid1d
+1d
+@label:grid 1d
+dset6shellshl
+@tag:dset6shellshl
+tbl
+@tag:tbl
+table
+@type:table
+@label:thermoviscous results
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+evaluation
+group
+@label:evaluation group - coil properties
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+@label:global evaluation
+factor
+@label:evaluation group - bl factor
+av
+@tag:av
+avsurface
+@type:avsurface
+surface
+@label:surface average
+@label:evaluation group - force displacement curve
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+norm
+@label:magnetic flux density norm
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+revolved
+@label:magnetic flux density norm, revolved geometry
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+plotgroup1d
+@type:plotgroup1d
+@label:coil properties from comsol
+glob
+@tag:glob
+@type:global
+resistance
+@label:resistance
+reactance
+@label:reactance
+@label:bl factor
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+test
+@label:bl from test
+inverted
+@label:bl from comsol
+stress
+@label:stress
+vs
+@label:cms vs displacement
+@label:cms curve from test
+@label:cms curve from comsol
+level
+@label:sound pressure level
+isosurfaces
+@label:acoustic pressure, isosurfaces
+iso
+@tag:iso
+isosurface
+@type:isosurface
+@label:isosurface
+exterior-field
+@label:exterior-field sound pressure level
+rp
+@tag:rp
+radiationpattern
+@type:radiationpattern
+radiation
+pattern
+@label:radiation pattern
+@label:exterior-field pressure
+polargroup
+@type:polargroup
+xy-plane
+@label:exterior-field sound pressure level xy-plane
+outgoing
+energy
+@label:outgoing acoustic energy
+@label:global
+sensitivity
+@label:speaker sensitivity at 39 mm
+oct
+@tag:oct
+octaveband
+@type:octaveband
+octave
+band
+@label:octave band
+tblp
+@tag:tblp
+graph
+@label:table graph
+total
+impedance
+@label:total impedance
+thumbnail
+@label:thumbnail
+@label:shell displacement
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+line
+@tag:line
+@type:line
+@label:line
+@label:solid displacement
+slc
+@tag:slc
+slice
+@type:slice
+section
+@label:solid displacement section
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:stat
+@physics:mf
+@study:frlin
+@func
+@func:int
+@geom:imp
+@expr:var
+@cpl
+@cpl:intop
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:BHCurve
+@material:EffectiveBHCurve
+@material:BH
+@material:BHeff
+@material:selection
+@material:RemanentFluxDensity
+@mesh:mesh
+@mesh:size
+@mesh:map
+@mesh:selection
+@mesh:ftri
+@mesh:bl
+@mesh:blp
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:p
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@dataset:rev
+@result:vol
+@dataset:cln
+@result:glob
+@result:lngr
+@nodeGroup:grp
+@evaluationgroup:eg
+@evaluationgroup:gev
+@evaluationgroup:av
+@evaluationgroup:selection
+@view:view
+@selection
+@selection:sel
+@selection:uni
+@selection:dif
+@massProp:mass
+@massProp:selection
+@cpl:aveop
+@physics:acpr
+@physics:solid
+@physics:shell
+@physics:cir
+@coordsys:pml
+@coordsys:selection
+@multiphysics
+@multiphysics:sshc
+@multiphysics:asb
+@multiphysics:selection
+@mesh:dis
+@mesh:swe
+@mesh:ftet
+@sol:comp2_ar
+@sol:aDef
+@dataset:dset4shellshl
+@dataset:grid
+@study:freq
+@sol:se
+@sol:ss
+@sol:d
+@sol:i
+@sol:dp
+@sol:mg
+@result:iso
+@result:rp
+@dataset:dset6shellshl
+@table:tbl
+@result:oct
+@result:tblp
+@result:line
+@result:slc
+@dataset:dset
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+shellsys
+@tag:shellsys
+vectorbase
+@type:vectorbase
+@tag:pml
+@type:pml
+perfectly
+matched
+@label:perfectly matched layer
+grp
+@tag:grp
+@type:results
+postprocessing
+@label:postprocessing - electromagnetic analysis
+@label:postprocessing - cms analysis
+@label:postprocessing - acoustic analysis
+res
+soldata

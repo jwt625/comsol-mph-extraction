@@ -1,0 +1,14 @@
+{
+  "source_file": "Optimization_Module/Parameter_Estimation/curve_fit_mooney_rivlin.mph",
+  "source_size": 346766,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310383.213",
+  "total_files_in_archive": 18
+}

@@ -1,0 +1,1118 @@
+large
+eddy
+simulation
+sports
+car
+example
+simulates
+turbulent
+flow
+around
+traveling
+speed
+180 km/h
+using
+simulations
+les
+model
+sports_car
+mph
+param
+parameters
+velocity
+x_w
+position
+front
+wheel
+height
+r_fc
+radius
+profile
+circle
+r_wsc
+wind
+shield
+x_rc
+roof
+air_inlet
+air
+inlet
+depth
+sourrounding
+box
+w_w
+width_wheel
+w_mirror
+width
+including
+mirros
+default
+spf
+@tag:spf
+lesrbvm
+@type:lesrbvm
+rbvm
+@label:les rbvm
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+properties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet
+ipf
+@tag:ipf
+incompressiblepotentialflow
+@type:incompressiblepotentialflow
+incompressible
+potential
+@label:incompressible potential flow
+velocitypotential
+initialvalues
+@type:initialvalues
+velbc
+@tag:velbc
+@type:velocity
+@label:velocity
+open
+@tag:open
+openboundary
+@type:openboundary
+boundary
+@label:open boundary
+turbulentflowkeps
+@type:turbulentflowkeps
+k-&#x3b
+@label:turbulent flow, k-&#x3b
+geom
+geometry
+geomnative
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+hood
+@label:work plane - hood
+int
+work_plane
+sequence2d
+@tag:e
+ellipse
+@type:ellipse
+@label:ellipse
+sketchobject
+pos
+@tag:pos
+@type:position
+@label:position
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+@tag:int
+intersection
+@type:intersection
+@label:intersection
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+cghandlernative
+obj
+rev
+@tag:rev
+revolve
+@type:revolve
+@label:revolve - hood
+windscreen
+@label:work plane - windscreen
+@tag:c
+@type:circle
+@label:circle
+@label:revolve - windscreen
+@label:work plane - roof
+@label:revolve - roof
+rear
+window
+@label:work plane - rear window
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude - rear window
+uni
+@tag:uni
+union
+@type:union
+surfaces
+@label:union - roof surfaces
+del
+@tag:del
+delete
+@type:delete
+@label:delete - roof surfaces
+delete_entities
+fil
+@tag:fil
+fillet3d
+@type:fillet3d
+fillet
+back
+@label:fillet - roof to back
+underside
+@label:work plane - underside
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+hor
+@tag:hor
+horizontal
+@type:horizontal
+@label:horizontal
+coi
+@tag:coi
+coincident
+@type:coincident
+@label:coincident
+ang
+@tag:ang
+angle
+@type:angle
+@label:angle
+xdist
+@tag:xdist
+xdistance
+@type:xdistance
+x-distance
+@label:x-distance
+ydist
+@tag:ydist
+ydistance
+@type:ydistance
+y-distance
+@label:y-distance
+@label:extrude - underside
+extract
+@tag:extract
+@type:extract
+@label:extract - construction geometry
+top
+view
+@label:work plane - top view
+mov
+@tag:mov
+move
+@type:move
+@label:move
+cc
+@tag:cc
+compositecurve
+@type:compositecurve
+composite
+curve
+@label:composite curve
+composite_curve
+cb
+@tag:cb
+cubicbezier
+@type:cubicbezier
+cubic
+b&#xe9;zier
+@label:cubic b&#xe9;zier
+cubic_bezier
+ca
+@tag:ca
+circulararc
+@type:circulararc
+circular
+arc
+@label:circular arc
+circular_arc
+ver
+@tag:ver
+vertical
+@type:vertical
+@label:vertical
+dist
+@tag:dist
+distance
+@type:distance
+@label:distance
+@type:fillet
+@label:fillet
+rad
+@tag:rad
+@type:radius
+@label:radius
+tanc
+@tag:tanc
+tangentconstraint
+@type:tangentconstraint
+tangent
+constraint
+@label:tangent constraint
+pnt
+bnd
+dom
+@label:extrude - top view
+@label:union
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+selection
+basic
+shape
+@label:box selection - basic shape
+straight
+part
+@label:box selection - basic shape (straight part
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+complement
+@label:complement selection - basic shape
+entities
+@label:delete entities - basic shape
+arches
+@label:work plane - wheel arches
+cro
+@tag:cro
+crosssection
+@type:crosssection
+cross
+section
+@label:cross section
+cross_section
+@label:delete entities
+@label:extract
+@label:extrude - wheel arches
+pare
+@tag:pare
+partitionedges
+@type:partitionedges
+edges
+loft
+@label:partition edges - position for back loft
+partition_edges
+@label:box selection - back loft
+partitioning
+@label:work plane - roof partitioning
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+explicit
+arch
+@label:explicit selection - rear loft (wheel arch
+parf
+@tag:parf
+partitionfaces
+@type:partitionfaces
+faces
+@label:partition faces - roof partitioning
+partition_faces
+@label:work plane - profile back loft
+proj
+@tag:proj
+projection
+@type:projection
+@label:projection
+eqdist
+@tag:eqdist
+equaldistance
+@type:equaldistance
+equal
+@label:equal distance
+guide
+@label:work plane - guide curve back loft
+@label:partition edges - back loft
+@label:explicit selection - back loft
+@tag:loft
+@type:loft
+@label:loft - back loft
+@label:delete entities - roof partitioning
+@label:work plane - guide curve rear loft
+@label:partition edges
+frame
+@label:work plane - window frame
+con
+@tag:con
+concentric
+@type:concentric
+@label:concentric
+@label:work plane - hood partitioning
+@label:extrude - hood partitioning
+@label:partition objects - hood partitioning
+point
+@label:box selection - position point
+starting
+@label:work plane - hood starting
+pt
+@tag:pt
+@type:point
+@label:point
+outer
+@label:work plane - outer partitioning
+@label:extrude - window frame
+door
+@label:work plane - rear door section
+@label:box selection
+cut
+start
+@label:work plane - door cut start
+floor
+@label:work plane - floor guide curve
+middle
+@label:work plane - door middle
+inclination
+@label:box selection - door inclination
+@label:work plane - door inclination
+@label:partition objects - door guide curve
+@label:loft - door
+side
+@label:work plane - side window
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+csel
+cumulative
+rails
+@label:work plane - roof rails
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+with
+@label:partition faces - partition roof with window
+@label:box selection - roof rails
+@label:partition faces - roof rails
+boundaries
+@label:box selection - delete boundaries
+@label:explicit selection - delete boundaries
+@label:complement selection - delete boundaries
+@label:delete entities - roof and hood
+@label:union - roof and door
+@label:partition edges - roof loft
+edge
+@label:partition edges - roof loft (roof edge
+end
+@label:box selection - roof (end guide
+@label:loft - roof
+@label:work plane - rear top loft position
+@label:partition edges - rear edge
+rail
+@label:loft - rear to rail
+@label:box selection - circular edge
+@label:work plane - rear loft
+para
+@tag:para
+parallel
+@type:parallel
+@label:parallel
+@label:work plane - profile rear loft
+curves
+@label:partition edges - roof with guide curves
+@label:partition edges - start and end guide curves with profile
+@label:partition edges - door with guide curves
+@label:box selection - partition edges
+@label:explicit selection - partition edges
+@label:loft - rear section
+vertex
+@label:box selection - outer vertex hood
+@label:box selection - hood projection
+inclined
+@label:work plane - inclined hood
+@label:work plane - front wheel arch
+shoulder
+@label:work plane - shoulder loft
+@label:union - shoulder loft
+@label:loft - shoulder
+cap
+@tag:cap
+capfaces
+@type:capfaces
+a-pillar
+@label:cap faces - a-pillar
+cap_faces
+@label:partition edges - wheel arch loft
+corner
+@label:partition edges - corner loft
+@label:work plane - corner loft
+@label:work plane - wheel arch
+@label:union - wheel arch
+@label:loft - wheel arch
+@label:extrude
+lower
+@label:work plane - lower air inlet
+@label:partition faces - lower air inlet
+@label:union - lower air inlet
+treatment
+@label:work plane - floor treatment
+@label:partition faces
+@label:work plane - front air inlet
+@tag:off
+offset
+@type:offset
+@label:offset
+@label:partition faces - floor treatment
+@label:loft - front corner
+@label:partition faces - hood
+interior
+@label:delete entities - interior boundaries
+@label:cap faces
+intake
+@label:fillet - lower air intake
+@label:fillet - front air intake
+@label:explicit selection - a-pillar and roof rail
+@label:fillet - a-pillar and roof rail
+ballsel
+@tag:ballsel
+ballselection
+@type:ballselection
+ball
+@label:ball selection - hood and shoulder fillet
+@label:fillet - hood and shoulder fillet
+rfa
+@tag:rfa
+replacefaces
+@type:replacefaces
+replace
+@label:replace faces
+replace_faces
+@label:explicit selection - window fillet
+@label:fillet - side window and hood
+chamfer
+@label:box selection - chamfer
+cha
+@tag:cha
+chamfer3d
+@type:chamfer3d
+@label:chamfer
+bays
+@label:wheel bays
+@label:work plane - door line
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+cylinder
+@label:cylinder selection
+@label:partition faces - door line
+@label:ball selection
+vents
+@label:air vents
+mirror
+@label:work plane - mirror top view
+@label:work plane - mirror partition
+sweep
+face
+@label:work plane - mirror sweep face
+swe
+@tag:swe
+@type:sweep
+@label:sweep
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+@label:work plane - mirror loft guide curve
+@label:work plane mirror loft guide curve
+@label:work plane - mirror loft profile
+@label:loft - mirror
+@label:union - mirror
+body
+@label:fillet - mirror to car body
+light
+@label:work plane - front light
+headlights
+@label:headlights
+@label:work plane
+@label:explicit selection
+lights
+@label:rear lights
+windows
+@label:windows
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+adjacent
+ignore
+@label:adjacent selection - ignore edges
+form
+@label:form composite face
+cyl
+@tag:cyl
+@type:cylinder
+@label:cylinder
+blk
+@tag:blk
+block
+@type:block
+@label:block
+tires
+@label:tires
+@label:explicit selection - ignore edges
+mir
+@tag:mir
+@type:mirror
+@label:mirror
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+rims
+@label:rims
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+@label:wheel air
+wheels
+@label:rear wheels
+@label:front wheels
+@label:front wheel boundaries
+@label:rear wheel boundaries
+dsl
+@tag:dsl
+deletesliverfaces
+@type:deletesliverfaces
+sliver
+@label:delete sliver faces
+sliver_face_x
+delete_sliver_faces
+dse
+@tag:dse
+deleteshortedges
+@type:deleteshortedges
+short
+@label:delete short edges
+edge_chain_x
+delete_short_edges
+@label:fillet 15 - front air inlet
+@label:union selection
+knit
+@tag:knit
+@type:knit
+@label:knit to solid
+knit_to_solid
+fin
+@tag:fin
+finalize
+@type:finalize
+@label:form union
+form_union/assembly
+ige
+@tag:ige
+ignoreedges
+@type:ignoreedges
+@label:ignore edges
+ignore_edges
+cmf
+@tag:cmf
+compositefaces
+@type:compositefaces
+@label:form composite faces
+form_composite_faces
+cle
+@tag:cle
+collapseedges
+@type:collapseedges
+collapse
+@label:collapse edges
+collapse_edges
+igv
+@tag:igv
+ignorevertices
+@type:ignorevertices
+vertices
+@label:ignore vertices
+ignore_vertices
+@label:car surfaces
+@label:body
+edg
+wp20_extract
+wp22_boxsel
+wp23_csel
+wp35_proj
+grp
+@tag:grp
+@type:geometry
+chassis
+@label:chassis
+@label:door line partitioning
+@label:front light partitioning
+@label:rear light partitioning
+@label:top window partitioning
+@label:wheels
+var
+variables
+uwx
+tire
+x-component
+cdstress
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+geom1_csel1_edg
+@tag:geom1_csel1_edg
+fromsequence
+@type:fromsequence
+geom1_sel
+@tag:geom1_sel
+geom1_adjsel
+@tag:geom1_adjsel
+geom1_unisel
+@tag:geom1_unisel
+geom1_difsel
+@tag:geom1_difsel
+geom1_mov2_dom
+@tag:geom1_mov2_dom
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+refinement
+@label:corner refinement
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_p
+@tag:comp1_p
+field
+@type:field
+@label:pressure
+comp1_phi
+@tag:comp1_phi
+phi
+@label:velocity potential
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_uphi
+@tag:comp1_uphi
+smoothed
+uphi
+@label:smoothed velocity from potential flow
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@tag:i
+iterative
+@type:iterative
+amg
+@label:amg, potential flow
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+@tag:so
+sor
+@type:sor
+@label:sor
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+@label:amg, smoothed velocity from potential flow
+comp1_ep
+@tag:comp1_ep
+dissipation
+rate
+ep
+@label:turbulent dissipation rate
+comp1_k
+@tag:comp1_k
+kinetic
+energy
+@label:turbulent kinetic energy
+@label:velocity u2, pressure p
+turbulence
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+limit
+@label:lower limit
+@label:amg, fluid flow variables
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+@label:amg, turbulence variables
+sl
+@tag:sl
+sorline
+@type:sorline
+@label:sor line
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+surface
+@type:surface
+exterior
+walls
+@label:exterior walls
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:potential flow
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+@label:surface
+@type:selection
+@label:selection
+resolution
+@label:wall resolution
+slices
+@label:car with velocity slices
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+streamlines
+@label:streamlines
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:wheel velocity
+plotgroup1d
+@type:plotgroup1d
+1d
+plot
+group
+@label:1d plot group
+tblp
+@tag:tblp
+drag
+coefficient
+@label:drag coefficient
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:spf
+@physics:ipf
+@geom:geom
+@expr:var
+@view:view
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@mesh:mesh
+@mesh:size
+@mesh:bl
+@mesh:blp
+@mesh:statistics
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:d
+@dataset:dset
+@result:pg
+@result:slc
+@result:surf
+@result:sel
+@result:selection
+@sol:sc
+@sol:sl
+@sol:ll
+@dataset:surf
+@dataset:selection
+@study:time
+@sol:t
+@sol:fc
+@result:mtrl
+@result:str
+@result:col
+@cpl
+@cpl:intop
+@cpl:selection
+@numerical
+@numerical:gev
+@table:tbl
+@result:tblp
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

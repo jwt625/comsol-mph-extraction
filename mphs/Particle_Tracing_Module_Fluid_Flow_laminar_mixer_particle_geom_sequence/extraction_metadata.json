@@ -1,0 +1,13 @@
+{
+  "source_file": "Particle_Tracing_Module/Fluid_Flow/laminar_mixer_particle_geom_sequence.mph",
+  "source_size": 887090,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310385.777",
+  "total_files_in_archive": 15
+}

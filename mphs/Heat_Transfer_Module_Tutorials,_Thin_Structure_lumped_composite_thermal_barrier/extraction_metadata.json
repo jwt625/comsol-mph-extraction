@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Tutorials,_Thin_Structure/lumped_composite_thermal_barrier.mph",
+  "source_size": 1462568,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.592",
+  "total_files_in_archive": 33
+}

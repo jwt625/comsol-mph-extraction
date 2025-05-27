@@ -1,0 +1,11 @@
+{
+  "source_file": "Acoustics_Module/Vibrations_and_FSI/gearbox_vibration_noise.mph",
+  "source_size": 31104,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.432",
+  "total_files_in_archive": 6
+}

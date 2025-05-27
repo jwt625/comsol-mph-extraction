@@ -1,0 +1,753 @@
+piezoelectric
+micropump
+tutorial
+model
+kindly
+provided
+riccardo
+vietri
+james
+ransley
+andrew
+spann
+veryst
+engineering
+llc
+micropumps
+frequently
+used
+medical
+applications
+ability
+precisely
+control
+metering
+small
+volumes
+fluids
+gases
+example
+shows
+simulate
+simple
+nonresonant
+suitable
+low
+flow
+rate
+demonstrates
+combination
+materials
+with
+fluid-structure
+interaction
+illustrates
+velocity-dependent
+formula
+account
+presence
+valves
+inlet
+outlet
+boundaries
+piezoelectric_micropump
+mph
+param
+parameters
+w_block
+width
+base
+h_exit
+height
+inlet/outlet
+od
+disc
+actuator
+outer
+diameter
+r_outlet
+fluid
+radius
+electric
+field
+strength
+high_stress
+boundary
+stress
+high
+default
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:continuity
+pzm
+@tag:pzm
+piezoelectricmaterialmodel
+@type:piezoelectricmaterialmodel
+@label:piezoelectric material
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+sym
+@tag:sym
+symmetrysolid
+@type:symmetrysolid
+symmetry
+@label:symmetry
+es
+@tag:es
+electrostatics
+@type:electrostatics
+@label:electrostatics
+electricpotential
+ccn
+@tag:ccn
+chargeconservation
+@type:chargeconservation
+charge
+conservation
+@label:charge conservation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+@label:zero charge
+ccnp
+@tag:ccnp
+chargeconservationpiezo
+@type:chargeconservationpiezo
+@label:charge conservation, piezoelectric
+term
+@tag:term
+terminal
+@type:terminal
+@label:terminal
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+@label:laminar flow
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+@label:flow continuity
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet
+@tag:out
+outletboundary
+@type:outletboundary
+@label:outlet
+@type:symmetry
+ge
+@tag:ge
+globalequations
+@type:globalequations
+global
+odes
+daes
+@label:global odes and daes
+equations
+accumulated
+volume
+@label:global equations 1 - accumulated flow volume
+geom
+geometry
+geomnative
+blk
+@tag:blk
+block
+@type:block
+chamber
+@label:block 1 - fluid chamber
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+piezo
+@label:cylinder 1 - piezo od
+id
+@label:cylinder 2 - piezo id
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference 1 - piezo
+membrane
+@label:cylinder 3 - membrane
+@label:cylinder 4 - inlet
+@label:cylinder 5 - outlet
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane 1 - symmetry plane
+sequence2d
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+uni
+@tag:uni
+union
+@type:union
+@label:union 1 - solid
+@label:union 2 - fluid
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+pnt
+edg
+bnd
+dom
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+@type:geometry
+@label:geometry
+rm
+@tag:rm
+ramp
+@type:ramp
+@label:ramp
+aveop
+@tag:aveop
+average
+@type:average
+@label:average 1 - inlet
+@label:average 2 - outlet
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration 1 - inlet
+@label:integration 2 - outlet
+@label:integration 3 - fluid membrane
+spatial
+mesh
+geom1_uni1_dom
+@tag:geom1_uni1_dom
+fromsequence
+@type:fromsequence
+geom1_uni2_dom
+@tag:geom1_uni2_dom
+box
+@tag:box
+@type:box
+@label:box 1 - piezo
+@label:difference 1 - membrane
+selection
+@type:selection
+@label:selection
+@label:box 2 - inlet
+@label:box 3 - outlet
+@label:box 4 - symmetry plane
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:adjacent 1 - all fluid boundaries
+walls
+@label:difference 2 - fluid walls
+@label:box
+int
+@tag:int
+intersection
+@type:intersection
+@label:intersection 1 - fluid membrane
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:explicit 1 - fixed boundaries
+quad
+@label:box 6 - quad mesh
+@label:union 1 - inlet and outlet
+ap
+identity
+pair
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pze
+@tag:pze
+piezoelectriceffect
+@type:piezoelectriceffect
+piezoelectricity
+@label:piezoelectricity
+fsip
+@tag:fsip
+fluidstructureinteractionpair
+@type:fluidstructureinteractionpair
+fluid&#x2013;structure
+@label:fluid&#x2013;structure interaction, pair
+mat
+@tag:mat
+common
+@type:common
+water
+liquid
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+interpolation
+@type:interpolation
+@label:interpolation
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+lead
+zirconate
+titanate
+pzt-5h
+@label:lead zirconate titanate (pzt-5h
+straincharge
+strain-charge
+stresscharge
+stress-charge
+@label:membrane
+enu
+young's
+modulus
+poisson's
+ratio
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+fq
+@tag:fq
+freequad
+@type:freequad
+@label:free quad
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+@type:size
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_fsip1_vwall
+@tag:comp1_fsip1_vwall
+@type:field
+frame
+vwall
+@label:spatial frame
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_u
+@tag:comp1_u
+@label:displacement field
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+var
+@tag:var
+globalvariable
+@type:globalvariable
+variable
+probe
+@label:global variable probe 1 - in flow rate
+@label:global variable probe 2 - out flow rate
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+surf
+@tag:surf
+surface
+@type:surface
+exterior
+@label:exterior walls
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+evaluation
+@label:global evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup3d
+@type:plotgroup3d
+@label:stress
+vol
+@tag:vol
+@type:volume
+@label:volume
+mslc
+@tag:mslc
+multislice
+@type:multislice
+@label:multislice
+strmsl
+@tag:strmsl
+streamlinemultislice
+@type:streamlinemultislice
+streamline
+@label:streamline multislice
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+norm
+@label:electric field norm
+@label:velocity
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+@label:surface
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+vs
+@label:accumulated flow volume vs. time
+glob
+@tag:glob
+@type:global
+@label:global
+amp
+@label:flow rate vs. time &amp; volume conservation
+@label:velocity field
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+streamlines
+@label:fluid streamlines
+str
+@tag:str
+@type:streamline
+@label:streamline
+geommanagernative
+hist
+@physics:solid
+@physics:es
+@physics:ge
+@multiphysics
+@multiphysics:pze
+@study:std
+@study:time
+@physics:spf
+@geom:geom
+@geom:blk
+@geom:cyl
+@geom:dif
+@geom:input
+@geom:selection
+@geom:wp
+@geom:par
+@geom:del
+@geom:uni
+@geom:fin
+@selection
+@selection:box
+@selection:dif
+@view:view
+@selection:adj
+@selection:int
+@selection:sel
+@material:mat
+@material:materialmodel
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:StrainCharge
+@material:StressCharge
+@material:selection
+@material:Enu
+@func
+@func:rm
+@cpl
+@cpl:aveop
+@cpl:selection
+@cpl:intop
+@multiphysics:fsip
+@mesh:mesh
+@mesh:fq
+@mesh:selection
+@mesh:size
+@mesh:swe
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@probe
+@probe:var
+@selection:uni
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@sol:sc
+@result:pg
+@result:vol
+@result:mslc
+@result:strmsl
+@result:col
+@result:filt
+@dataset:dset
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:surf
+@numerical
+@numerical:gev
+@result:glob
+@result:sel
+@result:selection
+@result:arws
+@result:str
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

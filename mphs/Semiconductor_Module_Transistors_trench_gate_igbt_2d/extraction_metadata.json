@@ -1,0 +1,14 @@
+{
+  "source_file": "Semiconductor_Module/Transistors/trench_gate_igbt_2d.mph",
+  "source_size": 1125110,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310433.219",
+  "total_files_in_archive": 28
+}

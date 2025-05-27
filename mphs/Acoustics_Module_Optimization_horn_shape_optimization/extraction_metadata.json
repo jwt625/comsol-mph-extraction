@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Optimization/horn_shape_optimization.mph",
+  "source_size": 1176131,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.43",
+  "total_files_in_archive": 27
+}

@@ -1,0 +1,414 @@
+lumped
+model
+vehicle
+suspension
+system
+example
+having
+eleven
+degrees
+freedom
+analyzed
+mass
+spring
+damper
+nodes
+mechanical
+interface
+used
+wheels
+including
+seats
+with
+passenger
+body
+three
+modeled
+rigid
+multibody
+dynamics
+external
+source
+node
+connect
+mbd
+rest
+transient
+analysis
+performed
+compute
+motion
+seat
+vibration
+levels
+given
+road
+profile
+lumped_vehicle_suspension_system
+mph
+param
+parameters
+m_body
+m_wh
+k_sus
+stiffness
+springs
+c_seat
+viscosity
+dampers
+hb
+bump
+height
+tb
+time
+period
+default
+lms
+@tag:lms
+lumpedmechanicalsystem
+@type:lumpedmechanicalsystem
+@label:lumped mechanical system
+displacements
+forces
+velocities
+sub
+@tag:sub
+subsystemblock
+@type:subsystemblock
+subsystem
+definition
+wheel
+@label:subsystem definition: wheel
+@tag:k
+@type:spring
+@label:spring
+@tag:m
+@type:mass
+@label:mass
+@tag:c
+@type:damper
+@label:damper
+@label:subsystem definition: seat
+fr
+@tag:fr
+freenode
+@type:freenode
+free
+@label:free node
+disp
+@tag:disp
+displacementnode
+@type:displacementnode
+displacement
+front-left
+@label:displacement node: front-left
+front-right
+@label:displacement node: front-right
+rear-left
+@label:displacement node: rear-left
+rear-right
+@label:displacement node: rear-right
+@tag:x
+@type:subsystem
+instance
+@label:subsystem instance x1: front-left wheel
+@label:subsystem instance x2: front-right wheel
+@label:subsystem instance x3: rear-left wheel
+@label:subsystem instance x4: rear-right wheel
+@tag:e
+externalsource
+@type:externalsource
+@label:external source e1: front-left
+@label:external source e2: front-right
+@label:external source e3: rear-left
+@label:external source e4: rear-right
+@label:subsystem instance x5: front-left seat
+@label:subsystem instance x6: front-right seat
+@label:subsystem instance x7: rear-left seat
+@label:subsystem instance x8: rear-right seat
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+@label:multibody dynamics
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+@label:rigid material
+mmi
+@tag:mmi
+massinertia
+@type:massinertia
+moment
+inertia
+@label:mass and moment of inertia
+pdr
+@tag:pdr
+prescribeddisprot
+@type:prescribeddisprot
+prescribed
+displacement/rotation
+@label:prescribed displacement/rotation
+geom
+geometry
+geomnative
+blk
+@tag:blk
+block
+@type:block
+@label:block
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+wv
+@tag:wv
+wave
+@type:wave
+waveform
+@label:waveform
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+lsc
+@tag:lsc
+lumpedstructureconnection
+@type:lumpedstructureconnection
+lumped-structure
+connection
+@label:lumped-structure connection: front-left
+@label:lumped-structure connection: front-right
+@label:lumped-structure connection: rear-left
+@label:lumped-structure connection: rear-right
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+meshnative
+optsequence
+std
+study
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+state
+@type:state
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_displacements
+@tag:comp1_displacements
+@label:comp1.displacements
+comp1_velocities
+@tag:comp1_velocities
+@label:comp1.velocities
+comp1_forces
+@tag:comp1_forces
+@label:comp1.forces
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:displacement
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+velocity
+@label:velocity
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+line
+@label:arrow line
+plotgroup1d
+@type:plotgroup1d
+excitation
+left
+@label:road excitation (left wheels
+glob
+@tag:glob
+global
+@type:global
+@label:global
+cg
+@label:vehicle motion
+@label:vehicle velocity
+@label:seat displacement
+acceleration
+@label:seat acceleration
+@label:forces (front-left wheel
+@label:forces (front-left seat
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:lms
+@physics:mbd
+@func
+@func:wv
+@geom:geom
+@geom:blk
+@multiphysics
+@multiphysics:lsc
+@multiphysics:ExtSrcSel
+@multiphysics:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_rd_disp
+@sol:comp1_mbd_rd_rot
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:fc
+@result:pg
+@result:surf
+@result:vol
+@result:arwl
+@result:glob
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+soldata

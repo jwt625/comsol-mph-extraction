@@ -1,0 +1,430 @@
+computing
+plasma
+impedance
+tutorial
+model
+demonstrates
+compute
+capacitively
+coupled
+time
+periodic
+study
+computes
+solution
+subsequently
+transformed
+domain
+fast
+fourier
+transform
+fft
+solver
+called
+allows
+computed
+given
+set
+input
+parameters
+value
+useful
+designing
+matching
+networks
+computing_plasma_impedance
+mph
+param
+discharge
+gap
+power
+temperature
+default
+ptp
+@tag:ptp
+coldplasmatimeperiodic
+@type:coldplasmatimeperiodic
+@label:plasma, time periodic
+logelectrondensity_per
+logelectrondensity
+logelectronenergydensity_per
+logelectronenergydensity
+electricpotential_per
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+he=&gt;e+he
+@label:1: e+he=&gt;e+he
+e+he=&gt;e+hes
+@label:2: e+he=&gt;e+hes
+e+he=&gt;2e+he
+@label:3: e+he=&gt;2e+he
+@tag:e
+species
+@type:species
+@label:species: e
+he
+@tag:he
+@label:species: he
+hes
+@tag:hes
+@label:species: hes
+he_1p
+@tag:he_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+he+=&gt;he
+@label:1: he+=&gt;he
+hes=&gt;he
+@label:2: hes=&gt;he
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+ptp_xdim
+extra
+dimension
+material
+fixed
+spatial
+mesh
+ptp_xdim_pa
+@tag:ptp_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+ptp_xdim_ad
+@tag:ptp_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+@tag:s
+sequence
+@type:sequence
+@label:sequence
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+tper
+@tag:tper
+timeperiodic
+@type:timeperiodic
+@label:time periodic
+dependent
+tptd
+@tag:tptd
+timeperiodictotimedependent
+@type:timeperiodictotimedependent
+@label:time periodic to time dependent
+tffft
+@tag:tffft
+timetofreqfft
+@type:timetofreqfft
+frequency
+@label:time to frequency fft
+run
+studies
+ref
+@tag:ref
+studyreference
+@type:studyreference
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+electron
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_en_per
+@tag:comp1_en_per
+en_per
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_ne_per
+@tag:comp1_ne_per
+ne_per
+comp1_ptp_he_1p_w
+@tag:comp1_ptp_he_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_ptp_he_1p_w_per
+@tag:comp1_ptp_he_1p_w_per
+w_per
+comp1_ptp_hes_w
+@tag:comp1_ptp_hes_w
+comp1_ptp_hes_w_per
+@tag:comp1_ptp_hes_w_per
+comp1_ptp_mct1_jdep
+@tag:comp1_ptp_mct1_jdep
+total
+current
+density
+jdep
+@label:total current density
+comp1_ptp_mct1_jdep_per
+@tag:comp1_ptp_mct1_jdep_per
+jdep_per
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_v_per
+@tag:comp1_v_per
+v_per
+comp1_ptp_mct1_va_per
+@tag:comp1_ptp_mct1_va_per
+state
+@type:state
+voltage
+amplitude
+va_per
+@label:voltage amplitude
+stationary
+@type:stationary
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+ddef
+@tag:ddef
+@label:direct
+@tag:fft
+@type:fft
+@label:fft solver
+copy
+@tag:copy
+copysolution
+@type:copysolution
+result
+results
+dset
+@tag:dset
+@type:solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+@label:impedance (ptp, dset
+tbl
+@tag:tbl
+table
+@type:table
+@label:impedance
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+period
+averaged
+@label:electron density, period averaged
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+@label:electron temperature, period averaged
+@label:electric potential, period averaged
+capacitive
+deposition
+@label:capacitive power deposition, period averaged
+neutral
+number
+@label:neutral species number density, period averaged
+charged
+@label:charged species number density, period averaged
+@label:current and voltage, metal contact
+harmonic
+content
+@label:harmonic content of the current
+glob
+@tag:glob
+global
+@type:global
+@label:global
+geommanagernative
+hist
+@study:std
+@study:tper
+@physics:ptp
+@geom:geom
+@geom:i
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_Ne_per
+@sol:comp1_V_per
+@sol:comp1_ptp_Hes_W_per
+@sol:comp1_ptp_mct1_Jdep_per
+@sol:comp1_En_per
+@sol:comp1_ptp_He_1p_W_per
+@sol:comp1_ptp_mct1_Va_per
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:dd
+@sol:ds
+@result:pg
+@result:lngr
+@result:selection
+@dataset:dset
+@study:tptd
+@sol:t
+@result:glob
+@study:tffft
+@sol:fft
+@numerical
+@numerical:gev
+@table:tbl
+@study:ref
+@sol:copy
+@batch:s
+@batch:so
+res
+soldata

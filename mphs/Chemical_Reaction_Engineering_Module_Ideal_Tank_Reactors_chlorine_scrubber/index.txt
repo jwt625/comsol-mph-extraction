@@ -1,0 +1,168 @@
+neutralization
+chlorine
+scrubber
+kinetics
+gas
+water
+solution
+within
+analyzed
+model
+modeled
+process
+includes
+four
+equilibrium
+reactions
+assumes
+fluid
+volume
+constant
+perfectly
+mixed
+chlorine_scrubber
+mph
+param
+parameters
+temp
+temperature
+cclo
+initial
+concentration
+clo
+chclo
+hclo
+krreac
+reversible
+reaction
+kfreac
+forward
+default
+re
+@tag:re
+reactioneng
+@type:reactioneng
+engineering
+@label:reaction engineering
+inits
+@tag:inits
+speciesinitialvalue
+@type:speciesinitialvalue
+values
+@label:initial values
+rch
+@tag:rch
+reactionchem
+@type:reactionchem
+cl
+oh
+lt;=&gt
+@label:1: cl2 + oh- &lt;=&gt; hclo + cl
+@tag:cl
+specieschem
+@type:specieschem
+species
+@label:species: cl
+oh_1m
+@tag:oh_1m
+@label:species: oh
+@tag:hclo
+@label:species: hclo
+cl_1m
+@tag:cl_1m
+h2o
+@label:2: oh- + h+ = h2o
+h_1p
+@tag:h_1p
+@label:species: h
+@tag:h2o
+@label:species: h2o
+@label:3: hclo + oh- = clo- + h2o
+clo_1m
+@tag:clo_1m
+@label:species: clo
+@label:4: cl2 + h2o &lt;=&gt; clo- + cl- + 2 h
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+ode
+@label:concentration
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+global
+@type:global
+@label:global
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:re
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@result:pg
+@result:glob
+soldata
+xmesh

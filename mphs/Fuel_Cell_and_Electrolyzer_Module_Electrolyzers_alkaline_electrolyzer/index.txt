@@ -1,0 +1,607 @@
+alkaline
+electrolyzer
+water
+electrolysis
+well-established
+industrial
+process
+producing
+hydrogen
+gas
+cell
+formed
+cathode
+whereas
+oxygen
+anode
+electrolyte
+aqueous
+liquid
+evolved
+gases
+form
+bubbles
+effective
+ionic
+conductivity
+lowered
+generated
+may
+detrimental
+effect
+performance
+due
+accessible
+surface
+area
+electrode
+reactions
+example
+investigates
+impact
+formation
+model
+alkaline_electrolyzer
+mph
+param
+parameters
+w_h
+compartment
+width
+w_cell
+p_gas
+pressure
+xh
+molar
+fraction
+phase
+v_in_h
+average
+inlet
+velocity
+side
+k_o2_div_d
+mix
+bubble
+dispersion
+factor
+mh2o
+mass
+moh
+hydroxide
+c_koh
+concentration
+default
+we
+@tag:we
+waterelectrolyzer
+@type:waterelectrolyzer
+@label:water electrolyzer
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+@label:h2 gas phase
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+sep
+@tag:sep
+separator
+@type:separator
+@label:separator
+h2gec
+@tag:h2gec
+h2gaselectrolytecompartment
+@type:h2gaselectrolytecompartment
+gas-electrolyte
+@label:h2 gas-electrolyte compartment
+o2gec
+@tag:o2gec
+o2gaselectrolytecompartment
+@type:o2gaselectrolytecompartment
+@label:o2 gas-electrolyte compartment
+h2es
+@tag:h2es
+h2electrodesurface
+@type:h2electrodesurface
+@label:h2 electrode surface
+h2er
+@tag:h2er
+h2electrodereaction
+@type:h2electrodereaction
+reaction
+@label:h2 electrode reaction
+o2es
+@tag:o2es
+o2electrodesurface
+@type:o2electrodesurface
+@label:o2 electrode surface
+o2er
+@tag:o2er
+o2electrodereaction
+@type:o2electrodereaction
+@label:o2 electrode reaction
+ee
+@tag:ee
+laminareulereulermodel
+@type:laminareulereulermodel
+euler-euler
+laminar
+flow
+@label:euler-euler model, laminar flow
+velocityd
+turbulentkineticenergy
+turbulentdissipationrate
+turbulentkineticenergyc
+turbulentdissipationratec
+turbulentkineticenergyd
+turbulentdissipationrated
+dispersedphasevolumefraction
+pp
+@tag:pp
+phaseproperties
+@type:phaseproperties
+properties
+@label:phase properties
+@type:init
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+gr
+@tag:gr
+gravity
+@type:gravity
+@label:gravity
+vf
+@tag:vf
+volumeforce
+@type:volumeforce
+volume
+force
+@label:volume force - bubble dispersion
+inl
+@tag:inl
+@type:inlet
+@label:inlet
+@tag:out
+outlet
+@type:outlet
+@label:outlet
+electrodes
+@label:wall 2 - electrodes
+@label:wall 3 - separator
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:hydrogen gas compartment
+sketchobject
+@label:oxygen gas compartment
+fin
+@tag:fin
+finalize
+@type:finalize
+union
+@label:form union
+form_union/assembly
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:hydrogen electrode
+@label:oxygen electrode
+inlets
+@label:inlets
+outlets
+@label:outlets
+boundaries
+@label:separator boundaries
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:electrodes
+compartments
+@label:gas compartments
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+rm
+@tag:rm
+ramp
+@type:ramp
+@label:ramp
+var
+variables
+v_in
+slipevelmag
+slip
+magnitude
+fd_bdy
+y-component
+dispersed
+n_h2_far
+faradaic
+evolution
+rate
+m_liquid
+n_o2_far
+material
+fixed
+spatial
+mesh
+geom1_r1_dom
+@tag:geom1_r1_dom
+fromsequence
+@type:fromsequence
+geom1_r2_dom
+@tag:geom1_r2_dom
+geom1_r3_dom
+@tag:geom1_r3_dom
+geom1_sel
+@tag:geom1_sel
+geom1_unisel
+@tag:geom1_unisel
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+potassium
+koh
+@label:potassium hydroxide, koh
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+electrolyteconductivity
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+no
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+current
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+including
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_p
+@tag:comp1_p
+field
+@type:field
+@label:pressure
+comp1_phid
+@tag:comp1_phid
+phid
+@label:volume fraction, dispersed phase
+comp1_uc
+@tag:comp1_uc
+continuous
+uc
+@label:velocity field, continuous phase
+comp1_ud
+@tag:comp1_ud
+ud
+@label:velocity field, dispersed phase
+comp1_we_phil
+@tag:comp1_we_phil
+potential
+phil
+@label:electrolyte potential
+comp1_we_phis
+@tag:comp1_we_phis
+electric
+phis
+@label:electric potential
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+merged
+@label:merged variables
+@label:volume fraction
+fluid
+@label:direct, fluid flow variables
+@label:direct, volume fraction
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:bnd
+@type:boundary
+probe
+@label:boundary probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+avh
+@tag:avh
+@type:average
+cln
+@tag:cln
+cutline2d
+@type:cutline2d
+cut
+line
+2d
+@label:cut line 2d
+dataset
+@type:dataset
+@label:dataset
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+polarization
+plots
+@label:polarization plots
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+@type:surface
+@label:surface
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:continuous phase
+@label:velocity magnitude, continuous phase
+@label:dispersed phase
+@label:dispersed phase volume fraction
+mid-separator
+density
+@label:mid-separator current density
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:line graph
+geommanagernative
+hist
+@physics:we
+@study:std
+@study:cdi
+@physics:ee
+@study:stat
+@geom:geom
+@geom:r
+@geom:sel
+@geom:selection
+@geom:unisel
+@view:view
+@view:axis
+@material:mat
+@material:materialmodel
+@material:func
+@material:int
+@material:ElectrolyteConductivity
+@common:cminpt
+@probe
+@probe:bnd
+@probe:selection
+@mesh:mesh
+@mesh:statistics
+@mesh:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_we_phil
+@sol:comp1_we_phis
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:p
+@result:pg
+@result:surf
+@result:arws
+@result:filt
+@expr:var
+@expr:selection
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@study:time
+@sol:comp1_phid
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:sl
+@sol:t
+@result:tblp
+@dataset:cln
+@result:lngr
+@nodeGroup:grp
+sys
+@tag:sys
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+group
+@label:group 1 - study
+@label:group 2 - study
+res
+soldata

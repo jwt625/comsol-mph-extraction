@@ -1,0 +1,14 @@
+{
+  "source_file": "Mixer_Module/Tutorials/modular_mixer.mph",
+  "source_size": 2647547,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310365.254",
+  "total_files_in_archive": 44
+}

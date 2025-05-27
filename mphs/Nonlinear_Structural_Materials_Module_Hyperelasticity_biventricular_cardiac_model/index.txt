@@ -1,0 +1,597 @@
+biventricular
+cardiac
+model
+standard
+heart
+used
+show
+set
+up
+fiber
+directions
+complex
+geometry
+fibers
+large
+deformation
+myocardium
+with
+holzapfel–gasser–ogden
+anisotropic
+material
+biventricular_cardiac_model
+mph
+param
+parameters
+al
+x-semiaxis
+left
+ventricle
+tl
+wall
+thickness
+cr
+z-semiaxis
+right
+lambda_lame
+lam&#xe
+parameter
+bf
+direction
+property
+gamma
+recovery
+variable
+aliev-panfilov
+gs
+maximum
+conductance
+stretch-induced
+excitation
+d_ani
+conduction
+velocity
+kt
+saturated
+active
+stress
+einf
+rate
+constants
+contraction
+vf
+scaling
+along
+betaphi
+conversion
+factor
+time
+default
+par
+structural
+mechanics
+electrical
+factors
+wd
+@tag:wd
+walldistance
+@type:walldistance
+distance
+epicardium
+@label:wall distance: epicardium
+reciprocallength
+deq
+@tag:deq
+distanceequation
+@type:distanceequation
+equation
+@label:distance equation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+@tag:wall
+@type:wall
+@label:wall
+endocardium
+@label:wall distance: endocardium
+cc
+@tag:cc
+curvilinearcoordinates
+@type:curvilinearcoordinates
+sheet
+@label:sheet direction
+css
+@tag:css
+coordinatesystemsettings
+@type:coordinatesystemsettings
+coordinate
+system
+settings
+@label:coordinate system settings
+diff
+@tag:diff
+diffusionmethod
+@type:diffusionmethod
+diffusion
+method
+@label:diffusion method
+walldefault
+@type:walldefault
+inl
+@tag:inl
+inlet
+@type:inlet
+@label:inlet
+@tag:out
+outlet
+@type:outlet
+@label:outlet
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+hmm
+@tag:hmm
+hyperelasticmodel
+@type:hyperelasticmodel
+hyperelastic
+@label:hyperelastic material
+fib
+@tag:fib
+@type:fiber
+@label:fiber
+exs
+@tag:exs
+externalstress
+@type:externalstress
+external
+@label:external stress
+disp
+@tag:disp
+@type:displacement2
+prescribed
+@label:prescribed displacement
+enc
+@tag:enc
+enclosedcavity
+@type:enclosedcavity
+enclosed
+cavity
+@label:enclosed cavity: left ventricle
+@label:enclosed cavity: right ventricle
+@tag:c
+coefficientformpde
+@type:coefficientformpde
+electrophysiology
+transmembrane
+potential
+phi
+@label:electrophysiology: transmembrane potential
+dimensionless
+cfeq
+@tag:cfeq
+coefficient
+form
+pde
+@label:coefficient form pde
+zflx
+@tag:zflx
+zerofluxboundary
+@type:zerofluxboundary
+zero
+flux
+@label:zero flux
+slow
+processes
+@label:electrophysiology: conductance of slow processes
+sa
+@label:active stress
+geom
+geomnative
+elp
+@tag:elp
+ellipsoid
+@type:ellipsoid
+@label:ellipsoid: left ventricle
+@label:ellipsoid: right ventricle
+pard
+@tag:pard
+partitiondomains
+@type:partitiondomains
+partition
+domains
+@label:partition domains
+partition_domains
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+fin
+@tag:fin
+finalize
+@type:finalize
+union
+@label:form union
+form_union/assembly
+igf
+@tag:igf
+ignorefaces
+@type:ignorefaces
+ignore
+faces
+@label:ignore faces
+ignore_faces
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+orientation
+d_epi
+outer
+boundaries
+theta_endo
+orientations
+variables
+betat
+ie
+ionic
+current
+pure
+conductivity
+dfibxz
+tensor
+global
+dfibzz
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+basal
+surface
+@label:basal surface
+selection
+@type:selection
+@label:selection
+lv-endocardium
+@label:lv-endocardium
+rv-endocardium
+@label:rv-endocardium
+@label:epicardium
+uni
+@tag:uni
+@type:union
+@label:endocardium
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:material
+lame
+holzapfelgasserogden
+holzapfel&#x2013;gasser&#x2013;ogden
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+excitation-contraction
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_cc_diff1_u
+@tag:comp1_cc_diff1_u
+field
+@type:field
+@label:potential
+comp1_g
+@tag:comp1_g
+reciprocal
+@label:reciprocal wall distance
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+comp1_phi
+@tag:comp1_phi
+@label:dependent variable phi
+comp1_r
+@tag:comp1_r
+@label:dependent variable r
+comp1_sa
+@tag:comp1_sa
+@label:dependent variable sa
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:d
+suggested
+@label:suggested direct solver
+result
+results
+dset
+@tag:dset
+@type:solution
+cpt
+@tag:cpt
+cutpoint3d
+@type:cutpoint3d
+point
+z=-1mm
+@label:point at z=-1mm
+z=-40mm
+@label:point at z=-40mm
+z=-60mm
+@label:point at z=-60mm
+anim
+@tag:anim
+animation
+@type:animation
+@label:heart deformation
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+vector
+@label:vector field
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:coordinate system
+sys
+@tag:sys
+coordsysvolume
+@type:coordsysvolume
+volume
+@label:coordinate system volume
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+@label:myocardium
+vol
+@tag:vol
+@type:volume
+@label:volume
+def
+@tag:def
+deform
+@type:deform
+@label:deformation
+snapshots
+@label:contraction, snapshots
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+plotgroup1d
+@type:plotgroup1d
+change
+@label:volume change
+glob
+@tag:glob
+@type:global
+@label:global
+activation
+@label:activation time
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+graph
+@label:point graph
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:wd
+@physics:cc
+@geom:geom
+@selection
+@selection:sel
+@view:view
+@selection:uni
+@param:group
+@param:par
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:se
+@sol:ss
+@result:pg
+@result:slc
+@result:str
+@result:sys
+@nodeGroup:grp
+@expr:var
+@coordsys:sys
+@physics:solid
+@physics:c
+@material:mat
+@material:materialmodel
+@material:Lame
+@material:HolzapfelGasserOgden
+@study:time
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@result:vol
+@dataset:dset
+@result:col
+@result:selection
+@result:filt
+@result:ann
+@view:camera
+@result:glob
+@dataset:cpt
+@result:ptgr
+@export
+@export:anim
+boundary
+@type:boundary
+@label:boundary system
+cc_cs
+@tag:cc_cs
+vectorbase
+@type:vectorbase
+curvilinear
+@label:curvilinear system
+rotated
+@type:rotated
+@label:rotated system
+composite
+@type:composite
+reference
+@label:fiber reference system
+cylindrical
+@type:cylindrical
+@label:cylindrical system
+grp
+@tag:grp
+@type:results
+@label:study: fiber direction
+definitions
+@type:definitions
+systems
+@label:coordinate systems
+physics
+@type:physics
+internal
+volumes
+@label:internal volumes
+soldata

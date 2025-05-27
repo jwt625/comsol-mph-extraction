@@ -1,0 +1,444 @@
+comparison
+different
+hydrodynamic
+bearings
+example
+demonstrates
+modeling
+investigate
+performance
+journal
+model
+uses
+bearing
+interface
+solves
+reynolds
+equation
+compute
+pressure
+developed
+thin
+fluid
+film
+four
+types
+plain
+elliptic
+split-halves
+multilobe
+results
+include
+profile
+plots
+eccentricity
+versus
+load
+steady-state
+position
+journals
+thickness
+concentric
+with
+moreover
+velocity
+profiles
+plotted
+surfaces
+unwrapped
+tutorial
+we
+compare
+variations
+equilibrium
+comparing
+quantities
+find
+optimal
+similar
+operating
+conditions
+hydrodynamic_bearings_comparison
+mph
+param
+parameters
+rj
+radius
+pad
+center
+offset
+ow
+rps
+default
+hdb
+@tag:hdb
+hydrodynamicbearing
+@type:hydrodynamicbearing
+@label:hydrodynamic bearing
+hjb
+@tag:hjb
+hydrodynamicjournalbearing
+@type:hydrodynamicjournalbearing
+@label:hydrodynamic journal bearing
+mfd
+@tag:mfd
+movingfoundation
+@type:movingfoundation
+moving
+foundation
+@label:moving foundation
+bax
+@tag:bax
+bearingorientation
+@type:bearingorientation
+orientation
+@label:bearing orientation
+bdr
+@tag:bdr
+border
+@type:border
+@label:border
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+split
+halves
+@label:hydrodynamic journal bearing (split halves
+2-lobe
+@label:hydrodynamic journal bearing (2-lobe
+3-lobe
+lop
+@label:hydrodynamic journal bearing (3-lobe lop
+lbp
+@label:hydrodynamic journal bearing (3-lobe lbp
+4-lobe
+@label:hydrodynamic journal bearing (4-lobe lop
+@label:hydrodynamic journal bearing (4-lobe lbp
+@label:bearing orientation hydrodynamic journal bearing (3-lobe lop
+@label:bearing orientation hydrodynamic journal bearing (3-lobe lbp
+@label:bearing orientation hydrodynamic journal bearing (4-lobe lop
+geom
+geometry
+geomnative
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:cylinder
+arr
+@tag:arr
+array
+@type:array
+@label:array
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:plain bearing
+@label:elliptic bearing
+@label:split halves bearing
+two
+lobe
+@label:two lobe bearing
+three
+@label:three lobe bearing
+@label:three lobe  bearing
+@label:four lobe bearing
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_pfilm
+@tag:comp1_pfilm
+field
+@type:field
+pfilm
+@label:pressure
+comp1_hdb_hjb1_uj
+@tag:comp1_hdb_hjb1_uj
+state
+@type:state
+displacement
+uj
+@label:journal displacement
+comp1_hdb_hjb2_uj
+@tag:comp1_hdb_hjb2_uj
+comp1_hdb_hjb3_uj
+@tag:comp1_hdb_hjb3_uj
+comp1_hdb_hjb4_uj
+@tag:comp1_hdb_hjb4_uj
+comp1_hdb_hjb5_uj
+@tag:comp1_hdb_hjb5_uj
+comp1_hdb_hjb6_uj
+@tag:comp1_hdb_hjb6_uj
+comp1_hdb_hjb7_uj
+@tag:comp1_hdb_hjb7_uj
+comp1_hdb_hjb8_uj
+@tag:comp1_hdb_hjb8_uj
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+dset
+@tag:dset
+@type:solution
+surfdset1hjb1hdb
+@tag:surfdset1hjb1hdb
+surface
+@type:surface
+@label:surface
+surfdset1hjb2hdb
+@tag:surfdset1hjb2hdb
+surfdset1hjb3hdb
+@tag:surfdset1hjb3hdb
+surfdset1hjb4hdb
+@tag:surfdset1hjb4hdb
+surfdset1hjb5hdb
+@tag:surfdset1hjb5hdb
+surfdset1hjb6hdb
+@tag:surfdset1hjb6hdb
+surfdset1hjb7hdb
+@tag:surfdset1hjb7hdb
+surfdset1hjb8hdb
+@tag:surfdset1hjb8hdb
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:fluid pressure
+surf
+@tag:surf
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup1d
+@type:plotgroup1d
+relative
+vs
+@label:relative eccentricity vs. load
+glob
+@tag:glob
+global
+@type:global
+@label:global
+attitude
+angle
+@label:attitude angle vs. load
+@label:journal position
+@label:plain
+@label:elliptic
+@label:split halves
+@label:two lobe
+@label:three lobe lop
+@label:three lobe lbp
+@label:four lobe lop
+@label:four lobe lbp
+polargroup
+@type:polargroup
+@label:initial thickness profile
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+current
+@label:current thickness profile
+plotgroup2d
+@type:plotgroup2d
+height
+@label:pressure height
+plot
+@label:surface plot: pressure
+hght
+@tag:hght
+@type:height
+expression
+@label:height expression
+@label:surface plot: pressure (split halves
+@label:surface plot: pressure (2-lobe
+@label:surface plot: pressure (3-lobe lop
+@label:surface plot: pressure (3-lobe lbp
+@label:surface plot: pressure (4-lobe lop
+@label:surface plot: pressure (4-lobe lbp
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+@label:velocity
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow: velocity
+@label:arrow: velocity (split halves
+@label:arrow: velocity (2-lobe
+@label:arrow: velocity (3-lobe lop
+@label:arrow: velocity (3-lobe lbp
+@label:arrow: velocity (4-lobe lop
+geommanagernative
+hist
+@study:std
+@study:stat
+@physics:hdb
+@geom:geom
+@geom:cyl
+@geom:arr
+@geom:input
+@geom:selection
+@selection
+@selection:sel
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_pfilm
+@sol:s
+@sol:p
+@sol:fc
+@result:pg
+@result:surf
+@result:con
+@result:glob
+@result:lngr
+@result:selection
+@dataset:surfdset1hjb1hdb
+@dataset:selection
+@nodeGroup:grphjb
+@result:arws
+@dataset:surfdset1hjb2hdb
+@dataset:surfdset1hjb3hdb
+@dataset:surfdset1hjb4hdb
+@dataset:surfdset1hjb5hdb
+@dataset:surfdset1hjb6hdb
+@dataset:surfdset1hjb7hdb
+@dataset:surfdset1hjb8hdb
+@result:tlan
+@view:view
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+soldata

@@ -1,0 +1,445 @@
+alpha
+gamma
+transition
+capacitively
+coupled
+rf
+discharges
+operate
+two
+distinct
+regimes
+depending
+discharge
+power
+low
+regime
+known
+electric
+field
+oscillation
+responsible
+heat
+create
+electrons
+high
+sustained
+primarily
+electron
+avalanche
+within
+sheaths
+initiated
+secondary
+emitted
+ion
+bombarding
+electrodes
+model
+investigates
+atmospheric
+pressure
+using
+plasma
+time
+periodic
+interface
+alpha_to_gamma_transition
+mph
+param
+parameters
+default
+ptp
+@tag:ptp
+coldplasmatimeperiodic
+@type:coldplasmatimeperiodic
+@label:plasma, time periodic
+logelectrondensity_per
+logelectrondensity
+logelectronenergydensity_per
+logelectronenergydensity
+electricpotential_per
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+e+ar2+=&gt;ars+ar
+@label:6: e+ar2+=&gt;ars+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:7: ars+ars=&gt;e+ar+ar
+ars=&gt;ar
+@label:8: ars=&gt;ar
+ar+ar+ar+=&gt;ar2++ar
+@label:9: ar+ar+ar+=&gt;ar2++ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+ar2_1p
+@tag:ar2_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+ar2+=&gt;2ar
+@label:2: ar2+=&gt;2ar
+@label:3: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+ptp_xdim
+extra
+dimension
+aveop
+@tag:aveop
+average
+@type:average
+@label:average
+material
+fixed
+spatial
+mesh
+ptp_xdim_pa
+@tag:ptp_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+ptp_xdim_ad
+@tag:ptp_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+study
+tper
+@tag:tper
+timeperiodic
+@type:timeperiodic
+@label:time periodic
+tptd
+@tag:tptd
+timeperiodictotimedependent
+@type:timeperiodictotimedependent
+dependent
+@label:time periodic to time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+@type:field
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_en_per
+@tag:comp1_en_per
+en_per
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_ne_per
+@tag:comp1_ne_per
+ne_per
+comp1_ptp_ar2_1p_w
+@tag:comp1_ptp_ar2_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_ptp_ar2_1p_w_per
+@tag:comp1_ptp_ar2_1p_w_per
+w_per
+comp1_ptp_ar_1p_w
+@tag:comp1_ptp_ar_1p_w
+comp1_ptp_ar_1p_w_per
+@tag:comp1_ptp_ar_1p_w_per
+comp1_ptp_ars_w
+@tag:comp1_ptp_ars_w
+comp1_ptp_ars_w_per
+@tag:comp1_ptp_ars_w_per
+comp1_ptp_mct1_jdep
+@tag:comp1_ptp_mct1_jdep
+total
+current
+density
+jdep
+@label:total current density
+comp1_ptp_mct1_jdep_per
+@tag:comp1_ptp_mct1_jdep_per
+jdep_per
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+comp1_v_per
+@tag:comp1_v_per
+v_per
+comp1_ptp_mct1_va_per
+@tag:comp1_ptp_mct1_va_per
+state
+@type:state
+voltage
+amplitude
+va_per
+@label:voltage amplitude
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+ddef
+@tag:ddef
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+par
+@tag:par
+parametric1d
+@type:parametric1d
+extrusion
+1d
+@label:parametric extrusion 1d
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+vs
+applied
+@label:power and ne vs. applied voltage
+glob
+@tag:glob
+global
+@type:global
+@label:global
+plotgroup2d
+@type:plotgroup2d
+@label:electron density, alpha regime
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+temperature
+@label:electron temperature, alpha regime
+absorbed
+@label:power absorbed by electrons, alpha regime
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:power absorbed by electrons, gamma regime
+source
+@label:electron source, alpha regime
+@label:electron source, gamma regime
+geommanagernative
+hist
+@study:std
+@study:tper
+@physics:ptp
+@geom:geom
+@geom:i
+@cpl
+@cpl:aveop
+@cpl:selection
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_Ne_per
+@sol:comp1_V_per
+@sol:comp1_ptp_Ars_W_per
+@sol:comp1_ptp_Ar2_1p_W_per
+@sol:comp1_ptp_mct1_Jdep_per
+@sol:comp1_En_per
+@sol:comp1_ptp_mct1_Va_per
+@sol:comp1_ptp_Ar_1p_W_per
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:dd
+@sol:ds
+@result:pg
+@result:glob
+@study:tptd
+@sol:t
+@dataset:par
+@result:surf
+@result:con
+res
+soldata

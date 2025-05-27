@@ -1,0 +1,11 @@
+{
+  "source_file": "Geomechanics_Module/Verification_Examples/triaxial_and_oedometer_test_mcc.mph",
+  "source_size": 12124,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310322.969",
+  "total_files_in_archive": 6
+}

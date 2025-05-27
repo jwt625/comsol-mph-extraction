@@ -1,0 +1,732 @@
+forced
+convection
+cooling
+enclosure
+with
+fan
+grille
+study
+simulates
+thermal
+behavior
+computer
+power
+supply
+unit
+psu
+electronic
+enclosures
+typically
+include
+devices
+avoid
+components
+damaged
+excessively
+high
+temperatures
+example
+extracting
+perforated
+cause
+airflow
+cool
+internal
+heating
+model
+electronic_enclosure_cooling
+mph
+param
+parameters
+opening
+ratio
+default
+ht
+@tag:ht
+heattransferinsolidsandfluids
+@type:heattransferinsolidsandfluids
+heat
+transfer
+solids
+fluids
+@label:heat transfer in solids and fluids
+temperature
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+fluid
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+hs
+@tag:hs
+heatsource
+@type:heatsource
+source
+transistors
+@label:heat source 1: transistors
+large
+transformer
+coil
+@label:heat source 2: large transformer coil
+small
+coils
+@label:heat source 3: small transformer coils
+inductor
+@label:heat source 4: inductor
+capacitors
+@label:heat source 5: large capacitors
+medium
+@label:heat source 6: medium capacitors
+@label:heat source 7: small capacitors
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow
+sls
+@tag:sls
+solidlayeredshell
+@type:solidlayeredshell
+thin
+layer
+@label:thin layer
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow
+spf
+@tag:spf
+turbulentflowalgebraicyplus
+@type:turbulentflowalgebraicyplus
+turbulent
+flow
+algebraic
+yplus
+@label:turbulent flow, algebraic yplus
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+iwbc
+@tag:iwbc
+interiorwallbc
+@type:interiorwallbc
+interior
+@label:interior wall
+@tag:fan
+extfan
+@type:extfan
+@label:fan
+@tag:grille
+@type:grille
+@label:grille
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+mat7_xdim
+extra
+dimension
+sink
+@tag:i
+interval
+@type:interval
+@label:interval
+mat8_xdim
+copper
+layers
+mat9_xdim
+fr
+circuit
+board
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+air
+@label:air
+plastic
+@label:plastic
+fins
+@label:fins
+sides
+@label:enclosure sides
+uni
+@tag:uni
+@type:union
+aluminum
+boundaries
+@label:aluminum boundaries
+shell
+@label:transformer shell
+@label:small transformer coils
+@label:large transformer coil
+@label:transformer coils
+inductors
+@label:inductors
+steel
+parts
+@label:steel parts
+@label:large capacitors
+@label:medium capacitors
+@label:small capacitors
+@label:capacitors
+silicon
+cores
+@label:transistors silicon cores
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:copper layers
+@label:circuit board
+conductive
+@label:conductive layers
+wire
+group
+surface
+@label:wire group surface
+@label:small wire surface
+component
+@label:component boundaries
+dif
+@tag:dif
+difference
+@type:difference
+exchange
+@label:heat exchange surface
+curved
+area
+@label:curved area
+walls
+@label:walls
+mat7_xdim_pa
+@tag:mat7_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+mat7_xdim_ad
+@tag:mat7_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+mat8_xdim_pa
+@tag:mat8_xdim_pa
+mat8_xdim_ad
+@tag:mat8_xdim_ad
+mat9_xdim_pa
+@tag:mat9_xdim_pa
+mat9_xdim_ad
+@tag:mat9_xdim_ad
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+hide
+physics
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+ampr
+@tag:ampr
+ambientproperties
+@type:ambientproperties
+ambient
+@label:ambient properties
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+mat
+@tag:mat
+common
+@type:common
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+acrylic
+@label:acrylic plastic
+enu
+young's
+modulus
+poisson's
+aisi
+@label:steel aisi
+@label:aluminum
+murnaghan
+@label:copper
+linzres
+linearized
+resistivity
+@label:silicon
+@label:heat sink
+@label:fr4 (circuit board
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+@type:size
+image
+@tag:image
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+@label:boundary layer properties
+meshnative
+ls_edg
+@tag:ls_edg
+edge
+@type:edge
+@label:edge
+ls_dis
+@tag:ls_dis
+distribution
+@type:distribution
+@label:distribution
+optsequence
+std
+wdi
+@tag:wdi
+walldistanceinitialization
+@type:walldistanceinitialization
+distance
+initialization
+@label:wall distance initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_g
+@tag:comp1_g
+field
+@type:field
+reciprocal
+@label:reciprocal wall distance
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+magnitude
+average
+uave
+@label:velocity magnitude, average
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_yplus
+@tag:comp1_yplus
+viscous
+units
+@label:wall distance in viscous units
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+iterative
+@type:iterative
+amg
+@label:amg, wall distance
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sl
+@tag:sl
+sorline
+@type:sorline
+sor
+line
+@label:sor line
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+turbulence
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@label:amg, fluid flow variables
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+@label:direct, heat transfer variables
+@label:amg, turbulence variables
+result
+results
+dset
+@tag:dset
+@type:solution
+lshl
+@tag:lshl
+layeredmaterial
+@type:layeredmaterial
+layered
+@label:layered material
+surf
+@tag:surf
+@type:surface
+exterior
+@label:exterior walls
+@label:interior walls
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+vol
+@tag:vol
+volume
+@type:volume
+@label:layered shell
+@tag:line
+@type:line
+edges
+@label:layered shell edges
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:velocity
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+slit
+@tag:slit
+surfaceslit
+@type:surfaceslit
+@label:surface slit
+resolution
+@label:wall resolution
+@label:wall resolution, interior walls
+@label:temperature and fluid flow
+@label:wall temperature
+selection
+@type:selection
+@label:selection
+@label:solid temperature
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+@label:fluid flow
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+geommanagernative
+hist
+@physics:ht
+@physics:spf
+@multiphysics
+@multiphysics:nitf
+@study:std
+@study:wdi
+@study:stat
+@geom:geom
+@geom:imp
+@selection
+@selection:sel
+@view:view
+@view:hideEntities
+@view:hide
+@selection:uni
+@selection:adj
+@selection:dif
+@func
+@func:an
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:Enu
+@material:Murnaghan
+@material:linzRes
+@material:selection
+@material:shell
+@common:ampr
+@mesh:mesh
+@mesh:size
+@mesh:map
+@mesh:selection
+@mesh:ftri
+@mesh:bl
+@mesh:blp
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sl
+@sol:po
+@sol:cs
+@sol:d
+@sol:se
+@sol:ss
+@sol:sc
+@sol:ll
+@sol:so
+@dataset:lshl
+@dataset:selection
+@result:pg
+@result:selection
+@result:vol
+@result:line
+@dataset:dset
+@result:slc
+@dataset:surf
+@result:surf
+@result:slit
+@result:sel
+@result:arwv
+@result:col
+@result:filt
+@result:str
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

@@ -1,0 +1,514 @@
+surface-trap-induced
+hysteresis
+inas
+nanowire
+fet
+density-gradient
+analysis
+tutorial
+analyzes
+conductance-gate-voltage
+g-vg
+curves
+using
+theory
+add
+effect
+quantum
+confinement
+conventional
+drift-diffusion
+formulation
+without
+large
+increase
+computational
+costs
+caused
+dynamic
+charging
+effects
+fast
+slow
+semiconductor-oxide
+interface
+traps
+continuous
+energy
+distributions
+donor
+acceptor
+types
+capture
+probability
+modeled
+thermally
+activated
+with
+barrier
+height
+varies
+trap
+level
+qualitative
+behavior
+order
+magnitude
+computed
+various
+voltage
+ramping
+conditions
+agree
+simulation
+experiment
+results
+found
+literature
+model
+inas_nanowire_traps_hysteresis_density_gradient
+mph
+param
+parameters
+radius
+mup
+hole
+mobility
+chi
+electron
+affinity
+temperature
+epsr_ox
+effective
+relative
+permittivity
+gate
+oxide
+ds_f
+density
+ea0_s
+emission
+parameter
+et0_d
+center
+distribution
+below
+ec
+dvdt
+ramp
+rate
+time
+default
+par
+surface
+bias
+semi
+@tag:semi
+semiconductor
+@type:semiconductor
+@label:semiconductor
+electricpotential
+numberdensity_n
+numberdensity_p
+electricpotential_efn
+electricpotential_efp
+electricpotential_phi_n
+electricpotential_phi_p
+smm
+@tag:smm
+semiconductormaterialmodel
+@type:semiconductormaterialmodel
+material
+@label:semiconductor material model
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ii
+@tag:ii
+insulatorinterface
+@type:insulatorinterface
+insulator
+@label:insulator interface
+cont
+@tag:cont
+continuity
+@type:continuity
+continuity/heterojunction
+@label:continuity/heterojunction
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+mc
+@tag:mc
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+gc
+@tag:gc
+gatecontact
+@type:gatecontact
+thin
+@label:thin insulator gate
+tasr
+@tag:tasr
+trapassistedsurfacerecombination
+@type:trapassistedsurfacerecombination
+trap-assisted
+recombination
+@label:trap-assisted surface recombination
+ctb
+@tag:ctb
+continuousenergylevelsboundary
+@type:continuousenergylevelsboundary
+levels
+@label:continuous energy levels - fast acceptor
+@label:continuous energy levels - fast donor
+@label:continuous energy levels - slow acceptor
+@label:continuous energy levels - slow donor
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+semi_tasr1_ctb1_xdim
+extra
+dimension
+int
+@tag:int
+semi_tasr1_ctb2_xdim
+semi_tasr1_ctb3_xdim
+semi_tasr1_ctb4_xdim
+tri
+@tag:tri
+triangle
+@type:triangle
+@label:triangle
+var
+variables
+probabilities
+de_fa
+conduction
+band
+edge
+de_sd
+eb_sa
+cn_fa
+cn_sd
+nam
+na
+ionized
+total
+conductance
+intop
+@tag:intop
+integration
+@type:integration
+access
+@label:integration 1 - access trap variables at the gate
+integrate
+cylinder
+@label:integration 2 - integrate over the cylinder
+fixed
+spatial
+mesh
+semi_tasr1_ctb1_xdim_pa
+@tag:semi_tasr1_ctb1_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+semi_tasr1_ctb1_xdim_ad
+@tag:semi_tasr1_ctb1_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+semi_tasr1_ctb2_xdim_pa
+@tag:semi_tasr1_ctb2_xdim_pa
+semi_tasr1_ctb2_xdim_ad
+@tag:semi_tasr1_ctb2_xdim_ad
+semi_tasr1_ctb3_xdim_pa
+@tag:semi_tasr1_ctb3_xdim_pa
+semi_tasr1_ctb3_xdim_ad
+@tag:semi_tasr1_ctb3_xdim_ad
+semi_tasr1_ctb4_xdim_pa
+@tag:semi_tasr1_ctb4_xdim_pa
+semi_tasr1_ctb4_xdim_ad
+@tag:semi_tasr1_ctb4_xdim_ad
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:material
+semicondmaterial
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+@type:edge
+@label:edge
+meshnative
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+two
+ramps
+@tag:param
+semie
+@tag:semie
+semiconductorequilibrium
+@type:semiconductorequilibrium
+equilibrium
+@label:semiconductor equilibrium
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_efn
+@tag:comp1_efn
+field
+@type:field
+variable
+efn
+@label:electron solution variable
+comp1_efp
+@tag:comp1_efp
+efp
+@label:hole solution variable
+comp1_phi_n
+@tag:comp1_phi_n
+slotboom
+phi_n
+@label:slotboom variable, electron
+comp1_phi_p
+@tag:comp1_phi_p
+phi_p
+@label:slotboom variable, hole
+comp1_semi_tasr1_ctb1_ft
+@tag:comp1_semi_tasr1_ctb1_ft
+occupancy
+ft
+@label:trap occupancy
+comp1_semi_tasr1_ctb2_ft
+@tag:comp1_semi_tasr1_ctb2_ft
+comp1_semi_tasr1_ctb3_ft
+@tag:comp1_semi_tasr1_ctb3_ft
+comp1_semi_tasr1_ctb4_ft
+@tag:comp1_semi_tasr1_ctb4_ft
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+solutions
+@label:dvdt=0.044, v0=6, v
+@label:dvdt=27, v0=-4, v
+@label:dvdt=27, v0=6, v
+@label:parametric
+result
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:energy levels
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:conduction band energy level
+quasi-fermi
+@label:electron quasi-fermi energy level
+@label:hole quasi-fermi energy level
+valence
+@label:valence band energy level
+carrier
+concentrations
+@label:carrier concentrations
+concentration
+@label:electron concentration
+@label:hole concentration
+line
+graph
+@label:line graph
+potentials
+@label:quantum potentials
+@label:quantum potential, electron
+@label:quantum potential, hole
+@label:g-vg curves
+glob
+@tag:glob
+global
+@type:global
+@label:global
+ef-ec
+vs
+vg
+@label:ef-ec vs. vg
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+point
+@label:point graph
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:semie
+@physics:semi
+@param:group
+@param:default
+@param:par
+@func
+@func:tri
+@geom:i
+@material:mat
+@material:materialmodel
+@material:SemicondMaterial
+@expr:var
+@cpl
+@cpl:intop
+@cpl:selection
+@study:param
+@study:time
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_semi_tasr1_ctb2_ft
+@sol:comp1_semi_tasr1_ctb1_ft
+@sol:comp1_semi_tasr1_ctb3_ft
+@sol:comp1_semi_tasr1_ctb4_ft
+@sol:comp1_V
+@sol:comp1_Efn
+@sol:comp1_phi_p
+@sol:comp1_Efp
+@sol:comp1_phi_n
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:t
+@batch:p
+@batch:so
+@result:pg
+@result:lngr
+@result:selection
+@result:filt
+@result:glob
+@result:ptgr
+@sol:p
+res
+soldata

@@ -1,0 +1,463 @@
+lithium-sulfur
+battery
+example
+models
+discharge
+cell
+two
+different
+rates
+electrolyte
+charge
+mass
+transport
+lithium
+salt
+six
+polysulfides
+included
+precipitation-dissolution
+solid
+octasulfur
+sulfide
+li2s
+separator
+positive
+electrode
+model
+lithium_sulfur
+mph
+param
+parameters
+d_li_1p
+diffusion
+coefficient
+li
+d_s6_2m
+d_s_2m
+c_s8_ref
+reference
+concentration
+c_s4_2m_ref
+c_a_1m_ref
+anion
+a_cell
+area
+epsl_pos
+volume
+fraction
+without
+deposits
+eps_li2s_s_sep
+initial
+k_s8_s
+rate
+constant
+deposition-dissolution
+k_li2s_s
+m_li2s_s
+molar
+rho_s8_s
+density
+eeq_2_ref
+equilibrium
+potential
+concentrations
+reaction
+eeq_5_ref
+i0_2_ref
+exchange
+current
+i0_5_ref
+cap_nom
+capacity
+nominal
+default
+tcd
+@tag:tcd
+tertiarycurrentdistributionnernstplanck
+@type:tertiarycurrentdistributionnernstplanck
+tertiary
+distribution
+nernst-planck
+@label:tertiary current distribution, nernst-planck
+electricpotentialionicphase
+electricpotential
+dt2invdiscretization_disc
+sp
+@tag:sp
+speciesproperties
+@type:speciesproperties
+species
+charges
+@label:species charges
+ice
+@tag:ice
+@type:electrolyte
+@label:electrolyte
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ein
+@tag:ein
+electricinsulation
+@type:electricinsulation
+insulation
+@label:insulation
+init
+@tag:init
+@type:init
+values
+@label:initial values
+sep
+@tag:sep
+@type:separator
+@label:separator
+nfr
+@tag:nfr
+nonfaradaicreactions
+@type:nonfaradaicreactions
+non-faradaic
+reactions
+@label:non-faradaic reactions - li2s
+@label:non-faradaic reactions - s
+ivdds
+@tag:ivdds
+initialvaluesfordissolvingdepositingspecies
+@type:initialvaluesfordissolvingdepositingspecies
+dissolving-depositing
+@label:initial values for dissolving-depositing species
+pce
+@tag:pce
+porouselectrode
+@type:porouselectrode
+porous
+@label:porous electrode
+per
+@tag:per
+porouselectrodereaction
+@type:porouselectrodereaction
+@label:porous electrode reaction
+es
+@tag:es
+electrodesurface
+@type:electrodesurface
+surface
+@label:electrode surface
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+@label:electrode reaction
+ecd
+@tag:ecd
+electrodenormalcurrentdensity
+@type:electrodenormalcurrentdensity
+@label:electrode current density
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+image
+@tag:image
+@type:geometry
+@label:geometry
+var
+variables
+eps_li2s_s
+av_pos
+specific
+domains
+r_li2s_s
+precipitation
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+initialization
+@label:current distribution initialization
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_li_1p
+@tag:comp1_li_1p
+field
+@type:field
+li_1p
+@label:concentration
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+electric
+phis
+@label:electric potential
+comp1_s2_2m
+@tag:comp1_s2_2m
+s2_2m
+comp1_s4_2m
+@tag:comp1_s4_2m
+s4_2m
+comp1_s6_2m
+@tag:comp1_s6_2m
+s6_2m
+comp1_s
+@tag:comp1_s
+comp1_s8_2m
+@tag:comp1_s8_2m
+s8_2m
+comp1_s_2m
+@tag:comp1_s_2m
+s_2m
+comp1_tcd_pce1_c
+@tag:comp1_tcd_pce1_c
+@label:dissolving-depositing species concentration
+comp1_tcd_sep1_c
+@tag:comp1_tcd_sep1_c
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+stopcondition
+@type:stopcondition
+stop
+condition
+@label:stop condition
+solutions
+@label:c
+pdom
+@tag:pdom
+domainpoint
+@type:domainpoint
+domain
+point
+probe
+@label:domain point probe
+ppb
+@tag:ppb
+pointexpr
+@type:pointexpr
+expression
+@label:point probe expression
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+cpt
+@tag:cpt
+cutpoint1d
+@type:cutpoint1d
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+voltages
+@label:cell voltages
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+@label:point graph
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+@label:line graph
+with
+respect
+ground
+@label:electrode potential with respect to ground
+@label:concentrations, all species
+@label:species s
+@label:species s8_2m
+@label:species s6_2m
+@label:species s4_2m
+@label:species s2_2m
+@label:species s_2m
+@label:species li_1p
+a_1m
+@label:species a_1m
+@label:concentration, s
+@label:concentration, s8_2m
+@label:concentration, s6_2m
+@label:concentration, s4_2m
+@label:concentration, s2_2m
+@label:concentration, s_2m
+@label:concentration, li_1p
+@label:concentration, a_1m
+precipitated
+@label:precipitated li2s
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:tcd
+@study:time
+@geom:geom
+@geom:i
+@expr:var
+@expr:selection
+@mesh:mesh
+@mesh:edg
+@mesh:size
+@mesh:selection
+@study:param
+@probe
+@probe:pdom
+@probe:ppb
+@cpl
+@cpl:intop
+@cpl:selection
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_phis
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:t
+@batch:p
+@batch:so
+@result:pg
+@result:ptgr
+@result:selection
+@result:lngr
+soldata

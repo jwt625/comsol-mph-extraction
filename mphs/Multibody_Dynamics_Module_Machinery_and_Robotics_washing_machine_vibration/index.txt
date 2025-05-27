@@ -1,0 +1,617 @@
+vibration
+washing
+machine
+assembly
+example
+simulates
+simplified
+multibody
+dynamics
+model
+horizontal-axis
+portable
+eigenfrequency
+analysis
+performed
+compute
+natural
+frequencies
+mode
+shapes
+entire
+transient
+find
+vibrations
+induced
+housing
+modeled
+flexible
+shell
+during
+spinning
+cycle
+radial
+axial
+displacement
+drum
+energy
+dissipation
+struts
+analyzed
+washing_machine_vibration
+mph
+param
+parameters
+mc
+mass
+unbalanced
+clothes
+ks
+spring
+constant
+cbr
+damping
+coefficient
+bushings
+omega
+angular
+velocity
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+@label:multibody dynamics
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rd
+@tag:rd
+rigiddomain
+@type:rigiddomain
+@label:clothes
+mmi
+@tag:mmi
+massinertia
+@type:massinertia
+moment
+inertia
+@label:mass and moment of inertia
+af
+@tag:af
+appliedforce
+@type:appliedforce
+applied
+force
+@label:applied force
+@label:drum
+crp
+@tag:crp
+centerofrotationpoint
+@type:centerofrotationpoint
+center
+rotation
+point
+@label:center of rotation: point
+tub
+@label:tub
+motor
+@label:motor
+piston
+@label:piston
+cylinder
+@label:cylinder
+mounting
+@label:mounting
+base
+@label:base
+fix
+@tag:fix
+fixedconstraint
+@type:fixedconstraint
+fixed
+constraint
+@label:fixed constraint
+spd
+@tag:spd
+springdamper
+@type:springdamper
+housing-tub
+front
+@label:housing-tub
+dp
+@tag:dp
+destinationpoint
+@type:destinationpoint
+destination
+@label:destination point
+back
+hgj
+@tag:hgj
+hingejoint
+@type:hingejoint
+tub-drum
+@label:tub-drum
+cjp
+@tag:cjp
+centerofjointpoint
+@type:centerofjointpoint
+joint
+@label:center of joint: point
+pm
+@tag:pm
+prescribedmotion
+@type:prescribedmotion
+prescribed
+motion
+@label:prescribed motion
+fxj
+@tag:fxj
+fixedjoint
+@type:fixedjoint
+motor-tub
+@label:motor-tub
+cjb
+@tag:cjb
+centerofjointbnd
+@type:centerofjointbnd
+boundary
+@label:center of joint: boundary
+drum-clothes
+@label:drum-clothes
+tub-piston
+@label:tub-piston
+ja
+@tag:ja
+jointaxis
+@type:jointaxis
+axis
+@label:joint axis
+je
+@tag:je
+jointelasticity
+@type:jointelasticity
+elasticity
+@label:joint elasticity
+1-mounting
+@label:cylinder 1-mounting
+2-mounting
+@label:cylinder 2-mounting
+3-mounting
+@label:cylinder 3-mounting
+4-mounting
+@label:cylinder 4-mounting
+1-housing
+@label:mounting 1-housing
+2-housing
+@label:mounting 2-housing
+3-housing
+@label:mounting 3-housing
+4-housing
+@label:mounting 4-housing
+housing-base
+@label:housing-base
+prj
+@tag:prj
+prismaticjoint
+@type:prismaticjoint
+1-piston
+@label:cylinder 1-piston
+sd
+@tag:sd
+springanddamper
+@type:springanddamper
+damper
+@label:spring and damper
+2-piston
+@label:cylinder 2-piston
+3-piston
+@label:cylinder 3-piston
+4-piston
+@label:cylinder 4-piston
+@tag:shell
+@type:shell
+@label:shell
+dimensionless_displacement
+shell_rd_disp
+shell_rd_rot
+shell_rig_disp
+shell_rig_rot
+shell_att_disp
+shell_att_rot
+emm
+@tag:emm
+@type:elastic
+shls
+@tag:shls
+shelllocalsystem
+@type:shelllocalsystem
+local
+system
+@label:shell local system
+@tag:to
+thicknessoffset
+@type:thicknessoffset
+thickness
+offset
+@label:thickness and offset
+att
+@tag:att
+attachment
+@type:attachment
+@label:front spring
+@label:back spring
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+part
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form assembly
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+uin_tub
+magnitude
+in-plane
+n_cycle
+number
+cycles
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:housing
+strut
+@label:strut axis
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+hide
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mpf
+@tag:mpf
+participationfactors
+@type:participationfactors
+participation
+factors
+@label:participation factors
+mat
+@tag:mat
+common
+@type:common
+@label:material
+aluminum
+@label:aluminum
+enu
+young's
+modulus
+poisson's
+ratio
+murnaghan
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+meshnative
+optsequence
+std
+study
+eig
+@tag:eig
+@type:eigenfrequency
+@label:eigenfrequency
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ar
+@tag:comp1_ar
+field
+@type:field
+normals
+ar
+@label:displacement of shell normals
+comp1_u
+@tag:comp1_u
+@label:displacement field
+comp1_mbd_rd_disp
+@tag:comp1_mbd_rd_disp
+state
+@type:state
+@label:comp1.mbd_rd_disp
+comp1_mbd_rd_rot
+@tag:comp1_mbd_rd_rot
+@label:comp1.mbd_rd_rot
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+@label:comp1.mbd_jnt_rot
+comp1_mbd_jnt_disp
+@tag:comp1_mbd_jnt_disp
+@label:comp1.mbd_jnt_disp
+comp1_shell_att_disp
+@tag:comp1_shell_att_disp
+@label:comp1.shell_att_disp
+comp1_shell_att_rot
+@tag:comp1_shell_att_rot
+@label:comp1.shell_att_rot
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+comp1_mbd_rd2_uint
+@tag:comp1_mbd_rd2_uint
+integration
+variable
+uint
+@label:velocity integration variable
+comp1_mbd_rd2_thint
+@tag:comp1_mbd_rd2_thint
+thint
+comp1_mbd_spd1_wd
+@tag:comp1_mbd_spd1_wd
+dissipated
+wd
+@label:energy dissipated in damper
+comp1_mbd_spd2_wd
+@tag:comp1_mbd_spd2_wd
+comp1_mbd_hgj1_pm1_thp
+@tag:comp1_mbd_hgj1_pm1_thp
+thp
+@label:angular velocity integration variable
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+cpt
+@tag:cpt
+cutpoint3d
+@type:cutpoint3d
+cut
+3d
+@label:cut point 3d
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+shape
+@label:mode shape
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:displacement
+polargroup
+@type:polargroup
+@label:tub displacement magnitude (in-plane
+glob
+@tag:glob
+global
+@type:global
+@label:global
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+out-of-plane
+@label:tub displacement magnitude (out-of-plane
+plotgroup1d
+@type:plotgroup1d
+@label:tub rotation
+stabilizing
+extension
+@label:stabilizing spring extension
+@label:strut displacement
+rate
+@label:energy dissipation rate
+mountings
+@label:shell deformation
+side
+wall
+@label:shell deformation (side wall
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+graph
+@label:point graph
+geommanagernative
+hist
+@study:std
+@study:eig
+@physics:mbd
+@physics:shell
+@geom:geom
+@geom:imp
+@geom:fin
+@view:view
+@view:hideObjects
+@view:hide
+@selection
+@selection:sel
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:Murnaghan
+@material:selection
+@nodeGroup:grp
+@mesh:mesh
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_rd_disp
+@sol:comp1_shell_att_rot
+@sol:comp1_ar
+@sol:comp1_shell_att_disp
+@sol:comp1_mbd_jnt_disp
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_mbd_rd_rot
+@sol:comp1_u
+@sol:e
+@sol:aDef
+@result:pg
+@result:surf
+@expr:var
+@study:time
+@sol:t
+@sol:se
+@sol:ss
+@sol:fc
+@result:glob
+@result:col
+@dataset:cpt
+@result:ptgr
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+shellsys
+@tag:shellsys
+vectorbase
+@type:vectorbase
+grp
+@tag:grp
+physics
+@type:physics
+rigid
+materials
+@label:rigid materials
+spring-dampers
+@label:spring-dampers
+joints
+@label:fixed joints
+prismatic
+@label:prismatic joints
+attachments
+@label:attachments
+soldata

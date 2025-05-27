@@ -1,0 +1,14 @@
+{
+  "source_file": "Subsurface_Flow_Module/Fluid_Flow/carbon_dioxide_storage.mph",
+  "source_size": 32758271,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310465.327",
+  "total_files_in_archive": 33
+}

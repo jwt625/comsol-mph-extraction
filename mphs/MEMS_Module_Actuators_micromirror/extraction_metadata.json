@@ -1,0 +1,11 @@
+{
+  "source_file": "MEMS_Module/Actuators/micromirror.mph",
+  "source_size": 35098,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.167",
+  "total_files_in_archive": 6
+}

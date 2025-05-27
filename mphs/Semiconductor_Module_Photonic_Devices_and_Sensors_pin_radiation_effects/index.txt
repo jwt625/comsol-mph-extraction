@@ -1,0 +1,580 @@
+radiation
+effects
+pin
+diode
+tutorial
+performs
+steady-state
+transient
+analysis
+response
+constant
+pulsed
+respectively
+effect
+modeled
+spatially
+uniform
+generation
+electron-hole
+pairs
+within
+device
+high
+dose
+rates
+separation
+generated
+charges
+causes
+reduction
+interior
+electric
+field
+prolonged
+storage
+excess
+carriers
+quantitative
+prediction
+phenomenon
+possible
+with
+numerical
+simulation
+analytical
+solution
+unattainable
+several
+techniques
+achieving
+convergence
+cases
+reverse
+bias
+field-dependent
+mobility
+time-dependent
+studies
+demonstrated
+computed
+carrier
+concentrations
+distribution
+agree
+reference
+paper
+model
+pin_radiation_effects
+mph
+param
+parameters
+length
+dj
+junction
+depth
+n-plus
+p-plus
+doping
+mup
+low
+hole
+radsi
+rate
+rad
+gr
+due
+default
+semi
+@tag:semi
+semiconductor
+@type:semiconductor
+@label:semiconductor
+electricpotential
+numberdensity_n
+numberdensity_p
+electricpotential_efn
+electricpotential_efp
+electricpotential_phi_n
+electricpotential_phi_p
+smm
+@tag:smm
+semiconductormaterialmodel
+@type:semiconductormaterialmodel
+material
+@label:semiconductor material model
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ii
+@tag:ii
+insulatorinterface
+@type:insulatorinterface
+insulator
+interface
+@label:insulator interface
+cont
+@tag:cont
+continuity
+@type:continuity
+continuity/heterojunction
+@label:continuity/heterojunction
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+adm
+@tag:adm
+analyticdopingmodel
+@type:analyticdopingmodel
+analytic
+intrinsic
+@label:analytic doping model 1: intrinsic
+gdm
+@tag:gdm
+geometricdopingmodel
+@type:geometricdopingmodel
+geometric
+@label:geometric doping model 1: p-plus
+gdmbs
+@tag:gdmbs
+boundaryselectionfordopingprofile
+@type:boundaryselectionfordopingprofile
+boundary
+selection
+profile
+@label:boundary selection for doping profile
+@label:geometric doping model 2: n-plus
+tar
+@tag:tar
+trapassistedrecombination
+@type:trapassistedrecombination
+trap-assisted
+recombination
+srh
+@label:trap-assisted recombination 1: srh
+iig
+@tag:iig
+iigeneration
+@type:iigeneration
+impact
+ionization
+@label:impact ionization generation
+udg
+@tag:udg
+udgeneration
+@type:udgeneration
+user-defined
+@label:user-defined generation 1: radiation effect
+mc
+@tag:mc
+metalcontact
+@type:metalcontact
+metal
+contact
+ground
+@label:metal contact 1: ground
+@label:metal contact 2: v
+ev
+@tag:ev
+events
+@type:events
+@label:events
+expl
+@tag:expl
+explicitevent
+@type:explicitevent
+explicit
+event
+@label:explicit event
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+pw
+@tag:pw
+piecewise
+@type:piecewise
+@label:piecewise
+var
+variables
+intensity
+v/cm
+ndt
+total
+ionized
+dopant
+concentration
+1/cm
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+axis2d
+@type:axis2d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+si
+silicon
+@label:si - silicon
+aroramobilitymodel
+arora
+powerlawmobilitymodel
+power
+law
+auger
+direct
+shockley&#x2013;read&#x2013;hall
+fletchermobilitymodel
+fletcher
+caugheythomasmobilitymodel
+caughey&#x2013;thomas
+semicondmaterial
+lombardisurfacemobilitymodel
+lombardi
+surface
+impactionization
+slotboommodel
+slotboom
+jainroulstonmodel
+jain&#x2013;roulston
+klaassenunifiedmobilitymodel
+klaassen
+unified
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+1a
+ramp
+field-independent
+semie
+@tag:semie
+semiconductorequilibrium
+@type:semiconductorequilibrium
+equilibrium
+@label:semiconductor equilibrium
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+1b
+full
+@tag:param
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ne
+@tag:comp1_ne
+@type:field
+electron
+variable
+ne
+@label:electron solution variable
+comp1_ph
+@tag:comp1_ph
+ph
+@label:hole solution variable
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+comp1_semi_n_bnd
+@tag:comp1_semi_n_bnd
+n_bnd
+@label:boundary electron concentration
+comp1_semi_p_bnd
+@tag:comp1_semi_p_bnd
+p_bnd
+@label:boundary hole concentration
+@label:parametric
+solutions
+index
+@label:v0=0, index
+@label:v0=0.5, index
+@label:v0=10, index
+@label:v0=50, index
+@label:v0=100, index
+@label:v0=250, index
+@label:v0=1000, index
+@tag:t
+@type:time
+@label:time-dependent solver
+tp
+@tag:tp
+timeparametric
+@type:timeparametric
+@label:time parametric
+result
+results
+dset
+@tag:dset
+@type:solution
+grid
+@tag:grid
+grid1d
+@type:grid1d
+1d
+logndt
+@label:grid 1d 1: logndt
+@label:grid 1d 1: e
+par
+@tag:par
+parametric1d
+@type:parametric1d
+extrusion
+@label:parametric extrusion 1d
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+energy
+levels
+@label:energy levels
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+conduction
+band
+level
+@label:conduction band energy level
+quasi-fermi
+@label:electron quasi-fermi energy level
+@label:hole quasi-fermi energy level
+valence
+@label:valence band energy level
+@label:carrier concentrations
+@label:electron concentration
+@label:hole concentration
+fig
+@label:fig. 3  doping profile
+line
+graph
+@label:line graph
+4a
+@label:fig. 4a  hole distribution
+4b
+@label:fig. 4b  electric field distribution
+5a
+vs
+@label:fig. 5a  steady-state electric field distribution vs. dose rate
+5b
+@label:fig. 5b  steady-state hole distribution vs. dose rate
+2a
+@label:fig. 2a  mobility vs. doping
+2b
+velocity
+@label:fig. 2b  velocity vs. electric field
+7a
+times
+@label:fig. 7a  hole distribution at several times
+7b
+@label:fig. 7b  electron distribution at several times
+7c
+@label:fig. 7c  electric field distribution at several times
+photocurrent
+@label:fig. 8  transient photocurrent response
+glob
+@tag:glob
+global
+@type:global
+@label:global
+plotgroup2d
+@type:plotgroup2d
+evolution
+density
+drift
+@label:evolution of hole density profile and drift velocity
+surf
+@tag:surf
+@type:surface
+@label:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+geommanagernative
+hist
+@study:std
+@study:semie
+@physics:semi
+@physics:ev
+@geom:geom
+@func
+@func:pw
+@geom:i
+@expr:var
+@material:mat
+@material:materialmodel
+@material:AroraMobilityModel
+@material:PowerLawMobilityModel
+@material:Auger
+@material:Direct
+@material:SRH
+@material:FletcherMobilityModel
+@material:CaugheyThomasMobilityModel
+@material:SemicondMaterial
+@material:LombardiSurfaceMobilityModel
+@material:ImpactIonization
+@material:SlotboomModel
+@material:JainRoulstonModel
+@material:KlaassenUnifiedMobilityModel
+@mesh:mesh
+@study:stat
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:p
+@study:param
+@batch:p
+@batch:so
+@result:pg
+@result:lngr
+@result:selection
+@result:filt
+@dataset:grid
+@study:time
+@sol:t
+@sol:tp
+@result:glob
+@dataset:par
+@result:surf
+@result:hght
+@result:con
+res
+soldata

@@ -1,0 +1,14 @@
+{
+  "source_file": "Subsurface_Flow_Module/Heat_Transfer/geothermal_doublet.mph",
+  "source_size": 1804861,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310465.328",
+  "total_files_in_archive": 40
+}

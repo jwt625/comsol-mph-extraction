@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/EMI_EMC_Applications/anechoic_chamber.mph",
+  "source_size": 32275441,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.14",
+  "total_files_in_archive": 21
+}

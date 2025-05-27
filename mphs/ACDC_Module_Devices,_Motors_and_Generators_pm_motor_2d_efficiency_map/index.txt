@@ -1,0 +1,1063 @@
+permanent
+magnet
+motor
+with
+efficiency
+map
+model
+demonstrating
+couple
+magnetic
+machinery
+time
+periodic
+heat
+transfer
+two-way
+generating
+sweep
+current
+amplitude
+rotor
+speed
+pm_motor_2d_efficiency_map
+mph
+param
+parameters
+np
+number
+poles
+init_ang
+initial
+angle
+ipk
+phase
+peak
+value
+lam_rho
+laminated
+core
+density
+cu_alpha
+copper
+resistivity
+temperature
+coefficient
+pm_br_ref
+reference
+remanence
+flux
+default
+mmtp
+@tag:mmtp
+magneticmachinerytimeperiodic
+@type:magneticmachinerytimeperiodic
+rotating
+@label:magnetic machinery, rotating, time periodic
+discretization_disc
+free
+@tag:free
+freespace
+@type:freespace
+space
+@label:free space
+init
+@tag:init
+initialvalues
+@type:initialvalues
+values
+@label:initial values
+ext
+@tag:ext
+exteriorboundaries
+@type:exteriorboundaries
+exterior
+boundaries
+@label:exterior boundaries
+rcon
+@tag:rcon
+rotationalcontinuitypair
+@type:rotationalcontinuitypair
+rotational
+continuity
+pair
+@label:rotational continuity pair
+rper
+@tag:rper
+rotationalperiodicity
+@type:rotationalperiodicity
+periodicity
+@label:rotational periodicity
+tprot
+@tag:tprot
+timeperiodicrotatingdomain
+@type:timeperiodicrotatingdomain
+domain
+@label:rotating domain
+lc
+@tag:lc
+laminatedcore
+@type:laminatedcore
+@label:laminated core
+mag
+@tag:mag
+@type:magnet
+@label:magnet
+north
+@tag:north
+@type:north
+@label:north
+south
+@tag:south
+@type:south
+@label:south
+wnd
+@tag:wnd
+multiphasewinding
+@type:multiphasewinding
+multiphase
+winding
+@label:multiphase winding
+ph
+@tag:ph
+@type:phase
+@label:phase
+aph
+@tag:aph
+automatic
+@label:automatic phase
+rcd
+@tag:rcd
+reversedcurrentdirection
+@type:reversedcurrentdirection
+reversed
+direction
+@label:reversed current direction
+ht
+@tag:ht
+heattransfer
+@type:heattransfer
+solids
+@label:heat transfer in solids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+solid
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+@type:init
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+dcont
+@tag:dcont
+@type:continuity
+@label:continuity
+sls
+@tag:sls
+solidlayeredshell
+@type:solidlayeredshell
+thin
+layer
+lt;&gt
+housing
+@label:thin layer 1 - laminated core &lt;&gt; housing
+iv
+@tag:iv
+initres
+@type:initres
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+@label:thin layer 2 - winding insulation
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+water
+jacket
+@label:heat flux 1 - water jacket
+airgap
+@label:heat flux 2 - airgap
+pc
+@tag:pc
+periodicheat
+@type:periodicheat
+condition
+@label:periodic condition
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+internal
+surface
+mounted
+magnets
+@label:internal rotor &#x2013; surface mounted magnets
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+rotor_diam
+@label:parameter check
+@label:parameter check 2 (number of poles
+@label:parameter check 3 (number of poles
+modeled
+@label:parameter check 4 (number of modeled poles
+@label:parameter check 5 (number of modeled poles
+shaft_diam
+cont_diam
+magnet_h
+magnet_w
+magnet_fillet_size
+@tag:c
+circle
+@type:circle
+shaft
+sector
+@label:shaft sector
+sketchobject
+rot
+@tag:rot
+rotate
+@type:rotate
+rotation
+@label:rotation
+@tag:shaft
+union
+@type:union
+@label:circle
+ironsector
+@tag:ironsector
+converttosolid
+@type:converttosolid
+convert
+@label:convert to solid
+convert_to_solid
+rotor_iron
+@tag:rotor_iron
+@label:rotor_iron
+mop
+@tag:mop
+@tag:if
+@type:if
+toggle_radial_magnet_side
+@label:if 1 (!toggle_radial_magnet_side
+rp
+@tag:rp
+rectangle
+@type:rectangle
+@label:rectangle
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+ump
+@tag:ump
+@label:union
+omagnetwof
+@tag:omagnetwof
+difference
+@type:difference
+outer
+magnetized
+@label:outer magnetized magnet
+nmp_l
+@label:if
+inmagnetwof
+@tag:inmagnetwof
+inward
+facing
+@label:inward facing magnet
+domagnetwof
+@tag:domagnetwof
+differenceselection
+@type:differenceselection
+selection
+@label:difference selection
+magnets_odd
+@tag:magnets_odd
+@label:magnets_odd
+magnets_even
+@tag:magnets_even
+@label:magnets_even
+nmp_l&gt
+@label:end if 1 (nmp_l&gt
+rotor_magnets
+@tag:rotor_magnets
+unionselection
+@type:unionselection
+@label:rotor_magnets
+rotor_solid_domains
+@tag:rotor_solid_domains
+@label:rotor_solid_domains
+fillets
+drawn
+@label:if 3 (magnet fillets can be drawn
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+disk
+@label:disk selection
+fil
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+@label:end if 2 (magnet fillets can be drawn
+draw
+air
+@label:if 4 (draw air
+airsector
+@tag:airsector
+@label:rotor air sector
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+@label:air sector rotation
+rotor_air
+@tag:rotor_air
+@label:rotor_air
+arkkio
+gap
+@label:if 10 (draw arkkio air gap
+csol
+@tag:csol
+@label:rotate
+arkkio_air_gap
+@tag:arkkio_air_gap
+@label:arkkio_air_gap
+@label:end if 10 (draw arkkio air gap
+@label:end if 3 (draw air
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+complement
+@label:complement selection
+@tag:all
+all_domains
+@label:all_domains
+@tag:exterior
+adjacentselection
+@type:adjacentselection
+@label:exterior
+less
+entiry
+@label:if 8 (less than entiry geometry
+boxselection
+@tag:boxselection
+@type:boxselection
+box
+@label:box selection
+8a
+@label:rotate 8a
+periodic_source
+@tag:periodic_source
+@label:periodic_source
+periodic_boundaries
+@tag:periodic_boundaries
+@label:periodic_boundaries
+@label:end if 8 (less than entiry geometry
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input
+number_of_poles
+number_of_magnetic_poles_rotor
+diameter_of_rotor
+magnet_width
+magnet_toggle_radial_side
+localparam
+local
+rd_l_l
+diameter
+lower
+limit
+rt_u_l
+relative
+tolerance
+upper
+num_p_l_l
+nmp_l_l
+cd_u_l
+magnet_can_be_drawn
+boolean
+true
+consistent&#xa;setting
+allow_inconsistent_parameters
+try
+ignore
+inconsistent
+built
+mh_u_l
+height
+sh_u_l
+alpha_magnet_out
+angular
+size
+radius_rotor_iron
+radius
+iron
+magnet_w_max_fillet
+maximum
+determined
+width
+baseunitsystem
+meter
+radian
+degree
+external
+stator
+slotted
+@label:external stator &#x2013; slotted
+stator_diam
+number_of_slots
+slots
+@label:parameter check 3 (number of slots
+@label:parameter check 4 (number of modeled slots
+@label:parameter check 5 (number of modeled slots
+backiron_th
+external_air_size
+shoe_h
+shoe_w
+tooth_h
+tooth_w
+shoe_fillet_size
+slot_inner_fillet_size
+slot_outer_fillet_size
+tooth
+@tag:tooth
+@label:tooth
+dif
+@tag:dif
+@label:difference
+shoe
+@label:if 2 (shoe fillets
+shoefpoints
+@tag:shoefpoints
+points
+@label:points of shoe to fillet
+shoewf
+@tag:shoewf
+@label:shoe with fillets
+@label:end if 2 (shoe fillets
+uni
+@tag:uni
+slot
+inner
+@label:if 3 (slot inner fillet
+@label:end if 3 (slot inner fillet
+@label:if 4 (slot outer fillet
+@label:end if 4 (slot outer fillet
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+spl
+@tag:spl
+split
+@type:split
+@label:split
+@label:iron sector
+@label:iron sector rotation
+stator_iron
+@tag:stator_iron
+@label:stator_iron
+slot_winding_type
+@label:if 5 (slot_winding_type
+slotfillingtypeonesector
+@tag:slotfillingtypeonesector
+@label:slot_winding_type 1 sector
+@label:slot_winding_type 1 sector rotation
+slotfillingtypeone
+@tag:slotfillingtypeone
+@label:slot_winding_type
+slotfilling
+@tag:slotfilling
+elseif
+@type:elseif
+else
+@label:else if 5 (slot_winding_type
+slotfillingtypetwosector
+@tag:slotfillingtypetwosector
+@label:slot_winding_type 2 sector
+@label:slot_winding_type 2 sector rotation
+slotfillingtypetwo
+@tag:slotfillingtypetwo
+slotfillingtypethreesector
+@tag:slotfillingtypethreesector
+@label:slot_winding_type 3 sector
+@label:slot_winding_type 3 sector rotation
+slotfillingtypethree
+@tag:slotfillingtypethree
+slotfillingtypefoursector
+@tag:slotfillingtypefoursector
+@label:slot_winding_type 4 sector
+@label:slot_winding_type 4 sector rotation
+slotfillingtypefour
+@tag:slotfillingtypefour
+stator_slots
+@tag:stator_slots
+@label:stator_slots
+unisel
+@tag:unisel
+parts
+@label:all solid rotor parts
+@label:stator air sector
+@label:stator air sector rotation
+stator_air
+@tag:stator_air
+@label:stator_air
+@label:if 11 (draw arkkio air gap
+@label:end if 11 (draw arkkio air gap
+number_of_slots_stator
+diameter_of_stator
+height_of_shoe
+width_of_tooth
+radius_of_inner_slot_fillet
+flag_for_ignoring_inconsistent_variables
+sd_l_l
+eas_u_l
+num_s_l_l
+sector_angle
+cd_l_l
+cont
+diam
+th_l_l
+bit_l_l
+backiron
+thickness
+outer_radius_slot
+tw_u_l
+sw_u_l
+r_external_air
+upper_tooth_angle
+half
+edges
+r1b
+a*r
+b*r
+solving
+divides
+two
+halves
+equal
+area
+slot_layer_size_outer
+shoe_width_max_fillet
+limited
+slot_height_max_outer_fillet
+corner
+slot_outer_fillet_size_lim
+resulting
+sifs_l
+intermediate
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+pi1_exterior
+pi1_shaft
+pi1_rotor_iron
+pi1_magnets_odd
+odd
+pi1_magnets_even
+even
+pi1_rotor_magnets
+pi1_rotor_solid_domains
+domains
+pi1_rotor_air
+pi1_all
+pi1_periodic_source
+source
+pi1_periodic_boundaries
+pi2_exterior
+pi2_all
+pi2_stator_iron
+pi2_stator_slots
+pi2_stator_air
+pi2_periodic_source
+pi2_periodic_boundaries
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+part
+aveop
+@tag:aveop
+average
+@type:average
+@label:average 1 - winding
+materials
+@label:average 2 - stator solid materials
+material
+fixed
+spatial
+mesh
+geom1_pi1_shaft_dom
+@tag:geom1_pi1_shaft_dom
+fromsequence
+@type:fromsequence
+@label:shaft (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_iron_dom
+@tag:geom1_pi1_rotor_iron_dom
+@label:rotor iron (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_magnets
+@tag:geom1_pi1_rotor_magnets
+@label:rotor magnets (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_solid_domains_dom
+@tag:geom1_pi1_rotor_solid_domains_dom
+@label:rotor solid domains (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_air_dom
+@tag:geom1_pi1_rotor_air_dom
+@label:rotor air (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_all_dom
+@tag:geom1_pi1_all_dom
+@label:all domains (internal rotor &#x2013; surface mounted magnets
+geom1_pi2_stator_iron_dom
+@tag:geom1_pi2_stator_iron_dom
+@label:stator iron (external stator &#x2013; slotted
+geom1_pi2_stator_slots
+@tag:geom1_pi2_stator_slots
+@label:stator slots (external stator &#x2013; slotted
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:stator housing
+@label:solid materials
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:solid materials - external boundaries
+@tag:disk
+@type:disk
+@label:airgap heat flux boundaries
+@label:laminated core - housing boundaries
+@label:winding insulation boundaries
+@label:water jacket - external boundaries
+@label:stator solid materials
+ap
+identity
+boundary
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+emh
+@tag:emh
+electromagneticheating
+@type:electromagneticheating
+electromagnetic
+heating
+@label:electromagnetic heating
+mat
+@tag:mat
+common
+@type:common
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+soft
+without
+losses
+@label:soft iron (without losses
+bhcurve
+b-h
+curve
+bh
+@tag:bh
+interpolation
+@type:interpolation
+@label:interpolation
+effectivebhcurve
+effective
+bheff
+@tag:bheff
+@label:copper
+enu
+young's
+modulus
+poisson's
+ratio
+linzres
+linearized
+sintered
+ndfeb
+@label:n54 (sintered ndfeb
+remanentfluxdensity
+remanent
+high-strength
+alloy
+steel
+@label:high-strength alloy steel
+murnaghan
+comp
+component
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+id
+@tag:id
+identicalmesh
+@type:identicalmesh
+identical
+@label:identical mesh
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+convergence
+frames
+@tag:param
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_ht_textface
+@tag:comp1_ht_textface
+field
+@type:field
+textface
+@label:external temperature
+comp1_mmtp_az_tp
+@tag:comp1_mmtp_az_tp
+vector
+potential
+plane
+az_tp
+@label:magnetic vector potential out of plane
+comp1_mmtp_rcon1_azlm_tp
+@tag:comp1_mmtp_rcon1_azlm_tp
+lagrange
+multiplier
+variable
+azlm_tp
+@label:lagrange multiplier variable
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_mmtp_mag1_v
+@tag:comp1_mmtp_mag1_v
+state
+@type:state
+@label:comp1.mmtp.mag1.v
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:d
+direct
+@type:direct
+merged
+@label:direct, heat transfer variables
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ssdef
+@tag:ssdef
+segregatedstep
+@type:segregatedstep
+@label:magnetic field
+ss
+@tag:ss
+@label:temperature field
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+nframes
+@label:nframes
+@label:parametric
+result
+results
+dset
+@tag:dset
+@type:solution
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+evaluation
+group
+@label:evaluation group
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+@label:global evaluation
+int
+@tag:int
+intsurface
+@type:intsurface
+integration
+@label:surface integration
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+norm
+@label:magnetic flux density norm
+surf
+@tag:surf
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@tag:line
+@type:line
+@label:line
+plotgroup1d
+@type:plotgroup1d
+@label:convergence with number of frames
+tblp
+@tag:tblp
+table
+@type:table
+graph
+@label:table graph
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+trn
+@tag:trn
+translation
+@type:translation
+@label:translation
+@label:motor efficiency map
+tblc
+@tag:tblc
+tablecontour
+@type:tablecontour
+@label:table contour
+loss
+@label:electromagnetic loss
+hist
+@geom:geom
+@geom:pi
+@geom:fin
+@selection
+@selection:sel
+@selection:uni
+@selection:adj
+@selection:disk
+@cpl
+@cpl:aveop
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:BHCurve
+@material:EffectiveBHCurve
+@material:BH
+@material:BHeff
+@material:Enu
+@material:linzRes
+@material:RemanentFluxDensity
+@material:Murnaghan
+@material:selection
+@view:view
+@physics:mmtp
+@physics:ht
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@study:std
+@study:stat
+@multiphysics
+@multiphysics:emh
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@batch:p
+@batch:so
+@sol:se
+@sol:ssDef
+@sol:ss
+@result:pg
+@result:surf
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@result:line
+@evaluationgroup:eg
+@evaluationgroup:gev
+@evaluationgroup:int
+@evaluationgroup:selection
+@result:tblp
+@sol:p
+@result:tblc
+@result:ann
+@result:trn
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

@@ -1,0 +1,13 @@
+{
+  "source_file": "Subsurface_Flow_Module/Fluid_Flow/fractured_reservoir_flow_geom_sequence.mph",
+  "source_size": 614399,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310465.327",
+  "total_files_in_archive": 19
+}

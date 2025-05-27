@@ -1,0 +1,175 @@
+{
+  "statistics": {
+    "total_files": 5,
+    "processed_files": 5,
+    "failed_files": 0,
+    "extracted_files": 35,
+    "total_size": 9660996
+  },
+  "target_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "output_directory": "mphs_test",
+  "extraction_log": [
+    {
+      "file": "ACDC_Module/Applications/bh_curve_checker.mph",
+      "result": {
+        "status": "success",
+        "extracted": [
+          "modelimage.png",
+          "modelimage_large.png",
+          "smodel.json",
+          "modelinfo.xml",
+          "usedlicenses.txt",
+          "index.txt",
+          "extraction_metadata.json"
+        ],
+        "extract_dir": "mphs_test/ACDC_Module_Applications_bh_curve_checker",
+        "metadata": {
+          "source_file": "ACDC_Module/Applications/bh_curve_checker.mph",
+          "source_size": 1447518,
+          "extracted_files": [
+            "modelimage.png",
+            "modelimage_large.png",
+            "smodel.json",
+            "modelinfo.xml",
+            "usedlicenses.txt",
+            "index.txt",
+            "extraction_metadata.json"
+          ],
+          "extraction_timestamp": "1731310209.736",
+          "total_files_in_archive": 83
+        }
+      }
+    },
+    {
+      "file": "ACDC_Module/Applications/billet_induction_heating.mph",
+      "result": {
+        "status": "success",
+        "extracted": [
+          "modelimage.png",
+          "modelimage_large.png",
+          "smodel.json",
+          "modelinfo.xml",
+          "usedlicenses.txt",
+          "index.txt",
+          "extraction_metadata.json"
+        ],
+        "extract_dir": "mphs_test/ACDC_Module_Applications_billet_induction_heating",
+        "metadata": {
+          "source_file": "ACDC_Module/Applications/billet_induction_heating.mph",
+          "source_size": 3409403,
+          "extracted_files": [
+            "modelimage.png",
+            "modelimage_large.png",
+            "smodel.json",
+            "modelinfo.xml",
+            "usedlicenses.txt",
+            "index.txt",
+            "extraction_metadata.json"
+          ],
+          "extraction_timestamp": "1731310209.736",
+          "total_files_in_archive": 113
+        }
+      }
+    },
+    {
+      "file": "ACDC_Module/Applications/effective_nonlinear_magnetic_curves.mph",
+      "result": {
+        "status": "success",
+        "extracted": [
+          "modelimage.png",
+          "modelimage_large.png",
+          "smodel.json",
+          "modelinfo.xml",
+          "usedlicenses.txt",
+          "index.txt",
+          "extraction_metadata.json"
+        ],
+        "extract_dir": "mphs_test/ACDC_Module_Applications_effective_nonlinear_magnetic_curves",
+        "metadata": {
+          "source_file": "ACDC_Module/Applications/effective_nonlinear_magnetic_curves.mph",
+          "source_size": 2185694,
+          "extracted_files": [
+            "modelimage.png",
+            "modelimage_large.png",
+            "smodel.json",
+            "modelinfo.xml",
+            "usedlicenses.txt",
+            "index.txt",
+            "extraction_metadata.json"
+          ],
+          "extraction_timestamp": "1731310209.736",
+          "total_files_in_archive": 89
+        }
+      }
+    },
+    {
+      "file": "ACDC_Module/Devices,_Capacitive/capacitive_position_sensor.mph",
+      "result": {
+        "status": "success",
+        "extracted": [
+          "modelimage.png",
+          "modelimage_large.png",
+          "smodel.json",
+          "modelinfo.xml",
+          "usedlicenses.txt",
+          "index.txt",
+          "extraction_metadata.json"
+        ],
+        "extract_dir": "mphs_test/ACDC_Module_Devices,_Capacitive_capacitive_position_sensor",
+        "metadata": {
+          "source_file": "ACDC_Module/Devices,_Capacitive/capacitive_position_sensor.mph",
+          "source_size": 1410088,
+          "extracted_files": [
+            "modelimage.png",
+            "modelimage_large.png",
+            "smodel.json",
+            "modelinfo.xml",
+            "usedlicenses.txt",
+            "index.txt",
+            "extraction_metadata.json"
+          ],
+          "extraction_timestamp": "1731310209.736",
+          "total_files_in_archive": 57
+        }
+      }
+    },
+    {
+      "file": "ACDC_Module/Devices,_Capacitive/capacitive_position_sensor_bem.mph",
+      "result": {
+        "status": "success",
+        "extracted": [
+          "modelimage.png",
+          "modelimage_large.png",
+          "smodel.json",
+          "modelinfo.xml",
+          "usedlicenses.txt",
+          "index.txt",
+          "extraction_metadata.json"
+        ],
+        "extract_dir": "mphs_test/ACDC_Module_Devices,_Capacitive_capacitive_position_sensor_bem",
+        "metadata": {
+          "source_file": "ACDC_Module/Devices,_Capacitive/capacitive_position_sensor_bem.mph",
+          "source_size": 1208293,
+          "extracted_files": [
+            "modelimage.png",
+            "modelimage_large.png",
+            "smodel.json",
+            "modelinfo.xml",
+            "usedlicenses.txt",
+            "index.txt",
+            "extraction_metadata.json"
+          ],
+          "extraction_timestamp": "1731310209.736",
+          "total_files_in_archive": 56
+        }
+      }
+    }
+  ]
+}

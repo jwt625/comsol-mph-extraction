@@ -1,0 +1,1043 @@
+magnetic–structure
+interaction
+permanent
+magnet
+motor
+example
+coupling
+multibody
+dynamics
+rotating
+machinery
+magnetic
+performing
+electromagnetic
+mechanical
+analysis
+demonstrated
+with
+rotor
+poles
+stator
+slots
+modeled
+2d
+magnets
+attached
+circumference
+model
+magnetic-structure
+integrated
+moving
+mesh
+force
+transferred
+motion
+time-dependent
+problem
+computing
+flux
+density
+displacement
+solved
+three
+complete
+electrical
+periods
+pm_motor_2d_structure_interaction
+mph
+param
+parameters
+np
+number
+apfct
+ratio
+air
+pocket
+width
+lamination
+ipk
+phase
+current
+peak
+f_el
+frequency
+t_step
+time
+step
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+@label:multibody dynamics
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+rotf
+@tag:rotf
+rotatingframe
+@type:rotatingframe
+frame
+@label:rotating frame
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+rmm
+@tag:rmm
+rotatingmachinerymagnetic
+@type:rotatingmachinerymagnetic
+@label:rotating machinery, magnetic
+magneticvectorpotential
+magneticscalarpotential
+etf
+@tag:etf
+electricfieldtransformation
+@type:electricfieldtransformation
+electric
+field
+transformation
+@label:electric field transformation
+al
+@tag:al
+ampereslaw
+@type:ampereslaw
+amp&#xe8;re's
+law
+solid
+@label:amp&#xe8;re's law, solid
+mxb
+@tag:mxb
+mixedformulationboundary
+@type:mixedformulationboundary
+mixed
+formulation
+boundary
+@label:mixed formulation boundary
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:continuity
+@label:amp&#xe8;re's law
+cmag
+@tag:cmag
+conductingmagnet
+@type:conductingmagnet
+conducting
+@label:conducting magnet
+north
+@tag:north
+@type:north
+@label:north
+south
+@tag:south
+@type:south
+@label:south
+wnd
+@tag:wnd
+multiphasewinding
+@type:multiphasewinding
+multiphase
+winding
+@label:multiphase winding
+ph
+@tag:ph
+@type:phase
+@label:phase
+aph
+@tag:aph
+automatic
+@label:automatic phase
+rcd
+@tag:rcd
+reversedcurrentdirection
+@type:reversedcurrentdirection
+reversed
+direction
+@label:reversed current direction
+ark
+@tag:ark
+arkkiotorquecalculation
+@type:arkkiotorquecalculation
+arkkio
+torque
+calculation
+@label:arkkio torque calculation
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+internal
+surface
+mounted
+@label:internal rotor &#x2013; surface mounted magnets
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+rotor_diam
+@label:parameter check
+@label:parameter check 2 (number of poles
+@label:parameter check 3 (number of poles
+@label:parameter check 4 (number of modeled poles
+@label:parameter check 5 (number of modeled poles
+shaft_diam
+cont_diam
+magnet_h
+magnet_w
+magnet_fillet_size
+@tag:c
+circle
+@type:circle
+shaft
+sector
+@label:shaft sector
+sketchobject
+rot
+@tag:rot
+rotate
+@type:rotate
+rotation
+@label:rotation
+@tag:shaft
+union
+@type:union
+@label:circle
+ironsector
+@tag:ironsector
+converttosolid
+@type:converttosolid
+convert
+@label:convert to solid
+convert_to_solid
+rotor_iron
+@tag:rotor_iron
+@label:rotor_iron
+mop
+@tag:mop
+@tag:if
+@type:if
+toggle_radial_magnet_side
+@label:if 1 (!toggle_radial_magnet_side
+rp
+@tag:rp
+rectangle
+@type:rectangle
+@label:rectangle
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+ump
+@tag:ump
+@label:union
+omagnetwof
+@tag:omagnetwof
+difference
+@type:difference
+outer
+magnetized
+@label:outer magnetized magnet
+nmp_l
+@label:if
+inmagnetwof
+@tag:inmagnetwof
+inward
+facing
+@label:inward facing magnet
+domagnetwof
+@tag:domagnetwof
+differenceselection
+@type:differenceselection
+selection
+@label:difference selection
+magnets_odd
+@tag:magnets_odd
+@label:magnets_odd
+magnets_even
+@tag:magnets_even
+@label:magnets_even
+nmp_l&gt
+@label:end if 1 (nmp_l&gt
+rotor_magnets
+@tag:rotor_magnets
+unionselection
+@type:unionselection
+@label:rotor_magnets
+rotor_solid_domains
+@tag:rotor_solid_domains
+@label:rotor_solid_domains
+fillets
+drawn
+@label:if 3 (magnet fillets can be drawn
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+disk
+@label:disk selection
+fil
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+@label:end if 2 (magnet fillets can be drawn
+draw
+@label:if 4 (draw air
+airsector
+@tag:airsector
+@label:rotor air sector
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+@label:air sector rotation
+rotor_air
+@tag:rotor_air
+@label:rotor_air
+gap
+@label:if 10 (draw arkkio air gap
+csol
+@tag:csol
+@label:rotate
+arkkio_air_gap
+@tag:arkkio_air_gap
+@label:arkkio_air_gap
+@label:end if 10 (draw arkkio air gap
+@label:end if 3 (draw air
+comsel
+@tag:comsel
+complementselection
+@type:complementselection
+complement
+@label:complement selection
+@tag:all
+all_domains
+@label:all_domains
+exterior
+@tag:exterior
+adjacentselection
+@type:adjacentselection
+@label:exterior
+less
+entiry
+@label:if 8 (less than entiry geometry
+boxselection
+@tag:boxselection
+@type:boxselection
+box
+@label:box selection
+8a
+@label:rotate 8a
+periodic_source
+@tag:periodic_source
+@label:periodic_source
+periodic_boundaries
+@tag:periodic_boundaries
+@label:periodic_boundaries
+@label:end if 8 (less than entiry geometry
+pnt
+bnd
+dom
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input
+number_of_poles
+number_of_magnetic_poles_rotor
+diameter_of_rotor
+magnet_width
+magnet_toggle_radial_side
+localparam
+local
+rd_l_l
+diameter
+lower
+limit
+rt_u_l
+relative
+tolerance
+upper
+num_p_l_l
+nmp_l_l
+cd_u_l
+magnet_can_be_drawn
+boolean
+true
+consistent&#xa;setting
+allow_inconsistent_parameters
+try
+ignore
+inconsistent
+built
+mh_u_l
+height
+sh_u_l
+alpha_magnet_out
+angular
+size
+radius_rotor_iron
+radius
+iron
+magnet_w_max_fillet
+maximum
+determined
+baseunitsystem
+meter
+radian
+degree
+spl
+@tag:spl
+split
+@type:split
+@label:split
+dif
+@tag:dif
+@label:difference
+channels
+@label:rotate: rotor air channels
+core
+@label:difference: rotor core
+uni
+@tag:uni
+@label:union: rotor
+boundaries
+@label:rotating boundaries
+external
+slotted
+@label:external stator &#x2013; slotted
+stator_diam
+number_of_slots
+@label:parameter check 3 (number of slots
+@label:parameter check 4 (number of modeled slots
+@label:parameter check 5 (number of modeled slots
+backiron_th
+external_air_size
+shoe_h
+shoe_w
+tooth_h
+tooth_w
+shoe_fillet_size
+slot_inner_fillet_size
+slot_outer_fillet_size
+tooth
+@tag:tooth
+@label:tooth
+shoe
+@label:if 2 (shoe fillets
+shoefpoints
+@tag:shoefpoints
+points
+@label:points of shoe to fillet
+shoewf
+@tag:shoewf
+@label:shoe with fillets
+@label:end if 2 (shoe fillets
+slot
+inner
+@label:if 3 (slot inner fillet
+@label:end if 3 (slot inner fillet
+@label:if 4 (slot outer fillet
+@label:end if 4 (slot outer fillet
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+@label:iron sector
+@label:iron sector rotation
+stator_iron
+@tag:stator_iron
+@label:stator_iron
+slot_winding_type
+@label:if 5 (slot_winding_type
+slotfillingtypeonesector
+@tag:slotfillingtypeonesector
+@label:slot_winding_type 1 sector
+@label:slot_winding_type 1 sector rotation
+slotfillingtypeone
+@tag:slotfillingtypeone
+@label:slot_winding_type
+slotfilling
+@tag:slotfilling
+elseif
+@type:elseif
+else
+@label:else if 5 (slot_winding_type
+slotfillingtypetwosector
+@tag:slotfillingtypetwosector
+@label:slot_winding_type 2 sector
+@label:slot_winding_type 2 sector rotation
+slotfillingtypetwo
+@tag:slotfillingtypetwo
+slotfillingtypethreesector
+@tag:slotfillingtypethreesector
+@label:slot_winding_type 3 sector
+@label:slot_winding_type 3 sector rotation
+slotfillingtypethree
+@tag:slotfillingtypethree
+slotfillingtypefoursector
+@tag:slotfillingtypefoursector
+@label:slot_winding_type 4 sector
+@label:slot_winding_type 4 sector rotation
+slotfillingtypefour
+@tag:slotfillingtypefour
+stator_slots
+@tag:stator_slots
+@label:stator_slots
+unisel
+@tag:unisel
+parts
+@label:all solid rotor parts
+@label:stator air sector
+@label:stator air sector rotation
+stator_air
+@tag:stator_air
+@label:stator_air
+@label:if 11 (draw arkkio air gap
+@label:end if 11 (draw arkkio air gap
+number_of_slots_stator
+diameter_of_stator
+height_of_shoe
+width_of_tooth
+radius_of_inner_slot_fillet
+flag_for_ignoring_inconsistent_variables
+sd_l_l
+eas_u_l
+num_s_l_l
+sector_angle
+angle
+cd_l_l
+cont
+diam
+th_l_l
+bit_l_l
+backiron
+thickness
+outer_radius_slot
+tw_u_l
+sw_u_l
+r_external_air
+upper_tooth_angle
+half
+edges
+r1b
+coefficient
+a*r
+b*r
+solving
+divides
+two
+halves
+equal
+area
+slot_layer_size_outer
+layer
+shoe_width_max_fillet
+limited
+slot_height_max_outer_fillet
+corner
+slot_outer_fillet_size_lim
+resulting
+sifs_l
+intermediate
+sca
+@tag:sca
+scale
+@type:scale
+@label:scale
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+pi1_exterior
+pi1_shaft
+pi1_rotor_iron
+pi1_magnets_odd
+odd
+pi1_magnets_even
+even
+pi1_rotor_magnets
+pi1_rotor_solid_domains
+domains
+pi1_rotor_air
+pi1_all
+pi2_exterior
+pi2_all
+pi2_stator_iron
+pi2_stator_slots
+pi2_stator_air
+pi2_arkkio_air_gap
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+grp
+@tag:grp
+@type:geometry
+@label:stator
+part
+rm
+@tag:rm
+ramp
+@type:ramp
+@label:ramp
+var
+variables
+alpha
+spatial
+geom1_pi1_shaft_dom
+@tag:geom1_pi1_shaft_dom
+fromsequence
+@type:fromsequence
+@label:shaft (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_magnets
+@tag:geom1_pi1_rotor_magnets
+@label:rotor magnets (internal rotor &#x2013; surface mounted magnets
+geom1_pi1_rotor_air_dom
+@tag:geom1_pi1_rotor_air_dom
+@label:rotor air (internal rotor &#x2013; surface mounted magnets
+geom1_rot1_dom
+@tag:geom1_rot1_dom
+geom1_dif2_dom
+@tag:geom1_dif2_dom
+geom1_uni1_dom
+@tag:geom1_uni1_dom
+geom1_disksel
+@tag:geom1_disksel
+geom1_pi2_stator_iron_dom
+@tag:geom1_pi2_stator_iron_dom
+@label:stator iron (external stator &#x2013; slotted
+geom1_pi2_stator_slots
+@tag:geom1_pi2_stator_slots
+@label:stator slots (external stator &#x2013; slotted
+geom1_pi2_all_dom
+@tag:geom1_pi2_all_dom
+@label:all domains (external stator &#x2013; slotted
+structural
+@label:structural domains
+deforming
+@label:deforming domains
+adj
+@tag:adj
+adjacent
+@type:adjacent
+@label:shaft boundaries
+ap
+identity
+pair
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rotb
+@tag:rotb
+rotatingboundary
+@type:rotatingboundary
+@label:rotating boundary
+deformingdomain
+@type:deformingdomain
+domain
+@label:deforming domain
+mfrm
+@tag:mfrm
+magneticforcesrotatingmachinery
+@type:magneticforcesrotatingmachinery
+forces
+@label:magnetic forces, rotating machinery
+mat
+@tag:mat
+common
+@type:common
+@label:air
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+analytic
+@type:analytic
+@label:analytic
+@tag:k
+cs
+@tag:cs
+@tag:an
+2a
+@label:analytic 2a
+refractiveindex
+refractive
+index
+nonlinearmodel
+nonlinear
+idealgas
+ideal
+gas
+silicon
+steel
+ngo
+35pn
+@label:silicon steel ngo 35pn
+bhcurve
+b-h
+curve
+bh
+@tag:bh
+interpolation
+@type:interpolation
+@label:interpolation
+enu
+young's
+modulus
+poisson's
+bmn
+@label:bmn
+remanentfluxdensity
+remanent
+int
+@tag:int
+high-strength
+alloy
+@label:high-strength alloy steel
+murnaghan
+comp
+component
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+meshnative
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+@type:field
+vector
+potential
+frames
+@label:material and geometry frames
+comp1_spatial_disp
+@tag:comp1_spatial_disp
+disp
+@label:spatial mesh displacement
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:magnetic potential
+@tag:d
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+comp1_rmm_cmag1_v_d
+@tag:comp1_rmm_cmag1_v_d
+state
+@type:state
+v_d
+@label:comp1.rmm.cmag1.v_d
+@tag:t
+@type:time
+@label:time-dependent solver
+result
+results
+gsty
+@tag:gsty
+graphstyle
+@type:graphstyle
+graph
+plot
+style
+@label:graph plot style
+dset
+@tag:dset
+@type:solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:displacement
+norm
+@label:magnetic flux density norm
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+@type:surface
+@label:surface
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+@label:arrow line
+velocity
+@label:velocity
+plotgroup1d
+@type:plotgroup1d
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+point
+@label:point graph
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:torque
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:moving mesh
+@tag:mesh
+@type:mesh
+@label:mesh
+sel
+@tag:sel
+meshselection
+@type:meshselection
+@label:selection
+hist
+@physics:mbd
+@physics:rmm
+@multiphysics
+@multiphysics:mfrm
+@multiphysics:selection
+@common:rotb
+@common:selection
+@common:free
+@study:std
+@study:stat
+@geom:geom
+@geom:pi
+@geom:spl
+@geom:input
+@geom:selection
+@geom:c
+@geom:dif
+@geom:fil
+@geom:point
+@geom:rot
+@geom:uni
+@geom:disksel
+@geom:nodeGroup
+@geom:grp
+@geom:sca
+@geom:fin
+@func
+@func:rm
+@expr:var
+@selection
+@selection:uni
+@selection:adj
+@material:mat
+@material:materialmodel
+@material:func
+@material:idealGas
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@material:RefractiveIndex
+@material:NonlinearModel
+@material:BHCurve
+@material:BH
+@material:RemanentFluxDensity
+@material:int
+@material:Enu
+@material:Murnaghan
+@material:selection
+@mesh:mesh
+@mesh:size
+@mesh:ftri
+@mesh:selection
+@study:time
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_spatial_disp
+@sol:comp1_u
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:t
+@result:pg
+@result:surf
+@result:arwl
+@result:str
+@result:selection
+@result:col
+@result:filt
+@result:con
+@result:mesh
+@result:sel
+@view:view
+@configuration:gsty
+@result:ptgr
+@result:glob
+@nodeGroup:grp
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+@type:results
+plots
+@label:structural plots
+@label:electromagnetic plots
+res
+soldata

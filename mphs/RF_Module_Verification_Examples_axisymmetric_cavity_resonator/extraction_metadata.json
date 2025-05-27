@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/Verification_Examples/axisymmetric_cavity_resonator.mph",
+  "source_size": 38259,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.142",
+  "total_files_in_archive": 6
+}

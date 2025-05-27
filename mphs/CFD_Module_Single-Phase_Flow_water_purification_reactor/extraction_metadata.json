@@ -1,0 +1,14 @@
+{
+  "source_file": "CFD_Module/Single-Phase_Flow/water_purification_reactor.mph",
+  "source_size": 8733040,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.468",
+  "total_files_in_archive": 22
+}

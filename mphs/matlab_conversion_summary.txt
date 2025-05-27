@@ -1,0 +1,15 @@
+=== COMSOL .mph to .m Conversion Summary ===
+
+Total files in list: 5
+Successfully processed: 0
+Failed to process: 5
+Total size processed: 0.00 MB
+Total conversion time: 0.2s
+Average time per file: 0.03 seconds
+
+Failed files (5):
+  - ACDC_Module/Applications/bh_curve_checker.mph: error
+  - ACDC_Module/Applications/billet_induction_heating.mph: error
+  - ACDC_Module/Applications/effective_nonlinear_magnetic_curves.mph: error
+  - ACDC_Module/Devices,_Capacitive/capacitive_position_sensor.mph: error
+  - ACDC_Module/Devices,_Capacitive/capacitive_position_sensor_bem.mph: error

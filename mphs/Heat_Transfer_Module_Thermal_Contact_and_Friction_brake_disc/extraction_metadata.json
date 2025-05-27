@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Thermal_Contact_and_Friction/brake_disc.mph",
+  "source_size": 846368,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.591",
+  "total_files_in_archive": 21
+}

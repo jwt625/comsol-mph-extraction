@@ -1,0 +1,581 @@
+homogenized
+model
+corrugated
+sheet
+example
+presents
+numerical
+based
+unit
+cell
+numerically
+obtained
+equivalent
+stiffness
+matrices
+compared
+with
+various
+analytical
+models
+two
+corrugation
+profiles
+trapezoidal
+round
+considered
+corrugated_sheet
+mph
+param
+parameters
+theta
+angle
+profile
+th
+thickness
+depth
+i0s
+length
+parameter
+ee
+young's
+modulus
+default
+geometric
+properties
+par
+common
+material
+case
+shell
+@tag:shell
+@type:shell
+@label:shell
+displacement
+dimensionless_displacement
+shell_rd_disp
+shell_rd_rot
+shell_rig_disp
+shell_rig_rot
+shell_att_disp
+shell_att_rot
+emm
+@tag:emm
+elastic
+@type:elastic
+linear
+@label:linear elastic material
+shls
+@tag:shls
+shelllocalsystem
+@type:shelllocalsystem
+local
+system
+@label:shell local system
+@tag:to
+thicknessoffset
+@type:thicknessoffset
+offset
+@label:thickness and offset
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+disp
+@tag:disp
+@type:displacement1
+prescribed
+displacement/rotation
+@label:prescribed displacement/rotation
+@type:displacement0
+geom
+geometry
+geomnative
+@tag:if
+@type:if
+@label:if
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:trapezoidal corrugation
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+check
+@label:parameter check
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+uni
+work_plane
+sequence2d
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+baseunitsystem
+meter
+radian
+degree
+obj
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude
+arr
+@tag:arr
+array
+@type:array
+@label:array
+@tag:uni
+union
+@type:union
+@label:union
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+pair_x_source
+@label:pair_x_source
+pair_x_destination
+@label:pair_x_destination
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+pair_x
+@label:pair_x
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+interior
+@label:interior
+back_plane
+@label:back_plane
+front_plane
+@label:front_plane
+right_plane
+@label:right_plane
+left_plane
+@label:left_plane
+pnt
+edg
+bnd
+dom
+geommanagernative
+inputparam
+input
+half_wavelength_of_corrugation
+localparam
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+@label:round corrugation
+part_instance
+ca
+@tag:ca
+circulararc
+@type:circulararc
+circular
+arc
+@label:circular arc
+circular_arc
+sketchobject
+pt
+@tag:pt
+point
+@type:point
+@label:point
+radius_of_corrugation
+half
+wavelength
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+pair
+source
+@label:pair 1, source
+destination
+@label:pair 1, destination
+@label:pair 2, source
+@label:pair 2, destination
+ballsel
+@tag:ballsel
+ballselection
+@type:ballselection
+ball
+selection
+@label:ball selection
+@label:union selection
+pi1_boxsel
+pi1_unisel
+pi1_adjsel
+pi2_boxsel
+pi2_unisel
+pi2_adjsel
+image
+@tag:image
+@type:geometry
+@label:geometry
+part
+var
+components
+xia
+et
+al
+da11_xia
+extensional
+matrix
+11-component
+da33_xia
+33-component
+dd22_xia
+bending
+22-component
+park
+da11_park
+da33_park
+dd22_park
+ye
+da11_ye
+da33_ye
+dd22_ye
+reaction
+forces
+da11_r
+da22_r
+dd12_r
+12-component
+dd33_r
+da11_e
+dd11_e
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+fixed
+spatial
+mesh
+geom1_pi1_boxsel
+@tag:geom1_pi1_boxsel
+fromsequence
+@type:fromsequence
+@label:pair 1, source (trapezoidal corrugation
+@label:pair 1, destination (trapezoidal corrugation
+@label:pair 2, source (trapezoidal corrugation
+@label:pair 2, destination (trapezoidal corrugation
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:pair 1 (trapezoidal corrugation
+@label:pair 2 (trapezoidal corrugation
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+@label:exterior (trapezoidal corrugation
+@label:interior (trapezoidal corrugation
+@label:all (trapezoidal corrugation
+geom1_pi2_boxsel
+@tag:geom1_pi2_boxsel
+@label:pair 1, source (round corrugation
+@label:pair 1, destination (round corrugation
+@label:pair 2, source (round corrugation
+@label:pair 2, destination (round corrugation
+geom1_pi2_unisel
+@tag:geom1_pi2_unisel
+@label:pair 1 (round corrugation
+@label:pair 2 (round corrugation
+geom1_pi2_adjsel
+@tag:geom1_pi2_adjsel
+@label:exterior (round corrugation
+@label:interior (round corrugation
+@label:all (round corrugation
+geom1_unisel
+@tag:geom1_unisel
+geom1_ballsel
+@tag:geom1_ballsel
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+@type:common
+@label:material
+enu
+poisson's
+ratio
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+load
+@tag:param
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_ar
+@tag:comp1_ar
+field
+@type:field
+normals
+ar
+@label:displacement of shell normals
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+lh
+i0c
+2056e
+iy
+535e
+1e
+nu
+@label:case=1, th=0.00635, c=0.0508, f=0.0127, d=0.1016, lh=0.061321, i0c=0.086721, i0s=0.035921, i2=1.2056e-5, iy=7.535e-7, ee=2.1e10, nu=0.3, l
+1481e
+2176e
+@label:case=2, th=0.00635, c=0.0508, f=0.0254, d=0.1016, lh=0.079796, i0c=0.15959, i0s=0.15959, i2=5.1481e-5, iy=3.2176e-6, ee=2.1e10, nu=0.3, l
+result
+results
+dset
+@tag:dset
+@type:solution
+eg
+@tag:eg
+evaluationgroup
+@type:evaluationgroup
+@label:analytical extensional stiffness matrix by xia et al
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+global
+evaluation
+@label:global evaluation
+@label:analytical bending stiffness matrix by xia et al
+@label:analytical extensional stiffness matrix by park et al
+@label:analytical bending stiffness matrix by park et al
+@label:analytical extensional stiffness matrix by ye et al
+@label:analytical bending stiffness matrix by ye et al
+@label:numerical extensional stiffness matrix based on reaction forces
+@label:numerical bending stiffness matrix based on reaction forces
+energy
+equivalence
+@label:numerical extensional stiffness matrix based on energy equivalence
+@label:numerical bending stiffness matrix based on energy equivalence
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+translational
+cases
+@label:displacement for translational load cases
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+total
+rotations
+rotational
+@label:total rotations for rotational load cases
+hist
+@study:std
+@study:stat
+@physics:shell
+@param:group
+@param:par
+@param:paramCase
+@param:case
+@geom:geom
+@geom:if
+@geom:pi
+@view:view
+@geom:unisel
+@geom:ballsel
+@cpl
+@cpl:intop
+@cpl:selection
+@expr:var
+@material:mat
+@material:materialmodel
+@material:Enu
+@nodeGroup:grp
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_ar
+@sol:s
+@sol:aDef
+@sol:fc
+@batch:p
+@batch:so
+@result:pg
+@result:surf
+@result:tlan
+@evaluationgroup:eg
+@evaluationgroup:gev
+sys
+@tag:sys
+boundary
+@type:boundary
+@label:boundary system
+shellsys
+@tag:shellsys
+vectorbase
+@type:vectorbase
+grp
+@tag:grp
+physics
+@type:physics
+da
+@label:load case 1: da11 and da
+@label:load case 2: da21 and da
+@label:load case 3: da
+dd
+@label:load case 4: dd11 and dd
+@label:load case 5: dd21 and dd
+@label:load case 6: dd
+@type:results
+soldata

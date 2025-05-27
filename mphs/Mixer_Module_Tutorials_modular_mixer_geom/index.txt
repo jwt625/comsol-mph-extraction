@@ -1,0 +1,406 @@
+laminar
+modular
+mixer
+template
+file
+example
+mph-file
+used
+case
+models
+geometry
+combination
+rushton
+impeller
+flat
+bottom
+tank
+subsequences
+build
+vessel
+imported
+part
+libraries
+model
+modular_mixer_geom
+mph
+param
+parameters
+height
+number
+baffles
+shaft_diameter
+shaft
+diameter
+default
+geom
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:rushton impeller
+part_instance
+storedlocalsubsequence
+copy
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+work_plane
+sequence2d
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+baseunitsystem
+meter
+radian
+degree
+obj
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+@tag:c
+circle
+@type:circle
+@label:circle
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:cylinder
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+edges_to_remove
+@label:edges_to_remove
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+union
+selection
+@label:union selection
+uni
+@tag:uni
+@type:union
+@label:union
+mov
+@tag:mov
+move
+@type:move
+@label:move
+@tag:if
+@type:if
+@label:if
+explicit
+@label:explicit selection
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+csel
+impeller_blades
+dom
+bnd
+edg
+pnt
+impeller_disk
+impeller_hub
+surfaces_to_hide
+impeller_hub_hole
+control_surface_upper
+control_surface_lower
+control_surface_side
+geommanagernative
+inputparam
+input
+d_hu
+diameter_of_impeller_hub
+n_ib
+number_of_impeller_blades
+d_im
+impeller_diameter
+pa_ud_im
+parameter_that_turns_the_impeller_180_degrees_around_the_x-axis_i
+upside_down
+d_cs_im
+diameter_of_cross_section_planes_above_and_below
+localparam
+local
+h_hu
+hub
+hp_csl_im
+position
+lower
+cross
+section
+@label:impeller shaft
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+exterior
+@label:exterior
+@label:all
+hp_im
+position_of_the_lowest_part_of_the_impeller_hub_or_impeller_shaft_along_the_z_axis
+@label:flat bottom tank
+fillet
+@label:if fillet
+fil
+@tag:fil
+@type:fillet
+@label:fillet
+rev
+@tag:rev
+revolve
+@type:revolve
+@label:revolve
+@label:cylinder selection
+ballsel
+@tag:ballsel
+ballselection
+@type:ballselection
+ball
+@label:ball selection
+@label:if baffles
+fluid_surface
+tank_walls
+rotating_domain
+fixed_point
+n_ba
+number_of_baffles
+d_ta
+tank_diameter
+hp_ta
+height_position_cylindrical_surface
+min_ff
+smallest
+fraction
+produces
+bo_rd_ta
+offset
+rotating
+domain
+relative
+radius
+fluid
+@label:fluid domain
+pressure
+point
+@label:flat pressure point
+edges
+remove
+@label:edges to remove
+@label:rotating fluid domain
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+ige
+@tag:ige
+ignoreedges
+@type:ignoreedges
+ignore
+@label:ignore edges
+ignore_edges
+pi1_csel
+pi1_sel
+blades
+disk
+surfaces
+hide
+control
+surface
+upper
+side
+domains
+interior
+wall
+pi2_csel
+pi2_sel
+pi2_cylsel
+pi3_csel
+walls
+fixed
+pi3_unisel
+pi3_sel
+symmetry
+view
+suppression
+constraint
+material
+spatial
+mesh
+geom1_csel2_bnd
+@tag:geom1_csel2_bnd
+fromsequence
+@type:fromsequence
+@label:rotating interior wall
+geom1_csel3_bnd
+@tag:geom1_csel3_bnd
+@label:rotating wall
+geom1_csel4_edg
+@tag:geom1_csel4_edg
+@label:remove edges
+geom1_pi1_csel10_bnd
+@tag:geom1_pi1_csel10_bnd
+@label:surfaces to hide (rushton impeller
+geom1_pi1_csel7_bnd
+@tag:geom1_pi1_csel7_bnd
+@label:control surface upper (rushton impeller
+geom1_pi1_csel8_bnd
+@tag:geom1_pi1_csel8_bnd
+@label:control surface lower (rushton impeller
+geom1_pi1_csel9_bnd
+@tag:geom1_pi1_csel9_bnd
+@label:control surface side (rushton impeller
+geom1_pi1_csel6_dom
+@tag:geom1_pi1_csel6_dom
+@label:tank (rushton impeller
+geom1_pi2_csel1_pnt
+@tag:geom1_pi2_csel1_pnt
+@label:impeller (impeller shaft
+geom1_pi2_csel1_edg
+@tag:geom1_pi2_csel1_edg
+geom1_pi2_cylsel
+@tag:geom1_pi2_cylsel
+@label:exterior (impeller shaft
+geom1_pi2_sel
+@tag:geom1_pi2_sel
+@label:all (impeller shaft
+geom1_pi2_csel1_dom
+@tag:geom1_pi2_csel1_dom
+geom1_csel5_bnd
+@tag:geom1_csel5_bnd
+@label:symmetry
+geom1_csel6_bnd
+@tag:geom1_csel6_bnd
+@label:interior wall
+geom1_csel7_bnd
+@tag:geom1_csel7_bnd
+@label:view suppression
+geom1_pi3_csel4_pnt
+@tag:geom1_pi3_csel4_pnt
+@label:baffles (flat bottom tank
+geom1_pi3_csel5_pnt
+@tag:geom1_pi3_csel5_pnt
+@label:tank (flat bottom tank
+geom1_pi3_csel6_pnt
+@tag:geom1_pi3_csel6_pnt
+@label:fixed point (flat bottom tank
+geom1_pi3_csel4_edg
+@tag:geom1_pi3_csel4_edg
+geom1_pi3_csel5_edg
+@tag:geom1_pi3_csel5_edg
+geom1_pi3_unisel
+@tag:geom1_pi3_unisel
+@label:exterior (flat bottom tank
+geom1_pi3_csel2_bnd
+@tag:geom1_pi3_csel2_bnd
+@label:tank walls (flat bottom tank
+geom1_pi3_csel5_bnd
+@tag:geom1_pi3_csel5_bnd
+geom1_pi3_sel
+@tag:geom1_pi3_sel
+@label:all (flat bottom tank
+geom1_pi3_csel3_dom
+@tag:geom1_pi3_csel3_dom
+@label:rotating domain (flat bottom tank
+geom1_pi3_csel4_dom
+@tag:geom1_pi3_csel4_dom
+geom1_pi3_csel5_dom
+@tag:geom1_pi3_csel5_dom
+geom1_dif1_pnt
+@tag:geom1_dif1_pnt
+geom1_dif1_edg
+@tag:geom1_dif1_edg
+geom1_dif1_bnd
+@tag:geom1_dif1_bnd
+geom1_dif1_dom
+@tag:geom1_dif1_dom
+geom1_sel
+@tag:geom1_sel
+geom1_csel8_pnt
+@tag:geom1_csel8_pnt
+@label:pressure point constraint
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+meshnative
+optsequence
+result
+results
+hist
+@geom:geom
+@geom:pi
+@geom:selection
+@geom:csel
+@geom:uni
+@geom:input
+@geom:dif
+@geom:sel
+@view:view
+@geom:ige
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+soldata

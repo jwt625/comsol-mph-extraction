@@ -1,0 +1,437 @@
+accelerated
+life
+testing
+example
+demonstrates
+evaluate
+fatigue
+driven
+specific
+strain
+energy
+using
+simple
+schematic
+representation
+electronic
+component
+required
+variables
+defined
+via
+ordinary
+differential
+equations
+calculated
+during
+simulation
+thermal
+load
+cycle
+model
+accelerated_life_testing
+mph
+param
+parameters
+a_i
+low
+stress
+creep
+rate
+coefficient
+n_ii
+high
+exponent
+default
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+te
+@tag:te
+thermalexpansion
+@type:thermalexpansion
+expansion
+@label:thermal expansion
+cmm
+@tag:cmm
+@type:creep2
+@label:creep
+acr
+@tag:acr
+additionalcreep
+@type:additionalcreep
+additional
+@label:additional creep
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+sym
+@tag:sym
+symmetrysolid
+@type:symmetrysolid
+symmetry
+@label:symmetry
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+dode
+@tag:dode
+domainode
+@type:domainode
+domain
+odes
+daes
+@label:domain odes and daes
+dimensionless
+distributedode
+@type:distributedode
+distributed
+ode
+@label:distributed ode
+ftg
+@tag:ftg
+@type:fatigue
+@label:fatigue
+elif
+@tag:elif
+strainlifemodel
+@type:strainlifemodel
+strain-life
+@label:strain-life
+ener
+@tag:ener
+energybasedmodel
+@type:energybasedmodel
+energy-based
+@label:energy-based
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+pt
+@tag:pt
+point
+@type:point
+@label:point
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+var
+s_mises
+alpha_ii
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+pcb
+@label:pcb
+enu
+young's
+modulus
+poisson's
+ratio
+solder
+@label:solder
+alumina
+@label:alumina
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+@type:size
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+ftge
+@tag:ftge
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ece_i
+@tag:comp1_ece_i
+field
+@type:field
+variable
+ece_i
+@label:dependent variable ece_i
+comp1_ece_ii
+@tag:comp1_ece_ii
+ece_ii
+@label:dependent variable ece_ii
+comp1_ecx_i
+@tag:comp1_ecx_i
+ecx_i
+@label:dependent variable ecx_i
+comp1_ecx_ii
+@tag:comp1_ecx_ii
+ecx_ii
+@label:dependent variable ecx_ii
+comp1_ecxy_i
+@tag:comp1_ecxy_i
+ecxy_i
+@label:dependent variable ecxy_i
+comp1_ecxy_ii
+@tag:comp1_ecxy_ii
+ecxy_ii
+@label:dependent variable ecxy_ii
+comp1_ecy_i
+@tag:comp1_ecy_i
+ecy_i
+@label:dependent variable ecy_i
+comp1_ecy_ii
+@tag:comp1_ecy_ii
+ecy_ii
+@label:dependent variable ecy_ii
+comp1_ecz_i
+@tag:comp1_ecz_i
+ecz_i
+@label:dependent variable ecz_i
+comp1_ecz_ii
+@tag:comp1_ecz_ii
+ecz_ii
+@label:dependent variable ecz_ii
+comp1_solid_wc
+@tag:comp1_solid_wc
+dissipation
+density
+wc
+@label:creep dissipation density
+comp1_u
+@tag:comp1_u
+@label:displacement field
+comp1_wc_i
+@tag:comp1_wc_i
+wc_i
+@label:dependent variable wc_i
+comp1_wc_ii
+@tag:comp1_wc_ii
+wc_ii
+@label:dependent variable wc_ii
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+comp1_ftg2_ener1_dwd
+@tag:comp1_ftg2_ener1_dwd
+dissipated
+dwd
+@label:dissipated fatigue energy density
+comp1_ftg_elif1_dei
+@tag:comp1_ftg_elif1_dei
+accumulated
+inelastic
+dei
+@label:accumulated inelastic strain
+@tag:s
+stationary
+@type:stationary
+@label:stationary solver
+fcdef
+@tag:fcdef
+result
+results
+dset
+@tag:dset
+@type:solution
+mrkvl
+@tag:mrkvl
+table
+@type:table
+maximum
+minimum
+@label:maximum and minimum values
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:stress
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:creep strain i
+ii
+@label:creep strain ii
+@label:dissipated energy
+plotgroup1d
+@type:plotgroup1d
+history
+@label:creep strain history
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+graph
+@label:point graph
+effective
+@label:effective creep history
+@label:creep dissipation history
+cycles
+failure
+@label:cycles to failure
+mrkr
+@tag:mrkr
+marker
+@type:marker
+@label:marker
+geommanagernative
+hist
+@geom:geom
+@geom:r
+@geom:pt
+@func
+@func:int
+@physics:solid
+@material:mat
+@material:selection
+@material:materialmodel
+@material:Enu
+@expr:var
+@physics:dode
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:dis
+@mesh:ftri
+@mesh:size
+@study:std
+@study:time
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:ptgr
+@result:selection
+@physics:ftg
+@study:ftge
+@result:mrkr
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+res
+soldata

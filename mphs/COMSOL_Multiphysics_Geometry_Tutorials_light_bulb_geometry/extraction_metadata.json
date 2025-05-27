@@ -1,0 +1,13 @@
+{
+  "source_file": "COMSOL_Multiphysics/Geometry_Tutorials/light_bulb_geometry.mph",
+  "source_size": 325405,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310268.958",
+  "total_files_in_archive": 28
+}

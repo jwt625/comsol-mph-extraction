@@ -1,0 +1,14 @@
+{
+  "source_file": "Polymer_Flow_Module/Verification_Examples/beads_on_string.mph",
+  "source_size": 36965833,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310399.133",
+  "total_files_in_archive": 42
+}

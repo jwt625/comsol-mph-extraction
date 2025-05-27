@@ -1,0 +1,14 @@
+{
+  "source_file": "Fuel_Cell_and_Electrolyzer_Module/Electrolyzers/alkaline_electrolyzer.mph",
+  "source_size": 1732908,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310318.871",
+  "total_files_in_archive": 31
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Buildings_and_Constructions/roller_shutter_thermal_performances_preset.mph",
+  "source_size": 1859178,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.59",
+  "total_files_in_archive": 19
+}

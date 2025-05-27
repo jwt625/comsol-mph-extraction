@@ -1,0 +1,397 @@
+global
+model
+coupled
+with
+two-term
+boltzmann
+equation
+electron
+energy
+distribution
+function
+eedf
+plays
+important
+role
+overall
+behavior
+discharges
+example
+formation
+period
+argon
+plasma
+studied
+special
+attention
+paid
+created
+within
+4 cm
+gap
+dc
+source
+voltage
+1 kv
+100 mtorr
+local
+field
+approximation
+used
+describe
+temporal
+evolution
+species
+rate
+coefficients
+impact
+reactions
+mobility
+obtained
+suitable
+integration
+cross
+sections
+computed
+every
+time
+step
+using
+boltzmann_global_model_argon
+mph
+param
+parameters
+rad
+res
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+ar++e+e=&gt;ar+e
+@label:6: ar++e+e=&gt;ar+e
+ar2++e=&gt;ars+ar
+@label:7: ar2++e=&gt;ars+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ar++ar+ar=&gt;ar2++ar
+@label:8: ar++ar+ar=&gt;ar2++ar
+ars+ar+ar=&gt;ar+ar+ar
+@label:9: ars+ar+ar=&gt;ar+ar+ar
+ars+ars=&gt;ar2++e
+@label:10: ars+ars=&gt;ar2++e
+ar2++ar=&gt;ar++ar+ar
+@label:11: ar2++ar=&gt;ar++ar+ar
+@tag:e
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+ar2_1p
+@tag:ar2_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+ar2+=&gt;ar+ar
+@label:2: ar2+=&gt;ar+ar
+ars=&gt;ar
+@label:3: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+plas_eedf_xdim
+extra
+dimension
+@tag:i
+interval
+@type:interval
+@label:interval
+var
+variables
+ldiff
+vp
+area
+material
+fixed
+spatial
+mesh
+plas_eedf_xdim_pa
+@tag:plas_eedf_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+plas_eedf_xdim_ad
+@tag:plas_eedf_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+optsequence
+std
+study
+edfi
+@tag:edfi
+eedfinitialization
+@type:eedfinitialization
+initialization
+@label:eedf initialization
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_plas_f
+@tag:comp1_plas_f
+@type:field
+log
+@label:log of eedf
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+state
+@type:state
+mass
+fraction
+@label:mass fraction
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+comp1_plas_ar2_1p_w
+@tag:comp1_plas_ar2_1p_w
+comp1_plas_pa
+@tag:comp1_plas_pa
+absolute
+pressure
+pa
+@label:absolute pressure
+comp1_plas_lam
+@tag:comp1_plas_lam
+reduced
+net
+ionization
+frequency
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:two-term boltzmann
+maxwellian
+@label:maxwellian
+druyvesteyn
+@label:druyvesteyn
+generalized
+@label:generalized (g
+densities
+e/n
+vs
+@label:species densities and e/n vs. time
+glob
+@tag:glob
+@type:global
+@label:global
+current
+@label:plasma voltage and current vs. time
+mean
+@label:electron mean energy vs. time
+@label:eedf vs. time
+line
+graph
+@label:line graph
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:edfi
+@physics:plas
+@geom:r
+@expr:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_plas_lam
+@sol:comp1_plas_F
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@dataset:dset
+@result:pg
+@result:lngr
+@result:selection
+@study:time
+@sol:t
+@result:glob
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+soldata

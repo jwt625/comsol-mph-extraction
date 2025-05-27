@@ -1,0 +1,274 @@
+argon
+boltzmann
+analysis
+tutorial
+investigates
+effects
+various
+parameters
+electron
+energy
+distribution
+function
+rate
+coefficients
+discharge
+model
+boltzmann_argon
+mph
+param
+beta
+ionization
+degree
+default
+@tag:be
+boltzmannequation
+@type:boltzmannequation
+equation
+two-term
+approximation
+@label:boltzmann equation, two-term approximation
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+bmdl
+@tag:bmdl
+boltzmannmodel
+@type:boltzmannmodel
+@label:boltzmann model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+be_eedf_xdim
+geometry
+extra
+dimension
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+material
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+mesh
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+eedf
+e-e
+ref
+@tag:ref
+reducedelectricfields
+@type:reducedelectricfields
+reduced
+electric
+fields
+@label:reduced electric fields
+rion
+@tag:param
+ebar
+@tag:ebar
+meanenergies
+@type:meanenergies
+mean
+energies
+@label:mean energies
+xars
+76td
+w/n
+83td
+w/n=2e
+8td
+w/n=1e
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_be_f
+@tag:comp1_be_f
+field
+@type:field
+log
+@label:log of eedf
+comp1_be_lam
+@tag:comp1_be_lam
+state
+@type:state
+net
+frequency
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+comp1_be_td
+@tag:comp1_be_td
+td
+@label:reduced electric field
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:beta
+beta=1e
+@label:beta=1e
+@label:xars
+xars=1e
+@label:xars=1e
+wn
+@label:wn
+wn=1e
+@label:wn=1e
+wn=2e
+@label:wn=2e
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:eedf e-e
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+vs
+@label:ionization vs. electron mean energy e-e
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:eedf xars
+@label:ionization vs. electron mean energy xars
+@label:eedf w/n
+@label:ionization vs. electron mean energy w/n
+geommanagernative
+hist
+@study:std
+@study:ref
+@physics:be
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:fc
+@sol:d
+@result:pg
+@result:lngr
+@result:selection
+@study:ebar
+@study:param
+@batch:p
+@batch:so
+@result:glob
+res
+soldata

@@ -1,0 +1,14 @@
+{
+  "source_file": "Geomechanics_Module/Damage/holed_plate_fracture.mph",
+  "source_size": 725737,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310322.968",
+  "total_files_in_archive": 20
+}

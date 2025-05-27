@@ -1,0 +1,14 @@
+{
+  "source_file": "Plasma_Module/Inductively_Coupled_Plasmas/argon_gec_icp.mph",
+  "source_size": 23180851,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310392.321",
+  "total_files_in_archive": 35
+}

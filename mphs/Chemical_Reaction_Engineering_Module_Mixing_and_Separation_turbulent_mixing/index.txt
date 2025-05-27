@@ -1,0 +1,617 @@
+turbulent
+mixing
+stirred
+tank
+example
+shows
+capability
+vessel
+evaluated
+efficiently
+reach
+steady
+operational
+conditions
+flow
+solved
+using
+frozen
+rotor
+analysis
+following
+time
+dependent
+simulation
+quasi-steady
+field
+developed
+trace
+species
+simulated
+until
+it
+fully
+mixed
+model
+turbulent_mixing
+mph
+param
+parameters
+frev_out
+start
+revolution
+storing
+fluid
+fields
+frev_t
+rev_dt
+step
+stored
+steps
+tank_r
+radius
+tank_a
+cross
+section
+area
+default
+spf
+@tag:spf
+turbulentflowkeps
+@type:turbulentflowkeps
+k-&#x3b
+@label:turbulent flow, k-&#x3b
+velocity
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+properties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+dcont
+@tag:dcont
+continuity
+@type:continuity
+@label:flow continuity
+iwbc
+@tag:iwbc
+interiorwallbc
+@type:interiorwallbc
+interior
+@label:interior wall
+prpc
+@tag:prpc
+pressurepointconstraint
+@type:pressurepointconstraint
+point
+constraint
+@label:pressure point constraint
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+transport
+diluted
+@label:transport of diluted species
+concentration
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+@label:transport properties
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+@label:continuity
+tib
+@tag:tib
+thinimpermeablebarrier
+@type:thinimpermeablebarrier
+thin
+impermeable
+barrier
+@label:thin impermeable barrier
+lms
+@tag:lms
+masssourceline
+@type:masssourceline
+line
+mass
+source
+@label:line mass source
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+ls
+@tag:ls
+linesegment
+@type:linesegment
+segment
+@label:line segment
+line_segment
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+pt
+@tag:pt
+@type:point
+@label:point
+uni
+@tag:uni
+union
+@type:union
+@label:union
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+assembly
+@label:form assembly
+form_union/assembly
+geom1_fin_pc1_src
+geom1_fin_pc1_dst
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+image
+@tag:image
+@type:geometry
+@label:geometry
+rect
+@tag:rect
+rectangle
+@type:rectangle
+@label:rectangle
+var
+variables
+average
+aveop
+@tag:aveop
+@type:average
+@label:average
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+impeller
+baffles
+@label:impeller and baffles
+ap
+identity
+boundary
+pair
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+hide
+physics
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+rotatingdomain
+@type:rotatingdomain
+rotating
+domain
+@label:rotating domain
+rfd
+@tag:rfd
+reactingflowds
+@type:reactingflowds
+reacting
+@label:reacting flow, diluted species
+mat
+@tag:mat
+common
+@type:common
+water
+liquid
+@label:water, liquid
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+cs
+@tag:cs
+interpolation
+@type:interpolation
+@label:interpolation
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+id
+@tag:id
+identicalmesh
+@type:identicalmesh
+identical
+@label:identical mesh
+cr
+@tag:cr
+cornerrefinement
+@type:cornerrefinement
+corner
+refinement
+@label:corner refinement
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+frrot
+@tag:frrot
+frozenrotor
+@type:frozenrotor
+@label:frozen rotor
+@tag:time
+transient
+@type:transient
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ep
+@tag:comp1_ep
+@type:field
+dissipation
+rate
+ep
+@label:turbulent dissipation rate
+comp1_k
+@tag:comp1_k
+kinetic
+energy
+@label:turbulent kinetic energy
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_u
+@tag:comp1_u
+frame
+@label:spatial frame
+comp1_ode
+@tag:comp1_ode
+state
+@type:state
+rotation
+angle
+ode
+@label:rotation angle
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+turbulence
+@label:turbulence variables
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+@tag:d
+direct
+@type:direct
+@label:direct, fluid flow variables
+@label:direct, turbulence variables
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+angular
+displacement
+@label:angular displacement
+@label:direct, angular displacement
+comp1_c
+@tag:comp1_c
+@label:concentration
+comp1_rfd1_cwall_d_c
+@tag:comp1_rfd1_cwall_d_c
+downside
+cwall_d_c
+@label:wall concentration, downside
+comp1_rfd1_cwall_u_c
+@tag:comp1_rfd1_cwall_u_c
+upside
+cwall_u_c
+@label:wall concentration, upside
+@label:concentration c
+concentrations
+@label:direct, concentrations
+dom
+@tag:dom
+@type:domain
+probe
+@label:domain probe: u
+mut
+@label:domain probe: mut
+c_av
+@label:domain probe : c_av
+@tag:point
+@label:point probe : c
+result
+results
+dset
+@tag:dset
+@type:solution
+edg
+@tag:edg
+edge2d
+@type:edge2d
+exterior
+walls
+@label:exterior walls
+@label:interior walls
+@label:probe solution
+avh
+@tag:avh
+int
+@tag:int
+integral
+@type:integral
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:velocity
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+resolution
+@label:wall resolution
+@tag:line
+@type:line
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:wall resolution, upside
+@label:wall resolution, downside
+plotgroup1d
+@type:plotgroup1d
+plot
+development
+@label:probe plot: fluid flow development
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+@label:probe plot: mixing
+geommanagernative
+hist
+@common:rot
+@common:selection
+@study:std
+@study:frrot
+@physics:spf
+@geom:geom
+@geom:c
+@geom:dif
+@geom:input
+@geom:selection
+@geom:ls
+@geom:rot
+@geom:pt
+@geom:uni
+@geom:fin
+@selection
+@selection:sel
+@cpl
+@cpl:aveop
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:cs
+@material:an
+@view:view
+@view:hideEntities
+@view:hide
+@mesh:mesh
+@mesh:ftri
+@mesh:size
+@mesh:selection
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:d
+@sol:ll
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:sl
+@dataset:dset
+@result:pg
+@result:surf
+@result:con
+@dataset:edg
+@dataset:selection
+@result:line
+@result:hght
+@result:str
+@nodeGroup:grp
+@expr:var
+@probe
+@probe:dom
+@study:time
+@sol:comp1_ode
+@sol:t
+@result:tblp
+@func
+@func:rect
+@probe:point
+@probe:selection
+@table:tbl
+@physics:tds
+@multiphysics
+@multiphysics:rfd
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:fluid flow, frozen rotor
+@label:fluid flow, time dependent
+@label:species mixing, time dependent
+res
+soldata

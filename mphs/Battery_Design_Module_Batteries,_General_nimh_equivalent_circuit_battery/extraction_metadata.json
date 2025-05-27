@@ -1,0 +1,14 @@
+{
+  "source_file": "Battery_Design_Module/Batteries,_General/nimh_equivalent_circuit_battery.mph",
+  "source_size": 859349,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310246.917",
+  "total_files_in_archive": 22
+}

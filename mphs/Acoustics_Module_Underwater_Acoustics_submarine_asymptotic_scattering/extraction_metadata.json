@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Underwater_Acoustics/submarine_asymptotic_scattering.mph",
+  "source_size": 1971731,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.432",
+  "total_files_in_archive": 18
+}

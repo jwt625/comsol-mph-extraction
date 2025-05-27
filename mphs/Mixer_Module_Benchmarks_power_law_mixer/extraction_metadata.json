@@ -1,0 +1,11 @@
+{
+  "source_file": "Mixer_Module/Benchmarks/power_law_mixer.mph",
+  "source_size": 31497,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310365.254",
+  "total_files_in_archive": 6
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "Chemical_Reaction_Engineering_Module/Applications/gas_phase_equilibrium_reaction.mph",
+  "source_size": 3779248,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310295.922",
+  "total_files_in_archive": 83
+}

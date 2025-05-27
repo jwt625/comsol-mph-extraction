@@ -1,0 +1,11 @@
+{
+  "source_file": "Acoustics_Module/Nonlinear_Acoustics/acoustic_levitator.mph",
+  "source_size": 27453,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.43",
+  "total_files_in_archive": 6
+}

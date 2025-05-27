@@ -1,0 +1,798 @@
+submarine
+cable
+8c
+inductive
+effects
+3d
+mph-file
+represents
+intermediate
+state
+model
+constructed
+analyzed
+tutorial
+information
+including
+detailed
+introduction
+step-by-step
+instructions
+result
+analysis
+with
+validation
+references
+academic
+research
+see
+pdf
+file
+comes
+tutorial’s
+main
+entry
+point
+application
+library
+submarine_cable_08_inductive_effects_3d
+submarine_cable_08_c_inductive_effects_3d
+mph
+param
+parameters
+dcon
+diameter
+conductors
+phase
+tscc
+semi-conductive
+compound
+thickness
+dpha
+sheath
+pe
+tfih
+steel
+helix
+fiber
+darm
+central
+armor
+ring
+mfil
+filler
+margin
+ncon
+conductor
+packing
+density
+lsec
+relative
+length
+cross
+bonding
+section
+scab
+geometric
+scale
+factor
+2daxi
+cpcab
+pitch
+period
+twist
+wrt
+included
+scfarm
+slant
+correction
+wires
+enabled
+nper
+integer
+operating
+frequency
+rated
+current
+amplitude
+sarm
+wire
+conductivity
+20&#xb0;c
+marm
+permeability
+dsarm
+skin
+depth
+analytic
+exlpe
+permittivity
+xlpe
+iec
+ntcon
+thermal
+tmarm
+average
+temperature
+r0cup
+reference
+resistivity
+copper
+alcup
+coefficient
+default
+par
+electromagnetic
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+als
+@tag:als
+ampereslawsolid
+@type:ampereslawsolid
+amp&#xe8;re's
+law
+solids
+@label:amp&#xe8;re's law in solids
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+pc
+@tag:pc
+periodiccondition
+@type:periodiccondition
+periodic
+condition
+@label:periodic condition
+coil
+@tag:coil
+@type:coil
+@label:phase
+ccc
+@tag:ccc
+coilcurrentcalculation
+@type:coilcurrentcalculation
+geometry
+@label:geometry analysis
+ct
+@tag:ct
+coilterminal
+@type:coilterminal
+input
+@label:input
+cg
+@tag:cg
+coilground
+@type:coilground
+output
+@label:output
+screens
+@label:screens
+@label:cable armor
+geom
+geomnative
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+wp
+@tag:wp
+workplane
+@type:workplane
+phases
+@label:phases and screens
+csol
+work_plane
+sequence2d
+plane
+@tag:c
+circle
+@type:circle
+@label:circle
+pt
+@tag:pt
+@type:point
+@label:point
+sca
+@tag:sca
+@type:scale
+@label:scale
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+@type:geometry
+@label:geometry
+obj
+sea
+bed
+@label:cable armor and sea bed
+uni
+sketchobject
+mesh
+control
+entities
+@label:mesh control entities
+del
+@tag:del
+delete
+@type:delete
+@label:delete entities
+delete_entities
+pnt
+bnd
+dom
+swe
+@tag:swe
+sweep
+@type:sweep
+@label:sweep
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+edg
+var
+variables
+e_awx
+direction
+x-component
+unit
+vector
+bl
+flux
+longitudinal
+component
+blz
+z-component
+btz
+transverse
+jly
+y-component
+jty
+normbti
+norm
+instantaneous
+normbl
+absolute
+normjt
+material
+fixed
+spatial
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+top
+@label:cross section, top
+selection
+@type:selection
+@label:selection
+bottom
+@label:cross section, bottom
+@tag:uni
+@type:union
+@label:cross section, top and bottom
+@label:phases
+ball
+@tag:ball
+@type:ball
+adj
+@tag:adj
+adjacent
+@type:adjacent
+cross-linked
+polyethylene
+@label:cross-linked polyethylene
+dif
+@tag:dif
+difference
+@type:difference
+centerline
+@label:cable armor, centerline
+@label:conductors
+com
+@tag:com
+complement
+@type:complement
+insulators
+@label:insulators
+domains
+@label:cable domains
+exterior
+boundaries
+@label:phases, exterior boundaries
+@label:screens, exterior boundaries
+@label:armor, exterior boundaries
+int
+@tag:int
+intersection
+@type:intersection
+@label:phases, boundaries bottom
+mapped
+@label:screens, boundaries bottom (mapped
+@label:armor, boundaries bottom
+triangular
+@label:free triangular
+@label:mapped
+copy
+face
+source
+@label:copy face 1, source boundaries
+destination
+@label:copy face 1, destination boundaries
+@label:copy face 2, source boundaries
+@label:copy face 2, destination boundaries
+@label:not armor, boundaries bottom
+size
+@label:free triangular 3, size
+swept
+distribution
+@label:swept 1, distribution
+@label:swept
+remaining
+tetrahedral
+@label:remaining domains (free tetrahedral
+@label:remaining domains, exterior boundaries
+@label:convert
+@label:copy face 3, source boundaries
+@label:copy face 3, destination boundaries
+@label:cable face, top
+@label:cable ring, top
+trio
+@label:armor wire trio
+view
+@tag:view
+modelview3d
+@type:modelview3d
+orthographic
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+@label:view 2 (orthographic, top
+@label:view 3 (orthographic, bottom
+side
+@label:view 4 (orthographic, side
+perspective
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:copper
+linzres
+linearized
+@type:material
+@label:material
+lead
+@label:lead
+galvanized
+@label:galvanized steel
+comp
+tdp
+thermodynamics
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+@type:size
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+map
+@tag:map
+@type:map
+cpf
+@tag:cpf
+copyface
+@type:copyface
+@label:copy face
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+conv
+@tag:conv
+@type:convert
+ftet
+@tag:ftet
+freetet
+@type:freetet
+@label:free tetrahedral
+meshnative
+@type:mesh
+@label:mesh
+optsequence
+std
+study
+@label:coil geometry analysis
+freq
+@tag:freq
+@type:frequency
+domain
+@label:frequency domain
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_a
+@tag:comp1_a
+field
+@type:field
+potential
+@label:magnetic vector potential
+comp1_mf_coil1_ccc1_p
+@tag:comp1_mf_coil1_ccc1_p
+variable
+@label:dependent variable
+comp1_mf_coil2_ccc1_p
+@tag:comp1_mf_coil2_ccc1_p
+comp1_mf_coil3_ccc1_p
+@tag:comp1_mf_coil3_ccc1_p
+comp1_mf_coil1_vcoil_ode
+@tag:comp1_mf_coil1_vcoil_ode
+@type:state
+voltage
+vcoil_ode
+@label:coil voltage
+comp1_mf_coil1_ccc1_ct1_sc_pav
+@tag:comp1_mf_coil1_ccc1_ct1_sc_pav
+sc_pav
+comp1_mf_coil1_ccc1_cg1_sc_pav
+@tag:comp1_mf_coil1_ccc1_cg1_sc_pav
+comp1_mf_coil2_vcoil_ode
+@tag:comp1_mf_coil2_vcoil_ode
+comp1_mf_coil2_ccc1_ct1_sc_pav
+@tag:comp1_mf_coil2_ccc1_ct1_sc_pav
+comp1_mf_coil2_ccc1_cg1_sc_pav
+@tag:comp1_mf_coil2_ccc1_cg1_sc_pav
+comp1_mf_coil3_vcoil_ode
+@tag:comp1_mf_coil3_vcoil_ode
+comp1_mf_coil3_ccc1_ct1_sc_pav
+@tag:comp1_mf_coil3_ccc1_ct1_sc_pav
+comp1_mf_coil3_ccc1_cg1_sc_pav
+@tag:comp1_mf_coil3_ccc1_cg1_sc_pav
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+@tag:d
+suggested
+@label:suggested direct solver
+warning
+@tag:warning
+solverwarning
+@type:solverwarning
+warnings
+@label:warnings
+results
+@tag:mesh
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+dataset
+@type:dataset
+@label:dataset
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+anim
+@tag:anim
+animation
+@type:animation
+@label:animation
+intvolume
+@type:intvolume
+losses
+@label:phase losses
+screen
+@label:screen losses
+@label:armor losses
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+ac
+resistance
+@label:phase ac resistance
+inductance
+@label:phase inductance
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+quality
+volume
+elements
+@label:mesh quality, volume elements
+poor
+@label:mesh quality, poor quality elements
+sel
+@tag:sel
+meshselection
+@type:meshselection
+plotgroup2d
+@type:plotgroup2d
+comparison
+@label:mesh comparison, source and destination
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:magnetic flux density, z-component norm
+vol
+@tag:vol
+@type:volume
+@label:volume
+@label:longitudinal current density
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+@label:transverse current density
+@label:longitudinal and transverse current density
+@tag:line
+@type:line
+@label:line
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+volumetric
+loss
+@label:volumetric loss density, electromagnetic
+geommanagernative
+hist
+@param:group
+@param:par
+@geom:geom
+@geom:cyl
+@view:view
+@view:camera
+@geom:blk
+@geom:pol
+@geom:rot
+@geom:input
+@geom:selection
+@geom:wp
+@geom:sequence2D
+@geom:c
+@geom:pt
+@geom:sca
+@geom:ls
+@geom:vertex
+@geom:csol
+@view:axis
+@geom:del
+@geom:swe
+@geom:enttosweep
+@geom:edge
+@selection
+@selection:cyl
+@selection:uni
+@selection:ball
+@selection:adj
+@selection:dif
+@selection:com
+@nodeGroup:grp
+@selection:int
+@mesh:mesh
+@mesh:ftri
+@mesh:selection
+@mesh:size
+@mesh:map
+@mesh:cpf
+@mesh:source
+@mesh:destination
+@mesh:swe
+@mesh:dis
+@mesh:conv
+@mesh:ftet
+@dataset:mesh
+@result:pg
+@result:mesh
+@result:sel
+@result:selection
+@dataset:cpl
+@result:surf
+@physics:mf
+@study:std
+@study:freq
+@material:mat
+@material:selection
+@material:materialmodel
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:p
+@sol:d
+@sol:i
+@sol:asamg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@dataset:dset
+@dataset:selection
+@result:vol
+@result:arws
+@numerical
+@numerical:int
+@numerical:selection
+@table:tbl
+@numerical:gev
+@mesh:statistics
+@coordsys:sys
+@expr:var
+@expr:selection
+@sol:su
+@dataset:surf
+@result:line
+@result:hght
+@export
+@export:anim
+@material:linzRes
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+rotated
+@type:rotated
+@label:rotated system
+cylindrical
+@type:cylindrical
+@label:cylindrical system
+grp
+@tag:grp
+definitions
+@type:definitions
+selections
+@label:mesh selections
+postprocessing
+@label:postprocessing selections
+soldata

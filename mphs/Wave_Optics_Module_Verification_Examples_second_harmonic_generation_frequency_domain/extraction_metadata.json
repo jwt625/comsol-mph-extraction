@@ -1,0 +1,14 @@
+{
+  "source_file": "Wave_Optics_Module/Verification_Examples/second_harmonic_generation_frequency_domain.mph",
+  "source_size": 541002,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310470.739",
+  "total_files_in_archive": 18
+}

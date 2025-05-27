@@ -1,0 +1,13 @@
+{
+  "source_file": "Fatigue_Module/Energy_Based/surface_mount_resistor_geom_sequence.mph",
+  "source_size": 228016,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310316.766",
+  "total_files_in_archive": 21
+}

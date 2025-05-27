@@ -1,0 +1,14 @@
+{
+  "source_file": "CFD_Module/Shallow_Water_Equations/monai_runup.mph",
+  "source_size": 6273410,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310258.467",
+  "total_files_in_archive": 21
+}

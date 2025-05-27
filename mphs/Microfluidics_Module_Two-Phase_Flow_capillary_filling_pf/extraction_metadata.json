@@ -1,0 +1,14 @@
+{
+  "source_file": "Microfluidics_Module/Two-Phase_Flow/capillary_filling_pf.mph",
+  "source_size": 1131535,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310361.596",
+  "total_files_in_archive": 21
+}

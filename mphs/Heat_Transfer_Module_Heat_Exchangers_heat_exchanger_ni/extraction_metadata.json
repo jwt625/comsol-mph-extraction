@@ -1,0 +1,14 @@
+{
+  "source_file": "Heat_Transfer_Module/Heat_Exchangers/heat_exchanger_ni.mph",
+  "source_size": 1033125,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310326.591",
+  "total_files_in_archive": 18
+}

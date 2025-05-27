@@ -1,0 +1,14 @@
+{
+  "source_file": "Wave_Optics_Module/Modulators_and_Switches/mach_zehnder_modulator.mph",
+  "source_size": 6567522,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310470.738",
+  "total_files_in_archive": 112
+}

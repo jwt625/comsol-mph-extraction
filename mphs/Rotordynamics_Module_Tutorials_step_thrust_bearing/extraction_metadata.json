@@ -1,0 +1,14 @@
+{
+  "source_file": "Rotordynamics_Module/Tutorials/step_thrust_bearing.mph",
+  "source_size": 14700172,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310429.933",
+  "total_files_in_archive": 25
+}

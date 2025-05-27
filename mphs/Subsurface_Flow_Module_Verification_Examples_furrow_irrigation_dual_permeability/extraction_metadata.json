@@ -1,0 +1,11 @@
+{
+  "source_file": "Subsurface_Flow_Module/Verification_Examples/furrow_irrigation_dual_permeability.mph",
+  "source_size": 22094,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310465.328",
+  "total_files_in_archive": 6
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Electromagnetics_and_Optimization/coil_shape_optimization.mph",
+  "source_size": 1163867,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.737",
+  "total_files_in_archive": 30
+}

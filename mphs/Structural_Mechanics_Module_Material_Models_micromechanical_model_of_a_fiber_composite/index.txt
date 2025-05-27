@@ -1,0 +1,554 @@
+micromechanical
+model
+fiber
+composite
+example
+simplified
+composite's
+unit
+cell
+analyzed
+homogenized
+elastic
+thermal
+properties
+material
+computed
+based
+individual
+matrix
+comparison
+made
+against
+values
+obtained
+rule
+mixture
+micromechanical_model_of_a_fiber_composite
+mph
+param
+parameters
+para
+nondimensional
+parameter
+v_f
+volume
+fraction
+r_f
+radius
+g12_f
+shear
+modulus
+direction
+nu23_f
+poisson's
+ratio
+g_m
+resin
+alpha1_f
+expansion
+coefficient
+longitudinal
+default
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+@label:linear elastic material
+te
+@tag:te
+thermalexpansion
+@type:thermalexpansion
+@label:thermal expansion
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+@label:initial values
+cp
+@tag:cp
+cellperiodicity
+@type:cellperiodicity
+periodicity
+@label:cell periodicity for elastic properties
+bp
+@tag:bp
+boundarypair
+@type:boundarypair
+boundary
+pair
+@label:boundary pair
+@label:cell periodicity for thermal properties
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+unidirectional
+square
+packing
+@label:unidirectional fiber composite, square packing
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+check
+@label:parameter check
+blk
+@tag:blk
+block
+@type:block
+@label:block
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:fiber
+dif
+@tag:dif
+difference
+@type:difference
+@label:matrix
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+pair_x_source
+@label:pair_x_source
+pair_x_destination
+@label:pair_x_destination
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+pair_x
+@label:pair_x
+boxsel
+@tag:boxsel
+boxselection
+@type:boxselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+interior
+@label:interior
+@tag:if
+@type:if
+@label:if
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+endif
+@tag:endif
+@type:endif
+end
+@label:end if
+wp
+@tag:wp
+workplane
+@type:workplane
+back_plane
+@label:back_plane
+sequence2d
+plane
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+front_plane
+@label:front_plane
+right_plane
+@label:right_plane
+left_plane
+@label:left_plane
+bottom_plane
+@label:bottom_plane
+top_plane
+@label:top_plane
+pnt
+edg
+bnd
+dom
+geommanagernative
+inputparam
+input
+df
+fiber_diameter
+hm
+cell_height
+localparam
+local
+baseunitsystem
+meter
+radian
+degree
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+pi1_sel
+source
+destination
+pi1_unisel
+pi1_adjsel
+pi1_cyl
+pi1_dif
+pi1_boxsel
+part
+fixed
+spatial
+mesh
+geom1_pi1_sel
+@tag:geom1_pi1_sel
+fromsequence
+@type:fromsequence
+@label:pair 1, source (unidirectional fiber composite, square packing
+@label:pair 1, destination (unidirectional fiber composite, square packing
+@label:pair 2, source (unidirectional fiber composite, square packing
+@label:pair 2, destination (unidirectional fiber composite, square packing
+@label:pair 3, source (unidirectional fiber composite, square packing
+@label:pair 3, destination (unidirectional fiber composite, square packing
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:pair 1 (unidirectional fiber composite, square packing
+@label:pair 2 (unidirectional fiber composite, square packing
+@label:pair 3 (unidirectional fiber composite, square packing
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+@label:exterior (unidirectional fiber composite, square packing
+@label:interior (unidirectional fiber composite, square packing
+geom1_pi1_cyl1_dom
+@tag:geom1_pi1_cyl1_dom
+@label:fiber (unidirectional fiber composite, square packing
+geom1_pi1_dif1_dom
+@tag:geom1_pi1_dif1_dom
+@label:matrix (unidirectional fiber composite, square packing
+geom1_pi1_boxsel
+@tag:geom1_pi1_boxsel
+@label:all (unidirectional fiber composite, square packing
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+matlnk
+@tag:matlnk
+link
+@type:link
+epoxy
+@label:material link 1: epoxy resin
+mat
+@tag:mat
+common
+@type:common
+@label:material 1: epoxy resin
+orthotropic
+carbon
+@label:material link 2: carbon fiber
+@label:material 2: carbon fiber
+effmat
+@tag:effmat
+effective
+@type:effective
+voigt-reuss
+rom
+@label:effective material: voigt-reuss model
+const
+@tag:const
+constituentlink
+@type:constituentlink
+constituent
+@label:constituent
+modified
+@label:effective material: modified voigt-reuss model
+chamis
+@label:effective material: chamis model
+halpin-tsai
+@label:effective material: halpin-tsai model
+halpin-tsai-nielsen
+@label:effective material: halpin-tsai-nielsen model
+hashin-rosen
+@label:effective material: hashin-rosen model
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+solidcp1p
+@tag:solidcp1p
+parametric
+@type:parametric
+@label:parametric sweep
+solidcp1sop
+@tag:solidcp1sop
+solutionseq
+@type:solutionseq
+@tag:p
+@tag:so
+optsequence
+solidcp1std
+study
+solidcp1param
+@tag:solidcp1param
+solidcp1stat
+@tag:solidcp1stat
+stationary
+@type:stationary
+@label:stationary
+std
+@tag:param
+stat
+@tag:stat
+solidcp1sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_solid_cp1_savg
+@tag:comp1_solid_cp1_savg
+state
+@type:state
+average
+stress
+frames
+savg
+@label:material and geometry frames
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+suggested
+@label:suggested direct solver
+solidcp1solp
+su
+@tag:su
+storesolution
+@type:storesolution
+@label:v_f
+sol
+comp1_solid_cp2_eavg
+@tag:comp1_solid_cp2_eavg
+strain
+eavg
+solutions
+@label:para=0, v_f
+@label:para=1, v_f
+result
+results
+dset
+@tag:dset
+@type:solution
+solidcp1stdeg
+@tag:solidcp1stdeg
+evaluationgroup
+@type:evaluationgroup
+@label:material properties (cell periodicity study for elastic properties
+gmevcp
+@tag:gmevcp
+evalglobalmatrix
+@type:evalglobalmatrix
+global
+evaluation
+@label:global matrix evaluation
+std1eg
+@tag:std1eg
+@label:material properties (cell periodicity study for thermal properties
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:stress
+vol
+@tag:vol
+@type:volume
+@label:volume
+plotgroup1d
+@type:plotgroup1d
+young's
+vs
+@label:longitudinal young's modulus vs. fiber volume fraction
+glob
+@tag:glob
+@type:global
+@label:global
+transverse
+@label:transverse young's modulus vs. fiber volume fraction
+in-plane
+@label:in-plane shear modulus vs. fiber volume fraction
+@label:longitudinal coefficient of thermal expansion vs. fiber volume fraction
+@label:transverse coefficient of thermal expansion vs. fiber volume fraction
+with
+nonzero
+@label:longitudinal coefficient of thermal expansion vs. fiber volume fraction with nonzero poisson's ratio
+@label:transverse coefficient of thermal expansion vs. fiber volume fraction with nonzero poisson's ratio
+hist
+@geom:geom
+@geom:pi
+@view:view
+@physics:solid
+@material:matlnk
+@material:selection
+@material:mat
+@material:materialmodel
+@material:Orthotropic
+@material:effmat
+@material:const
+@mesh:mesh
+@mesh:ftri
+@mesh:selection
+@study:solidcp1std
+@study:solidcp1stat
+@sol:solidcp1sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@batch:solidcp1p
+@result:pg
+@result:vol
+@evaluationgroup:solidcp1stdEg
+@evaluationgroup:gmevcp
+@study:std
+@study:stat
+@study:param
+@sol:sol
+@batch:p
+@batch:so
+@evaluationgroup:std1Eg
+@result:glob
+@nodeGroup:grp
+@sol:solidcp1solp
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+load
+group
+cpgrp
+@tag:cpgrp
+globaldefinitions
+@type:globaldefinitions
+groups
+@label:load groups for cell periodicity
+grp
+@tag:grp
+@type:results
+@label:elastic properties
+zero
+@label:thermal expansion properties, zero poisson's ratio
+@label:thermal expansion properties, nonzero poisson's ratio
+soldata

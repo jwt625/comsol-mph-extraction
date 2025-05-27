@@ -1,0 +1,236 @@
+operational
+amplifier
+with
+capacitive
+load
+op-amp
+differential
+voltage
+wide
+range
+applications
+analog
+electronics
+tutorial
+models
+connected
+feedback
+loop
+modeled
+equivalent
+linear
+subcircuit
+electrical
+circuit
+interface
+it
+inserted
+outer
+model
+partially
+based
+spice
+format
+simulated
+10 ms
+data
+output
+every
+05 ms
+internal
+dynamics
+interact
+network
+causing
+ringing
+signal
+step
+response
+opamp_capacitive_load
+mph
+param
+parameters
+opamp_rin
+input
+resistance
+opamp_rout
+default
+cir
+@tag:cir
+@type:circuit
+@label:electrical circuit
+voltages
+currents
+current_time
+gnd
+@tag:gnd
+groundnode
+@type:groundnode
+ground
+node
+@label:ground node
+sub
+@tag:sub
+subcircuitblock
+@type:subcircuitblock
+opamp
+@label:opamp
+rin
+@tag:rin
+resistor
+@type:resistor
+@label:resistor rin
+egain
+@tag:egain
+voltagevoltagesource
+@type:voltagevoltagesource
+voltage-controlled
+source
+@label:voltage-controlled voltage source egain
+rp
+@tag:rp
+@label:resistor rp
+cp
+@tag:cp
+capacitor
+@type:capacitor
+@label:capacitor cp
+ebuffer
+@tag:ebuffer
+@label:voltage-controlled voltage source ebuffer
+rout
+@tag:rout
+@label:resistor rout
+vin
+@tag:vin
+voltagesource
+@type:voltagesource
+@label:voltage source vin
+xopamp
+@tag:xopamp
+@type:subcircuit
+instance
+@label:subcircuit instance xopamp
+@tag:r
+@label:resistor
+cload
+@tag:cload
+@label:capacitor cload
+vm
+@tag:vm
+voltmeter
+@type:voltmeter
+volt
+meter
+@label:volt meter
+@tag:step
+@type:step
+@label:step
+var
+variables
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+component
+tdp
+thermodynamics
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_voltages
+@tag:comp1_voltages
+state
+@type:state
+@label:comp1.voltages
+comp1_currents
+@tag:comp1_currents
+@label:comp1.currents
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+voltmeter_cir_vm
+@tag:voltmeter_cir_vm
+globalvariable
+@type:globalvariable
+across
+@label:voltage across volt meter vm
+result
+results
+dset
+@tag:dset
+@type:solution
+probe
+@label:probe solution
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+group
+@label:probe plot group
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+geommanagernative
+hist
+@study:std
+@study:time
+@physics:cir
+@expr:var
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@probe
+@probe:VoltMeter_cir_vm
+@result:pg
+soldata

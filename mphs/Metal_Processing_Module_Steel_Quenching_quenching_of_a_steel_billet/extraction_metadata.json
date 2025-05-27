@@ -1,0 +1,14 @@
+{
+  "source_file": "Metal_Processing_Module/Steel_Quenching/quenching_of_a_steel_billet.mph",
+  "source_size": 1519130,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310360.87",
+  "total_files_in_archive": 18
+}

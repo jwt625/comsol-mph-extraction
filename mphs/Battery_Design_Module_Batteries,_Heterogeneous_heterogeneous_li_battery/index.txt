@@ -1,0 +1,614 @@
+heterogeneous
+lithium-ion
+battery
+model
+describes
+behavior
+unit
+cell
+modeled
+using
+idealized
+three-dimensional
+geometry
+mimics
+structural
+details
+porous
+electrodes
+models
+referred
+contrast
+typical
+homogenized
+approach
+describing
+actual
+shapes
+pore
+electrolyte
+electrode
+particles
+uses
+coupling
+mechanics
+calculate
+von mises
+stresses
+heterogeneous_li_battery
+mph
+param
+parameters
+rp
+active
+material
+particle
+diameter
+l_sep
+separator
+thickness
+i0ref_pos
+reference
+exchange
+current
+density
+positive
+default
+liion
+@tag:liion
+lithiumionbatterymph
+@type:lithiumionbatterymph
+@label:lithium-ion battery
+electricpotentialionicphase
+concentration
+electricpotential
+fastassemblydiscretization_disc
+sep
+@tag:sep
+@type:separator
+@label:separator
+nf
+@tag:nf
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+init
+@tag:init
+@type:init
+initial
+values
+negative
+@label:initial values - negative and electrolyte
+@label:initial values - positive
+cc
+@tag:cc
+currentconductor
+@type:currentconductor
+@label:electrode - negative
+@label:electrode - positive
+bei
+@tag:bei
+internalelectrodesurface
+@type:internalelectrodesurface
+internal
+surface
+@label:internal electrode surface - negative
+er
+@tag:er
+electrodereaction
+@type:electrodereaction
+reaction
+@label:electrode reaction
+dlc
+@tag:dlc
+doublelayercapacitance
+@type:doublelayercapacitance
+double-layer
+capacitance
+@label:double-layer capacitance
+@label:internal electrode surface - positive
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+ec
+@tag:ec
+electrodecurrent
+@type:electrodecurrent
+@label:electrode current
+tds
+@tag:tds
+dilutedspecies
+@type:dilutedspecies
+transport
+diluted
+species
+@label:transport of diluted species
+cdm
+@tag:cdm
+convectiondiffusionmigration
+@type:convectiondiffusionmigration
+properties
+@label:transport properties - negative
+nflx
+@tag:nflx
+@label:initial values - negative
+@label:transport properties - positive
+eeic
+@tag:eeic
+electrodeelectrolyteinterfacecoupling
+@type:electrodeelectrolyteinterfacecoupling
+@label:electrode surface coupling
+rc
+@tag:rc
+boundaryreactioncoefficients
+@type:boundaryreactioncoefficients
+coefficients
+@label:reaction coefficients
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+@label:linear elastic material
+ic
+@tag:ic
+intercalationstrain
+@type:intercalationstrain
+intercalation
+strain
+@label:intercalation strain
+free
+@tag:free
+@type:free
+@label:free
+@label:initial values
+roll
+@tag:roll
+roller
+@type:roller
+@label:roller
+disp
+@tag:disp
+@type:displacement2
+prescribed
+@label:prescribed displacement
+geom
+geomnative
+elp
+@tag:elp
+ellipsoid
+@type:ellipsoid
+@label:ellipsoid
+copy
+@tag:copy
+@type:copy
+@label:copy
+blk
+@tag:blk
+block
+@type:block
+@label:block
+uni
+@tag:uni
+union
+@type:union
+@label:union
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:electrolyte
+@label:negative electrode
+@label:positive electrode
+@label:negative electrode surface
+@label:positive electrode surface
+collector
+@label:negative current collector
+@label:positive current collector
+condition
+boundaries
+@label:roller condition boundaries
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+e_cell_init
+voltage
+csinit_neg
+lithium
+fixed
+spatial
+mesh
+geom1_sel
+@tag:geom1_sel
+fromsequence
+@type:fromsequence
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+lipf
+ec:dmc
+p(vdf-hfp
+polymer
+li-ion
+@label:lipf6 in 1:2 ec:dmc and p(vdf-hfp) (polymer, li-ion battery
+electrolyteconductivity
+conductivity
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+speciesproperties
+electrolytesaltconcentration
+salt
+graphite
+lixc
+mcmb
+@label:graphite, lixc6 mcmb (negative, li-ion battery
+electrodepotential
+equilibrium
+potential
+operationalsoc
+operational
+state
+charge
+equilibriumconcentration
+lco
+licoo
+@label:lco, licoo2 (positive, li-ion battery
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+tetrahedral
+@label:free tetrahedral
+@type:size
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+discharge
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+distribution
+initialization
+@label:current distribution initialization
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+expansion
+stress
+@tag:param
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_cl
+@tag:comp1_cl
+field
+@type:field
+cl
+@label:electrolyte salt concentration
+comp1_cs
+@tag:comp1_cs
+cs
+@label:concentration
+comp1_phil
+@tag:comp1_phil
+phil
+@label:electrolyte potential
+comp1_phis
+@tag:comp1_phis
+phis
+@label:electric potential
+comp1_liion_ec1_phis
+@tag:comp1_liion_ec1_phis
+@type:state
+boundary
+@label:electric potential on boundary
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:t
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:i
+iterative
+@type:iterative
+amg
+concentrations
+@label:amg, concentrations
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sl
+@tag:sl
+sorline
+@type:sorline
+sor
+line
+@label:sor line
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+comp1_u
+@tag:comp1_u
+@label:displacement field
+suggested
+@label:suggested direct solver
+solutions
+time_param
+@label:time_param
+bnd
+@tag:bnd
+@type:boundary
+@label:phis
+result
+results
+dset
+@tag:dset
+@type:solution
+probe
+@label:probe solution
+avh
+@tag:avh
+average
+@type:average
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:cell voltage
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup3d
+@type:plotgroup3d
+surf
+@tag:surf
+@type:surface
+@label:surface
+@label:lithium concentration surface
+selection
+@type:selection
+@label:selection
+@label:current distribution
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+@label:lithium concentration in negative electrode
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+@label:stress
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+geommanagernative
+hist
+@study:std
+@study:cdi
+@physics:liion
+@physics:tds
+@study:time
+@geom:geom
+@expr:var
+@material:mat
+@material:materialmodel
+@material:ElectrolyteConductivity
+@material:func
+@material:int
+@material:SpeciesProperties
+@material:ElectrolyteSaltConcentration
+@material:ElectrodePotential
+@material:ic
+@material:OperationalSOC
+@material:EquilibriumConcentration
+@material:selection
+@probe
+@probe:bnd
+@probe:selection
+@mesh:mesh
+@mesh:ftet
+@mesh:selection
+@mesh:size
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_phil
+@sol:comp1_liion_ec1_phis
+@sol:comp1_phis
+@sol:comp1_cl
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:po
+@sol:cs
+@sol:t
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:sl
+@result:pg
+@result:surf
+@result:sel
+@result:selection
+@result:str
+@result:col
+@result:slc
+@physics:solid
+@study:stat
+@study:param
+@sol:so
+@batch:p
+@batch:so
+@result:vol
+sys
+@tag:sys
+system
+@label:boundary system
+res
+soldata

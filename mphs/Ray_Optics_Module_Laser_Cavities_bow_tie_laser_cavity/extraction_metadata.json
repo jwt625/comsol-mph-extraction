@@ -1,0 +1,14 @@
+{
+  "source_file": "Ray_Optics_Module/Laser_Cavities/bow_tie_laser_cavity.mph",
+  "source_size": 3250629,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310422.725",
+  "total_files_in_archive": 143
+}

@@ -1,0 +1,13 @@
+{
+  "source_file": "Fuel_Cell_and_Electrolyzer_Module/Thermal_Management/stack_cooling_geom_sequence.mph",
+  "source_size": 3079813,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310318.872",
+  "total_files_in_archive": 48
+}

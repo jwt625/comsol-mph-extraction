@@ -1,0 +1,620 @@
+gec
+icp
+reactor
+coupled
+with
+two-term
+boltzmann
+equation
+tutorial
+models
+solving
+plasma
+fluid
+type
+equations
+fully
+homogeneous
+time-independent
+electron
+classical
+approximation
+approximated
+solved
+position
+space
+way
+mean
+energy
+rate
+constants
+impact
+reactions
+transport
+parameters
+obtained
+suitable
+integration
+computed
+distribution
+function
+scattering
+cross
+sections
+model
+argon_gec_icp_boltzmann
+mph
+param
+psp
+power
+input
+gas
+pressure
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ars=&gt;e+ar+ar
+@label:6: ars+ars=&gt;e+ar+ar
+ars+ar=&gt;ar+ar
+@label:7: ars+ar=&gt;ar+ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ars=&gt;ar
+@label:1: ars=&gt;ar
+ar+=&gt;ar
+@label:2: ar+=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+magnetic
+fields
+@label:magnetic fields
+magneticvectorpotential
+al
+@tag:al
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+@label:amp&#xe8;re's law
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+@label:magnetic insulation
+@type:init
+coil
+@tag:coil
+@type:coil
+@label:coil
+geom
+geometry
+geomnative
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+arr
+@tag:arr
+array
+@type:array
+@label:array
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+plas_eedf_xdim
+extra
+dimension
+@tag:i
+interval
+@type:interval
+@label:interval
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+walls
+@label:walls
+coils
+@label:coils
+boundaries
+@label:coil boundaries
+plas_eedf_xdim_pa
+@tag:plas_eedf_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+plas_eedf_xdim_ad
+@tag:plas_eedf_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pcc
+@tag:pcc
+plasmaconductivitymultiphysicscoupling
+@type:plasmaconductivitymultiphysicscoupling
+conductivity
+coupling
+@label:plasma conductivity coupling
+ehs
+@tag:ehs
+electronheatsourcemultiphysicscoupling
+@type:electronheatsourcemultiphysicscoupling
+heat
+source
+@label:electron heat source
+mat
+@tag:mat
+common
+@type:common
+@label:material
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+dis
+@tag:dis
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+maxwellian
+eedf
+ftrans
+@tag:ftrans
+frequencytransient
+@type:frequencytransient
+frequency-transient
+@label:frequency-transient
+initialization
+edfi
+@tag:edfi
+eedfinitialization
+@type:eedfinitialization
+@label:eedf initialization
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_en
+@tag:comp1_en
+field
+@type:field
+variable
+en
+@label:electron energy solution variable
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+flux
+psiora
+@label:magnetic flux
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_v
+@tag:comp1_v
+electric
+potential
+@label:electric potential
+comp1_mf_coil1_icoil
+@tag:comp1_mf_coil1_icoil
+state
+@type:state
+current
+icoil
+@label:coil current
+comp1_mf_coil1_pcoil_ode
+@tag:comp1_mf_coil1_pcoil_ode
+pcoil_ode
+@label:coil power
+comp1_mf_coil1_vcoil
+@tag:comp1_mf_coil1_vcoil
+vcoil
+@label:comp1.mf.coil1.vcoil
+@tag:t
+time
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+comp1_plas_f
+@tag:comp1_plas_f
+@label:log of eedf
+comp1_plas_lam
+@tag:comp1_plas_lam
+reduced
+net
+ionization
+frequency
+lagrange
+multiplier
+lam
+@label:reduced net ionization frequency, lagrange multiplier
+comp1_plas_td
+@tag:comp1_plas_td
+td
+@label:reduced electric field
+@tag:s
+stationary
+@type:stationary
+@label:stationary solver
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+merged
+@label:merged variables
+step
+@label:segregated step: eedf
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+density
+@label:electron density
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+temperature
+@label:electron temperature
+norm
+@label:magnetic flux density norm
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+plotgroup3d
+@type:plotgroup3d
+revolved
+@label:magnetic flux density norm, revolved geometry
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+plotgroup1d
+@type:plotgroup1d
+resistance
+@label:coil resistance
+glob
+@tag:glob
+global
+@type:global
+@label:global
+ion
+number
+@label:ion number density
+high
+@label:high frequency electric field
+excited
+argon
+@label:excited argon number density
+deposition
+@label:power deposition
+selection
+@type:selection
+@label:selection
+@label:electron energy distribution function, initialization
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+@label:two-term boltzmann
+@label:maxwellian
+druyvesteyn
+@label:druyvesteyn
+generalized
+@label:generalized (g
+cm
+@label:computed eedf r=3 cm
+@label:two-term boltzmann z=0.5 cm
+@label:two-term boltzmann z=1 cm
+@label:two-term boltzmann z=2 cm
+@label:two-term boltzmann z=3 cm
+@label:two-term boltzmann z=3.5 cm
+@label:maxwellian eedf z=3.5 cm
+geommanagernative
+hist
+@geom:geom
+@physics:mf
+@multiphysics
+@multiphysics:pcc
+@multiphysics:ehs
+@study:std
+@study:ftrans
+@physics:plas
+@selection
+@selection:sel
+@material:mat
+@material:selection
+@material:materialmodel
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:size
+@mesh:ftri
+@mesh:bl
+@mesh:blp
+@mesh:map
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:surf
+@result:str
+@result:col
+@result:filt
+@result:con
+@dataset:rev
+@result:vol
+@result:selection
+@result:glob
+@result:sel
+@nodeGroup:grp
+@study:edfi
+@sol:comp1_plas_Td
+@sol:comp1_plas_lam
+@sol:comp1_plas_F
+@sol:s
+@dataset:dset
+@result:lngr
+@sol:comp1_plas_Ar_1p_W
+@sol:comp1_Ne
+@sol:comp1_plas_Ars_W
+@sol:comp1_En
+@sol:comp1_V
+@sol:se
+@sol:ss
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+@type:results
+@label:maxwellian eedf
+@label:computed eedf
+res
+soldata

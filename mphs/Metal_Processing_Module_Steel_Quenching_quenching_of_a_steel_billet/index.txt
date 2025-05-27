@@ -1,0 +1,487 @@
+quenching
+steel
+billet
+quenched
+oil
+austenitic
+state
+2d
+axisymmetric
+model
+used
+simulate
+coupled
+problem
+austenite
+decomposition
+heat
+transfer
+solid
+mechanics
+during
+process
+decomposes
+combination
+ferrite
+pearlite
+bainite
+martensite
+phase
+transformation
+strains
+resulting
+thermal
+expansion
+induced
+plasticity
+trip
+computed
+residual
+stress
+quenching_of_a_steel_billet
+mph
+param
+parameters
+audc
+ms
+start
+temperature
+default
+par
+ht
+@tag:ht
+heattransfer
+@type:heattransfer
+solids
+@label:heat transfer in solids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+@tag:solid
+solidheattransfermodel
+@type:solidheattransfermodel
+@label:solid
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+insulation
+@label:thermal insulation
+sym
+@tag:sym
+@type:symmetry
+@label:symmetry
+hf
+@tag:hf
+heatfluxboundary
+@type:heatfluxboundary
+flux
+@label:heat flux
+solidmechanics
+@type:solidmechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+elastic
+material
+@label:linear elastic material
+plsty
+@tag:plsty
+@type:plasticity
+@label:plasticity
+iss
+@tag:iss
+initialstressandstrain
+@type:initialstressandstrain
+strain
+@label:initial stress and strain
+axialsymmetrysolid
+@type:axialsymmetrysolid
+free
+@tag:free
+@type:free
+@label:free
+symp
+@tag:symp
+symmetryplane
+@type:symmetryplane
+plane
+@label:symmetry plane
+@tag:audc
+austenitedecomposition
+@type:austenitedecomposition
+@label:austenite decomposition
+xidiscr_disc
+straindiscr_disc
+@tag:phase
+metallurgicalphase
+@type:metallurgicalphase
+@label:austenite
+@label:ferrite
+@label:pearlite
+@label:bainite
+@label:martensite
+ptran
+@tag:ptran
+phasetransformation
+@type:phasetransformation
+@label:austenite to ferrite
+@label:austenite to pearlite
+@label:austenite to bainite
+@label:austenite to martensite
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+minpt
+@tag:minpt
+commoninputdef
+@type:commoninputdef
+input
+@label:model input
+lht
+@tag:lht
+phasetransformationlatentheat
+@type:phasetransformationlatentheat
+latent
+@label:phase transformation latent heat
+ptstr
+@tag:ptstr
+phasetransformationstrain
+@type:phasetransformationstrain
+@label:phase transformation strain
+audcmat
+@tag:audcmat
+common
+@type:common
+compound
+@label:compound material
+elastoplasticmodel
+elastoplastic
+audcphase1mat
+@tag:audcphase1mat
+thermalexpansion
+enu
+young's
+modulus
+poisson's
+ratio
+audcphase2mat
+@tag:audcphase2mat
+audcphase3mat
+@tag:audcphase3mat
+audcphase4mat
+@tag:audcphase4mat
+audcphase5mat
+@tag:audcphase5mat
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+@label:dependent variables
+comp1_audc_phasefractions
+@tag:comp1_audc_phasefractions
+field
+@type:field
+fractions
+phasefractions
+@label:phase fractions
+comp1_ptstr1_ptstrains
+@tag:comp1_ptstr1_ptstrains
+ptstrains
+@label:phase transformation strains
+comp1_ptstr1_t_old
+@tag:comp1_ptstr1_t_old
+previous
+step
+t_old
+@label:time at previous step
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:displacement field
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct
+result
+results
+dset
+@tag:dset
+@type:solution
+dset1solidrev
+@tag:dset1solidrev
+revolve2d
+@type:revolve2d
+revolution
+@label:revolution 2d
+rev
+@tag:rev
+mir
+@tag:mir
+mirror3d
+@type:mirror3d
+mirror
+@label:mirror 3d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+@label:stress
+plotgroup3d
+@type:plotgroup3d
+@label:stress, 3d
+@label:austenite, 3d
+@label:ferrite, 3d
+@label:pearlite, 3d
+@label:bainite, 3d
+@label:martensite, 3d
+plotgroup1d
+@type:plotgroup1d
+center
+@label:phase fractions at the billet center
+ptgr
+@tag:ptgr
+pointgraph
+@type:pointgraph
+point
+graph
+@label:point graph
+@label:phase fractions at the billet surface
+profile
+@label:axial stress profile
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+@label:line graph
+plot
+group
+@label:3d plot group
+@label:axial stress
+equivalent
+plastic
+@label:equivalent plastic strain
+fraction
+@label:martensite phase fraction
+geommanagernative
+hist
+@geom:geom
+@physics:ht
+@physics:solid
+@physics:audc
+@multiphysics
+@multiphysics:lht
+@multiphysics:selection
+@multiphysics:ptstr
+@study:std
+@study:time
+@nodeGroup:grp
+@func
+@func:int
+@geom:r
+@material:audcphase1mat
+@material:materialmodel
+@material:func
+@material:int
+@material:ThermalExpansion
+@material:Enu
+@material:ElastoplasticModel
+@material:audcphase2mat
+@material:audcphase3mat
+@material:audcphase4mat
+@material:audcphase5mat
+@common:minpt
+@common:selection
+@mesh:mesh
+@mesh:size
+@mesh:bl
+@mesh:selection
+@mesh:blp
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_audc_phasefractions
+@sol:comp1_u
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:so
+@sol:po
+@sol:cs
+@result:pg
+@result:surf
+@dataset:dset1solidrev
+@dataset:rev
+@result:ptgr
+@result:selection
+@result:lngr
+@dataset:mir
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+globaldefinitions
+@type:globaldefinitions
+res
+soldata

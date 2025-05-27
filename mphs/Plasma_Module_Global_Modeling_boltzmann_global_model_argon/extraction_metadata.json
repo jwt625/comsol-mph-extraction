@@ -1,0 +1,14 @@
+{
+  "source_file": "Plasma_Module/Global_Modeling/boltzmann_global_model_argon.mph",
+  "source_size": 858200,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310392.321",
+  "total_files_in_archive": 23
+}

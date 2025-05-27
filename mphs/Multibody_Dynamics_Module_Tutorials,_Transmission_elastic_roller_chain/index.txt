@@ -1,0 +1,1664 @@
+stress
+analysis
+roller
+chain
+sprocket
+assembly
+example
+demonstrates
+elastic
+system
+consists
+wrapped
+around
+two
+sprockets
+3d
+components
+systems
+assumed
+bodies
+angular
+velocity
+prescribed
+driver
+load
+torque
+applied
+driven
+transient
+performed
+understand
+path
+contact
+forces
+distribution
+various
+drive
+model
+elastic_roller_chain
+mph
+param
+parameters
+omega
+shaft
+default
+mbd
+@tag:mbd
+multibodydynamics
+@type:multibodydynamics
+multibody
+dynamics
+@label:multibody dynamics
+displacement
+mbd_rd_disp
+mbd_rd_rot
+mbd_gr_disp
+mbd_gr_rot
+mbd_gr_ib
+mbd_gr_fc
+mbd_gr_mc
+mbd_jnt_disp
+mbd_jnt_rot
+mbd_rig_disp
+mbd_rig_rot
+mbd_att_disp
+mbd_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+linear
+material
+@label:linear elastic material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+cdr
+@tag:cdr
+chaindrive
+@type:chaindrive
+@label:chain drive
+cdr1att
+@tag:cdr1att
+attachment
+@type:attachment
+@label:attachment: roller
+pin
+@label:attachment: pin
+cdr1hgj
+@tag:cdr1hgj
+hingejoint
+@type:hingejoint
+hinge
+joint
+@label:hinge joint: roller 1 - pin
+@label:hinge joint: roller 2 - pin
+@label:hinge joint: roller 3 - pin
+@label:hinge joint: roller 4 - pin
+@label:hinge joint: roller 5 - pin
+@label:hinge joint: roller 6 - pin
+@label:hinge joint: roller 7 - pin
+@label:hinge joint: roller 8 - pin
+@label:hinge joint: roller 9 - pin
+@label:hinge joint: roller 10 - pin
+@label:hinge joint: roller 11 - pin
+@label:hinge joint: roller 12 - pin
+@label:hinge joint: roller 13 - pin
+@label:hinge joint: roller 14 - pin
+@label:hinge joint: roller 15 - pin
+@label:hinge joint: roller 16 - pin
+@label:hinge joint: roller 17 - pin
+@label:hinge joint: roller 18 - pin
+@label:hinge joint: roller 19 - pin
+@label:hinge joint: roller 20 - pin
+@label:hinge joint: roller 21 - pin
+@label:hinge joint: roller 22 - pin
+@label:hinge joint: roller 23 - pin
+@label:hinge joint: roller 24 - pin
+@label:hinge joint: roller 25 - pin
+@label:hinge joint: roller 26 - pin
+@label:hinge joint: roller 27 - pin
+@label:hinge joint: roller 28 - pin
+@label:hinge joint: roller 29 - pin
+@label:hinge joint: roller 30 - pin
+@label:hinge joint: roller 31 - pin
+@label:hinge joint: roller 32 - pin
+@label:hinge joint: roller 33 - pin
+@label:hinge joint: roller 34 - pin
+@label:hinge joint: roller 35 - pin
+@label:hinge joint: roller 36 - pin
+@label:hinge joint: roller 37 - pin
+@label:hinge joint: roller 38 - pin
+@label:hinge joint: roller 39 - pin
+@label:hinge joint: roller 40 - pin
+@label:hinge joint: roller 41 - pin
+@label:hinge joint: roller 42 - pin
+@label:hinge joint: roller 43 - pin
+@label:hinge joint: roller 44 - pin
+@label:hinge joint: roller 45 - pin
+@label:hinge joint: roller 46 - pin
+@label:hinge joint: roller 47 - pin
+@label:hinge joint: roller 48 - pin
+att
+@tag:att
+@label:attachment: sprocket
+hgj
+@tag:hgj
+@label:hinge joint: sprocket
+pm
+@tag:pm
+prescribedmotion
+@type:prescribedmotion
+motion
+@label:prescribed motion
+afm
+@tag:afm
+appliedforceandmoment
+@type:appliedforceandmoment
+force
+moment
+@label:applied force and moment
+cdr1cnt
+@tag:cdr1cnt
+solidcontact
+@type:solidcontact
+sprocket-roller
+@label:contact: sprocket-roller
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:roller chain sprocket
+part_instance
+storedlocalsubsequence
+copy
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+parameter
+check
+dsp&lt;(r1+r2+2*rs
+@label:parameter check: dsp&lt;(r1+r2+2*rs
+n2&gt;n
+@label:parameter check: n2&gt;n
+2*clrsp&gt;=w
+@label:parameter check: 2*clrsp&gt;=w
+ccorr!=0&amp;&amp;ccorr
+@label:parameter check: ccorr!=0&amp;&amp;ccorr
+cdelta&lt;0||cdelta&gt
+@label:parameter check: cdelta&lt;0||cdelta&gt
+ns1&lt
+ns2&lt
+nt1&lt;2||nt2&lt
+@label:parameter check: (ns1&lt;1 || ns2&lt;2 || nt1&lt;2||nt2&lt
+@label:roller chain
+dimensions
+negative
+zero
+@label:parameter check: dimensions negative or zero
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+work_plane
+sequence2d
+2d
+dr&gt
+@label:parameter check : dr&gt
+dp&gt;=dr
+@label:parameter check : dp&gt;=dr
+db&gt;=dr
+@label:parameter check : db&gt;=dr
+db&lt;=dp
+@label:parameter check : db&lt;=dp
+wl&lt
+2||wl&gt
+@label:parameter check : wl&lt;0.2||wl&gt
+@tag:c
+circle
+@type:circle
+@label:circle
+sketchobject
+mov
+@tag:mov
+move
+@type:move
+@label:move
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+csol
+@tag:csol
+converttosolid
+@type:converttosolid
+convert
+solid
+@label:convert to solid
+convert_to_solid
+dif
+@tag:dif
+difference
+@type:difference
+@label:difference
+@tag:if
+@type:if
+db&gt
+@label:if db&gt
+endif
+@tag:endif
+@type:endif
+end
+@label:end if db&gt
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+bushing
+present
+@label:if bushing present
+@label:end if bushing present
+disksel
+@tag:disksel
+diskselection
+@type:diskselection
+boundary
+@label:roller all boundary
+interior
+@label:roller interior boundary
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+outer
+@label:roller pin outer boundary
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+inner
+@label:roller inner boundary
+@label:pin all boundary
+@label:pin interior boundary
+@label:pin outer boundary
+@label:pin inner boundary
+arr
+@tag:arr
+array
+@type:array
+@label:array
+csel
+dom
+bnd
+pnt
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input
+dr
+db
+bushing_diameter_to_pitch_ratio
+localparam
+local
+rr
+radius
+rl
+curvature
+link
+plate
+baseunitsystem
+meter
+radian
+degree
+pi1_sel
+plates
+object
+pi1_adjsel
+pi1_unisel
+boundaries
+pi1_csel
+links
+bushings
+obj
+@label:move (roller plate
+ext
+@tag:ext
+extrude
+@type:extrude
+@label:extrude (roller plate
+@label:delete entities (roller plate
+@label:extrude (pin plate
+@label:delete entities (pin plate
+top
+@label:extrude (pin top plate
+bottom
+@label:extrude (pin bottom plate
+@label:roller plate boundaries
+cylsel
+@tag:cylsel
+cylinderselection
+@type:cylinderselection
+@label:roller outer boundaries
+@label:roller inner boundaries
+@label:pin plate boundaries
+@label:array (roller plates
+@label:array (pin plates
+edg
+dp
+wl
+tp
+clrp
+clearance
+pitch
+ratio
+@label:sprocket
+noninteger
+@label:parameter check: n noninteger
+n&lt
+@label:parameter check: n&lt
+@label:parameter check: dr&gt
+dbr*r&gt;=r-rs
+@label:parameter check: dbr*r&gt;=r-rs
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+rot
+@tag:rot
+rotate
+@type:rotate
+@label:rotate
+spl
+@tag:spl
+split
+@type:split
+@label:split
+tan
+@tag:tan
+tangent
+@type:tangent
+@label:tangent
+large
+@label:if n is large
+mir
+@tag:mir
+mirror
+@type:mirror
+@label:mirror
+@label:end if n is large
+small
+@label:if n is small
+@label:end if n is small
+dbr&gt
+@label:if dbr&gt
+@label:end if dbr&gt
+rs
+seating
+curve
+ac
+intermediate
+variable
+constructing
+cpy
+csy
+pi1_disksel
+dh*r&gt;=r-rs
+@label:parameter check: dh*r&gt;=r-rs
+dh&lt;=dbr
+@label:parameter check: dh&lt;=dbr
+@label:extrude
+dh&gt
+@label:if dh&gt
+cyl
+@tag:cyl
+cylinder
+@type:cylinder
+@label:cylinder
+@label:end if dh&gt
+wsp
+dbr
+bore_diameter_to_pitch_diameter_ratio
+whd
+ns
+even
+@label:if ns1 even
+@label:end if ns1 even
+@tag:copy
+@type:copy
+@label:copy
+odd
+@label:if ns2 odd
+@label:end if ns2 odd
+@label:if ns2 even
+@label:end if ns2 even
+nt1&gt
+@label:if nt1&gt
+nt
+@label:if nt1 odd
+@label:end if nt1 odd
+@label:if nt1 even
+extra
+@label:if 3 extra links
+@label:end if 3 extra links
+@label:end if nt1 even
+@label:end if nt1&gt
+@label:if nt
+@label:end if nt
+pi1_cylsel
+pi2_sel
+pi2_adjsel
+pi2_cylsel
+pi3_sel
+pi3_adjsel
+pi3_cylsel
+cdy
+clrsp
+dh
+hub_diameter_to_pitch_diameter_ratio
+first_sprocket
+second_sprocket
+cdelta
+esx
+esz
+first
+theta
+angle
+teeth
+second
+mtani
+slope
+dcal
+calculated
+center
+distance
+cdycorr
+corrected
+coordinate
+mtan
+wa
+wrapping
+ns1e
+boolean
+number
+yt
+intersection
+component
+xt
+intercept
+yt1f
+location
+delta
+ot
+start
+point
+nt2o
+dt
+ys2l
+last
+lxsd
+ns2e
+ys2f
+yt1l
+nt1e
+diffang
+rotation
+fitting
+esy
+axis
+esyn
+normalized
+ery
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form assembly
+form_union/assembly
+part
+non-integer
+@label:parameter check: n non-integer
+ipart
+step
+@tag:step
+@type:step
+@label:step
+var
+variables
+flj
+fixed
+spatial
+mesh
+geom1_pi1_adjsel
+@tag:geom1_pi1_adjsel
+fromsequence
+@type:fromsequence
+@label:exterior (roller chain sprocket
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:roller outer boundaries (roller chain sprocket
+@label:roller inner boundaries (roller chain sprocket
+@label:pin outer boundaries (roller chain sprocket
+@label:first sprocket outer boundaries (roller chain sprocket
+@label:first sprocket inner boundaries (roller chain sprocket
+@label:second sprocket outer boundaries (roller chain sprocket
+@label:second sprocket inner boundaries (roller chain sprocket
+@label:sprocket outer boundaries (roller chain sprocket
+@label:sprocket inner boundaries (roller chain sprocket
+@label:all (roller chain sprocket
+@label:links (roller chain sprocket
+@label:roller plates (roller chain sprocket
+@label:bushings (roller chain sprocket
+@label:pin plates (roller chain sprocket
+@label:first sprocket (roller chain sprocket
+@label:second sprocket (roller chain sprocket
+@label:sprockets (roller chain sprocket
+mbdcdr1p
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview3d
+@type:resultview3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+structural
+steel
+@label:structural steel
+enu
+young's
+modulus
+poisson's
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+murnaghan
+elastoplasticmodel
+elastoplastic
+ludwik
+johnsoncook
+johnson-cook
+swift
+voce
+hockettsherby
+hockett-sherby
+armstrongfrederick
+armstrong-frederick
+norton
+garofalo
+hyperbolic
+sine
+chabocheviscoplasticity
+chaboche
+viscoplasticity
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+meshnative
+optsequence
+std
+study
+time
+@tag:time
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+field
+@type:field
+@label:displacement field
+comp1_mbd_jnt_rot
+@tag:comp1_mbd_jnt_rot
+state
+@type:state
+@label:comp1.mbd_jnt_rot
+comp1_mbd_hgj1_pm1_thp
+@tag:comp1_mbd_hgj1_pm1_thp
+integration
+thp
+@label:angular velocity integration variable
+comp1_mbd_att_disp
+@tag:comp1_mbd_att_disp
+@label:comp1.mbd_att_disp
+comp1_mbd_att_rot
+@tag:comp1_mbd_att_rot
+@label:comp1.mbd_att_rot
+comp1_mbd_cdr1att1_fc1x
+@tag:comp1_mbd_cdr1att1_fc1x
+fc1x
+@label:comp1.mbd.cdr1att1.fc1x
+comp1_mbd_cdr1att1_fd1x
+@tag:comp1_mbd_cdr1att1_fd1x
+fd1x
+@label:comp1.mbd.cdr1att1.fd1x
+comp1_mbd_cdr1att2_fc1x
+@tag:comp1_mbd_cdr1att2_fc1x
+@label:comp1.mbd.cdr1att2.fc1x
+comp1_mbd_cdr1att2_fd1x
+@tag:comp1_mbd_cdr1att2_fd1x
+@label:comp1.mbd.cdr1att2.fd1x
+comp1_mbd_cdr1att3_fc1x
+@tag:comp1_mbd_cdr1att3_fc1x
+@label:comp1.mbd.cdr1att3.fc1x
+comp1_mbd_cdr1att3_fd1x
+@tag:comp1_mbd_cdr1att3_fd1x
+@label:comp1.mbd.cdr1att3.fd1x
+comp1_mbd_cdr1att4_fc1x
+@tag:comp1_mbd_cdr1att4_fc1x
+@label:comp1.mbd.cdr1att4.fc1x
+comp1_mbd_cdr1att4_fd1x
+@tag:comp1_mbd_cdr1att4_fd1x
+@label:comp1.mbd.cdr1att4.fd1x
+comp1_mbd_cdr1att5_fc1x
+@tag:comp1_mbd_cdr1att5_fc1x
+@label:comp1.mbd.cdr1att5.fc1x
+comp1_mbd_cdr1att5_fd1x
+@tag:comp1_mbd_cdr1att5_fd1x
+@label:comp1.mbd.cdr1att5.fd1x
+comp1_mbd_cdr1att6_fc1x
+@tag:comp1_mbd_cdr1att6_fc1x
+@label:comp1.mbd.cdr1att6.fc1x
+comp1_mbd_cdr1att6_fd1x
+@tag:comp1_mbd_cdr1att6_fd1x
+@label:comp1.mbd.cdr1att6.fd1x
+comp1_mbd_cdr1att7_fc1x
+@tag:comp1_mbd_cdr1att7_fc1x
+@label:comp1.mbd.cdr1att7.fc1x
+comp1_mbd_cdr1att7_fd1x
+@tag:comp1_mbd_cdr1att7_fd1x
+@label:comp1.mbd.cdr1att7.fd1x
+comp1_mbd_cdr1att8_fc1x
+@tag:comp1_mbd_cdr1att8_fc1x
+@label:comp1.mbd.cdr1att8.fc1x
+comp1_mbd_cdr1att8_fd1x
+@tag:comp1_mbd_cdr1att8_fd1x
+@label:comp1.mbd.cdr1att8.fd1x
+comp1_mbd_cdr1att9_fc1x
+@tag:comp1_mbd_cdr1att9_fc1x
+@label:comp1.mbd.cdr1att9.fc1x
+comp1_mbd_cdr1att9_fd1x
+@tag:comp1_mbd_cdr1att9_fd1x
+@label:comp1.mbd.cdr1att9.fd1x
+comp1_mbd_cdr1att10_fc1x
+@tag:comp1_mbd_cdr1att10_fc1x
+@label:comp1.mbd.cdr1att10.fc1x
+comp1_mbd_cdr1att10_fd1x
+@tag:comp1_mbd_cdr1att10_fd1x
+@label:comp1.mbd.cdr1att10.fd1x
+comp1_mbd_cdr1att11_fc1x
+@tag:comp1_mbd_cdr1att11_fc1x
+@label:comp1.mbd.cdr1att11.fc1x
+comp1_mbd_cdr1att11_fd1x
+@tag:comp1_mbd_cdr1att11_fd1x
+@label:comp1.mbd.cdr1att11.fd1x
+comp1_mbd_cdr1att12_fc1x
+@tag:comp1_mbd_cdr1att12_fc1x
+@label:comp1.mbd.cdr1att12.fc1x
+comp1_mbd_cdr1att12_fd1x
+@tag:comp1_mbd_cdr1att12_fd1x
+@label:comp1.mbd.cdr1att12.fd1x
+comp1_mbd_cdr1att13_fc1x
+@tag:comp1_mbd_cdr1att13_fc1x
+@label:comp1.mbd.cdr1att13.fc1x
+comp1_mbd_cdr1att13_fd1x
+@tag:comp1_mbd_cdr1att13_fd1x
+@label:comp1.mbd.cdr1att13.fd1x
+comp1_mbd_cdr1att14_fc1x
+@tag:comp1_mbd_cdr1att14_fc1x
+@label:comp1.mbd.cdr1att14.fc1x
+comp1_mbd_cdr1att14_fd1x
+@tag:comp1_mbd_cdr1att14_fd1x
+@label:comp1.mbd.cdr1att14.fd1x
+comp1_mbd_cdr1att15_fc1x
+@tag:comp1_mbd_cdr1att15_fc1x
+@label:comp1.mbd.cdr1att15.fc1x
+comp1_mbd_cdr1att15_fd1x
+@tag:comp1_mbd_cdr1att15_fd1x
+@label:comp1.mbd.cdr1att15.fd1x
+comp1_mbd_cdr1att16_fc1x
+@tag:comp1_mbd_cdr1att16_fc1x
+@label:comp1.mbd.cdr1att16.fc1x
+comp1_mbd_cdr1att16_fd1x
+@tag:comp1_mbd_cdr1att16_fd1x
+@label:comp1.mbd.cdr1att16.fd1x
+comp1_mbd_cdr1att17_fc1x
+@tag:comp1_mbd_cdr1att17_fc1x
+@label:comp1.mbd.cdr1att17.fc1x
+comp1_mbd_cdr1att17_fd1x
+@tag:comp1_mbd_cdr1att17_fd1x
+@label:comp1.mbd.cdr1att17.fd1x
+comp1_mbd_cdr1att18_fc1x
+@tag:comp1_mbd_cdr1att18_fc1x
+@label:comp1.mbd.cdr1att18.fc1x
+comp1_mbd_cdr1att18_fd1x
+@tag:comp1_mbd_cdr1att18_fd1x
+@label:comp1.mbd.cdr1att18.fd1x
+comp1_mbd_cdr1att19_fc1x
+@tag:comp1_mbd_cdr1att19_fc1x
+@label:comp1.mbd.cdr1att19.fc1x
+comp1_mbd_cdr1att19_fd1x
+@tag:comp1_mbd_cdr1att19_fd1x
+@label:comp1.mbd.cdr1att19.fd1x
+comp1_mbd_cdr1att20_fc1x
+@tag:comp1_mbd_cdr1att20_fc1x
+@label:comp1.mbd.cdr1att20.fc1x
+comp1_mbd_cdr1att20_fd1x
+@tag:comp1_mbd_cdr1att20_fd1x
+@label:comp1.mbd.cdr1att20.fd1x
+comp1_mbd_cdr1att21_fc1x
+@tag:comp1_mbd_cdr1att21_fc1x
+@label:comp1.mbd.cdr1att21.fc1x
+comp1_mbd_cdr1att21_fd1x
+@tag:comp1_mbd_cdr1att21_fd1x
+@label:comp1.mbd.cdr1att21.fd1x
+comp1_mbd_cdr1att22_fc1x
+@tag:comp1_mbd_cdr1att22_fc1x
+@label:comp1.mbd.cdr1att22.fc1x
+comp1_mbd_cdr1att22_fd1x
+@tag:comp1_mbd_cdr1att22_fd1x
+@label:comp1.mbd.cdr1att22.fd1x
+comp1_mbd_cdr1att23_fc1x
+@tag:comp1_mbd_cdr1att23_fc1x
+@label:comp1.mbd.cdr1att23.fc1x
+comp1_mbd_cdr1att23_fd1x
+@tag:comp1_mbd_cdr1att23_fd1x
+@label:comp1.mbd.cdr1att23.fd1x
+comp1_mbd_cdr1att24_fc1x
+@tag:comp1_mbd_cdr1att24_fc1x
+@label:comp1.mbd.cdr1att24.fc1x
+comp1_mbd_cdr1att24_fd1x
+@tag:comp1_mbd_cdr1att24_fd1x
+@label:comp1.mbd.cdr1att24.fd1x
+comp1_mbd_cdr1att25_fc1x
+@tag:comp1_mbd_cdr1att25_fc1x
+@label:comp1.mbd.cdr1att25.fc1x
+comp1_mbd_cdr1att25_fd1x
+@tag:comp1_mbd_cdr1att25_fd1x
+@label:comp1.mbd.cdr1att25.fd1x
+comp1_mbd_cdr1att26_fc1x
+@tag:comp1_mbd_cdr1att26_fc1x
+@label:comp1.mbd.cdr1att26.fc1x
+comp1_mbd_cdr1att26_fd1x
+@tag:comp1_mbd_cdr1att26_fd1x
+@label:comp1.mbd.cdr1att26.fd1x
+comp1_mbd_cdr1att27_fc1x
+@tag:comp1_mbd_cdr1att27_fc1x
+@label:comp1.mbd.cdr1att27.fc1x
+comp1_mbd_cdr1att27_fd1x
+@tag:comp1_mbd_cdr1att27_fd1x
+@label:comp1.mbd.cdr1att27.fd1x
+comp1_mbd_cdr1att28_fc1x
+@tag:comp1_mbd_cdr1att28_fc1x
+@label:comp1.mbd.cdr1att28.fc1x
+comp1_mbd_cdr1att28_fd1x
+@tag:comp1_mbd_cdr1att28_fd1x
+@label:comp1.mbd.cdr1att28.fd1x
+comp1_mbd_cdr1att29_fc1x
+@tag:comp1_mbd_cdr1att29_fc1x
+@label:comp1.mbd.cdr1att29.fc1x
+comp1_mbd_cdr1att29_fd1x
+@tag:comp1_mbd_cdr1att29_fd1x
+@label:comp1.mbd.cdr1att29.fd1x
+comp1_mbd_cdr1att30_fc1x
+@tag:comp1_mbd_cdr1att30_fc1x
+@label:comp1.mbd.cdr1att30.fc1x
+comp1_mbd_cdr1att30_fd1x
+@tag:comp1_mbd_cdr1att30_fd1x
+@label:comp1.mbd.cdr1att30.fd1x
+comp1_mbd_cdr1att31_fc1x
+@tag:comp1_mbd_cdr1att31_fc1x
+@label:comp1.mbd.cdr1att31.fc1x
+comp1_mbd_cdr1att31_fd1x
+@tag:comp1_mbd_cdr1att31_fd1x
+@label:comp1.mbd.cdr1att31.fd1x
+comp1_mbd_cdr1att32_fc1x
+@tag:comp1_mbd_cdr1att32_fc1x
+@label:comp1.mbd.cdr1att32.fc1x
+comp1_mbd_cdr1att32_fd1x
+@tag:comp1_mbd_cdr1att32_fd1x
+@label:comp1.mbd.cdr1att32.fd1x
+comp1_mbd_cdr1att33_fc1x
+@tag:comp1_mbd_cdr1att33_fc1x
+@label:comp1.mbd.cdr1att33.fc1x
+comp1_mbd_cdr1att33_fd1x
+@tag:comp1_mbd_cdr1att33_fd1x
+@label:comp1.mbd.cdr1att33.fd1x
+comp1_mbd_cdr1att34_fc1x
+@tag:comp1_mbd_cdr1att34_fc1x
+@label:comp1.mbd.cdr1att34.fc1x
+comp1_mbd_cdr1att34_fd1x
+@tag:comp1_mbd_cdr1att34_fd1x
+@label:comp1.mbd.cdr1att34.fd1x
+comp1_mbd_cdr1att35_fc1x
+@tag:comp1_mbd_cdr1att35_fc1x
+@label:comp1.mbd.cdr1att35.fc1x
+comp1_mbd_cdr1att35_fd1x
+@tag:comp1_mbd_cdr1att35_fd1x
+@label:comp1.mbd.cdr1att35.fd1x
+comp1_mbd_cdr1att36_fc1x
+@tag:comp1_mbd_cdr1att36_fc1x
+@label:comp1.mbd.cdr1att36.fc1x
+comp1_mbd_cdr1att36_fd1x
+@tag:comp1_mbd_cdr1att36_fd1x
+@label:comp1.mbd.cdr1att36.fd1x
+comp1_mbd_cdr1att37_fc1x
+@tag:comp1_mbd_cdr1att37_fc1x
+@label:comp1.mbd.cdr1att37.fc1x
+comp1_mbd_cdr1att37_fd1x
+@tag:comp1_mbd_cdr1att37_fd1x
+@label:comp1.mbd.cdr1att37.fd1x
+comp1_mbd_cdr1att38_fc1x
+@tag:comp1_mbd_cdr1att38_fc1x
+@label:comp1.mbd.cdr1att38.fc1x
+comp1_mbd_cdr1att38_fd1x
+@tag:comp1_mbd_cdr1att38_fd1x
+@label:comp1.mbd.cdr1att38.fd1x
+comp1_mbd_cdr1att39_fc1x
+@tag:comp1_mbd_cdr1att39_fc1x
+@label:comp1.mbd.cdr1att39.fc1x
+comp1_mbd_cdr1att39_fd1x
+@tag:comp1_mbd_cdr1att39_fd1x
+@label:comp1.mbd.cdr1att39.fd1x
+comp1_mbd_cdr1att40_fc1x
+@tag:comp1_mbd_cdr1att40_fc1x
+@label:comp1.mbd.cdr1att40.fc1x
+comp1_mbd_cdr1att40_fd1x
+@tag:comp1_mbd_cdr1att40_fd1x
+@label:comp1.mbd.cdr1att40.fd1x
+comp1_mbd_cdr1att41_fc1x
+@tag:comp1_mbd_cdr1att41_fc1x
+@label:comp1.mbd.cdr1att41.fc1x
+comp1_mbd_cdr1att41_fd1x
+@tag:comp1_mbd_cdr1att41_fd1x
+@label:comp1.mbd.cdr1att41.fd1x
+comp1_mbd_cdr1att42_fc1x
+@tag:comp1_mbd_cdr1att42_fc1x
+@label:comp1.mbd.cdr1att42.fc1x
+comp1_mbd_cdr1att42_fd1x
+@tag:comp1_mbd_cdr1att42_fd1x
+@label:comp1.mbd.cdr1att42.fd1x
+comp1_mbd_cdr1att43_fc1x
+@tag:comp1_mbd_cdr1att43_fc1x
+@label:comp1.mbd.cdr1att43.fc1x
+comp1_mbd_cdr1att43_fd1x
+@tag:comp1_mbd_cdr1att43_fd1x
+@label:comp1.mbd.cdr1att43.fd1x
+comp1_mbd_cdr1att44_fc1x
+@tag:comp1_mbd_cdr1att44_fc1x
+@label:comp1.mbd.cdr1att44.fc1x
+comp1_mbd_cdr1att44_fd1x
+@tag:comp1_mbd_cdr1att44_fd1x
+@label:comp1.mbd.cdr1att44.fd1x
+comp1_mbd_cdr1att45_fc1x
+@tag:comp1_mbd_cdr1att45_fc1x
+@label:comp1.mbd.cdr1att45.fc1x
+comp1_mbd_cdr1att45_fd1x
+@tag:comp1_mbd_cdr1att45_fd1x
+@label:comp1.mbd.cdr1att45.fd1x
+comp1_mbd_cdr1att46_fc1x
+@tag:comp1_mbd_cdr1att46_fc1x
+@label:comp1.mbd.cdr1att46.fc1x
+comp1_mbd_cdr1att46_fd1x
+@tag:comp1_mbd_cdr1att46_fd1x
+@label:comp1.mbd.cdr1att46.fd1x
+comp1_mbd_cdr1att47_fc1x
+@tag:comp1_mbd_cdr1att47_fc1x
+@label:comp1.mbd.cdr1att47.fc1x
+comp1_mbd_cdr1att47_fd1x
+@tag:comp1_mbd_cdr1att47_fd1x
+@label:comp1.mbd.cdr1att47.fd1x
+comp1_mbd_cdr1att48_fc1x
+@tag:comp1_mbd_cdr1att48_fc1x
+@label:comp1.mbd.cdr1att48.fc1x
+comp1_mbd_cdr1att48_fd1x
+@tag:comp1_mbd_cdr1att48_fd1x
+@label:comp1.mbd.cdr1att48.fd1x
+comp1_mbd_cdr1att49_fc1x
+@tag:comp1_mbd_cdr1att49_fc1x
+@label:comp1.mbd.cdr1att49.fc1x
+comp1_mbd_cdr1att49_fd1x
+@tag:comp1_mbd_cdr1att49_fd1x
+@label:comp1.mbd.cdr1att49.fd1x
+comp1_mbd_cdr1att50_fc1x
+@tag:comp1_mbd_cdr1att50_fc1x
+@label:comp1.mbd.cdr1att50.fc1x
+comp1_mbd_cdr1att50_fd1x
+@tag:comp1_mbd_cdr1att50_fd1x
+@label:comp1.mbd.cdr1att50.fd1x
+comp1_mbd_cdr1att51_fc1x
+@tag:comp1_mbd_cdr1att51_fc1x
+@label:comp1.mbd.cdr1att51.fc1x
+comp1_mbd_cdr1att51_fd1x
+@tag:comp1_mbd_cdr1att51_fd1x
+@label:comp1.mbd.cdr1att51.fd1x
+comp1_mbd_cdr1att52_fc1x
+@tag:comp1_mbd_cdr1att52_fc1x
+@label:comp1.mbd.cdr1att52.fc1x
+comp1_mbd_cdr1att52_fd1x
+@tag:comp1_mbd_cdr1att52_fd1x
+@label:comp1.mbd.cdr1att52.fd1x
+comp1_mbd_cdr1att53_fc1x
+@tag:comp1_mbd_cdr1att53_fc1x
+@label:comp1.mbd.cdr1att53.fc1x
+comp1_mbd_cdr1att53_fd1x
+@tag:comp1_mbd_cdr1att53_fd1x
+@label:comp1.mbd.cdr1att53.fd1x
+comp1_mbd_cdr1att54_fc1x
+@tag:comp1_mbd_cdr1att54_fc1x
+@label:comp1.mbd.cdr1att54.fc1x
+comp1_mbd_cdr1att54_fd1x
+@tag:comp1_mbd_cdr1att54_fd1x
+@label:comp1.mbd.cdr1att54.fd1x
+comp1_mbd_cdr1att55_fc1x
+@tag:comp1_mbd_cdr1att55_fc1x
+@label:comp1.mbd.cdr1att55.fc1x
+comp1_mbd_cdr1att55_fd1x
+@tag:comp1_mbd_cdr1att55_fd1x
+@label:comp1.mbd.cdr1att55.fd1x
+comp1_mbd_cdr1att56_fc1x
+@tag:comp1_mbd_cdr1att56_fc1x
+@label:comp1.mbd.cdr1att56.fc1x
+comp1_mbd_cdr1att56_fd1x
+@tag:comp1_mbd_cdr1att56_fd1x
+@label:comp1.mbd.cdr1att56.fd1x
+comp1_mbd_cdr1att57_fc1x
+@tag:comp1_mbd_cdr1att57_fc1x
+@label:comp1.mbd.cdr1att57.fc1x
+comp1_mbd_cdr1att57_fd1x
+@tag:comp1_mbd_cdr1att57_fd1x
+@label:comp1.mbd.cdr1att57.fd1x
+comp1_mbd_cdr1att58_fc1x
+@tag:comp1_mbd_cdr1att58_fc1x
+@label:comp1.mbd.cdr1att58.fc1x
+comp1_mbd_cdr1att58_fd1x
+@tag:comp1_mbd_cdr1att58_fd1x
+@label:comp1.mbd.cdr1att58.fd1x
+comp1_mbd_cdr1att59_fc1x
+@tag:comp1_mbd_cdr1att59_fc1x
+@label:comp1.mbd.cdr1att59.fc1x
+comp1_mbd_cdr1att59_fd1x
+@tag:comp1_mbd_cdr1att59_fd1x
+@label:comp1.mbd.cdr1att59.fd1x
+comp1_mbd_cdr1att60_fc1x
+@tag:comp1_mbd_cdr1att60_fc1x
+@label:comp1.mbd.cdr1att60.fc1x
+comp1_mbd_cdr1att60_fd1x
+@tag:comp1_mbd_cdr1att60_fd1x
+@label:comp1.mbd.cdr1att60.fd1x
+comp1_mbd_cdr1att61_fc1x
+@tag:comp1_mbd_cdr1att61_fc1x
+@label:comp1.mbd.cdr1att61.fc1x
+comp1_mbd_cdr1att61_fd1x
+@tag:comp1_mbd_cdr1att61_fd1x
+@label:comp1.mbd.cdr1att61.fd1x
+comp1_mbd_cdr1att62_fc1x
+@tag:comp1_mbd_cdr1att62_fc1x
+@label:comp1.mbd.cdr1att62.fc1x
+comp1_mbd_cdr1att62_fd1x
+@tag:comp1_mbd_cdr1att62_fd1x
+@label:comp1.mbd.cdr1att62.fd1x
+comp1_mbd_cdr1att63_fc1x
+@tag:comp1_mbd_cdr1att63_fc1x
+@label:comp1.mbd.cdr1att63.fc1x
+comp1_mbd_cdr1att63_fd1x
+@tag:comp1_mbd_cdr1att63_fd1x
+@label:comp1.mbd.cdr1att63.fd1x
+comp1_mbd_cdr1att64_fc1x
+@tag:comp1_mbd_cdr1att64_fc1x
+@label:comp1.mbd.cdr1att64.fc1x
+comp1_mbd_cdr1att64_fd1x
+@tag:comp1_mbd_cdr1att64_fd1x
+@label:comp1.mbd.cdr1att64.fd1x
+comp1_mbd_cdr1att65_fc1x
+@tag:comp1_mbd_cdr1att65_fc1x
+@label:comp1.mbd.cdr1att65.fc1x
+comp1_mbd_cdr1att65_fd1x
+@tag:comp1_mbd_cdr1att65_fd1x
+@label:comp1.mbd.cdr1att65.fd1x
+comp1_mbd_cdr1att66_fc1x
+@tag:comp1_mbd_cdr1att66_fc1x
+@label:comp1.mbd.cdr1att66.fc1x
+comp1_mbd_cdr1att66_fd1x
+@tag:comp1_mbd_cdr1att66_fd1x
+@label:comp1.mbd.cdr1att66.fd1x
+comp1_mbd_cdr1att67_fc1x
+@tag:comp1_mbd_cdr1att67_fc1x
+@label:comp1.mbd.cdr1att67.fc1x
+comp1_mbd_cdr1att67_fd1x
+@tag:comp1_mbd_cdr1att67_fd1x
+@label:comp1.mbd.cdr1att67.fd1x
+comp1_mbd_cdr1att68_fc1x
+@tag:comp1_mbd_cdr1att68_fc1x
+@label:comp1.mbd.cdr1att68.fc1x
+comp1_mbd_cdr1att68_fd1x
+@tag:comp1_mbd_cdr1att68_fd1x
+@label:comp1.mbd.cdr1att68.fd1x
+comp1_mbd_cdr1att69_fc1x
+@tag:comp1_mbd_cdr1att69_fc1x
+@label:comp1.mbd.cdr1att69.fc1x
+comp1_mbd_cdr1att69_fd1x
+@tag:comp1_mbd_cdr1att69_fd1x
+@label:comp1.mbd.cdr1att69.fd1x
+comp1_mbd_cdr1att70_fc1x
+@tag:comp1_mbd_cdr1att70_fc1x
+@label:comp1.mbd.cdr1att70.fc1x
+comp1_mbd_cdr1att70_fd1x
+@tag:comp1_mbd_cdr1att70_fd1x
+@label:comp1.mbd.cdr1att70.fd1x
+comp1_mbd_cdr1att71_fc1x
+@tag:comp1_mbd_cdr1att71_fc1x
+@label:comp1.mbd.cdr1att71.fc1x
+comp1_mbd_cdr1att71_fd1x
+@tag:comp1_mbd_cdr1att71_fd1x
+@label:comp1.mbd.cdr1att71.fd1x
+comp1_mbd_cdr1att72_fc1x
+@tag:comp1_mbd_cdr1att72_fc1x
+@label:comp1.mbd.cdr1att72.fc1x
+comp1_mbd_cdr1att72_fd1x
+@tag:comp1_mbd_cdr1att72_fd1x
+@label:comp1.mbd.cdr1att72.fd1x
+comp1_mbd_cdr1att73_fc1x
+@tag:comp1_mbd_cdr1att73_fc1x
+@label:comp1.mbd.cdr1att73.fc1x
+comp1_mbd_cdr1att73_fd1x
+@tag:comp1_mbd_cdr1att73_fd1x
+@label:comp1.mbd.cdr1att73.fd1x
+comp1_mbd_cdr1att74_fc1x
+@tag:comp1_mbd_cdr1att74_fc1x
+@label:comp1.mbd.cdr1att74.fc1x
+comp1_mbd_cdr1att74_fd1x
+@tag:comp1_mbd_cdr1att74_fd1x
+@label:comp1.mbd.cdr1att74.fd1x
+comp1_mbd_cdr1att75_fc1x
+@tag:comp1_mbd_cdr1att75_fc1x
+@label:comp1.mbd.cdr1att75.fc1x
+comp1_mbd_cdr1att75_fd1x
+@tag:comp1_mbd_cdr1att75_fd1x
+@label:comp1.mbd.cdr1att75.fd1x
+comp1_mbd_cdr1att76_fc1x
+@tag:comp1_mbd_cdr1att76_fc1x
+@label:comp1.mbd.cdr1att76.fc1x
+comp1_mbd_cdr1att76_fd1x
+@tag:comp1_mbd_cdr1att76_fd1x
+@label:comp1.mbd.cdr1att76.fd1x
+comp1_mbd_cdr1att77_fc1x
+@tag:comp1_mbd_cdr1att77_fc1x
+@label:comp1.mbd.cdr1att77.fc1x
+comp1_mbd_cdr1att77_fd1x
+@tag:comp1_mbd_cdr1att77_fd1x
+@label:comp1.mbd.cdr1att77.fd1x
+comp1_mbd_cdr1att78_fc1x
+@tag:comp1_mbd_cdr1att78_fc1x
+@label:comp1.mbd.cdr1att78.fc1x
+comp1_mbd_cdr1att78_fd1x
+@tag:comp1_mbd_cdr1att78_fd1x
+@label:comp1.mbd.cdr1att78.fd1x
+comp1_mbd_cdr1att79_fc1x
+@tag:comp1_mbd_cdr1att79_fc1x
+@label:comp1.mbd.cdr1att79.fc1x
+comp1_mbd_cdr1att79_fd1x
+@tag:comp1_mbd_cdr1att79_fd1x
+@label:comp1.mbd.cdr1att79.fd1x
+comp1_mbd_cdr1att80_fc1x
+@tag:comp1_mbd_cdr1att80_fc1x
+@label:comp1.mbd.cdr1att80.fc1x
+comp1_mbd_cdr1att80_fd1x
+@tag:comp1_mbd_cdr1att80_fd1x
+@label:comp1.mbd.cdr1att80.fd1x
+comp1_mbd_cdr1att81_fc1x
+@tag:comp1_mbd_cdr1att81_fc1x
+@label:comp1.mbd.cdr1att81.fc1x
+comp1_mbd_cdr1att81_fd1x
+@tag:comp1_mbd_cdr1att81_fd1x
+@label:comp1.mbd.cdr1att81.fd1x
+comp1_mbd_cdr1att82_fc1x
+@tag:comp1_mbd_cdr1att82_fc1x
+@label:comp1.mbd.cdr1att82.fc1x
+comp1_mbd_cdr1att82_fd1x
+@tag:comp1_mbd_cdr1att82_fd1x
+@label:comp1.mbd.cdr1att82.fd1x
+comp1_mbd_cdr1att83_fc1x
+@tag:comp1_mbd_cdr1att83_fc1x
+@label:comp1.mbd.cdr1att83.fc1x
+comp1_mbd_cdr1att83_fd1x
+@tag:comp1_mbd_cdr1att83_fd1x
+@label:comp1.mbd.cdr1att83.fd1x
+comp1_mbd_cdr1att84_fc1x
+@tag:comp1_mbd_cdr1att84_fc1x
+@label:comp1.mbd.cdr1att84.fc1x
+comp1_mbd_cdr1att84_fd1x
+@tag:comp1_mbd_cdr1att84_fd1x
+@label:comp1.mbd.cdr1att84.fd1x
+comp1_mbd_cdr1att85_fc1x
+@tag:comp1_mbd_cdr1att85_fc1x
+@label:comp1.mbd.cdr1att85.fc1x
+comp1_mbd_cdr1att85_fd1x
+@tag:comp1_mbd_cdr1att85_fd1x
+@label:comp1.mbd.cdr1att85.fd1x
+comp1_mbd_cdr1att86_fc1x
+@tag:comp1_mbd_cdr1att86_fc1x
+@label:comp1.mbd.cdr1att86.fc1x
+comp1_mbd_cdr1att86_fd1x
+@tag:comp1_mbd_cdr1att86_fd1x
+@label:comp1.mbd.cdr1att86.fd1x
+comp1_mbd_cdr1att87_fc1x
+@tag:comp1_mbd_cdr1att87_fc1x
+@label:comp1.mbd.cdr1att87.fc1x
+comp1_mbd_cdr1att87_fd1x
+@tag:comp1_mbd_cdr1att87_fd1x
+@label:comp1.mbd.cdr1att87.fd1x
+comp1_mbd_cdr1att88_fc1x
+@tag:comp1_mbd_cdr1att88_fc1x
+@label:comp1.mbd.cdr1att88.fc1x
+comp1_mbd_cdr1att88_fd1x
+@tag:comp1_mbd_cdr1att88_fd1x
+@label:comp1.mbd.cdr1att88.fd1x
+comp1_mbd_cdr1att89_fc1x
+@tag:comp1_mbd_cdr1att89_fc1x
+@label:comp1.mbd.cdr1att89.fc1x
+comp1_mbd_cdr1att89_fd1x
+@tag:comp1_mbd_cdr1att89_fd1x
+@label:comp1.mbd.cdr1att89.fd1x
+comp1_mbd_cdr1att90_fc1x
+@tag:comp1_mbd_cdr1att90_fc1x
+@label:comp1.mbd.cdr1att90.fc1x
+comp1_mbd_cdr1att90_fd1x
+@tag:comp1_mbd_cdr1att90_fd1x
+@label:comp1.mbd.cdr1att90.fd1x
+comp1_mbd_cdr1att91_fc1x
+@tag:comp1_mbd_cdr1att91_fc1x
+@label:comp1.mbd.cdr1att91.fc1x
+comp1_mbd_cdr1att91_fd1x
+@tag:comp1_mbd_cdr1att91_fd1x
+@label:comp1.mbd.cdr1att91.fd1x
+comp1_mbd_cdr1att92_fc1x
+@tag:comp1_mbd_cdr1att92_fc1x
+@label:comp1.mbd.cdr1att92.fc1x
+comp1_mbd_cdr1att92_fd1x
+@tag:comp1_mbd_cdr1att92_fd1x
+@label:comp1.mbd.cdr1att92.fd1x
+comp1_mbd_cdr1att93_fc1x
+@tag:comp1_mbd_cdr1att93_fc1x
+@label:comp1.mbd.cdr1att93.fc1x
+comp1_mbd_cdr1att93_fd1x
+@tag:comp1_mbd_cdr1att93_fd1x
+@label:comp1.mbd.cdr1att93.fd1x
+comp1_mbd_cdr1att94_fc1x
+@tag:comp1_mbd_cdr1att94_fc1x
+@label:comp1.mbd.cdr1att94.fc1x
+comp1_mbd_cdr1att94_fd1x
+@tag:comp1_mbd_cdr1att94_fd1x
+@label:comp1.mbd.cdr1att94.fd1x
+comp1_mbd_cdr1att95_fc1x
+@tag:comp1_mbd_cdr1att95_fc1x
+@label:comp1.mbd.cdr1att95.fc1x
+comp1_mbd_cdr1att95_fd1x
+@tag:comp1_mbd_cdr1att95_fd1x
+@label:comp1.mbd.cdr1att95.fd1x
+comp1_mbd_cdr1att96_fc1x
+@tag:comp1_mbd_cdr1att96_fc1x
+@label:comp1.mbd.cdr1att96.fc1x
+comp1_mbd_cdr1att96_fd1x
+@tag:comp1_mbd_cdr1att96_fd1x
+@label:comp1.mbd.cdr1att96.fd1x
+comp1_mbd_att1_fc1x
+@tag:comp1_mbd_att1_fc1x
+@label:comp1.mbd.att1.fc1x
+comp1_mbd_att1_fd1x
+@tag:comp1_mbd_att1_fd1x
+@label:comp1.mbd.att1.fd1x
+comp1_mbd_att2_fc1x
+@tag:comp1_mbd_att2_fc1x
+@label:comp1.mbd.att2.fc1x
+comp1_mbd_att2_fd1x
+@tag:comp1_mbd_att2_fd1x
+@label:comp1.mbd.att2.fd1x
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+anim
+@tag:anim
+animation
+@type:animation
+@label:displacement
+von
+mises
+@label:von mises stress, all
+@label:von mises stress, sprockets
+@label:von mises stress, links
+pressure
+@label:contact pressure, sprocket
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+def
+@tag:def
+deform
+@type:deform
+deformation
+@label:deformation
+@label:velocity
+vol
+@tag:vol
+volume
+@type:volume
+@label:volume
+arwl
+@tag:arwl
+arrowline
+@type:arrowline
+arrow
+@label:arrow line
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+plotgroup1d
+@type:plotgroup1d
+@label:link joint forces
+glob
+@tag:glob
+global
+@type:global
+@label:global
+hist
+@study:std
+@study:time
+@physics:mbd
+@func
+@func:step
+@geom:geom
+@geom:pi
+@geom:fin
+@material:mat
+@material:materialmodel
+@material:Enu
+@material:func
+@material:ElastoplasticModel
+@material:Ludwik
+@material:Voce
+@material:HockettSherby
+@material:ArmstrongFrederick
+@material:int
+@material:Murnaghan
+@material:JohnsonCook
+@material:Swift
+@material:Norton
+@material:Garofalo
+@material:ChabocheViscoplasticity
+@expr:var
+@mesh:mesh
+@mesh:size
+@mesh:swe
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_mbd_cdr1att54_Fd1x
+@sol:comp1_mbd_cdr1att90_Fc1x
+@sol:comp1_mbd_cdr1att68_Fd1x
+@sol:comp1_mbd_cdr1att40_Fd1x
+@sol:comp1_mbd_cdr1att85_Fd1x
+@sol:comp1_mbd_cdr1att37_Fd1x
+@sol:comp1_mbd_cdr1att23_Fd1x
+@sol:comp1_mbd_cdr1att87_Fc1x
+@sol:comp1_mbd_cdr1att71_Fd1x
+@sol:comp1_mbd_cdr1att42_Fc1x
+@sol:comp1_mbd_cdr1att56_Fc1x
+@sol:comp1_mbd_cdr1att25_Fc1x
+@sol:comp1_mbd_cdr1att1_Fc1x
+@sol:comp1_mbd_cdr1att11_Fc1x
+@sol:comp1_mbd_cdr1att30_Fc1x
+@sol:comp1_mbd_cdr1att44_Fc1x
+@sol:comp1_mbd_cdr1att61_Fc1x
+@sol:comp1_mbd_cdr1att58_Fc1x
+@sol:comp1_mbd_cdr1att39_Fc1x
+@sol:comp1_u
+@sol:comp1_mbd_cdr1att21_Fd1x
+@sol:comp1_mbd_cdr1att73_Fd1x
+@sol:comp1_mbd_cdr1att49_Fd1x
+@sol:comp1_mbd_cdr1att85_Fc1x
+@sol:comp1_mbd_cdr1att35_Fd1x
+@sol:comp1_mbd_cdr1att15_Fc1x
+@sol:comp1_mbd_cdr1att68_Fc1x
+@sol:comp1_mbd_cdr1att40_Fc1x
+@sol:comp1_mbd_cdr1att37_Fc1x
+@sol:comp1_mbd_cdr1att71_Fc1x
+@sol:comp1_mbd_cdr1att8_Fd1x
+@sol:comp1_mbd_cdr1att18_Fd1x
+@sol:comp1_mbd_cdr1att56_Fd1x
+@sol:comp1_mbd_cdr1att94_Fc1x
+@sol:comp1_mbd_cdr1att25_Fd1x
+@sol:comp1_mbd_cdr1att75_Fc1x
+@sol:comp1_mbd_cdr1att44_Fd1x
+@sol:comp1_mbd_cdr1att50_Fd1x
+@sol:comp1_mbd_cdr1att47_Fd1x
+@sol:comp1_mbd_cdr1att21_Fc1x
+@sol:comp1_mbd_cdr1att66_Fd1x
+@sol:comp1_mbd_cdr1att49_Fc1x
+@sol:comp1_mbd_cdr1att46_Fc1x
+@sol:comp1_mbd_cdr1att27_Fc1x
+@sol:comp1_mbd_cdr1att51_Fc1x
+@sol:comp1_mbd_cdr1att29_Fd1x
+@sol:comp1_mbd_cdr1att15_Fd1x
+@sol:comp1_mbd_cdr1att76_Fd1x
+@sol:comp1_mbd_cdr1att18_Fc1x
+@sol:comp1_mbd_cdr1att8_Fc1x
+@sol:comp1_mbd_cdr1att48_Fc1x
+@sol:comp1_mbd_cdr1att80_Fd1x
+@sol:comp1_mbd_cdr1att4_Fd1x
+@sol:comp1_mbd_cdr1att59_Fd1x
+@sol:comp1_mbd_cdr1att14_Fd1x
+@sol:comp1_mbd_cdr1att3_Fd1x
+@sol:comp1_mbd_cdr1att33_Fc1x
+@sol:comp1_mbd_cdr1att78_Fd1x
+@sol:comp1_mbd_cdr1att13_Fd1x
+@sol:comp1_mbd_cdr1att50_Fc1x
+@sol:comp1_mbd_cdr1att52_Fc1x
+@sol:comp1_mbd_cdr1att95_Fd1x
+@sol:comp1_mbd_cdr1att47_Fc1x
+@sol:comp1_mbd_cdr1att66_Fc1x
+@sol:comp1_mbd_cdr1att77_Fc1x
+@sol:comp1_mbd_cdr1att32_Fd1x
+@sol:comp1_mbd_cdr1att81_Fd1x
+@sol:comp1_mbd_cdr1att62_Fd1x
+@sol:comp1_mbd_cdr1att43_Fd1x
+@sol:comp1_mbd_cdr1att96_Fc1x
+@sol:comp1_mbd_cdr1att29_Fc1x
+@sol:comp1_mbd_cdr1att51_Fd1x
+@sol:comp1_mbd_cdr1att96_Fd1x
+@sol:comp1_mbd_cdr1att90_Fd1x
+@sol:comp1_mbd_cdr1att76_Fc1x
+@sol:comp1_mbd_att_disp
+@sol:comp1_mbd_cdr1att23_Fc1x
+@sol:comp1_mbd_cdr1att87_Fd1x
+@sol:comp1_mbd_cdr1att42_Fd1x
+@sol:comp1_mbd_cdr1att48_Fd1x
+@sol:comp1_mbd_cdr1att52_Fd1x
+@sol:comp1_mbd_cdr1att67_Fc1x
+@sol:comp1_mbd_cdr1att80_Fc1x
+@sol:comp1_mbd_cdr1att22_Fc1x
+@sol:comp1_mbd_cdr1att33_Fd1x
+@sol:comp1_mbd_cdr1att3_Fc1x
+@sol:comp1_mbd_cdr1att61_Fd1x
+@sol:comp1_mbd_cdr1att86_Fc1x
+@sol:comp1_mbd_cdr1att58_Fd1x
+@sol:comp1_mbd_cdr1att13_Fc1x
+@sol:comp1_mbd_cdr1att95_Fc1x
+@sol:comp1_mbd_cdr1att39_Fd1x
+@sol:comp1_mbd_cdr1att38_Fc1x
+@sol:comp1_mbd_cdr1att70_Fc1x
+@sol:comp1_mbd_cdr1att77_Fd1x
+@sol:comp1_mbd_cdr1att32_Fc1x
+@sol:comp1_mbd_cdr1att19_Fc1x
+@sol:comp1_mbd_cdr1att9_Fc1x
+@sol:comp1_mbd_cdr1att12_Fc1x
+@sol:comp1_mbd_cdr1att57_Fc1x
+@sol:comp1_mbd_cdr1att26_Fc1x
+@sol:comp1_mbd_cdr1att60_Fc1x
+@sol:comp1_mbd_cdr1att53_Fd1x
+@sol:comp1_mbd_cdr1att41_Fd1x
+@sol:comp1_mbd_cdr1att91_Fc1x
+@sol:comp1_mbd_cdr1att22_Fd1x
+@sol:comp1_mbd_cdr1att67_Fd1x
+@sol:comp1_mbd_cdr1att72_Fc1x
+@sol:comp1_mbd_cdr1att9_Fd1x
+@sol:comp1_mbd_cdr1att86_Fd1x
+@sol:comp1_mbd_cdr1att41_Fc1x
+@sol:comp1_mbd_cdr1att28_Fc1x
+@sol:comp1_mbd_cdr1att10_Fd1x
+@sol:comp1_mbd_cdr1att55_Fc1x
+@sol:comp1_mbd_cdr1att84_Fd1x
+@sol:comp1_mbd_cdr1att70_Fd1x
+@sol:comp1_mbd_cdr1att69_Fc1x
+@sol:comp1_mbd_cdr1att74_Fc1x
+@sol:comp1_mbd_cdr1att2_Fc1x
+@sol:comp1_mbd_cdr1att24_Fd1x
+@sol:comp1_mbd_cdr1att88_Fc1x
+@sol:comp1_mbd_cdr1att19_Fd1x
+@sol:comp1_mbd_cdr1att38_Fd1x
+@sol:comp1_mbd_cdr1att12_Fd1x
+@sol:comp1_mbd_cdr1att93_Fc1x
+@sol:comp1_mbd_cdr1att82_Fd1x
+@sol:comp1_mbd_cdr1att57_Fd1x
+@sol:comp1_mbd_cdr1att79_Fd1x
+@sol:comp1_mbd_cdr1att31_Fc1x
+@sol:comp1_mbd_cdr1att34_Fd1x
+@sol:comp1_mbd_cdr1att60_Fd1x
+@sol:comp1_mbd_cdr1att53_Fc1x
+@sol:comp1_mbd_cdr1att14_Fc1x
+@sol:comp1_mbd_cdr1att91_Fd1x
+@sol:comp1_mbd_cdr1att4_Fc1x
+@sol:comp1_mbd_cdr1att59_Fc1x
+@sol:comp1_mbd_cdr1att72_Fd1x
+@sol:comp1_mbd_cdr1att78_Fc1x
+@sol:comp1_mbd_cdr1att28_Fd1x
+@sol:comp1_mbd_cdr1att81_Fc1x
+@sol:comp1_mbd_cdr1att84_Fc1x
+@sol:comp1_mbd_cdr1att5_Fd1x
+@sol:comp1_mbd_cdr1att2_Fd1x
+@sol:comp1_mbd_cdr1att24_Fc1x
+@sol:comp1_mbd_cdr1att69_Fd1x
+@sol:comp1_mbd_cdr1att88_Fd1x
+@sol:comp1_mbd_cdr1att62_Fc1x
+@sol:comp1_mbd_cdr1att43_Fc1x
+@sol:comp1_mbd_cdr1att93_Fd1x
+@sol:comp1_mbd_cdr1att65_Fc1x
+@sol:comp1_mbd_cdr1att82_Fc1x
+@sol:comp1_mbd_cdr1att20_Fc1x
+@sol:comp1_mbd_cdr1att34_Fc1x
+@sol:comp1_mbd_cdr1att79_Fc1x
+@sol:comp1_mbd_cdr1att31_Fd1x
+@sol:comp1_mbd_att2_Fd1x
+@sol:comp1_mbd_cdr1att63_Fd1x
+@sol:comp1_mbd_cdr1att45_Fd1x
+@sol:comp1_mbd_cdr1att17_Fc1x
+@sol:comp1_mbd_cdr1att94_Fd1x
+@sol:comp1_mbd_att_rot
+@sol:comp1_mbd_cdr1att7_Fc1x
+@sol:comp1_mbd_cdr1att64_Fc1x
+@sol:comp1_mbd_cdr1att83_Fc1x
+@sol:comp1_mbd_att1_Fd1x
+@sol:comp1_mbd_cdr1att75_Fd1x
+@sol:comp1_mbd_cdr1att36_Fc1x
+@sol:comp1_mbd_cdr1att89_Fd1x
+@sol:comp1_mbd_cdr1att6_Fd1x
+@sol:comp1_mbd_cdr1att92_Fd1x
+@sol:comp1_mbd_cdr1att63_Fc1x
+@sol:comp1_mbd_cdr1att27_Fd1x
+@sol:comp1_mbd_cdr1att5_Fc1x
+@sol:comp1_mbd_cdr1att16_Fd1x
+@sol:comp1_mbd_cdr1att46_Fd1x
+@sol:comp1_mbd_cdr1att54_Fc1x
+@sol:comp1_mbd_cdr1att20_Fd1x
+@sol:comp1_mbd_cdr1att65_Fd1x
+@sol:comp1_mbd_jnt_rot
+@sol:comp1_mbd_cdr1att74_Fd1x
+@sol:comp1_mbd_cdr1att26_Fd1x
+@sol:comp1_mbd_att2_Fc1x
+@sol:comp1_mbd_att1_Fc1x
+@sol:comp1_mbd_cdr1att17_Fd1x
+@sol:comp1_mbd_cdr1att1_Fd1x
+@sol:comp1_mbd_cdr1att45_Fc1x
+@sol:comp1_mbd_cdr1att11_Fd1x
+@sol:comp1_mbd_cdr1att64_Fd1x
+@sol:comp1_mbd_cdr1att7_Fd1x
+@sol:comp1_mbd_cdr1att83_Fd1x
+@sol:comp1_mbd_cdr1att30_Fd1x
+@sol:comp1_mbd_cdr1att89_Fc1x
+@sol:comp1_mbd_cdr1att6_Fc1x
+@sol:comp1_mbd_cdr1att36_Fd1x
+@sol:comp1_mbd_cdr1att92_Fc1x
+@sol:comp1_mbd_cdr1att55_Fd1x
+@sol:comp1_mbd_cdr1att10_Fc1x
+@sol:comp1_mbd_cdr1att73_Fc1x
+@sol:comp1_mbd_cdr1att16_Fc1x
+@sol:comp1_mbd_cdr1att35_Fc1x
+@sol:t
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:vol
+@result:arwl
+@view:view
+@result:selection
+@result:con
+@result:filt
+@result:glob
+@export
+@export:anim
+sys
+@tag:sys
+@type:boundary
+@label:boundary system
+mbdcdr1agrp
+@tag:mbdcdr1agrp
+physics
+@type:physics
+attachments
+@label:cdr1: link
+mbdcdr1jgrp
+@tag:mbdcdr1jgrp
+joints
+@label:cdr1: link (hinge joints
+mbdcdr1sgrp
+@tag:mbdcdr1sgrp
+@label:cdr1: sprocket
+mbdcdr1cgrp
+@tag:mbdcdr1cgrp
+@label:cdr1: contact
+res
+soldata

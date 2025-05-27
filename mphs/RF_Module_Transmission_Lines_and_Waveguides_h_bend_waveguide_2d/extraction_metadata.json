@@ -1,0 +1,14 @@
+{
+  "source_file": "RF_Module/Transmission_Lines_and_Waveguides/h_bend_waveguide_2d.mph",
+  "source_size": 5206522,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 33
+}

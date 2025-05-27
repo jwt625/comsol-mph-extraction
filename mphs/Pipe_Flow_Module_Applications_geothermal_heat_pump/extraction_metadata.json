@@ -1,0 +1,14 @@
+{
+  "source_file": "Pipe_Flow_Module/Applications/geothermal_heat_pump.mph",
+  "source_size": 3469516,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310389.099",
+  "total_files_in_archive": 122
+}

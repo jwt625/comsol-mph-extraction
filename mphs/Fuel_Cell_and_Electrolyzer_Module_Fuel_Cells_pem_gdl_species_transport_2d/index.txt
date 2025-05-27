@@ -1,0 +1,546 @@
+species
+transport
+gas
+diffusion
+layers
+pem
+example
+demonstrates
+modeling
+within
+gdls
+proton
+exchange
+membrane
+fuel
+cell
+with
+two
+adjacent
+flow
+channels
+different
+pressures
+model
+pem_gdl_species_transport_2d
+mph
+param
+parameters
+v_cell
+voltage
+kappa_p
+gdl
+permeability
+p_ref
+reference
+pressure
+e_eq_a
+equilibrium
+potential
+anode
+i0_c
+current
+density
+cathode
+specific
+surface
+area
+agglomerate
+d_agg
+effective
+coefficient
+inside
+agglomerates
+xh2oa_in
+inlet
+molar
+fraction
+h2o
+xo2_in
+ko
+henry's
+law
+constant
+default
+fc
+@tag:fc
+hydrogenfuelcell
+@type:hydrogenfuelcell
+hydrogen
+@label:hydrogen fuel cell
+electricpotentialionicphase_disc
+electricpotential_disc
+massfraction_disc
+pressure_disc
+activity_disc
+chemicalpotential_disc
+icph
+@tag:icph
+electrolytephase
+@type:electrolytephase
+electrolyte
+phase
+@label:electrolyte phase
+init
+@tag:init
+initialvalues
+@type:initialvalues
+initial
+values
+@label:initial values
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+ecph
+@tag:ecph
+electronicconductingphase
+@type:electronicconductingphase
+electronic
+conducting
+@label:electronic conducting phase
+inito2dom
+@tag:inito2dom
+initialvalueso2domains
+@type:initialvalueso2domains
+domains
+@label:initial values, o2 domains
+egnd
+@tag:egnd
+electricground
+@type:electricground
+electric
+ground
+@label:electric ground
+pot
+@tag:pot
+electricpotential
+@type:electricpotential
+@label:electric potential
+h2gasph
+@tag:h2gasph
+h2gasphase
+@type:h2gasphase
+@label:h2 gas phase
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+h2in
+@tag:h2in
+h2inlet
+@type:h2inlet
+@label:h2 inlet
+o2gasph
+@tag:o2gasph
+o2gasphase
+@type:o2gasphase
+@label:o2 gas phase
+o2in
+@tag:o2in
+o2inlet
+@type:o2inlet
+@label:o2 inlet
+mem
+@tag:mem
+@type:membrane
+@label:membrane
+wadh2side
+@tag:wadh2side
+waterabsorptiondesorptionh2side
+@type:waterabsorptiondesorptionh2side
+water
+absorption-desorption
+side
+@label:water absorption-desorption, h2 side
+wado2side
+@tag:wado2side
+waterabsorptiondesorptiono2side
+@type:waterabsorptiondesorptiono2side
+@label:water absorption-desorption, o2 side
+h2gdl
+@tag:h2gdl
+h2gasdiffusionlayer
+@type:h2gasdiffusionlayer
+layer
+@label:h2 gas diffusion layer
+o2gdl
+@tag:o2gdl
+o2gasdiffusionlayer
+@type:o2gasdiffusionlayer
+@label:o2 gas diffusion layer
+th2gde
+@tag:th2gde
+thinh2gasdiffusionelectrode
+@type:thinh2gasdiffusionelectrode
+thin
+electrode
+@label:thin h2 gas diffusion electrode
+th2gder
+@tag:th2gder
+thinh2gasdiffusionelectrodereaction
+@type:thinh2gasdiffusionelectrodereaction
+reaction
+@label:thin h2 gas diffusion electrode reaction
+to2gde
+@tag:to2gde
+thino2gasdiffusionelectrode
+@type:thino2gasdiffusionelectrode
+@label:thin o2 gas diffusion electrode
+to2gder
+@tag:to2gder
+thino2gasdiffusionelectrodereaction
+@type:thino2gasdiffusionelectrodereaction
+@label:thin o2 gas diffusion electrode reaction
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+arr
+@tag:arr
+array
+@type:array
+@label:array
+uni
+@tag:uni
+union
+@type:union
+@label:union
+fil
+@tag:fil
+fillet
+@type:fillet
+@label:fillet
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+variables
+wreact
+mass
+reactant
+ch2_agg
+concentration
+lda_a
+anodic
+subexpression
+gde
+co2_agg
+oxygen
+i_c
+aveop
+@tag:aveop
+average
+@type:average
+collector
+@label:average collector
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+@label:anode gdl
+@label:cathode gdl
+@label:anode gde
+@label:cathode gde
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+nafion
+ew
+vapor
+equilibrated
+protonated
+@label:nafion, ew 1100, vapor equilibrated, protonated
+electrolyteconductivity
+conductivity
+int
+@tag:int
+interpolation
+@type:interpolation
+@label:interpolation
+membranecrossover
+crossover
+polymerelectrolytewatertransport
+polymer
+polymerelectrolytewaterabsorptiondesorption
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+free
+triangular
+@label:free triangular
+meshnative
+image
+@tag:image
+@type:mesh
+@label:mesh
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+cdi
+@tag:cdi
+currentdistributioninitialization
+@type:currentdistributioninitialization
+distribution
+initialization
+@label:current distribution initialization
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+dependent
+@label:dependent variables
+comp1_fc_mu
+@tag:comp1_fc_mu
+field
+@type:field
+chemical
+mu
+@label:chemical potential
+comp1_fc_p_h
+@tag:comp1_fc_p_h
+p_h
+@label:pressure
+comp1_fc_p_o
+@tag:comp1_fc_p_o
+p_o
+comp1_fc_phil
+@tag:comp1_fc_phil
+phil
+@label:electrolyte potential
+comp1_fc_phis
+@tag:comp1_fc_phis
+phis
+comp1_fc_wh2o_h
+@tag:comp1_fc_wh2o_h
+wh2o_h
+@label:mass fraction
+comp1_fc_wh2o_o
+@tag:comp1_fc_wh2o_o
+wh2o_o
+comp1_fc_wn2_o
+@tag:comp1_fc_wn2_o
+wn2_o
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@label:parametric
+solutions
+tortx
+torty
+@label:tortx=1.1, torty
+@label:tortx=2.8, torty
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+mole
+@label:mole fraction, h
+surf
+@tag:surf
+@type:surface
+@label:surface
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+@label:mole fraction, o
+@label:mole fraction, h2o
+@label:mole fraction, n
+activity
+relative
+humidity
+@label:relative humidity
+plotgroup1d
+@type:plotgroup1d
+polarization
+curves
+@label:polarization curves
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:gdl current density distribution
+arws
+@tag:arws
+arrowsurface
+@type:arrowsurface
+arrow
+@label:arrow surface
+@label:anode reaction current density
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+velocity
+@label:velocity field
+@label:reactant mass fraction
+geommanagernative
+hist
+@physics:fc
+@study:std
+@study:cdi
+@study:stat
+@geom:geom
+@geom:r
+@geom:arr
+@geom:input
+@geom:selection
+@geom:uni
+@geom:fil
+@geom:point
+@selection
+@selection:sel
+@expr:var
+@expr:selection
+@cpl
+@cpl:aveop
+@cpl:selection
+@material:mat
+@material:materialmodel
+@material:ElectrolyteConductivity
+@material:func
+@material:PolymerElectrolyteWaterTransport
+@material:int
+@material:MembraneCrossover
+@material:PolymerElectrolyteWaterAbsorptionDesorption
+@material:selection
+@common:cminpt
+@mesh:mesh
+@mesh:size
+@mesh:selection
+@study:param
+@sol:sol
+@sol:st
+@sol:v
+@sol:comp1_fc_phis
+@sol:comp1_fc_phil
+@sol:comp1_fc_mu
+@sol:s
+@sol:fc
+@sol:d
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:comp1_fc_wH2O_O
+@sol:comp1_fc_wN2_O
+@sol:comp1_fc_wH2O_H
+@sol:p
+@batch:p
+@batch:so
+@result:pg
+@result:surf
+@result:arws
+@result:filt
+@result:str
+@result:glob
+@result:lngr
+@result:selection
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+res
+soldata

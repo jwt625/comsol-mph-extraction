@@ -1,0 +1,537 @@
+tapered
+waveguide
+optical
+structure
+used
+matching
+two
+waveguides
+having
+different
+geometric
+cross
+sections
+and/or
+material
+parameters
+section
+input
+plane
+output
+planes
+core
+width
+changes
+linearly
+with
+propagation
+distance
+model
+demonstrates
+define
+user-defined
+phase
+wave
+vector
+electromagnetic
+waves
+beam
+envelopes
+interface
+perfectly
+matched
+layers
+pmls
+absorbing
+radiation
+port
+mode
+fields
+tapered_waveguide
+mph
+param
+lam
+wavelength
+d_taper
+taper
+length
+w_core
+n_core
+refractive
+index
+default
+ewbe
+@tag:ewbe
+electromagneticwavesbeamenvelopes
+@type:electromagneticwavesbeamenvelopes
+@label:electromagnetic waves, beam envelopes
+electricfield
+webe
+@tag:webe
+waveequationbeamenvelopes
+@type:waveequationbeamenvelopes
+equation
+@label:wave equation, beam envelopes
+pec
+@tag:pec
+perfectelectricconductor
+@type:perfectelectricconductor
+perfect
+electric
+conductor
+@label:perfect electric conductor
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+@tag:port
+@type:port
+@label:port
+image
+@tag:image
+physicsfeature
+@type:physicsfeature
+physics_feature
+@label:physics_feature
+geom
+geometry
+geomnative
+pi
+@tag:pi
+partinstance
+@type:partinstance
+@label:tapered waveguide
+part_instance
+storedlocalsubsequence
+copy
+slab
+pch
+@tag:pch
+parametercheck
+@type:parametercheck
+real
+check
+@label:input core width real check
+positiveness
+@label:input core width positiveness check
+cladding
+@label:input cladding width real check
+@label:input cladding width positiveness check
+offset
+@label:input core offset real check
+@label:output core width real check
+@label:output core width positiveness check
+@label:output cladding width real check
+@label:output cladding width positiveness check
+@label:output core offset real check
+@label:output offset real check
+element
+@label:element length real check
+@label:element length positiveness check
+upper
+limit
+@label:input core width upper limit check
+absolute
+value
+@label:input core offset absolute value upper limit check
+@label:output core width upper limit check
+@label:output core offset absolute value upper limit check
+pol
+@tag:pol
+polygon
+@type:polygon
+@label:polygon
+sketchobject
+uni
+@tag:uni
+union
+@type:union
+@label:union
+sel
+@tag:sel
+explicitselection
+@type:explicitselection
+unisel
+@tag:unisel
+unionselection
+@type:unionselection
+@label:all
+adjsel
+@tag:adjsel
+adjacentselection
+@type:adjacentselection
+exterior
+@label:exterior
+port_x_core
+@label:port_x_core
+port_x_cladding
+@label:port_x_cladding
+port_x
+@label:port_x
+difsel
+@tag:difsel
+differenceselection
+@type:differenceselection
+transverse_perimeter
+@label:transverse_perimeter
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+geommanagernative
+inputparam
+input_core_width
+output_core_width
+output_offset
+localparam
+local
+baseunitsystem
+micrometer
+radian
+degree
+@label:input waveguide
+straight
+@label:core width real check
+@label:core width positiveness check
+@label:cladding width real check
+@label:cladding width positiveness check
+@label:core offset real check
+@label:core width upper limit check
+@label:core offset absolute value upper limit check
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+core_width
+element_length
+pml
+@label:input pml
+@label:output waveguide
+@label:output pml
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+@label:form union
+form_union/assembly
+pi1_adjsel
+pi1_sel
+pi1_unisel
+pi1_difsel
+transverse
+perimeter
+csel
+dom
+bnd
+pnt
+non-pml
+pi2_adjsel
+pi2_sel
+pi2_unisel
+pi2_difsel
+pi3_adjsel
+pi3_sel
+pi3_unisel
+pi3_difsel
+pi4_adjsel
+pi4_sel
+pi4_unisel
+pi4_difsel
+pi5_adjsel
+pi5_sel
+pi5_unisel
+pi5_difsel
+@type:geometry
+@label:geometry
+part
+var
+kx
+fixed
+spatial
+mesh
+geom1_csel1_dom
+@tag:geom1_csel1_dom
+fromsequence
+@type:fromsequence
+@label:core
+geom1_csel2_dom
+@tag:geom1_csel2_dom
+@label:non-pml
+geom1_pi1_unisel
+@tag:geom1_pi1_unisel
+@label:all (tapered waveguide
+geom1_pi1_difsel
+@tag:geom1_pi1_difsel
+@label:transverse perimeter (tapered waveguide
+geom1_pi2_unisel
+@tag:geom1_pi2_unisel
+@label:all (input waveguide
+geom1_csel3_bnd
+@tag:geom1_csel3_bnd
+@label:straight waveguide transverse perimeter
+@label:port 1 (input waveguide
+geom1_pi3_unisel
+@tag:geom1_pi3_unisel
+@label:port 1 (input pml
+@label:all (input pml
+geom1_csel4_dom
+@tag:geom1_csel4_dom
+@label:pml
+geom1_pi3_sel
+@tag:geom1_pi3_sel
+@label:port 1 core (input pml
+@label:port 1 cladding (input pml
+geom1_pi4_unisel
+@tag:geom1_pi4_unisel
+@label:all (output waveguide
+@label:port 2 (output waveguide
+geom1_pi5_unisel
+@tag:geom1_pi5_unisel
+@label:all (output pml
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+mat
+@tag:mat
+common
+@type:common
+@label:cladding
+refractiveindex
+@type:material
+@label:material
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+meshnative
+@tag:p
+parametric
+@type:parametric
+sweep
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+bma
+@tag:bma
+boundarymodeanalysis
+@type:boundarymodeanalysis
+boundary
+analysis
+@label:boundary mode analysis
+@tag:wave
+@type:wavelength
+domain
+@label:wavelength domain
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_e
+@tag:comp1_e
+field
+@type:field
+envelope
+first
+@label:electric field envelope, first wave
+comp1_ewbe_ebm
+@tag:comp1_ewbe_ebm
+ebm
+@label:boundary mode electric field
+@tag:e
+eigenvalue
+@type:eigenvalue
+solver
+@label:eigenvalue solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+su
+@tag:su
+storesolution
+@type:storesolution
+store
+@label:solution store
+@tag:s
+stationary
+@type:stationary
+@label:stationary solver
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+n_taper
+@label:n_taper
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:electric field
+surf
+@tag:surf
+surface
+@type:surface
+hght
+@tag:hght
+height
+@type:height
+expression
+@label:height expression
+plotgroup1d
+@type:plotgroup1d
+transmittance
+@label:transmittance
+glob
+@tag:glob
+global
+@type:global
+@label:global
+@label:electric mode field, port
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+graph
+@label:line graph
+hist
+@study:std
+@study:wave
+@physics:ewbe
+@geom:geom
+@geom:pi
+@geom:selection
+@geom:csel
+@material:mat
+@material:materialmodel
+@material:RefractiveIndex
+@material:selection
+@coordsys:pml
+@coordsys:selection
+@expr:var
+@expr:selection
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:dis
+@mesh:map
+@study:param
+@study:bma
+@sol:sol
+@sol:st
+@sol:v
+@sol:e
+@sol:aDef
+@sol:s
+@sol:p
+@sol:fc
+@batch:p
+@batch:so
+@result:pg
+@result:surf
+@result:glob
+@result:lngr
+@result:selection
+@view:view
+@view:camera
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+@tag:pml
+@type:pml
+layer
+@label:perfectly matched layer
+coordsys
+@type:coordsys
+coordinate_system
+@label:coordinate_system
+res
+soldata

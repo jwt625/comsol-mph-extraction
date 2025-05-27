@@ -1,0 +1,679 @@
+double-pipe
+heat
+exchanger
+exchangers
+with
+typical
+u-turn
+shape
+simplest
+cheapest
+type
+used
+chemical
+process
+industry
+example
+studies
+cooling
+engine
+oil
+entering
+130°c
+cold
+transformer
+60°c
+counter-current
+meshing
+part
+presented
+handles
+possible
+difficulties
+due
+high
+aspect
+ratio
+device
+postprocessing
+various
+quantities
+describe
+performance
+efficiency
+model
+double_pipe_heat_exchanger
+mph
+param
+parameters
+t_hot
+temperature
+v_cold
+inlet
+velocity
+default
+spf
+@tag:spf
+laminarflow
+@type:laminarflow
+laminar
+flow
+@label:laminar flow
+pressure
+turbulentkineticenergy
+turbulentdissipationrate
+specificdissipationrate
+reciprocallength
+correctedvelocity
+correctedpressure
+turbulentkinematicviscosity
+dimensionless
+fp
+@tag:fp
+fluidproperties
+@type:fluidproperties
+fluid
+properties
+@label:fluid properties
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+wallbc
+@tag:wallbc
+@type:wallbc
+wall
+@label:wall
+inl
+@tag:inl
+inletboundary
+@type:inletboundary
+@label:inlet 1: transformer oil
+@tag:out
+outletboundary
+@type:outletboundary
+outlet
+@label:outlet 1: transformer oil
+@label:inlet 2: engine oil
+@label:outlet 2: engine oil
+iwbc
+@tag:iwbc
+interiorwallbc
+@type:interiorwallbc
+interior
+@label:interior wall
+ht
+@tag:ht
+heattransferinfluids
+@type:heattransferinfluids
+transfer
+fluids
+@label:heat transfer in fluids
+discontinuousdamagedtissueindicator_disc
+continuousdamagedtissueindicator_disc
+thermaldamageindicator_disc
+radiativeintensity_disc
+incidentradiation_disc
+surfaceradiosity_disc
+@tag:fluid
+fluidheattransfermodel
+@type:fluidheattransfermodel
+@label:fluid
+ins
+@tag:ins
+thermalinsulation
+@type:thermalinsulation
+thermal
+insulation
+@label:thermal insulation
+ifl
+@tag:ifl
+inflow
+@type:inflow
+@label:inflow 1: transformer oil
+ofl
+@tag:ofl
+convectiveoutflow
+@type:convectiveoutflow
+outflow
+@label:outflow 1: transformer oil
+@label:inflow 2: engine oil
+@label:outflow 2: engine oil
+sls
+@tag:sls
+solidlayeredshell
+@type:solidlayeredshell
+thin
+layer
+@label:thin layer
+geom
+geometry
+geomnative
+imp
+@tag:imp
+import
+@type:import
+@label:import
+wp
+@tag:wp
+workplane
+@type:workplane
+work
+plane
+@label:work plane
+sequence2d
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+par
+@tag:par
+partition
+@type:partition
+objects
+@label:partition objects
+partition_objects
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+mat3_xdim
+extra
+dimension
+steel
+aisi
+@tag:i
+interval
+@type:interval
+@label:interval
+aveop
+@tag:aveop
+average
+@type:average
+@label:average over interior wall
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+inner
+pipe
+@label:inner pipe
+adj
+@tag:adj
+adjacent
+@type:adjacent
+boundaries
+@label:inner pipe, boundaries
+@label:inner pipe, inlet
+@label:inner pipe, outlet
+com
+@tag:com
+complement
+@type:complement
+outer
+@label:outer pipe
+@label:outer pipe, boundaries
+@label:outer pipe, inlet
+@label:outer pipe, outlet
+int
+@tag:int
+intersection
+@type:intersection
+walls
+@label:interior walls
+dif
+@tag:dif
+difference
+@type:difference
+@label:steel walls
+mat3_xdim_pa
+@tag:mat3_xdim_pa
+pointstoattach
+@type:pointstoattach
+points
+attach
+@label:points to attach
+mat3_xdim_ad
+@tag:mat3_xdim_ad
+attachdimensions
+@type:attachdimensions
+attached
+dimensions
+@label:attached dimensions
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+modelview1d
+@type:modelview1d
+axis1d
+@type:axis1d
+modelview2d
+@type:modelview2d
+axis2d
+@type:axis2d
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+nitf
+@tag:nitf
+nonisothermalflow
+@type:nonisothermalflow
+nonisothermal
+@label:nonisothermal flow
+mat
+@tag:mat
+common
+@type:common
+@label:engine oil
+eta
+@tag:eta
+piecewise
+@type:piecewise
+@label:piecewise
+cp
+@tag:cp
+rho
+@tag:rho
+@tag:k
+@label:transformer oil
+@label:steel aisi
+enu
+young's
+modulus
+poisson's
+shell
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+ftet
+@tag:ftet
+freetet
+@type:freetet
+free
+tetrahedral
+@label:free tetrahedral
+@type:size
+image
+@tag:image
+meshfeature
+@type:meshfeature
+mesh_feature
+@label:mesh_feature
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+@label:boundary layer properties
+info
+@tag:info
+meshinformation
+@type:meshinformation
+information
+@label:information
+meshnative
+ls_edg
+@tag:ls_edg
+edge
+@type:edge
+@label:edge
+ls_dis
+@tag:ls_dis
+optsequence
+std
+study
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_nitf1_uave
+@tag:comp1_nitf1_uave
+field
+@type:field
+magnitude
+uave
+@label:velocity magnitude, average
+comp1_p
+@tag:comp1_p
+@label:pressure
+comp1_t
+@tag:comp1_t
+@label:temperature
+comp1_u
+@tag:comp1_u
+@label:velocity field
+comp1_spf_inl1_pinlfdf
+@tag:comp1_spf_inl1_pinlfdf
+state
+@type:state
+help
+ode
+variable
+fully
+developed
+pinlfdf
+@label:help ode variable for fully developed flow
+comp1_spf_inl2_pinlfdf
+@tag:comp1_spf_inl2_pinlfdf
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+se
+@tag:se
+segregated
+@type:segregated
+@label:segregated
+ss
+@tag:ss
+segregatedstep
+@type:segregatedstep
+@label:velocity u, pressure p
+ll
+@tag:ll
+lowerlimit
+@type:lowerlimit
+lower
+limit
+@label:lower limit
+iterative
+@type:iterative
+amg
+@label:amg, fluid flow variables
+mg
+@tag:mg
+multigrid
+@type:multigrid
+@label:multigrid
+pr
+@tag:pr
+presmoother
+@type:presmoother
+@label:presmoother
+sc
+@tag:sc
+scgs
+@type:scgs
+@label:scgs
+po
+@tag:po
+postsmoother
+@type:postsmoother
+@label:postsmoother
+cs
+@tag:cs
+coarsesolver
+@type:coarsesolver
+coarse
+@label:coarse solver
+@tag:d
+direct
+@type:direct
+@label:direct
+@label:direct, heat transfer variables
+result
+results
+dset
+@tag:dset
+@type:solution
+surf
+@tag:surf
+surface
+@type:surface
+@label:all walls
+exterior
+@label:exterior walls
+lshl
+@tag:lshl
+layeredmaterial
+@type:layeredmaterial
+layered
+@label:layered material
+cpl
+@tag:cpl
+cutplane
+@type:cutplane
+cut
+@label:cut plane
+gev
+@tag:gev
+evalglobal
+@type:evalglobal
+coefficient
+@label:heat transfer coefficient
+av
+@tag:av
+avsurface
+@type:avsurface
+@label:outlet temperature, transformer oil
+@label:outlet temperature, engine oil
+@label:inlet pressure, transformer oil
+@label:inlet pressure, engine oil
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup3d
+@type:plotgroup3d
+@label:velocity
+slc
+@tag:slc
+slice
+@type:slice
+@label:slice
+@label:surface
+tran
+@tag:tran
+transparency
+@type:transparency
+@label:transparency
+slit
+@tag:slit
+surfaceslit
+@type:surfaceslit
+@label:surface slit
+vol
+@tag:vol
+volume
+@type:volume
+domain
+@label:domain
+@label:layered shell
+line
+@tag:line
+@type:line
+edges
+@label:layered shell edges
+@label:temperature and fluid flow
+@label:wall temperature
+selection
+@type:selection
+@label:selection
+arwv
+@tag:arwv
+arrowvolume
+@type:arrowvolume
+@label:fluid flow
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+filt
+@tag:filt
+filter
+@type:filter
+@label:filter
+plotgroup2d
+@type:plotgroup2d
+center
+@label:temperature (2d center plane
+geommanagernative
+hist
+@physics:spf
+@physics:ht
+@multiphysics
+@multiphysics:nitf
+@study:std
+@study:stat
+@geom:geom
+@geom:imp
+@selection
+@selection:sel
+@selection:adj
+@view:view
+@selection:com
+@selection:int
+@selection:dif
+@material:mat
+@material:materialmodel
+@material:func
+@material:eta
+@material:Cp
+@material:rho
+@material:k
+@material:Enu
+@material:selection
+@material:shell
+@cpl
+@cpl:aveop
+@cpl:selection
+@geom:wp
+@geom:face
+@geom:selection
+@geom:par
+@geom:input
+@mesh:mesh
+@mesh:size
+@mesh:ftet
+@mesh:selection
+@mesh:swe
+@mesh:dis
+@mesh:bl
+@mesh:blp
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:se
+@sol:ss
+@sol:i
+@sol:mg
+@sol:pr
+@sol:sc
+@sol:po
+@sol:cs
+@sol:d
+@sol:ll
+@sol:so
+@dataset:dset
+@result:pg
+@result:slc
+@dataset:surf
+@dataset:selection
+@result:surf
+@result:slit
+@dataset:lshl
+@result:selection
+@result:vol
+@result:line
+@result:sel
+@result:arwv
+@result:col
+@result:filt
+@view:camera
+@dataset:cpl
+@view:axis
+@numerical
+@numerical:gev
+@table:tbl
+@numerical:av
+@numerical:selection
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+res
+soldata

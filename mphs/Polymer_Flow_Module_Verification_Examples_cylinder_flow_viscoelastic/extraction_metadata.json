@@ -1,0 +1,14 @@
+{
+  "source_file": "Polymer_Flow_Module/Verification_Examples/cylinder_flow_viscoelastic.mph",
+  "source_size": 9509870,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310399.133",
+  "total_files_in_archive": 23
+}

@@ -1,0 +1,391 @@
+scattered
+field
+formulation
+elastic
+waves
+model
+showcases
+solve
+knowing
+incident
+three
+different
+types
+scatterer
+infinitely
+rigid
+cavity
+inclusion
+useful
+far-field
+source
+probing
+wave
+resembles
+plane
+case
+including
+require
+unnecessarily
+huge
+computational
+domain
+meshed
+used
+fields
+moreover
+shows
+compute
+numerically
+emitted
+point
+solution
+known
+subsequent
+study
+scattering
+problem
+solved
+scattered_field_elastic_waves
+mph
+param
+parameters
+rho
+density
+background
+material
+rho_o
+obstacle
+cp
+speed
+omega
+angular
+frequency
+wlengths
+wavelength
+r_layer
+thickness
+pml
+default
+par
+geometrical
+solid
+@tag:solid
+solidmechanics
+@type:solidmechanics
+mechanics
+@label:solid mechanics
+displacement
+solid_rd_disp
+solid_rd_rot
+solid_rig_disp
+solid_rig_rot
+solid_att_disp
+solid_att_rot
+lemm
+@tag:lemm
+linearelasticmodel
+@type:linearelasticmodel
+@label:background material
+free
+@tag:free
+@type:free
+@label:free
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+bndl
+@tag:bndl
+boundaryload
+@type:boundaryload
+@label:cavity inclusion, p wave
+disp
+@tag:disp
+@type:displacement1
+@label:infinitely rigid inclusion, p wave
+@label:elastic inclusion, p wave
+iss
+@tag:iss
+initialstressandstrain
+@type:initialstressandstrain
+stress
+strain
+@label:initial stress and strain
+bl
+@tag:bl
+bodyload
+@type:bodyload
+body
+load
+@label:body load (elastic inclusion), p wave
+@label:cavity inclusion, s wave
+@label:infinitely rigid inclusion, s wave
+@label:elastic inclusion, s wave
+@label:body load (elastic inclusion), s wave
+pl
+@tag:pl
+pointload
+@type:pointload
+@label:point load
+@label:cavity inclusion, point source
+@label:infinitely rigid inclusion, point source
+@label:elastic inclusion, point source
+@label:body load (elastic inclusion), point source
+fix
+@tag:fix
+fixed
+@type:fixed
+constraint
+@label:fixed constraint
+geom
+geometry
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+pt
+@tag:pt
+@type:point
+@label:point
+arr
+@tag:arr
+array
+@type:array
+@label:array
+del
+@tag:del
+delete
+@type:delete
+entities
+@label:delete entities
+delete_entities
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+var
+up
+eps22p
+tensor
+component
+s22p
+us
+eps22s
+s22s
+ups
+eps22ps
+s22ps
+genext
+@tag:genext
+generalextrusion
+@type:generalextrusion
+general
+extrusion
+@label:general extrusion
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview2d
+@type:resultview2d
+2d
+@label:view 2d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+comp
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+optsequence
+std
+freq
+@tag:freq
+@type:frequency
+@label:frequency domain
+total
+no
+sol
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_u
+@tag:comp1_u
+@type:field
+@label:displacement field
+@tag:s
+stationary
+@type:stationary
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+result
+results
+dset
+@tag:dset
+@type:solution
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:scattered u field
+surf
+@tag:surf
+surface
+@type:surface
+@label:incident p wave
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+tlan
+@tag:tlan
+tableannotation
+@type:tableannotation
+table
+annotation
+@label:table annotation
+@label:incident s wave
+@label:scattered v field
+magnitude
+@label:scattered displacement field magnitude
+@label:scattered p wave
+@label:scattered s wave
+@label:total displacement field magnitude
+@label:total p wave
+@label:total s wave
+@label:point source background fields
+@label:displacement magnitude
+@label:p wave
+@label:s wave
+@label:point source scattered displacement field magnitude
+@label:surface
+@label:point source total displacement field magnitude
+@label:scattered field formulation
+@label:no scattered field formulation
+@label:point source total p wave
+@label:point source total s wave
+geommanagernative
+hist
+@study:std
+@study:freq
+@physics:solid
+@param:group
+@param:par
+@geom:geom
+@geom:c
+@geom:arr
+@geom:input
+@geom:selection
+@geom:del
+@coordsys:pml
+@coordsys:selection
+@expr:var
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:size
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:p
+@sol:aDef
+@sol:fc
+@result:pg
+@result:surf
+@result:sel
+@result:selection
+@result:tlan
+@nodeGroup:grp
+@geom:pt
+@cpl
+@cpl:genext
+@cpl:selection
+sys
+@tag:sys
+boundary
+@type:boundary
+system
+@label:boundary system
+@tag:pml
+@type:pml
+perfectly
+matched
+layer
+@label:perfectly matched layer
+grp
+@tag:grp
+physics
+@type:physics
+@type:results
+@label:plane wave
+@label:point source
+soldata

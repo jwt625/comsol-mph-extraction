@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Applications/bh_curve_checker.mph",
+  "source_size": 1447518,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.736",
+  "total_files_in_archive": 83
+}

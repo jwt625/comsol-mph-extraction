@@ -1,0 +1,14 @@
+{
+  "source_file": "COMSOL_Multiphysics/Equation_Based/spherically_symmetric_transport.mph",
+  "source_size": 281608,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310268.958",
+  "total_files_in_archive": 18
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "Acoustics_Module/Electroacoustic_Transducers/vented_loudspeaker_enclosure.mph",
+  "source_size": 4058953,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310230.43",
+  "total_files_in_archive": 82
+}

@@ -1,0 +1,14 @@
+{
+  "source_file": "ACDC_Module/Verifications/multiturn_coil_asymmetric_conductor.mph",
+  "source_size": 1222327,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310209.739",
+  "total_files_in_archive": 27
+}

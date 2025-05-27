@@ -1,0 +1,622 @@
+dipolar
+microwave
+plasma
+source
+sustained
+electron
+cyclotron
+resonance
+ecr
+studied
+power
+deposition
+electromagnetic
+waves
+occurs
+thin
+zone
+static
+magnetic
+flux
+density
+equal
+resonant
+requires
+module
+ac/dc
+rf
+model
+dipolar_ecr_source
+mph
+param
+parameters
+radius
+default
+mf
+@tag:mf
+inductioncurrents
+@type:inductioncurrents
+fields
+@label:magnetic fields
+magneticvectorpotential
+fsp
+@tag:fsp
+freespace
+@type:freespace
+free
+space
+@label:free space
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+mi
+@tag:mi
+magneticinsulation
+@type:magneticinsulation
+insulation
+@label:magnetic insulation
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+alf
+@tag:alf
+ampereslawfluid
+@type:ampereslawfluid
+amp&#xe8;re's
+law
+fluids
+@label:amp&#xe8;re's law in fluids
+coil
+@tag:coil
+@type:coil
+@label:coil
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+xsec
+@tag:xsec
+crosssectionimport
+@type:crosssectionimport
+cross
+section
+import
+@label:cross section import
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+e+ar=&gt;e+ar
+@label:1: e+ar=&gt;e+ar
+e+ar=&gt;e+ars
+@label:2: e+ar=&gt;e+ars
+e+ars=&gt;e+ar
+@label:3: e+ars=&gt;e+ar
+e+ar=&gt;2e+ar
+@label:4: e+ar=&gt;2e+ar
+e+ars=&gt;2e+ar
+@label:5: e+ars=&gt;2e+ar
+rxn
+@tag:rxn
+reaction
+@type:reaction
+ars+ar=&gt;ar+ar
+@label:6: ars+ar=&gt;ar+ar
+ars+ars=&gt;e+ar+ar
+@label:7: ars+ars=&gt;e+ar+ar
+@tag:e
+species
+@type:species
+@label:species: e
+ar
+@tag:ar
+@label:species: ar
+ars
+@tag:ars
+@label:species: ars
+ar_1p
+@tag:ar_1p
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+ar+=&gt;ar
+@label:1: ar+=&gt;ar
+ars=&gt;ar
+@label:2: ars=&gt;ar
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+initialvalues
+@type:initialvalues
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+charge
+@label:zero charge
+ins
+@tag:ins
+@type:insulation
+@label:insulation
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+emw
+@tag:emw
+electromagneticwaves
+@type:electromagneticwaves
+frequency
+domain
+@label:electromagnetic waves, frequency domain
+electricfield
+wee
+@tag:wee
+waveequationelectric
+@type:waveequationelectric
+wave
+equation
+electric
+@label:wave equation, electric
+pec
+@tag:pec
+perfectelectricconductor
+@type:perfectelectricconductor
+perfect
+conductor
+@label:perfect electric conductor
+port
+@tag:port
+@type:port
+@label:port
+geom
+geometry
+geomnative
+@tag:r
+rectangle
+@type:rectangle
+@label:rectangle
+sketchobject
+ls
+@tag:ls
+linesegment
+@type:linesegment
+line
+segment
+@label:line segment
+line_segment
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+intop
+@tag:intop
+integration
+@type:integration
+@label:integration
+material
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+walls
+@label:walls
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+pcc
+@tag:pcc
+plasmaconductivitymultiphysicscoupling
+@type:plasmaconductivitymultiphysicscoupling
+conductivity
+coupling
+@label:plasma conductivity coupling
+ehs
+@tag:ehs
+electronheatsourcemultiphysicscoupling
+@type:electronheatsourcemultiphysicscoupling
+heat
+@label:electron heat source
+mat
+@tag:mat
+common
+@type:common
+@label:material
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+@type:size
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+adaptmesh
+level
+adapted
+se
+@tag:se
+sizeexpression
+@type:sizeexpression
+expression
+@label:size expression
+@tag:rf
+reference
+@type:reference
+@label:reference
+ref
+@tag:ref
+refine
+@type:refine
+@label:refine
+bl
+@tag:bl
+bndlayer
+@type:bndlayer
+boundary
+layers
+@label:boundary layers
+blp
+@tag:blp
+bndlayerprop
+@type:bndlayerprop
+layer
+properties
+@label:boundary layer properties
+optsequence
+std
+field
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+pin
+ftrans
+@tag:ftrans
+frequencytransient
+@type:frequencytransient
+frequency-transient
+@label:frequency-transient
+fstat
+@tag:fstat
+frequencystationary
+@type:frequencystationary
+frequency-stationary
+@label:frequency-stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_mf_psiora
+@tag:comp1_mf_psiora
+@type:field
+psiora
+@label:magnetic flux
+errvar
+@tag:errvar
+state
+@type:state
+error
+estimate
+global
+@label:error estimate global - stationary
+comp1_errvar
+@tag:comp1_errvar
+@label:error estimate - magnetic flux
+@tag:s
+solver
+@label:stationary solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+eedef
+@tag:eedef
+errorestimation
+@type:errorestimation
+estimation
+@label:error estimation
+addef
+@tag:addef
+adaption
+@type:adaption
+adaptive
+refinement
+@label:adaptive mesh refinement
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+refined
+@label:level 0 refined solution
+@label:level 1 refined solution
+comp1_e
+@tag:comp1_e
+@label:electric field
+comp1_emw_eoop
+@tag:comp1_emw_eoop
+plane
+eoop
+@label:electric field out of plane
+comp1_en
+@tag:comp1_en
+energy
+variable
+en
+@label:electron energy solution variable
+comp1_ne
+@tag:comp1_ne
+ne
+@label:electron solution variable
+comp1_plas_ar_1p_w
+@tag:comp1_plas_ar_1p_w
+log
+mass
+fraction
+@label:log mass fraction
+comp1_plas_ars_w
+@tag:comp1_plas_ars_w
+comp1_v
+@tag:comp1_v
+potential
+@label:electric potential
+comp1_sparam
+@tag:comp1_sparam
+s-parameter
+sparam
+@label:s-parameter
+@tag:t
+time
+@type:time
+time-dependent
+@label:time-dependent solver
+@tag:d
+@tag:p
+parametric
+@type:parametric
+@label:parametric
+suggested
+merged
+@label:suggested direct solver
+result
+results
+dset
+@tag:dset
+@type:solution
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+2d
+@label:revolution 2d
+pg
+@tag:pg
+plotgroup2d
+@type:plotgroup2d
+@label:stationary magnetic flux density
+con
+@tag:con
+contour
+@type:contour
+@label:contour
+@label:adaptive mesh
+@tag:mesh
+@type:mesh
+@label:mesh
+@label:electron density
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+temperature
+@label:electron temperature
+plotgroup1d
+@type:plotgroup1d
+glob
+@tag:glob
+@type:global
+@label:global
+smithgroup
+@type:smithgroup
+smith
+plot
+@label:smith plot
+rgr
+@tag:rgr
+reflectiongraph
+@type:reflectiongraph
+reflection
+graph
+@label:reflection graph
+col
+@tag:col
+color
+@type:color
+@label:color expression
+absorbed
+vs
+input
+@label:absorbed power vs. input power
+@label:power deposition
+@label:electron source
+mobility
+rr
+@label:electron mobility, rr component
+zz-component
+@label:electron mobility, zz-component
+conduction
+current
+r-component
+@label:conduction current density, r-component
+z-component
+@label:conduction current density, z-component
+phi-component
+@label:conduction current density, phi-component
+mean
+electrical
+@label:mean plasma electrical conductivity
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:stat
+@physics:mf
+@geom:r
+@geom:ls
+@view:view
+@view:axis
+@selection
+@selection:sel
+@coordsys:ie
+@coordsys:selection
+@material:mat
+@material:selection
+@material:materialmodel
+@cpl
+@cpl:intop
+@cpl:selection
+@mesh:mesh
+@mesh:edg
+@mesh:selection
+@mesh:size
+@mesh:ftri
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:fc
+@sol:adDef
+@dataset:dset
+@dataset:selection
+@result:pg
+@result:con
+@result:mesh
+@physics:plas
+@physics:emw
+@multiphysics
+@multiphysics:pcc
+@multiphysics:ehs
+@mesh:rf
+@mesh:ref
+@mesh:bl
+@mesh:blp
+@study:ftrans
+@sol:comp1_plas_Ar_1p_W
+@sol:comp1_Ne
+@sol:comp1_plas_Ars_W
+@sol:comp1_En
+@sol:comp1_V
+@sol:t
+@sol:aDef
+@sol:d
+@result:surf
+@dataset:rev
+@nodeGroup:grp
+@study:fstat
+@sol:p
+@result:glob
+@result:rgr
+@result:col
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+ie
+@tag:ie
+infiniteelement
+@type:infiniteelement
+infinite
+element
+@label:infinite element domain
+grp
+@tag:grp
+@type:results
+@label:pin=20 w
+@label:pin 20 to 80 w
+res
+soldata

@@ -1,0 +1,524 @@
+propagation
+seismic
+waves
+earth
+tutorial
+analyzes
+earth's
+internal
+structure
+model
+uses
+2d
+axisymmetric
+geometry
+represent
+material
+discontinuities
+variation
+properties
+concentric
+layers
+simplified
+earthquake
+consisting
+tonal
+pulse
+used
+study
+generation
+different
+pressure
+shear
+across
+inner
+elastic
+time
+explicit
+acoustics
+interfaces
+solid
+fluid
+parts
+sudden
+property
+handled
+discontinuity
+feature
+slow
+included
+within
+demonstrates
+scalability
+applicability
+capture
+large
+acoustic
+models
+containing
+wavelengths
+seismic_waves_earth
+mph
+param
+parameters
+source
+frequency
+location
+r-coordinate
+r_earth
+radius
+th
+thickness
+third
+layer
+sixth
+cp
+speed
+first
+second
+eighth
+default
+pate
+@tag:pate
+pressureacousticstimeexplicit
+@type:pressureacousticstimeexplicit
+@label:pressure acoustics, time explicit
+velocity
+patem
+@tag:patem
+pressureacousticstimeexplicitmodel
+@type:pressureacousticstimeexplicitmodel
+@label:pressure acoustics, time explicit model
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+shb
+@tag:shb
+soundhard
+@type:soundhard
+sound
+hard
+boundary
+wall
+@label:sound hard boundary
+tfc
+@tag:tfc
+totalfieldscontinuity
+@type:totalfieldscontinuity
+continuity
+total
+fields
+@label:continuity of total fields
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+elte
+@tag:elte
+elasticwavestimeexplicit
+@type:elasticwavestimeexplicit
+@label:elastic waves, time explicit
+strain
+eltem
+@tag:eltem
+elasticwavestimeexplicitmodel
+@type:elasticwavestimeexplicitmodel
+@label:elastic waves, time explicit model
+free
+@tag:free
+@type:free
+@label:free
+bl
+@tag:bl
+bodyload
+@type:bodyload
+body
+load
+@label:body load
+mde
+@tag:mde
+materialdiscontinuityelem
+@type:materialdiscontinuityelem
+@label:material discontinuity
+geom
+geomnative
+@tag:c
+circle
+@type:circle
+@label:circle
+pt
+@tag:pt
+point
+@type:point
+@label:point
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+@tag:an
+analytic
+@type:analytic
+space
+distribution
+@label:space distribution
+@label:time distribution
+int
+@tag:int
+interpolation
+@type:interpolation
+rho
+@label:rho layer
+@label:cp layer
+cs
+@label:cs layer
+var
+variables
+depth
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview2d
+@type:modelview2d
+@label:view
+axis
+@tag:axis
+axis2d
+@type:axis2d
+@label:axis
+resultview2d
+@type:resultview2d
+@label:view 2d
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis3d
+@type:axis3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+asbte
+@tag:asbte
+acousticstructureboundarytimeexplicit
+@type:acousticstructureboundarytimeexplicit
+acoustic&#x2013;structure
+@label:acoustic&#x2013;structure boundary, time explicit
+mat
+@tag:mat
+common
+@type:common
+@label:layer
+cpcs
+pressure-wave
+shear-wave
+speeds
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+@type:size
+conv
+@tag:conv
+convert
+@type:convert
+@label:convert
+ftri
+@tag:ftri
+freetri
+@type:freetri
+triangular
+@label:free triangular
+meshnative
+image
+@tag:image
+@type:mesh
+@label:mesh
+optsequence
+std
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_asbte1_eig
+@tag:comp1_asbte1_eig
+field
+@type:field
+eigenvalues
+structural
+eig
+@label:eigenvalues, structural
+comp1_asbte1_veig
+@tag:comp1_asbte1_veig
+eigenvectors
+veig
+@label:eigenvectors, structural
+comp1_e
+@tag:comp1_e
+tensor
+voigt
+notation
+@label:strain tensor, voigt notation
+comp1_elte_mde1_eigd
+@tag:comp1_elte_mde1_eigd
+downside
+eigd
+@label:eigenvalues, downside
+comp1_elte_mde1_eigu
+@tag:comp1_elte_mde1_eigu
+upside
+eigu
+@label:eigenvalues, upside
+comp1_elte_mde1_veigd
+@tag:comp1_elte_mde1_veigd
+veigd
+@label:eigenvectors, downside
+comp1_elte_mde1_veigu
+@tag:comp1_elte_mde1_veigu
+veigu
+@label:eigenvectors, upside
+comp1_p
+@tag:comp1_p
+@label:acoustic pressure
+comp1_u
+@tag:comp1_u
+@label:acoustic velocity
+comp1_v
+@tag:comp1_v
+@label:structural velocity
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+ddef
+@tag:ddef
+direct
+@type:direct
+@label:direct
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:point
+vv
+@label:vv - source
+probe
+@label:vv- probe
+hv
+@label:hv - probe
+result
+results
+dset
+@tag:dset
+@type:solution
+@label:probe solution
+avh
+@tag:avh
+average
+@type:average
+mir
+@tag:mir
+mirror2d
+@type:mirror2d
+mirror
+@label:mirror 2d
+rev
+@tag:rev
+revolve2d
+@type:revolve2d
+revolution
+@label:revolution 2d
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+tbl
+@tag:tbl
+table
+@type:table
+@label:probe table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+plot
+@label:probe plot
+tblp
+@tag:tblp
+graph
+@label:probe table graph
+plotgroup2d
+@type:plotgroup2d
+cell
+wave
+scale
+@label:cell wave time scale
+surf
+@tag:surf
+surface
+@type:surface
+@label:surface
+magnitude
+@label:velocity magnitude
+plotgroup3d
+@type:plotgroup3d
+@label:velocity
+img
+@tag:img
+imageoverlay
+@type:imageoverlay
+@label:image
+sel
+@tag:sel
+selection
+@type:selection
+@label:selection
+mtrl
+@tag:mtrl
+materialappearance
+@type:materialappearance
+appearance
+@label:material appearance
+@label:material properties
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+line
+@label:line graph
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:time
+@physics:pate
+@physics:elte
+@func
+@func:an
+@func:int
+@nodeGroup:grp
+@geom:c
+@geom:pt
+@expr:var
+@probe
+@probe:point
+@probe:selection
+@material:mat
+@material:selection
+@material:materialmodel
+@material:CpCs
+@multiphysics
+@multiphysics:asbte
+@multiphysics:selection
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:size
+@mesh:ftri
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:fc
+@dataset:dset
+@dataset:selection
+@dataset:mir
+@dataset:rev
+@result:pg
+@result:surf
+@result:img
+@view:view
+@result:sel
+@result:selection
+@result:mtrl
+@table:tbl
+@sol:comp1_asbte1_eig
+@sol:comp1_asbte1_veig
+@sol:comp1_e
+@sol:comp1_elte_mde1_eigd
+@sol:comp1_elte_mde1_eigu
+@sol:comp1_elte_mde1_veigd
+@sol:comp1_elte_mde1_veigu
+@sol:comp1_p
+@result:lngr
+@result:ann
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+grp
+@tag:grp
+globaldefinitions
+@type:globaldefinitions
+@label:layer 3 properties
+@label:layer 4 properties
+@label:layer 5 properties
+@label:layer 6 properties
+@label:layer 7 properties
+res
+soldata

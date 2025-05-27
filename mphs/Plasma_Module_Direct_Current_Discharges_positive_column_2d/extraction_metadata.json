@@ -1,0 +1,14 @@
+{
+  "source_file": "Plasma_Module/Direct_Current_Discharges/positive_column_2d.mph",
+  "source_size": 730953,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310392.321",
+  "total_files_in_archive": 19
+}

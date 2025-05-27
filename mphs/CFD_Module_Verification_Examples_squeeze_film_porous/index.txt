@@ -1,0 +1,448 @@
+squeeze
+film
+rectangular
+porous
+nonporous
+plates
+example
+describes
+simulate
+flow
+thin
+fluid
+gap
+two
+with
+facing
+squeezed
+consequence
+relative
+motion
+model
+accounts
+ingress
+egress
+material
+thin-film
+region
+squeeze_film_porous
+mph
+param
+parameters
+ratio
+plate
+length
+width
+hbar
+domain
+thickness
+eta
+viscosity
+sqvel
+velocity
+default
+tff
+@tag:tff
+thinfilmflowshell
+@type:thinfilmflowshell
+@label:thin-film flow
+pressure
+ffp
+@tag:ffp
+fluidfilmproperties
+@type:fluidfilmproperties
+fluid-film
+properties
+@label:fluid-film properties
+bdr
+@tag:bdr
+border
+@type:border
+@label:border
+init
+@tag:init
+@type:init
+initial
+values
+@label:initial values
+sym
+@tag:sym
+symmetryfluid
+@type:symmetryfluid
+symmetry
+@label:symmetry
+dl
+@tag:dl
+porousmediaflowdarcy
+@type:porousmediaflowdarcy
+darcy's
+law
+@label:darcy's law
+@tag:porous
+porousmedium
+@type:porousmedium
+medium
+@label:porous medium
+@tag:fluid
+fluidporousmedium
+@type:fluidporousmedium
+@label:fluid
+pm
+@tag:pm
+porousmatrixporousmedium
+@type:porousmatrixporousmedium
+matrix
+@label:porous matrix
+nf
+@tag:nf
+noflow
+@type:noflow
+no
+@label:no flow
+@type:symmetry
+pr
+@tag:pr
+@type:pressure
+@label:pressure
+geom
+geometry
+geomnative
+blk
+@tag:blk
+block
+@type:block
+@label:block
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+construction
+@tag:construction
+@type:construction
+construction_geometry
+@label:construction_geometry
+@tag:an
+analytic
+@type:analytic
+@label:analytic
+fixed
+spatial
+mesh
+sel
+@tag:sel
+explicit
+@type:explicit
+boundary
+@label:thin-film boundary
+boundaries
+@label:symmetry boundaries
+view
+@tag:view
+modelview3d
+@type:modelview3d
+@label:view
+lgt
+@tag:lgt
+directionallight
+@type:directionallight
+directional
+light
+@label:directional light
+camera
+@tag:camera
+@type:camera
+@label:camera
+axis
+@tag:axis
+axis3d
+@type:axis3d
+@label:axis
+resultview3d
+@type:resultview3d
+3d
+@label:view 3d
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+tfpf
+@tag:tfpf
+thinfilmandporousmediaflow
+@type:thinfilmandporousmediaflow
+media
+@label:thin-film and porous media flow
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+map
+@tag:map
+@type:map
+mapped
+@label:mapped
+swe
+@tag:swe
+sweep
+@type:sweep
+swept
+@label:swept
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+image
+@tag:image
+@type:mesh
+@label:mesh
+@tag:p
+parametric
+@type:parametric
+@label:parametric sweep
+@tag:so
+solutionseq
+@type:solutionseq
+optsequence
+std
+study
+@tag:param
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+st
+@tag:st
+studystep
+@type:studystep
+@tag:v
+variables
+@type:variables
+dependent
+@label:dependent variables
+comp1_p
+@tag:comp1_p
+field
+@type:field
+comp1_pfilm
+@tag:comp1_pfilm
+pfilm
+@tag:s
+solver
+@label:stationary solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+coupled
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+merged
+@label:direct, pressure
+solutions
+su
+@tag:su
+storesolution
+@type:storesolution
+psi
+@label:k=8, psi=1, hbar
+@label:k=8, psi=0.1, hbar
+@label:k=8, psi=0.01, hbar
+@label:k=8, psi=0.001, hbar
+psi=1e
+@label:k=8, psi=1e-4, hbar
+@label:k=4, psi=1, hbar
+@label:k=4, psi=0.1, hbar
+@label:k=4, psi=0.01, hbar
+@label:k=4, psi=0.001, hbar
+@label:k=4, psi=1e-4, hbar
+@label:k=2, psi=1, hbar
+@label:k=2, psi=0.1, hbar
+@label:k=2, psi=0.01, hbar
+@label:k=2, psi=0.001, hbar
+@label:k=2, psi=1e-4, hbar
+@label:k=1, psi=1, hbar
+@label:k=1, psi=0.1, hbar
+@label:k=1, psi=0.01, hbar
+@label:k=1, psi=0.001, hbar
+@label:k=1, psi=1e-4, hbar
+@label:k=1, psi=0.2, hbar
+@label:k=1, psi=0.3, hbar
+@label:k=1, psi=0.4, hbar
+@label:k=1, psi=0.5, hbar
+@label:k=1, psi=0.02, hbar
+@label:k=1, psi=0.03, hbar
+@label:k=1, psi=0.04, hbar
+@label:k=1, psi=0.05, hbar
+@label:k=1, psi=0.002, hbar
+@label:k=1, psi=0.003, hbar
+@label:k=1, psi=0.004, hbar
+@label:k=1, psi=0.005, hbar
+result
+results
+dset
+@tag:dset
+@type:solution
+mir
+@tag:mir
+mirror3d
+@type:mirror3d
+mirror
+@label:mirror 3d
+cln
+@tag:cln
+cutline3d
+@type:cutline3d
+cut
+line
+@label:cut line 3d
+grid
+@tag:grid
+grid1d
+@type:grid1d
+1d
+@label:grid 1d
+int
+@tag:int
+intsurface
+@type:intsurface
+surface
+integration
+@label:surface integration
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+various
+@label:pressure distribution for various psi values
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+graph
+@label:line graph
+ann
+@tag:ann
+annotation
+@type:annotation
+@label:annotation
+load
+capacity
+@label:load capacity for various k values
+fun
+@tag:fun
+function
+@type:function
+@label:function
+tblp
+@tag:tblp
+@label:table graph
+@label:load capacity for various psi values
+phi
+@label:load capacity for various phi values
+plotgroup3d
+@type:plotgroup3d
+darcy
+fields
+@label:darcy pressure and velocity fields
+surf
+@tag:surf
+@type:surface
+@label:surface
+selection
+@type:selection
+@label:selection
+str
+@tag:str
+streamline
+@type:streamline
+@label:streamline
+col
+@tag:col
+color
+@type:color
+expression
+@label:color expression
+geommanagernative
+hist
+@multiphysics
+@multiphysics:tfpf
+@multiphysics:selection
+@study:std
+@study:stat
+@physics:tff
+@physics:dl
+@func
+@func:an
+@geom:geom
+@geom:blk
+@selection
+@selection:sel
+@view:view
+@mesh:mesh
+@mesh:map
+@mesh:selection
+@mesh:swe
+@mesh:dis
+@mesh:ftet
+@study:param
+@mesh:statistics
+@sol:sol
+@sol:st
+@sol:v
+@sol:s
+@sol:aDef
+@sol:fc
+@sol:d
+@batch:p
+@batch:so
+@dataset:mir
+@dataset:cln
+@dataset:grid
+@numerical
+@numerical:int
+@numerical:selection
+@table:tbl
+@result:pg
+@result:lngr
+@result:ann
+@result:fun
+@result:tblp
+@result:surf
+@result:sel
+@result:selection
+@result:str
+@result:col
+sys
+@tag:sys
+@type:boundary
+system
+@label:boundary system
+soldata

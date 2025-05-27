@@ -1,0 +1,434 @@
+positive
+negative
+corona
+discharges
+tutorial
+presents
+study
+dry
+air
+atmospheric
+pressure
+sustained
+within
+two
+electrodes
+coaxial
+configuration
+high
+voltage
+dc
+source
+applied
+inner
+electrode
+different
+types
+models
+used
+full
+self-consistent
+plasma
+model
+simplified
+solves
+electron
+ion
+continuity
+momentum
+equations
+drift-diffusion
+approximation
+self-consistently
+coupled
+with
+poisson’s
+equation
+local
+field
+means
+transport
+coefficients
+assumed
+parameterized
+reduced
+electric
+uses
+charge
+electrostatics
+provide
+approximate
+method
+computing
+density
+electrostatic
+space
+potential
+obtained
+good
+agreement
+simulation
+results
+positive_and_negative_corona_discharges
+mph
+param
+parameters
+rin
+radius
+rei
+electron-ion
+recombination
+ni
+initial
+number
+cp
+polarity
+default
+plas
+@tag:plas
+coldplasma
+@type:coldplasma
+@label:plasma
+logelectrondensity
+logelectronenergydensity
+electricpotential
+formulation_disc
+eir
+@tag:eir
+electronimpactreaction
+@type:electronimpactreaction
+a+e=&gt;p+2e
+@label:1: a+e=&gt;p+2e
+a+e=&gt;n
+@label:2: a+e=&gt;n
+gt
+@label:3: a + a + e =&gt; n + a
+rxn
+@tag:rxn
+reaction
+@type:reaction
+e+p=&gt;a
+@label:4: e+p=&gt;a
+n+p=&gt;a+a
+@label:5: n+p=&gt;a+a
+@tag:a
+species
+@type:species
+@label:species: a
+@tag:e
+@label:species: e
+@tag:p
+@label:species: p
+@tag:n
+@label:species: n
+sr
+@tag:sr
+surfacereaction
+@type:surfacereaction
+p=&gt;a
+@label:1: p=&gt;a
+@label:2: p=&gt;a
+n=&gt;a
+@label:3: n=&gt;a
+pes
+@tag:pes
+plasmaesmodel
+@type:plasmaesmodel
+@label:plasma model
+init
+@tag:init
+initialvalues
+@type:initialvalues
+values
+@label:initial values
+zc
+@tag:zc
+zerocharge
+@type:zerocharge
+zero
+@label:zero charge
+ins
+@tag:ins
+insulation
+@type:insulation
+@label:insulation
+axi
+@tag:axi
+axialsymmetry
+@type:axialsymmetry
+axial
+symmetry
+@label:axial symmetry
+gnd
+@tag:gnd
+ground
+@type:ground
+@label:ground
+mct
+@tag:mct
+metalcontact
+@type:metalcontact
+metal
+contact
+@label:metal contact
+wall
+@tag:wall
+walldriftdiffusion
+@type:walldriftdiffusion
+@label:wall
+es
+@tag:es
+@type:electrostatics
+@label:electrostatics
+ccn
+@tag:ccn
+chargeconservation
+@type:chargeconservation
+conservation
+@label:charge conservation
+@type:init
+ct
+@tag:ct
+chargetransport
+@type:chargetransport
+@label:charge transport
+spacechargedensity
+tp
+@tag:tp
+transportproperties
+@type:transportproperties
+properties
+@label:transport properties
+nflx
+@tag:nflx
+noflux
+@type:noflux
+no
+flux
+@label:no flux
+st
+@tag:st
+@type:source
+@label:source
+geom
+geometry
+geomnative
+@tag:i
+interval
+@type:interval
+@label:interval
+fin
+@tag:fin
+finalize
+@type:finalize
+form
+union
+@label:form union
+form_union/assembly
+var
+variables
+muen
+mobility
+material
+fixed
+spatial
+mesh
+view
+@tag:view
+modelview1d
+@type:modelview1d
+@label:view
+axis
+@tag:axis
+axis1d
+@type:axis1d
+@label:axis
+cminpt
+@tag:cminpt
+commoninputdefault
+@type:commoninputdefault
+inputs
+@label:default model inputs
+scdc
+@tag:scdc
+spacechargedensitycoupling
+@type:spacechargedensitycoupling
+coupling
+@label:space charge density coupling
+pc
+@tag:pc
+potentialcoupling
+@type:potentialcoupling
+@label:potential coupling
+el
+@tag:el
+@type:electrode
+@label:electrode
+comp
+component
+tdp
+thermodynamics
+size
+@tag:size
+meshsizedefault
+@type:meshsizedefault
+@label:size
+edg
+@tag:edg
+edge
+@type:edge
+@label:edge
+dis
+@tag:dis
+distribution
+@type:distribution
+@label:distribution
+meshnative
+optsequence
+std
+time
+@tag:time
+transient
+@type:transient
+dependent
+@label:time dependent
+stat
+@tag:stat
+stationary
+@type:stationary
+@label:stationary
+sol
+solution
+studystep
+@type:studystep
+@tag:v
+@type:variables
+@label:dependent variables
+comp1_ne
+@tag:comp1_ne
+@type:field
+variable
+ne
+@label:electron solution variable
+comp1_plas_n_w
+@tag:comp1_plas_n_w
+mass
+fraction
+@label:mass fraction
+comp1_plas_n_w_wall
+@tag:comp1_plas_n_w_wall
+w_wall
+comp1_plas_newall
+@tag:comp1_plas_newall
+newall
+@label:electron density at the wall
+comp1_plas_p_w
+@tag:comp1_plas_p_w
+comp1_plas_p_w_wall
+@tag:comp1_plas_p_w_wall
+comp1_v
+@tag:comp1_v
+@label:electric potential
+@tag:t
+@type:time
+time-dependent
+solver
+@label:time-dependent solver
+adef
+@tag:adef
+advanced
+@type:advanced
+@label:advanced
+fc
+@tag:fc
+fullycoupled
+@type:fullycoupled
+fully
+@label:fully coupled
+@tag:d
+direct
+@type:direct
+@label:direct
+comp1_el1_rhoqe
+@tag:comp1_el1_rhoqe
+rhoqe
+@label:space charge density
+comp1_rhoq
+@tag:comp1_rhoq
+rhoq
+@tag:s
+@label:stationary solver
+result
+dset
+@tag:dset
+@type:solution
+pev
+@tag:pev
+evalpoint
+@type:evalpoint
+point
+evaluation
+@label:point evaluation
+tbl
+@tag:tbl
+table
+@type:table
+@label:table
+pg
+@tag:pg
+plotgroup1d
+@type:plotgroup1d
+@label:electron and ion number density - positive corona
+lngr
+@tag:lngr
+linegraph
+@type:linegraph
+electrons
+@label:electrons
+ions
+@label:positive ions
+@label:negative ions
+@label:electron and ion number density - negative corona
+@label:positive corona
+@label:negative corona
+@label:positive corona simplified
+@label:negative corona simplified
+rate
+expression
+@label:rate expression
+geommanagernative
+hist
+@geom:geom
+@study:std
+@study:time
+@physics:plas
+@expr:var
+@geom:i
+@mesh:mesh
+@mesh:edg
+@mesh:dis
+@sol:sol
+@sol:st
+@sol:v
+@sol:t
+@sol:aDef
+@sol:fc
+@sol:d
+@result:pg
+@result:lngr
+@result:selection
+@numerical
+@numerical:pev
+@numerical:selection
+@table:tbl
+@physics:es
+@physics:ct
+@multiphysics
+@multiphysics:scdc
+@multiphysics:selection
+@multiphysics:pc
+@multiphysics:el
+@study:stat
+@sol:s
+res
+soldata

@@ -1,0 +1,14 @@
+{
+  "source_file": "MEMS_Module/Sensors/comb_drive_tuning_fork_gyroscope.mph",
+  "source_size": 6992703,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310355.168",
+  "total_files_in_archive": 139
+}

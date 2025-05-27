@@ -1,0 +1,14 @@
+{
+  "source_file": "Corrosion_Module/Crevice_and_Pitting_Corrosion/crevice_corrosion_with_deformation.mph",
+  "source_size": 2916674,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310303.939",
+  "total_files_in_archive": 30
+}

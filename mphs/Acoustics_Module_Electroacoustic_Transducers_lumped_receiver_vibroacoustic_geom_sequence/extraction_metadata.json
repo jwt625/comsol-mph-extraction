@@ -1,0 +1,13 @@
+{
+  "source_file": "Acoustics_Module/Electroacoustic_Transducers/lumped_receiver_vibroacoustic_geom_sequence.mph",
+  "source_size": 588878,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt"
+  ],
+  "extraction_timestamp": "1731310230.429",
+  "total_files_in_archive": 19
+}

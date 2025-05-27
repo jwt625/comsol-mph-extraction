@@ -1,0 +1,11 @@
+{
+  "source_file": "RF_Module/ESD_and_Lightning_Surge/lightning_surge_tower.mph",
+  "source_size": 40574,
+  "extracted_files": [
+    "modelimage.png",
+    "modelinfo.xml",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310405.141",
+  "total_files_in_archive": 6
+}

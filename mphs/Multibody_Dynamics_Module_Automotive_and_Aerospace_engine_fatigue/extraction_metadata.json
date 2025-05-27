@@ -1,0 +1,14 @@
+{
+  "source_file": "Multibody_Dynamics_Module/Automotive_and_Aerospace/engine_fatigue.mph",
+  "source_size": 9482090,
+  "extracted_files": [
+    "modelimage.png",
+    "modelimage_large.png",
+    "smodel.json",
+    "modelinfo.xml",
+    "usedlicenses.txt",
+    "index.txt"
+  ],
+  "extraction_timestamp": "1731310372.651",
+  "total_files_in_archive": 36
+}
