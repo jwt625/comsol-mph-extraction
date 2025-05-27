@@ -11,6 +11,10 @@
 # Text files
 *.txt
 
+# Track everything in mphs folder (override other ignore rules)
+!mphs/
+!mphs/**
+
 # macOS system files
 .DS_Store
 .DS_Store?
@@ -30,7 +34,7 @@ Thumbs.db
 *.backup
 
 # Large data directories (uncomment if you don't want to track extracted data)
-# mphs/
+# Note: mphs/ folder should be tracked - it contains extracted model data
 # mphs_test/
 # mphs_test2/
 
@@ -76,6 +80,6 @@ __pycache__/
 # Archive files
 *.zip
 *.tar.gz
-*.rar 
+*.rar
 
 LiveLink*
