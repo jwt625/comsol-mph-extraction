@@ -1,0 +1,388 @@
+function out = model
+%
+% gaas_pn_junction_infrared_led_diode.m
+%
+% Model exported on May 26 2025, 21:33 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Semiconductor_Module/Photonic_Devices_and_Sensors');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+model.geom('geom1').axisymmetric(true);
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('semi', 'Semiconductor', 'geom1');
+model.physics('semi').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('semii', 'SemiconductorInitialization');
+model.study('std1').feature('semii').set('solnum', 'auto');
+model.study('std1').feature('semii').set('notsolnum', 'auto');
+model.study('std1').feature('semii').set('outputmap', {});
+model.study('std1').feature('semii').set('errestandadap', 'adaption');
+model.study('std1').feature('semii').set('goalfunctype', 'gfman');
+model.study('std1').feature('semii').set('gfunc', '1');
+model.study('std1').feature('semii').set('ngenAUX', '1');
+model.study('std1').feature('semii').set('goalngenAUX', '1');
+model.study('std1').feature('semii').set('ngenAUX', '1');
+model.study('std1').feature('semii').set('goalngenAUX', '1');
+model.study('std1').feature('semii').setSolveFor('/physics/semi', true);
+
+model.param.set('V_n', '0[V]');
+model.param.descr('V_n', 'n voltage');
+model.param.set('V_p', '1.5[V]');
+model.param.descr('V_p', 'p voltage');
+model.param.set('w_dom', '25[um]');
+model.param.descr('w_dom', 'Domain width');
+model.param.set('h_dom', '10[um]');
+model.param.descr('h_dom', 'Domain height');
+model.param.set('w_con_n', 'w_dom/5');
+model.param.descr('w_con_n', 'Width of n contact');
+model.param.set('h_con_n', 'h_dom/5');
+model.param.descr('h_con_n', 'Height of n contact');
+model.param.set('w_con_p', 'w_dom/10');
+model.param.descr('w_con_p', 'Width of p contact');
+model.param.set('h_p', 'h_dom/4');
+model.param.descr('h_p', 'Height of surface p-type layer');
+model.param.set('r_fill', '0.25[um]');
+model.param.descr('r_fill', 'Fillet radius');
+
+model.geom('geom1').lengthUnit([native2unicode(hex2dec({'00' 'b5'}), 'unicode') 'm']);
+model.geom('geom1').create('r1', 'Rectangle');
+model.geom('geom1').feature('r1').set('size', {'w_dom' 'h_dom'});
+model.geom('geom1').run('r1');
+model.geom('geom1').create('r2', 'Rectangle');
+model.geom('geom1').feature('r2').set('size', {'w_con_n' 'h_con_n'});
+model.geom('geom1').feature('r2').set('pos', {'w_dom' '0'});
+model.geom('geom1').run('r2');
+model.geom('geom1').create('uni1', 'Union');
+model.geom('geom1').feature('uni1').selection('input').set({'r1' 'r2'});
+model.geom('geom1').feature('uni1').set('intbnd', false);
+model.geom('geom1').run('uni1');
+model.geom('geom1').create('pol1', 'Polygon');
+model.geom('geom1').feature('pol1').set('source', 'table');
+model.geom('geom1').feature('pol1').setIndex('table', 0, 0, 0);
+model.geom('geom1').feature('pol1').setIndex('table', 'h_dom', 0, 1);
+model.geom('geom1').feature('pol1').setIndex('table', 'w_con_p', 1, 0);
+model.geom('geom1').feature('pol1').setIndex('table', 'h_dom', 1, 1);
+model.geom('geom1').run('pol1');
+model.geom('geom1').create('fil1', 'Fillet');
+model.geom('geom1').feature('fil1').selection('point').set('uni1', 4);
+model.geom('geom1').feature('fil1').set('radius', 'r_fill');
+model.geom('geom1').runPre('fin');
+model.geom('geom1').run;
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup.create('SemicondMaterial', 'Semiconductor material');
+model.material('mat1').propertyGroup.create('JainRoulstonModel', ['Jain' native2unicode(hex2dec({'20' '13'}), 'unicode') 'Roulston model']);
+model.material('mat1').label('GaAs - Gallium Arsenide');
+model.material('mat1').propertyGroup('def').set('heatcapacity', '330[J/(kg*K)]');
+model.material('mat1').propertyGroup('def').set('density', '5500[kg/m^3]');
+model.material('mat1').propertyGroup('def').set('thermalconductivity', {'46[W/(m*K)]' '0' '0' '0' '46[W/(m*K)]' '0' '0' '0' '46[W/(m*K)]'});
+model.material('mat1').propertyGroup('def').set('relpermittivity', {'12.9' '0' '0' '0' '12.9' '0' '0' '0' '12.9'});
+model.material('mat1').propertyGroup('SemicondMaterial').set('Eg0', '1.424[V]');
+model.material('mat1').propertyGroup('SemicondMaterial').set('chi0', '4.07[V]');
+model.material('mat1').propertyGroup('SemicondMaterial').set('Nv', '(T/1[K])^(3/2)*1.83e15[1/cm^3]');
+model.material('mat1').propertyGroup('SemicondMaterial').set('Nc', '(8.63e13*(T/1[K])^(3/2)*(1-1.93e-4*(T/1[K])-4.19e-8*(T/1[K])^2+21*exp(-0.29[V]*e_const/(k_B_const*T))+44*exp(-0.48[V]*e_const/(k_B_const*T))))[1/cm^3]');
+model.material('mat1').propertyGroup('SemicondMaterial').set('mun', '8500[cm^2/(V*s)]');
+model.material('mat1').propertyGroup('SemicondMaterial').set('mup', '400[cm^2/(V*s)]');
+model.material('mat1').propertyGroup('SemicondMaterial').addInput('temperature');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('An_jr', '16.5e-9[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Bn_jr', '2.39e-7[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Cn_jr', '91.4e-12[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Ap_jr', '9.83e-9[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Bp_jr', '3.9e-7[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Cp_jr', '3.9e-12[V]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('Nref_jr', '1[1/cm^3]');
+model.material('mat1').propertyGroup('JainRoulstonModel').set('alpha_jr', '0.5');
+
+model.physics('semi').prop('ModelProperties').set('CarrierStatistics', 'FermiDirac');
+model.physics('semi').create('adm1', 'AnalyticDopingModel', 2);
+model.physics('semi').feature('adm1').label('p Doping');
+model.physics('semi').feature('adm1').selection.all;
+model.physics('semi').feature('adm1').set('impurityDistribution', 'box');
+model.physics('semi').feature('adm1').set('NAc', '1e18[1/cm^3]');
+model.physics('semi').feature('adm1').set('rb', {'0[um]' '0' 'h_dom-h_p'});
+model.physics('semi').feature('adm1').set('jwidth', 'w_dom');
+model.physics('semi').feature('adm1').set('jheight', 'h_p');
+model.physics('semi').feature('adm1').set('JunctionOrLength', 'decay_length');
+model.physics('semi').feature('adm1').set('ls', '2[um]');
+model.physics('semi').create('adm2', 'AnalyticDopingModel', 2);
+model.physics('semi').feature('adm2').label('n Doping');
+model.physics('semi').feature('adm2').selection.all;
+model.physics('semi').feature('adm2').set('impurityDistribution', 'box');
+model.physics('semi').feature('adm2').set('impurityType', 'donor');
+model.physics('semi').feature('adm2').set('NDc', '1e18[1/cm^3]');
+model.physics('semi').feature('adm2').set('jwidth', 'w_dom+w_con_n');
+model.physics('semi').feature('adm2').set('jheight', 'h_dom-h_p');
+model.physics('semi').feature('adm2').set('JunctionOrLength', 'decay_length');
+model.physics('semi').feature('adm2').set('ls', '2[um]');
+model.physics('semi').create('mc1', 'MetalContact', 1);
+model.physics('semi').feature('mc1').label('p Contact');
+model.physics('semi').feature('mc1').selection.set([3]);
+model.physics('semi').feature('mc1').set('V0', 'V_p');
+model.physics('semi').create('mc2', 'MetalContact', 1);
+model.physics('semi').feature('mc2').label('n Contact');
+model.physics('semi').feature('mc2').selection.set([7]);
+model.physics('semi').feature('mc2').set('V0', 'V_n');
+model.physics('semi').create('ot1', 'OpticalTransitions', 2);
+model.physics('semi').feature('ot1').selection.set([1]);
+model.physics('semi').feature('ot1').set('StimulatedEmission', false);
+model.physics('semi').create('aur1', 'AURecombination', 2);
+model.physics('semi').feature('aur1').selection.set([1]);
+
+model.material('mat1').propertyGroup.create('Auger', 'Auger_recombination');
+model.material('mat1').propertyGroup('Auger').set('Cn', {'1e-31[cm^6/s]'});
+model.material('mat1').propertyGroup('Auger').set('Cp', {'1e-31[cm^6/s]'});
+
+model.cpl.create('intop1', 'Integration', 'geom1');
+model.cpl('intop1').set('axisym', true);
+model.cpl('intop1').selection.set([1]);
+
+model.study('std1').label('Study 1: Mesh Refinement');
+model.study('std1').setGenPlots(false);
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'semii');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'semii');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').feature('adDef').set('elselect', 'elements');
+model.sol('sol1').feature('s1').feature('adDef').set('elementspar', 0.3);
+
+model.study('std1').feature('semii').set('ngen', 1);
+model.study('std1').feature('semii').set('errestim', 'goalerrest');
+model.study('std1').feature('semii').set('gfunc', 'root.comp1.semi.int_adapt(sqrt(d(root.comp1.semi.m_f,root.R)^2+d(root.comp1.semi.m_f,root.Z)^2))');
+model.study('std1').feature('semii').set('meshadaptmethod', 'rebuild');
+
+model.sol('sol1').feature('s1').set('stol', 1.0E-6);
+model.sol('sol1').feature('s1').feature('aDef').set('complexfun', false);
+model.sol('sol1').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('s1').feature('aDef').set('matherr', true);
+model.sol('sol1').feature('s1').feature('aDef').set('blocksizeactive', false);
+model.sol('sol1').feature('s1').feature('aDef').set('nullfun', 'auto');
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').feature('fc1').set('rstep', 10);
+model.sol('sol1').feature('s1').feature('fc1').set('useminsteprecovery', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-4);
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('ntolfact', 1);
+model.sol('sol1').feature('s1').feature('fc1').set('ntermauto', 'tol');
+model.sol('sol1').feature('s1').feature('fc1').set('initstep', 0.1);
+model.sol('sol1').feature('s1').feature('fc1').set('minsteprecovery', 0.001);
+model.sol('sol1').feature('s1').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('d1').set('linsolver', 'mumps');
+model.sol('sol1').feature('s1').feature('d1').set('mumpsalloc', 1.2);
+model.sol('sol1').feature('s1').feature('d1').set('ooc', 'off');
+model.sol('sol1').feature('s1').feature('d1').set('errorchk', 'off');
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('s1').feature('fc1').set('rstep', 10);
+model.sol('sol1').feature('s1').feature('fc1').set('useminsteprecovery', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-4);
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('ntolfact', 1);
+model.sol('sol1').feature('s1').feature('fc1').set('ntermauto', 'tol');
+model.sol('sol1').feature('s1').feature('fc1').set('initstep', 0.1);
+model.sol('sol1').feature('s1').feature('fc1').set('minsteprecovery', 0.001);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').runAll;
+
+model.mesh('mesh1').run;
+
+model.result.create('pg1', 'PlotGroup2D');
+model.result('pg1').run;
+model.result('pg1').label('Doping');
+model.result('pg1').create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('expr', 'semi.Nd-semi.Na');
+model.result('pg1').run;
+
+model.study.create('std2');
+model.study('std2').create('stat', 'Stationary');
+model.study('std2').feature('stat').setSolveFor('/physics/semi', true);
+model.study('std2').setGenPlots(false);
+model.study('std2').label('Study 2: Voltage Sweep');
+model.study('std2').feature('stat').set('useparam', true);
+model.study('std2').feature('stat').setIndex('pname', 'V_n', 0);
+model.study('std2').feature('stat').setIndex('plistarr', '', 0);
+model.study('std2').feature('stat').setIndex('punit', 'V', 0);
+model.study('std2').feature('stat').setIndex('pname', 'V_n', 0);
+model.study('std2').feature('stat').setIndex('plistarr', '', 0);
+model.study('std2').feature('stat').setIndex('punit', 'V', 0);
+model.study('std2').feature('stat').setIndex('pname', 'V_p', 0);
+model.study('std2').feature('stat').setIndex('plistarr', 'log(range(1,0.25,3.5)) log(range(3.6,0.1,4.5))', 0);
+
+model.sol.create('sol5');
+model.sol('sol5').study('std2');
+model.sol('sol5').create('st1', 'StudyStep');
+model.sol('sol5').feature('st1').set('study', 'std2');
+model.sol('sol5').feature('st1').set('studystep', 'stat');
+model.sol('sol5').create('v1', 'Variables');
+model.sol('sol5').feature('v1').set('control', 'stat');
+model.sol('sol5').create('s1', 'Stationary');
+model.sol('sol5').feature('s1').set('stol', 1.0E-6);
+model.sol('sol5').feature('s1').create('p1', 'Parametric');
+model.sol('sol5').feature('s1').feature.remove('pDef');
+model.sol('sol5').feature('s1').feature('p1').set('porder', 'constant');
+model.sol('sol5').feature('s1').feature('p1').set('control', 'stat');
+model.sol('sol5').feature('s1').set('control', 'stat');
+model.sol('sol5').feature('s1').feature('aDef').set('complexfun', false);
+model.sol('sol5').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol5').feature('s1').feature('aDef').set('matherr', true);
+model.sol('sol5').feature('s1').feature('aDef').set('blocksizeactive', false);
+model.sol('sol5').feature('s1').feature('aDef').set('nullfun', 'auto');
+model.sol('sol5').feature('s1').feature('aDef').set('assemtol', 0);
+model.sol('sol5').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol5').feature('s1').feature('fc1').set('rstep', 10);
+model.sol('sol5').feature('s1').feature('fc1').set('useminsteprecovery', 'auto');
+model.sol('sol5').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol5').feature('s1').feature('fc1').set('minstep', 1.0E-4);
+model.sol('sol5').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol5').feature('s1').feature('fc1').set('ntolfact', 1);
+model.sol('sol5').feature('s1').feature('fc1').set('ntermauto', 'tol');
+model.sol('sol5').feature('s1').feature('fc1').set('initstep', 0.1);
+model.sol('sol5').feature('s1').feature('fc1').set('minsteprecovery', 0.001);
+model.sol('sol5').feature('s1').create('d1', 'Direct');
+model.sol('sol5').feature('s1').feature('d1').set('linsolver', 'mumps');
+model.sol('sol5').feature('s1').feature('d1').set('mumpsalloc', 1.2);
+model.sol('sol5').feature('s1').feature('d1').set('ooc', 'off');
+model.sol('sol5').feature('s1').feature('d1').set('errorchk', 'off');
+model.sol('sol5').feature('s1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol5').feature('s1').feature('fc1').set('rstep', 10);
+model.sol('sol5').feature('s1').feature('fc1').set('useminsteprecovery', 'auto');
+model.sol('sol5').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol5').feature('s1').feature('fc1').set('minstep', 1.0E-4);
+model.sol('sol5').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol5').feature('s1').feature('fc1').set('ntolfact', 1);
+model.sol('sol5').feature('s1').feature('fc1').set('ntermauto', 'tol');
+model.sol('sol5').feature('s1').feature('fc1').set('initstep', 0.1);
+model.sol('sol5').feature('s1').feature('fc1').set('minsteprecovery', 0.001);
+model.sol('sol5').feature('s1').feature.remove('fcDef');
+model.sol('sol5').attach('std2');
+model.sol('sol5').feature('s1').create('se1', 'Segregated');
+model.sol('sol5').feature('s1').feature('se1').feature('ssDef').set('subdtech', 'auto');
+model.sol('sol5').feature('s1').feature('se1').create('ll1', 'LowerLimit');
+model.sol('sol5').feature('s1').feature('se1').feature('ll1').set('lowerlimit', 'comp1.Ne 1 comp1.Ph 1');
+model.sol('sol5').runAll;
+
+model.result.create('pg2', 'PlotGroup1D');
+model.result('pg2').run;
+model.result('pg2').label('Current vs. Voltage');
+model.result('pg2').set('data', 'dset3');
+model.result('pg2').set('xlabelactive', true);
+model.result('pg2').set('xlabel', 'Voltage (V)');
+model.result('pg2').set('ylabelactive', true);
+model.result('pg2').set('ylabel', 'Current (mA)');
+model.result('pg2').set('titletype', 'manual');
+model.result('pg2').set('title', 'Current as a function of voltage');
+model.result('pg2').create('glob1', 'Global');
+model.result('pg2').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob1').set('linewidth', 'preference');
+model.result('pg2').feature('glob1').setIndex('expr', 'semi.I0_1', 0);
+model.result('pg2').feature('glob1').setIndex('unit', 'mA', 0);
+model.result('pg2').feature('glob1').setIndex('descr', 'Terminal current', 0);
+model.result('pg2').feature('glob1').set('legend', false);
+model.result('pg2').run;
+model.result.create('pg3', 'PlotGroup2D');
+model.result('pg3').run;
+model.result('pg3').label('Emission Rate');
+model.result('pg3').set('data', 'dset3');
+model.result('pg3').set('titletype', 'manual');
+model.result('pg3').set('title', 'Emission Rate');
+model.result('pg3').create('surf1', 'Surface');
+model.result('pg3').feature('surf1').set('expr', 'semi.ot1.R_spon');
+model.result('pg3').feature('surf1').set('unit', '1/(cm^3*s)');
+model.result('pg3').run;
+model.result('pg3').run;
+model.result('pg3').setIndex('looplevel', 11, 0);
+model.result('pg3').run;
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').run;
+model.result('pg4').label('Emission Rate vs. Current');
+model.result('pg4').set('data', 'dset3');
+model.result('pg4').set('titletype', 'manual');
+model.result('pg4').set('title', 'Total emission rate as a function of current');
+model.result('pg4').set('xlabelactive', true);
+model.result('pg4').set('xlabel', 'Current (mA)');
+model.result('pg4').set('ylabelactive', true);
+model.result('pg4').set('ylabel', 'Total emission rate (1/s)');
+model.result('pg4').create('glob1', 'Global');
+model.result('pg4').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob1').set('linewidth', 'preference');
+model.result('pg4').feature('glob1').setIndex('expr', 'intop1(semi.ot1.R_spon)', 0);
+model.result('pg4').feature('glob1').setIndex('unit', '1/s', 0);
+model.result('pg4').feature('glob1').setIndex('descr', '', 0);
+model.result('pg4').feature('glob1').set('xdata', 'expr');
+model.result('pg4').feature('glob1').set('xdataexpr', 'semi.I0_1');
+model.result('pg4').feature('glob1').set('xdataunit', 'mA');
+model.result('pg4').feature('glob1').set('legend', false);
+model.result('pg4').run;
+model.result.create('pg5', 'PlotGroup1D');
+model.result('pg5').run;
+model.result('pg5').label('Internal Quantum Efficiency');
+model.result('pg5').set('data', 'dset3');
+model.result('pg5').set('titletype', 'manual');
+model.result('pg5').set('title', 'Internal Quantum Efficiency as a function of current');
+model.result('pg5').set('xlabelactive', true);
+model.result('pg5').set('xlabel', 'Current (mA)');
+model.result('pg5').set('ylabelactive', true);
+model.result('pg5').set('ylabel', 'Internal Quantum Efficiency');
+model.result('pg5').setIndex('looplevelinput', 'manualindices', 0);
+model.result('pg5').setIndex('looplevelindices', 'range(5,1,21)', 0);
+model.result('pg5').create('glob1', 'Global');
+model.result('pg5').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg5').feature('glob1').set('linewidth', 'preference');
+model.result('pg5').feature('glob1').setIndex('expr', 'intop1(semi.ot1.R_spon)/(semi.I0_1/e_const)', 0);
+model.result('pg5').feature('glob1').setIndex('unit', 1, 0);
+model.result('pg5').feature('glob1').setIndex('descr', '', 0);
+model.result('pg5').feature('glob1').set('xdata', 'expr');
+model.result('pg5').feature('glob1').set('xdataexpr', 'semi.I0_1');
+model.result('pg5').feature('glob1').set('xdataunit', 'mA');
+model.result('pg5').feature('glob1').set('legend', false);
+model.result('pg5').run;
+model.result('pg5').set('axislimits', true);
+model.result('pg5').set('ymin', 0);
+model.result('pg5').run;
+model.result.dataset.create('rev1', 'Revolve2D');
+model.result.dataset('rev1').set('data', 'dset3');
+model.result.dataset('rev1').set('startangle', 270);
+model.result.dataset('rev1').set('revangle', 270);
+model.result.create('pg6', 'PlotGroup3D');
+model.result('pg6').run;
+model.result('pg6').label('Emission Rate 3D');
+model.result('pg6').set('titletype', 'manual');
+model.result('pg6').set('title', 'Emission rate');
+model.result('pg6').create('vol1', 'Volume');
+model.result('pg6').feature('vol1').set('expr', 'semi.ot1.R_spon');
+model.result('pg6').run;
+
+model.title(['GaAs P' native2unicode(hex2dec({'20' '13'}), 'unicode') 'N Junction Infrared LED']);
+
+model.description('This example simulates an LED that emits in the infrared part of the electromagnetic spectrum. The device structure is made up of a single p-n junction formed by a layer of p-type doping near the top surface of an otherwise n-type wafer. This kind of device geometry is simple and cheap to produce and similar LEDs are found in many household applications, for example, the IR emitters in TV remote controls. In this example, the Optical Transition feature is used to calculate the electroluminescence from the device. The electronic properties are computed and the efficiency of the light production is assessed. Also, by visualizing the spatial distribution of the radiative recombination it is possible to make design suggestions to maximize the total efficiency of the output light.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+model.sol('sol2').clearSolutionData;
+model.sol('sol3').clearSolutionData;
+model.sol('sol4').clearSolutionData;
+model.sol('sol5').clearSolutionData;
+
+model.label('gaas_pn_junction_infrared_led_diode.mph');
+
+model.modelNode.label('Components');
+
+out = model;

@@ -1,0 +1,324 @@
+function out = model
+%
+% bracket_thermal.m
+%
+% Model exported on May 26 2025, 21:33 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Structural_Mechanics_Module/Tutorials');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 3);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('solid', 'SolidMechanics', 'geom1');
+model.physics('solid').model('comp1');
+model.physics('solid').prop('StructuralTransientBehavior').set('StructuralTransientBehavior', 'Quasistatic');
+model.physics.create('ht', 'HeatTransfer', 'geom1');
+model.physics('ht').model('comp1');
+
+model.multiphysics.create('te1', 'ThermalExpansion', 'geom1', 3);
+model.multiphysics('te1').set('Heat_physics', 'ht');
+model.multiphysics('te1').set('Solid_physics', 'solid');
+model.multiphysics('te1').selection.all;
+
+model.study.create('std1');
+model.study('std1').create('stat', 'Stationary');
+model.study('std1').feature('stat').setSolveFor('/physics/solid', true);
+model.study('std1').feature('stat').setSolveFor('/physics/ht', true);
+model.study('std1').feature('stat').setSolveFor('/multiphysics/te1', true);
+
+model.geom('geom1').create('imp1', 'Import');
+model.geom('geom1').feature('imp1').set('type', 'native');
+model.geom('geom1').feature('imp1').set('filename', 'bracket.mphbin');
+model.geom('geom1').feature('imp1').importData;
+model.geom('geom1').run('fin');
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat1').propertyGroup('Enu').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup('Enu').func.create('int2', 'Interpolation');
+model.material('mat1').propertyGroup.create('Murnaghan', 'Murnaghan');
+model.material('mat1').propertyGroup.create('ElastoplasticModel', 'Elastoplastic material model');
+model.material('mat1').propertyGroup('ElastoplasticModel').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup.create('Ludwik', 'Ludwik');
+model.material('mat1').propertyGroup('Ludwik').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup.create('JohnsonCook', 'Johnson-Cook');
+model.material('mat1').propertyGroup.create('Swift', 'Swift');
+model.material('mat1').propertyGroup.create('Voce', 'Voce');
+model.material('mat1').propertyGroup('Voce').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup.create('HockettSherby', 'Hockett-Sherby');
+model.material('mat1').propertyGroup('HockettSherby').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup.create('ArmstrongFrederick', 'Armstrong-Frederick');
+model.material('mat1').propertyGroup('ArmstrongFrederick').func.create('int1', 'Interpolation');
+model.material('mat1').propertyGroup.create('Norton', 'Norton');
+model.material('mat1').propertyGroup.create('Garofalo', 'Garofalo (hyperbolic sine)');
+model.material('mat1').propertyGroup.create('ChabocheViscoplasticity', 'Chaboche viscoplasticity');
+model.material('mat1').label('Structural steel');
+model.material('mat1').set('family', 'custom');
+model.material('mat1').set('customspecular', [0.7843137254901961 0.7843137254901961 0.7843137254901961]);
+model.material('mat1').set('customdiffuse', [0.6666666666666666 0.6666666666666666 0.6666666666666666]);
+model.material('mat1').set('customambient', [0.6666666666666666 0.6666666666666666 0.6666666666666666]);
+model.material('mat1').set('noise', true);
+model.material('mat1').set('fresnel', 0.9);
+model.material('mat1').set('roughness', 0.3);
+model.material('mat1').set('metallic', 0);
+model.material('mat1').set('pearl', 0);
+model.material('mat1').set('diffusewrap', 0);
+model.material('mat1').set('clearcoat', 0);
+model.material('mat1').set('reflectance', 0);
+model.material('mat1').propertyGroup('def').set('lossfactor', '0.02');
+model.material('mat1').propertyGroup('def').set('relpermeability', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('heatcapacity', '475[J/(kg*K)]');
+model.material('mat1').propertyGroup('def').set('thermalconductivity', {'44.5[W/(m*K)]' '0' '0' '0' '44.5[W/(m*K)]' '0' '0' '0' '44.5[W/(m*K)]'});
+model.material('mat1').propertyGroup('def').set('electricconductivity', {'4.032e6[S/m]' '0' '0' '0' '4.032e6[S/m]' '0' '0' '0' '4.032e6[S/m]'});
+model.material('mat1').propertyGroup('def').set('relpermittivity', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', {'12.3e-6[1/K]' '0' '0' '0' '12.3e-6[1/K]' '0' '0' '0' '12.3e-6[1/K]'});
+model.material('mat1').propertyGroup('def').set('density', '7850[kg/m^3]');
+model.material('mat1').propertyGroup('Enu').func('int1').set('funcname', 'E');
+model.material('mat1').propertyGroup('Enu').func('int1').set('table', {'293.15' '200e9'; '793.15' '166.6e9'});
+model.material('mat1').propertyGroup('Enu').func('int1').set('extrap', 'linear');
+model.material('mat1').propertyGroup('Enu').func('int1').set('fununit', {'Pa'});
+model.material('mat1').propertyGroup('Enu').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('Enu').func('int2').set('funcname', 'nu');
+model.material('mat1').propertyGroup('Enu').func('int2').set('table', {'293.15' '0.30'; '793.15' '0.315'});
+model.material('mat1').propertyGroup('Enu').func('int2').set('extrap', 'linear');
+model.material('mat1').propertyGroup('Enu').func('int2').set('fununit', {'1'});
+model.material('mat1').propertyGroup('Enu').func('int2').set('argunit', {'K'});
+model.material('mat1').propertyGroup('Enu').set('E', 'E(T)');
+model.material('mat1').propertyGroup('Enu').set('nu', 'nu(T)');
+model.material('mat1').propertyGroup('Enu').addInput('temperature');
+model.material('mat1').propertyGroup('Murnaghan').set('l', '-3.0e11[Pa]');
+model.material('mat1').propertyGroup('Murnaghan').set('m', '-6.2e11[Pa]');
+model.material('mat1').propertyGroup('Murnaghan').set('n', '-7.2e11[Pa]');
+model.material('mat1').propertyGroup('ElastoplasticModel').func('int1').set('funcname', 'a');
+model.material('mat1').propertyGroup('ElastoplasticModel').func('int1').set('table', {'600' '1'; '1100' '0.1'; '1643' '0'});
+model.material('mat1').propertyGroup('ElastoplasticModel').func('int1').set('fununit', {'1'});
+model.material('mat1').propertyGroup('ElastoplasticModel').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('ElastoplasticModel').set('sigmags', '350[MPa]*a(T)');
+model.material('mat1').propertyGroup('ElastoplasticModel').set('Et', '1.045[GPa]*a(T)');
+model.material('mat1').propertyGroup('ElastoplasticModel').set('Ek', '1.045[GPa]*a(T)');
+model.material('mat1').propertyGroup('ElastoplasticModel').set('sigmagh', '1.050[GPa]*epe*a(T)');
+model.material('mat1').propertyGroup('ElastoplasticModel').addInput('temperature');
+model.material('mat1').propertyGroup('ElastoplasticModel').addInput('effectiveplasticstrain');
+model.material('mat1').propertyGroup('Ludwik').func('int1').set('funcname', 'a');
+model.material('mat1').propertyGroup('Ludwik').func('int1').set('table', {'600' '1'; '1100' '0.1'; '1643' '0'});
+model.material('mat1').propertyGroup('Ludwik').func('int1').set('fununit', {'1'});
+model.material('mat1').propertyGroup('Ludwik').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('Ludwik').set('k_lud', '560[MPa]*a(T)');
+model.material('mat1').propertyGroup('Ludwik').set('n_lud', '0.61');
+model.material('mat1').propertyGroup('Ludwik').addInput('temperature');
+model.material('mat1').propertyGroup('JohnsonCook').set('k_jcook', '560[MPa]');
+model.material('mat1').propertyGroup('JohnsonCook').set('n_jcook', '0.61');
+model.material('mat1').propertyGroup('JohnsonCook').set('C_jcook', '0.12');
+model.material('mat1').propertyGroup('JohnsonCook').set('epet0_jcook', '1[1/s]');
+model.material('mat1').propertyGroup('JohnsonCook').set('m_jcook', '0.6');
+model.material('mat1').propertyGroup('Swift').set('e0_swi', '0.021');
+model.material('mat1').propertyGroup('Swift').set('n_swi', '0.2');
+model.material('mat1').propertyGroup('Voce').func('int1').set('funcname', 'a');
+model.material('mat1').propertyGroup('Voce').func('int1').set('table', {'600' '1'; '1100' '0.1'; '1643' '0'});
+model.material('mat1').propertyGroup('Voce').func('int1').set('fununit', {'1'});
+model.material('mat1').propertyGroup('Voce').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('Voce').set('sigma_voc', '249[MPa]*a(T)');
+model.material('mat1').propertyGroup('Voce').set('beta_voc', '9.3');
+model.material('mat1').propertyGroup('Voce').addInput('temperature');
+model.material('mat1').propertyGroup('HockettSherby').func('int1').set('funcname', 'a');
+model.material('mat1').propertyGroup('HockettSherby').func('int1').set('table', {'600' '1'; '1100' '0.1'; '1643' '0'});
+model.material('mat1').propertyGroup('HockettSherby').func('int1').set('fununit', {'1'});
+model.material('mat1').propertyGroup('HockettSherby').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('HockettSherby').set('sigma_hoc', '684[MPa]*a(T)');
+model.material('mat1').propertyGroup('HockettSherby').set('m_hoc', '3.9');
+model.material('mat1').propertyGroup('HockettSherby').set('n_hoc', '0.85');
+model.material('mat1').propertyGroup('HockettSherby').addInput('temperature');
+model.material('mat1').propertyGroup('ArmstrongFrederick').func('int1').set('funcname', 'a');
+model.material('mat1').propertyGroup('ArmstrongFrederick').func('int1').set('table', {'600' '1'; '1100' '0.1'; '1643' '0'});
+model.material('mat1').propertyGroup('ArmstrongFrederick').func('int1').set('fununit', {'1'});
+model.material('mat1').propertyGroup('ArmstrongFrederick').func('int1').set('argunit', {'K'});
+model.material('mat1').propertyGroup('ArmstrongFrederick').set('Ck', '2.070[GPa]*a(T)');
+model.material('mat1').propertyGroup('ArmstrongFrederick').set('gammak', '8.0');
+model.material('mat1').propertyGroup('ArmstrongFrederick').addInput('temperature');
+model.material('mat1').propertyGroup('Norton').set('A_nor', '1.2e-15[1/s]');
+model.material('mat1').propertyGroup('Norton').set('sigRef_nor', '1[MPa]');
+model.material('mat1').propertyGroup('Norton').set('n_nor', '4.5');
+model.material('mat1').propertyGroup('Garofalo').set('A_gar', '1e-6[1/s]');
+model.material('mat1').propertyGroup('Garofalo').set('sigRef_gar', '100[MPa]');
+model.material('mat1').propertyGroup('Garofalo').set('n_gar', '4.6');
+model.material('mat1').propertyGroup('ChabocheViscoplasticity').set('A_cha', '1');
+model.material('mat1').propertyGroup('ChabocheViscoplasticity').set('sigRef_cha', '490[MPa]');
+model.material('mat1').propertyGroup('ChabocheViscoplasticity').set('n_cha', '9');
+
+model.physics('solid').create('roll1', 'Roller', 2);
+model.physics('solid').feature('roll1').selection.set([17 27]);
+model.physics('solid').create('spf1', 'SpringFoundation2', 2);
+model.physics('solid').feature('spf1').selection.set([18 19 20 21 31 32 33 34]);
+model.physics('solid').feature('spf1').set('SpringType', 'kTot');
+model.physics('solid').feature('spf1').set('kTot', {'600[kN/mm]' '0' '0' '0' '600[kN/mm]' '0' '0' '0' '0'});
+model.physics('ht').create('hf1', 'HeatFluxBoundary', 2);
+model.physics('ht').feature('hf1').selection.all;
+model.physics('ht').feature('hf1').selection.set([1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 18 19 20 21 22 23 24 25 26 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44]);
+model.physics('ht').feature('hf1').set('HeatFluxType', 'ConvectiveHeatFlux');
+model.physics('ht').feature('hf1').set('h', 10);
+model.physics('ht').create('hf2', 'HeatFluxBoundary', 2);
+model.physics('ht').feature('hf2').selection.set([17 27]);
+model.physics('ht').feature('hf2').set('q0_input', '1e4');
+
+model.mesh('mesh1').automatic(false);
+model.mesh('mesh1').feature('size').set('hauto', 3);
+model.mesh('mesh1').feature('ftet1').create('size1', 'Size');
+model.mesh('mesh1').feature('ftet1').feature('size1').set('custom', true);
+model.mesh('mesh1').feature('ftet1').feature('size1').set('hmaxactive', true);
+model.mesh('mesh1').feature('ftet1').feature('size1').set('hmax', '8[mm]');
+model.mesh('mesh1').run;
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'stat');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'stat');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('s1').create('se1', 'Segregated');
+model.sol('sol1').feature('s1').feature('se1').feature.remove('ssDef');
+model.sol('sol1').feature('s1').feature('se1').create('ss1', 'SegregatedStep');
+model.sol('sol1').feature('s1').feature('se1').feature('ss1').set('segvar', {'comp1_T'});
+model.sol('sol1').feature('s1').feature('se1').feature('ss1').set('subdamp', 1);
+model.sol('sol1').feature('s1').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').feature('d1').label('Direct, heat transfer variables ht (te1)');
+model.sol('sol1').feature('s1').feature('se1').feature('ss1').set('linsolver', 'd1');
+model.sol('sol1').feature('s1').feature('se1').feature('ss1').label('Temperature');
+model.sol('sol1').feature('s1').feature('se1').create('ss2', 'SegregatedStep');
+model.sol('sol1').feature('s1').feature('se1').feature('ss2').set('segvar', {'comp1_u'});
+model.sol('sol1').feature('s1').create('d2', 'Direct');
+model.sol('sol1').feature('s1').feature('d2').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('d2').set('pivotperturb', 1.0E-9);
+model.sol('sol1').feature('s1').feature('d2').label('Suggested Direct Solver solid (te1)');
+model.sol('sol1').feature('s1').feature('se1').feature('ss2').set('linsolver', 'd2');
+model.sol('sol1').feature('s1').feature('se1').feature('ss2').label('Solid Mechanics');
+model.sol('sol1').feature('s1').feature('se1').set('segtermonres', 'off');
+model.sol('sol1').feature('s1').feature('se1').create('ll1', 'LowerLimit');
+model.sol('sol1').feature('s1').feature('se1').feature('ll1').set('lowerlimit', 'comp1.T 0 ');
+model.sol('sol1').feature('s1').create('i1', 'Iterative');
+model.sol('sol1').feature('s1').feature('i1').set('linsolver', 'gmres');
+model.sol('sol1').feature('s1').feature('i1').set('rhob', 400);
+model.sol('sol1').feature('s1').feature('i1').set('nlinnormuse', true);
+model.sol('sol1').feature('s1').feature('i1').label('Suggested Iterative Solver solid (te1)');
+model.sol('sol1').feature('s1').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('prefun', 'gmg');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').create('so1', 'SOR');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('so1').set('relax', 0.8);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').create('so1', 'SOR');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('so1').set('relax', 0.8);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').feature('d1').set('pivotperturb', 1.0E-9);
+model.sol('sol1').feature('s1').create('i2', 'Iterative');
+model.sol('sol1').feature('s1').feature('i2').set('linsolver', 'gmres');
+model.sol('sol1').feature('s1').feature('i2').set('prefuntype', 'left');
+model.sol('sol1').feature('s1').feature('i2').set('itrestart', 50);
+model.sol('sol1').feature('s1').feature('i2').set('rhob', 20);
+model.sol('sol1').feature('s1').feature('i2').set('maxlinit', 10000);
+model.sol('sol1').feature('s1').feature('i2').set('nlinnormuse', 'on');
+model.sol('sol1').feature('s1').feature('i2').label('AMG, heat transfer variables ht (te1)');
+model.sol('sol1').feature('s1').feature('i2').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('mgcycle', 'v');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('strconn', 0.01);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('nullspace', 'constant');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('usesmooth', false);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('loweramg', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('compactaggregation', false);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').create('so1', 'SOR');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('so1').set('iter', 2);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('so1').set('relax', 0.9);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').create('so1', 'SOR');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('so1').set('iter', 2);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('so1').set('relax', 0.9);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('s1').feature('se1').set('segterm', 'iter');
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup3D');
+model.result('pg1').set('data', 'dset1');
+model.result('pg1').set('defaultPlotID', 'stress');
+model.result('pg1').label('Stress (solid)');
+model.result('pg1').set('frametype', 'spatial');
+model.result('pg1').create('vol1', 'Volume');
+model.result('pg1').feature('vol1').set('expr', {'solid.misesGp'});
+model.result('pg1').feature('vol1').set('threshold', 'manual');
+model.result('pg1').feature('vol1').set('thresholdvalue', 0.2);
+model.result('pg1').feature('vol1').set('colortable', 'Rainbow');
+model.result('pg1').feature('vol1').set('colortabletrans', 'none');
+model.result('pg1').feature('vol1').set('colorscalemode', 'linear');
+model.result('pg1').feature('vol1').set('resolution', 'custom');
+model.result('pg1').feature('vol1').set('refine', 2);
+model.result('pg1').feature('vol1').set('colortable', 'Prism');
+model.result('pg1').feature('vol1').create('def', 'Deform');
+model.result('pg1').feature('vol1').feature('def').set('expr', {'u' 'v' 'w'});
+model.result('pg1').feature('vol1').feature('def').set('descr', 'Displacement field');
+model.result.create('pg2', 'PlotGroup3D');
+model.result('pg2').label('Temperature (ht)');
+model.result('pg2').set('data', 'dset1');
+model.result('pg2').set('defaultPlotID', 'ht/HT_PhysicsInterfaces/icom8/pdef1/pcond3/pcond3/pg1');
+model.result('pg2').feature.create('vol1', 'Volume');
+model.result('pg2').feature('vol1').set('showsolutionparams', 'on');
+model.result('pg2').feature('vol1').set('solutionparams', 'parent');
+model.result('pg2').feature('vol1').set('expr', 'T');
+model.result('pg2').feature('vol1').set('colortable', 'HeatCameraLight');
+model.result('pg2').feature('vol1').set('smooth', 'internal');
+model.result('pg2').feature('vol1').set('showsolutionparams', 'on');
+model.result('pg2').feature('vol1').set('data', 'parent');
+model.result('pg1').run;
+model.result('pg1').run;
+model.result('pg1').feature('vol1').set('unit', 'MPa');
+
+model.view('view1').set('showgrid', false);
+
+model.result('pg1').run;
+model.result('pg2').run;
+model.result('pg2').create('arws1', 'ArrowSurface');
+model.result('pg2').feature('arws1').set('expr', {'0' '0' '1'});
+model.result('pg2').feature('arws1').set('arrowbase', 'head');
+model.result('pg2').feature('arws1').create('sel1', 'Selection');
+model.result('pg2').feature('arws1').feature('sel1').selection.set([17 27]);
+model.result('pg2').run;
+model.result('pg2').feature('arws1').set('arrowcount', 100);
+model.result('pg2').feature('arws1').set('scaleactive', true);
+model.result('pg2').feature('arws1').set('scale', 0.02);
+model.result('pg2').run;
+model.result('pg2').feature('vol1').set('unit', 'degC');
+model.result('pg2').feature('vol1').create('tran1', 'Transparency');
+model.result('pg2').run;
+model.result('pg2').feature('vol1').feature('tran1').set('transparency', 0.4);
+model.result('pg2').feature('vol1').feature('tran1').set('uniformblending', 0.4);
+model.result('pg2').run;
+
+model.title(['Bracket ' native2unicode(hex2dec({'20' '14'}), 'unicode') ' Thermal-Stress Analysis']);
+
+model.description('This example demonstrates how to use the Thermal Stress interface.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+
+model.label('bracket_thermal.mph');
+
+model.modelNode.label('Components');
+
+out = model;

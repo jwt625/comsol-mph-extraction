@@ -1,0 +1,515 @@
+function out = model
+%
+% angle_beam_ndt.m
+%
+% Model exported on May 26 2025, 21:25 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Ultrasound');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.geom('geom1').insertFile('angle_beam_ndt_geom_sequence.mph', 'geom1');
+model.geom('geom1').run('fin');
+
+model.param.label('Geometry');
+model.param.create('par2');
+
+% To import content from file, use:
+% model.param('par2').loadFile('FILENAME');
+model.param('par2').set('f0', '1.5[MHz]', 'Signal center frequency');
+model.param('par2').set('T0', '1/f0', 'Signal period');
+model.param('par2').set('cp_plast', '2080[m/s]', 'Pressure wave speed, plastic');
+model.param('par2').set('cs_plast', '1000[m/s]', 'Shear wave speed, plastic');
+model.param('par2').set('cp_al', '6200[m/s]', 'Pressure wave speed, aluminum');
+model.param('par2').set('cs_al', '3120[m/s]', 'Shear wave speed, aluminum');
+model.param('par2').set('cp_pzt', '4620[m/s]', 'Pressure wave speed, PZT');
+model.param('par2').set('cs_pzt', '1750[m/s]', 'Shear wave speed, PZT');
+model.param('par2').set('cp_damp', '1500[m/s]', 'Pressure wave speed, damping material');
+model.param('par2').set('cs_damp', '775[m/s]', 'Shear wave speed, damping material');
+model.param('par2').set('rho_damp', '6580[kg/m^3]', 'Density, damping material');
+model.param('par2').set('cp_match', '3400[m/s]', 'Pressure wave speed, matching material');
+model.param('par2').set('cs_match', '1920[m/s]', 'Shear wave speed, matching material');
+model.param('par2').set('rho_match', '2280[kg/m^3]', 'Density, matching material');
+model.param('par2').label('Model Parameters');
+
+model.func.create('an1', 'Analytic');
+model.func('an1').label('Voltage Source');
+model.func('an1').set('funcname', 'V0');
+model.func('an1').set('expr', '100*exp(-((t - 2*T0)/(T0/2))^2)*sin(2*pi*f0*t)');
+model.func('an1').set('args', 't');
+model.func('an1').set('fununit', 'V');
+model.func('an1').setIndex('argunit', 's', 0);
+model.func('an1').setIndex('plotargs', '10*T0', 0, 2);
+model.func('an1').createPlot('pg1');
+
+model.result('pg1').run;
+model.result('pg1').label('Voltage Source');
+
+model.func.create('int1', 'Interpolation');
+model.func('int1').set('source', 'file');
+model.func('int1').set('filename', 'angle_beam_ndt_no_defect_signal.txt');
+model.func('int1').setIndex('funcs', 'V_no_defect', 0, 0);
+model.func('int1').setIndex('funcs', 1, 0, 1);
+model.func('int1').set('extrap', 'none');
+model.func('int1').setIndex('fununit', 'V', 0);
+model.func('int1').setIndex('argunit', 's', 0);
+model.func('int1').createPlot('pg2');
+
+model.result('pg2').run;
+model.result('pg2').label('Terminal Voltage');
+model.result('pg2').run;
+model.result('pg2').feature('plot1').set('legend', true);
+model.result('pg2').feature('plot1').set('legendmethod', 'manual');
+model.result('pg2').feature('plot1').setIndex('legends', 'Without defect', 0);
+model.result('pg2').run;
+
+model.selection.create('sel1', 'Explicit');
+model.selection('sel1').model('comp1');
+model.selection('sel1').set([6]);
+model.selection('sel1').label('Transducer');
+model.selection('sel1').set('color', '5');
+model.selection.create('sel2', 'Explicit');
+model.selection('sel2').model('comp1');
+model.selection('sel2').set([7]);
+model.selection('sel2').label('Matching Layer');
+model.selection('sel2').set('color', '10');
+model.selection.create('sel3', 'Explicit');
+model.selection('sel3').model('comp1');
+model.selection('sel3').set([4]);
+model.selection('sel3').label('Damping Block');
+model.selection('sel3').set('color', '9');
+model.selection.create('sel4', 'Explicit');
+model.selection('sel4').model('comp1');
+model.selection('sel4').set([5]);
+model.selection('sel4').label('Wedge');
+model.selection('sel4').set('color', '18');
+model.selection.create('sel5', 'Explicit');
+model.selection('sel5').model('comp1');
+model.selection('sel5').set([1 2 3]);
+model.selection('sel5').label('Test Sample');
+model.selection('sel5').set('color', '4');
+
+model.coordSystem.create('sys2', 'geom1', 'VectorBase');
+model.coordSystem('sys2').set('outofplane', '1');
+model.coordSystem('sys2').set('base', {'cos(alpha)' 'sin(alpha)' '0'; '0' '0' '1'; '-sin(alpha)' 'cos(alpha)' '0'});
+model.coordSystem('sys2').set('orthonormal', true);
+model.coordSystem('sys2').label('Transducer Coordinate System');
+
+model.view.create('view2', 'geom1');
+model.view('view2').model('comp1');
+model.view('view2').set('locked', true);
+model.view('view2').axis.set('xmin', -0.005);
+model.view('view2').axis.set('xmax', 0.04);
+model.view('view2').axis.set('ymin', -0.012);
+model.view('view2').axis.set('ymax', 0.012);
+
+model.physics.create('elte', 'ElasticWavesTimeExplicit', 'geom1');
+model.physics('elte').model('comp1');
+model.physics('elte').feature('eltem1').set('IsotropicOption', 'CpCs');
+model.physics('elte').create('pzm1', 'PiezoelectricMaterialModel', 2);
+model.physics('elte').feature('pzm1').selection.named('sel1');
+model.physics('elte').create('lrb1', 'LowReflectingBoundary', 1);
+model.physics('elte').feature('lrb1').selection.set([1 13 15]);
+model.physics('elte').create('frac1', 'Fracture', 1);
+model.physics('elte').feature('frac1').selection.set([8]);
+model.physics('elte').feature('eltem1').create('dmp1', 'Damping', 2);
+model.physics('elte').feature('eltem1').feature('dmp1').selection.named('sel2');
+model.physics('elte').feature('eltem1').feature('dmp1').set('InputParameters', 'DampingRatios');
+model.physics('elte').feature('eltem1').feature('dmp1').set('f1', '0.99*f0');
+model.physics('elte').feature('eltem1').feature('dmp1').set('zeta1', '5e-2');
+model.physics('elte').feature('eltem1').feature('dmp1').set('f2', '1.01*f0');
+model.physics('elte').feature('eltem1').feature('dmp1').set('zeta2', '5e-2');
+model.physics('elte').feature('eltem1').feature.duplicate('dmp2', 'dmp1');
+model.physics('elte').feature('eltem1').feature('dmp2').selection.named('sel3');
+model.physics('elte').feature('eltem1').feature.duplicate('dmp3', 'dmp2');
+model.physics('elte').feature('eltem1').feature('dmp3').selection.named('sel4');
+model.physics('elte').feature('eltem1').feature('dmp3').set('zeta1', '1e-2');
+model.physics('elte').feature('eltem1').feature('dmp3').set('zeta2', '1e-2');
+model.physics('elte').feature('eltem1').feature.duplicate('dmp4', 'dmp3');
+model.physics('elte').feature('eltem1').feature('dmp4').selection.named('sel5');
+model.physics('elte').feature('eltem1').feature('dmp4').set('zeta1', '0.5e-2');
+model.physics('elte').feature('eltem1').feature('dmp4').set('zeta2', '0.5e-2');
+model.physics('elte').feature('pzm1').set('coordinateSystem', 'sys2');
+model.physics('elte').feature('pzm1').create('mdmp1', 'MechanicalDamping', 2);
+model.physics('elte').feature('pzm1').feature('mdmp1').set('InputParameters', 'DampingRatios');
+model.physics('elte').feature('pzm1').feature('mdmp1').set('f1', '0.99*f0');
+model.physics('elte').feature('pzm1').feature('mdmp1').set('zeta1', '0.5e-2');
+model.physics('elte').feature('pzm1').feature('mdmp1').set('f2', '1.01*f0');
+model.physics('elte').feature('pzm1').feature('mdmp1').set('zeta2', '0.5e-2');
+model.physics.create('es', 'Electrostatics', 'geom1');
+model.physics('es').model('comp1');
+model.physics('es').selection.set([]);
+model.physics('es').selection.named('sel1');
+model.physics('es').create('ccnp1', 'ChargeConservationPiezo', 2);
+model.physics('es').feature('ccnp1').selection.named('sel1');
+model.physics('es').create('gnd1', 'Ground', 1);
+model.physics('es').feature('gnd1').selection.set([33]);
+model.physics('es').create('term1', 'Terminal', 1);
+model.physics('es').feature('term1').selection.set([32]);
+model.physics('es').feature('term1').set('TerminalType', 'Circuit');
+model.physics.create('cir', 'Circuit', 'geom1');
+model.physics('cir').model('comp1');
+model.physics('cir').create('V1', 'VoltageSource', -1);
+model.physics('cir').feature('V1').setIndex('Connections', 0, 1, 0);
+model.physics('cir').feature('V1').set('value', 'V0(t)');
+model.physics('cir').create('R1', 'Resistor', -1);
+model.physics('cir').feature('R1').setIndex('Connections', 1, 0, 0);
+model.physics('cir').feature('R1').setIndex('Connections', 2, 1, 0);
+model.physics('cir').feature('R1').set('R', '2[ohm]');
+model.physics('cir').create('termI1', 'ModelTerminalIV', -1);
+model.physics('cir').feature('termI1').set('Connections', 2);
+model.physics('cir').feature('termI1').set('V_src', 'root.comp1.es.V0_1');
+
+model.multiphysics.create('pzete1', 'PiezoelectricEffectTimeExplicit', 'geom1', 2);
+
+model.probe.create('var1', 'GlobalVariable');
+model.probe('var1').model('comp1');
+model.probe('var1').set('probename', 'V_with_defect');
+model.probe('var1').set('expr', 'es.V0_1');
+model.probe('var1').set('descr', 'Terminal voltage');
+model.probe('var1').set('descractive', true);
+
+model.coordSystem.create('ab1', 'geom1', 'AbsorbingLayer');
+model.coordSystem('ab1').selection.set([1 3]);
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat1').propertyGroup.create('Murnaghan', 'Murnaghan');
+model.material('mat1').label('Aluminum');
+model.material('mat1').set('family', 'aluminum');
+model.material('mat1').propertyGroup('def').set('relpermeability', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('heatcapacity', '900[J/(kg*K)]');
+model.material('mat1').propertyGroup('def').set('thermalconductivity', {'238[W/(m*K)]' '0' '0' '0' '238[W/(m*K)]' '0' '0' '0' '238[W/(m*K)]'});
+model.material('mat1').propertyGroup('def').set('electricconductivity', {'3.774e7[S/m]' '0' '0' '0' '3.774e7[S/m]' '0' '0' '0' '3.774e7[S/m]'});
+model.material('mat1').propertyGroup('def').set('relpermittivity', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', {'23e-6[1/K]' '0' '0' '0' '23e-6[1/K]' '0' '0' '0' '23e-6[1/K]'});
+model.material('mat1').propertyGroup('def').set('density', '2700[kg/m^3]');
+model.material('mat1').propertyGroup('Enu').set('E', '70[GPa]');
+model.material('mat1').propertyGroup('Enu').set('nu', '0.33');
+model.material('mat1').propertyGroup('Murnaghan').set('l', '-250[GPa]');
+model.material('mat1').propertyGroup('Murnaghan').set('m', '-330[GPa]');
+model.material('mat1').propertyGroup('Murnaghan').set('n', '-350[GPa]');
+model.material.create('mat2', 'Common', 'comp1');
+model.material('mat2').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat2').label('Acrylic plastic');
+model.material('mat2').set('family', 'custom');
+model.material('mat2').set('customspecular', [0.9803921568627451 0.9803921568627451 0.9803921568627451]);
+model.material('mat2').set('customdiffuse', [0.39215686274509803 0.7843137254901961 0.39215686274509803]);
+model.material('mat2').set('customambient', [0.39215686274509803 0.7843137254901961 0.39215686274509803]);
+model.material('mat2').set('noise', true);
+model.material('mat2').set('lighting', 'phong');
+model.material('mat2').set('shininess', 1000);
+model.material('mat2').propertyGroup('def').set('thermalexpansioncoefficient', {'7.0e-5[1/K]' '0' '0' '0' '7.0e-5[1/K]' '0' '0' '0' '7.0e-5[1/K]'});
+model.material('mat2').propertyGroup('def').set('heatcapacity', '1470[J/(kg*K)]');
+model.material('mat2').propertyGroup('def').set('density', '1190[kg/m^3]');
+model.material('mat2').propertyGroup('def').set('thermalconductivity', {'0.18[W/(m*K)]' '0' '0' '0' '0.18[W/(m*K)]' '0' '0' '0' '0.18[W/(m*K)]'});
+model.material('mat2').propertyGroup('Enu').set('E', '3.2[GPa]');
+model.material('mat2').propertyGroup('Enu').set('nu', '0.35');
+model.material('mat2').selection.named('sel4');
+model.material.create('mat3', 'Common', 'comp1');
+model.material('mat3').propertyGroup.create('StrainCharge', 'Strain-charge form');
+model.material('mat3').propertyGroup.create('StressCharge', 'Stress-charge form');
+model.material('mat3').label('Lead Zirconate Titanate (PZT-5H)');
+model.material('mat3').set('family', 'lead');
+model.material('mat3').propertyGroup('def').set('heatcapacity', '440[J/(kg*K)]');
+model.material('mat3').propertyGroup('def').set('thermalconductivity', {'1.3[W/(m*K)]' '0' '0' '0' '1.3[W/(m*K)]' '0' '0' '0' '1.3[W/(m*K)]'});
+model.material('mat3').propertyGroup('def').set('relpermittivity', {'1704.4' '0' '0' '0' '1704.4' '0' '0' '0' '1433.6'});
+model.material('mat3').propertyGroup('def').set('density', '7500[kg/m^3]');
+model.material('mat3').propertyGroup('StrainCharge').set('sE', {'1.65e-011[1/Pa]' '-4.78e-012[1/Pa]' '-8.45e-012[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '-4.78e-012[1/Pa]' '1.65e-011[1/Pa]' '-8.45e-012[1/Pa]' '0[1/Pa]'  ...
+'0[1/Pa]' '0[1/Pa]' '-8.45e-012[1/Pa]' '-8.45e-012[1/Pa]' '2.07e-011[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]'  ...
+'0[1/Pa]' '4.35e-011[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '4.35e-011[1/Pa]' '0[1/Pa]'  ...
+'0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '0[1/Pa]' '4.26e-011[1/Pa]'});
+model.material('mat3').propertyGroup('StrainCharge').set('dET', {'0[C/N]' '0[C/N]' '-2.74e-010[C/N]' '0[C/N]' '0[C/N]' '-2.74e-010[C/N]' '0[C/N]' '0[C/N]' '5.93e-010[C/N]' '0[C/N]'  ...
+'7.41e-010[C/N]' '0[C/N]' '7.41e-010[C/N]' '0[C/N]' '0[C/N]' '0[C/N]' '0[C/N]' '0[C/N]'});
+model.material('mat3').propertyGroup('StrainCharge').set('epsilonrT', {'3130' '0' '0' '0' '3130' '0' '0' '0' '3400'});
+model.material('mat3').propertyGroup('StressCharge').set('cE', {'1.27205e+011[Pa]' '8.02122e+010[Pa]' '8.46702e+010[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '8.02122e+010[Pa]' '1.27205e+011[Pa]' '8.46702e+010[Pa]' '0[Pa]'  ...
+'0[Pa]' '0[Pa]' '8.46702e+010[Pa]' '8.46702e+010[Pa]' '1.17436e+011[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]'  ...
+'0[Pa]' '2.29885e+010[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '2.29885e+010[Pa]' '0[Pa]'  ...
+'0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '0[Pa]' '2.34742e+010[Pa]'});
+model.material('mat3').propertyGroup('StressCharge').set('eES', {'0[C/m^2]' '0[C/m^2]' '-6.62281[C/m^2]' '0[C/m^2]' '0[C/m^2]' '-6.62281[C/m^2]' '0[C/m^2]' '0[C/m^2]' '23.2403[C/m^2]' '0[C/m^2]'  ...
+'17.0345[C/m^2]' '0[C/m^2]' '17.0345[C/m^2]' '0[C/m^2]' '0[C/m^2]' '0[C/m^2]' '0[C/m^2]' '0[C/m^2]'});
+model.material('mat3').propertyGroup('StressCharge').set('epsilonrS', {'1704.4' '0' '0' '0' '1704.4' '0' '0' '0' '1433.6'});
+model.material('mat3').selection.named('sel1');
+model.material.create('mat4', 'Common', 'comp1');
+model.material('mat4').selection.named('sel2');
+model.material('mat4').propertyGroup.create('CpCs', 'Pressure_wave_and_shear_wave_speeds');
+model.material('mat4').propertyGroup('CpCs').set('cp', {'cp_match'});
+model.material('mat4').propertyGroup('CpCs').set('cs', {'cs_match'});
+model.material('mat4').propertyGroup('def').set('density', {'rho_match'});
+model.material('mat4').label('Matching Material');
+model.material.create('mat5', 'Common', 'comp1');
+model.material('mat5').selection.named('sel3');
+model.material('mat5').propertyGroup.create('CpCs', 'Pressure_wave_and_shear_wave_speeds');
+model.material('mat5').propertyGroup('CpCs').set('cp', {'cp_damp'});
+model.material('mat5').propertyGroup('CpCs').set('cs', {'cs_damp'});
+model.material('mat5').propertyGroup('def').set('density', {'rho_damp'});
+model.material('mat5').label('Damping Material');
+
+model.mesh('mesh1').create('map1', 'Map');
+model.mesh('mesh1').feature('map1').selection.geom('geom1', 2);
+model.mesh('mesh1').feature('map1').selection.set([6 7]);
+model.mesh('mesh1').feature('map1').create('dis1', 'Distribution');
+model.mesh('mesh1').feature('map1').feature('dis1').selection.set([34]);
+model.mesh('mesh1').feature('map1').feature('dis1').set('numelem', 3);
+model.mesh('mesh1').feature('map1').create('size1', 'Size');
+model.mesh('mesh1').feature('map1').feature('size1').selection.named('sel1');
+model.mesh('mesh1').feature('map1').feature('size1').set('custom', true);
+model.mesh('mesh1').feature('map1').feature('size1').set('hmaxactive', true);
+model.mesh('mesh1').feature('map1').feature('size1').set('hmax', 'cs_pzt/f0/1.5');
+model.mesh('mesh1').feature('map1').create('size2', 'Size');
+model.mesh('mesh1').feature('map1').feature('size2').selection.named('sel2');
+model.mesh('mesh1').feature('map1').feature('size2').set('custom', true);
+model.mesh('mesh1').feature('map1').feature('size2').set('hmaxactive', true);
+model.mesh('mesh1').feature('map1').feature('size2').set('hmax', 'cs_match/f0/1.5');
+model.mesh('mesh1').create('ftri1', 'FreeTri');
+model.mesh('mesh1').feature('ftri1').create('size1', 'Size');
+model.mesh('mesh1').feature('ftri1').feature('size1').selection.geom('geom1', 2);
+model.mesh('mesh1').feature('ftri1').feature('size1').selection.named('sel3');
+model.mesh('mesh1').feature('ftri1').feature('size1').set('custom', true);
+model.mesh('mesh1').feature('ftri1').feature('size1').set('hmaxactive', true);
+model.mesh('mesh1').feature('ftri1').feature('size1').set('hmax', 'cs_damp/f0/1.5');
+model.mesh('mesh1').feature('ftri1').create('size2', 'Size');
+model.mesh('mesh1').feature('ftri1').feature('size2').selection.geom('geom1', 2);
+model.mesh('mesh1').feature('ftri1').feature('size2').selection.named('sel4');
+model.mesh('mesh1').feature('ftri1').feature('size2').set('custom', true);
+model.mesh('mesh1').feature('ftri1').feature('size2').set('hmaxactive', true);
+model.mesh('mesh1').feature('ftri1').feature('size2').set('hmax', 'cs_plast/f0/1.5');
+model.mesh('mesh1').feature('ftri1').create('size3', 'Size');
+model.mesh('mesh1').feature('ftri1').feature('size3').selection.geom('geom1', 2);
+model.mesh('mesh1').feature('ftri1').feature('size3').selection.named('sel5');
+model.mesh('mesh1').feature('ftri1').feature('size3').set('custom', true);
+model.mesh('mesh1').feature('ftri1').feature('size3').set('hmaxactive', true);
+model.mesh('mesh1').feature('ftri1').feature('size3').set('hmax', 'cs_al/f0/1.5');
+model.mesh('mesh1').run;
+
+model.study.create('std1');
+model.study('std1').create('time', 'Transient');
+model.study('std1').feature('time').setSolveFor('/physics/elte', true);
+model.study('std1').feature('time').setSolveFor('/physics/es', true);
+model.study('std1').feature('time').setSolveFor('/physics/cir', true);
+model.study('std1').feature('time').setSolveFor('/multiphysics/pzete1', true);
+model.study('std1').feature('time').set('tlist', 'range(0, T0/5, 30*T0)');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'time');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'time');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('odesolvertype', 'explicit');
+model.sol('sol1').feature('t1').set('timemethodexp', 'erk');
+model.sol('sol1').feature('t1').set('tlist', 'range(0, T0/5, 30*T0)');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'pg1');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {'var1'});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('exprs', {'root.comp1.elte.wtc' 'root.comp1.elte.wtc'});
+model.sol('sol1').feature('t1').set('tstepping', 'elemexprs');
+model.sol('sol1').feature('t1').set('algebraicsolvemethodRK', 'n');
+model.sol('sol1').feature('t1').set('control', 'time');
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('d1').set('linsolver', 'mumps');
+model.sol('sol1').feature('t1').feature('d1').label('Direct (Merged)');
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+
+model.probe('var1').genResult('none');
+
+model.sol('sol1').runAll;
+
+model.result.create('pg4', 'PlotGroup2D');
+model.result('pg4').label('Velocity Magnitude (elte)');
+model.result('pg4').set('showlegendsunit', true);
+model.result('pg4').set('data', 'dset1');
+model.result('pg4').setIndex('looplevel', 151, 0);
+model.result('pg4').set('defaultPlotID', 'ElasticWavesTimeExplicit/phys1/pdef1/pcond2/pg1');
+model.result('pg4').feature.create('surf1', 'Surface');
+model.result('pg4').feature('surf1').set('resolution', 'custom');
+model.result('pg4').feature('surf1').set('refine', 6);
+model.result('pg4').feature('surf1').set('smooth', 'internal');
+model.result('pg4').feature('surf1').set('data', 'parent');
+model.result.create('pg5', 'PlotGroup2D');
+model.result('pg5').label('Pressure (elte)');
+model.result('pg5').set('showlegendsunit', true);
+model.result('pg5').set('data', 'dset1');
+model.result('pg5').setIndex('looplevel', 151, 0);
+model.result('pg5').set('defaultPlotID', 'ElasticWavesTimeExplicit/phys1/pdef1/pcond2/pg2');
+model.result('pg5').feature.create('surf1', 'Surface');
+model.result('pg5').feature('surf1').set('expr', 'elte.p');
+model.result('pg5').feature('surf1').set('colortable', 'Wave');
+model.result('pg5').feature('surf1').set('colorscalemode', 'linearsymmetric');
+model.result('pg5').feature('surf1').set('resolution', 'custom');
+model.result('pg5').feature('surf1').set('refine', 6);
+model.result('pg5').feature('surf1').set('smooth', 'internal');
+model.result('pg5').feature('surf1').set('data', 'parent');
+model.result.create('pg6', 'PlotGroup2D');
+model.result('pg6').label('Electric Potential (es)');
+model.result('pg6').set('frametype', 'spatial');
+model.result('pg6').set('showlegendsmaxmin', true);
+model.result('pg6').set('data', 'dset1');
+model.result('pg6').setIndex('looplevel', 151, 0);
+model.result('pg6').set('defaultPlotID', 'InterfaceComponents/PlotDefaults/icom2/pdef1/pcond2/pcond2/pg1');
+model.result('pg6').feature.create('surf1', 'Surface');
+model.result('pg6').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg6').feature('surf1').set('solutionparams', 'parent');
+model.result('pg6').feature('surf1').set('expr', 'V');
+model.result('pg6').feature('surf1').set('colortable', 'Dipole');
+model.result('pg6').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg6').feature('surf1').set('data', 'parent');
+model.result('pg6').feature.create('str1', 'Streamline');
+model.result('pg6').feature('str1').set('showsolutionparams', 'on');
+model.result('pg6').feature('str1').set('solutionparams', 'parent');
+model.result('pg6').feature('str1').set('expr', {'es.Ex' 'es.Ey'});
+model.result('pg6').feature('str1').set('titletype', 'none');
+model.result('pg6').feature('str1').set('posmethod', 'uniform');
+model.result('pg6').feature('str1').set('udist', 0.02);
+model.result('pg6').feature('str1').set('maxlen', 0.4);
+model.result('pg6').feature('str1').set('maxtime', Inf);
+model.result('pg6').feature('str1').set('inheritcolor', false);
+model.result('pg6').feature('str1').set('showsolutionparams', 'on');
+model.result('pg6').feature('str1').set('maxtime', Inf);
+model.result('pg6').feature('str1').set('showsolutionparams', 'on');
+model.result('pg6').feature('str1').set('maxtime', Inf);
+model.result('pg6').feature('str1').set('showsolutionparams', 'on');
+model.result('pg6').feature('str1').set('maxtime', Inf);
+model.result('pg6').feature('str1').set('showsolutionparams', 'on');
+model.result('pg6').feature('str1').set('maxtime', Inf);
+model.result('pg6').feature('str1').set('data', 'parent');
+model.result('pg6').feature('str1').selection.geom('geom1', 1);
+model.result('pg6').feature('str1').selection.set([31 32 33 34]);
+model.result('pg6').feature('str1').set('inheritplot', 'surf1');
+model.result('pg6').feature('str1').feature.create('col1', 'Color');
+model.result('pg6').feature('str1').feature('col1').set('expr', 'V');
+model.result('pg6').feature('str1').feature('col1').set('colortable', 'DipoleDark');
+model.result('pg6').feature('str1').feature('col1').set('colorlegend', false);
+model.result('pg6').feature('str1').feature.create('filt1', 'Filter');
+model.result('pg6').feature('str1').feature('filt1').set('expr', '!isScalingSystemDomain');
+model.result.create('pg7', 'PlotGroup2D');
+model.result('pg7').label('Electric Field Norm (es)');
+model.result('pg7').set('frametype', 'spatial');
+model.result('pg7').set('showlegendsmaxmin', true);
+model.result('pg7').set('data', 'dset1');
+model.result('pg7').setIndex('looplevel', 151, 0);
+model.result('pg7').set('defaultPlotID', 'InterfaceComponents/PlotDefaults/icom3/pdef1/pcond2/pcond2/pg1');
+model.result('pg7').feature.create('surf1', 'Surface');
+model.result('pg7').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg7').feature('surf1').set('solutionparams', 'parent');
+model.result('pg7').feature('surf1').set('expr', 'es.normE');
+model.result('pg7').feature('surf1').set('colortable', 'Prism');
+model.result('pg7').feature('surf1').set('colortabletrans', 'nonlinear');
+model.result('pg7').feature('surf1').set('colorcalibration', -0.8);
+model.result('pg7').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg7').feature('surf1').set('data', 'parent');
+model.result('pg7').feature.create('str1', 'Streamline');
+model.result('pg7').feature('str1').set('showsolutionparams', 'on');
+model.result('pg7').feature('str1').set('solutionparams', 'parent');
+model.result('pg7').feature('str1').set('expr', {'es.Ex' 'es.Ey'});
+model.result('pg7').feature('str1').set('titletype', 'none');
+model.result('pg7').feature('str1').set('posmethod', 'uniform');
+model.result('pg7').feature('str1').set('udist', 0.02);
+model.result('pg7').feature('str1').set('maxlen', 0.4);
+model.result('pg7').feature('str1').set('maxtime', Inf);
+model.result('pg7').feature('str1').set('inheritcolor', false);
+model.result('pg7').feature('str1').set('showsolutionparams', 'on');
+model.result('pg7').feature('str1').set('maxtime', Inf);
+model.result('pg7').feature('str1').set('showsolutionparams', 'on');
+model.result('pg7').feature('str1').set('maxtime', Inf);
+model.result('pg7').feature('str1').set('showsolutionparams', 'on');
+model.result('pg7').feature('str1').set('maxtime', Inf);
+model.result('pg7').feature('str1').set('showsolutionparams', 'on');
+model.result('pg7').feature('str1').set('maxtime', Inf);
+model.result('pg7').feature('str1').set('data', 'parent');
+model.result('pg7').feature('str1').selection.geom('geom1', 1);
+model.result('pg7').feature('str1').selection.set([31 32 33 34]);
+model.result('pg7').feature('str1').set('inheritplot', 'surf1');
+model.result('pg7').feature('str1').feature.create('col1', 'Color');
+model.result('pg7').feature('str1').feature('col1').set('expr', 'es.normE');
+model.result('pg7').feature('str1').feature('col1').set('colortable', 'PrismDark');
+model.result('pg7').feature('str1').feature('col1').set('colorlegend', false);
+model.result('pg7').feature('str1').feature('col1').set('colortabletrans', 'nonlinear');
+model.result('pg7').feature('str1').feature('col1').set('colorcalibration', -0.8);
+model.result('pg7').feature('str1').feature.create('filt1', 'Filter');
+model.result('pg7').feature('str1').feature('filt1').set('expr', '!isScalingSystemDomain');
+model.result('pg4').run;
+model.result('pg2').run;
+model.result('pg2').set('title', 'Terminal Voltage (V)');
+model.result('pg2').create('tblp1', 'Table');
+model.result('pg2').feature('tblp1').set('markerpos', 'datapoints');
+model.result('pg2').feature('tblp1').set('linewidth', 'preference');
+model.result('pg2').feature('tblp1').set('legend', true);
+model.result('pg2').feature('tblp1').set('legendmethod', 'manual');
+model.result('pg2').feature('tblp1').setIndex('legends', 'With defect', 0);
+model.result('pg2').run;
+model.result.create('pg8', 'PlotGroup2D');
+model.result('pg8').run;
+model.result('pg8').label('Pressure and Shear Waves');
+model.result('pg8').setIndex('looplevel', 91, 0);
+model.result('pg8').create('surf1', 'Surface');
+model.result('pg8').feature('surf1').set('expr', 'sqrt(abs(elte.I2s))*sign(elte.I2s)');
+model.result('pg8').feature('surf1').set('colortable', 'Twilight');
+model.result('pg8').feature('surf1').set('colorscalemode', 'linearsymmetric');
+model.result('pg8').run;
+model.result('pg8').run;
+model.result('pg8').setIndex('looplevel', 31, 0);
+model.result('pg8').run;
+model.result('pg8').setIndex('looplevel', 46, 0);
+model.result('pg8').run;
+model.result('pg8').setIndex('looplevel', 61, 0);
+model.result('pg8').run;
+model.result('pg8').setIndex('looplevel', 91, 0);
+model.result('pg8').run;
+model.result('pg2').run;
+model.result.duplicate('pg9', 'pg2');
+model.result('pg9').run;
+model.result('pg9').label('Terminal Voltage (zoomed)');
+model.result('pg9').set('legendpos', 'upperleft');
+model.result('pg9').run;
+model.result('pg9').feature('plot1').set('lowerbound', 1.2E-5);
+model.result('pg9').feature('plot1').set('extrapolation', 'none');
+model.result('pg9').run;
+model.result('pg9').feature.remove('tblp1');
+model.result('pg9').run;
+model.result('pg9').run;
+model.result('pg9').create('glob1', 'Global');
+model.result('pg9').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg9').feature('glob1').set('linewidth', 'preference');
+model.result('pg9').feature('glob1').set('data', 'dset2');
+model.result('pg9').feature('glob1').set('expr', {'V_with_defect'});
+model.result('pg9').feature('glob1').set('descr', {'Global Variable Probe 1'});
+model.result('pg9').feature('glob1').set('unit', {'V'});
+model.result('pg9').feature('glob1').set('legendmethod', 'manual');
+model.result('pg9').feature('glob1').setIndex('legends', 'With defect', 0);
+model.result('pg9').feature('glob1').setIndex('looplevelinput', 'interp', 0);
+model.result('pg9').feature('glob1').setIndex('interp', 'range(1.2E-5, 1E-8, 2E-5)', 0);
+model.result('pg9').run;
+model.result('pg8').run;
+
+model.title('Angle Beam Nondestructive Testing');
+
+model.description('Angle beam ultrasonic units are used for nondestructive testing (NDT) of solid objects, such as metal pipes. They are especially useful for detecting flaws in and around welding areas, such as pores, small cracks, lack of fusion, etc. Angle beam NDT is often used where the straight beam testing struggles to find defects, for example, when the cracks are vertical and thin and thus not detectable because of small amount of reflection. The operating principle of angle beam NDT lies in the conversion of a longitudinal (compression) wave sent by the transducer into a refracted shear (transverse) wave in the test sample. The shear wave is then reflected by the flaws in the test object.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+
+model.label('angle_beam_ndt.mph');
+
+model.modelNode.label('Components');
+
+out = model;

@@ -1,0 +1,431 @@
+function out = model
+%
+% composite_cylinder_buckling.m
+%
+% Model exported on May 26 2025, 21:27 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Composite_Materials_Module/Buckling');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 3);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('shell', 'Shell', 'geom1');
+model.physics('shell').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('stat', 'Stationary');
+model.study('std1').feature('stat').set('solnum', 'auto');
+model.study('std1').feature('stat').set('notsolnum', 'auto');
+model.study('std1').feature('stat').set('outputmap', {});
+model.study('std1').feature('stat').set('ngenAUX', '1');
+model.study('std1').feature('stat').set('goalngenAUX', '1');
+model.study('std1').feature('stat').set('ngenAUX', '1');
+model.study('std1').feature('stat').set('goalngenAUX', '1');
+model.study('std1').feature('stat').setSolveFor('/physics/shell', true);
+model.study('std1').create('buckling', 'LinearBuckling');
+model.study('std1').feature('buckling').set('neigsactive', true);
+model.study('std1').feature('buckling').set('solnum', 'auto');
+model.study('std1').feature('buckling').set('notsolnum', 'auto');
+model.study('std1').feature('buckling').set('outputmap', {});
+model.study('std1').feature('buckling').set('ngenAUX', '1');
+model.study('std1').feature('buckling').set('goalngenAUX', '1');
+model.study('std1').feature('buckling').set('ngenAUX', '1');
+model.study('std1').feature('buckling').set('goalngenAUX', '1');
+model.study('std1').feature('buckling').setSolveFor('/physics/shell', true);
+
+model.param.set('r', '0.15[m]');
+model.param.descr('r', 'Cylinder radius');
+model.param.set('l', '0.4[m]');
+model.param.descr('l', 'Cylinder length');
+
+model.variable.create('var1');
+model.variable('var1').model('comp1');
+
+model.geom('geom1').run;
+
+model.variable('var1').set('Fc', 'shell.LFcrit*1[N]');
+model.variable('var1').descr('Fc', 'Critical buckling load');
+model.variable('var1').set('un', 'u*nX+v*nY+w*nZ');
+model.variable('var1').descr('un', 'Normal displacement');
+
+model.geom('geom1').create('cyl1', 'Cylinder');
+model.geom('geom1').feature('cyl1').set('type', 'surface');
+model.geom('geom1').feature('cyl1').set('r', 'r');
+model.geom('geom1').feature('cyl1').set('h', 'l');
+model.geom('geom1').run('cyl1');
+
+model.view('view1').set('showgrid', true);
+
+model.geom('geom1').run;
+
+model.material.create('mat1', 'Common', '');
+model.material('mat1').propertyGroup.create('TransverseIsotropic', 'Transversely isotropic');
+model.material('mat1').label('Material: Carbon-Epoxy');
+model.material('mat1').propertyGroup('def').set('density', '1700');
+model.material('mat1').propertyGroup('TransverseIsotropic').set('Evect', {'134e9' '9.2e9'});
+model.material('mat1').propertyGroup('TransverseIsotropic').set('nuvect', {'0.28' '0.28'});
+model.material('mat1').propertyGroup('TransverseIsotropic').set('Gvect1', '4.8e9');
+model.material.create('lmat1', 'LayeredMaterial', '');
+model.material('lmat1').set('layername', {'Layer 1' 'Layer 2' 'Layer 3' 'Layer 4' 'Layer 5' 'Layer 6' 'Layer 7' 'Layer 8'});
+model.material('lmat1').set('link', {'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1'});
+model.material('lmat1').set('rotation', {'0.0' '0.0' '0.0' '0.0' '0.0' '0.0' '0.0' '0.0'});
+model.material('lmat1').set('thickness', {'1e-4[m]' '1e-4[m]' '1e-4[m]' '1e-4[m]' '1e-4[m]' '1e-4[m]' '1e-4[m]' '1e-4[m]'});
+model.material('lmat1').set('meshPoints', {'2' '2' '2' '2' '2' '2' '2' '2'});
+model.material('lmat1').set('tag', {'lmat1_1' 'lmat1_2' 'lmat1_3' 'lmat1_4' 'lmat1_5' 'lmat1_6' 'lmat1_7' 'lmat1_8'});
+model.material('lmat1').set('matLink_int', {'' '' '' '' '' '' '' '' ''});
+model.material('lmat1').set('intname', {'Layer 1 down' 'Layer 1-Layer 2' 'Layer 2-Layer 3' 'Layer 3-Layer 4' 'Layer 4-Layer 5' 'Layer 5-Layer 6' 'Layer 6-Layer 7' 'Layer 7-Layer 8' 'Layer 8 up'});
+model.material('lmat1').set('position', {'0' '1E-4' '2E-4' '3E-4' '4E-4' '5E-4' '6E-4' '7E-4' '8E-4'});
+model.material('lmat1').set('labelModified', {'false' 'false' 'false' 'false' 'false' 'false' 'false' 'false' 'false'});
+model.material('lmat1').label('Layered Material: [0/0/45/-45]_s');
+model.material('lmat1').set('link', {'' '' '' '' '' '' '' ''});
+model.material('lmat1').set('rotation', [0 0 45 -45 -45 45 0 0]);
+model.material('lmat1').set('thickness', {'0.125[mm]' '0.125[mm]' '0.125[mm]' '0.125[mm]' '0.125[mm]' '0.125[mm]' '0.125[mm]' '0.125[mm]'});
+model.material('lmat1').set('meshPoints', [1 1 1 1 1 1 1 1]);
+model.material('lmat1').set('position', {'0' '0.125[mm]' '2*0.125[mm]' '3*0.125[mm]' '4*0.125[mm]' '5*0.125[mm]' '6*0.125[mm]' '7*0.125[mm]' '8*0.125[mm]'});
+model.material('lmat1').set('widthRatio', 0.6);
+model.material('lmat1').set('link', {'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1' 'mat1'});
+model.material('lmat1').set('matLink_int', {'' '' '' '' '' '' '' '' ''});
+model.material.create('sw1', 'Switch', '');
+model.material('sw1').feature.copy('lmat1', 'lmat1', '');
+model.material.remove('lmat1');
+model.material('sw1').feature.duplicate('lmat2', 'lmat1');
+model.material('sw1').feature('lmat2').label('Layered Material: [90/90/45/-45]_s');
+model.material('sw1').feature('lmat2').setIndex('rotation', 90, 0);
+model.material('sw1').feature('lmat2').setIndex('rotation', 90, 1);
+model.material('sw1').feature('lmat2').setIndex('rotation', 45, 2);
+model.material('sw1').feature('lmat2').setIndex('rotation', -45, 3);
+model.material('sw1').feature('lmat2').setIndex('rotation', -45, 4);
+model.material('sw1').feature('lmat2').setIndex('rotation', 45, 5);
+model.material('sw1').feature('lmat2').setIndex('rotation', 90, 6);
+model.material('sw1').feature('lmat2').setIndex('rotation', 90, 7);
+model.material('sw1').feature.duplicate('lmat3', 'lmat2');
+model.material('sw1').feature('lmat3').label('Layered Material: [90/0/90/0]_s');
+model.material('sw1').feature('lmat3').setIndex('rotation', 90, 0);
+model.material('sw1').feature('lmat3').setIndex('rotation', 0, 1);
+model.material('sw1').feature('lmat3').setIndex('rotation', 90, 2);
+model.material('sw1').feature('lmat3').setIndex('rotation', 0, 3);
+model.material('sw1').feature('lmat3').setIndex('rotation', 0, 4);
+model.material('sw1').feature('lmat3').setIndex('rotation', 90, 5);
+model.material('sw1').feature('lmat3').setIndex('rotation', 0, 6);
+model.material('sw1').feature('lmat3').setIndex('rotation', 90, 7);
+model.material('sw1').feature.duplicate('lmat4', 'lmat3');
+model.material('sw1').feature('lmat4').label('Layered Material: [45/45/45/45]_as');
+model.material('sw1').feature('lmat4').setIndex('rotation', 45, 0);
+model.material('sw1').feature('lmat4').setIndex('rotation', 45, 1);
+model.material('sw1').feature('lmat4').setIndex('rotation', 45, 2);
+model.material('sw1').feature('lmat4').setIndex('rotation', 45, 3);
+model.material('sw1').feature('lmat4').setIndex('rotation', -45, 4);
+model.material('sw1').feature('lmat4').setIndex('rotation', -45, 5);
+model.material('sw1').feature('lmat4').setIndex('rotation', -45, 6);
+model.material('sw1').feature('lmat4').setIndex('rotation', -45, 7);
+model.material.create('llmat1', 'LayeredMaterialLink', 'comp1');
+
+model.physics('shell').create('llem1', 'LayeredElastic', 2);
+model.physics('shell').feature('llem1').selection.all;
+model.physics('shell').feature('llem1').set('SolidModel', 'Orthotropic');
+model.physics('shell').feature('llem1').set('TransverseIsotropic', true);
+model.physics('shell').create('fix1', 'Fixed', 1);
+model.physics('shell').feature('fix1').selection.set([2 3 7 10]);
+model.physics('shell').create('disp1', 'Displacement1', 1);
+model.physics('shell').feature('disp1').selection.set([4 5 8 11]);
+model.physics('shell').feature('disp1').setIndex('Direction', 'prescribed', 0);
+model.physics('shell').feature('disp1').setIndex('Direction', 'prescribed', 1);
+model.physics('shell').feature('disp1').set('RotationType', 'RotationGroup');
+model.physics('shell').create('el1', 'EdgeLoad', 1);
+model.physics('shell').feature('el1').selection.set([4 5 8 11]);
+model.physics('shell').feature('el1').set('LoadTypeForce', 'TotalForce');
+model.physics('shell').feature('el1').set('FeTot', {'0' '0' '-1[N]'});
+
+model.mesh('mesh1').autoMeshSize(2);
+model.mesh('mesh1').run;
+
+model.study('std1').create('matsw', 'MaterialSweep');
+model.study('std1').feature('matsw').setIndex('pname', 'matsw.sw1', 0);
+model.study('std1').feature('matsw').setIndex('pcase', 'all', 0);
+model.study('std1').feature('matsw').setIndex('plistarr', 'range(1,1,4)', 0);
+model.study('std1').feature('matsw').setIndex('pname', 'matsw.sw1', 0);
+model.study('std1').feature('matsw').setIndex('pcase', 'all', 0);
+model.study('std1').feature('matsw').setIndex('plistarr', 'range(1,1,4)', 0);
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'stat');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('scaleval', '0.01');
+model.sol('sol1').feature('v1').set('control', 'stat');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').feature('fc1').set('termonres', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('reserrfact', 1000);
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'dDef');
+model.sol('sol1').feature('s1').feature('fc1').set('termonres', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('reserrfact', 1000);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').create('su1', 'StoreSolution');
+model.sol('sol1').create('st2', 'StudyStep');
+model.sol('sol1').feature('st2').set('study', 'std1');
+model.sol('sol1').feature('st2').set('studystep', 'buckling');
+model.sol('sol1').create('v2', 'Variables');
+model.sol('sol1').feature('v2').feature('comp1_ar').set('scalemethod', 'manual');
+model.sol('sol1').feature('v2').feature('comp1_ar').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v2').feature('comp1_ar').set('scaleval', '0.01');
+model.sol('sol1').feature('v2').set('initmethod', 'sol');
+model.sol('sol1').feature('v2').set('initsol', 'sol1');
+model.sol('sol1').feature('v2').set('initsoluse', 'sol2');
+model.sol('sol1').feature('v2').set('notsolmethod', 'sol');
+model.sol('sol1').feature('v2').set('notsol', 'sol1');
+model.sol('sol1').feature('v2').set('control', 'buckling');
+model.sol('sol1').create('e1', 'Eigenvalue');
+model.sol('sol1').feature('e1').set('eigvfunscale', 'maximum');
+model.sol('sol1').feature('e1').set('eigvfunscaleparam', '5.83E-7');
+model.sol('sol1').feature('e1').set('control', 'buckling');
+model.sol('sol1').feature('e1').set('linpmethod', 'sol');
+model.sol('sol1').feature('e1').set('linpsol', 'sol1');
+model.sol('sol1').feature('e1').set('linpsoluse', 'sol2');
+model.sol('sol1').feature('e1').set('control', 'buckling');
+model.sol('sol1').feature('e1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('v2').set('notsolnum', 'auto');
+model.sol('sol1').feature('v2').set('notsolvertype', 'solnum');
+model.sol('sol1').attach('std1');
+
+model.batch.create('pm1', 'MaterialSweep');
+model.batch('pm1').study('std1');
+model.batch('pm1').create('so1', 'Solutionseq');
+model.batch('pm1').feature('so1').set('seq', 'sol1');
+model.batch('pm1').feature('so1').set('store', 'on');
+model.batch('pm1').feature('so1').set('clear', 'on');
+model.batch('pm1').feature('so1').set('psol', 'none');
+model.batch('pm1').set('pname', {'matsw.sw1'});
+model.batch('pm1').set('plistarr', {'range(1,1,4)'});
+model.batch('pm1').set('sweeptype', 'filled');
+model.batch('pm1').set('probesel', 'all');
+model.batch('pm1').set('probes', {});
+model.batch('pm1').set('plot', 'off');
+model.batch('pm1').set('err', 'on');
+model.batch('pm1').attach('std1');
+model.batch('pm1').set('control', 'matsw');
+
+model.sol.create('sol3');
+model.sol('sol3').study('std1');
+model.sol('sol3').label('Parametric Solutions 1');
+
+model.batch('pm1').feature('so1').set('psol', 'sol3');
+model.batch('pm1').run('compute');
+
+model.result.dataset('dset3').set('frametype', 'spatial');
+model.result.dataset.create('dset3shelllshl', 'LayeredMaterial');
+model.result.dataset('dset3shelllshl').set('data', 'dset3');
+model.result.create('pg1', 'PlotGroup3D');
+model.result('pg1').set('data', 'dset3shelllshl');
+model.result('pg1').setIndex('looplevel', 1, 0);
+model.result('pg1').setIndex('looplevel', 4, 1);
+model.result('pg1').set('frametype', 'spatial');
+model.result('pg1').set('defaultPlotID', 'modeShape');
+model.result('pg1').label('Mode Shape (shell)');
+model.result('pg1').set('showlegends', false);
+model.result('pg1').create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('expr', {'shell.disp'});
+model.result('pg1').feature('surf1').set('threshold', 'manual');
+model.result('pg1').feature('surf1').set('thresholdvalue', 0.2);
+model.result('pg1').feature('surf1').set('colortable', 'Rainbow');
+model.result('pg1').feature('surf1').set('colortabletrans', 'none');
+model.result('pg1').feature('surf1').set('colorscalemode', 'linear');
+model.result('pg1').feature('surf1').set('colortable', 'AuroraBorealis');
+model.result('pg1').feature('surf1').create('def', 'Deform');
+model.result('pg1').feature('surf1').feature('def').set('expr', {'shell.u' 'shell.v' 'shell.w'});
+model.result('pg1').feature('surf1').set('inheritplot', 'none');
+model.result('pg1').set('data', 'dset3shelllshl');
+model.result('pg1').run;
+
+model.view('view1').set('showgrid', false);
+model.view('view1').set('scenelight', false);
+model.view('view1').set('locked', true);
+model.view('view1').camera.set('zoomanglefull', 14.451568603515625);
+
+model.result('pg1').run;
+model.result('pg1').label('Mode Shape: [0/0/45/-45]_s');
+model.result('pg1').set('looplevel', [1 1]);
+model.result('pg1').set('titletype', 'custom');
+model.result('pg1').set('unitintitle', false);
+model.result('pg1').set('descriptionintitle', false);
+model.result('pg1').set('typeintitle', false);
+model.result('pg1').set('edges', false);
+model.result('pg1').run;
+model.result('pg1').feature('surf1').set('expr', 'un');
+model.result('pg1').run;
+model.result.create('pg2', 'PlotGroup3D');
+model.result('pg2').set('data', 'dset1');
+model.result('pg2').setIndex('looplevel', 1, 0);
+model.result('pg2').set('frametype', 'spatial');
+model.result('pg2').set('defaultPlotID', 'thicknessOrientation');
+model.result('pg2').label('Thickness and Orientation (shell)');
+model.result('pg2').set('titletype', 'label');
+model.result('pg2').set('showlegendsunit', true);
+model.result('pg2').create('surf1', 'Surface');
+model.result('pg2').feature('surf1').set('expr', {'shell.d'});
+model.result('pg2').feature('surf1').set('threshold', 'manual');
+model.result('pg2').feature('surf1').set('thresholdvalue', 0.2);
+model.result('pg2').feature('surf1').set('colortable', 'HeatCameraLight');
+model.result('pg2').feature('surf1').set('colortabletrans', 'reverse');
+model.result('pg2').feature('surf1').set('colorscalemode', 'linear');
+model.result('pg2').feature('surf1').label('Thickness');
+model.result('pg2').create('syss', 'CoordSysSurface');
+model.result('pg2').feature('syss').set('sys', 'shellsys');
+model.result('pg2').feature('syss').label('Shell Local System');
+model.result('pg2').label('Thickness and Orientation (shell)');
+model.result('pg2').run;
+model.result('pg2').run;
+model.result.create('pg3', 'PlotGroup3D');
+model.result('pg3').run;
+model.result('pg3').label('Stress: [45/45/45/45]_as');
+model.result('pg3').set('data', 'dset2');
+model.result('pg3').set('frametype', 'spatial');
+model.result('pg3').create('lss1', 'LayeredMaterialSlice');
+model.result('pg3').feature('lss1').set('expr', 'shell.mises');
+model.result('pg3').feature('lss1').set('colortable', 'RainbowLight');
+model.result('pg3').feature('lss1').create('def1', 'Deform');
+model.result('pg3').run;
+model.result('pg3').feature('lss1').feature('def1').set('expr', {'shell.u' 'shell.v' 'w'});
+model.result('pg3').feature('lss1').feature('def1').setIndex('expr', 'shell.w', 2);
+model.result('pg3').run;
+model.result('pg3').run;
+model.result('pg1').run;
+model.result.duplicate('pg4', 'pg1');
+model.result('pg4').run;
+model.result('pg4').label('Mode Shape: [90/90/45/-45]_s');
+model.result('pg4').set('looplevel', [1 2]);
+model.result.duplicate('pg5', 'pg4');
+model.result('pg5').run;
+model.result('pg5').label('Mode Shape: [90/0/90/0]_s');
+model.result('pg5').set('looplevel', [1 3]);
+model.result('pg5').run;
+model.result.duplicate('pg6', 'pg5');
+model.result('pg6').run;
+model.result('pg6').label('Mode Shape: [45/45/45/45]_as');
+model.result('pg6').set('looplevel', [1 4]);
+model.result('pg6').run;
+model.result.duplicate('pg7', 'pg6');
+model.result('pg7').run;
+model.result('pg7').label('Mode Shape: Comparison');
+model.result('pg7').set('solutionintitle', false);
+model.result('pg7').set('typeintitle', true);
+model.result('pg7').set('descriptionintitle', true);
+model.result('pg7').set('unitintitle', true);
+model.result('pg7').run;
+model.result('pg7').feature('surf1').set('data', 'dset3shelllshl');
+model.result('pg7').feature('surf1').set('looplevel', [1 1]);
+model.result('pg7').run;
+model.result('pg7').feature('surf1').feature('def').set('scaleactive', true);
+model.result('pg7').feature('surf1').feature('def').set('scale', 1);
+model.result('pg7').run;
+model.result('pg7').feature.duplicate('surf2', 'surf1');
+model.result('pg7').run;
+model.result('pg7').feature('surf2').set('looplevel', [1 2]);
+model.result('pg7').feature('surf2').set('titletype', 'none');
+model.result('pg7').run;
+model.result('pg7').feature('surf2').feature('def').setIndex('expr', 'v+1.3*l', 1);
+model.result('pg7').run;
+model.result('pg7').feature.duplicate('surf3', 'surf2');
+model.result('pg7').run;
+model.result('pg7').feature('surf3').set('looplevel', [1 3]);
+model.result('pg7').run;
+model.result('pg7').feature('surf3').feature('def').setIndex('expr', 'v', 1);
+model.result('pg7').feature('surf3').feature('def').set('expr', {'shell.u' 'v' 'w+1.3*l'});
+model.result('pg7').run;
+model.result('pg7').feature.duplicate('surf4', 'surf3');
+model.result('pg7').run;
+model.result('pg7').feature('surf4').set('looplevel', [1 4]);
+model.result('pg7').run;
+model.result('pg7').feature('surf4').feature('def').setIndex('expr', 'v+1.3*l', 1);
+model.result('pg7').run;
+model.result('pg7').create('tlan1', 'TableAnnotation');
+model.result('pg7').feature('tlan1').set('source', 'localtable');
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 0, 0);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 0, 1);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '-0.15*l', 0, 2);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '[0/0/45/-45]_s', 0, 3);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 1, 0);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '1.3*l', 1, 1);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '-0.15*l', 1, 2);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '[90/90/45/-45]_s', 1, 3);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 2, 0);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 2, 1);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '-0.15*l+1.3*l', 2, 2);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '[90/0/90/0]_s', 2, 3);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', 0, 3, 0);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '1.3*l', 3, 1);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '-0.15*l+1.3*l', 3, 2);
+model.result('pg7').feature('tlan1').setIndex('localtablematrix', '[45/45/45/45]_as', 3, 3);
+model.result('pg7').feature('tlan1').set('showpoint', false);
+model.result('pg7').feature('tlan1').set('anchorpoint', 'lowermiddle');
+model.result('pg7').run;
+model.result('pg7').set('view', 'new');
+model.result('pg7').run;
+
+model.view('view3').set('showgrid', false);
+model.view('view3').set('scenelight', false);
+model.view('view3').set('locked', true);
+model.view('view3').camera.set('zoomanglefull', 15.87480640411377);
+model.view('view3').camera.setIndex('position', 7.46187686920166, 0);
+model.view('view3').camera.setIndex('position', 0.24306577444076538, 1);
+model.view('view3').camera.setIndex('position', 0.4300422966480255, 2);
+model.view('view3').camera.setIndex('target', 0.0014853477478027344, 0);
+model.view('view3').camera.setIndex('target', 0.24306577444076538, 1);
+model.view('view3').camera.setIndex('target', 0.4300422966480255, 2);
+model.view('view3').camera.set('up', {'4.371138828673793e-8' '0' '1'});
+model.view('view3').camera.setIndex('rotationpoint', 0.0014855563640594482, 0);
+model.view('view3').camera.setIndex('rotationpoint', 0.24306577444076538, 1);
+model.view('view3').camera.setIndex('rotationpoint', 0.4300422966480255, 2);
+model.view('view3').camera.setIndex('viewoffset', 0, 0);
+model.view('view3').camera.set('viewoffset', [0 -0.022761760279536247]);
+
+model.result.evaluationGroup.create('eg1', 'EvaluationGroup');
+model.result.evaluationGroup('eg1').label('Critical Buckling Load');
+model.result.evaluationGroup('eg1').set('data', 'dset3');
+model.result.evaluationGroup('eg1').create('gev1', 'EvalGlobal');
+model.result.evaluationGroup('eg1').feature('gev1').setIndex('expr', 'Fc', 0);
+model.result.evaluationGroup('eg1').feature('gev1').setIndex('unit', 'kN', 0);
+model.result.evaluationGroup('eg1').feature('gev1').setIndex('descr', 'Critical buckling load', 0);
+model.result.evaluationGroup('eg1').run;
+model.result('pg4').run;
+model.result.move('pg4', 2);
+model.result.move('pg5', 3);
+model.result.move('pg6', 4);
+model.result.move('pg4', 1);
+model.result.move('pg5', 2);
+model.result.move('pg6', 3);
+model.result('pg7').run;
+
+model.title('Buckling of a Composite Cylinder');
+
+model.description(['This example shows how to perform a buckling analysis and compute critical load factors for a composite cylinder under compressive loading and fixed-end conditions. The composite cylinder is made up of eight layers of carbon fiber reinforced polymer (CFRP) having different fiber orientations. An Equivalent Single Layer (ESL) theory based approach is used.' newline  newline 'The effect of stacking sequence on the buckling mode shape and critical load factor is analyzed for different types of balanced laminates, such as a symmetric angle-ply laminate and an antisymmetric angle-ply laminate.']);
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+model.sol('sol2').clearSolutionData;
+model.sol('sol3').clearSolutionData;
+model.sol('sol4').clearSolutionData;
+model.sol('sol5').clearSolutionData;
+model.sol('sol6').clearSolutionData;
+model.sol('sol7').clearSolutionData;
+
+model.label('composite_cylinder_buckling.mph');
+
+model.modelNode.label('Components');
+
+out = model;

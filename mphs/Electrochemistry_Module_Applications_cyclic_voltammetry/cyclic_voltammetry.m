@@ -1,0 +1,405 @@
+function out = model
+%
+% cyclic_voltammetry.m
+%
+% Model exported on May 26 2025, 21:27 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Electrochemistry_Module/Applications');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 1);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('tcd', 'TertiaryElectroanalysis', 'geom1', {'c1' 'c2'});
+
+model.study.create('std1');
+model.study('std1').create('cyclv', 'CyclicVoltammetry');
+model.study('std1').feature('cyclv').set('initialtime', '0');
+model.study('std1').feature('cyclv').set('solnum', 'auto');
+model.study('std1').feature('cyclv').set('notsolnum', 'auto');
+model.study('std1').feature('cyclv').set('outputmap', {});
+model.study('std1').feature('cyclv').setSolveFor('/physics/tcd', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('v', '0.1[V/s]', 'Voltammetric scan rate');
+model.param.set('c_bulk', '1.0[mmol/L]', 'Reactant bulk concentration');
+model.param.set('DA', '1.0e-9[m^2/s]', 'Reactant diffusion coefficient');
+model.param.set('DB', '1.0e-9[m^2/s]', 'Product diffusion coefficient');
+model.param.set('k0', 'i0/F_const', 'Reaction rate');
+model.param.set('Cdl', '0.2[F/m^2]', 'Double layer capacity');
+model.param.set('T', '298.15[K]', 'Temperature');
+model.param.set('E_vertex1', '-0.5[V]', 'Start potential');
+model.param.set('E_vertex2', '0.5[V]', 'Switching potential');
+model.param.set('L', '6*sqrt(DA*2*abs(E_vertex1-E_vertex2)/v)', 'Outer bound on diffusion layer');
+model.param.set('c_bulk_p', '0[mmol/L]', 'Product bulk concentration');
+model.param.set('n_scp', '3', 'Number of scans before measurement');
+model.param.set('n_sc', '1', 'Number of scans, measurement');
+model.param.set('i0', '10[A/m^2]');
+model.param.set('beta_a', '0.5[1]', 'Anodic transfer coefficient');
+model.param.set('beta_c', '0.5[1]', 'Cathodic transfer coefficient');
+
+model.geom('geom1').create('i1', 'Interval');
+model.geom('geom1').feature('i1').setIndex('coord', 'L', 1);
+model.geom('geom1').run;
+
+model.physics('tcd').field('concentration').component(1, 'cA');
+model.physics('tcd').field('concentration').component(2, 'cB');
+model.physics('tcd').feature('ice1').set('D_cA', {'DA' '0' '0' '0' 'DA' '0' '0' '0' 'DA'});
+model.physics('tcd').feature('ice1').set('D_cB', {'DB' '0' '0' '0' 'DB' '0' '0' '0' 'DB'});
+model.physics('tcd').feature('init1').setIndex('initc', 'c_bulk', 0);
+model.physics('tcd').feature('init1').setIndex('initc', 'c_bulk_p', 1);
+model.physics('tcd').create('conc1', 'Concentration', 0);
+model.physics('tcd').feature('conc1').selection.set([2]);
+model.physics('tcd').feature('conc1').setIndex('species', true, 0);
+model.physics('tcd').feature('conc1').setIndex('c0', 'c_bulk', 0);
+model.physics('tcd').feature('conc1').setIndex('species', true, 1);
+model.physics('tcd').feature('conc1').setIndex('c0', 'c_bulk_p', 1);
+model.physics('tcd').create('es1', 'ElectrodeSurface', 0);
+model.physics('tcd').feature('es1').selection.set([1]);
+model.physics('tcd').feature('es1').set('BoundaryCondition', 'CyclicVoltammetry');
+model.physics('tcd').feature('es1').set('sweeprate', 'v');
+model.physics('tcd').feature('es1').set('ncycle', 'n_scp');
+model.physics('tcd').feature('es1').set('Evertex1', 'E_vertex1');
+model.physics('tcd').feature('es1').set('Evertex2', 'E_vertex2');
+model.physics('tcd').feature('es1').feature('er1').setIndex('cref', '1[mol/m^3]', 0, 0);
+model.physics('tcd').feature('es1').feature('er1').setIndex('cref', '1[mol/m^3]', 1, 0);
+model.physics('tcd').feature('es1').feature('er1').set('i0_ref', 'i0');
+model.physics('tcd').feature('es1').feature('er1').set('alphaa', 'beta_a');
+model.physics('tcd').feature('es1').feature('er1').setIndex('Vi0', 1, 0);
+model.physics('tcd').feature('es1').feature('er1').setIndex('Vi0', -1, 1);
+model.physics('tcd').feature('es1').create('dlc1', 'DoubleLayerCapacitance', 0);
+model.physics('tcd').feature('es1').feature('dlc1').set('Cdl', 'Cdl');
+model.physics('tcd').feature.duplicate('es2', 'es1');
+model.physics('tcd').feature('es2').set('ncycle', 'n_sc');
+
+model.common('cminpt').set('modified', {'temperature' 'T'});
+
+model.study('std1').feature('cyclv').set('useadvanceddisable', true);
+model.study('std1').feature('cyclv').set('disabledphysics', {'tcd/es2'});
+model.study('std1').feature('cyclv').set('usertol', true);
+model.study('std1').feature('cyclv').set('rtol', '1e-7');
+model.study('std1').create('cyclv2', 'CyclicVoltammetry');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'cyclv');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'cyclv');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('tlist', '0 1e4');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'Default');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('tout', 'tsteps');
+model.sol('sol1').feature('t1').set('rtol', 0.001);
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').create('st1', 'StopCondition');
+model.sol('sol1').feature('t1').feature('st1').set('stopcondarr', {'comp1.tcd.stopcond'});
+model.sol('sol1').feature('t1').feature('st1').set('stopcondterminateon', {'true'});
+model.sol('sol1').feature('t1').feature('st1').set('stopcondActive', {'on'});
+model.sol('sol1').feature('t1').feature('st1').set('stopconddesc', {'tcd (Cyclic voltammetry)'});
+model.sol('sol1').feature('t1').feature('st1').set('storestopcondsol', 'no');
+model.sol('sol1').feature('t1').feature('st1').set('stopcondwarn', 'off');
+model.sol('sol1').feature('t1').set('eventout', true);
+model.sol('sol1').feature('t1').set('reacf', true);
+model.sol('sol1').feature('t1').set('storeudot', true);
+model.sol('sol1').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t1').set('maxorder', 2);
+model.sol('sol1').feature('t1').set('initialstepbdfactive', true);
+model.sol('sol1').feature('t1').set('initialstepbdf', '1e-3[V]/abs(v)');
+model.sol('sol1').feature('t1').set('maxstepconstraintbdf', 'const');
+model.sol('sol1').feature('t1').set('maxstepbdf', 'min(1e100,abs((E_vertex1-E_vertex2)/v))');
+model.sol('sol1').feature('t1').set('bwinitstepfrac', '1.0E-5');
+model.sol('sol1').feature('t1').set('control', 'cyclv');
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t1').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t1').feature('d1').label('Direct (tcd)');
+model.sol('sol1').feature('t1').create('i1', 'Iterative');
+model.sol('sol1').feature('t1').feature('i1').set('maxlinit', 1000);
+model.sol('sol1').feature('t1').feature('i1').set('nlinnormuse', 'on');
+model.sol('sol1').feature('t1').feature('i1').label('Algebraic Multigrid (tcd)');
+model.sol('sol1').feature('t1').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('compactaggregation', true);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').create('sc1', 'SCGS');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').create('sc1', 'SCGS');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t1').create('i2', 'Iterative');
+model.sol('sol1').feature('t1').feature('i2').set('maxlinit', 1000);
+model.sol('sol1').feature('t1').feature('i2').set('nlinnormuse', 'on');
+model.sol('sol1').feature('t1').feature('i2').label('Geometric Multigrid (tcd)');
+model.sol('sol1').feature('t1').feature('i2').create('mg1', 'Multigrid');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('pr').create('sc1', 'SCGS');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('po').create('sc1', 'SCGS');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('po').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('po').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('i2').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('t1').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').create('su1', 'StoreSolution');
+model.sol('sol1').create('st2', 'StudyStep');
+model.sol('sol1').feature('st2').set('study', 'std1');
+model.sol('sol1').feature('st2').set('studystep', 'cyclv2');
+model.sol('sol1').create('v2', 'Variables');
+model.sol('sol1').feature('v2').set('initmethod', 'sol');
+model.sol('sol1').feature('v2').set('initsol', 'sol1');
+model.sol('sol1').feature('v2').set('initsoluse', 'sol2');
+model.sol('sol1').feature('v2').set('notsolmethod', 'sol');
+model.sol('sol1').feature('v2').set('notsol', 'sol1');
+model.sol('sol1').feature('v2').set('control', 'cyclv2');
+model.sol('sol1').create('t2', 'Time');
+model.sol('sol1').feature('t2').set('tlist', '0 1e4');
+model.sol('sol1').feature('t2').set('plot', 'off');
+model.sol('sol1').feature('t2').set('plotgroup', 'Default');
+model.sol('sol1').feature('t2').set('plotfreq', 'tout');
+model.sol('sol1').feature('t2').set('probesel', 'all');
+model.sol('sol1').feature('t2').set('probes', {});
+model.sol('sol1').feature('t2').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t2').set('tout', 'tsteps');
+model.sol('sol1').feature('t2').set('rtol', 0.001);
+model.sol('sol1').feature('t2').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t2').create('st1', 'StopCondition');
+model.sol('sol1').feature('t2').feature('st1').set('stopcondarr', {'comp1.tcd.stopcond'});
+model.sol('sol1').feature('t2').feature('st1').set('stopcondterminateon', {'true'});
+model.sol('sol1').feature('t2').feature('st1').set('stopcondActive', {'on'});
+model.sol('sol1').feature('t2').feature('st1').set('stopconddesc', {'tcd (Cyclic voltammetry)'});
+model.sol('sol1').feature('t2').feature('st1').set('storestopcondsol', 'no');
+model.sol('sol1').feature('t2').feature('st1').set('stopcondwarn', 'off');
+model.sol('sol1').feature('t2').set('eventout', true);
+model.sol('sol1').feature('t2').set('reacf', true);
+model.sol('sol1').feature('t2').set('storeudot', true);
+model.sol('sol1').feature('t2').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t2').set('maxorder', 2);
+model.sol('sol1').feature('t2').set('initialstepbdfactive', true);
+model.sol('sol1').feature('t2').set('initialstepbdf', '1e-3[V]/abs(v)');
+model.sol('sol1').feature('t2').set('maxstepconstraintbdf', 'const');
+model.sol('sol1').feature('t2').set('maxstepbdf', 'min(1e100,abs((E_vertex1-E_vertex2)/v))');
+model.sol('sol1').feature('t2').set('bwinitstepfrac', '1.0E-5');
+model.sol('sol1').feature('t2').set('control', 'cyclv2');
+model.sol('sol1').feature('t2').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t2').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t2').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t2').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t2').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t2').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t2').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t2').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t2').create('d1', 'Direct');
+model.sol('sol1').feature('t2').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t2').feature('d1').label('Direct (tcd)');
+model.sol('sol1').feature('t2').create('i1', 'Iterative');
+model.sol('sol1').feature('t2').feature('i1').set('maxlinit', 1000);
+model.sol('sol1').feature('t2').feature('i1').set('nlinnormuse', 'on');
+model.sol('sol1').feature('t2').feature('i1').label('Algebraic Multigrid (tcd)');
+model.sol('sol1').feature('t2').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').set('compactaggregation', true);
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('pr').create('sc1', 'SCGS');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('pr').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('pr').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('pr').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('po').create('sc1', 'SCGS');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('po').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('po').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('po').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('t2').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t2').create('i2', 'Iterative');
+model.sol('sol1').feature('t2').feature('i2').set('maxlinit', 1000);
+model.sol('sol1').feature('t2').feature('i2').set('nlinnormuse', 'on');
+model.sol('sol1').feature('t2').feature('i2').label('Geometric Multigrid (tcd)');
+model.sol('sol1').feature('t2').feature('i2').create('mg1', 'Multigrid');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('pr').create('sc1', 'SCGS');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('pr').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('pr').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('po').create('sc1', 'SCGS');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('po').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('po').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('t2').feature('i2').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t2').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('t2').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t2').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t2').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t2').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t2').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t2').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t2').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t2').feature.remove('fcDef');
+model.sol('sol1').feature('v2').set('notsolnum', 'auto');
+model.sol('sol1').feature('v2').set('notsolvertype', 'solnum');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'manual');
+model.sol('sol1').feature('t1').setEntry('atolmethod', 'comp1_cA', 'scaled');
+model.sol('sol1').feature('t1').setEntry('atolvaluemethod', 'comp1_cA', 'manual');
+model.sol('sol1').feature('t1').setEntry('atol', 'comp1_cA', '1e-4');
+
+model.study('std1').feature('cyclv2').set('usertol', true);
+model.study('std1').feature('cyclv2').set('rtol', '1e-7');
+model.study('std1').feature('cyclv2').set('useadvanceddisable', true);
+model.study('std1').feature('cyclv2').set('disabledphysics', {'tcd/es1'});
+model.study('std1').feature('cyclv2').set('usesol', true);
+
+model.sol('sol1').feature('t2').set('atolglobalvaluemethod', 'manual');
+model.sol('sol1').feature('t2').setEntry('atolmethod', 'comp1_cA', 'scaled');
+model.sol('sol1').feature('t2').setEntry('atolvaluemethod', 'comp1_cA', 'manual');
+model.sol('sol1').feature('t2').setEntry('atol', 'comp1_cA', '1e-4');
+
+model.study('std1').setGenPlots(false);
+
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup1D');
+model.result('pg1').run;
+model.result('pg1').label('Cyclic Voltammograms');
+model.result('pg1').set('titletype', 'label');
+model.result('pg1').create('glob1', 'Global');
+model.result('pg1').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg1').feature('glob1').set('linewidth', 'preference');
+model.result('pg1').feature('glob1').set('expr', {'tcd.Itot_es2'});
+model.result('pg1').feature('glob1').set('descr', {'Total current'});
+model.result('pg1').feature('glob1').set('unit', {'A'});
+model.result('pg1').feature('glob1').setIndex('expr', 'tcd.itotavg_es2', 0);
+model.result('pg1').feature('glob1').setIndex('descr', 'Current density', 0);
+model.result('pg1').feature('glob1').set('xdataexpr', 'tcd.phis_es2');
+model.result('pg1').feature('glob1').set('xdatadescr', 'Electric potential');
+model.result('pg1').run;
+model.result.create('pg2', 'PlotGroup1D');
+model.result('pg2').run;
+model.result('pg2').label('Cyclic Voltammograms, Sample Preparations');
+model.result('pg2').set('titletype', 'label');
+model.result('pg2').create('glob1', 'Global');
+model.result('pg2').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob1').set('linewidth', 'preference');
+model.result('pg2').feature('glob1').set('data', 'dset2');
+model.result('pg2').feature('glob1').setIndex('expr', 'tcd.itotavg_es1', 0);
+model.result('pg2').feature('glob1').setIndex('descr', 'Current density', 0);
+model.result('pg2').feature('glob1').set('xdataexpr', 'tcd.phis_es1');
+model.result('pg2').feature('glob1').set('xdatadescr', 'Electric potential');
+model.result('pg2').run;
+model.result('pg2').feature('glob1').create('col1', 'Color');
+model.result('pg2').run;
+model.result('pg2').feature('glob1').feature('col1').set('expr', 'tcd.cycle_es1');
+model.result('pg2').feature('glob1').feature('col1').set('descr', 'Cycle number');
+model.result('pg2').feature('glob1').feature('col1').set('expr', 't');
+model.result('pg2').run;
+model.result.numerical.create('pev1', 'EvalPoint');
+model.result.numerical('pev1').selection.set([1]);
+model.result.numerical('pev1').setIndex('looplevelinput', 'last', 0);
+model.result.numerical('pev1').setIndex('expr', 'timemax(0,(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA)', 0);
+model.result.numerical('pev1').setIndex('descr', 'Maximum current density', 0);
+model.result.numerical.duplicate('pev2', 'pev1');
+model.result.numerical('pev2').setIndex('expr', 'attimemax(0,(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA)', 0);
+model.result.numerical('pev2').setIndex('unit', 's', 0);
+model.result.numerical('pev2').setIndex('descr', 'Time at maximum current density', 0);
+model.result.numerical.duplicate('pev3', 'pev2');
+model.result.numerical('pev3').setIndex('expr', 'timemin(0,1.9*(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA )', 0);
+model.result.numerical('pev3').setIndex('descr', 'Minimum current density', 0);
+model.result.numerical.duplicate('pev4', 'pev3');
+model.result.numerical('pev4').setIndex('expr', 'attimemin(0,1.9*(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA,t )', 0);
+model.result.numerical('pev4').setIndex('descr', 'Time at minimum current density', 0);
+model.result.numerical.duplicate('pev5', 'pev4');
+model.result.numerical('pev5').setIndex('expr', 'attimemax(0,(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA,tcd.Ect)', 0);
+model.result.numerical('pev5').setIndex('descr', 'Electrode potential at maximum current', 0);
+model.result.numerical.duplicate('pev6', 'pev5');
+model.result.numerical('pev6').setIndex('expr', 'attimemin(0,1.9*(E_vertex2-E_vertex1)/v,F_const*tcd.ndflux_cA,tcd.Ect )', 0);
+model.result.numerical('pev6').setIndex('descr', 'Electrode potential at minimum current', 0);
+
+model.title([]);
+
+model.description('');
+
+model.label('cyclic_voltammetry_embedded.mph');
+
+model.setExpectedComputationTime('7 seconds');
+
+model.result.report.create('rpt1', 'Report');
+model.result.report('rpt1').set('format', 'docx');
+model.result.report('rpt1').set('filename', 'user:///cyclicvoltammetry1d.docx');
+model.result.report('rpt1').set('imagesize', 'large');
+model.result.report('rpt1').feature.create('tp1', 'TitlePage');
+model.result.report('rpt1').feature('tp1').set('title', 'Cyclic Voltammetry at a Macroelectrode in 1D');
+model.result.report('rpt1').feature('tp1').set('titleimage', 'none');
+model.result.report('rpt1').feature('tp1').set('includeauthor', false);
+model.result.report('rpt1').feature('tp1').set('summary', 'The example models cyclic voltammetry at an electrode of mm dimensions. In this common analytical electrochemistry technique, the potential at a working electrode is swept up and down and the current is recorded. The current-voltage waveform (the voltammogram) gives information about the reactivity and mass transport properties of the analyte.');
+model.result.report('rpt1').feature('tp1').set('includeacknowledgment', false);
+model.result.report('rpt1').feature.create('toc1', 'TableOfContents');
+model.result.report('rpt1').feature('toc1').label('Table of Contents ');
+model.result.report('rpt1').feature.create('sec1', 'Section');
+model.result.report('rpt1').feature('sec1').label('Software Information');
+model.result.report('rpt1').feature('sec1').feature.create('root1', 'Model');
+model.result.report('rpt1').feature('sec1').feature('root1').label('About the Software');
+model.result.report('rpt1').feature('sec1').feature('root1').set('includeunitsystem', true);
+model.result.report('rpt1').feature.create('sec2', 'Section');
+model.result.report('rpt1').feature('sec2').label('Model Parameters');
+model.result.report('rpt1').feature('sec2').feature.create('param1', 'Parameter');
+model.result.report('rpt1').feature.create('sec3', 'Section');
+model.result.report('rpt1').feature('sec3').label('Results');
+model.result.report('rpt1').feature('sec3').feature.create('pg1', 'PlotGroup');
+model.result.report('rpt1').feature('sec3').feature('pg1').label('Cyclic Voltammograms');
+model.result.report('rpt1').feature('sec3').feature.create('pg2', 'PlotGroup');
+model.result.report('rpt1').feature('sec3').feature('pg2').set('noderef', 'pg2');
+model.result.report('rpt1').feature('sec3').feature('pg2').label('Cyclic Voltammograms, Sample Preparations');
+model.result.report('rpt1').feature('sec3').feature.create('field1', 'DoubleDataField');
+
+model.title('Cyclic Voltammetry');
+
+model.description(['The purpose of the app is to demonstrate and simulate the use of cyclic voltammetry. You can vary the bulk concentration of both species, transport properties, kinetic parameters, as well as the cycling voltage window and scan rate.' newline  newline 'Cyclic voltammetry is a common analytical technique for investigating electrochemical systems. In this method, the potential difference between a working electrode and a reference electrode is swept linearly in time from a start potential to a vertex potential, and back again. The current-voltage waveform, called a voltammogram, provides information about the reactivity and mass transport properties of an electrolyte.']);
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+model.sol('sol2').clearSolutionData;
+
+model.label('cyclic_voltammetry.mph');
+
+model.modelNode.label('Components');
+
+out = model;

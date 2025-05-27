@@ -1,15 +1,31 @@
 === COMSOL .mph to .m Conversion Summary ===
 
-Total files in list: 5
-Successfully processed: 0
-Failed to process: 5
-Total size processed: 0.00 MB
-Total conversion time: 0.2s
-Average time per file: 0.03 seconds
+Total files in list: 1908
+Successfully processed: 1710
+Failed to process: 198
+Total size processed: 6584.21 MB
+Total conversion time: 10m 8.2s
+Average time per file: 0.32 seconds
 
-Failed files (5):
-  - ACDC_Module/Applications/bh_curve_checker.mph: error
-  - ACDC_Module/Applications/billet_induction_heating.mph: error
-  - ACDC_Module/Applications/effective_nonlinear_magnetic_curves.mph: error
-  - ACDC_Module/Devices,_Capacitive/capacitive_position_sensor.mph: error
-  - ACDC_Module/Devices,_Capacitive/capacitive_position_sensor_bem.mph: error
+Failed files (198):
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Aeroacoustics_and_Noise/doppler_shift.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Automotive/test_bench_car_interior.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Electroacoustic_Transducers/condenser_microphone.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Nonlinear_Acoustics/acoustic_levitator.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Tutorials,_Pipe_Acoustics/probe_tube_microphone.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Tutorials,_Pressure_Acoustics/helmholtz_resonator_solvers.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Acoustics_Module/Vibrations_and_FSI/gearbox_vibration_noise.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/Battery_Design_Module/Batteries,_General/primary_cd_grid.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Fluid-Structure_Interaction/sports_car_fsi.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Multiphase_Flow/droplet_population_model.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Multiphase_Flow/droplet_suspension.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Multiphase_Flow/phase_separation.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Multiphase_Flow/viscous_catenary.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Nonisothermal_Flow/heat_sink.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Particle_Tracing/thermophoresis.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Single-Phase_Flow/cylinder_flow_viscoelastic.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Single-Phase_Flow/sports_car.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Thin-Film_Flow/slider_bearing_1d.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Thin-Film_Flow/step_bearing_1d.mph: error
+  - /Applications/COMSOL62/Multiphysics/applications/CFD_Module/Thin-Film_Flow/tilted_pad_bearing.mph: error
+  ... and 178 more (see .mat log file for complete list)

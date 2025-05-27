@@ -1,0 +1,436 @@
+function out = model
+%
+% inductive_heating.m
+%
+% Model exported on May 26 2025, 21:24 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/ACDC_Module/Electromagnetic_Heating');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+model.geom('geom1').axisymmetric(true);
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('mf', 'InductionCurrents', 'geom1');
+model.physics('mf').model('comp1');
+model.physics('mf').create('als1', 'AmperesLawSolid');
+model.physics('mf').feature('als1').selection.all;
+model.physics.create('ht', 'HeatTransfer', 'geom1');
+model.physics('ht').model('comp1');
+
+model.multiphysics.create('emh1', 'ElectromagneticHeating', 'geom1', 2);
+model.multiphysics('emh1').set('EMHeat_physics', 'mf');
+model.multiphysics('emh1').set('Heat_physics', 'ht');
+model.multiphysics('emh1').selection.all;
+
+model.study.create('std1');
+model.study('std1').create('ftrans', 'FrequencyTransient');
+model.study('std1').feature('ftrans').set('initialtime', '0');
+model.study('std1').feature('ftrans').set('freq', '1000000');
+model.study('std1').feature('ftrans').set('solnum', 'auto');
+model.study('std1').feature('ftrans').set('notsolnum', 'auto');
+model.study('std1').feature('ftrans').set('outputmap', {});
+model.study('std1').feature('ftrans').setSolveFor('/physics/mf', true);
+model.study('std1').feature('ftrans').setSolveFor('/physics/ht', true);
+model.study('std1').feature('ftrans').setSolveFor('/multiphysics/emh1', true);
+
+model.param.set('I0', '2e3[A]');
+model.param.descr('I0', 'Current');
+model.param.set('T0', '293[K]');
+model.param.descr('T0', 'Reference temperature');
+model.param.set('r0', '1.754e-8[ohm*m]');
+model.param.descr('r0', 'Resistivity at T=T0');
+model.param.set('al', '0.0039[1/K]');
+model.param.descr('al', 'Temperature coefficient');
+model.param.set('Rc', '5[mm]');
+model.param.descr('Rc', 'Cooling channel radius');
+model.param.set('Ac', 'pi*Rc^2');
+model.param.descr('Ac', 'Cooling channel x-section');
+model.param.set('Mt', '1[kg/min]');
+model.param.descr('Mt', 'Cooling water mass flow rate');
+model.param.set('Tin', '10[degC]');
+model.param.descr('Tin', 'Cooling water inlet temperature');
+
+model.geom('geom1').create('r1', 'Rectangle');
+model.geom('geom1').feature('r1').set('size', [0.2 0.5]);
+model.geom('geom1').feature('r1').set('pos', [0 -0.25]);
+model.geom('geom1').run('r1');
+model.geom('geom1').create('r2', 'Rectangle');
+model.geom('geom1').feature('r2').set('size', [0.03 0.1]);
+model.geom('geom1').feature('r2').set('pos', [0 -0.05]);
+model.geom('geom1').run('r2');
+model.geom('geom1').create('c1', 'Circle');
+model.geom('geom1').feature('c1').set('r', 0.01);
+model.geom('geom1').feature('c1').set('pos', [0.05 0]);
+model.geom('geom1').run('c1');
+model.geom('geom1').feature.duplicate('c2', 'c1');
+model.geom('geom1').feature('c2').set('r', 'Rc');
+model.geom('geom1').run('c2');
+model.geom('geom1').run('fin');
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat1').label('FR4 (Circuit Board)');
+model.material('mat1').set('family', 'pcbgreen');
+model.material('mat1').propertyGroup('def').set('relpermeability', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('electricconductivity', {'0.004[S/m]' '0' '0' '0' '0.004[S/m]' '0' '0' '0' '0.004[S/m]'});
+model.material('mat1').propertyGroup('def').set('relpermittivity', {'4.5' '0' '0' '0' '4.5' '0' '0' '0' '4.5'});
+model.material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', {'18e-6[1/K]' '0' '0' '0' '18e-6[1/K]' '0' '0' '0' '18e-6[1/K]'});
+model.material('mat1').propertyGroup('def').set('heatcapacity', '1369[J/(kg*K)]');
+model.material('mat1').propertyGroup('def').set('density', '1900[kg/m^3]');
+model.material('mat1').propertyGroup('def').set('thermalconductivity', {'0.3[W/(m*K)]' '0' '0' '0' '0.3[W/(m*K)]' '0' '0' '0' '0.3[W/(m*K)]'});
+model.material('mat1').propertyGroup('Enu').set('E', '22[GPa]');
+model.material('mat1').propertyGroup('Enu').set('nu', '0.15');
+model.material.create('mat2', 'Common', 'comp1');
+model.material('mat2').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat2').propertyGroup.create('linzRes', 'Linearized resistivity');
+model.material('mat2').label('Copper');
+model.material('mat2').set('family', 'copper');
+model.material('mat2').propertyGroup('def').set('relpermeability', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat2').propertyGroup('def').set('electricconductivity', {'5.998e7[S/m]' '0' '0' '0' '5.998e7[S/m]' '0' '0' '0' '5.998e7[S/m]'});
+model.material('mat2').propertyGroup('def').set('heatcapacity', '385[J/(kg*K)]');
+model.material('mat2').propertyGroup('def').set('relpermittivity', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat2').propertyGroup('def').set('emissivity', '0.5');
+model.material('mat2').propertyGroup('def').set('density', '8940[kg/m^3]');
+model.material('mat2').propertyGroup('def').set('thermalconductivity', {'400[W/(m*K)]' '0' '0' '0' '400[W/(m*K)]' '0' '0' '0' '400[W/(m*K)]'});
+model.material('mat2').propertyGroup('Enu').set('E', '126e9[Pa]');
+model.material('mat2').propertyGroup('Enu').set('nu', '0.34');
+model.material('mat2').propertyGroup('linzRes').set('rho0', '1.667e-8[ohm*m]');
+model.material('mat2').propertyGroup('linzRes').set('alpha', '3.862e-3[1/K]');
+model.material('mat2').propertyGroup('linzRes').set('Tref', '293.15[K]');
+model.material('mat2').propertyGroup('linzRes').addInput('temperature');
+model.material.create('mat3', 'Common', 'comp1');
+model.material('mat3').propertyGroup('def').func.create('eta', 'Piecewise');
+model.material('mat3').propertyGroup('def').func.create('Cp', 'Piecewise');
+model.material('mat3').propertyGroup('def').func.create('rho', 'Piecewise');
+model.material('mat3').propertyGroup('def').func.create('k', 'Piecewise');
+model.material('mat3').propertyGroup('def').func.create('cs', 'Interpolation');
+model.material('mat3').propertyGroup('def').func.create('an1', 'Analytic');
+model.material('mat3').propertyGroup('def').func.create('an2', 'Analytic');
+model.material('mat3').propertyGroup('def').func.create('an3', 'Analytic');
+model.material('mat3').label('Water, liquid');
+model.material('mat3').set('family', 'water');
+model.material('mat3').propertyGroup('def').func('eta').set('arg', 'T');
+model.material('mat3').propertyGroup('def').func('eta').set('pieces', {'273.15' '413.15' '1.3799566804-0.021224019151*T^1+1.3604562827E-4*T^2-4.6454090319E-7*T^3+8.9042735735E-10*T^4-9.0790692686E-13*T^5+3.8457331488E-16*T^6'; '413.15' '553.75' '0.00401235783-2.10746715E-5*T^1+3.85772275E-8*T^2-2.39730284E-11*T^3'});
+model.material('mat3').propertyGroup('def').func('eta').set('argunit', 'K');
+model.material('mat3').propertyGroup('def').func('eta').set('fununit', 'Pa*s');
+model.material('mat3').propertyGroup('def').func('Cp').set('arg', 'T');
+model.material('mat3').propertyGroup('def').func('Cp').set('pieces', {'273.15' '553.75' '12010.1471-80.4072879*T^1+0.309866854*T^2-5.38186884E-4*T^3+3.62536437E-7*T^4'});
+model.material('mat3').propertyGroup('def').func('Cp').set('argunit', 'K');
+model.material('mat3').propertyGroup('def').func('Cp').set('fununit', 'J/(kg*K)');
+model.material('mat3').propertyGroup('def').func('rho').set('arg', 'T');
+model.material('mat3').propertyGroup('def').func('rho').set('smooth', 'contd1');
+model.material('mat3').propertyGroup('def').func('rho').set('pieces', {'273.15' '293.15' '0.000063092789034*T^3-0.060367639882855*T^2+18.9229382407066*T-950.704055329848'; '293.15' '373.15' '0.000010335053319*T^3-0.013395065634452*T^2+4.969288832655160*T+432.257114008512'});
+model.material('mat3').propertyGroup('def').func('rho').set('argunit', 'K');
+model.material('mat3').propertyGroup('def').func('rho').set('fununit', 'kg/m^3');
+model.material('mat3').propertyGroup('def').func('k').set('arg', 'T');
+model.material('mat3').propertyGroup('def').func('k').set('pieces', {'273.15' '553.75' '-0.869083936+0.00894880345*T^1-1.58366345E-5*T^2+7.97543259E-9*T^3'});
+model.material('mat3').propertyGroup('def').func('k').set('argunit', 'K');
+model.material('mat3').propertyGroup('def').func('k').set('fununit', 'W/(m*K)');
+model.material('mat3').propertyGroup('def').func('cs').set('table', {'273' '1403';  ...
+'278' '1427';  ...
+'283' '1447';  ...
+'293' '1481';  ...
+'303' '1507';  ...
+'313' '1526';  ...
+'323' '1541';  ...
+'333' '1552';  ...
+'343' '1555';  ...
+'353' '1555';  ...
+'363' '1550';  ...
+'373' '1543'});
+model.material('mat3').propertyGroup('def').func('cs').set('interp', 'piecewisecubic');
+model.material('mat3').propertyGroup('def').func('cs').set('fununit', {'m/s'});
+model.material('mat3').propertyGroup('def').func('cs').set('argunit', {'K'});
+model.material('mat3').propertyGroup('def').func('an1').set('funcname', 'alpha_p');
+model.material('mat3').propertyGroup('def').func('an1').set('expr', '-1/rho(T)*d(rho(T),T)');
+model.material('mat3').propertyGroup('def').func('an1').set('args', {'T'});
+model.material('mat3').propertyGroup('def').func('an1').set('fununit', '1/K');
+model.material('mat3').propertyGroup('def').func('an1').set('argunit', {'K'});
+model.material('mat3').propertyGroup('def').func('an1').set('plotfixedvalue', {'273.15'});
+model.material('mat3').propertyGroup('def').func('an1').set('plotargs', {'T' '273.15' '373.15'});
+model.material('mat3').propertyGroup('def').func('an2').set('funcname', 'gamma_w');
+model.material('mat3').propertyGroup('def').func('an2').set('expr', '1+(T/Cp(T))*(alpha_p(T)*cs(T))^2');
+model.material('mat3').propertyGroup('def').func('an2').set('args', {'T'});
+model.material('mat3').propertyGroup('def').func('an2').set('fununit', '1');
+model.material('mat3').propertyGroup('def').func('an2').set('argunit', {'K'});
+model.material('mat3').propertyGroup('def').func('an2').set('plotfixedvalue', {'273.15'});
+model.material('mat3').propertyGroup('def').func('an2').set('plotargs', {'T' '273.15' '373.15'});
+model.material('mat3').propertyGroup('def').func('an3').set('funcname', 'muB');
+model.material('mat3').propertyGroup('def').func('an3').set('expr', '2.79*eta(T)');
+model.material('mat3').propertyGroup('def').func('an3').set('args', {'T'});
+model.material('mat3').propertyGroup('def').func('an3').set('fununit', 'Pa*s');
+model.material('mat3').propertyGroup('def').func('an3').set('argunit', {'K'});
+model.material('mat3').propertyGroup('def').func('an3').set('plotfixedvalue', {'273.15'});
+model.material('mat3').propertyGroup('def').func('an3').set('plotargs', {'T' '273.15' '553.75'});
+model.material('mat3').propertyGroup('def').set('thermalexpansioncoefficient', '');
+model.material('mat3').propertyGroup('def').set('bulkviscosity', '');
+model.material('mat3').propertyGroup('def').set('thermalexpansioncoefficient', {'alpha_p(T)' '0' '0' '0' 'alpha_p(T)' '0' '0' '0' 'alpha_p(T)'});
+model.material('mat3').propertyGroup('def').set('bulkviscosity', 'muB(T)');
+model.material('mat3').propertyGroup('def').set('dynamicviscosity', 'eta(T)');
+model.material('mat3').propertyGroup('def').set('ratioofspecificheat', 'gamma_w(T)');
+model.material('mat3').propertyGroup('def').set('electricconductivity', {'5.5e-6[S/m]' '0' '0' '0' '5.5e-6[S/m]' '0' '0' '0' '5.5e-6[S/m]'});
+model.material('mat3').propertyGroup('def').set('heatcapacity', 'Cp(T)');
+model.material('mat3').propertyGroup('def').set('density', 'rho(T)');
+model.material('mat3').propertyGroup('def').set('thermalconductivity', {'k(T)' '0' '0' '0' 'k(T)' '0' '0' '0' 'k(T)'});
+model.material('mat3').propertyGroup('def').set('soundspeed', 'cs(T)');
+model.material('mat3').propertyGroup('def').addInput('temperature');
+model.material('mat2').selection.set([2 3]);
+model.material('mat2').propertyGroup('linzRes').set('rho0', {'r0'});
+model.material('mat2').propertyGroup('linzRes').set('alpha', {'al'});
+model.material('mat2').propertyGroup('linzRes').set('Tref', {'T0'});
+model.material('mat3').selection.set([4]);
+model.material('mat3').propertyGroup('def').set('relpermeability', {'1'});
+model.material('mat3').propertyGroup('def').set('relpermittivity', {'80'});
+model.material('mat3').propertyGroup('def').set('thermalconductivity', {'1e3'});
+
+model.physics('mf').create('als2', 'AmperesLawSolid', 2);
+model.physics('mf').feature('als2').selection.set([2 3]);
+model.physics('mf').feature('als2').set('ConstitutiveRelationJcE', 'LinearizedResistivity');
+model.physics('mf').create('coil1', 'Coil', 2);
+model.physics('mf').feature('coil1').selection.set([3]);
+model.physics('mf').feature('coil1').set('ICoil', 'I0');
+model.physics('ht').create('temp1', 'TemperatureBoundary', 1);
+model.physics('ht').feature('temp1').selection.set([2 7 9]);
+model.physics('ht').feature('temp1').set('T0', 'T0');
+model.physics('ht').create('hs1', 'HeatSource', 2);
+model.physics('ht').feature('hs1').selection.set([4]);
+model.physics('ht').feature('hs1').set('Q0', 'Mt*ht.Cp*(Tin-T)/(2*pi*r*Ac)');
+
+model.mesh('mesh1').run;
+
+model.study('std1').feature('ftrans').set('tunit', 'h');
+model.study('std1').feature('ftrans').set('tlist', 'range(0,10[min],10[h])');
+model.study('std1').feature('ftrans').set('freq', '500[Hz]');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'ftrans');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'ftrans');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('tlist', 'range(0,10[min],10[h])');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'Default');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').set('atolmethod', {'comp1_mf_PsiOrA' 'global' 'comp1_T' 'global' 'comp1_mf_coil1_VCoil_ode' 'global'});
+model.sol('sol1').feature('t1').set('atol', {'comp1_mf_PsiOrA' '1e-3' 'comp1_T' '1e-3' 'comp1_mf_coil1_VCoil_ode' '1e-3'});
+model.sol('sol1').feature('t1').set('atolvaluemethod', {'comp1_mf_PsiOrA' 'factor' 'comp1_T' 'factor' 'comp1_mf_coil1_VCoil_ode' 'factor'});
+model.sol('sol1').feature('t1').set('reacf', true);
+model.sol('sol1').feature('t1').set('storeudot', true);
+model.sol('sol1').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t1').set('estrat', 'exclude');
+model.sol('sol1').feature('t1').set('maxorder', 2);
+model.sol('sol1').feature('t1').set('complex', true);
+model.sol('sol1').feature('t1').set('control', 'ftrans');
+model.sol('sol1').feature('t1').create('seDef', 'Segregated');
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 0.9);
+model.sol('sol1').feature('t1').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('d1').set('linsolver', 'mumps');
+model.sol('sol1').feature('t1').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('t1').feature('d1').label('Direct, heat transfer variables (ht) (Merged)');
+model.sol('sol1').feature('t1').create('i1', 'Iterative');
+model.sol('sol1').feature('t1').feature('i1').set('linsolver', 'gmres');
+model.sol('sol1').feature('t1').feature('i1').set('prefuntype', 'left');
+model.sol('sol1').feature('t1').feature('i1').set('itrestart', 50);
+model.sol('sol1').feature('t1').feature('i1').set('rhob', 20);
+model.sol('sol1').feature('t1').feature('i1').set('maxlinit', 10000);
+model.sol('sol1').feature('t1').feature('i1').set('nlinnormuse', 'on');
+model.sol('sol1').feature('t1').feature('i1').label('AMG, heat transfer variables (ht)');
+model.sol('sol1').feature('t1').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('mgcycle', 'v');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('strconn', 0.01);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('nullspace', 'constant');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('usesmooth', false);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('loweramg', true);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').set('compactaggregation', false);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').create('so1', 'SOR');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').feature('so1').set('iter', 2);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('pr').feature('so1').set('relax', 0.9);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').create('so1', 'SOR');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').feature('so1').set('iter', 2);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('po').feature('so1').set('relax', 0.9);
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t1').feature('i1').feature('mg1').feature('cs').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 0.9);
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').feature('t1').feature.remove('seDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup2D');
+model.result('pg1').label('Magnetic Flux Density Norm (mf)');
+model.result('pg1').set('dataisaxisym', 'off');
+model.result('pg1').set('frametype', 'spatial');
+model.result('pg1').set('showlegendsmaxmin', true);
+model.result('pg1').set('data', 'dset1');
+model.result('pg1').setIndex('looplevel', 61, 0);
+model.result('pg1').set('defaultPlotID', 'InterfaceComponents/PlotDefaults/icom6/pdef1/pcond2/pcond2/pg1');
+model.result('pg1').feature.create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg1').feature('surf1').set('solutionparams', 'parent');
+model.result('pg1').feature('surf1').set('colortable', 'Prism');
+model.result('pg1').feature('surf1').set('colortabletrans', 'nonlinear');
+model.result('pg1').feature('surf1').set('colorcalibration', -0.8);
+model.result('pg1').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg1').feature('surf1').set('data', 'parent');
+model.result('pg1').feature.create('str1', 'Streamline');
+model.result('pg1').feature('str1').set('showsolutionparams', 'on');
+model.result('pg1').feature('str1').set('solutionparams', 'parent');
+model.result('pg1').feature('str1').set('titletype', 'none');
+model.result('pg1').feature('str1').set('posmethod', 'uniform');
+model.result('pg1').feature('str1').set('udist', 0.03);
+model.result('pg1').feature('str1').set('maxlen', 0.4);
+model.result('pg1').feature('str1').set('maxtime', Inf);
+model.result('pg1').feature('str1').set('inheritcolor', false);
+model.result('pg1').feature('str1').set('showsolutionparams', 'on');
+model.result('pg1').feature('str1').set('maxtime', Inf);
+model.result('pg1').feature('str1').set('showsolutionparams', 'on');
+model.result('pg1').feature('str1').set('maxtime', Inf);
+model.result('pg1').feature('str1').set('showsolutionparams', 'on');
+model.result('pg1').feature('str1').set('maxtime', Inf);
+model.result('pg1').feature('str1').set('showsolutionparams', 'on');
+model.result('pg1').feature('str1').set('maxtime', Inf);
+model.result('pg1').feature('str1').set('data', 'parent');
+model.result('pg1').feature('str1').selection.geom('geom1', 1);
+model.result('pg1').feature('str1').selection.set([1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]);
+model.result('pg1').feature('str1').set('inheritplot', 'surf1');
+model.result('pg1').feature('str1').feature.create('col1', 'Color');
+model.result('pg1').feature('str1').feature('col1').set('colortable', 'PrismDark');
+model.result('pg1').feature('str1').feature('col1').set('colorlegend', false);
+model.result('pg1').feature('str1').feature('col1').set('colortabletrans', 'nonlinear');
+model.result('pg1').feature('str1').feature('col1').set('colorcalibration', -0.8);
+model.result('pg1').feature('str1').feature.create('filt1', 'Filter');
+model.result('pg1').feature('str1').feature('filt1').set('expr', '!isScalingSystemDomain');
+model.result('pg1').feature.create('con1', 'Contour');
+model.result('pg1').feature('con1').set('showsolutionparams', 'on');
+model.result('pg1').feature('con1').set('solutionparams', 'parent');
+model.result('pg1').feature('con1').set('expr', 'r*mf.Aphi');
+model.result('pg1').feature('con1').set('titletype', 'none');
+model.result('pg1').feature('con1').set('number', 10);
+model.result('pg1').feature('con1').set('levelrounding', false);
+model.result('pg1').feature('con1').set('coloring', 'uniform');
+model.result('pg1').feature('con1').set('colorlegend', false);
+model.result('pg1').feature('con1').set('color', 'custom');
+model.result('pg1').feature('con1').set('customcolor', [0.3764705955982208 0.3764705955982208 0.3764705955982208]);
+model.result('pg1').feature('con1').set('resolution', 'fine');
+model.result('pg1').feature('con1').set('inheritcolor', false);
+model.result('pg1').feature('con1').set('showsolutionparams', 'on');
+model.result('pg1').feature('con1').set('data', 'parent');
+model.result('pg1').feature('con1').set('inheritplot', 'surf1');
+model.result('pg1').feature('con1').feature.create('filt1', 'Filter');
+model.result('pg1').feature('con1').feature('filt1').set('expr', '!isScalingSystemDomain');
+model.result.dataset.create('rev1', 'Revolve2D');
+model.result.dataset('rev1').set('data', 'none');
+model.result.dataset('rev1').set('startangle', -90);
+model.result.dataset('rev1').set('revangle', 225);
+model.result.dataset('rev1').set('data', 'dset1');
+model.result.create('pg2', 'PlotGroup3D');
+model.result('pg2').label('Magnetic Flux Density Norm, Revolved Geometry (mf)');
+model.result('pg2').set('frametype', 'spatial');
+model.result('pg2').set('showlegendsmaxmin', true);
+model.result('pg2').set('data', 'rev1');
+model.result('pg2').setIndex('looplevel', 61, 0);
+model.result('pg2').set('defaultPlotID', 'InterfaceComponents/PlotDefaults/icom6/pdef1/pcond2/pcond3/pg1');
+model.result('pg2').feature.create('vol1', 'Volume');
+model.result('pg2').feature('vol1').set('showsolutionparams', 'on');
+model.result('pg2').feature('vol1').set('solutionparams', 'parent');
+model.result('pg2').feature('vol1').set('colortable', 'Prism');
+model.result('pg2').feature('vol1').set('colortabletrans', 'nonlinear');
+model.result('pg2').feature('vol1').set('colorcalibration', -0.8);
+model.result('pg2').feature('vol1').set('showsolutionparams', 'on');
+model.result('pg2').feature('vol1').set('data', 'parent');
+model.result('pg2').feature.create('con1', 'Contour');
+model.result('pg2').feature('con1').set('showsolutionparams', 'on');
+model.result('pg2').feature('con1').set('solutionparams', 'parent');
+model.result('pg2').feature('con1').set('expr', 'r*mf.Aphi');
+model.result('pg2').feature('con1').set('titletype', 'none');
+model.result('pg2').feature('con1').set('number', 10);
+model.result('pg2').feature('con1').set('levelrounding', false);
+model.result('pg2').feature('con1').set('coloring', 'uniform');
+model.result('pg2').feature('con1').set('colorlegend', false);
+model.result('pg2').feature('con1').set('color', 'custom');
+model.result('pg2').feature('con1').set('customcolor', [0.3764705955982208 0.3764705955982208 0.3764705955982208]);
+model.result('pg2').feature('con1').set('resolution', 'fine');
+model.result('pg2').feature('con1').set('inheritcolor', false);
+model.result('pg2').feature('con1').set('showsolutionparams', 'on');
+model.result('pg2').feature('con1').set('data', 'parent');
+model.result('pg2').feature('con1').set('inheritplot', 'vol1');
+model.result('pg2').feature('con1').feature.create('filt1', 'Filter');
+model.result('pg2').feature('con1').feature('filt1').set('expr', '!isScalingSystemDomain');
+model.result('pg2').feature('con1').feature('filt1').set('shownodespec', 'on');
+model.result.create('pg3', 'PlotGroup2D');
+model.result('pg3').label('Temperature (ht)');
+model.result('pg3').set('dataisaxisym', 'off');
+model.result('pg3').set('data', 'dset1');
+model.result('pg3').setIndex('looplevel', 61, 0);
+model.result('pg3').set('defaultPlotID', 'ht/HT_PhysicsInterfaces/icom8/pdef1/pcond2/pcond4/pg2');
+model.result('pg3').feature.create('surf1', 'Surface');
+model.result('pg3').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg3').feature('surf1').set('solutionparams', 'parent');
+model.result('pg3').feature('surf1').set('expr', 'T');
+model.result('pg3').feature('surf1').set('colortable', 'HeatCameraLight');
+model.result('pg3').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg3').feature('surf1').set('data', 'parent');
+model.result('pg1').run;
+model.result('pg3').run;
+model.result.dataset.create('cpt1', 'CutPoint2D');
+model.result.dataset('cpt1').set('pointx', 0);
+model.result.dataset('cpt1').set('pointy', 0);
+model.result.dataset.duplicate('cpt2', 'cpt1');
+model.result.dataset('cpt2').set('pointx', 0.05);
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').run;
+model.result('pg4').set('legendpos', 'middleright');
+model.result('pg4').create('ptgr1', 'PointGraph');
+model.result('pg4').feature('ptgr1').set('markerpos', 'datapoints');
+model.result('pg4').feature('ptgr1').set('linewidth', 'preference');
+model.result('pg4').feature('ptgr1').set('data', 'cpt1');
+model.result('pg4').feature('ptgr1').set('solutionparams', 'parent');
+model.result('pg4').feature('ptgr1').set('expr', 'T');
+model.result('pg4').feature('ptgr1').set('descr', 'Temperature');
+model.result('pg4').feature('ptgr1').set('legend', true);
+model.result('pg4').feature('ptgr1').set('legendmethod', 'manual');
+model.result('pg4').feature('ptgr1').setIndex('legends', 'Cylinder center', 0);
+model.result('pg4').feature.duplicate('ptgr2', 'ptgr1');
+model.result('pg4').run;
+model.result('pg4').feature('ptgr2').set('data', 'cpt2');
+model.result('pg4').feature('ptgr2').setIndex('legends', 'Cooling channel', 0);
+model.result('pg4').run;
+model.result('pg3').run;
+
+model.title('Inductive Heating of a Copper Cylinder');
+
+model.description('The eddy currents in a conductive cylinder produce heat. To find the ohmic losses and temperature distribution in the cylinder, the heat transfer and electric field simulations must be carried out simultaneously.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+
+model.label('inductive_heating.mph');
+
+model.modelNode.label('Components');
+
+out = model;

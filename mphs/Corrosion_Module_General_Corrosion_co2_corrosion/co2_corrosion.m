@@ -1,0 +1,310 @@
+function out = model
+%
+% co2_corrosion.m
+%
+% Model exported on May 26 2025, 21:27 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Corrosion_Module/General_Corrosion');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 1);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('tcd', 'TertiaryCurrentDistributionNernstPlanck', 'geom1', {'cCO2' 'cH2CO3' 'cHCO3' 'cFe'});
+model.physics('tcd').prop('SpeciesProperties').set('ChargeTransportModel', 'WaterBased');
+
+model.study.create('std1');
+model.study('std1').create('stat', 'Stationary');
+model.study('std1').feature('stat').setSolveFor('/physics/tcd', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('DCO2', '1.96e-9[m^2/s]', 'Diffusion coefficient of CO2');
+model.param.set('DH2CO3', '2e-9[m^2/s]', 'Diffusion coefficient of H2CO3');
+model.param.set('DHCO3', '1.105e-9[m^2/s]', 'Diffusion coefficient of HCO3');
+model.param.set('DH', '9.312e-9[m^2/s]', 'Diffusion coefficient of H');
+model.param.set('DOH', '5.26e-9[m^2/s]', 'Diffusion coefficient of OH');
+model.param.set('DFe', '0.72e-9[m^2/s]', 'Diffusion coefficient of Fe');
+model.param.set('T', '20[degC]', 'Operating temperature');
+model.param.set('TF', '(T-0[degC])/1[K]*1.8+32', 'Operating temperature in Fahrenheit');
+model.param.set('PCO2', '1', 'Partial pressure of CO2 in bar');
+model.param.set('KCO2', '0.0454*(1.6616-5.736e-2*(T[1/K]-273)+1.031e-3*(T[1/K]-273)^2-9.68e-6*(T[1/K]-273)^3+4.471e-8*(T[1/K]-273)^4-7.912e-11*(T[1/K]-273)^5)', 'Henry''s constant');
+model.param.set('KCO2H', '2.58e-3', 'Equilibrium constant for CO2 hydration');
+model.param.set('KH2CO3', '387.6*10^(-(6.41-1.594e-3*TF+8.52e-6*(TF)^2))', 'Equilibrium constant for H2CO3 dissociation');
+model.param.set('KHCO3', '10^(-(10.61-4.97e-3*TF+1.331e-5*(TF)^2))', 'Equilibrium constant for HCO3 dissociation');
+model.param.set('kCO2H', '10^(169.2-53*log10(T[1/K])-11715/T[1/K])[1/s]', 'Forward reaction rate for CO2 hydration');
+model.param.set('c_unit', '1000[mol/m^3]', 'Unit activity concentration');
+model.param.set('cCO20', 'KCO2*PCO2*1e3[mol/m^3]', 'Initial concentration of CO2');
+model.param.set('cH2CO30', 'KCO2H*cCO20', 'Initial concentration of H2CO3');
+model.param.set('cHCO30', 'sqrt(KH2CO3*c_unit*cH2CO30)', 'Initial concentration of HCO3-');
+model.param.set('cFe0', '0[mol/m^3]', 'Initial concentration of Fe++');
+model.param.set('phil0', '0.5[V]', 'Initial electrolyte potential');
+model.param.set('delta', '50[um]', 'Boundary layer thickness');
+model.param.set('rho_steel', '7850[kg/m^3]', 'Density of steel');
+model.param.set('Mw_steel', '55.845[g/mol]', 'Molecular weight of steel');
+model.param.set('b_H2', '0.118[V]', 'Tafel slope for H+ reduction');
+model.param.set('b_Fe', '0.04[V]', 'Tafel slope for Fe oxidation');
+model.param.set('TrefFe', '25[degC]', 'Reference temperature');
+model.param.set('TrefH2', '25[degC]', 'Reference temperature');
+model.param.set('alphaa_Fe', 'log(10)*R_const*T/(b_Fe*F_const)', 'Anodic transfer coefficient for iron dissolution');
+model.param.set('alphaa_H2', '1-log(10)*R_const*T/(b_H2*F_const)', 'Anodic transfer coefficient for hydrogen evolution');
+model.param.set('Eeq_ref_Fe', '-0.409[V]', 'Reference equilibrium potential for iron dissolution');
+model.param.set('Eeq_ref_H2', '0[V]', 'Reference equilibrium potential for hydrogen evolution');
+model.param.set('i0_ref_Fe', '1[A/m^2]*exp(-37.5e3[J/mol]/R_const*(1/T-1/TrefFe))', 'Reference exchange current density for iron dissolution');
+model.param.set('i0_ref_H2', '1[A/m^2]*exp(-30e3[J/mol]/R_const*(1/T-1/TrefH2))', 'Reference exchange current density for hydrogen evolution');
+
+model.geom('geom1').create('i1', 'Interval');
+model.geom('geom1').feature('i1').setIndex('coord', 'delta', 1);
+model.geom('geom1').run('i1');
+model.geom('geom1').run;
+
+model.physics('tcd').feature('sp1').setIndex('z', -1, 2);
+model.physics('tcd').feature('sp1').setIndex('z', 2, 3);
+model.physics('tcd').feature('ice1').set('D_cCO2', {'DCO2' '0' '0' '0' 'DCO2' '0' '0' '0' 'DCO2'});
+model.physics('tcd').feature('ice1').set('D_cH2CO3', {'DH2CO3' '0' '0' '0' 'DH2CO3' '0' '0' '0' 'DH2CO3'});
+model.physics('tcd').feature('ice1').set('D_cHCO3', {'DHCO3' '0' '0' '0' 'DHCO3' '0' '0' '0' 'DHCO3'});
+model.physics('tcd').feature('ice1').set('D_cFe', {'DFe' '0' '0' '0' 'DFe' '0' '0' '0' 'DFe'});
+model.physics('tcd').feature('ice1').set('DH', {'DH' '0' '0' '0' 'DH' '0' '0' '0' 'DH'});
+model.physics('tcd').feature('ice1').set('DOH', {'DOH' '0' '0' '0' 'DOH' '0' '0' '0' 'DOH'});
+model.physics('tcd').feature('init1').setIndex('initc', 'cCO20', 0);
+model.physics('tcd').feature('init1').setIndex('initc', 'cH2CO30', 1);
+model.physics('tcd').feature('init1').setIndex('initc', 'cHCO30', 2);
+model.physics('tcd').feature('init1').setIndex('initc', 'cFe0', 3);
+model.physics('tcd').feature('init1').set('initphil', 'phil0');
+model.physics('tcd').create('es1', 'ElectrodeSurface', 0);
+model.physics('tcd').feature('es1').selection.set([1]);
+model.physics('tcd').feature('es1').setIndex('Species', 's1', 0, 0);
+model.physics('tcd').feature('es1').setIndex('rhos', 8960, 0, 0);
+model.physics('tcd').feature('es1').setIndex('Ms', 0.06355, 0, 0);
+model.physics('tcd').feature('es1').setIndex('Species', 's1', 0, 0);
+model.physics('tcd').feature('es1').setIndex('rhos', 8960, 0, 0);
+model.physics('tcd').feature('es1').setIndex('Ms', 0.06355, 0, 0);
+model.physics('tcd').feature('es1').setIndex('rhos', 'rho_steel', 0, 0);
+model.physics('tcd').feature('es1').setIndex('Ms', 'Mw_steel', 0, 0);
+model.physics('tcd').feature('es1').feature('er1').set('nm', 2);
+model.physics('tcd').feature('es1').feature('er1').setIndex('Vi0', -1, 3);
+model.physics('tcd').feature('es1').feature('er1').setIndex('Vib', -1, 0, 0);
+model.physics('tcd').feature('es1').feature('er1').set('Eeq_ref', 'Eeq_ref_Fe');
+model.physics('tcd').feature('es1').feature('er1').set('i0_ref', 'i0_ref_Fe');
+model.physics('tcd').feature('es1').feature('er1').set('alphaa', 'alphaa_Fe');
+model.physics('tcd').feature('es1').create('er2', 'ElectrodeReaction', 0);
+model.physics('tcd').feature('es1').feature('er2').set('Eeq_ref', 'Eeq_ref_H2');
+model.physics('tcd').feature('es1').feature('er2').set('i0_ref', 'i0_ref_H2');
+model.physics('tcd').feature('es1').feature('er2').set('alphaa', 'alphaa_H2');
+model.physics('tcd').create('eqreac1', 'EquilibriumReaction', 1);
+model.physics('tcd').feature('eqreac1').selection.all;
+model.physics('tcd').feature('eqreac1').set('Keq0', 'KCO2H');
+model.physics('tcd').feature('eqreac1').setIndex('nu', -1, 0);
+model.physics('tcd').feature('eqreac1').setIndex('nu', 1, 1);
+model.physics('tcd').create('eqreac2', 'EquilibriumReaction', 1);
+model.physics('tcd').feature('eqreac2').selection.all;
+model.physics('tcd').feature('eqreac2').set('Keq0', 'KH2CO3');
+model.physics('tcd').feature('eqreac2').setIndex('nu', -1, 1);
+model.physics('tcd').feature('eqreac2').setIndex('nu', 1, 2);
+model.physics('tcd').feature('eqreac2').set('nuH', 1);
+model.physics('tcd').create('conc1', 'Concentration', 0);
+model.physics('tcd').feature('conc1').selection.set([2]);
+model.physics('tcd').feature('conc1').setIndex('species', true, 0);
+model.physics('tcd').feature('conc1').setIndex('species', true, 3);
+model.physics('tcd').feature('conc1').setIndex('c0', 'cCO20', 0);
+model.physics('tcd').feature('conc1').setIndex('c0', 'cFe0', 3);
+
+model.mesh('mesh1').automatic(false);
+model.mesh('mesh1').feature('size').set('custom', true);
+model.mesh('mesh1').feature('size').set('hmax', '1e-6');
+model.mesh('mesh1').feature('edg1').create('size1', 'Size');
+model.mesh('mesh1').feature('edg1').feature('size1').selection.geom('geom1', 0);
+model.mesh('mesh1').feature('edg1').feature('size1').selection.set([1]);
+model.mesh('mesh1').feature('edg1').feature('size1').set('custom', true);
+model.mesh('mesh1').feature('edg1').feature('size1').set('hmaxactive', true);
+model.mesh('mesh1').feature('edg1').feature('size1').set('hmax', '1e-7');
+model.mesh('mesh1').run('edg1');
+
+model.study('std1').setGenPlots(false);
+model.study('std1').create('param', 'Parametric');
+model.study('std1').feature('param').setIndex('pname', 'DCO2', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', 'm^2/s', 0);
+model.study('std1').feature('param').setIndex('pname', 'DCO2', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', 'm^2/s', 0);
+model.study('std1').feature('param').setIndex('pname', 'DH2CO3', 1);
+model.study('std1').feature('param').setIndex('plistarr', '', 1);
+model.study('std1').feature('param').setIndex('punit', 'm^2/s', 1);
+model.study('std1').feature('param').setIndex('pname', 'DH2CO3', 1);
+model.study('std1').feature('param').setIndex('plistarr', '', 1);
+model.study('std1').feature('param').setIndex('punit', 'm^2/s', 1);
+model.study('std1').feature('param').setIndex('pname', 'PCO2', 0);
+model.study('std1').feature('param').setIndex('plistarr', '0.01 0.1 range(0.5,0.5,3)', 0);
+model.study('std1').feature('param').setIndex('pname', 'T', 1);
+model.study('std1').feature('param').setIndex('plistarr', '293.15[K] 323.15[K] 353.15[K]', 1);
+model.study('std1').feature('param').set('sweeptype', 'filled');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'stat');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').feature('comp1_phil').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_tcd_eqreac2_Req').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_tcd_eqreac1_Req').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_phil').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_tcd_eqreac2_Req').set('scaleval', '1000');
+model.sol('sol1').feature('v1').feature('comp1_tcd_eqreac1_Req').set('scaleval', '1000');
+model.sol('sol1').feature('v1').set('control', 'stat');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').set('stol', 1.0E-4);
+model.sol('sol1').feature('s1').create('p1', 'Parametric');
+model.sol('sol1').feature('s1').feature('p1').set('pname', {'PCO2' 'T'});
+model.sol('sol1').feature('s1').feature('p1').set('plistarr', {'0.01 0.1 range(0.5,0.5,3)' '293.15[K] 323.15[K] 353.15[K]'});
+model.sol('sol1').feature('s1').feature('p1').set('punit', {'' 'K'});
+model.sol('sol1').feature('s1').feature('p1').set('sweeptype', 'filled');
+model.sol('sol1').feature('s1').feature('p1').set('preusesol', 'no');
+model.sol('sol1').feature('s1').feature('p1').set('pcontinuationmode', 'no');
+model.sol('sol1').feature('s1').feature('p1').set('porder', 'constant');
+model.sol('sol1').feature('s1').feature('p1').set('plot', 'off');
+model.sol('sol1').feature('s1').feature('p1').set('plotgroup', 'Default');
+model.sol('sol1').feature('s1').feature('p1').set('probesel', 'all');
+model.sol('sol1').feature('s1').feature('p1').set('probes', {});
+model.sol('sol1').feature('s1').feature('p1').set('control', 'param');
+model.sol('sol1').feature('s1').set('control', 'stat');
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-6);
+model.sol('sol1').feature('s1').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('d1').label('Direct (tcd)');
+model.sol('sol1').feature('s1').create('i1', 'Iterative');
+model.sol('sol1').feature('s1').feature('i1').set('maxlinit', 1000);
+model.sol('sol1').feature('s1').feature('i1').set('nlinnormuse', 'on');
+model.sol('sol1').feature('s1').feature('i1').label('Algebraic Multigrid (tcd)');
+model.sol('sol1').feature('s1').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('saamgcompwise', false);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('compactaggregation', true);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').create('va1', 'Vanka');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('va1').set('vankavars', {'comp1_tcd_eqreac1_Req' 'comp1_tcd_eqreac2_Req'});
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').create('va1', 'Vanka');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('va1').set('vankavars', {'comp1_tcd_eqreac1_Req' 'comp1_tcd_eqreac2_Req'});
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').create('i2', 'Iterative');
+model.sol('sol1').feature('s1').feature('i2').set('maxlinit', 1000);
+model.sol('sol1').feature('s1').feature('i2').set('nlinnormuse', 'on');
+model.sol('sol1').feature('s1').feature('i2').label('Geometric Multigrid (tcd)');
+model.sol('sol1').feature('s1').feature('i2').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').create('va1', 'Vanka');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('va1').set('vankavars', {'comp1_tcd_eqreac1_Req' 'comp1_tcd_eqreac2_Req'});
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').create('va1', 'Vanka');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('va1').set('vankavars', {'comp1_tcd_eqreac1_Req' 'comp1_tcd_eqreac2_Req'});
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-6);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('s1').set('stol', '1e-6');
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup1D');
+model.result('pg1').run;
+model.result('pg1').label('Concentrations');
+model.result('pg1').setIndex('looplevelinput', 'last', 1);
+model.result('pg1').setIndex('looplevelinput', 'first', 0);
+model.result('pg1').set('titletype', 'manual');
+model.result('pg1').set('title', 'PCO2=1 bar, T=20<sup>\circ</sup>C');
+model.result('pg1').set('xlabelactive', true);
+model.result('pg1').set('xlabel', 'Distance from steel surface (m)');
+model.result('pg1').set('ylabelactive', true);
+model.result('pg1').set('ylabel', 'Concentration deviation (mol/m<sup>3</sup>)');
+model.result('pg1').create('lngr1', 'LineGraph');
+model.result('pg1').feature('lngr1').set('markerpos', 'datapoints');
+model.result('pg1').feature('lngr1').set('linewidth', 'preference');
+model.result('pg1').feature('lngr1').selection.all;
+model.result('pg1').feature('lngr1').set('expr', 'cCO2-cCO20');
+model.result('pg1').feature('lngr1').set('titletype', 'none');
+model.result('pg1').feature('lngr1').set('xdata', 'expr');
+model.result('pg1').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg1').feature('lngr1').set('legend', true);
+model.result('pg1').feature('lngr1').set('legendmethod', 'manual');
+model.result('pg1').feature('lngr1').setIndex('legends', 'CO<sub>2</sub>', 0);
+model.result('pg1').feature.duplicate('lngr2', 'lngr1');
+model.result('pg1').run;
+model.result('pg1').feature('lngr2').set('expr', 'cH2CO3-cH2CO30');
+model.result('pg1').feature('lngr2').setIndex('legends', 'H<sub>2</sub>CO<sub>3</sub>', 0);
+model.result('pg1').feature.duplicate('lngr3', 'lngr2');
+model.result('pg1').run;
+model.result('pg1').feature('lngr3').set('expr', 'cHCO3-cHCO30');
+model.result('pg1').feature('lngr3').setIndex('legends', 'HCO<sub>3</sub><sup>-</sup>', 0);
+model.result('pg1').feature.duplicate('lngr4', 'lngr3');
+model.result('pg1').run;
+model.result('pg1').feature('lngr4').set('expr', 'cFe-cFe0');
+model.result('pg1').feature('lngr4').setIndex('legends', 'Fe<sup>2+</sup>', 0);
+model.result('pg1').run;
+model.result.create('pg2', 'PlotGroup1D');
+model.result('pg2').run;
+model.result('pg2').label('Corrosion rate');
+model.result('pg2').set('titletype', 'none');
+model.result('pg2').set('xlabelactive', true);
+model.result('pg2').set('xlabel', 'Partial pressure of CO2 (bar)');
+model.result('pg2').set('ylabelactive', true);
+model.result('pg2').set('ylabel', 'Corrosion rate (mm/year)');
+model.result('pg2').create('ptgr1', 'PointGraph');
+model.result('pg2').feature('ptgr1').set('markerpos', 'datapoints');
+model.result('pg2').feature('ptgr1').set('linewidth', 'preference');
+model.result('pg2').feature('ptgr1').selection.set([1]);
+model.result('pg2').feature('ptgr1').set('expr', 'tcd.vbtot');
+model.result('pg2').feature('ptgr1').set('descr', 'Total electrode growth velocity');
+model.result('pg2').feature('ptgr1').set('unit', 'mm/yr');
+model.result('pg2').feature('ptgr1').set('xdatasolnumtype', 'level2');
+model.result('pg2').feature('ptgr1').set('xdata', 'expr');
+model.result('pg2').feature('ptgr1').set('xdataexpr', 'PCO2');
+model.result('pg2').feature('ptgr1').set('legend', true);
+model.result('pg2').feature('ptgr1').set('legendmethod', 'evaluated');
+model.result('pg2').feature('ptgr1').set('legendpattern', 'T=eval(T) K');
+model.result('pg2').run;
+model.result('pg2').set('legendpos', 'upperleft');
+model.result('pg2').run;
+model.result.duplicate('pg3', 'pg2');
+model.result('pg3').run;
+model.result('pg3').label('pH at surface');
+model.result('pg3').set('ylabel', 'pH at surface');
+model.result('pg3').run;
+model.result('pg3').feature('ptgr1').set('expr', 'tcd.pH');
+model.result('pg3').run;
+model.result('pg3').set('legendpos', 'upperright');
+model.result('pg3').run;
+model.result.duplicate('pg4', 'pg3');
+model.result('pg4').run;
+model.result('pg4').label('pH at bulk');
+model.result('pg4').set('ylabel', 'pH at bulk');
+model.result('pg4').run;
+model.result('pg4').feature('ptgr1').selection.set([2]);
+model.result('pg4').run;
+
+model.title('Carbon Dioxide Corrosion in Steel Pipes');
+
+model.description('Carbon dioxide in aqueous solutions is highly corrosive and can cause significant damage on steel designs. Especially within petrochemical industry such conditions arise in pipes of some applications. This example investigates the corrosion taking place on the steel surface of pipes for turbulent flows of carbon dioxide and water. The influence of temperature and pH is modeled as well.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+
+model.label('co2_corrosion.mph');
+
+model.modelNode.label('Components');
+
+out = model;

@@ -1,0 +1,490 @@
+function out = model
+%
+% transformation_diagram_computation.m
+%
+% Model exported on May 26 2025, 21:30 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Metal_Processing_Module/Transformation_Diagrams');
+
+model.modelNode.create('comp1', true);
+
+model.physics.create('audc', 'GlobalAusteniteDecomposition');
+model.physics('audc').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('time', 'Transient');
+model.study('std1').feature('time').setSolveFor('/physics/audc', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('highT', '900[degC]', 'Highest transformation temperature');
+model.param.set('lowT', '100[degC]', 'Lowest transformation temperature');
+model.param.set('startFraction', '0.01', 'Phase fraction indicating transformation start');
+model.param.set('rateT', '1[K/s]', 'Cooling rate parameter');
+model.param.set('T0', 'highT', 'Cooling temperature parameter');
+model.param.set('nRates', '10', 'Number of cooling rates per decade for CCT');
+model.param.set('highRate', '100[K/s]', 'Highest cooling rate for CCT');
+model.param.set('lowRate', '0.01[K/s]', 'Lowest cooling rate for CCT');
+model.param.set('nTemps', '50', 'Number of temperatures for TTT');
+model.param.set('maxTime', '2500[s]', 'Maximum transformation time');
+
+model.variable.create('var1');
+model.variable('var1').model('comp1');
+model.variable('var1').label('CCT');
+model.variable('var1').set('T', 'T0-rateT*t');
+model.variable('var1').descr('T', 'Temperature for CCT');
+model.variable.create('var2');
+model.variable('var2').model('comp1');
+model.variable('var2').label('TTT');
+model.variable('var2').set('T', 'T0', 'Temperature for CCT');
+model.variable('var2').descr('T', 'Temperature for TTT');
+
+model.func.create('int1', 'Interpolation');
+model.func('int1').model('comp1');
+model.func('int1').set('funcname', 'K_Austenite_to_Ferrite');
+model.func('int1').set('table', {'0' '0';  ...
+'550' '0';  ...
+'620' '0.002';  ...
+'700' '0.001';  ...
+'750' '0';  ...
+'1000' '0';  ...
+'' ''});
+model.func('int1').set('interp', 'piecewisecubic');
+model.func('int1').setIndex('argunit', 'degC', 0);
+model.func('int1').setIndex('fununit', '1/s', 0);
+model.func.create('int2', 'Interpolation');
+model.func('int2').model('comp1');
+model.func('int2').set('funcname', 'L_Austenite_to_Ferrite');
+model.func('int2').set('table', {'0' '0'; '600' '0'; '620' '0.0002'; '800' '0.002'; '1000' '0.002'});
+model.func('int2').set('interp', 'piecewisecubic');
+model.func('int2').setIndex('argunit', 'degC', 0);
+model.func('int2').setIndex('fununit', '1/s', 0);
+model.func.create('int3', 'Interpolation');
+model.func('int3').model('comp1');
+model.func('int3').set('funcname', 'K_Austenite_to_Bainite');
+model.func('int3').set('table', {'0' '0';  ...
+'380' '0';  ...
+'400' '0.0005';  ...
+'490' '0.005';  ...
+'580' '0.00005';  ...
+'600' '0'});
+model.func('int3').set('interp', 'piecewisecubic');
+model.func('int3').setIndex('argunit', 'degC', 0);
+model.func('int3').setIndex('fununit', '1/s', 0);
+model.func.create('int4', 'Interpolation');
+model.func('int4').model('comp1');
+model.func('int4').set('funcname', 'L_Austenite_to_Bainite');
+model.func('int4').set('table', {'0' '0'; '400' '0.0'; '500' '0.0002'; '580' '0.002'; '600' '0.002'});
+model.func('int4').set('interp', 'piecewisecubic');
+model.func('int4').setIndex('argunit', 'degC', 0);
+model.func('int4').setIndex('fununit', '1/s', 0);
+
+model.physics('audc').prop('Temperature').set('T', 'T');
+model.physics('audc').feature('phase2').set('computetimes', true);
+model.physics('audc').feature('phase4').set('computetimes', true);
+model.physics('audc').feature('ptran1').set('K', 'K_Austenite_to_Ferrite(audc.T)');
+model.physics('audc').feature('ptran1').set('L', 'L_Austenite_to_Ferrite(audc.T)');
+model.physics('audc').feature('ptran3').set('K', 'K_Austenite_to_Bainite(audc.T)');
+model.physics('audc').feature('ptran3').set('L', 'L_Austenite_to_Bainite(audc.T)');
+model.physics('audc').feature('ptran2').active(false);
+model.physics('audc').feature('phase3').active(false);
+model.physics('audc').feature('ptran4').active(false);
+model.physics('audc').feature('phase5').active(false);
+
+model.study('std1').label('CCT');
+model.study('std1').create('param', 'Parametric');
+model.study('std1').feature('param').setIndex('pname', 'audc.beta', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', '1/K', 0);
+model.study('std1').feature('param').setIndex('pname', 'audc.beta', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', '1/K', 0);
+model.study('std1').feature('param').setIndex('pname', 'rateT', 0);
+model.study('std1').feature('param').setIndex('plistarr', '10^{range(log10(highRate),-(1/nRates),log10(lowRate))}', 0);
+model.study('std1').feature('time').set('tlist', 'range(0,((T0-lowT)/rateT-0)/49,(T0-lowT)/rateT)');
+model.study('std1').feature('time').set('useadvanceddisable', true);
+model.study('std1').feature('time').set('disabledvariables', {'var2'});
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'time');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'time');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('tlist', 'range(0,((T0-lowT)/rateT-0)/49,(T0-lowT)/rateT)');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'Default');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t1').set('control', 'time');
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'dDef');
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+
+model.batch.create('p1', 'Parametric');
+model.batch('p1').study('std1');
+model.batch('p1').create('so1', 'Solutionseq');
+model.batch('p1').feature('so1').set('seq', 'sol1');
+model.batch('p1').feature('so1').set('store', 'on');
+model.batch('p1').feature('so1').set('clear', 'on');
+model.batch('p1').feature('so1').set('psol', 'none');
+model.batch('p1').set('pname', {'rateT'});
+model.batch('p1').set('plistarr', {'10^{range(log10(highRate),-(1/nRates),log10(lowRate))}'});
+model.batch('p1').set('sweeptype', 'sparse');
+model.batch('p1').set('probesel', 'all');
+model.batch('p1').set('probes', {});
+model.batch('p1').set('plot', 'off');
+model.batch('p1').set('err', 'on');
+model.batch('p1').attach('std1');
+model.batch('p1').set('control', 'param');
+
+model.sol.create('sol2');
+model.sol('sol2').study('std1');
+model.sol('sol2').label('Parametric Solutions 1');
+
+model.batch('p1').feature('so1').set('psol', 'sol2');
+model.batch('p1').run('compute');
+
+model.result.create('pg1', 'PlotGroup1D');
+model.result('pg1').set('data', 'dset2');
+model.result('pg1').create('glob1', 'Global');
+model.result('pg1').feature('glob1').set('unit', {'' '' ''});
+model.result('pg1').feature('glob1').set('expr', {'audc.phase1.xi' 'audc.phase2.xi' 'audc.phase4.xi'});
+model.result('pg1').feature('glob1').set('descr', {'Phase fraction' 'Phase fraction' 'Phase fraction'});
+model.result('pg1').label('Phase Composition (audc)');
+model.result('pg1').feature('glob1').set('descr', {'Austenite' 'Ferrite' 'Bainite'});
+model.result('pg1').feature('glob1').set('title', 'Phase composition');
+model.result('pg1').set('twoyaxes', true);
+model.result('pg1').set('legendlayout', 'outside');
+model.result('pg1').create('glob2', 'Global');
+model.result('pg1').feature('glob2').set('plotonsecyaxis', true);
+model.result('pg1').feature('glob2').setIndex('expr', 'audc.T', 0);
+model.result('pg1').feature('glob2').set('linestyle', 'dotted');
+model.result.create('pg2', 'PlotGroup1D');
+model.result('pg2').set('data', 'dset2');
+model.result('pg2').label('Transformation Diagram (audc)');
+model.result('pg2').set('innerinput', 'last');
+model.result('pg2').set('xlog', true);
+model.result('pg2').set('legendpos', 'lowerright');
+model.result('pg2').set('xlabel', 'Time');
+model.result('pg2').set('ylabel', 'Temperature');
+model.result('pg2').create('glob1', 'Global');
+model.result('pg2').feature('glob1').set('expr', {'audc.phase2.temperature_1'});
+model.result('pg2').feature('glob1').set('titletype', 'none');
+model.result('pg2').feature('glob1').set('xdata', 'expr');
+model.result('pg2').feature('glob1').set('xdataexpr', 'audc.phase2.time_1');
+model.result('pg2').feature('glob1').set('legendmethod', 'manual');
+model.result('pg2').feature('glob1').setIndex('legends', 'Ferrite 0.01', 0);
+model.result('pg2').feature('glob1').set('linemarker', 'cycle');
+model.result('pg2').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob1').set('xdatasolnumtype', 'all');
+model.result('pg2').create('glob2', 'Global');
+model.result('pg2').feature('glob2').set('expr', {'audc.phase2.temperature_2'});
+model.result('pg2').feature('glob2').set('titletype', 'none');
+model.result('pg2').feature('glob2').set('xdata', 'expr');
+model.result('pg2').feature('glob2').set('xdataexpr', 'audc.phase2.time_2');
+model.result('pg2').feature('glob2').set('legendmethod', 'manual');
+model.result('pg2').feature('glob2').setIndex('legends', 'Ferrite 0.99', 0);
+model.result('pg2').feature('glob2').set('linemarker', 'cycle');
+model.result('pg2').feature('glob2').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob2').set('xdatasolnumtype', 'all');
+model.result('pg2').create('glob3', 'Global');
+model.result('pg2').feature('glob3').set('expr', {'audc.phase4.temperature_1'});
+model.result('pg2').feature('glob3').set('titletype', 'none');
+model.result('pg2').feature('glob3').set('xdata', 'expr');
+model.result('pg2').feature('glob3').set('xdataexpr', 'audc.phase4.time_1');
+model.result('pg2').feature('glob3').set('legendmethod', 'manual');
+model.result('pg2').feature('glob3').setIndex('legends', 'Bainite 0.01', 0);
+model.result('pg2').feature('glob3').set('linemarker', 'cycle');
+model.result('pg2').feature('glob3').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob3').set('xdatasolnumtype', 'all');
+model.result('pg2').create('glob4', 'Global');
+model.result('pg2').feature('glob4').set('expr', {'audc.phase4.temperature_2'});
+model.result('pg2').feature('glob4').set('titletype', 'none');
+model.result('pg2').feature('glob4').set('xdata', 'expr');
+model.result('pg2').feature('glob4').set('xdataexpr', 'audc.phase4.time_2');
+model.result('pg2').feature('glob4').set('legendmethod', 'manual');
+model.result('pg2').feature('glob4').setIndex('legends', 'Bainite 0.99', 0);
+model.result('pg2').feature('glob4').set('linemarker', 'cycle');
+model.result('pg2').feature('glob4').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob4').set('xdatasolnumtype', 'all');
+model.result('pg1').run;
+
+model.study.create('std2');
+model.study('std2').create('time', 'Transient');
+model.study('std2').feature('time').setSolveFor('/physics/audc', true);
+model.study('std2').label('TTT');
+model.study('std2').create('param', 'Parametric');
+model.study('std2').feature('param').set('sweeptype', 'filled');
+model.study('std2').feature('param').setIndex('pname', 'audc.beta', 0);
+model.study('std2').feature('param').setIndex('plistarr', '', 0);
+model.study('std2').feature('param').setIndex('punit', '1/K', 0);
+model.study('std2').feature('param').setIndex('pname', 'audc.beta', 0);
+model.study('std2').feature('param').setIndex('plistarr', '', 0);
+model.study('std2').feature('param').setIndex('punit', '1/K', 0);
+model.study('std2').feature('param').setIndex('pname', 'T0', 0);
+model.study('std2').feature('param').setIndex('plistarr', 'range(highT,(lowT-(highT))/(nTemps-1),lowT)', 0);
+model.study('std2').feature('time').set('tlist', 'range(0,maxTime/99,maxTime)');
+model.study('std2').feature('time').set('useadvanceddisable', true);
+model.study('std2').feature('time').set('disabledvariables', {'var1'});
+
+model.sol.create('sol44');
+model.sol('sol44').study('std2');
+model.sol('sol44').create('st1', 'StudyStep');
+model.sol('sol44').feature('st1').set('study', 'std2');
+model.sol('sol44').feature('st1').set('studystep', 'time');
+model.sol('sol44').create('v1', 'Variables');
+model.sol('sol44').feature('v1').set('control', 'time');
+model.sol('sol44').create('t1', 'Time');
+model.sol('sol44').feature('t1').set('tlist', 'range(0,maxTime/99,maxTime)');
+model.sol('sol44').feature('t1').set('plot', 'off');
+model.sol('sol44').feature('t1').set('plotgroup', 'pg1');
+model.sol('sol44').feature('t1').set('plotfreq', 'tout');
+model.sol('sol44').feature('t1').set('probesel', 'all');
+model.sol('sol44').feature('t1').set('probes', {});
+model.sol('sol44').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol44').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol44').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol44').feature('t1').set('control', 'time');
+model.sol('sol44').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol44').feature('t1').feature('fc1').set('linsolver', 'dDef');
+model.sol('sol44').feature('t1').feature.remove('fcDef');
+model.sol('sol44').attach('std2');
+
+model.batch.create('p2', 'Parametric');
+model.batch('p2').study('std2');
+model.batch('p2').create('so1', 'Solutionseq');
+model.batch('p2').feature('so1').set('seq', 'sol44');
+model.batch('p2').feature('so1').set('store', 'on');
+model.batch('p2').feature('so1').set('clear', 'on');
+model.batch('p2').feature('so1').set('psol', 'none');
+model.batch('p2').set('pname', {'T0'});
+model.batch('p2').set('plistarr', {'range(highT,(lowT-(highT))/(nTemps-1),lowT)'});
+model.batch('p2').set('sweeptype', 'filled');
+model.batch('p2').set('probesel', 'all');
+model.batch('p2').set('probes', {});
+model.batch('p2').set('plot', 'off');
+model.batch('p2').set('err', 'on');
+model.batch('p2').attach('std2');
+model.batch('p2').set('control', 'param');
+
+model.sol.create('sol45');
+model.sol('sol45').study('std2');
+model.sol('sol45').label('Parametric Solutions 2');
+
+model.batch('p2').feature('so1').set('psol', 'sol45');
+model.batch('p2').run('compute');
+
+model.result.create('pg3', 'PlotGroup1D');
+model.result('pg3').set('data', 'dset4');
+model.result('pg3').create('glob1', 'Global');
+model.result('pg3').feature('glob1').set('unit', {'' '' ''});
+model.result('pg3').feature('glob1').set('expr', {'audc.phase1.xi' 'audc.phase2.xi' 'audc.phase4.xi'});
+model.result('pg3').feature('glob1').set('descr', {'Phase fraction' 'Phase fraction' 'Phase fraction'});
+model.result('pg3').label('Phase Composition (audc) 1');
+model.result('pg3').feature('glob1').set('descr', {'Austenite' 'Ferrite' 'Bainite'});
+model.result('pg3').feature('glob1').set('title', 'Phase composition');
+model.result('pg3').set('twoyaxes', true);
+model.result('pg3').set('legendlayout', 'outside');
+model.result('pg3').create('glob2', 'Global');
+model.result('pg3').feature('glob2').set('plotonsecyaxis', true);
+model.result('pg3').feature('glob2').setIndex('expr', 'audc.T', 0);
+model.result('pg3').feature('glob2').set('linestyle', 'dotted');
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').set('data', 'dset4');
+model.result('pg4').label('Transformation Diagram (audc) 1');
+model.result('pg4').set('innerinput', 'last');
+model.result('pg4').set('xlog', true);
+model.result('pg4').set('legendpos', 'lowerright');
+model.result('pg4').set('xlabel', 'Time');
+model.result('pg4').set('ylabel', 'Temperature');
+model.result('pg4').create('glob1', 'Global');
+model.result('pg4').feature('glob1').set('expr', {'audc.phase2.temperature_1'});
+model.result('pg4').feature('glob1').set('titletype', 'none');
+model.result('pg4').feature('glob1').set('xdata', 'expr');
+model.result('pg4').feature('glob1').set('xdataexpr', 'audc.phase2.time_1');
+model.result('pg4').feature('glob1').set('legendmethod', 'manual');
+model.result('pg4').feature('glob1').setIndex('legends', 'Ferrite 0.01', 0);
+model.result('pg4').feature('glob1').set('linemarker', 'cycle');
+model.result('pg4').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob1').set('xdatasolnumtype', 'all');
+model.result('pg4').create('glob2', 'Global');
+model.result('pg4').feature('glob2').set('expr', {'audc.phase2.temperature_2'});
+model.result('pg4').feature('glob2').set('titletype', 'none');
+model.result('pg4').feature('glob2').set('xdata', 'expr');
+model.result('pg4').feature('glob2').set('xdataexpr', 'audc.phase2.time_2');
+model.result('pg4').feature('glob2').set('legendmethod', 'manual');
+model.result('pg4').feature('glob2').setIndex('legends', 'Ferrite 0.99', 0);
+model.result('pg4').feature('glob2').set('linemarker', 'cycle');
+model.result('pg4').feature('glob2').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob2').set('xdatasolnumtype', 'all');
+model.result('pg4').create('glob3', 'Global');
+model.result('pg4').feature('glob3').set('expr', {'audc.phase4.temperature_1'});
+model.result('pg4').feature('glob3').set('titletype', 'none');
+model.result('pg4').feature('glob3').set('xdata', 'expr');
+model.result('pg4').feature('glob3').set('xdataexpr', 'audc.phase4.time_1');
+model.result('pg4').feature('glob3').set('legendmethod', 'manual');
+model.result('pg4').feature('glob3').setIndex('legends', 'Bainite 0.01', 0);
+model.result('pg4').feature('glob3').set('linemarker', 'cycle');
+model.result('pg4').feature('glob3').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob3').set('xdatasolnumtype', 'all');
+model.result('pg4').create('glob4', 'Global');
+model.result('pg4').feature('glob4').set('expr', {'audc.phase4.temperature_2'});
+model.result('pg4').feature('glob4').set('titletype', 'none');
+model.result('pg4').feature('glob4').set('xdata', 'expr');
+model.result('pg4').feature('glob4').set('xdataexpr', 'audc.phase4.time_2');
+model.result('pg4').feature('glob4').set('legendmethod', 'manual');
+model.result('pg4').feature('glob4').setIndex('legends', 'Bainite 0.99', 0);
+model.result('pg4').feature('glob4').set('linemarker', 'cycle');
+model.result('pg4').feature('glob4').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob4').set('xdatasolnumtype', 'all');
+model.result('pg3').run;
+model.result('pg2').run;
+model.result('pg2').create('glob5', 'Global');
+model.result('pg2').feature('glob5').set('markerpos', 'datapoints');
+model.result('pg2').feature('glob5').set('linewidth', 'preference');
+model.result('pg2').feature('glob5').set('data', 'dset2');
+model.result('pg2').feature('glob5').setIndex('looplevelinput', 'manual', 1);
+model.result('pg2').feature('glob5').setIndex('looplevel', [1], 1);
+model.result('pg2').feature('glob5').setIndex('expr', 'audc.T', 0);
+model.result('pg2').feature('glob5').setIndex('unit', 'degC', 0);
+model.result('pg2').feature('glob5').set('titletype', 'none');
+model.result('pg2').feature.duplicate('glob6', 'glob5');
+model.result('pg2').run;
+model.result('pg2').feature('glob6').setIndex('looplevel', [11], 1);
+model.result('pg2').feature.duplicate('glob7', 'glob6');
+model.result('pg2').run;
+model.result('pg2').feature('glob7').setIndex('looplevel', [21], 1);
+model.result('pg2').run;
+model.result('pg2').run;
+model.result('pg2').feature('glob1').setIndex('unit', 'degC', 0);
+model.result('pg2').run;
+model.result('pg2').feature('glob2').setIndex('unit', 'degC', 0);
+model.result('pg2').run;
+model.result('pg2').feature('glob3').setIndex('unit', 'degC', 0);
+model.result('pg4').run;
+model.result('pg4').run;
+model.result('pg4').feature('glob1').setIndex('unit', 'degC', 0);
+model.result('pg4').run;
+model.result('pg4').feature('glob3').setIndex('unit', 'degC', 0);
+model.result('pg4').run;
+
+model.title('Transformation Diagram Computation');
+
+model.description('During quenching of steel, austenite decomposes into phases such as ferrite, pearlite, bainite, and martensite. A common way to illustrate the phase transformation characteristics of a particular steel alloy is to use transformation diagrams. Two of the most commonly used diagram types are the CCT (Continuous Cooling Transformation) and the TTT (Time Temperature Transformation) diagrams. This example shows how to compute CCT and TTT diagrams based on temperature-dependent phase transformation data.');
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+model.sol('sol2').clearSolutionData;
+model.sol('sol3').clearSolutionData;
+model.sol('sol4').clearSolutionData;
+model.sol('sol5').clearSolutionData;
+model.sol('sol6').clearSolutionData;
+model.sol('sol7').clearSolutionData;
+model.sol('sol8').clearSolutionData;
+model.sol('sol9').clearSolutionData;
+model.sol('sol10').clearSolutionData;
+model.sol('sol11').clearSolutionData;
+model.sol('sol12').clearSolutionData;
+model.sol('sol13').clearSolutionData;
+model.sol('sol14').clearSolutionData;
+model.sol('sol15').clearSolutionData;
+model.sol('sol16').clearSolutionData;
+model.sol('sol17').clearSolutionData;
+model.sol('sol18').clearSolutionData;
+model.sol('sol19').clearSolutionData;
+model.sol('sol20').clearSolutionData;
+model.sol('sol21').clearSolutionData;
+model.sol('sol22').clearSolutionData;
+model.sol('sol23').clearSolutionData;
+model.sol('sol24').clearSolutionData;
+model.sol('sol25').clearSolutionData;
+model.sol('sol26').clearSolutionData;
+model.sol('sol27').clearSolutionData;
+model.sol('sol28').clearSolutionData;
+model.sol('sol29').clearSolutionData;
+model.sol('sol30').clearSolutionData;
+model.sol('sol31').clearSolutionData;
+model.sol('sol32').clearSolutionData;
+model.sol('sol33').clearSolutionData;
+model.sol('sol34').clearSolutionData;
+model.sol('sol35').clearSolutionData;
+model.sol('sol36').clearSolutionData;
+model.sol('sol37').clearSolutionData;
+model.sol('sol38').clearSolutionData;
+model.sol('sol39').clearSolutionData;
+model.sol('sol40').clearSolutionData;
+model.sol('sol41').clearSolutionData;
+model.sol('sol42').clearSolutionData;
+model.sol('sol43').clearSolutionData;
+model.sol('sol44').clearSolutionData;
+model.sol('sol45').clearSolutionData;
+model.sol('sol46').clearSolutionData;
+model.sol('sol47').clearSolutionData;
+model.sol('sol48').clearSolutionData;
+model.sol('sol49').clearSolutionData;
+model.sol('sol50').clearSolutionData;
+model.sol('sol51').clearSolutionData;
+model.sol('sol52').clearSolutionData;
+model.sol('sol53').clearSolutionData;
+model.sol('sol54').clearSolutionData;
+model.sol('sol55').clearSolutionData;
+model.sol('sol56').clearSolutionData;
+model.sol('sol57').clearSolutionData;
+model.sol('sol58').clearSolutionData;
+model.sol('sol59').clearSolutionData;
+model.sol('sol60').clearSolutionData;
+model.sol('sol61').clearSolutionData;
+model.sol('sol62').clearSolutionData;
+model.sol('sol63').clearSolutionData;
+model.sol('sol64').clearSolutionData;
+model.sol('sol65').clearSolutionData;
+model.sol('sol66').clearSolutionData;
+model.sol('sol67').clearSolutionData;
+model.sol('sol68').clearSolutionData;
+model.sol('sol69').clearSolutionData;
+model.sol('sol70').clearSolutionData;
+model.sol('sol71').clearSolutionData;
+model.sol('sol72').clearSolutionData;
+model.sol('sol73').clearSolutionData;
+model.sol('sol74').clearSolutionData;
+model.sol('sol75').clearSolutionData;
+model.sol('sol76').clearSolutionData;
+model.sol('sol77').clearSolutionData;
+model.sol('sol78').clearSolutionData;
+model.sol('sol79').clearSolutionData;
+model.sol('sol80').clearSolutionData;
+model.sol('sol81').clearSolutionData;
+model.sol('sol82').clearSolutionData;
+model.sol('sol83').clearSolutionData;
+model.sol('sol84').clearSolutionData;
+model.sol('sol85').clearSolutionData;
+model.sol('sol86').clearSolutionData;
+model.sol('sol87').clearSolutionData;
+model.sol('sol88').clearSolutionData;
+model.sol('sol89').clearSolutionData;
+model.sol('sol90').clearSolutionData;
+model.sol('sol91').clearSolutionData;
+model.sol('sol92').clearSolutionData;
+model.sol('sol93').clearSolutionData;
+model.sol('sol94').clearSolutionData;
+model.sol('sol95').clearSolutionData;
+
+model.label('transformation_diagram_computation.mph');
+
+model.modelNode.label('Components');
+
+out = model;

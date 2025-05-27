@@ -1,0 +1,394 @@
+function out = model
+%
+% orthotropic_container_shell.m
+%
+% Model exported on May 26 2025, 21:31 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Nonlinear_Structural_Materials_Module/Plasticity');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+model.geom('geom1').axisymmetric(true);
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('shell', 'Shell', 'geom1');
+model.physics('shell').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('stat', 'Stationary');
+model.study('std1').feature('stat').setSolveFor('/physics/shell', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('pressure', '1[N/m^2]', 'Internal pressure');
+model.param.set('th', '2[cm]', 'Wall thickness');
+model.param.set('De', '52[cm]', 'External cylinder diameter');
+model.param.set('Di', 'De-2*th', 'Internal cylinder diameter');
+model.param.set('Ri', 'Di/2', 'Internal cylinder radius');
+model.param.set('sf', '3.5*th', 'Straight flange height');
+model.param.set('Rk', '0.1*De', 'Internal knuckle radius');
+model.param.set('Rc', '0.9*Di', 'Internal crown radius');
+model.param.set('hi', 'Rc-sqrt((Rc-Ri)*(Rc+Ri-2*Rk))', 'Internal head height');
+model.param.set('alpha', 'atan((Ri-Rk)/(Rc-hi))', 'Angle at intersection crown-knuckle');
+model.param.set('hcyl', '40[cm]', 'Half cylinder height');
+
+model.geom('geom1').create('ca1', 'CircularArc');
+model.geom('geom1').feature('ca1').label('Crown');
+model.geom('geom1').feature('ca1').set('center', {'0' 'sf-(Rc-hi)'});
+model.geom('geom1').feature('ca1').set('r', 'Rc');
+model.geom('geom1').feature('ca1').set('angle1', '90-alpha');
+model.geom('geom1').run('ca1');
+model.geom('geom1').create('ca2', 'CircularArc');
+model.geom('geom1').feature('ca2').label('Knuckle');
+model.geom('geom1').feature('ca2').set('center', {'Ri-Rk' 'sf'});
+model.geom('geom1').feature('ca2').set('r', 'Rk');
+model.geom('geom1').feature('ca2').set('angle2', '90-alpha');
+model.geom('geom1').run('ca2');
+model.geom('geom1').create('ls1', 'LineSegment');
+model.geom('geom1').feature('ls1').label('Flange');
+model.geom('geom1').feature('ls1').set('specify1', 'coord');
+model.geom('geom1').feature('ls1').set('coord1', {'Ri' 'sf'});
+model.geom('geom1').feature('ls1').set('specify2', 'coord');
+model.geom('geom1').feature('ls1').set('coord2', {'Ri' '0'});
+model.geom('geom1').run('ls1');
+model.geom('geom1').create('ls2', 'LineSegment');
+model.geom('geom1').feature('ls2').label('Cylinder');
+model.geom('geom1').feature('ls2').set('specify1', 'coord');
+model.geom('geom1').feature('ls2').set('coord1', {'Ri' '0'});
+model.geom('geom1').feature('ls2').set('specify2', 'coord');
+model.geom('geom1').feature('ls2').set('coord2', {'Ri' '-hcyl'});
+model.geom('geom1').runPre('fin');
+
+model.cpl.create('intop1', 'Integration', 'geom1');
+
+model.geom('geom1').run;
+
+model.cpl('intop1').set('axisym', true);
+model.cpl('intop1').selection.geom('geom1', 1);
+model.cpl('intop1').selection.all;
+model.cpl('intop1').set('frame', 'material');
+
+model.variable.create('var1');
+model.variable('var1').model('comp1');
+model.variable('var1').set('y_vol', 'intop1(shell.llem1.xdintopall(shell.epeGp>0))/intop1(shell.llem1.xdintopall(1))');
+model.variable('var1').descr('y_vol', 'Yielded volume fraction');
+
+model.coordSystem('sys1').set('mastercoordsystcomp', '3');
+model.coordSystem('sys1').set('reversenormal', true);
+
+model.physics('shell').create('llem1', 'LayeredElastic', 1);
+model.physics('shell').feature('llem1').selection.all;
+model.physics('shell').feature('llem1').create('lplsty1', 'LayeredPlasticity', 1);
+model.physics('shell').feature('llem1').feature('lplsty1').set('YieldFunction', 'hill');
+model.physics('shell').feature('llem1').feature('lplsty1').set('IsotropicHardeningModel', 'PerfectlyPlastic');
+model.physics('shell').create('symp1', 'SymmetryPlane', 0);
+model.physics('shell').feature('symp1').selection.set([3]);
+model.physics('shell').create('fl1', 'FaceLoad', 1);
+model.physics('shell').feature('fl1').selection.all;
+model.physics('shell').feature('fl1').set('LoadTypeForce', 'FollowerLoad');
+model.physics('shell').feature('fl1').set('FollowerPressure', 'pressure');
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup.create('Enu', 'Young''s modulus and Poisson''s ratio');
+model.material('mat1').label('Steel AISI 4340');
+model.material('mat1').set('family', 'steel');
+model.material('mat1').propertyGroup('def').set('relpermeability', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('electricconductivity', {'4.032e6[S/m]' '0' '0' '0' '4.032e6[S/m]' '0' '0' '0' '4.032e6[S/m]'});
+model.material('mat1').propertyGroup('def').set('thermalexpansioncoefficient', {'12.3e-6[1/K]' '0' '0' '0' '12.3e-6[1/K]' '0' '0' '0' '12.3e-6[1/K]'});
+model.material('mat1').propertyGroup('def').set('heatcapacity', '475[J/(kg*K)]');
+model.material('mat1').propertyGroup('def').set('relpermittivity', {'1' '0' '0' '0' '1' '0' '0' '0' '1'});
+model.material('mat1').propertyGroup('def').set('density', '7850[kg/m^3]');
+model.material('mat1').propertyGroup('def').set('thermalconductivity', {'44.5[W/(m*K)]' '0' '0' '0' '44.5[W/(m*K)]' '0' '0' '0' '44.5[W/(m*K)]'});
+model.material('mat1').propertyGroup('Enu').set('E', '205[GPa]');
+model.material('mat1').propertyGroup('Enu').set('nu', '0.28');
+model.material('mat1').propertyGroup.create('shell', 'Shell');
+model.material('mat1').propertyGroup('shell').set('lth', {'th'});
+model.material('mat1').propertyGroup.create('ElastoplasticModel', 'Elastoplastic_material_model');
+model.material('mat1').propertyGroup('ElastoplasticModel').set('ys', {'381e6' '381e6' '450e6' '240e6' '240e6' '220e6'});
+model.material('mat1').propertyGroup('shell').set('lne', {'5'});
+model.material('mat1').set('middlePlane', 'top');
+
+model.mesh('mesh1').create('dis1', 'Distribution');
+model.mesh('mesh1').feature('dis1').selection.set([2 4]);
+model.mesh('mesh1').feature('dis1').set('numelem', 10);
+model.mesh('mesh1').create('dis2', 'Distribution');
+model.mesh('mesh1').feature('dis2').selection.set([1 3]);
+model.mesh('mesh1').feature('dis2').set('numelem', 25);
+model.mesh('mesh1').create('edg1', 'Edge');
+model.mesh('mesh1').feature('edg1').selection.all;
+model.mesh('mesh1').run;
+
+model.study('std1').feature('stat').set('useparam', true);
+model.study('std1').feature('stat').setIndex('pname', 'pressure', 0);
+model.study('std1').feature('stat').setIndex('plistarr', '', 0);
+model.study('std1').feature('stat').setIndex('punit', 'N/m^2', 0);
+model.study('std1').feature('stat').setIndex('pname', 'pressure', 0);
+model.study('std1').feature('stat').setIndex('plistarr', '', 0);
+model.study('std1').feature('stat').setIndex('punit', 'N/m^2', 0);
+model.study('std1').feature('stat').setIndex('plistarr', 'range(16e6,2e5,36e6)', 0);
+model.study('std1').feature('stat').setIndex('punit', 'N/m^2', 0);
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'stat');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_ar').set('scaleval', '0.01');
+model.sol('sol1').feature('v1').set('control', 'stat');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').create('p1', 'Parametric');
+model.sol('sol1').feature('s1').feature.remove('pDef');
+model.sol('sol1').feature('s1').feature('p1').set('porder', 'constant');
+model.sol('sol1').feature('s1').feature('p1').set('control', 'stat');
+model.sol('sol1').feature('s1').set('control', 'stat');
+model.sol('sol1').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').feature('fc1').set('termonres', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('reserrfact', 1000);
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'dDef');
+model.sol('sol1').feature('s1').feature('fc1').set('termonres', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('reserrfact', 1000);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('s1').feature('p1').create('st1', 'StopCondition');
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondarr', '', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondterminateon', 'true', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondActive', true, 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopconddesc', 'Stop expression 1', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondarr', '', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondterminateon', 'true', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondActive', true, 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopconddesc', 'Stop expression 1', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondarr', '0.1-comp1.y_vol', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').setIndex('stopcondterminateon', 'negative', 0);
+model.sol('sol1').feature('s1').feature('p1').feature('st1').set('storestopcondsol', 'stepbefore_stepafter');
+model.sol('sol1').feature('s1').feature('p1').feature('st1').set('stopcondwarn', false);
+model.sol('sol1').runAll;
+
+model.result.dataset.create('dset1shelllshl', 'LayeredMaterial');
+model.result.dataset('dset1shelllshl').set('data', 'dset1');
+model.result.create('pg1', 'PlotGroup2D');
+model.result('pg1').set('data', 'dset1shelllshl');
+model.result('pg1').setIndex('looplevel', 73, 0);
+model.result('pg1').set('defaultPlotID', 'stress');
+model.result('pg1').label('Stress (shell)');
+model.result('pg1').set('showlegends', true);
+model.result('pg1').set('frametype', 'spatial');
+model.result('pg1').create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('expr', {'shell.misesGp'});
+model.result('pg1').feature('surf1').set('threshold', 'manual');
+model.result('pg1').feature('surf1').set('thresholdvalue', 0.2);
+model.result('pg1').feature('surf1').set('colortable', 'Rainbow');
+model.result('pg1').feature('surf1').set('colortabletrans', 'none');
+model.result('pg1').feature('surf1').set('colorscalemode', 'linear');
+model.result('pg1').feature('surf1').set('descr', 'von Mises stress');
+model.result('pg1').feature('surf1').set('colortable', 'Prism');
+model.result('pg1').feature('surf1').create('def', 'Deform');
+model.result('pg1').feature('surf1').feature('def').set('expr', {'shell.u' 'shell.w'});
+model.result('pg1').feature('surf1').set('inheritplot', 'none');
+model.result('pg1').set('data', 'dset1shelllshl');
+model.result.dataset.create('dset1shelllrev', 'Revolve2D');
+model.result.dataset('dset1shelllrev').set('data', 'dset1shelllshl');
+model.result.dataset('dset1shelllrev').set('revangle', 225);
+model.result.dataset('dset1shelllrev').set('startangle', -90);
+model.result.dataset('dset1shelllrev').set('hasspacevars', true);
+model.result.create('pg2', 'PlotGroup3D');
+model.result('pg2').set('data', 'dset1shelllrev');
+model.result('pg2').setIndex('looplevel', 73, 0);
+model.result('pg2').set('defaultPlotID', 'stress3D');
+model.result('pg2').label('Stress, 3D (shell)');
+model.result('pg2').set('frametype', 'spatial');
+model.result.dataset('dset1shelllrev').label('Revolution 2D (Layered Material)');
+model.result('pg2').create('surf1', 'Surface');
+model.result('pg2').feature('surf1').set('expr', {'shell.misesGp'});
+model.result('pg2').feature('surf1').set('threshold', 'manual');
+model.result('pg2').feature('surf1').set('thresholdvalue', 0.2);
+model.result('pg2').feature('surf1').set('colortable', 'Rainbow');
+model.result('pg2').feature('surf1').set('colortabletrans', 'none');
+model.result('pg2').feature('surf1').set('colorscalemode', 'linear');
+model.result('pg2').feature('surf1').set('colortable', 'Prism');
+model.result('pg2').feature('surf1').set('inheritplot', 'none');
+model.result('pg2').feature('surf1').create('def', 'Deform');
+model.result('pg2').feature('surf1').feature('def').set('revcoordsys', 'cylindrical');
+model.result('pg2').feature('surf1').feature('def').set('expr', {'shell.u' 'shell.v' 'shell.w'});
+model.result('pg2').set('data', 'dset1shelllrev');
+model.result('pg1').run;
+model.result('pg1').run;
+model.result('pg1').feature('surf1').set('unit', 'MPa');
+model.result('pg1').run;
+model.result('pg2').run;
+model.result('pg2').feature('surf1').set('unit', 'MPa');
+model.result('pg2').run;
+model.result.create('pg3', 'PlotGroup2D');
+model.result('pg3').set('data', 'dset1shelllshl');
+model.result('pg3').setIndex('looplevel', 73, 0);
+model.result('pg3').label('Equivalent Plastic Strain (shell)');
+model.result('pg3').set('defaultPlotID', 'equivalentPlasticStrain');
+model.result('pg3').create('surf1', 'Surface');
+model.result('pg3').feature('surf1').set('expr', {'shell.epeGp'});
+model.result('pg3').feature('surf1').set('inheritplot', 'none');
+model.result('pg3').feature('surf1').set('resolution', 'normal');
+model.result('pg3').feature('surf1').set('colortabletype', 'discrete');
+model.result('pg3').feature('surf1').set('bandcount', 11);
+model.result('pg3').feature('surf1').set('colortable', 'AuroraAustralisDark');
+model.result('pg3').feature('surf1').set('descractive', true);
+model.result('pg3').feature('surf1').set('descr', 'Equivalent plastic strain');
+model.result('pg3').label('Equivalent Plastic Strain (shell)');
+model.result('pg3').run;
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').set('data', 'dset1');
+model.result('pg4').set('defaultPlotID', 'stressThroughThickness');
+model.result('pg4').set('showlegends', true);
+model.result('pg4').create('thr1', 'ThroughThickness');
+model.result('pg4').feature('thr1').set('expr', {'shell.misesGp'});
+model.result('pg4').feature('thr1').set('legend', true);
+model.result('pg4').feature('thr1').set('posentry', 'selection');
+model.result('pg4').feature('thr1').selection.geom('geom1', 0);
+model.result('pg4').feature('thr1').selection.set([1]);
+model.result('pg4').label('Stress, Through Thickness (shell)');
+model.result('pg4').setIndex('looplevelinput', 'last', 0);
+model.result('pg4').label('Stress, Through Thickness (shell)');
+model.result('pg4').run;
+model.result.create('pg5', 'PlotGroup2D');
+model.result('pg5').set('data', 'dset1');
+model.result('pg5').setIndex('looplevel', 73, 0);
+model.result('pg5').set('defaultPlotID', 'thicknessOrientation');
+model.result('pg5').label('Thickness and Orientation (shell)');
+model.result('pg5').set('titletype', 'label');
+model.result('pg5').set('showlegendsunit', true);
+model.result('pg5').create('line1', 'Line');
+model.result('pg5').feature('line1').set('expr', {'shell.d'});
+model.result('pg5').feature('line1').set('threshold', 'manual');
+model.result('pg5').feature('line1').set('thresholdvalue', 0.2);
+model.result('pg5').feature('line1').set('colortable', 'HeatCameraLight');
+model.result('pg5').feature('line1').set('colortabletrans', 'reverse');
+model.result('pg5').feature('line1').set('colorscalemode', 'linear');
+model.result('pg5').feature('line1').set('linetype', 'tube');
+model.result('pg5').feature('line1').set('radiusexpr', 'shell.d/2');
+model.result('pg5').feature('line1').set('tuberadiusscale', 1);
+model.result('pg5').feature('line1').label('Thickness');
+model.result('pg5').create('syss', 'CoordSysLine');
+model.result('pg5').feature('syss').set('sys', 'shellsys');
+model.result('pg5').feature('syss').label('Shell Local System');
+model.result('pg5').label('Thickness and Orientation (shell)');
+model.result('pg5').run;
+model.result.create('pg6', 'PlotGroup3D');
+model.result('pg6').set('data', 'dset1shelllrev');
+model.result('pg6').setIndex('looplevel', 73, 0);
+model.result('pg6').set('defaultPlotID', 'faceLoads');
+model.result('pg6').label('Face Loads (shell)');
+model.result('pg6').set('showlegends', true);
+model.result('pg6').set('titletype', 'label');
+model.result('pg6').set('frametype', 'spatial');
+model.result('pg6').set('showlegendsunit', true);
+model.result('pg6').create('surf1', 'Surface');
+model.result('pg6').feature('surf1').set('expr', {'1'});
+model.result('pg6').feature('surf1').label('Gray Surfaces');
+model.result('pg6').feature('surf1').set('coloring', 'uniform');
+model.result('pg6').feature('surf1').set('color', 'gray');
+model.result('pg6').feature('surf1').set('inheritcolor', false);
+model.result('pg6').feature('surf1').set('inheritrange', false);
+model.result('pg6').feature('surf1').set('inherittransparency', false);
+model.result('pg6').feature('surf1').create('def', 'Deform');
+model.result('pg6').feature('surf1').feature('def').set('revcoordsys', 'cylindrical');
+model.result('pg6').feature('surf1').feature('def').set('expr', {'shell.u' 'shell.v' 'shell.w'});
+model.result('pg6').feature('surf1').feature('def').set('descr', 'Displacement field');
+model.result('pg6').feature('surf1').feature('def').set('descractive', true);
+model.result('pg6').feature('surf1').feature('def').set('scaleactive', true);
+model.result('pg6').feature('surf1').feature('def').set('scale', '0');
+model.result('pg6').feature('surf1').create('tran1', 'Transparency');
+model.result('pg6').feature('surf1').feature('tran1').set('transparency', 0.8);
+model.result('pg6').create('arws1', 'ArrowSurface');
+model.result('pg6').feature('arws1').set('revcoordsys', 'cylindrical');
+model.result('pg6').feature('arws1').set('expr', {'shell.fl1.F_Ar' 'shell.fl1.F_Aphi' 'shell.fl1.F_Az'});
+model.result('pg6').feature('arws1').set('placement', 'elements');
+model.result('pg6').feature('arws1').set('arrowbase', 'head');
+model.result('pg6').feature('arws1').label('Face Load 1');
+model.result('pg6').feature('arws1').set('inheritplot', 'none');
+model.result('pg6').feature('arws1').create('col', 'Color');
+model.result('pg6').feature('arws1').feature('col').set('colortable', 'Rainbow');
+model.result('pg6').feature('arws1').feature('col').set('colortabletrans', 'none');
+model.result('pg6').feature('arws1').feature('col').set('colorscalemode', 'linear');
+model.result('pg6').feature('arws1').feature('col').set('colordata', 'arrowlength');
+model.result('pg6').feature('arws1').feature('col').set('coloring', 'gradient');
+model.result('pg6').feature('arws1').feature('col').set('topcolor', 'red');
+model.result('pg6').feature('arws1').feature('col').set('bottomcolor', 'custom');
+model.result('pg6').feature('arws1').feature('col').set('custombottomcolor', [0.5882353186607361 0.5137255191802979 0.5176470875740051]);
+model.result('pg6').feature('arws1').set('color', 'red');
+model.result('pg6').feature('arws1').create('def', 'Deform');
+model.result('pg6').feature('arws1').feature('def').set('revcoordsys', 'cylindrical');
+model.result('pg6').feature('arws1').feature('def').set('expr', {'shell.u' 'shell.v' 'shell.w'});
+model.result('pg6').feature('arws1').feature('def').set('descr', 'Displacement field');
+model.result('pg6').feature('arws1').feature('def').set('descractive', true);
+model.result('pg6').feature('arws1').feature('def').set('scaleactive', true);
+model.result('pg6').feature('arws1').feature('def').set('scale', '0');
+model.result('pg6').feature.move('surf1', 1);
+model.result('pg6').label('Face Loads (shell)');
+
+model.nodeGroup.create('dset1shelllgrp', 'Results');
+model.nodeGroup('dset1shelllgrp').label('Applied Loads (shell)');
+model.nodeGroup('dset1shelllgrp').set('type', 'plotgroup');
+model.nodeGroup('dset1shelllgrp').label('Applied Loads (shell)');
+model.nodeGroup('dset1shelllgrp').placeAfter('plotgroup', 'pg6');
+model.nodeGroup('dset1shelllgrp').add('plotgroup', 'pg6');
+
+model.result('pg3').run;
+model.result('pg3').run;
+model.result('pg4').run;
+model.result('pg4').run;
+model.result('pg4').feature('thr1').selection.set([2]);
+model.result('pg4').feature('thr1').set('unit', 'MPa');
+model.result('pg4').run;
+model.result('pg5').run;
+model.result('pg5').run;
+model.result('pg5').feature.remove('line1');
+model.result('pg5').run;
+model.result('pg5').run;
+model.result('pg5').create('surf1', 'Surface');
+model.result('pg5').feature('surf1').set('data', 'dset1shelllshl');
+model.result('pg5').feature('surf1').set('solutionparams', 'parent');
+model.result('pg5').feature('surf1').set('expr', '1');
+model.result('pg5').feature('surf1').set('coloring', 'uniform');
+model.result('pg5').feature('surf1').set('color', 'gray');
+model.result('pg5').run;
+model.result('pg5').feature('syss').set('arrowcount', 15);
+model.result('pg6').run;
+model.result.create('pg7', 'PlotGroup1D');
+model.result('pg7').run;
+model.result('pg7').label('Yielded Volume');
+model.result('pg7').set('xlabelactive', true);
+model.result('pg7').set('xlabel', 'Pressure (N/m<sup>2</sup>)');
+model.result('pg7').set('showlegends', false);
+model.result('pg7').create('glob1', 'Global');
+model.result('pg7').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg7').feature('glob1').set('linewidth', 'preference');
+model.result('pg7').feature('glob1').setIndex('expr', 'y_vol', 0);
+model.result('pg7').feature('glob1').setIndex('unit', 1, 0);
+model.result('pg7').feature('glob1').setIndex('descr', 'Yielded volume fraction', 0);
+model.result('pg7').run;
+model.result('pg2').run;
+
+model.title(['Pressurized Orthotropic Container ' native2unicode(hex2dec({'20' '14'}), 'unicode') ' Shell Version']);
+
+model.description(['A thin-walled container made of rolled steel is subjected to an internal overpressure. As an effect of the manufacturing method, the out-of-plane direction has a higher yield stress than the other two directions. Hill orthotropic plasticity is used to model the difference in yield strength. The container is made of a cylinder capped by two torispherical heads (also called Kl' native2unicode(hex2dec({'00' 'f6'}), 'unicode') 'pper head).' newline  newline 'In this example, plasticity is modeled in the Shell interface. Axial symmetry is used.']);
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+
+model.label('orthotropic_container_shell.mph');
+
+model.modelNode.label('Components');
+
+out = model;

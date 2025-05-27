@@ -1,0 +1,346 @@
+function out = model
+%
+% microconnector_bump_2d.m
+%
+% Model exported on May 26 2025, 21:28 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Electrodeposition_Module/Verification_Examples');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('tds', 'DilutedSpecies', 'geom1', {'c'});
+model.physics.create('spf', 'LaminarFlow', 'geom1');
+model.physics('spf').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('stat', 'Stationary');
+model.study('std1').feature('stat').setSolveFor('/physics/tds', true);
+model.study('std1').feature('stat').setSolveFor('/physics/spf', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('L1', '100[um]', 'Length of electrode');
+model.param.set('L2', '50[um]', 'Length of outlet region');
+model.param.set('L3', '30[um]', 'Length of inlet region');
+model.param.set('Ltot', 'L1+L2+L3', 'Total cell length');
+model.param.set('h1', '10[um]', 'Photoresist film thickness');
+model.param.set('h2', '40[um]', 'Flow inlet/outlet thickness');
+model.param.set('rho', '1.1e3[kg/m^3]', 'Liquid density');
+model.param.set('nu', '1.394e-6[m^2/s]', 'Kinematic viscosity');
+model.param.set('mu', 'nu*rho', 'Dynamic viscosity');
+model.param.set('h_Pe', '10[um]', 'Distance from surface for the velocity in Peclet number');
+model.param.set('Pe', '41.6', 'Peclet number');
+model.param.set('D', '4.5e-10[m^2/s]', 'Diffusion coefficient');
+model.param.set('c_bulk', '0.6[mol/dm^3]', 'Bulk concentration');
+model.param.set('u_bulk', 'h2/h_Pe*Pe*D/(h1)', 'Bulk velocity');
+model.param.set('r_edge', 'h1/4', 'Edge radius (not used in 2D)');
+
+model.geom('geom1').create('r1', 'Rectangle');
+model.geom('geom1').feature('r1').set('size', {'L1+L2+L3' 'h2'});
+model.geom('geom1').feature('r1').set('pos', {'-L3' 'h1'});
+model.geom('geom1').run('r1');
+model.geom('geom1').create('r2', 'Rectangle');
+model.geom('geom1').feature('r2').set('size', {'L1' 'h1'});
+model.geom('geom1').run('r2');
+model.geom('geom1').create('uni1', 'Union');
+model.geom('geom1').feature('uni1').selection('input').set({'r1' 'r2'});
+model.geom('geom1').feature('uni1').set('intbnd', false);
+model.geom('geom1').run('fin');
+
+model.variable.create('var1');
+model.variable('var1').model('comp1');
+
+% To import content from file, use:
+% model.variable('var1').loadFile('FILENAME');
+model.variable('var1').set('u_profile', 'u_bulk*(y-h1)/h2', 'Inlet/outlet velocity profile');
+model.variable('var1').set('i_loc', '-tds.ntflux_c*F_const*2', 'Local current density');
+model.variable('var1').set('i_loc_norm', '-i_loc/maxop1(-i_loc)', 'Normalized local current density');
+
+model.cpl.create('maxop1', 'Maximum', 'geom1');
+model.cpl('maxop1').selection.geom('geom1', 1);
+model.cpl('maxop1').selection.set([5]);
+
+model.physics('spf').feature('fp1').set('rho_mat', 'userdef');
+model.physics('spf').feature('fp1').set('rho', 'rho');
+model.physics('spf').feature('fp1').set('mu_mat', 'userdef');
+model.physics('spf').feature('fp1').set('mu', 'mu');
+model.physics('spf').create('inl1', 'InletBoundary', 1);
+model.physics('spf').feature('inl1').selection.set([1]);
+model.physics('spf').feature('inl1').set('ComponentWise', 'VelocityFieldComponentWise');
+model.physics('spf').feature('inl1').set('u0', {'u_profile' '0' '0'});
+model.physics('spf').create('wallbc2', 'WallBC', 1);
+model.physics('spf').feature('wallbc2').selection.set([3]);
+model.physics('spf').feature('wallbc2').set('TranslationalVelocityOption', 'Manual');
+model.physics('spf').feature('wallbc2').set('utr', {'u_bulk' '0' '0'});
+model.physics('spf').create('out1', 'OutletBoundary', 1);
+model.physics('spf').feature('out1').selection.set([8]);
+model.physics('spf').feature('out1').set('NormalFlow', true);
+model.physics('spf').feature('init1').set('u_init', {'u_bulk' '0' '0'});
+model.physics('tds').feature('cdm1').set('u_src', 'root.comp1.u');
+model.physics('tds').feature('cdm1').set('D_c', {'D' '0' '0' '0' 'D' '0' '0' '0' 'D'});
+model.physics('tds').create('conc1', 'Concentration', 1);
+model.physics('tds').feature('conc1').label('Concentration - Bulk');
+model.physics('tds').feature('conc1').selection.set([1 3]);
+model.physics('tds').feature('conc1').setIndex('species', true, 0);
+model.physics('tds').feature('conc1').setIndex('c0', 'c_bulk', 0);
+model.physics('tds').create('conc2', 'Concentration', 1);
+model.physics('tds').feature('conc2').label('Concentration - Electrode Surface');
+model.physics('tds').feature('conc2').selection.set([5]);
+model.physics('tds').feature('conc2').setIndex('species', true, 0);
+model.physics('tds').create('out1', 'Outflow', 1);
+model.physics('tds').feature('out1').selection.set([8]);
+model.physics('tds').feature('init1').setIndex('initc', 'c_bulk', 0);
+
+model.study('std1').create('param', 'Parametric');
+model.study('std1').feature('param').setIndex('pname', 'L1', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', 'm', 0);
+model.study('std1').feature('param').setIndex('pname', 'L1', 0);
+model.study('std1').feature('param').setIndex('plistarr', '', 0);
+model.study('std1').feature('param').setIndex('punit', 'm', 0);
+model.study('std1').feature('param').setIndex('pname', 'Pe', 0);
+model.study('std1').feature('param').setIndex('plistarr', '1.31 41.6', 0);
+
+model.sol.create('sol1');
+
+model.mesh('mesh1').stat.selection.geom(2);
+model.mesh('mesh1').stat.selection.set([1]);
+model.mesh('mesh1').stat.selection.geom(2);
+model.mesh('mesh1').stat.selection.set([1]);
+
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'stat');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').set('control', 'stat');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').set('stol', 0.001);
+model.sol('sol1').feature('s1').create('p1', 'Parametric');
+model.sol('sol1').feature('s1').feature('p1').set('pname', {'Pe'});
+model.sol('sol1').feature('s1').feature('p1').set('plistarr', {'1.31 41.6'});
+model.sol('sol1').feature('s1').feature('p1').set('punit', {''});
+model.sol('sol1').feature('s1').feature('p1').set('sweeptype', 'sparse');
+model.sol('sol1').feature('s1').feature('p1').set('preusesol', 'no');
+model.sol('sol1').feature('s1').feature('p1').set('pcontinuationmode', 'no');
+model.sol('sol1').feature('s1').feature('p1').set('plot', 'off');
+model.sol('sol1').feature('s1').feature('p1').set('plotgroup', 'Default');
+model.sol('sol1').feature('s1').feature('p1').set('probesel', 'all');
+model.sol('sol1').feature('s1').feature('p1').set('probes', {});
+model.sol('sol1').feature('s1').feature('p1').set('control', 'param');
+model.sol('sol1').feature('s1').set('control', 'stat');
+model.sol('sol1').feature('s1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('s1').create('seDef', 'Segregated');
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('initstep', 0.01);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-6);
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 100);
+model.sol('sol1').feature('s1').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').feature('d1').label('Direct, fluid flow variables (spf) (Merged)');
+model.sol('sol1').feature('s1').create('i1', 'Iterative');
+model.sol('sol1').feature('s1').feature('i1').set('linsolver', 'gmres');
+model.sol('sol1').feature('s1').feature('i1').set('prefuntype', 'left');
+model.sol('sol1').feature('s1').feature('i1').set('itrestart', 50);
+model.sol('sol1').feature('s1').feature('i1').set('rhob', 400);
+model.sol('sol1').feature('s1').feature('i1').set('maxlinit', 1000);
+model.sol('sol1').feature('s1').feature('i1').set('nlinnormuse', 'on');
+model.sol('sol1').feature('s1').feature('i1').label('AMG, concentrations (tds)');
+model.sol('sol1').feature('s1').feature('i1').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('mgcycle', 'v');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('maxcoarsedof', 50000);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('strconn', 0.01);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('nullspace', 'constant');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('usesmooth', false);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('loweramg', true);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').set('compactaggregation', false);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').create('sl1', 'SORLine');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('iter', 1);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('linerelax', 0.7);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('linealgorithm', 'mesh');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('linemethod', 'coupled');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('seconditer', 1);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('pr').feature('sl1').set('relax', 0.5);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').create('sl1', 'SORLine');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('iter', 1);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('linerelax', 0.7);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('linealgorithm', 'mesh');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('linemethod', 'coupled');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('seconditer', 1);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('po').feature('sl1').set('relax', 0.5);
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('i1').feature('mg1').feature('cs').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').create('i2', 'Iterative');
+model.sol('sol1').feature('s1').feature('i2').set('linsolver', 'gmres');
+model.sol('sol1').feature('s1').feature('i2').set('prefuntype', 'left');
+model.sol('sol1').feature('s1').feature('i2').set('itrestart', 50);
+model.sol('sol1').feature('s1').feature('i2').set('rhob', 20);
+model.sol('sol1').feature('s1').feature('i2').set('maxlinit', 1000);
+model.sol('sol1').feature('s1').feature('i2').set('nlinnormuse', 'on');
+model.sol('sol1').feature('s1').feature('i2').label('AMG, fluid flow variables (spf)');
+model.sol('sol1').feature('s1').feature('i2').create('mg1', 'Multigrid');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('prefun', 'saamg');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('mgcycle', 'v');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('maxcoarsedof', 80000);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('strconn', 0.02);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('nullspace', 'constant');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('usesmooth', false);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('saamgcompwise', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('loweramg', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').set('compactaggregation', false);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').create('sc1', 'SCGS');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('iter', 0);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsrelax', 0.7);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsvertexrelax', 0.7);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('relax', 0.5);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgssolv', 'stored');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('approxscgs', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('pr').feature('sc1').set('scgsdirectmaxsize', 1000);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').create('sc1', 'SCGS');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('linesweeptype', 'ssor');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('iter', 1);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsrelax', 0.7);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsmethod', 'lines');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsvertexrelax', 0.7);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('relax', 0.5);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgssolv', 'stored');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('approxscgs', true);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('po').feature('sc1').set('scgsdirectmaxsize', 1000);
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('i2').feature('mg1').feature('cs').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('s1').feature('fc1').set('dtech', 'auto');
+model.sol('sol1').feature('s1').feature('fc1').set('initstep', 0.01);
+model.sol('sol1').feature('s1').feature('fc1').set('minstep', 1.0E-6);
+model.sol('sol1').feature('s1').feature('fc1').set('maxiter', 100);
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').feature('s1').feature.remove('seDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup2D');
+model.result('pg1').set('data', 'dset1');
+model.result('pg1').setIndex('looplevel', 2, 0);
+model.result('pg1').label('Concentration (tds)');
+model.result('pg1').set('titletype', 'custom');
+model.result('pg1').set('prefixintitle', '');
+model.result('pg1').set('expressionintitle', false);
+model.result('pg1').set('typeintitle', true);
+model.result('pg1').create('surf1', 'Surface');
+model.result('pg1').feature('surf1').set('expr', {'c'});
+model.result('pg1').create('str1', 'Streamline');
+model.result('pg1').feature('str1').set('expr', {'tds.tflux_cx' 'tds.tflux_cy'});
+model.result('pg1').feature('str1').set('posmethod', 'uniform');
+model.result('pg1').feature('str1').set('recover', 'pprint');
+model.result('pg1').feature('str1').set('pointtype', 'arrow');
+model.result('pg1').feature('str1').set('arrowlength', 'logarithmic');
+model.result('pg1').feature('str1').set('color', 'gray');
+model.result.dataset('dset1').set('geom', 'geom1');
+model.result.create('pg2', 'PlotGroup2D');
+model.result('pg2').label('Velocity (spf)');
+model.result('pg2').set('frametype', 'spatial');
+model.result('pg2').set('data', 'dset1');
+model.result('pg2').setIndex('looplevel', 2, 0);
+model.result('pg2').set('defaultPlotID', 'ResultDefaults_SinglePhaseFlow/icom1/pdef1/pcond1/pg1');
+model.result('pg2').feature.create('surf1', 'Surface');
+model.result('pg2').feature('surf1').label('Surface');
+model.result('pg2').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg2').feature('surf1').set('expr', 'spf.U');
+model.result('pg2').feature('surf1').set('smooth', 'internal');
+model.result('pg2').feature('surf1').set('showsolutionparams', 'on');
+model.result('pg2').feature('surf1').set('data', 'parent');
+model.result.create('pg3', 'PlotGroup2D');
+model.result('pg3').label('Pressure (spf)');
+model.result('pg3').set('frametype', 'spatial');
+model.result('pg3').set('data', 'dset1');
+model.result('pg3').setIndex('looplevel', 2, 0);
+model.result('pg3').set('defaultPlotID', 'ResultDefaults_SinglePhaseFlow/icom1/pdef1/pcond1/pg2');
+model.result('pg3').feature.create('con1', 'Contour');
+model.result('pg3').feature('con1').label('Contour');
+model.result('pg3').feature('con1').set('showsolutionparams', 'on');
+model.result('pg3').feature('con1').set('expr', 'p');
+model.result('pg3').feature('con1').set('number', 40);
+model.result('pg3').feature('con1').set('levelrounding', false);
+model.result('pg3').feature('con1').set('smooth', 'internal');
+model.result('pg3').feature('con1').set('showsolutionparams', 'on');
+model.result('pg3').feature('con1').set('data', 'parent');
+model.result('pg1').run;
+model.result('pg1').setIndex('looplevel', 1, 0);
+model.result('pg1').run;
+model.result.create('pg4', 'PlotGroup2D');
+model.result('pg4').run;
+model.result('pg4').label('Velocity, Streamline');
+model.result('pg4').create('str1', 'Streamline');
+model.result('pg4').feature('str1').set('expr', {'u' 'v'});
+model.result('pg4').feature('str1').set('descr', 'Velocity field');
+model.result('pg4').feature('str1').set('posmethod', 'uniform');
+model.result('pg4').feature('str1').set('udist', 0.01);
+model.result('pg4').feature('str1').create('col1', 'Color');
+model.result('pg4').run;
+model.result('pg4').feature('str1').feature('col1').set('expr', 'spf.U');
+model.result('pg4').feature('str1').feature('col1').set('descr', 'Velocity magnitude');
+model.result('pg4').run;
+model.result('pg4').run;
+model.result('pg4').setIndex('looplevel', 1, 0);
+model.result('pg4').run;
+model.result.create('pg5', 'PlotGroup1D');
+model.result('pg5').run;
+model.result('pg5').label('Local Current Density');
+model.result('pg5').set('titletype', 'manual');
+model.result('pg5').set('title', 'Local current density for different Peclet numbers');
+model.result('pg5').create('lngr1', 'LineGraph');
+model.result('pg5').feature('lngr1').set('markerpos', 'datapoints');
+model.result('pg5').feature('lngr1').set('linewidth', 'preference');
+model.result('pg5').feature('lngr1').selection.set([5]);
+model.result('pg5').feature('lngr1').set('expr', 'i_loc');
+model.result('pg5').feature('lngr1').set('descr', 'Local current density');
+model.result('pg5').feature('lngr1').set('xdata', 'expr');
+model.result('pg5').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg5').feature('lngr1').set('legend', true);
+model.result('pg5').run;
+model.result.create('pg6', 'PlotGroup1D');
+model.result('pg6').run;
+model.result('pg6').label('Normalized Local Current Density');
+model.result('pg6').set('titletype', 'manual');
+model.result('pg6').set('title', 'Normalized local current density for different Peclet numbers');
+model.result('pg6').create('lngr1', 'LineGraph');
+model.result('pg6').feature('lngr1').set('markerpos', 'datapoints');
+model.result('pg6').feature('lngr1').set('linewidth', 'preference');
+model.result('pg6').feature('lngr1').selection.set([5]);
+model.result('pg6').feature('lngr1').set('expr', 'i_loc_norm');
+model.result('pg6').feature('lngr1').set('descr', 'Normalized local current density');
+model.result('pg6').feature('lngr1').set('xdata', 'expr');
+model.result('pg6').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg6').feature('lngr1').set('legend', true);
+model.result('pg6').run;
+model.result('pg1').run;
+
+model.title('Electrodeposition of a Microconnector Bump in 2D');
+
+model.description('This example simulates the deposition of a microconnector bump. The deposition process is mass-transport limited and the impact of varied fluid velocities on the current density distribution on the electrode is investigated.');
+
+model.label('microconnector_bump_2d.mph');
+
+model.modelNode.label('Components');
+
+out = model;

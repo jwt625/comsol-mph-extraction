@@ -1,0 +1,352 @@
+function out = model
+%
+% isoelectric_focusing_1d.m
+%
+% Model exported on May 26 2025, 21:28 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Electrochemistry_Module/Electrochemical_Engineering');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 1);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('el', 'ElectrophoreticTransport', 'geom1');
+model.physics('el').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('cdi', 'CurrentDistributionInitialization');
+model.study('std1').feature('cdi').set('solnum', 'auto');
+model.study('std1').feature('cdi').set('notsolnum', 'auto');
+model.study('std1').feature('cdi').set('outputmap', {});
+model.study('std1').feature('cdi').set('ngenAUX', '1');
+model.study('std1').feature('cdi').set('goalngenAUX', '1');
+model.study('std1').feature('cdi').set('ngenAUX', '1');
+model.study('std1').feature('cdi').set('goalngenAUX', '1');
+model.study('std1').feature('cdi').setSolveFor('/physics/el', true);
+model.study('std1').create('time', 'Transient');
+model.study('std1').feature('time').set('initialtime', '0');
+model.study('std1').feature('time').set('solnum', 'auto');
+model.study('std1').feature('time').set('notsolnum', 'auto');
+model.study('std1').feature('time').set('outputmap', {});
+model.study('std1').feature('time').setSolveFor('/physics/el', true);
+
+% To import content from file, use:
+% model.param.loadFile('FILENAME');
+model.param.set('mob', '3e-8[m^2/V/s]/F_const');
+model.param.set('pI_start', '3.5');
+model.param.set('L', '5[cm]');
+model.param.set('dV', '-300[V/cm]');
+model.param.set('c0', '5.0[mM]');
+model.param.set('T', '25[degC]');
+
+model.geom('geom1').create('i1', 'Interval');
+model.geom('geom1').feature('i1').setIndex('coord', 'L', 1);
+model.geom('geom1').runPre('fin');
+model.geom('geom1').run;
+
+model.physics('el').create('eip1', 'ElectrolytePotential', 0);
+model.physics('el').feature('eip1').selection.set([1]);
+model.physics('el').create('eip2', 'ElectrolytePotential', 0);
+model.physics('el').feature('eip2').selection.set([2]);
+model.physics('el').feature('eip2').set('philbnd', 'dV*L');
+model.physics('el').create('amph1', 'Ampholyte', 1);
+model.physics('el').feature('amph1').setIndex('pKa', 'pI_start-1', 0, 0);
+model.physics('el').feature('amph1').setIndex('pKa', 'pI_start+1', 1, 0);
+model.physics('el').feature('amph1').set('um', 'mob');
+model.physics('el').feature('amph1').feature('initc1').set('initc', 'c0');
+model.physics('el').feature.duplicate('amph2', 'amph1');
+model.physics('el').feature('amph2').setIndex('pKa', 'pI_start-1+1', 0, 0);
+model.physics('el').feature('amph2').setIndex('pKa', 'pI_start+1+1', 1, 0);
+model.physics('el').feature.duplicate('amph3', 'amph2');
+model.physics('el').feature('amph3').setIndex('pKa', 'pI_start-1+2', 0, 0);
+model.physics('el').feature('amph3').setIndex('pKa', 'pI_start+1+2', 1, 0);
+model.physics('el').feature.duplicate('amph4', 'amph3');
+model.physics('el').feature('amph4').setIndex('pKa', 'pI_start-1+3', 0, 0);
+model.physics('el').feature('amph4').setIndex('pKa', 'pI_start+1+3', 1, 0);
+model.physics('el').feature.duplicate('amph5', 'amph4');
+model.physics('el').feature('amph5').setIndex('pKa', 'pI_start-1+4', 0, 0);
+model.physics('el').feature('amph5').setIndex('pKa', 'pI_start+1+4', 1, 0);
+model.physics('el').feature.duplicate('amph6', 'amph5');
+model.physics('el').feature('amph6').setIndex('pKa', 'pI_start-1+5', 0, 0);
+model.physics('el').feature('amph6').setIndex('pKa', 'pI_start+1+5', 1, 0);
+model.physics('el').feature.duplicate('amph7', 'amph6');
+model.physics('el').feature('amph7').setIndex('pKa', 'pI_start-1+6', 0, 0);
+model.physics('el').feature('amph7').setIndex('pKa', 'pI_start+1+6', 1, 0);
+
+model.common('cminpt').set('modified', {'temperature' 'T'});
+
+model.mesh('mesh1').automatic(false);
+model.mesh('mesh1').feature('size').set('custom', true);
+model.mesh('mesh1').feature('size').set('hmax', '4e-6');
+model.mesh('mesh1').feature('edg1').create('size1', 'Size');
+model.mesh('mesh1').feature('edg1').feature('size1').selection.geom('geom1', 0);
+model.mesh('mesh1').feature('edg1').feature('size1').selection.all;
+model.mesh('mesh1').feature('edg1').feature('size1').set('custom', true);
+model.mesh('mesh1').feature('edg1').feature('size1').set('hmaxactive', true);
+model.mesh('mesh1').feature('edg1').feature('size1').set('hmax', '1e-6');
+model.mesh('mesh1').run;
+
+model.probe.create('pdom1', 'DomainPoint');
+model.probe('pdom1').model('comp1');
+model.probe('pdom1').set('bndsnap1', true);
+model.probe('pdom1').feature('ppb1').set('expr', '-el.nIl');
+model.probe('pdom1').feature('ppb1').set('descractive', true);
+model.probe('pdom1').feature('ppb1').set('descr', 'Current density probe');
+
+model.study('std1').feature('time').set('tunit', 'min');
+model.study('std1').feature('time').set('tlist', '0 0.4 4');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'cdi');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').feature('comp1_el_amph5_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph4_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph3_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph2_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph7_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph6_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph1_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v1').feature('comp1_el_amph5_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph4_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph3_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph2_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph7_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph6_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').feature('comp1_el_amph1_c').set('scaleval', '1');
+model.sol('sol1').feature('v1').set('control', 'cdi');
+model.sol('sol1').create('s1', 'Stationary');
+model.sol('sol1').feature('s1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('s1').create('d1', 'Direct');
+model.sol('sol1').feature('s1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('s1').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('s1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('s1').feature.remove('fcDef');
+model.sol('sol1').create('su1', 'StoreSolution');
+model.sol('sol1').create('st2', 'StudyStep');
+model.sol('sol1').feature('st2').set('study', 'std1');
+model.sol('sol1').feature('st2').set('studystep', 'time');
+model.sol('sol1').create('v2', 'Variables');
+model.sol('sol1').feature('v2').feature('comp1_el_amph5_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph4_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph3_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph2_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph7_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph6_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph1_c').set('scalemethod', 'init');
+model.sol('sol1').feature('v2').feature('comp1_el_amph5_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph4_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph3_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph2_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph7_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph6_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').feature('comp1_el_amph1_c').set('scaleval', '1');
+model.sol('sol1').feature('v2').set('initmethod', 'sol');
+model.sol('sol1').feature('v2').set('initsol', 'sol1');
+model.sol('sol1').feature('v2').set('initsoluse', 'sol2');
+model.sol('sol1').feature('v2').set('notsolmethod', 'sol');
+model.sol('sol1').feature('v2').set('notsol', 'sol1');
+model.sol('sol1').feature('v2').set('notsoluse', 'sol2');
+model.sol('sol1').feature('v2').set('control', 'time');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('tlist', '0 0.4 4');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'Default');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {'pdom1'});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('rtol', 0.001);
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').set('eventout', true);
+model.sol('sol1').feature('t1').set('reacf', true);
+model.sol('sol1').feature('t1').set('storeudot', true);
+model.sol('sol1').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t1').set('maxorder', 2);
+model.sol('sol1').feature('t1').set('control', 'time');
+model.sol('sol1').feature('t1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t1').create('d1', 'Direct');
+model.sol('sol1').feature('t1').feature('d1').set('linsolver', 'pardiso');
+model.sol('sol1').feature('t1').feature('d1').set('pivotperturb', 1.0E-13);
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'd1');
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'once');
+model.sol('sol1').feature('t1').feature('fc1').set('stabacc', 'aacc');
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdim', 5);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccmix', 0.9);
+model.sol('sol1').feature('t1').feature('fc1').set('aaccdelay', 1);
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('t1').set('initialstepbdfactive', true);
+model.sol('sol1').feature('t1').set('initialstepbdf', '1e-5');
+
+model.probe('pdom1').genResult('none');
+
+model.sol('sol1').runAll;
+
+model.result.create('pg2', 'PlotGroup1D');
+model.result('pg2').set('data', 'dset1');
+model.result('pg2').create('lngr1', 'LineGraph');
+model.result('pg2').feature('lngr1').set('xdata', 'expr');
+model.result('pg2').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg2').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg2').feature('lngr1').selection.set([1]);
+model.result('pg2').feature('lngr1').set('expr', {'el.pH'});
+model.result('pg2').feature('lngr1').set('legend', true);
+model.result('pg2').label('pH (el)');
+model.result.create('pg3', 'PlotGroup1D');
+model.result('pg3').set('data', 'dset1');
+model.result('pg3').create('lngr1', 'LineGraph');
+model.result('pg3').feature('lngr1').set('xdata', 'expr');
+model.result('pg3').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg3').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg3').feature('lngr1').selection.set([1]);
+model.result('pg3').feature('lngr1').set('expr', {'el.sigmal'});
+model.result('pg3').feature('lngr1').set('legend', true);
+model.result('pg3').label('Electrolyte Conductivity (el)');
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').set('data', 'dset1');
+model.result('pg4').create('lngr1', 'LineGraph');
+model.result('pg4').feature('lngr1').set('xdata', 'expr');
+model.result('pg4').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg4').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg4').feature('lngr1').selection.set([1]);
+model.result('pg4').feature('lngr1').set('expr', {'phil'});
+model.result('pg4').feature('lngr1').set('legend', true);
+model.result('pg4').label('Electrolyte Potential (el)');
+model.result.create('pg5', 'PlotGroup1D');
+model.result('pg5').set('data', 'dset1');
+model.result('pg5').create('lngr1', 'LineGraph');
+model.result('pg5').feature('lngr1').set('xdata', 'expr');
+model.result('pg5').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg5').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg5').feature('lngr1').selection.set([1]);
+model.result('pg5').feature('lngr1').set('expr', {'el.c_S'});
+model.result('pg5').feature('lngr1').set('legend', true);
+model.result('pg5').label('Molar Concentration - S (el)');
+model.result.create('pg6', 'PlotGroup1D');
+model.result('pg6').set('data', 'dset1');
+model.result('pg6').create('lngr1', 'LineGraph');
+model.result('pg6').feature('lngr1').set('xdata', 'expr');
+model.result('pg6').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg6').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg6').feature('lngr1').selection.set([1]);
+model.result('pg6').feature('lngr1').set('expr', {'el.c_S1'});
+model.result('pg6').feature('lngr1').set('legend', true);
+model.result('pg6').label('Molar Concentration - S1 (el)');
+model.result.create('pg7', 'PlotGroup1D');
+model.result('pg7').set('data', 'dset1');
+model.result('pg7').create('lngr1', 'LineGraph');
+model.result('pg7').feature('lngr1').set('xdata', 'expr');
+model.result('pg7').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg7').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg7').feature('lngr1').selection.set([1]);
+model.result('pg7').feature('lngr1').set('expr', {'el.c_S2'});
+model.result('pg7').feature('lngr1').set('legend', true);
+model.result('pg7').label('Molar Concentration - S2 (el)');
+model.result.create('pg8', 'PlotGroup1D');
+model.result('pg8').set('data', 'dset1');
+model.result('pg8').create('lngr1', 'LineGraph');
+model.result('pg8').feature('lngr1').set('xdata', 'expr');
+model.result('pg8').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg8').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg8').feature('lngr1').selection.set([1]);
+model.result('pg8').feature('lngr1').set('expr', {'el.c_S3'});
+model.result('pg8').feature('lngr1').set('legend', true);
+model.result('pg8').label('Molar Concentration - S3 (el)');
+model.result.create('pg9', 'PlotGroup1D');
+model.result('pg9').set('data', 'dset1');
+model.result('pg9').create('lngr1', 'LineGraph');
+model.result('pg9').feature('lngr1').set('xdata', 'expr');
+model.result('pg9').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg9').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg9').feature('lngr1').selection.set([1]);
+model.result('pg9').feature('lngr1').set('expr', {'el.c_S4'});
+model.result('pg9').feature('lngr1').set('legend', true);
+model.result('pg9').label('Molar Concentration - S4 (el)');
+model.result.create('pg10', 'PlotGroup1D');
+model.result('pg10').set('data', 'dset1');
+model.result('pg10').create('lngr1', 'LineGraph');
+model.result('pg10').feature('lngr1').set('xdata', 'expr');
+model.result('pg10').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg10').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg10').feature('lngr1').selection.set([1]);
+model.result('pg10').feature('lngr1').set('expr', {'el.c_S5'});
+model.result('pg10').feature('lngr1').set('legend', true);
+model.result('pg10').label('Molar Concentration - S5 (el)');
+model.result.create('pg11', 'PlotGroup1D');
+model.result('pg11').set('data', 'dset1');
+model.result('pg11').create('lngr1', 'LineGraph');
+model.result('pg11').feature('lngr1').set('xdata', 'expr');
+model.result('pg11').feature('lngr1').set('xdataexpr', 'x');
+model.result('pg11').feature('lngr1').selection.geom('geom1', 1);
+model.result('pg11').feature('lngr1').selection.set([1]);
+model.result('pg11').feature('lngr1').set('expr', {'el.c_S6'});
+model.result('pg11').feature('lngr1').set('legend', true);
+model.result('pg11').label('Molar Concentration - S6 (el)');
+model.result('pg2').run;
+model.result('pg2').set('titletype', 'none');
+model.result('pg2').set('legendpos', 'upperleft');
+model.result('pg3').run;
+model.result('pg3').set('titletype', 'none');
+model.result('pg1').set('window', 'window1');
+model.result('pg1').run;
+model.result('pg1').label('Current Density vs. Time');
+model.result('pg1').set('showlegends', false);
+model.result('pg5').run;
+model.result.duplicate('pg12', 'pg5');
+model.result('pg12').run;
+model.result('pg12').label('Concentrations');
+model.result('pg12').setIndex('looplevelinput', 'last', 0);
+model.result('pg12').set('titletype', 'none');
+model.result('pg12').run;
+model.result('pg12').feature('lngr1').set('legend', false);
+model.result('pg12').feature.duplicate('lngr2', 'lngr1');
+model.result('pg12').run;
+model.result('pg12').feature('lngr2').set('expr', 'el.c_S1');
+model.result('pg12').feature.duplicate('lngr3', 'lngr2');
+model.result('pg12').run;
+model.result('pg12').feature('lngr3').set('expr', 'el.c_S2');
+model.result('pg12').feature.duplicate('lngr4', 'lngr3');
+model.result('pg12').run;
+model.result('pg12').feature('lngr4').set('expr', 'el.c_S3');
+model.result('pg12').feature.duplicate('lngr5', 'lngr4');
+model.result('pg12').run;
+model.result('pg12').feature('lngr5').set('expr', 'el.c_S4');
+model.result('pg12').feature.duplicate('lngr6', 'lngr5');
+model.result('pg12').run;
+model.result('pg12').feature('lngr6').set('expr', 'el.c_S5');
+model.result('pg12').feature.duplicate('lngr7', 'lngr6');
+model.result('pg12').run;
+model.result('pg12').feature('lngr7').set('expr', 'el.c_S6');
+model.result('pg12').run;
+
+model.title('Isoelectric Focusing');
+
+model.description(['This model demonstrates isoelectric focusing (IEF) of seven ampholytes in a column.' newline  newline 'The model is in 1D and is solved in a time-dependent simulation.']);
+
+model.mesh.clearMeshes;
+
+model.sol('sol1').clearSolutionData;
+model.sol('sol2').clearSolutionData;
+
+model.label('isoelectric_focusing_1d.mph');
+
+model.modelNode.label('Components');
+
+out = model;

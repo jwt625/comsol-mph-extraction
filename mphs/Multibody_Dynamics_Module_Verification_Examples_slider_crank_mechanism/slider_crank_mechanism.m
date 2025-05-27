@@ -1,0 +1,316 @@
+function out = model
+%
+% slider_crank_mechanism.m
+%
+% Model exported on May 26 2025, 21:31 by COMSOL 6.2.0.339.
+
+import com.comsol.model.*
+import com.comsol.model.util.*
+
+model = ModelUtil.create('Model');
+
+model.modelPath('/Applications/COMSOL62/Multiphysics/applications/Multibody_Dynamics_Module/Verification_Examples');
+
+model.modelNode.create('comp1', true);
+
+model.geom.create('geom1', 2);
+model.geom('geom1').model('comp1');
+
+model.mesh.create('mesh1', 'geom1');
+
+model.physics.create('mbd', 'MultibodyDynamics', 'geom1');
+model.physics('mbd').model('comp1');
+
+model.study.create('std1');
+model.study('std1').create('time', 'Transient');
+model.study('std1').feature('time').setSolveFor('/physics/mbd', true);
+
+model.param.set('d', '0.1[m]');
+model.param.descr('d', 'Thickness');
+model.param.set('l', '1[m]');
+model.param.descr('l', 'Length');
+model.param.set('m', '1[kg]');
+model.param.descr('m', 'Mass');
+
+model.geom('geom1').create('r1', 'Rectangle');
+model.geom('geom1').feature('r1').set('size', {'d' '1'});
+model.geom('geom1').feature('r1').set('pos', {'-d/2' '0'});
+model.geom('geom1').run('r1');
+model.geom('geom1').create('rot1', 'Rotate');
+model.geom('geom1').feature('rot1').selection('input').set({'r1'});
+model.geom('geom1').feature('rot1').set('rot', -45);
+model.geom('geom1').run('rot1');
+model.geom('geom1').create('mir1', 'Mirror');
+model.geom('geom1').feature('mir1').selection('input').set({'rot1'});
+model.geom('geom1').feature('mir1').set('keep', true);
+model.geom('geom1').feature('mir1').set('pos', {'l/sqrt(2)' '0'});
+model.geom('geom1').feature('fin').set('action', 'assembly');
+model.geom('geom1').run('fin');
+
+model.material.create('mat1', 'Common', 'comp1');
+model.material('mat1').propertyGroup('def').set('density', {'m/(l*d^2)'});
+
+model.physics('mbd').prop('d').set('d', 'd');
+model.physics('mbd').create('rd1', 'RigidDomain', 2);
+model.physics('mbd').feature('rd1').selection.set([1]);
+model.physics('mbd').create('rd2', 'RigidDomain', 2);
+model.physics('mbd').feature('rd2').selection.set([2]);
+model.physics('mbd').feature('rd2').set('InitialValueType', 'locallyDefined');
+model.physics('mbd').feature('rd2').set('ConsistentInitialization', 'ForceInitialValues');
+model.physics('mbd').feature('rd2').set('TranslationFirstAxis', true);
+model.physics('mbd').feature('rd2').feature('init1').set('ut', [-4 0 0]);
+model.physics('mbd').feature('rd2').feature('init1').set('CenterOfRotationType', 'CentroidOfSelectedEntities');
+model.physics('mbd').feature('rd2').feature('init1').feature('crb1').selection.set([8]);
+model.physics('mbd').create('hgj1', 'HingeJoint', -1);
+model.physics('mbd').feature('hgj1').set('Source', 'fixed');
+model.physics('mbd').feature('hgj1').set('Destination', 'rd1');
+model.physics('mbd').feature('hgj1').feature('cjb1').selection.set([1]);
+model.physics('mbd').create('hgj2', 'HingeJoint', -1);
+model.physics('mbd').feature('hgj2').set('Source', 'rd1');
+model.physics('mbd').feature('hgj2').set('Destination', 'rd2');
+model.physics('mbd').feature('hgj2').feature('cjb1').selection.set([5]);
+model.physics('mbd').create('rslj1', 'ReducedSlotJoint', -1);
+model.physics('mbd').feature('rslj1').set('Source', 'fixed');
+model.physics('mbd').feature('rslj1').set('Destination', 'rd2');
+model.physics('mbd').feature('rslj1').set('JointTranslationalAxis', 'AttachedOnSource');
+model.physics('mbd').feature('rslj1').feature('cjb1').selection.set([8]);
+model.physics('mbd').create('gacc1', 'GravityAcceleration', -1);
+
+model.mesh('mesh1').create('map1', 'Map');
+model.mesh('mesh1').feature('map1').create('dis1', 'Distribution');
+model.mesh('mesh1').feature('map1').feature('dis1').selection.all;
+model.mesh('mesh1').feature('map1').feature('dis1').set('numelem', 1);
+model.mesh('mesh1').run;
+
+model.cpl.create('intop1', 'Integration', 'geom1');
+model.cpl('intop1').set('axisym', true);
+model.cpl('intop1').selection.set([1 2]);
+
+model.variable.create('var1');
+model.variable('var1').model('comp1');
+model.variable('var1').set('Wp', 'intop1(mbd.rho*g_const*y*d)');
+model.variable('var1').descr('Wp', 'Total potential energy');
+model.variable('var1').set('W', 'Wp+mbd.Wk_tot');
+model.variable('var1').descr('W', 'Total energy');
+
+model.study('std1').feature('time').set('tlist', 'range(0,0.005,10)');
+
+model.sol.create('sol1');
+model.sol('sol1').study('std1');
+model.sol('sol1').create('st1', 'StudyStep');
+model.sol('sol1').feature('st1').set('study', 'std1');
+model.sol('sol1').feature('st1').set('studystep', 'time');
+model.sol('sol1').create('v1', 'Variables');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_disp').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_disp').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_rot').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_rot').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_u').set('scalemethod', 'manual');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_disp').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_disp').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_rot').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_rot').set('resscalemethod', 'parent');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_disp').set('scaleval', '0.01676305461424021');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_disp').set('scaleval', '0.01676305461424021');
+model.sol('sol1').feature('v1').feature('comp1_mbd_jnt_rot').set('scaleval', '0.1');
+model.sol('sol1').feature('v1').feature('comp1_mbd_rd_rot').set('scaleval', '0.1');
+model.sol('sol1').feature('v1').feature('comp1_u').set('scaleval', '1e-2*1.676305461424021');
+model.sol('sol1').feature('v1').set('control', 'time');
+model.sol('sol1').create('t1', 'Time');
+model.sol('sol1').feature('t1').set('tlist', 'range(0,0.005,10)');
+model.sol('sol1').feature('t1').set('plot', 'off');
+model.sol('sol1').feature('t1').set('plotgroup', 'Default');
+model.sol('sol1').feature('t1').set('plotfreq', 'tout');
+model.sol('sol1').feature('t1').set('probesel', 'all');
+model.sol('sol1').feature('t1').set('probes', {});
+model.sol('sol1').feature('t1').set('probefreq', 'tsteps');
+model.sol('sol1').feature('t1').set('rtol', 0.001);
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').set('atolglobalmethod', 'scaled');
+model.sol('sol1').feature('t1').set('atolglobalfactor', 0.1);
+model.sol('sol1').feature('t1').set('atolglobalvaluemethod', 'factor');
+model.sol('sol1').feature('t1').set('eventtol', 0.01);
+model.sol('sol1').feature('t1').set('reacf', true);
+model.sol('sol1').feature('t1').set('storeudot', true);
+model.sol('sol1').feature('t1').set('tstepsbdf', 'strict');
+model.sol('sol1').feature('t1').set('endtimeinterpolation', true);
+model.sol('sol1').feature('t1').set('maxorder', 2);
+model.sol('sol1').feature('t1').set('minorder', 1);
+model.sol('sol1').feature('t1').set('rescaleafterinitbw', false);
+model.sol('sol1').feature('t1').set('bwinitstepfrac', '0.001');
+model.sol('sol1').feature('t1').set('control', 'time');
+model.sol('sol1').feature('t1').feature('aDef').set('cachepattern', true);
+model.sol('sol1').feature('t1').create('fc1', 'FullyCoupled');
+model.sol('sol1').feature('t1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'onevery');
+model.sol('sol1').feature('t1').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('ntolfact', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('ntermconst', 'tol');
+model.sol('sol1').feature('t1').feature('fc1').set('linsolver', 'dDef');
+model.sol('sol1').feature('t1').feature('fc1').set('maxiter', 50);
+model.sol('sol1').feature('t1').feature('fc1').set('jtech', 'onevery');
+model.sol('sol1').feature('t1').feature('fc1').set('dtech', 'const');
+model.sol('sol1').feature('t1').feature('fc1').set('damp', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('ntolfact', 1);
+model.sol('sol1').feature('t1').feature('fc1').set('ntermconst', 'tol');
+model.sol('sol1').feature('t1').feature.remove('fcDef');
+model.sol('sol1').attach('std1');
+model.sol('sol1').feature('t1').set('maxorder', 3);
+model.sol('sol1').runAll;
+
+model.result.create('pg1', 'PlotGroup2D');
+model.result('pg1').label('Displacement (mbd)');
+model.result('pg1').set('frametype', 'spatial');
+model.result('pg1').set('data', 'dset1');
+model.result('pg1').setIndex('looplevel', 2001, 0);
+model.result('pg1').set('defaultPlotID', 'displacement');
+model.result('pg1').feature.create('surf1', 'Surface');
+model.result('pg1').feature('surf1').label('Surface');
+model.result('pg1').feature('surf1').set('colortable', 'SpectrumLight');
+model.result('pg1').feature('surf1').set('data', 'parent');
+model.result('pg1').feature('surf1').feature.create('def1', 'Deform');
+model.result('pg1').feature('surf1').feature('def1').label('Deformation');
+model.result('pg1').feature('surf1').feature('def1').set('scaleactive', true);
+model.result.create('pg2', 'PlotGroup2D');
+model.result('pg2').label('Velocity (mbd)');
+model.result('pg2').set('frametype', 'spatial');
+model.result('pg2').set('data', 'dset1');
+model.result('pg2').setIndex('looplevel', 2001, 0);
+model.result('pg2').set('defaultPlotID', 'velocity');
+model.result('pg2').feature.create('surf1', 'Surface');
+model.result('pg2').feature('surf1').label('Surface');
+model.result('pg2').feature('surf1').set('expr', 'mod(dom,10)');
+model.result('pg2').feature('surf1').set('unit', '1');
+model.result('pg2').feature('surf1').set('colortable', 'Cyclic');
+model.result('pg2').feature('surf1').set('colorlegend', false);
+model.result('pg2').feature('surf1').set('data', 'parent');
+model.result('pg2').feature('surf1').feature.create('def1', 'Deform');
+model.result('pg2').feature('surf1').feature('def1').label('Deformation');
+model.result('pg2').feature('surf1').feature('def1').set('scaleactive', true);
+model.result('pg2').feature.create('arwl1', 'ArrowLine');
+model.result('pg2').feature('arwl1').label('Arrow Line');
+model.result('pg2').feature('arwl1').set('expr', {'mbd.u_tX' 'mbd.u_tY'});
+model.result('pg2').feature('arwl1').set('placement', 'elements');
+model.result('pg2').feature('arwl1').set('data', 'parent');
+model.result('pg2').feature('arwl1').feature.create('def1', 'Deform');
+model.result('pg2').feature('arwl1').feature('def1').label('Deformation');
+model.result('pg2').feature('arwl1').feature('def1').set('scaleactive', true);
+model.result('pg1').run;
+model.result.dataset.create('cpt1', 'CutPoint2D');
+model.result.dataset('cpt1').set('pointx', '1/sqrt(2) 1.5/sqrt(2) sqrt(2)');
+model.result.dataset('cpt1').set('pointy', '1/sqrt(2) 0.5/sqrt(2) 0');
+model.result.dataset.duplicate('cpt2', 'cpt1');
+model.result.dataset('cpt2').set('pointx', '1/sqrt(2)');
+model.result.dataset('cpt2').set('pointy', '1/sqrt(2)');
+model.result('pg1').run;
+model.result('pg1').create('pttraj1', 'PointTrajectories');
+model.result('pg1').feature('pttraj1').set('data', 'cpt1');
+model.result('pg1').feature('pttraj1').set('solutionparams', 'parent');
+model.result('pg1').feature('pttraj1').set('linetype', 'tube');
+model.result('pg1').feature('pttraj1').create('col1', 'Color');
+model.result('pg1').run;
+model.result('pg1').feature('pttraj1').feature('col1').set('expr', 'X');
+model.result('pg1').feature('pttraj1').feature('col1').set('colortable', 'RainbowLight');
+model.result('pg1').feature('pttraj1').feature('col1').set('colorlegend', false);
+model.result('pg1').run;
+model.result('pg1').run;
+model.result('pg1').set('frametype', 'material');
+model.result('pg1').run;
+model.result.table.create('tbl1', 'Table');
+model.result.table('tbl1').importData('slider_crank_mechanism_aA.txt');
+model.result.create('pg3', 'PlotGroup1D');
+model.result('pg3').run;
+model.result('pg3').set('data', 'cpt2');
+model.result('pg3').label('Acceleration: point A');
+model.result('pg3').create('ptgr1', 'PointGraph');
+model.result('pg3').feature('ptgr1').set('markerpos', 'datapoints');
+model.result('pg3').feature('ptgr1').set('linewidth', 'preference');
+model.result('pg3').feature('ptgr1').set('expr', 'mbd.u_ttX');
+model.result('pg3').feature('ptgr1').set('descr', 'Acceleration, X-component');
+model.result('pg3').feature('ptgr1').set('linewidth', 2);
+model.result('pg3').feature('ptgr1').set('legend', true);
+model.result('pg3').feature('ptgr1').set('legendmethod', 'manual');
+model.result('pg3').feature('ptgr1').setIndex('legends', 'COMSOL', 0);
+model.result('pg3').run;
+model.result('pg3').create('tblp1', 'Table');
+model.result('pg3').feature('tblp1').set('markerpos', 'datapoints');
+model.result('pg3').feature('tblp1').set('linewidth', 'preference');
+model.result('pg3').feature('tblp1').set('linestyle', 'none');
+model.result('pg3').feature('tblp1').set('linemarker', 'circle');
+model.result('pg3').feature('tblp1').set('legend', true);
+model.result('pg3').feature('tblp1').set('legendmethod', 'manual');
+model.result('pg3').feature('tblp1').setIndex('legends', 'Ref. 1', 0);
+model.result('pg3').run;
+model.result('pg3').run;
+model.result('pg3').set('axislimits', true);
+model.result('pg3').set('ymax', 60);
+model.result('pg3').set('titletype', 'none');
+model.result('pg3').set('xlabelactive', true);
+model.result('pg3').set('xlabel', 'Time (s)');
+model.result('pg3').set('ylabelactive', true);
+model.result('pg3').set('ylabel', 'Acceleration of point A, x-component (m/s^2)');
+model.result('pg3').run;
+model.result.create('pg4', 'PlotGroup1D');
+model.result('pg4').run;
+model.result('pg4').label('Energy');
+model.result('pg4').create('glob1', 'Global');
+model.result('pg4').feature('glob1').set('markerpos', 'datapoints');
+model.result('pg4').feature('glob1').set('linewidth', 'preference');
+model.result('pg4').feature('glob1').set('expr', {'Wp'});
+model.result('pg4').feature('glob1').set('descr', {'Total potential energy'});
+model.result('pg4').feature('glob1').set('unit', {'J'});
+model.result('pg4').feature('glob1').set('expr', {'Wp' 'mbd.Wk_tot'});
+model.result('pg4').feature('glob1').set('descr', {'Total potential energy' 'Total kinetic energy'});
+model.result('pg4').feature('glob1').set('expr', {'Wp' 'mbd.Wk_tot' 'W'});
+model.result('pg4').feature('glob1').set('descr', {'Total potential energy' 'Total kinetic energy' 'Total energy'});
+model.result('pg4').feature('glob1').set('linewidth', 2);
+model.result('pg4').feature('glob1').set('linemarker', 'cycle');
+model.result('pg4').feature('glob1').set('markerpos', 'interp');
+model.result('pg4').feature('glob1').set('markers', 24);
+model.result('pg4').run;
+model.result('pg4').set('axislimits', true);
+model.result('pg4').run;
+model.result('pg4').set('ymax', 35);
+model.result('pg4').set('titletype', 'none');
+model.result('pg4').set('xlabelactive', true);
+model.result('pg4').set('ylabelactive', true);
+model.result('pg4').set('ylabel', 'Energy (J)');
+model.result('pg4').run;
+model.result.export.create('anim1', 'Animation');
+model.result.export('anim1').set('target', 'player');
+model.result.export('anim1').set('fontsize', '9');
+model.result.export('anim1').set('colortheme', 'globaltheme');
+model.result.export('anim1').set('customcolor', [1 1 1]);
+model.result.export('anim1').set('background', 'color');
+model.result.export('anim1').set('gltfincludelines', 'on');
+model.result.export('anim1').set('title1d', 'on');
+model.result.export('anim1').set('legend1d', 'on');
+model.result.export('anim1').set('logo1d', 'on');
+model.result.export('anim1').set('options1d', 'on');
+model.result.export('anim1').set('title2d', 'on');
+model.result.export('anim1').set('legend2d', 'on');
+model.result.export('anim1').set('logo2d', 'on');
+model.result.export('anim1').set('options2d', 'off');
+model.result.export('anim1').set('title3d', 'on');
+model.result.export('anim1').set('legend3d', 'on');
+model.result.export('anim1').set('logo3d', 'on');
+model.result.export('anim1').set('options3d', 'off');
+model.result.export('anim1').set('axisorientation', 'on');
+model.result.export('anim1').set('grid', 'on');
+model.result.export('anim1').set('axes1d', 'on');
+model.result.export('anim1').set('axes2d', 'on');
+model.result.export('anim1').set('showgrid', 'on');
+model.result.export('anim1').showFrame;
+model.result.export('anim1').set('maxframes', 100);
+model.result('pg1').run;
+
+model.title('Slider Crank Mechanism');
+
+model.description('This is a benchmark problem for multibody dynamics where a slider crank mechanism is studied. The links in the mechanism are rigid. Two hinge joints and a reduced slot joint are used to create the connections between the links. The time history of the acceleration at a certain point is compared with the result from the reference.');
+
+model.label('slider_crank_mechanism.mph');
+
+model.modelNode.label('Components');
+
+out = model;
