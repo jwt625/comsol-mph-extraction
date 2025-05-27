@@ -1,0 +1,19 @@
+2025-05-26 20:36:46,641 - INFO - === COMSOL .mph Data Extractor ===
+2025-05-26 20:36:46,641 - INFO - Starting .mph file extraction process...
+2025-05-26 20:36:46,641 - INFO - Found 5 .mph files to process
+2025-05-26 20:36:46,641 - INFO - Processing 1/5: ACDC_Module/Applications/bh_curve_checker.mph
+2025-05-26 20:36:46,643 - INFO - Processing 2/5: ACDC_Module/Applications/billet_induction_heating.mph
+2025-05-26 20:36:46,645 - INFO - Processing 3/5: ACDC_Module/Applications/effective_nonlinear_magnetic_curves.mph
+2025-05-26 20:36:46,647 - INFO - Processing 4/5: ACDC_Module/Devices,_Capacitive/capacitive_position_sensor.mph
+2025-05-26 20:36:46,649 - INFO - Processing 5/5: ACDC_Module/Devices,_Capacitive/capacitive_position_sensor_bem.mph
+2025-05-26 20:36:46,651 - INFO - 
+=== Extraction Complete ===
+2025-05-26 20:36:46,651 - INFO - Processed: 5/5 files
+2025-05-26 20:36:46,651 - INFO - Failed: 0 files
+2025-05-26 20:36:46,651 - INFO - Total extracted files: 35
+2025-05-26 20:36:46,651 - INFO - Output directory: mphs_test
+2025-05-26 20:36:46,651 - INFO - Check extraction_summary.txt for detailed results
+2025-05-26 20:38:56,533 - INFO - Starting .mph file extraction process...
+2025-05-26 20:38:56,534 - INFO - Found 5 .mph files to process
+2025-05-26 20:39:18,057 - INFO - Starting .mph file extraction process...
+2025-05-26 20:39:18,058 - INFO - Found 1908 .mph files to process

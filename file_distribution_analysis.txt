@@ -1,0 +1,146 @@
+2025-05-26 23:22:12,150 - INFO - === COMSOL File Distribution Analysis ===
+2025-05-26 23:22:12,150 - INFO - Analyzing directory: ./mphs
+2025-05-26 23:22:12,150 - INFO - 
+2025-05-26 23:22:12,155 - INFO - Found 1908 folders to analyze
+2025-05-26 23:22:12,155 - INFO - 
+2025-05-26 23:22:12,160 - INFO - Progress: 100/1908 folders analyzed...
+2025-05-26 23:22:12,166 - INFO - Progress: 200/1908 folders analyzed...
+2025-05-26 23:22:12,172 - INFO - Progress: 300/1908 folders analyzed...
+2025-05-26 23:22:12,177 - INFO - Progress: 400/1908 folders analyzed...
+2025-05-26 23:22:12,184 - INFO - Progress: 500/1908 folders analyzed...
+2025-05-26 23:22:12,189 - INFO - Progress: 600/1908 folders analyzed...
+2025-05-26 23:22:12,195 - INFO - Progress: 700/1908 folders analyzed...
+2025-05-26 23:22:12,201 - INFO - Progress: 800/1908 folders analyzed...
+2025-05-26 23:22:12,206 - INFO - Progress: 900/1908 folders analyzed...
+2025-05-26 23:22:12,215 - INFO - Progress: 1000/1908 folders analyzed...
+2025-05-26 23:22:12,221 - INFO - Progress: 1100/1908 folders analyzed...
+2025-05-26 23:22:12,226 - INFO - Progress: 1200/1908 folders analyzed...
+2025-05-26 23:22:12,232 - INFO - Progress: 1300/1908 folders analyzed...
+2025-05-26 23:22:12,239 - INFO - Progress: 1400/1908 folders analyzed...
+2025-05-26 23:22:12,243 - INFO - Progress: 1500/1908 folders analyzed...
+2025-05-26 23:22:12,249 - INFO - Progress: 1600/1908 folders analyzed...
+2025-05-26 23:22:12,255 - INFO - Progress: 1700/1908 folders analyzed...
+2025-05-26 23:22:12,261 - INFO - Progress: 1800/1908 folders analyzed...
+2025-05-26 23:22:12,268 - INFO - Progress: 1900/1908 folders analyzed...
+2025-05-26 23:22:12,269 - INFO - Analysis complete!
+2025-05-26 23:22:12,269 - INFO - 
+2025-05-26 23:22:12,269 - INFO - ================================================================================
+2025-05-26 23:22:12,269 - INFO - SUMMARY
+2025-05-26 23:22:12,269 - INFO - ================================================================================
+2025-05-26 23:22:12,269 - INFO - Total folders analyzed: 1908
+2025-05-26 23:22:12,269 - INFO - Folders with only .m files: 312
+2025-05-26 23:22:12,269 - INFO - Folders with both .m and PDF files: 1398
+2025-05-26 23:22:12,269 - INFO - Folders with only PDF files: 197
+2025-05-26 23:22:12,269 - INFO - Folders with neither .m nor PDF files: 1
+2025-05-26 23:22:12,269 - INFO - 
+2025-05-26 23:22:12,269 - INFO - PERCENTAGES:
+2025-05-26 23:22:12,269 - INFO - Only .m files: 16.4%
+2025-05-26 23:22:12,269 - INFO - Both .m and PDF: 73.3%
+2025-05-26 23:22:12,269 - INFO - Only PDF files: 10.3%
+2025-05-26 23:22:12,269 - INFO - Neither: 0.1%
+2025-05-26 23:22:12,269 - INFO - 
+2025-05-26 23:22:12,269 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,269 - INFO - FOLDERS WITH ONLY .M FILES (312 folders)
+2025-05-26 23:22:12,269 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,269 - INFO - First 10:
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Applications_bh_curve_checker (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Applications_billet_induction_heating (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Applications_effective_nonlinear_magnetic_curves (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_capacitor_tunable_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_high_voltage_insulator_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Inductive_ecore_transformer_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Motors_and_Generators_pm_motor_2d_campbell_diagram_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Motors_and_Generators_rotating_machinery_3d_tutorial_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Motors_and_Generators_sector_generator_3d_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Electromagnetics_and_Optimization_coil_shape_optimization_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO - ... (292 more) ...
+2025-05-26 23:22:12,269 - INFO - Last 10:
+2025-05-26 23:22:12,269 - INFO -   Subsurface_Flow_Module_Heat_Transfer_geothermal_doublet_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Subsurface_Flow_Module_Verification_Examples_buckley_leverett_model (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Subsurface_Flow_Module_Verification_Examples_phase_change_lunardini (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Uncertainty_Quantification_Module_Tutorials_bracket_uncertainty_quantification_fillet_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Uncertainty_Quantification_Module_Tutorials_bracket_uncertainty_quantification_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Wave_Optics_Module_Applications_fiber_simulator (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Wave_Optics_Module_Applications_plasmonic_wire_grating (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Wave_Optics_Module_Applications_polarizing_beam_splitter (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Wave_Optics_Module_Couplers_Filters_and_Mirrors_photonic_crystal_demultiplexer_optimization_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO -   Wave_Optics_Module_Verification_Examples_vertical_cavity_surface_emitting_laser_geom_sequence (.m: 1, PDF: 0)
+2025-05-26 23:22:12,269 - INFO - 
+2025-05-26 23:22:12,269 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,269 - INFO - FOLDERS WITH BOTH .M AND PDF FILES (1398 folders)
+2025-05-26 23:22:12,269 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,269 - INFO - First 10:
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_capacitive_position_sensor (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_capacitive_position_sensor_bem (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_capacitor_transient (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_capacitor_tunable (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_ferroelectric_hysteresis (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_hall_effect_sensor (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_high_voltage_insulator (.m: 1, PDF: 1)
+2025-05-26 23:22:12,269 - INFO -   ACDC_Module_Devices,_Capacitive_power_line_electric_field (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   ACDC_Module_Devices,_Inductive_axisymmetric_approximation_of_inductor_3d (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   ACDC_Module_Devices,_Inductive_ecore_transformer (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO - ... (1378 more) ...
+2025-05-26 23:22:12,270 - INFO - Last 10:
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Verification_Examples_vertical_cavity_surface_emitting_laser (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Verification_Examples_whispering_gallery_mode_resonator (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_metal_air_surface_plasmon_polariton (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_slot_waveguide (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_step_index_fiber_bend (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_stress_optical (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_stress_optical_generalized (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_tapered_waveguide (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_total_internal_reflection (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Waveguides_waveguide_s_bend (.m: 1, PDF: 1)
+2025-05-26 23:22:12,270 - INFO - 
+2025-05-26 23:22:12,270 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,270 - INFO - FOLDERS WITH ONLY PDF FILES (197 folders)
+2025-05-26 23:22:12,270 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,270 - INFO - First 10:
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Aeroacoustics_and_Noise_doppler_shift (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Automotive_test_bench_car_interior (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Electroacoustic_Transducers_condenser_microphone (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Nonlinear_Acoustics_acoustic_levitator (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Tutorials,_Pipe_Acoustics_probe_tube_microphone (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Tutorials,_Pressure_Acoustics_helmholtz_resonator_solvers (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Acoustics_Module_Vibrations_and_FSI_gearbox_vibration_noise (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Battery_Design_Module_Batteries,_General_primary_cd_grid (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   CFD_Module_Fluid-Structure_Interaction_sports_car_fsi (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   CFD_Module_Multiphase_Flow_droplet_population_model (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO - ... (177 more) ...
+2025-05-26 23:22:12,270 - INFO - Last 10:
+2025-05-26 23:22:12,270 - INFO -   Structural_Mechanics_Module_Thermal-Structure_Interaction_thermal_expansion (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Structural_Mechanics_Module_Thermal-Structure_Interaction_vibrating_beam (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Structural_Mechanics_Module_Tutorials_bracket_topology_optimization_stl (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Subsurface_Flow_Module_Solute_Transport_seawater_intrusion (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Subsurface_Flow_Module_Verification_Examples_furrow_irrigation_dual_permeability (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Subsurface_Flow_Module_Verification_Examples_solute_injection (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Subsurface_Flow_Module_Verification_Examples_solute_transport (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Subsurface_Flow_Module_Verification_Examples_solute_transport_preset (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Uncertainty_Quantification_Module_Tutorials_tensile_test_uncertainty_quantification (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO -   Wave_Optics_Module_Optical_Scattering_rcs_sphere_bem (.m: 0, PDF: 1)
+2025-05-26 23:22:12,270 - INFO - 
+2025-05-26 23:22:12,270 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,270 - INFO - FOLDERS WITH NEITHER .M NOR PDF FILES (1 folders)
+2025-05-26 23:22:12,270 - INFO - --------------------------------------------------------------------------------
+2025-05-26 23:22:12,270 - INFO -   RF_Module_Antennas_corrugated_circular_horn_antenna
+2025-05-26 23:22:12,270 - INFO -     No .m or PDF files found
+2025-05-26 23:22:12,270 - INFO - 
+2025-05-26 23:22:12,270 - INFO - 
+2025-05-26 23:22:12,270 - INFO - ================================================================================
+2025-05-26 23:22:12,270 - INFO - ADDITIONAL STATISTICS
+2025-05-26 23:22:12,270 - INFO - ================================================================================
+2025-05-26 23:22:12,270 - INFO - Total .m files found: 1710
+2025-05-26 23:22:12,270 - INFO - Total PDF files found: 1619
+2025-05-26 23:22:12,270 - INFO - Folders with .m files: 1710
+2025-05-26 23:22:12,270 - INFO - Folders with PDF files: 1595
+2025-05-26 23:22:12,271 - INFO - Folders with multiple .m files: 0
+2025-05-26 23:22:12,271 - INFO - Folders with multiple PDF files: 4
+2025-05-26 23:22:12,271 - INFO - 
+Folders with multiple PDF files:
+2025-05-26 23:22:12,271 - INFO -   CAD_Import_Module_Tutorial_Examples_exhaust_manifold_create_fluid_domain: ['models.cad.exhaust_manifold_create_fluid_domain.pdf', 'models.llrevit.exhaust_manifold_create_fluid_domain.pdf', 'models.llac.exhaust_manifold_create_fluid_domain.pdf', 'models.llcreop.exhaust_manifold_create_fluid_domain.pdf', 'models.llinventor.exhaust_manifold_create_fluid_domain.pdf', 'models.llse.exhaust_manifold_create_fluid_domain.pdf', 'models.llsw.exhaust_manifold_create_fluid_domain.pdf']
+2025-05-26 23:22:12,271 - INFO -   CAD_Import_Module_Tutorial_Examples_wheel_rim_defeature: ['models.llinventor.wheel_rim_defeature.pdf', 'models.cad.wheel_rim_defeature.pdf', 'models.llcreop.wheel_rim_defeature.pdf', 'models.llrevit.wheel_rim_defeature.pdf', 'models.llse.wheel_rim_defeature.pdf', 'models.llac.wheel_rim_defeature.pdf', 'models.llsw.wheel_rim_defeature.pdf']
+2025-05-26 23:22:12,271 - INFO -   CAD_Import_Module_Tutorial_Examples_wheel_rim_remove_details: ['models.llinventor.wheel_rim_remove_details.pdf', 'models.llrevit.wheel_rim_remove_details.pdf', 'models.cad.wheel_rim_remove_details.pdf', 'models.llcreop.wheel_rim_remove_details.pdf', 'models.llsw.wheel_rim_remove_details.pdf', 'models.llse.wheel_rim_remove_details.pdf', 'models.llac.wheel_rim_remove_details.pdf']
+2025-05-26 23:22:12,271 - INFO -   CAD_Import_Module_Tutorial_Examples_wheel_rim_repair: ['models.llcreop.wheel_rim_repair.pdf', 'models.llac.wheel_rim_repair.pdf', 'models.llrevit.wheel_rim_repair.pdf', 'models.llse.wheel_rim_repair.pdf', 'models.cad.wheel_rim_repair.pdf', 'models.llsw.wheel_rim_repair.pdf', 'models.llinventor.wheel_rim_repair.pdf']
+2025-05-26 23:22:12,271 - INFO - 
+2025-05-26 23:22:12,271 - INFO - Detailed analysis saved to: file_distribution_analysis.txt
