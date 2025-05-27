@@ -3,6 +3,8 @@
 Script to match COMSOL PDF documentation files to their corresponding 
 extracted metadata folders and copy them.
 
+Updated to handle module distinctions (e.g., models.heat.heat_sink.pdf vs models.cfd.heat_sink.pdf)
+
 Usage:
     python3 match_pdfs_to_folders.py
 """
@@ -19,6 +21,43 @@ PDF_SOURCE_DIR = "/Applications/COMSOL62/Multiphysics/doc/help/wtpwebapps/ROOT/d
 MPHS_DIR = "./mphs"
 FILE_LIST_PATH = "./file_list.txt"
 LOG_FILE = "pdf_matching_log.txt"
+
+# Module mappings - maps PDF module prefixes to folder module names
+MODULE_MAPPINGS = {
+    'acdc': 'ACDC_Module',
+    'aco': 'Acoustics_Module', 
+    'battery': 'Battery_Design_Module',
+    'cad': 'CAD_Import_Module',
+    'cfd': 'CFD_Module',
+    'chemical': 'Chemical_Reaction_Engineering_Module',
+    'comsol': 'COMSOL_Multiphysics',
+    'corrosion': 'Corrosion_Module',
+    'design': 'Design_Module',
+    'electrodeposition': 'Electrodeposition_Module',
+    'fatigue': 'Fatigue_Module',
+    'geomechanics': 'Geomechanics_Module',
+    'heat': 'Heat_Transfer_Module',
+    'llb': 'Liquid_and_Gas_Properties_Module',
+    'lvset': 'Level_Set_Module',
+    'mbd': 'Multibody_Dynamics_Module',
+    'mems': 'MEMS_Module',
+    'mfl': 'Microfluidics_Module',
+    'mixer': 'Mixer_Module',
+    'molec': 'Molecular_Flow_Module',
+    'optimization': 'Optimization_Module',
+    'particle': 'Particle_Tracing_Module',
+    'pde': 'Mathematics_Module',
+    'plasma': 'Plasma_Module',
+    'polymer': 'Polymer_Flow_Module',
+    'porous': 'Porous_Media_Flow_Module',
+    'ray': 'Ray_Optics_Module',
+    'rf': 'RF_Module',
+    'semicond': 'Semiconductor_Module',
+    'sme': 'Structural_Mechanics_Module',
+    'subsurface': 'Subsurface_Flow_Module',
+    'uq': 'Uncertainty_Quantification_Module',
+    'woptics': 'Wave_Optics_Module'
+}
 
 def setup_logging():
     """Setup logging to both console and file."""
@@ -45,11 +84,12 @@ def setup_logging():
     
     return logger
 
-def extract_model_id_from_pdf(pdf_filename: str) -> Optional[str]:
+def extract_model_and_module_from_pdf(pdf_filename: str) -> Optional[Tuple[str, str]]:
     """
-    Extract model identifier from PDF filename.
+    Extract both model identifier and module from PDF filename.
     
-    Example: 'models.woptics.orbital_angular_momentum.pdf' -> 'orbital_angular_momentum'
+    Example: 'models.heat.heat_sink.pdf' -> ('heat_sink', 'heat')
+    Example: 'models.cfd.heat_sink.pdf' -> ('heat_sink', 'cfd')
     """
     if not pdf_filename.startswith('models.') or not pdf_filename.endswith('.pdf'):
         return None
@@ -57,21 +97,23 @@ def extract_model_id_from_pdf(pdf_filename: str) -> Optional[str]:
     # Remove 'models.' prefix and '.pdf' suffix
     name_part = pdf_filename[7:-4]  # Remove 'models.' and '.pdf'
     
-    # Split by dots and take the last part
+    # Split by dots
     parts = name_part.split('.')
     if len(parts) >= 2:
-        return parts[-1]  # Last part is the model identifier
+        module = parts[0]  # First part is the module
+        model_id = parts[-1]  # Last part is the model identifier
+        return (model_id, module)
     
     return None
 
-def load_file_list(file_list_path: str) -> Dict[str, str]:
+def load_file_list_with_modules(file_list_path: str) -> Dict[Tuple[str, str], str]:
     """
-    Load file_list.txt and create a mapping from model_id to file path.
+    Load file_list.txt and create a mapping from (model_id, module) to file path.
     
     Returns:
-        Dict mapping model_id to original file path
+        Dict mapping (model_id, module_name) to original file path
     """
-    model_id_to_path = {}
+    model_module_to_path = {}
     
     try:
         with open(file_list_path, 'r') as f:
@@ -80,25 +122,117 @@ def load_file_list(file_list_path: str) -> Dict[str, str]:
                 if not line:
                     continue
                 
-                # Extract model_id from the file path
-                # Example: 'Wave_Optics_Module/Beam_Propagation/orbital_angular_momentum.mph'
+                # Extract model_id and module from the file path
+                # Example: 'Heat_Transfer_Module/Tutorials,_Forced_and_Natural_Convection/heat_sink.mph'
                 if line.endswith('.mph'):
-                    model_id = Path(line).stem  # Get filename without extension
-                    model_id_to_path[model_id] = line
-                    
+                    path_parts = line.split('/')
+                    if len(path_parts) >= 1:
+                        module_name = path_parts[0]  # e.g., 'Heat_Transfer_Module'
+                        model_id = Path(line).stem  # Get filename without extension
+                        
+                        # Create key as (model_id, module_name)
+                        key = (model_id, module_name)
+                        model_module_to_path[key] = line
+                        
     except FileNotFoundError:
         raise FileNotFoundError(f"File list not found: {file_list_path}")
     except Exception as e:
         raise Exception(f"Error reading file list: {e}")
     
-    return model_id_to_path
+    return model_module_to_path
+
+def find_best_match(model_id: str, pdf_module: str, model_module_to_path: Dict[Tuple[str, str], str], logger) -> Optional[str]:
+    """
+    Find the best matching file path for a given model_id and PDF module.
+    
+    Args:
+        model_id: The model identifier (e.g., 'heat_sink')
+        pdf_module: The module from PDF filename (e.g., 'heat', 'cfd')
+        model_module_to_path: Dictionary mapping (model_id, module) to file paths
+        
+    Returns:
+        Best matching file path or None if no match found
+    """
+    
+    # First, try exact module mapping
+    if pdf_module in MODULE_MAPPINGS:
+        target_module = MODULE_MAPPINGS[pdf_module]
+        exact_key = (model_id, target_module)
+        if exact_key in model_module_to_path:
+            logger.info(f"    Found exact match: {pdf_module} -> {target_module}")
+            return model_module_to_path[exact_key]
+    
+    # If no exact module mapping, look for partial matches in folder names
+    matching_keys = [key for key in model_module_to_path.keys() if key[0] == model_id]
+    
+    if len(matching_keys) == 0:
+        return None
+    elif len(matching_keys) == 1:
+        logger.info(f"    Found unique model match: {matching_keys[0][1]}")
+        return model_module_to_path[matching_keys[0]]
+    else:
+        # Multiple matches - need to find the right module
+        logger.info(f"    Multiple matches found for {model_id}: {[key[1] for key in matching_keys]}")
+        
+        # Extended module mappings for special cases
+        extended_mappings = {
+            'echem': ['Electrochemistry_Module', 'Chemical_Reaction_Engineering_Module'],
+            'edecm': ['Electrodeposition_Module'],
+            'fce': ['Fuel_Cell_and_Electrolyzer_Module'],
+            'battery': ['Battery_Design_Module'],
+            'corrosion': ['Corrosion_Module'],
+            'llrevit': ['CAD_Import_Module'],
+            'llac': ['CAD_Import_Module'],
+            'llcreop': ['CAD_Import_Module'],
+            'llinventor': ['CAD_Import_Module'],
+            'llse': ['CAD_Import_Module'],
+            'llsw': ['CAD_Import_Module'],
+            'cad': ['CAD_Import_Module'],
+            'compmat': ['Composite_Materials_Module', 'ACDC_Module'],
+            'lgp': ['Liquid_and_Gas_Properties_Module', 'Acoustics_Module']
+        }
+        
+        # Try extended mappings first
+        if pdf_module in extended_mappings:
+            possible_modules = extended_mappings[pdf_module]
+            for possible_module in possible_modules:
+                for key in matching_keys:
+                    if key[1] == possible_module:
+                        logger.info(f"    Selected via extended mapping: {pdf_module} -> {possible_module}")
+                        return model_module_to_path[key]
+        
+        # If still no match, try partial string matching
+        for key in matching_keys:
+            module_name = key[1].lower()
+            pdf_module_lower = pdf_module.lower()
+            
+            # Check for partial matches
+            if (pdf_module_lower in module_name or 
+                any(part in module_name for part in pdf_module_lower.split('_')) or
+                module_name.replace('_', '').startswith(pdf_module_lower[:4])):
+                logger.info(f"    Selected based on partial matching: {key[1]}")
+                return model_module_to_path[key]
+        
+        # Special case handling for known ambiguous mappings
+        if pdf_module == 'echem' and any('Electrochemistry_Module' in key[1] for key in matching_keys):
+            for key in matching_keys:
+                if 'Electrochemistry_Module' in key[1]:
+                    logger.info(f"    Selected Electrochemistry_Module for echem: {key[1]}")
+                    return model_module_to_path[key]
+        
+        # If no clear match found, log warning and skip
+        logger.warning(f"    No clear module match found for {pdf_module} with model {model_id}")
+        logger.warning(f"    Available modules: {[key[1] for key in matching_keys]}")
+        return None
+    
+    return None
 
 def convert_path_to_folder_name(file_path: str) -> str:
     """
     Convert file path to corresponding folder name in mphs directory.
     
-    Example: 'Wave_Optics_Module/Beam_Propagation/orbital_angular_momentum.mph'
-             -> 'Wave_Optics_Module_Beam_Propagation_orbital_angular_momentum'
+    Example: 'Heat_Transfer_Module/Tutorials,_Forced_and_Natural_Convection/heat_sink.mph'
+             -> 'Heat_Transfer_Module_Tutorials,_Forced_and_Natural_Convection_heat_sink'
     """
     # Remove .mph extension
     path_without_ext = file_path.replace('.mph', '')
@@ -156,7 +290,7 @@ def main():
     """Main function to match and copy PDF files."""
     logger = setup_logging()
     
-    logger.info("=== COMSOL PDF to Folder Matcher ===")
+    logger.info("=== COMSOL PDF to Folder Matcher (Module-Aware) ===")
     logger.info(f"PDF source directory: {PDF_SOURCE_DIR}")
     logger.info(f"MPHS directory: {MPHS_DIR}")
     logger.info(f"File list: {FILE_LIST_PATH}")
@@ -176,10 +310,10 @@ def main():
         return 1
     
     try:
-        # Load file list mapping
-        logger.info("Loading file list...")
-        model_id_to_path = load_file_list(FILE_LIST_PATH)
-        logger.info(f"Loaded {len(model_id_to_path)} model entries from file list")
+        # Load file list mapping with module information
+        logger.info("Loading file list with module information...")
+        model_module_to_path = load_file_list_with_modules(FILE_LIST_PATH)
+        logger.info(f"Loaded {len(model_module_to_path)} model entries from file list")
         
         # Find PDF files
         logger.info("Finding PDF files...")
@@ -192,7 +326,9 @@ def main():
             'matched': 0,
             'copied': 0,
             'failed_match': 0,
-            'failed_copy': 0
+            'failed_copy': 0,
+            'exact_matches': 0,
+            'partial_matches': 0
         }
         
         # Process each PDF
@@ -205,27 +341,30 @@ def main():
         for i, pdf_filename in enumerate(pdf_files, 1):
             logger.info(f"[{i:3d}/{stats['total_pdfs']:3d}] Processing: {pdf_filename}")
             
-            # Extract model ID
-            model_id = extract_model_id_from_pdf(pdf_filename)
-            if not model_id:
-                logger.warning(f"    Could not extract model ID from {pdf_filename}")
+            # Extract model ID and module
+            result = extract_model_and_module_from_pdf(pdf_filename)
+            if not result:
+                logger.warning(f"    Could not extract model info from {pdf_filename}")
                 stats['failed_match'] += 1
                 unmatched_pdfs.append(pdf_filename)
                 continue
             
+            model_id, pdf_module = result
+            logger.info(f"    Model ID: {model_id}, Module: {pdf_module}")
+            
             # Find matching file path
-            if model_id not in model_id_to_path:
-                logger.warning(f"    No match found for model ID: {model_id}")
+            file_path = find_best_match(model_id, pdf_module, model_module_to_path, logger)
+            
+            if not file_path:
+                logger.warning(f"    No match found for model ID: {model_id} in module: {pdf_module}")
                 stats['failed_match'] += 1
                 unmatched_pdfs.append(pdf_filename)
                 continue
             
             # Found match
-            file_path = model_id_to_path[model_id]
             folder_name = convert_path_to_folder_name(file_path)
             target_folder = os.path.join(MPHS_DIR, folder_name)
             
-            logger.info(f"    Model ID: {model_id}")
             logger.info(f"    File path: {file_path}")
             logger.info(f"    Target folder: {folder_name}")
             
