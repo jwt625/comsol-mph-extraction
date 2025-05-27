@@ -47,8 +47,35 @@ __pycache__/
 .idea/
 *.swp
 *.swo
+*.csv
+*.fav
+*.dat
+*.x_b
+*.x_t
+*.step
+*.stp
+*.mphtxt
+*.stl
+*.xml
+*.igs
+*.wav
+*.cir
+*.gif
+*.webm
+*.tgz
+*.gds
+*.png
+*.xlsx
+*.SLDPRT
+*.SLDDRW
+*.SLDFL
+*.SLDASM
+*.SLDBOM
+*.SLDBOM
 
 # Archive files
 *.zip
 *.tar.gz
 *.rar 
+
+LiveLink*
