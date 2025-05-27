@@ -1,11 +1,15 @@
 # COMSOL Multiphysics files
 *.mph
+*.mphbin
 
 # MATLAB files (optional - uncomment if you don't want to track .m files)
 # *.m
 
 # Log files
 *.log
+
+# Text files
+*.txt
 
 # macOS system files
 .DS_Store
