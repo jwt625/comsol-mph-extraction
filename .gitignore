@@ -1,0 +1,50 @@
+# COMSOL Multiphysics files
+*.mph
+
+# MATLAB files (optional - uncomment if you don't want to track .m files)
+# *.m
+
+# Log files
+*.log
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Backup files
+*.bak
+*.backup
+
+# Large data directories (uncomment if you don't want to track extracted data)
+# mphs/
+# mphs_test/
+# mphs_test2/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar 
