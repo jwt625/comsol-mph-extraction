@@ -4,6 +4,7 @@ llm_assisted_alignment.py
 
 A code-first LLM-assisted pipeline for creating high-quality COMSOL fine-tuning data.
 This approach generates descriptions from code, matches to PDF content, then combines both.
+OPTIMIZED VERSION: Uses hermes3-70b (fastest model) + parallel processing.
 """
 
 import os
@@ -16,6 +17,8 @@ from pdfminer.high_level import extract_text
 from typing import List, Dict, Tuple, Optional
 import openai
 from anthropic import Anthropic
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import time
 
 
 class CONSOLDataProcessor:
@@ -36,7 +39,7 @@ class CONSOLDataProcessor:
             raise ValueError("Supported providers: 'lambda', 'anthropic', 'openai'")
 
     def extract_code_descriptions(self, m_path: str, metadata: Dict) -> List[Dict]:
-        """CODE-FIRST: Generate descriptions from ALL code segments using LLM understanding."""
+        """CODE-FIRST: Generate descriptions from ALL code segments using LLM understanding with PARALLEL processing."""
         with open(m_path, 'r') as f:
             code = f.read()
         
@@ -48,16 +51,16 @@ class CONSOLDataProcessor:
         model_context = f"""
 Model: {metadata.get('displayLabel', 'Unknown')}
 Description: {metadata.get('description', 'COMSOL simulation model')}
-Physics: {metadata.get('physicsInfo', 'Multi-physics simulation')}
+Physics: {metadata.get('physics', 'Multi-physics simulation')}
 Purpose: {metadata.get('purpose', 'Engineering simulation and analysis')}
 """
         
-        # Process ALL segments (not just first 10)
+        # OPTIMIZED: Parallel processing with controlled concurrency
         enhanced_segments = []
-        for i, segment in enumerate(code_segments):
-            if i % 20 == 0:  # Progress indicator
-                print(f"         Processing segment {i+1}/{len(code_segments)}...")
-            
+        max_workers = 3  # Based on performance testing - optimal balance
+        
+        def process_segment(segment):
+            """Process a single segment with LLM."""
             prompt = f"""
 IMPORTANT: Return ONLY valid JSON, no explanations or markdown.
 
@@ -85,7 +88,7 @@ Return JSON format:
             
             if enhanced:
                 enhanced['code'] = segment['code']
-                enhanced_segments.append(enhanced)
+                return enhanced
             else:
                 # Fallback with model context
                 segment['code_description'] = f"COMSOL modeling step {segment['segment_id']}"
@@ -93,9 +96,43 @@ Return JSON format:
                 segment['comsol_ids'] = self._extract_comsol_ids_from_code(segment['code'])
                 segment['category'] = self._guess_category_from_code(segment['code'])
                 segment['key_operations'] = []
-                enhanced_segments.append(segment)
+                return segment
         
-        print(f"      Successfully processed {len(enhanced_segments)} segments")
+        # Process segments in parallel batches
+        print(f"      ⚡ Using parallel processing with {max_workers} workers...")
+        start_time = time.time()
+        
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            # Submit all tasks
+            future_to_segment = {executor.submit(process_segment, seg): seg for seg in code_segments}
+            
+            # Collect results as they complete
+            for i, future in enumerate(as_completed(future_to_segment)):
+                if i % 20 == 0:  # Progress indicator
+                    elapsed = time.time() - start_time
+                    rate = (i + 1) / elapsed if elapsed > 0 else 0
+                    print(f"         Progress: {i+1}/{len(code_segments)} segments ({rate:.1f} segments/sec)")
+                
+                try:
+                    result = future.result()
+                    enhanced_segments.append(result)
+                except Exception as e:
+                    # Fallback for failed segments
+                    segment = future_to_segment[future]
+                    print(f"   ⚠️  Segment {segment['segment_id']} failed, using fallback")
+                    segment['code_description'] = f"COMSOL modeling step {segment['segment_id']}"
+                    segment['modeling_purpose'] = f"Part of {metadata.get('displayLabel', 'model')} simulation setup"
+                    segment['comsol_ids'] = self._extract_comsol_ids_from_code(segment['code'])
+                    segment['category'] = self._guess_category_from_code(segment['code'])
+                    segment['key_operations'] = []
+                    enhanced_segments.append(segment)
+        
+        # Sort by segment_id to maintain order
+        enhanced_segments.sort(key=lambda x: x['segment_id'])
+        
+        elapsed = time.time() - start_time
+        rate = len(enhanced_segments) / elapsed if elapsed > 0 else 0
+        print(f"      ✅ Successfully processed {len(enhanced_segments)} segments in {elapsed:.1f}s ({rate:.1f} segments/sec)")
         return enhanced_segments
 
     def extract_pdf_sections(self, pdf_path: str) -> List[Dict]:
@@ -234,7 +271,7 @@ Return JSON format:
                 # Use model context to create better input when no good PDF match
                 input_text = f"""
 Model Context: {metadata.get('description', 'COMSOL simulation')}
-Physics: {metadata.get('physicsInfo', 'Multi-physics')}
+Physics: {metadata.get('physics', 'Multi-physics')}
 Step Purpose: {code_seg.get('modeling_purpose', 'Modeling step')}
 What to do: {code_seg.get('code_description', 'Execute COMSOL operation')}
 """
@@ -245,7 +282,7 @@ What to do: {code_seg.get('code_description', 'Execute COMSOL operation')}
                 "instruction": f"[{metadata.get('displayLabel', 'Model')}] {code_seg.get('code_description', 'COMSOL modeling step')}",
                 "input": input_text.strip(),
                 "output": code_seg['code'],
-                "explanation": f"Physics: {metadata.get('physicsInfo', 'Unknown')}. Purpose: {code_seg.get('modeling_purpose', 'Modeling step')}",
+                "explanation": f"Physics: {metadata.get('physics', 'Unknown')}. Purpose: {code_seg.get('modeling_purpose', 'Modeling step')}",
                 "confidence": match['match_confidence'],
                 "source": "code_first",
                 "category": code_seg.get('category', 'other'),
@@ -261,10 +298,9 @@ What to do: {code_seg.get('code_description', 'Execute COMSOL operation')}
         try:
             if self.llm_provider == "lambda":
                 response = self.client.chat.completions.create(
-                    # model="hermes3-405b",  # Best performing model from our tests
-                    model="llama3.3-70b-instruct-fp8",  # Best performing model from our tests
+                    model="hermes3-70b",  # OPTIMIZED: Fastest model (0.48s/call vs 4.24s for llama3.3)
                     messages=[{"role": "user", "content": prompt}],
-                    max_tokens=2000,
+                    max_tokens=800,  # OPTIMIZED: Reduced for faster responses
                     temperature=0.1
                 )
                 return response.choices[0].message.content
@@ -408,6 +444,35 @@ What to do: {code_seg.get('code_description', 'Execute COMSOL operation')}
             return 'other'
 
 
+def extract_physics_from_metadata(metadata: Dict) -> str:
+    """Extract physics types from metadata by finding apiClass: Physics entries."""
+    physics_types = []
+    
+    def find_physics_in_nodes(nodes):
+        if not isinstance(nodes, list):
+            return
+        
+        for node in nodes:
+            if isinstance(node, dict):
+                if node.get('apiClass') == 'Physics':
+                    api_type = node.get('apiType', '')
+                    if api_type:
+                        physics_types.append(api_type)
+                
+                # Recursively check child nodes
+                if 'nodes' in node:
+                    find_physics_in_nodes(node['nodes'])
+    
+    # Search through the metadata structure
+    if 'nodes' in metadata:
+        find_physics_in_nodes(metadata['nodes'])
+    
+    if physics_types:
+        return ', '.join(physics_types)
+    else:
+        return 'Multi-physics'
+
+
 def process_model_directory(model_dir: str, processor: CONSOLDataProcessor, 
                           output_dir: str) -> bool:
     """Process a single model directory with CODE-FIRST LLM assistance."""
@@ -425,12 +490,24 @@ def process_model_directory(model_dir: str, processor: CONSOLDataProcessor,
         with open(json_file, 'r') as f:
             metadata = json.load(f)
         
+        # Extract physics information early
+        physics_info = extract_physics_from_metadata(metadata)
+        
+        # Create enhanced metadata for processing
+        enhanced_metadata = {
+            'displayLabel': metadata.get('displayLabel', ''),
+            'physics': physics_info,
+            'description': metadata.get('description', ''),
+            'purpose': metadata.get('purpose', '')
+        }
+        
         model_name = os.path.basename(model_dir)
         print(f"🔄 Processing {model_name} with CODE-FIRST LLM assistance...")
+        print(f"      Physics: {physics_info}")
 
         # Stage 1: Extract code descriptions (GROUND TRUTH)
         print("   📝 Stage 1: Analyzing code to understand what it does...")
-        code_segments = processor.extract_code_descriptions(str(m_files[0]), metadata)
+        code_segments = processor.extract_code_descriptions(str(m_files[0]), enhanced_metadata)
         print(f"      Extracted {len(code_segments)} code segments")
 
         # Stage 2: Extract PDF sections for context
@@ -447,13 +524,7 @@ def process_model_directory(model_dir: str, processor: CONSOLDataProcessor,
         # Stage 4: Generate enhanced training examples
         print("   ✨ Stage 4: Creating enhanced training examples...")
         enhanced_examples = processor.create_enhanced_training_examples(
-            code_segments, pdf_sections, matches, 
-            {
-                'model_name': metadata.get('displayLabel', ''),
-                'physics': metadata.get('physicsInfo', ''),
-                'description': metadata.get('description', ''),
-                'purpose': metadata.get('purpose', '')
-            }
+            code_segments, pdf_sections, matches, enhanced_metadata
         )
 
         # Save results
