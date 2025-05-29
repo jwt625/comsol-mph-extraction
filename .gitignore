@@ -84,3 +84,6 @@ __pycache__/
 
 LiveLink*
 comsol-env/*
+finetune-env/*
+finetune/test_*
+
