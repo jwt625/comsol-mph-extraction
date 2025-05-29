@@ -12,7 +12,7 @@ from pathlib import Path
 
 # Set environment variables to avoid warnings
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-os.environ["WANDB_DISABLED"] = "true"
+os.environ["WANDB_DISABLED"] = "false"
 
 def main():
     parser = argparse.ArgumentParser(description="Fine-tune model on COMSOL data (Minimal Version)")
